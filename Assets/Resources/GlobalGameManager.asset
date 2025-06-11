@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce6f523ef2191645a9110c5f900b11c, type: 3}
+  m_Name: GlobalGameManager
+  m_EditorClassIdentifier: 
+  adventurerEXP: 200
+  adventurerRanking: 0
+  ownedGold: 100
+  party:
+  - associatedCharacter: 0
+    maxHealth:
+      baseStat: 150
+      incrementPercentage: 15
+    hungerSize:
+      baseStat: 100
+      incrementPercentage: 15
+    physAtk:
+      baseStat: 20
+      incrementPercentage: 15
+    physDef:
+      baseStat: 20
+      incrementPercentage: 15
+    magicAtk:
+      baseStat: 125
+      incrementPercentage: 15
+    magicDef:
+      baseStat: 40
+      incrementPercentage: 15
+    maxEnergy:
+      baseStat: 75
+      incrementPercentage: 15
+    maxMana:
+      baseStat: 400
+      incrementPercentage: 15
+    experiencePoints: 0
+    characterLevel: 1
+  inventory:
+  - itemKey: 
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+    isQuestTarget: 0
+  - itemKey: 
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+    isQuestTarget: 0
+  - itemKey: 
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+    isQuestTarget: 0
+  - itemKey: 
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+    isQuestTarget: 0
+  - itemKey: 
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+    isQuestTarget: 0
+  - itemKey: 
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+    isQuestTarget: 0
+  availableDungeons:
+  - {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
+  - {fileID: 11400000, guid: dbb6bf07f332800408c082e8dc82cfac, type: 2}
+  selectedDungeon: {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
+  ownedQuests: []
+  availableQuests:
+  - clientName: Andy
+    clientCharacter: 3
+    isActive: 0
+    difficulty: 83
+  - clientName: Arthur
+    clientCharacter: 3
+    isActive: 0
+    difficulty: 83
+  - clientName: Zack
+    clientCharacter: 2
+    isActive: 0
+    difficulty: 83
+  - clientName: Zack
+    clientCharacter: 3
+    isActive: 0
+    difficulty: 83
+  - clientName: Zack
+    clientCharacter: 2
+    isActive: 0
+    difficulty: 83
+  - clientName: Luna
+    clientCharacter: 2
+    isActive: 0
+    difficulty: 83
+  - clientName: Perry
+    clientCharacter: 2
+    isActive: 0
+    difficulty: 83
+  - clientName: Julie
+    clientCharacter: 2
+    isActive: 0
+    difficulty: 83
+  DayOver: 0

@@ -1,0 +1,930 @@
+fileFormatVersion: 2
+guid: 0d460ddbc5cad0f409fa127ca3c3476e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8349739053785691581
+    second: damson_walk_0
+  - first:
+      213: 7687778100955162415
+    second: damson_walk_1
+  - first:
+      213: -882191545386957364
+    second: damson_walk_2
+  - first:
+      213: 6453961406147780649
+    second: damson_walk_3
+  - first:
+      213: -5180195025104239585
+    second: damson_walk_4
+  - first:
+      213: -2523357713652999183
+    second: damson_walk_5
+  - first:
+      213: 7986235839789776073
+    second: damson_walk_6
+  - first:
+      213: -5904800100600036400
+    second: damson_walk_7
+  - first:
+      213: 8195457681639184862
+    second: damson_walk_8
+  - first:
+      213: -3164793392427456883
+    second: damson_walk_9
+  - first:
+      213: 364175973765717969
+    second: damson_walk_10
+  - first:
+      213: -3126342838626305194
+    second: damson_walk_11
+  - first:
+      213: 2067223863843905430
+    second: damson_walk_12
+  - first:
+      213: 175107233645039170
+    second: damson_walk_13
+  - first:
+      213: 2333419876100817738
+    second: damson_walk_14
+  - first:
+      213: 6119781549723294357
+    second: damson_walk_15
+  - first:
+      213: 3492644614774833403
+    second: damson_walk_16
+  - first:
+      213: -3423481141551579345
+    second: damson_walk_17
+  - first:
+      213: 7218307756458149212
+    second: damson_walk_18
+  - first:
+      213: -2015231314798434266
+    second: damson_walk_19
+  - first:
+      213: 6826124448838444481
+    second: damson_walk_20
+  - first:
+      213: 7736783375002170083
+    second: damson_walk_21
+  - first:
+      213: -7764112876495570452
+    second: damson_walk_22
+  - first:
+      213: -4555092336921314806
+    second: damson_walk_23
+  - first:
+      213: -6776144900996585957
+    second: damson_walk_24
+  - first:
+      213: -3189030185466899817
+    second: damson_walk_25
+  - first:
+      213: 7384384081827553939
+    second: damson_walk_26
+  - first:
+      213: -2043048130331133102
+    second: damson_walk_27
+  - first:
+      213: -8240155280065528891
+    second: damson_walk_28
+  - first:
+      213: 597661705571117008
+    second: damson_walk_29
+  - first:
+      213: 1919549929553298228
+    second: damson_walk_30
+  - first:
+      213: 4669865732589233453
+    second: damson_walk_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: damson_walk_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 191
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ac5e3c194cf1c80800000000000000
+      internalID: -8349739053785691581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 191
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f27a573837970ba60800000000000000
+      internalID: 7687778100955162415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 191
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc58b59a673d1c3f0800000000000000
+      internalID: -882191545386957364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 191
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920e48f44b3119950800000000000000
+      internalID: 6453961406147780649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_4
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 191
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f148a6d02104c18b0800000000000000
+      internalID: -5180195025104239585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_5
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 191
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb987c578b3bfcd0800000000000000
+      internalID: -2523357713652999183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_6
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 191
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ccb923fe2fc4de60800000000000000
+      internalID: 7986235839789776073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_7
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 191
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d34b0ee79fed0ea0800000000000000
+      internalID: -5904800100600036400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 127
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed999dd075d1cb170800000000000000
+      internalID: 8195457681639184862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_9
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 127
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d86abd86d256414d0800000000000000
+      internalID: -3164793392427456883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 127
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df99006e10dd0500800000000000000
+      internalID: 364175973765717969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_11
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 127
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65bb79990cffc94d0800000000000000
+      internalID: -3126342838626305194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_12
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 127
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f50abc62140bc10800000000000000
+      internalID: 2067223863843905430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_13
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 127
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e830be91b1e6200800000000000000
+      internalID: 175107233645039170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_14
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 127
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4343daa309f16020800000000000000
+      internalID: 2333419876100817738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_15
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 127
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a1f3e35e4dde450800000000000000
+      internalID: 6119781549723294357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_16
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 63
+        width: 56
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0c556b5cd587030800000000000000
+      internalID: 3492644614774833403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_17
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 63
+        width: 57
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fb1964a0a5d70d0800000000000000
+      internalID: -3423481141551579345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_18
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 63
+        width: 57
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55822709a49c2460800000000000000
+      internalID: 7218307756458149212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_19
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 63
+        width: 57
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628223ddbc57804e0800000000000000
+      internalID: -2015231314798434266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_20
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 63
+        width: 56
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5ef9515044bbe50800000000000000
+      internalID: 6826124448838444481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_21
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 63
+        width: 56
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2f6230d739e5b60800000000000000
+      internalID: 7736783375002170083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_22
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 63
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9f1709974504490800000000000000
+      internalID: -7764112876495570452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_23
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 63
+        width: 56
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a73ba47af09c0c0800000000000000
+      internalID: -4555092336921314806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_24
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1626853d1c46f1a0800000000000000
+      internalID: -6776144900996585957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_25
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7925f3941f94eb3d0800000000000000
+      internalID: -3189030185466899817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_26
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3926162c23a9a7660800000000000000
+      internalID: 7384384081827553939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_27
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b369ccc82a5a3e0800000000000000
+      internalID: -2043048130331133102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_28
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb72a55e6615ad80800000000000000
+      internalID: -8240155280065528891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_29
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d7ab6897225b4800800000000000000
+      internalID: 597661705571117008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_30
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43386af9d7c93aa10800000000000000
+      internalID: 1919549929553298228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_walk_31
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 0
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2520cb4422bec040800000000000000
+      internalID: 4669865732589233453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

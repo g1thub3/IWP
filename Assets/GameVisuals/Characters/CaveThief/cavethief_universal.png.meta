@@ -1,0 +1,5380 @@
+fileFormatVersion: 2
+guid: 375df85c72da0a6498f2c41f3179946b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8530157663134240940
+    second: cavethief_universal_0
+  - first:
+      213: 3482946953962220417
+    second: cavethief_universal_1
+  - first:
+      213: -5070214175824276489
+    second: cavethief_universal_2
+  - first:
+      213: -7395404089926592394
+    second: cavethief_universal_3
+  - first:
+      213: 6879029454449144771
+    second: cavethief_universal_4
+  - first:
+      213: 2829199142654260267
+    second: cavethief_universal_5
+  - first:
+      213: 2558057646550678934
+    second: cavethief_universal_6
+  - first:
+      213: 2898911178562001700
+    second: cavethief_universal_7
+  - first:
+      213: -2211372672329869660
+    second: cavethief_universal_8
+  - first:
+      213: 461910212137833618
+    second: cavethief_universal_9
+  - first:
+      213: 5727101665035421201
+    second: cavethief_universal_10
+  - first:
+      213: -1320370798246915783
+    second: cavethief_universal_11
+  - first:
+      213: 6796430852217055062
+    second: cavethief_universal_12
+  - first:
+      213: 38805310972952507
+    second: cavethief_universal_13
+  - first:
+      213: -5228433285266464657
+    second: cavethief_universal_14
+  - first:
+      213: 6188404107582042838
+    second: cavethief_universal_15
+  - first:
+      213: 4738151502869503127
+    second: cavethief_universal_16
+  - first:
+      213: -8035665439097672849
+    second: cavethief_universal_17
+  - first:
+      213: 7553676872830403463
+    second: cavethief_universal_18
+  - first:
+      213: -874828524729554499
+    second: cavethief_universal_19
+  - first:
+      213: -1401814862548643095
+    second: cavethief_universal_20
+  - first:
+      213: 5200472975405987310
+    second: cavethief_universal_21
+  - first:
+      213: -5606211132084837984
+    second: cavethief_universal_22
+  - first:
+      213: 8999792729366514816
+    second: cavethief_universal_23
+  - first:
+      213: 8183957398721290259
+    second: cavethief_universal_24
+  - first:
+      213: -3356942374376332848
+    second: cavethief_universal_25
+  - first:
+      213: -8175867613084637599
+    second: cavethief_universal_26
+  - first:
+      213: 8498597982101305019
+    second: cavethief_universal_27
+  - first:
+      213: -9200485875122512726
+    second: cavethief_universal_28
+  - first:
+      213: -2448876673326328938
+    second: cavethief_universal_29
+  - first:
+      213: 4645442679331812431
+    second: cavethief_universal_30
+  - first:
+      213: -1253636755541544098
+    second: cavethief_universal_31
+  - first:
+      213: -7805039588866583868
+    second: cavethief_universal_32
+  - first:
+      213: -3697264951904250110
+    second: cavethief_universal_33
+  - first:
+      213: -4944357929365763794
+    second: cavethief_universal_34
+  - first:
+      213: 4839024727232249416
+    second: cavethief_universal_35
+  - first:
+      213: 5401662202385190931
+    second: cavethief_universal_36
+  - first:
+      213: 5982361884902312282
+    second: cavethief_universal_37
+  - first:
+      213: 8549046434901521575
+    second: cavethief_universal_38
+  - first:
+      213: 582725489325360236
+    second: cavethief_universal_39
+  - first:
+      213: -5460519356986186384
+    second: cavethief_universal_40
+  - first:
+      213: 8583911143268413361
+    second: cavethief_universal_41
+  - first:
+      213: 4203861789654754662
+    second: cavethief_universal_42
+  - first:
+      213: -9176393807074118261
+    second: cavethief_universal_43
+  - first:
+      213: 6612614010885493528
+    second: cavethief_universal_44
+  - first:
+      213: 7987013895827780651
+    second: cavethief_universal_45
+  - first:
+      213: 5314392335966557254
+    second: cavethief_universal_46
+  - first:
+      213: -6040726200285763326
+    second: cavethief_universal_47
+  - first:
+      213: 5947889745262694110
+    second: cavethief_universal_48
+  - first:
+      213: 8835283070381296449
+    second: cavethief_universal_49
+  - first:
+      213: -782466430853920204
+    second: cavethief_universal_50
+  - first:
+      213: -8646906834356043531
+    second: cavethief_universal_51
+  - first:
+      213: 7432768087179408345
+    second: cavethief_universal_52
+  - first:
+      213: 738993347433440309
+    second: cavethief_universal_53
+  - first:
+      213: -5752061777636627186
+    second: cavethief_universal_54
+  - first:
+      213: -8030740389901299980
+    second: cavethief_universal_55
+  - first:
+      213: 8045087714427077013
+    second: cavethief_universal_56
+  - first:
+      213: 267762900189829158
+    second: cavethief_universal_57
+  - first:
+      213: -3354286050325911223
+    second: cavethief_universal_58
+  - first:
+      213: -1167857380402920515
+    second: cavethief_universal_59
+  - first:
+      213: 5314185719352567477
+    second: cavethief_universal_60
+  - first:
+      213: 8265221810447021387
+    second: cavethief_universal_61
+  - first:
+      213: -1979479594410772583
+    second: cavethief_universal_62
+  - first:
+      213: 2180229262307023967
+    second: cavethief_universal_63
+  - first:
+      213: 4850121689306029076
+    second: cavethief_universal_64
+  - first:
+      213: 4819268001599731999
+    second: cavethief_universal_65
+  - first:
+      213: 8628665852480507607
+    second: cavethief_universal_66
+  - first:
+      213: -8365662223574303745
+    second: cavethief_universal_67
+  - first:
+      213: 219626901753844586
+    second: cavethief_universal_68
+  - first:
+      213: 7194231478231496792
+    second: cavethief_universal_69
+  - first:
+      213: 3228177167786665021
+    second: cavethief_universal_70
+  - first:
+      213: -2117343208830874358
+    second: cavethief_universal_71
+  - first:
+      213: 2073271976866858720
+    second: cavethief_universal_72
+  - first:
+      213: -5117952031812824429
+    second: cavethief_universal_73
+  - first:
+      213: 5201431109514172157
+    second: cavethief_universal_74
+  - first:
+      213: -1262400006508587445
+    second: cavethief_universal_75
+  - first:
+      213: -3230939924207206867
+    second: cavethief_universal_76
+  - first:
+      213: 5179510563689077298
+    second: cavethief_universal_77
+  - first:
+      213: 5689492974730118832
+    second: cavethief_universal_78
+  - first:
+      213: 6801946682649849680
+    second: cavethief_universal_79
+  - first:
+      213: -1946853633024884448
+    second: cavethief_universal_80
+  - first:
+      213: 4587155947534963305
+    second: cavethief_universal_81
+  - first:
+      213: -5729406717980774497
+    second: cavethief_universal_82
+  - first:
+      213: 160661500235157730
+    second: cavethief_universal_83
+  - first:
+      213: 8181701142946084127
+    second: cavethief_universal_84
+  - first:
+      213: 7069580916627631015
+    second: cavethief_universal_85
+  - first:
+      213: -5017005344917874550
+    second: cavethief_universal_86
+  - first:
+      213: 3216501410753864924
+    second: cavethief_universal_87
+  - first:
+      213: -3963309254818875799
+    second: cavethief_universal_88
+  - first:
+      213: -6316243207751153351
+    second: cavethief_universal_89
+  - first:
+      213: 1072850084398836309
+    second: cavethief_universal_90
+  - first:
+      213: -4612284932384541008
+    second: cavethief_universal_91
+  - first:
+      213: 4674850469072226771
+    second: cavethief_universal_92
+  - first:
+      213: -8719404382477327889
+    second: cavethief_universal_93
+  - first:
+      213: -1676507996086594391
+    second: cavethief_universal_94
+  - first:
+      213: 589977648858397592
+    second: cavethief_universal_95
+  - first:
+      213: 3740003886099321380
+    second: cavethief_universal_96
+  - first:
+      213: -1030732073815946148
+    second: cavethief_universal_97
+  - first:
+      213: -6292848487066933856
+    second: cavethief_universal_98
+  - first:
+      213: 9445611807058520
+    second: cavethief_universal_99
+  - first:
+      213: -6723131877435909739
+    second: cavethief_universal_100
+  - first:
+      213: -8090791532598307310
+    second: cavethief_universal_101
+  - first:
+      213: -5212089602147372958
+    second: cavethief_universal_102
+  - first:
+      213: -6933017527434995294
+    second: cavethief_universal_103
+  - first:
+      213: -7201140939920266362
+    second: cavethief_universal_104
+  - first:
+      213: -2345699256103632626
+    second: cavethief_universal_105
+  - first:
+      213: 2141722161887787170
+    second: cavethief_universal_106
+  - first:
+      213: 5671903667410779199
+    second: cavethief_universal_107
+  - first:
+      213: -7437562070508760803
+    second: cavethief_universal_108
+  - first:
+      213: -7613264779606449702
+    second: cavethief_universal_109
+  - first:
+      213: 4618519542699434053
+    second: cavethief_universal_110
+  - first:
+      213: -1530568500130444243
+    second: cavethief_universal_111
+  - first:
+      213: 3541974547530238601
+    second: cavethief_universal_112
+  - first:
+      213: -2282130075809943405
+    second: cavethief_universal_113
+  - first:
+      213: 3986026219330609491
+    second: cavethief_universal_114
+  - first:
+      213: -2497595920157050963
+    second: cavethief_universal_115
+  - first:
+      213: -1362997636258744589
+    second: cavethief_universal_116
+  - first:
+      213: 8867678706447579911
+    second: cavethief_universal_117
+  - first:
+      213: 414325779968734437
+    second: cavethief_universal_118
+  - first:
+      213: -8452867948568984571
+    second: cavethief_universal_119
+  - first:
+      213: 4988594723727165234
+    second: cavethief_universal_120
+  - first:
+      213: -2869136815316033415
+    second: cavethief_universal_121
+  - first:
+      213: 7557418764400273035
+    second: cavethief_universal_122
+  - first:
+      213: -3052701417309294619
+    second: cavethief_universal_123
+  - first:
+      213: 6525494750277952325
+    second: cavethief_universal_124
+  - first:
+      213: -569788477056011297
+    second: cavethief_universal_125
+  - first:
+      213: -5004450636749713422
+    second: cavethief_universal_126
+  - first:
+      213: -2155758979644856755
+    second: cavethief_universal_127
+  - first:
+      213: -4599293252569411280
+    second: cavethief_universal_128
+  - first:
+      213: -2791523596657194964
+    second: cavethief_universal_129
+  - first:
+      213: -4141323843893230195
+    second: cavethief_universal_130
+  - first:
+      213: 8484989477114233484
+    second: cavethief_universal_131
+  - first:
+      213: 7821321416026879371
+    second: cavethief_universal_132
+  - first:
+      213: 323503832687314671
+    second: cavethief_universal_133
+  - first:
+      213: 6521662569628566817
+    second: cavethief_universal_134
+  - first:
+      213: 2227440895593317278
+    second: cavethief_universal_135
+  - first:
+      213: 140592287455333874
+    second: cavethief_universal_136
+  - first:
+      213: -7099202617348747819
+    second: cavethief_universal_137
+  - first:
+      213: -1646226475963407155
+    second: cavethief_universal_138
+  - first:
+      213: 4145847599578610733
+    second: cavethief_universal_139
+  - first:
+      213: -3421205685791882721
+    second: cavethief_universal_140
+  - first:
+      213: -8019093662025009528
+    second: cavethief_universal_141
+  - first:
+      213: -1314221237046850631
+    second: cavethief_universal_142
+  - first:
+      213: -8567567853131236487
+    second: cavethief_universal_143
+  - first:
+      213: 3445886617362183318
+    second: cavethief_universal_144
+  - first:
+      213: 4853853977517601532
+    second: cavethief_universal_145
+  - first:
+      213: 4847404160094197472
+    second: cavethief_universal_146
+  - first:
+      213: -8555439776647320091
+    second: cavethief_universal_147
+  - first:
+      213: -9137756561409643826
+    second: cavethief_universal_148
+  - first:
+      213: 1698969507424887591
+    second: cavethief_universal_149
+  - first:
+      213: 6389054357332686999
+    second: cavethief_universal_150
+  - first:
+      213: 2186435859249940411
+    second: cavethief_universal_151
+  - first:
+      213: -4494655359890369173
+    second: cavethief_universal_152
+  - first:
+      213: -274493702193361040
+    second: cavethief_universal_153
+  - first:
+      213: 4816371979851128328
+    second: cavethief_universal_154
+  - first:
+      213: 3468416302491297631
+    second: cavethief_universal_155
+  - first:
+      213: 5075233755170435370
+    second: cavethief_universal_156
+  - first:
+      213: -986740116638653591
+    second: cavethief_universal_157
+  - first:
+      213: 794669705456169290
+    second: cavethief_universal_158
+  - first:
+      213: -1104787919527593977
+    second: cavethief_universal_159
+  - first:
+      213: 5232820877786453299
+    second: cavethief_universal_160
+  - first:
+      213: 1116552268789406876
+    second: cavethief_universal_161
+  - first:
+      213: 2765470825007126844
+    second: cavethief_universal_162
+  - first:
+      213: 1201508193128267846
+    second: cavethief_universal_163
+  - first:
+      213: 5692858454033756096
+    second: cavethief_universal_164
+  - first:
+      213: 5503950985002585233
+    second: cavethief_universal_165
+  - first:
+      213: -6215602482015175537
+    second: cavethief_universal_166
+  - first:
+      213: -7024298171020785270
+    second: cavethief_universal_167
+  - first:
+      213: -3347118770872134534
+    second: cavethief_universal_168
+  - first:
+      213: 6348259008040485555
+    second: cavethief_universal_169
+  - first:
+      213: 8514763489296647118
+    second: cavethief_universal_170
+  - first:
+      213: -8686161960475768215
+    second: cavethief_universal_171
+  - first:
+      213: 8181546243828964382
+    second: cavethief_universal_172
+  - first:
+      213: -2431219568390722251
+    second: cavethief_universal_173
+  - first:
+      213: -3057249009144525703
+    second: cavethief_universal_174
+  - first:
+      213: 5942889306452692845
+    second: cavethief_universal_175
+  - first:
+      213: -530794480331649954
+    second: cavethief_universal_176
+  - first:
+      213: 3548016118730397262
+    second: cavethief_universal_177
+  - first:
+      213: 6289957159531503869
+    second: cavethief_universal_178
+  - first:
+      213: -5622395429131912245
+    second: cavethief_universal_179
+  - first:
+      213: 1014412892116981805
+    second: cavethief_universal_180
+  - first:
+      213: -8677735522488104796
+    second: cavethief_universal_181
+  - first:
+      213: -6621217393775302717
+    second: cavethief_universal_182
+  - first:
+      213: -8661397041775500735
+    second: cavethief_universal_183
+  - first:
+      213: -1032619782310600824
+    second: cavethief_universal_184
+  - first:
+      213: 2557741178431056324
+    second: cavethief_universal_185
+  - first:
+      213: -6015177971702890458
+    second: cavethief_universal_186
+  - first:
+      213: -267722902236227321
+    second: cavethief_universal_187
+  - first:
+      213: -5130544607712257664
+    second: cavethief_universal_188
+  - first:
+      213: -5597328332877282326
+    second: cavethief_universal_189
+  - first:
+      213: -7649233072734731173
+    second: cavethief_universal_190
+  - first:
+      213: 3037264098833988526
+    second: cavethief_universal_191
+  - first:
+      213: -1526023730136106467
+    second: cavethief_universal_192
+  - first:
+      213: -8938815863261482910
+    second: cavethief_universal_193
+  - first:
+      213: 7407205071145433862
+    second: cavethief_universal_194
+  - first:
+      213: 6722661333470215258
+    second: cavethief_universal_195
+  - first:
+      213: -8378868836475724002
+    second: cavethief_universal_196
+  - first:
+      213: -5165805311185298399
+    second: cavethief_universal_197
+  - first:
+      213: 3935434816394137658
+    second: cavethief_universal_198
+  - first:
+      213: -6206794657896774393
+    second: cavethief_universal_199
+  - first:
+      213: -6039743511773721671
+    second: cavethief_universal_200
+  - first:
+      213: 8557238101360886770
+    second: cavethief_universal_201
+  - first:
+      213: 3120038998489538190
+    second: cavethief_universal_202
+  - first:
+      213: -8528089419401458916
+    second: cavethief_universal_203
+  - first:
+      213: -6500882055063189652
+    second: cavethief_universal_204
+  - first:
+      213: -1862677577967498999
+    second: cavethief_universal_205
+  - first:
+      213: 6147380950407143057
+    second: cavethief_universal_206
+  - first:
+      213: -844478179507236747
+    second: cavethief_universal_207
+  - first:
+      213: -8734027912712920678
+    second: cavethief_universal_208
+  - first:
+      213: -3409845211907463308
+    second: cavethief_universal_209
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cavethief_universal_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1282
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45faec2dccace9980800000000000000
+      internalID: -8530157663134240940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1281
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b627a1dc9e55030800000000000000
+      internalID: 3482946953962220417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1281
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f318daf11bf2a9b0800000000000000
+      internalID: -5070214175824276489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1281
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6785479a92f3e5990800000000000000
+      internalID: -7395404089926592394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_4
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1281
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3f3e797d8377f50800000000000000
+      internalID: 6879029454449144771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1281
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b243fb861a5534720800000000000000
+      internalID: 2829199142654260267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1281
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69dff9950eb008320800000000000000
+      internalID: 2558057646550678934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_7
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1217
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42bd8999b500b3820800000000000000
+      internalID: 2898911178562001700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1217
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a695c75540af41e0800000000000000
+      internalID: -2211372672329869660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_9
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1217
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294d99004e8096600800000000000000
+      internalID: 461910212137833618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_10
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1217
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1160cf0fe90ca7f40800000000000000
+      internalID: 5727101665035421201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_11
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1217
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93191be21c91dade0800000000000000
+      internalID: -1320370798246915783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_12
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1217
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65727eed9d5c15e50800000000000000
+      internalID: 6796430852217055062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_13
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1217
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbff0f7893dd98000800000000000000
+      internalID: 38805310972952507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1153
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f602dd3e0afd077b0800000000000000
+      internalID: -5228433285266464657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1153
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2fefe8fb0a1e550800000000000000
+      internalID: 6188404107582042838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_16
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1153
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c158420bb41c140800000000000000
+      internalID: 4738151502869503127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_17
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1153
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b23b0abd49b7090800000000000000
+      internalID: -8035665439097672849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_18
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1153
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783c321481d04d860800000000000000
+      internalID: 7553676872830403463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_19
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1153
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9ad10871cfbd3f0800000000000000
+      internalID: -874828524729554499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1153
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e2dce44fc0cb8ce0800000000000000
+      internalID: -1401814862548643095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_21
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1089
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee5b71b2e9acb2840800000000000000
+      internalID: 5200472975405987310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1089
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a12e38adacb232b0800000000000000
+      internalID: -5606211132084837984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_23
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1089
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08cc80eedcfa5ec70800000000000000
+      internalID: 8999792729366514816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_24
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1089
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31066b7c4e1439170800000000000000
+      internalID: 8183957398721290259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_25
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1089
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d1a7d342beb961d0800000000000000
+      internalID: -3356942374376332848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1089
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166287739bb798e80800000000000000
+      internalID: -8175867613084637599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_27
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1089
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb6fff356d511f570800000000000000
+      internalID: 8498597982101305019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1026
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aacd254c7de415080800000000000000
+      internalID: -9200485875122512726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_29
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1023
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693d4abe3a7d30ed0800000000000000
+      internalID: -2448876673326328938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_30
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1023
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44f206118de77040800000000000000
+      internalID: 4645442679331812431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_31
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1023
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e53b29c43003a9ee0800000000000000
+      internalID: -1253636755541544098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_32
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1023
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c21fb7c8ddeea390800000000000000
+      internalID: -7805039588866583868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_33
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1023
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 207de3d7d1da0bcc0800000000000000
+      internalID: -3697264951904250110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_34
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1023
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2984c9d8ac126bb0800000000000000
+      internalID: -4944357929365763794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_35
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 1023
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e7206e95ba72340800000000000000
+      internalID: 4839024727232249416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_36
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 961
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310d2d1672f86fa40800000000000000
+      internalID: 5401662202385190931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_37
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 961
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59407b307e950350800000000000000
+      internalID: 5982361884902312282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_38
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 961
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4ff90107054a670800000000000000
+      internalID: 8549046434901521575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_39
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 961
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64cdc0ceb1461800800000000000000
+      internalID: 582725489325360236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_40
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 961
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075a1bd63965834b0800000000000000
+      internalID: -5460519356986186384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_41
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 961
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bfe70e84bd202770800000000000000
+      internalID: 8583911143268413361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_42
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 961
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 665a531560e175a30800000000000000
+      internalID: 4203861789654754662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_43
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 961
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85b04a7376e6a080800000000000000
+      internalID: -9176393807074118261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 897
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813d9936869b4cb50800000000000000
+      internalID: 6612614010885493528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_45
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 898
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b247cec32d297de60800000000000000
+      internalID: 7987013895827780651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_46
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 898
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64458563ca380c940800000000000000
+      internalID: 5314392335966557254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_47
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 898
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2096296a6870b2ca0800000000000000
+      internalID: -6040726200285763326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_48
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 898
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede4295c5362b8250800000000000000
+      internalID: 5947889745262694110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_49
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 898
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b8914242b3d9a70800000000000000
+      internalID: 8835283070381296449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_50
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 898
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ac8444dee1425f0800000000000000
+      internalID: -782466430853920204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_51
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 898
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f08f442c04000880800000000000000
+      internalID: -8646906834356043531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_52
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 833
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3303ed13f762760800000000000000
+      internalID: 7432768087179408345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_53
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 833
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534a52db88e614a00800000000000000
+      internalID: 738993347433440309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_54
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 833
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0dedd9f9429c20b0800000000000000
+      internalID: -5752061777636627186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_55
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 833
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe0d800a241d8090800000000000000
+      internalID: -8030740389901299980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_56
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 833
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591094dc6a4e5af60800000000000000
+      internalID: 8045087714427077013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_57
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 833
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628d7d560f847b300800000000000000
+      internalID: 267762900189829158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_58
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 833
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949a647eb9e2371d0800000000000000
+      internalID: -3354286050325911223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_59
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 833
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db304cc66efeacfe0800000000000000
+      internalID: -1167857380402920515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_60
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 770
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b6a67881c7cfb940800000000000000
+      internalID: 5314185719352567477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_61
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 770
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4571811277f3b270800000000000000
+      internalID: 8265221810447021387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_62
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 769
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997f20febc97784e0800000000000000
+      internalID: -1979479594410772583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_63
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 768
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5cd8b476fab14e10800000000000000
+      internalID: 2180229262307023967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_64
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 769
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41cd088baf71f4340800000000000000
+      internalID: 4850121689306029076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_65
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 770
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1932c0c6ba71e240800000000000000
+      internalID: 4819268001599731999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_66
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 769
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dec4ae40ed2fb770800000000000000
+      internalID: 8628665852480507607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_67
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 768
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffbf2f4e78237eb80800000000000000
+      internalID: -8365662223574303745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_68
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 769
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a635826e0854c0300800000000000000
+      internalID: 219626901753844586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_69
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 770
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858fbeba96b07d360800000000000000
+      internalID: 7194231478231496792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_70
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 770
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3463fdc70acccc20800000000000000
+      internalID: 3228177167786665021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_71
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 705
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0dcc0ad19fad92e0800000000000000
+      internalID: -2117343208830874358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_72
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 705
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6cbe7d0edb5cc10800000000000000
+      internalID: 2073271976866858720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_73
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 706
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 392de4e3eb169f8b0800000000000000
+      internalID: -5117952031812824429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_74
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 706
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6124629023f2840800000000000000
+      internalID: 5201431109514172157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_75
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 705
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46da9fe1ed0b7ee0800000000000000
+      internalID: -1262400006508587445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_76
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 705
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e7007d1456923d0800000000000000
+      internalID: -3230939924207206867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_77
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 705
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a121b5a6151e740800000000000000
+      internalID: 5179510563689077298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_78
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 705
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b68ede57b325fe40800000000000000
+      internalID: 5689492974730118832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_79
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 705
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05fad78387e556e50800000000000000
+      internalID: 6801946682649849680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_80
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 705
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0218fd58fe26bf4e0800000000000000
+      internalID: -1946853633024884448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_81
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 705
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962542ec70ad8af30800000000000000
+      internalID: 4587155947534963305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_82
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 641
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9fe40912fe0d70b0800000000000000
+      internalID: -5729406717980774497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_83
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 641
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0199288c8ca3200800000000000000
+      internalID: 160661500235157730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_84
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 640
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1575bb47dd3b8170800000000000000
+      internalID: 8181701142946084127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_85
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 640
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab687e23623c1260800000000000000
+      internalID: 7069580916627631015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_86
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 640
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a881fe35834006ab0800000000000000
+      internalID: -5017005344917874550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_87
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 641
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4e687cdfe43ac20800000000000000
+      internalID: 3216501410753864924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_88
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 640
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966b0833b3f7ff8c0800000000000000
+      internalID: -3963309254818875799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_89
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 640
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939c40774423858a0800000000000000
+      internalID: -6316243207751153351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_90
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 640
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a27d1b77783ee00800000000000000
+      internalID: 1072850084398836309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_91
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 641
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6355a7a4fddffb0800000000000000
+      internalID: -4612284932384541008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_92
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 641
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d94e13bbb760e040800000000000000
+      internalID: 4674850469072226771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_93
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 577
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe1647959e37ef680800000000000000
+      internalID: -8719404382477327889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_94
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 577
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4182e2cd8dbb8e0800000000000000
+      internalID: -1676507996086594391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_95
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 578
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89bff99bb85003800800000000000000
+      internalID: 589977648858397592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_96
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 578
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422d78118b927e330800000000000000
+      internalID: 3740003886099321380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_97
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 577
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c4991d3aa12b1f0800000000000000
+      internalID: -1030732073815946148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_98
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 577
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5650754af4ba8a0800000000000000
+      internalID: -6292848487066933856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_99
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 577
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a2270ebbe812000800000000000000
+      internalID: 9445611807058520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_100
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 577
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599d35b9d23a2b2a0800000000000000
+      internalID: -6723131877435909739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_101
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 577
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2165dbbc7fbb7bf80800000000000000
+      internalID: -8090791532598307310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_102
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 577
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260bf762f10faa7b0800000000000000
+      internalID: -5212089602147372958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_103
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 577
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a91eaf9a49f8cf90800000000000000
+      internalID: -6933017527434995294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_104
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 514
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ba78ae778601c90800000000000000
+      internalID: -7201140939920266362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_105
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 512
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e018b0264f6627fd0800000000000000
+      internalID: -2345699256103632626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_106
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 512
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a837ea75fce8bd10800000000000000
+      internalID: 2141722161887787170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_107
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 512
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c3140a556a6be40800000000000000
+      internalID: 5671903667410779199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_108
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 512
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d111868e3b878c890800000000000000
+      internalID: -7437562070508760803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_109
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 512
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1a09e0500485690800000000000000
+      internalID: -7613264779606449702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_110
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 514
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540accadd07481040800000000000000
+      internalID: 4618519542699434053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_111
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 512
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2c8255fe0452cae0800000000000000
+      internalID: -1530568500130444243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_112
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 512
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ac305b51f972130800000000000000
+      internalID: 3541974547530238601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_113
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 512
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390fc1c89ce3450e0800000000000000
+      internalID: -2282130075809943405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_114
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 512
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35128944ab5315730800000000000000
+      internalID: 3986026219330609491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_115
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 512
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7f2925eb1c65dd0800000000000000
+      internalID: -2497595920157050963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_116
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 449
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6b91d0fd8a51de0800000000000000
+      internalID: -1362997636258744589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_117
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 449
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b7a10fcc2501b70800000000000000
+      internalID: 8867678706447579911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_118
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 449
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4b2580a1bffb500800000000000000
+      internalID: 414325779968734437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_119
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 449
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504c240d26161ba80800000000000000
+      internalID: -8452867948568984571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_120
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 449
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2374524787c0b3540800000000000000
+      internalID: 4988594723727165234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_121
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 449
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970a71f8447ce28d0800000000000000
+      internalID: -2869136815316033415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_122
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 449
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8623f6435851e860800000000000000
+      internalID: 7557418764400273035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_123
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 449
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efa2ff1c30a2a5d0800000000000000
+      internalID: -3052701417309294619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_124
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 449
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5436efdd6e63f8a50800000000000000
+      internalID: 6525494750277952325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_125
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 449
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd337f32664b718f0800000000000000
+      internalID: -569788477056011297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_126
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 449
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff4e8c19ae9c8ab0800000000000000
+      internalID: -5004450636749713422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_127
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 449
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46e8e431a43512e0800000000000000
+      internalID: -2155758979644856755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_128
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 385
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031dfb6a7270c20c0800000000000000
+      internalID: -4599293252569411280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_129
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 385
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28802734148249d0800000000000000
+      internalID: -2791523596657194964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_130
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 385
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8583e8d7ef0786c0800000000000000
+      internalID: -4141323843893230195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_131
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 385
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82425a59fcb0c570800000000000000
+      internalID: 8484989477114233484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_132
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 385
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85ff64836aea8c60800000000000000
+      internalID: 7821321416026879371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_133
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 385
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe60ec695015d7400800000000000000
+      internalID: 323503832687314671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_134
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 385
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1250ca7cd89918a50800000000000000
+      internalID: 6521662569628566817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_135
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 385
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93840c61b579ee10800000000000000
+      internalID: 2227440895593317278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_136
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 385
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd4fe7c0fb73f100800000000000000
+      internalID: 140592287455333874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_137
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 385
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd876c25d09a7d90800000000000000
+      internalID: -7099202617348747819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_138
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 385
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4ab500ebd6729e0800000000000000
+      internalID: -1646226475963407155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_139
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 385
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2cf9c91d62098930800000000000000
+      internalID: 4145847599578610733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_140
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 321
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1204da1e8f6580d0800000000000000
+      internalID: -3421205685791882721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_141
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 321
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886b9662dc476b090800000000000000
+      internalID: -8019093662025009528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_142
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 321
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb4c897fb2f2cde0800000000000000
+      internalID: -1314221237046850631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_143
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 321
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b7e053e62e91980800000000000000
+      internalID: -8567567853131236487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_144
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 321
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69435241f9f32df20800000000000000
+      internalID: 3445886617362183318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_145
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 321
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2bd89c97a5c5340800000000000000
+      internalID: 4853853977517601532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_146
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 321
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e65a25a660754340800000000000000
+      internalID: 4847404160094197472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_147
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 321
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed60bf0ad8f44980800000000000000
+      internalID: -8555439776647320091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_148
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 321
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecaee2142da203180800000000000000
+      internalID: -9137756561409643826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_149
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 321
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723e746f3c3f39710800000000000000
+      internalID: 1698969507424887591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_150
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 321
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 798f97b561b7aa850800000000000000
+      internalID: 6389054357332686999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_151
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 321
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7c4ca64d7c75e10800000000000000
+      internalID: 2186435859249940411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_152
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 258
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65dded83c6cf91c0800000000000000
+      internalID: -4494655359890369173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_153
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 255
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07fcea3ae6dc03cf0800000000000000
+      internalID: -274493702193361040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_154
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 255
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80edb252cc037d240800000000000000
+      internalID: 4816371979851128328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_155
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57ea2b204a422030800000000000000
+      internalID: 3468416302491297631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_156
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 255
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a217109e53ade6640800000000000000
+      internalID: 5075233755170435370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_157
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 255
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963202687156e42f0800000000000000
+      internalID: -986740116638653591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_158
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 255
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41ba7303eb370b00800000000000000
+      internalID: 794669705456169290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_159
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 255
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7083a689d310ba0f0800000000000000
+      internalID: -1104787919527593977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_160
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33595b91dd6be9840800000000000000
+      internalID: 5232820877786453299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_161
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 255
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c595a6f5ace7f00800000000000000
+      internalID: 1116552268789406876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_162
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 255
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c399141301de06620800000000000000
+      internalID: 2765470825007126844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_163
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 255
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640c126f55d9ca010800000000000000
+      internalID: 1201508193128267846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_164
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 255
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cfe2451a98110f40800000000000000
+      internalID: 5692858454033756096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_165
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 193
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c8d3a7246f16c40800000000000000
+      internalID: 5503950985002585233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_166
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 193
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cf27a697ebdb9a0800000000000000
+      internalID: -6215602482015175537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_167
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 193
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8941ef970ea48e90800000000000000
+      internalID: -7024298171020785270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_168
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 193
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a74df113635ac81d0800000000000000
+      internalID: -3347118770872134534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_169
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 193
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b24d6ceeeb891850800000000000000
+      internalID: 6348259008040485555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_170
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 193
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec30ef5c7448a2670800000000000000
+      internalID: 8514763489296647118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_171
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 193
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ac45cd7bd847780800000000000000
+      internalID: -8686161960475768215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_172
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 193
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c5bd806f0ba8170800000000000000
+      internalID: 8181546243828964382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_173
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 193
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53da7170fa2924ed0800000000000000
+      internalID: -2431219568390722251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_174
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 193
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c860469387295d0800000000000000
+      internalID: -3057249009144525703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_175
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 193
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f84926652697250800000000000000
+      internalID: 5942889306452692845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_176
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 193
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5c081f7b3d32a8f0800000000000000
+      internalID: -530794480331649954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_177
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 193
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46194e9cd51d3130800000000000000
+      internalID: 3548016118730397262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_178
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 129
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0ec4206ba6a4750800000000000000
+      internalID: 6289957159531503869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_179
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 130
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcbffcb552d39f1b0800000000000000
+      internalID: -5622395429131912245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_180
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 130
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d28953a962be31e00800000000000000
+      internalID: 1014412892116981805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_181
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 129
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a8ce47d48d729780800000000000000
+      internalID: -8677735522488104796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_182
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 129
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7a26f6cd5bc14a0800000000000000
+      internalID: -6621217393775302717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_183
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 129
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1422a52d7498cc780800000000000000
+      internalID: -8661397041775500735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_184
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 129
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fd55f67c56ba1f0800000000000000
+      internalID: -1032619782310600824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_185
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 129
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c9a5cfdc0cee7320800000000000000
+      internalID: 2557741178431056324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_186
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 129
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62005e7218bc58ca0800000000000000
+      internalID: -6015177971702890458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_187
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 129
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70919f9507bd84cf0800000000000000
+      internalID: -267722902236227321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_188
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 129
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089d301bcd4acc8b0800000000000000
+      internalID: -5130544607712257664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_189
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 129
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3ce93898b4252b0800000000000000
+      internalID: -5597328332877282326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_190
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 129
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b540a773c0778d590800000000000000
+      internalID: -7649233072734731173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_191
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 65
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eabfb041b97862a20800000000000000
+      internalID: 3037264098833988526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_192
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 65
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1abb6ea08972dae0800000000000000
+      internalID: -1526023730136106467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_193
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 65
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2603cad0552f2f380800000000000000
+      internalID: -8938815863261482910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_194
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 65
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b781464cdabc660800000000000000
+      internalID: 7407205071145433862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_195
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 65
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cfeb65dd0bb4d50800000000000000
+      internalID: 6722661333470215258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_196
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 65
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f1646bf2748bb80800000000000000
+      internalID: -8378868836475724002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_197
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 65
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c59f7607f5f48b0800000000000000
+      internalID: -5165805311185298399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_198
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 65
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3090eb5d197d9630800000000000000
+      internalID: 3935434816394137658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_199
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 65
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7054546c4290dd9a0800000000000000
+      internalID: -6206794657896774393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_200
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 65
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bbc146a6458e2ca0800000000000000
+      internalID: -6039743511773721671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_201
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 65
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f3cd0a07ba61c670800000000000000
+      internalID: 8557238101360886770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_202
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 65
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e955e30fa9c4b20800000000000000
+      internalID: 3120038998489538190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_203
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 65
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b0fc75bd326a980800000000000000
+      internalID: -8528089419401458916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_204
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c674f3dc63a38c5a0800000000000000
+      internalID: -6500882055063189652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_205
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909892a9c907626e0800000000000000
+      internalID: -1862677577967498999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_206
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e55087762ef4550800000000000000
+      internalID: 6147380950407143057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_207
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57017e9e19fc744f0800000000000000
+      internalID: -844478179507236747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_208
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a91666463ef7ac680800000000000000
+      internalID: -8734027912712920678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavethief_universal_209
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 477603d88dbcda0d0800000000000000
+      internalID: -3409845211907463308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,830 @@
+fileFormatVersion: 2
+guid: 03a13c6ee8c456b4eb485de56ee642e3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6748806518015170463
+    second: damson_thrust_0
+  - first:
+      213: -9005634890959572231
+    second: damson_thrust_1
+  - first:
+      213: 5443835891668123301
+    second: damson_thrust_2
+  - first:
+      213: 1506165130799847989
+    second: damson_thrust_3
+  - first:
+      213: -1085940455767641699
+    second: damson_thrust_4
+  - first:
+      213: -6209124863475694250
+    second: damson_thrust_5
+  - first:
+      213: 4712367867561146010
+    second: damson_thrust_6
+  - first:
+      213: 7154236031798530350
+    second: damson_thrust_7
+  - first:
+      213: 3196693195480312813
+    second: damson_thrust_8
+  - first:
+      213: -3092709708133557824
+    second: damson_thrust_9
+  - first:
+      213: -8112058210699068189
+    second: damson_thrust_10
+  - first:
+      213: 7913751754676245035
+    second: damson_thrust_11
+  - first:
+      213: 1857450499247519453
+    second: damson_thrust_12
+  - first:
+      213: -803994151964746840
+    second: damson_thrust_13
+  - first:
+      213: -3505822090582846661
+    second: damson_thrust_14
+  - first:
+      213: -4188445155311327815
+    second: damson_thrust_15
+  - first:
+      213: -6360272471502264227
+    second: damson_thrust_16
+  - first:
+      213: -8595483087437587807
+    second: damson_thrust_17
+  - first:
+      213: 2488629061594975855
+    second: damson_thrust_18
+  - first:
+      213: 7840052569046604508
+    second: damson_thrust_19
+  - first:
+      213: -963149227891854295
+    second: damson_thrust_20
+  - first:
+      213: -908809216275266830
+    second: damson_thrust_21
+  - first:
+      213: -2994914819628018706
+    second: damson_thrust_22
+  - first:
+      213: 6171093658452715973
+    second: damson_thrust_23
+  - first:
+      213: 7886932119552358150
+    second: damson_thrust_24
+  - first:
+      213: 6701222659791455889
+    second: damson_thrust_25
+  - first:
+      213: 6371297787272625901
+    second: damson_thrust_26
+  - first:
+      213: 6222828684165114269
+    second: damson_thrust_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: damson_thrust_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 639
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97922c75c398ad50800000000000000
+      internalID: 6748806518015170463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_1
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 639
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2bd73d7ce850380800000000000000
+      internalID: -9005634890959572231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_2
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 639
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae766a96e36c8b40800000000000000
+      internalID: 5443835891668123301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_3
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 639
+        width: 29
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a976ad439f6e410800000000000000
+      internalID: 1506165130799847989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_4
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 639
+        width: 29
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d917eb6b8e6fde0f0800000000000000
+      internalID: -1085940455767641699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_5
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 639
+        width: 29
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6554c7285d1c4d9a0800000000000000
+      internalID: -6209124863475694250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_6
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 639
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9672fcbb91b56140800000000000000
+      internalID: 4712367867561146010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_7
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 447
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21d6a224c3f84360800000000000000
+      internalID: 7154236031798530350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_8
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 447
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb2384468fec5c20800000000000000
+      internalID: 3196693195480312813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_9
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 447
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c91c4508ec7415d0800000000000000
+      internalID: -3092709708133557824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_10
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 447
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ecbdf1790e2c6f80800000000000000
+      internalID: -8112058210699068189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_11
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 447
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b221a12ca4b43dd60800000000000000
+      internalID: 7913751754676245035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_12
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 447
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6358b436df6c910800000000000000
+      internalID: 1857450499247519453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_13
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 447
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab56aa1493a7d4f0800000000000000
+      internalID: -803994151964746840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 255
+        width: 56
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33971d1261d85fc0800000000000000
+      internalID: -3505822090582846661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_15
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 253
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b566749257afd5c0800000000000000
+      internalID: -4188445155311327815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_16
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 251
+        width: 29
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d586965a2e5cbb7a0800000000000000
+      internalID: -6360272471502264227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_17
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 248
+        width: 29
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa976c3ca5b6b880800000000000000
+      internalID: -8595483087437587807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_18
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 243
+        width: 30
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e051a32f2698220800000000000000
+      internalID: 2488629061594975855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_19
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 248
+        width: 29
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda596ee5467dcc60800000000000000
+      internalID: 7840052569046604508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_20
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 251
+        width: 29
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92470d551e432a2f0800000000000000
+      internalID: -963149227891854295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_21
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 63
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2cf4735d24363f0800000000000000
+      internalID: -908809216275266830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_22
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 63
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3d48bd6dcef66d0800000000000000
+      internalID: -2994914819628018706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_23
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 63
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c96dbb8cf024a550800000000000000
+      internalID: 6171093658452715973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_24
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 63
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6077989d9f2047d60800000000000000
+      internalID: 7886932119552358150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_25
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 63
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1960ba521868ffc50800000000000000
+      internalID: 6701222659791455889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_26
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 63
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deefd98b4956b6850800000000000000
+      internalID: 6371297787272625901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damson_thrust_27
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 63
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99e5c1e7bdeb5650800000000000000
+      internalID: 6222828684165114269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

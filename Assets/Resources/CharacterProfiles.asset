@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ab4148d0e1150438263816d5fb78ac, type: 3}
+  m_Name: CharacterProfiles
+  m_EditorClassIdentifier: 
+  characterProfiles:
+  - characterSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    characterName: Cherry
+    animatorController: {fileID: 9100000, guid: 7211c23c750773545891e8df462bd492, type: 2}
+    maxHealth:
+      baseStat: 150
+      incrementPercentage: 15
+    hungerSize:
+      baseStat: 100
+      incrementPercentage: 15
+    physAtk:
+      baseStat: 20
+      incrementPercentage: 15
+    physDef:
+      baseStat: 20
+      incrementPercentage: 15
+    magicAtk:
+      baseStat: 125
+      incrementPercentage: 15
+    magicDef:
+      baseStat: 40
+      incrementPercentage: 15
+    maxEnergy:
+      baseStat: 75
+      incrementPercentage: 15
+    maxMana:
+      baseStat: 400
+      incrementPercentage: 15
+    aiModule: {fileID: 11400000, guid: 81ca022384e9d0b4dbeaeb00a0af30ba, type: 2}
+  - characterSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    characterName: Damson
+    animatorController: {fileID: 9100000, guid: 5819b751b3768bb46adb12913d2184f1, type: 2}
+    maxHealth:
+      baseStat: 5
+      incrementPercentage: 15
+    hungerSize:
+      baseStat: 5
+      incrementPercentage: 15
+    physAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    physDef:
+      baseStat: 5
+      incrementPercentage: 15
+    magicAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    magicDef:
+      baseStat: 5
+      incrementPercentage: 15
+    maxEnergy:
+      baseStat: 5
+      incrementPercentage: 15
+    maxMana:
+      baseStat: 5
+      incrementPercentage: 15
+    aiModule: {fileID: 11400000, guid: 81ca022384e9d0b4dbeaeb00a0af30ba, type: 2}
+  - characterSprite: {fileID: 0}
+    characterName: Bandit
+    animatorController: {fileID: 9100000, guid: 68dc13f499ce93b49b4916ee751a0d68, type: 2}
+    maxHealth:
+      baseStat: 5
+      incrementPercentage: 15
+    hungerSize:
+      baseStat: 5
+      incrementPercentage: 15
+    physAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    physDef:
+      baseStat: 5
+      incrementPercentage: 15
+    magicAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    magicDef:
+      baseStat: 5
+      incrementPercentage: 15
+    maxEnergy:
+      baseStat: 5
+      incrementPercentage: 15
+    maxMana:
+      baseStat: 5
+      incrementPercentage: 15
+    aiModule: {fileID: 11400000, guid: bec4a0da65a4a2845bafc8a367e36cde, type: 2}
+  - characterSprite: {fileID: 0}
+    characterName: Cave Thief
+    animatorController: {fileID: 9100000, guid: 093727f09f9de8e4ab319f2b0a80e0e1, type: 2}
+    maxHealth:
+      baseStat: 5
+      incrementPercentage: 15
+    hungerSize:
+      baseStat: 5
+      incrementPercentage: 15
+    physAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    physDef:
+      baseStat: 5
+      incrementPercentage: 15
+    magicAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    magicDef:
+      baseStat: 5
+      incrementPercentage: 15
+    maxEnergy:
+      baseStat: 5
+      incrementPercentage: 15
+    maxMana:
+      baseStat: 5
+      incrementPercentage: 15
+    aiModule: {fileID: 11400000, guid: bec4a0da65a4a2845bafc8a367e36cde, type: 2}
+  questNPCNames:
+  - Charlie
+  - James
+  - Mary
+  - Julie
+  - Arthur
+  - Zack
+  - Andy
+  - Heidi
+  - Luna
+  - Perry

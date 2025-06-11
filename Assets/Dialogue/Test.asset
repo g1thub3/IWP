@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d196a0535c375e54bbd06bd3726e1d9a, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  sequence:
+  - character: 0
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAasaasasa
+    - hoooogamssAsdsaaaaaa
+    - asdsadsaddaaaaaaaaaaaaaaaaaaaaaaa
+    waitTime: 2
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 0
+    canSkip: 1
+    autoNext: 0
+  - character: 1
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - dsadfdsffffffsdssdsdsdsdsdsdsdsd
+    waitTime: 2
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 0
+    canSkip: 1
+    autoNext: 0
+  - character: 1
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - ewrre
+    - sdsdfdsg
+    waitTime: 2
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 0
+    canSkip: 0
+    autoNext: 1

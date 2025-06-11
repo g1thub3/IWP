@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e6ded63e2329947958768383a64162, type: 3}
+  m_Name: Tilesets
+  m_EditorClassIdentifier: 
+  structureList:
+    dataList:
+    - Key: BasementStairs
+      Int: 0
+      Float: 0
+      Obj: {fileID: 2834970829211005713, guid: a43686ec822b7ef4eaa8f6c110ee2448, type: 3}
+  itemList:
+    dataList:
+    - Key: HealthPotion
+      Int: 0
+      Float: 0
+      Obj: {fileID: 3770591356406474137, guid: cde7ddf7cb8ec3646bf9703a4614f634, type: 3}
+  _structureTemplate: {fileID: 4165730599628682531, guid: 68c86cc83a62b0b4282697a1047f2887, type: 3}
+  _itemTemplate: {fileID: 9006622347749446233, guid: ba06eefd880be144f97cdf9ad35c77f0, type: 3}
+  tilesets:
+  - tileSprite: {fileID: 556922540119661293, guid: 7c2520c5a703ee2498e1fda1650ff072, type: 3}
+    floorColour: {r: 0.09703802, g: 0.87169814, b: 0.12967002, a: 1}
+    wallColour: {r: 0.052865736, g: 0.509434, b: 0.08578133, a: 1}
+  - tileSprite: {fileID: 556922540119661293, guid: 613148a29f90d0a428ee215b4bc1c950, type: 3}
+    floorColour: {r: 0.49698105, g: 0.5133498, b: 0.5999999, a: 1}
+    wallColour: {r: 0.2589035, g: 0.27306348, b: 0.3509434, a: 1}

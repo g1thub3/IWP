@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d62d4ee006cc547a2e6b825d291870, type: 3}
+  m_Name: AudioManager
+  m_EditorClassIdentifier: 
+  _sfxList:
+  - name: TextSFX
+    clip: {fileID: 8300000, guid: ee75c1666cf03c54285fe0f755321c00, type: 3}
+    volume: 1
+  - name: Select
+    clip: {fileID: 8300000, guid: 22e4b27140a330d48a096cafaeb62658, type: 3}
+    volume: 0.5
+  - name: Error
+    clip: {fileID: 8300000, guid: c834df2845050fb4bbd4adf9c7812335, type: 3}
+    volume: 0.5
+  - name: Confirm
+    clip: {fileID: 8300000, guid: cef707017b165e647aec656446c8bb86, type: 3}
+    volume: 0.5
