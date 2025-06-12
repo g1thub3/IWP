@@ -5,6 +5,22 @@ using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Splines;
 
+public class TilePathPoint {
+    public TileInfo tile;
+    public float searchScore;
+    public bool hasSearched;
+    public TilePathPoint(TileInfo tile)
+    {
+        searchScore = 0;
+        hasSearched = false;
+    }
+    public void Reset()
+    {
+        searchScore = 0;
+        hasSearched = false;
+    }
+}
+
 public class DGEntity : DGObject
 {
     [SerializeField]
@@ -138,87 +154,8 @@ public class DGEntity : DGObject
     {
         Floor.ClearSearch();
         List<TileCoord> movements = new List<TileCoord>();
-        AStarSearch(movements, Position, point);
+        //AStarSearch(movements, Position, point);
         return movements;
-    }
-    public int AStarSearch(List<TileCoord> toFill, TileCoord curr, TileCoord end)
-    {
-        Floor.CoordToTileInfo(curr).hasBeenSearched = true;
-        if (curr.Equals(end))
-        {
-            toFill.Add(curr);
-            Debug.Log("Found!");
-            return 0;
-        }
-
-        List<TileInfo> directions = new List<TileInfo>();
-        directions.Add(Floor.CoordToTileInfo(curr.North));
-        directions.Add(Floor.CoordToTileInfo(curr.Northeast));
-        directions.Add(Floor.CoordToTileInfo(curr.East));
-        directions.Add(Floor.CoordToTileInfo(curr.Southeast));
-        directions.Add(Floor.CoordToTileInfo(curr.South));
-        directions.Add(Floor.CoordToTileInfo(curr.Southwest));
-        directions.Add(Floor.CoordToTileInfo(curr.West));
-        directions.Add(Floor.CoordToTileInfo(curr.Northwest));
-
-        foreach (var dir in directions)
-        {
-            if (!(DungeonFloor.IsInX(dir.coord.x) && DungeonFloor.IsInZ(dir.coord.z)))
-            {
-                dir.searchScore = -1;
-                continue;
-            }
-
-            TileCoord currDiff = dir.coord - curr;
-            TileCoord xDiff = new TileCoord(curr.x + currDiff.x, curr.z);
-            TileCoord zDiff = new TileCoord(curr.x, curr.z + currDiff.z);
-
-            TileInfo xTile = Floor.CoordToTileInfo(xDiff);
-            TileInfo yTile = Floor.CoordToTileInfo(zDiff);
-            if (dir.isWall || xTile.isWall || yTile.isWall || dir.occupyingEntity != null || dir.hasBeenSearched)
-            {
-                dir.searchScore = -1;
-            } else
-            {
-                float dist = dir.coord.DistanceSquared(end) - curr.DistanceSquared(end) * -1;
-                if (dist > 0)
-                {
-                    dist *= dist;
-                }
-                dist *= dist;
-                dir.searchScore = 1 + dist;
-            }
-        }
-        
-        for (int i = directions.Count - 1; i >= 0; i--)
-        {
-            if (directions[i].searchScore == -1)
-                directions.RemoveAt(i);
-        }
-
-        for (int i = 0; i < directions.Count - 1; i++)
-        {
-            for (int j = i;  j < directions.Count - 1; j++)
-            {
-                if (directions[j].searchScore > directions[i].searchScore)
-                {
-                    var temp = directions[i];
-                    directions[i] = directions[j];
-                    directions[j] = temp;
-                }
-            }
-        }
-
-        for (int i = 0; i < directions.Count - 1; i++)
-        {
-            int search = AStarSearch(toFill, directions[i].coord, end);
-            if (search == 0)
-            {
-                toFill.Add(curr);
-                return 0;
-            }
-        }
-        return -1;
     }
 
     protected void Update()

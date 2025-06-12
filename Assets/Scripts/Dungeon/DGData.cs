@@ -75,6 +75,19 @@ public class TileCoord // To be serialized, dont need to store these as floats s
     {
         return new TileCoord(a.x - b.x, a.z - b.z);
     }
+    public List<TileCoord> GetDirections()
+    {
+        List<TileCoord> list = new List<TileCoord>();
+        list.Add(North);
+        list.Add(Northeast);
+        list.Add(East);
+        list.Add(Southeast);
+        list.Add(South);
+        list.Add(Southwest);
+        list.Add(West);
+        list.Add(Northwest);
+        return list;
+    }
 }
 
 [System.Serializable]
@@ -92,6 +105,10 @@ public class TileInfo // Use CastEnum after doing FromJson
     public Vector3 CoordToPosition()
     {
         return new Vector3(coord.x * tileScale, coord.z * tileScale, 0);
+    }
+    public static Vector3 CoordToPosition(TileCoord givenCoord)
+    {
+        return new Vector3(givenCoord.x * tileScale, givenCoord.z * tileScale, 0);
     }
     public TileInfo(TileCoord newCoord)
     {
@@ -118,9 +135,6 @@ public class TileInfo // Use CastEnum after doing FromJson
         item = newItem;
         item.Position = coord;
     }
-
-    public bool hasBeenSearched;
-    public float searchScore;
 }
 
 public class FloorRoom
@@ -204,12 +218,12 @@ public class DungeonFloor
     public static readonly int floorSize = 50;
     public List<FloorRoom> rooms;
     public TileInfo[] tiles;
+    public TilePathPoint[] tilePathPoints;
     public void ClearSearch()
     {
-        foreach (var tile in tiles)
+        foreach (var tile in tilePathPoints)
         {
-            tile.hasBeenSearched = false;
-            tile.searchScore = 0;
+            tile.Reset();
         }
     }
 
@@ -250,10 +264,12 @@ public class DungeonFloor
     public void Fill()
     {
         tiles = new TileInfo[floorSize * floorSize];
+        tilePathPoints = new TilePathPoint[tiles.Length];
         for (int i = 0; i < tiles.Length; i++)
         {
             tiles[i] = new TileInfo(IndexToCoord(i));
             tiles[i].isWall = true;
+            tilePathPoints[i] = new TilePathPoint(tiles[i]);
         }
     }
 }

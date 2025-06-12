@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.TerrainTools;
 using UnityEngine;
@@ -18,9 +19,7 @@ public class DGEntityEditor : Editor
             if (GUILayout.Button("Test Pathfind"))
             {
                 DebugTools.Instance.ClearMarkers();
-                myTarget.Floor.ClearSearch();
-                List<TileCoord> path = new List<TileCoord>();
-                AStarDebug(path, myTarget.Position, plr.Position);
+                List<TileCoord> path = AStarPathfind(myTarget.Position, plr.Position);
                 foreach (TileCoord coord in path)
                 {
                     DebugTools.Instance.AddMarker(new Vector3(coord.x * TileInfo.tileScale, coord.z * TileInfo.tileScale, 0));
@@ -29,101 +28,91 @@ public class DGEntityEditor : Editor
         }
     }
 
-    // LISTS CAN BE FILLED WITH FUNCTIONS
-
-
-    private int AStarDebug(List<TileCoord> toFill, TileCoord curr, TileCoord end)
+    private List<TileCoord> AStarPathfind(TileCoord start, TileCoord end)
     {
-        myTarget.Floor.CoordToTileInfo(curr).hasBeenSearched = true;
-        if (curr.Equals(end))
+        myTarget.Floor.ClearSearch();
+        List<TileCoord> path = new List<TileCoord>();
+
+        path.Add(start);
+        myTarget.Floor.tilePathPoints[myTarget.Floor.CoordToIndex(start)].hasSearched = true;
+        bool pathFound = false;
+        while (!pathFound)
         {
-            toFill.Add(curr);
-            Debug.Log("Found!");
-            return 0;
-        }
-
-        List<TileInfo> directions = new List<TileInfo>();
-        TileInfo N = myTarget.Floor.CoordToTileInfo(curr.North);
-        TileInfo NE = myTarget.Floor.CoordToTileInfo(curr.Northeast);
-        TileInfo E = myTarget.Floor.CoordToTileInfo(curr.East);
-        TileInfo SE = myTarget.Floor.CoordToTileInfo(curr.Southeast);
-        TileInfo S = myTarget.Floor.CoordToTileInfo(curr.South);
-        TileInfo SW = myTarget.Floor.CoordToTileInfo(curr.Southwest);
-        TileInfo W = myTarget.Floor.CoordToTileInfo(curr.West);
-        TileInfo NW = myTarget.Floor.CoordToTileInfo(curr.Northwest);
-        if (N != null)
-            directions.Add(N);
-        if (NE != null)
-            directions.Add(NE);
-        if (E != null)
-            directions.Add(E);
-        if (SE != null)
-            directions.Add(SE);
-        if (S != null)
-            directions.Add(S);
-        if (SW != null)
-            directions.Add(SW);
-        if (W != null)
-            directions.Add(W);
-        if (NW != null)
-            directions.Add(NW);
-
-        foreach (var dir in directions)
-        {
-            TileCoord currDiff = dir.coord - curr;
-            TileCoord xDiff = new TileCoord(curr.x + currDiff.x, curr.z);
-            TileCoord zDiff = new TileCoord(curr.x, curr.z + currDiff.z);
-
-            TileInfo xTile = myTarget.Floor.CoordToTileInfo(xDiff);
-            TileInfo yTile = myTarget.Floor.CoordToTileInfo(zDiff);
-            if (dir.isWall || dir.occupyingEntity != null || dir.hasBeenSearched)
+            TileCoord curr = path.Last<TileCoord>();
+            List<TileInfo> searchableTiles = new List<TileInfo>();
+            var directions = curr.GetDirections();
+            for (int i = directions.Count - 1; i >=0; i--)
             {
-                dir.searchScore = -1;
-            }
-            else
-            {
-                float dist = dir.coord.DistanceSquared(end) - curr.DistanceSquared(end) * -1;
-                if (dist > 0)
+                if (!(DungeonFloor.IsInX(directions[i].x) && DungeonFloor.IsInZ(directions[i].z)))
                 {
+                    directions.RemoveAt(i);
+                    continue;
+                }
+                TileInfo tile = myTarget.Floor.CoordToTileInfo(directions[i]);
+                searchableTiles.Add(tile);
+            }
+            foreach (var tile in searchableTiles)
+            {
+                var tilePP = myTarget.Floor.tilePathPoints[myTarget.Floor.CoordToIndex(tile.coord)];
+                TileCoord currDiff = tile.coord - curr;
+                TileCoord xDiff = new TileCoord(curr.x + currDiff.x, curr.z);
+                TileCoord zDiff = new TileCoord(curr.x, curr.z + currDiff.z);
+
+                TileInfo xTile = myTarget.Floor.CoordToTileInfo(xDiff);
+                TileInfo zTile = myTarget.Floor.CoordToTileInfo(zDiff);
+
+                if (tile.isWall || xTile.isWall || zTile.isWall || tile.occupyingEntity != null || tilePP.hasSearched)
+                {
+                    tilePP.searchScore = -1;
+                }
+                else
+                {
+                    float dist = (tile.coord.DistanceSquared(end) - curr.DistanceSquared(end)) * -1;
+                    if (dist > 0)
+                    {
+                        dist *= dist;
+                    }
                     dist *= dist;
+                    tilePP.searchScore = 1 + dist;
                 }
-                dist *= dist;
-                dir.searchScore = 1 + dist;
             }
-        }
 
-        //foreach (var coord in directions)
-        //{
-        //    DebugTools.Instance.AddMarker(coord.CoordToPosition(), coord.searchScore.ToString());
-        //}
-        for (int i = directions.Count - 1; i >= 0; i--)
-        {
-            if (directions[i].searchScore == -1)
-                directions.RemoveAt(i);
-        }
-
-        for (int i = 0; i < directions.Count - 1; i++)
-        {
-            for (int j = i; j < directions.Count - 1; j++)
+            for (int i = 0; i < searchableTiles.Count - 1; i++)
             {
-                if (directions[j].searchScore > directions[i].searchScore)
+                for (int j = i; j < searchableTiles.Count - 1; j++)
                 {
-                    var temp = directions[i];
-                    directions[i] = directions[j];
-                    directions[j] = temp;
+                    var iPP = myTarget.Floor.tilePathPoints[myTarget.Floor.CoordToIndex(searchableTiles[i].coord)];
+                    var jPP = myTarget.Floor.tilePathPoints[myTarget.Floor.CoordToIndex(searchableTiles[j].coord)];
+                    if (jPP.searchScore > iPP.searchScore)
+                    {
+                        var temp = searchableTiles[i];
+                        searchableTiles[i] = searchableTiles[j];
+                        searchableTiles[j] = temp;
+                    }
                 }
+            }
+
+            TileCoord found = null;
+            if (searchableTiles.Count > 0)
+            {
+                var tilePP = myTarget.Floor.tilePathPoints[myTarget.Floor.CoordToIndex(searchableTiles[0].coord)];
+                if (tilePP.searchScore != -1)
+                {
+                    found = searchableTiles[0].coord;
+                }
+            }
+            if (found != null)
+            {
+                path.Add(found);
+                myTarget.Floor.tilePathPoints[myTarget.Floor.CoordToIndex(found)].hasSearched = true;
+                if (found == end)
+                    pathFound = true;
+            } else
+            {
+                path.Remove(path.Last());
             }
         }
 
-        for (int i = 0; i < directions.Count - 1; i++)
-        {
-            int search = AStarDebug(toFill, directions[i].coord, end);
-            if (search == 0)
-            {
-                toFill.Add(curr);
-                return 0;
-            }
-        }
-        return -1;
+        return path;
     }
 }
