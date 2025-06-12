@@ -25,6 +25,7 @@ public abstract class MenuLayer {
         currentSelection = 0;
         if (refresh != null)
             refresh();
+        nextFrameTrigger = true;
     }
     public abstract void Highlight();
     public abstract void Control(PlayerInput inputManager);
@@ -35,7 +36,14 @@ public abstract class MenuLayer {
 
     public virtual void OnRefresh()
     {
-        
+        nextFrameTrigger = true;
+    }
+    public bool nextFrameTrigger;
+
+    [Tooltip("When the frame the layer has been created is completed, run this function (for post-frame UI calculations).")]
+    public virtual void OnCreateFrameComplete()
+    {
+
     }
 }
 

@@ -1,9 +1,11 @@
 using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class DGStartLayer : MenuLayer
@@ -121,7 +123,6 @@ public class DGListLayer : MenuLayer
     public override void Open()
     {
         base.Open();
-        Highlight();
         _selectionFrame.SetActive(true);
     }
     public void ClearList()
@@ -156,6 +157,11 @@ public class DGListLayer : MenuLayer
             _selectionBacking.position = _closeMsg.position;
             _selectionBacking.sizeDelta = _closeMsg.sizeDelta + new Vector2(50, 0);
         }
+    }
+    public override void OnCreateFrameComplete()
+    {
+        base.OnCreateFrameComplete();
+        Highlight();
     }
     private void IncSelection(int inc)
     {
@@ -206,7 +212,6 @@ public class DGDialogueLayer : MenuLayer
     public override void Open()
     {
         base.Open();
-        Highlight();
         _dialogueFrame.SetActive(true);
     }
     public void ClearList()
@@ -231,6 +236,11 @@ public class DGDialogueLayer : MenuLayer
         var selected = addedEntries[currentSelection];
         _selectionBacking.position = selected.GetComponent<RectTransform>().position;
         _selectionBacking.sizeDelta = selected.GetComponent<RectTransform>().sizeDelta + new Vector2(50, 0);
+    }
+    public override void OnCreateFrameComplete()
+    {
+        base.OnCreateFrameComplete();
+        Highlight();
     }
     private void IncSelection(int inc)
     {
@@ -469,7 +479,7 @@ public class DungeonMenuHandler : MonoBehaviour
                                     partyLayer.functions.Add(delegate
                                     {
                                         var selectedCharacter = _dungeonGen.ActiveParty[partyLayer.CurrentSelection];
-                                        if (selectedCharacter.character.HeldItem != null)
+                                        if (selectedCharacter.character.HeldItem != null && selectedCharacter.character.HeldItem.module != null)
                                         {
                                             if (GlobalGameManager.Instance.inventory.Count >= GlobalGameManager.inventoryLimit)
                                                 return;
@@ -477,7 +487,7 @@ public class DungeonMenuHandler : MonoBehaviour
                                             selectedCharacter.character.HeldItem = null;
                                         }
                                         selectedCharacter.character.HeldItem = GlobalGameManager.Instance.inventory[inventoryLayer.CurrentSelection];
-                                        GlobalGameManager.Instance.inventory.RemoveAt(inventoryLayer.CurrentSelection);
+                                        GlobalGameManager.Instance.inventory.Remove(selectedCharacter.character.HeldItem);
                                         partyLayer.Close();
                                         dialogueLayer.Close();
                                     });
@@ -633,6 +643,11 @@ public class DungeonMenuHandler : MonoBehaviour
     {
         if (CurrentLayer != null)
         {
+            if (CurrentLayer.nextFrameTrigger)
+            {
+                CurrentLayer.OnCreateFrameComplete();
+                CurrentLayer.nextFrameTrigger = false;
+            }
             CurrentLayer.Control(_playerInput);
             if (_playerInput.actions["Accept"].WasPressedThisFrame())
             {
