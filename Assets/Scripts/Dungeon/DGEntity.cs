@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -150,12 +151,139 @@ public class DGEntity : DGObject
         }
     }
 
-    public List<TileCoord> Pathfind(TileCoord point) // Creates a list of cooords to follow
+    public TileCoord GetClosestDirection(TileCoord pt)
+    {
+        float closestDist = -1;
+        TileCoord closest = null;
+        var directions = pt.GetDirections();
+        for (int i = directions.Count - 1; i >= 0; i--)
+        {
+            if (directions[i].Equals(Position)) return directions[i];
+            if (!(DungeonFloor.IsInX(directions[i].x) && DungeonFloor.IsInZ(directions[i].z)))
+            {
+                directions.Remove(directions[i]);
+                continue;
+            }
+
+            var tile = Floor.CoordToTileInfo(directions[i]);
+
+            TileCoord currDiff = directions[i] - pt;
+            TileCoord xDiff = new TileCoord(pt.x + currDiff.x, pt.z);
+            TileCoord zDiff = new TileCoord(pt.x, pt.z + currDiff.z);
+
+            TileInfo xTile = Floor.CoordToTileInfo(xDiff);
+            TileInfo zTile = Floor.CoordToTileInfo(zDiff);
+            if (tile.isWall || xTile.isWall || zTile.isWall || tile.occupyingEntity != null)
+            {
+                directions.Remove(directions[i]);
+            }
+        }
+        for (int i = 0; i < directions.Count; i++)
+        {
+            float dist = Position.DistanceSquared(directions[i]);
+            if (closestDist == -1 || dist < closestDist)
+            {
+                closest = directions[i];
+                closestDist = dist;
+            }
+        }
+        return closest;
+    }
+
+    public List<TileCoord> AStarPathfind(TileCoord start, TileCoord end)
     {
         Floor.ClearSearch();
-        List<TileCoord> movements = new List<TileCoord>();
-        //AStarSearch(movements, Position, point);
-        return movements;
+        List<TileCoord> path = new List<TileCoord>();
+        path.Add(start);
+        Floor.tilePathPoints[Floor.CoordToIndex(start)].hasSearched = true;
+        if (start.Equals(end))
+            return path;
+        bool pathFound = false;
+        while (!pathFound)
+        {
+            if (path.Count == 0)
+            {
+                Debug.Log("NPC Pathfind failed.");
+                break;
+            }
+            TileCoord curr = path.Last<TileCoord>();
+            List<TileInfo> searchableTiles = new List<TileInfo>();
+            var directions = curr.GetDirections();
+            for (int i = directions.Count - 1; i >= 0; i--)
+            {
+                if (!(DungeonFloor.IsInX(directions[i].x) && DungeonFloor.IsInZ(directions[i].z)))
+                {
+                    directions.RemoveAt(i);
+                    continue;
+                }
+                TileInfo tile = Floor.CoordToTileInfo(directions[i]);
+                searchableTiles.Add(tile);
+            }
+            foreach (var tile in searchableTiles)
+            {
+                var tilePP = Floor.tilePathPoints[Floor.CoordToIndex(tile.coord)];
+                TileCoord currDiff = tile.coord - curr;
+                TileCoord xDiff = new TileCoord(curr.x + currDiff.x, curr.z);
+                TileCoord zDiff = new TileCoord(curr.x, curr.z + currDiff.z);
+
+                TileInfo xTile = Floor.CoordToTileInfo(xDiff);
+                TileInfo zTile = Floor.CoordToTileInfo(zDiff);
+                //tile.isWall || xTile.isWall || zTile.isWall
+                if (tile.isWall || xTile.isWall || zTile.isWall || tile.occupyingEntity != null || tilePP.hasSearched)
+                {
+                    tilePP.searchScore = -1;
+                }
+                else
+                {
+                    float currToEnd = curr.DistanceSquared(end);
+                    float newToEnd = tile.coord.DistanceSquared(end);
+                    float dist = newToEnd - currToEnd;
+                    if (dist < 0)
+                    {
+                        dist *= -1;
+                    }
+                    dist *= dist;
+                    tilePP.searchScore = float.MaxValue - dist;
+                }
+            }
+
+            for (int i = 0; i < searchableTiles.Count - 1; i++)
+            {
+                for (int j = i; j < searchableTiles.Count - 1; j++)
+                {
+                    var iPP = Floor.tilePathPoints[Floor.CoordToIndex(searchableTiles[i].coord)];
+                    var jPP = Floor.tilePathPoints[Floor.CoordToIndex(searchableTiles[j].coord)];
+                    if (jPP.searchScore > iPP.searchScore)
+                    {
+                        var temp = searchableTiles[i];
+                        searchableTiles[i] = searchableTiles[j];
+                        searchableTiles[j] = temp;
+                    }
+                }
+            }
+
+            TileCoord found = null;
+            if (searchableTiles.Count > 0)
+            {
+                var tilePP = Floor.tilePathPoints[Floor.CoordToIndex(searchableTiles[0].coord)];
+                if (tilePP.searchScore != -1)
+                {
+                    found = searchableTiles[0].coord;
+                }
+            }
+            if (found != null)
+            {
+                path.Add(found);
+                Floor.tilePathPoints[Floor.CoordToIndex(found)].hasSearched = true;
+                if (found.Equals(end))
+                    pathFound = true;
+            }
+            else
+            {
+                path.Remove(path.Last());
+            }
+        }
+        return path;
     }
 
     protected void Update()

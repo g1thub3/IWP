@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 public class DGEntityEditor : Editor
 {
     DGEntity myTarget;
+    int iterationCounter;
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
@@ -16,28 +17,100 @@ public class DGEntityEditor : Editor
         DGPlayer plr = FindAnyObjectByType<DGPlayer>();
         if (DebugTools.Instance.EntityDebugOn && plr != null)
         {
+            GUILayout.Button(iterationCounter.ToString());
             if (GUILayout.Button("Test Pathfind"))
             {
                 DebugTools.Instance.ClearMarkers();
-                List<TileCoord> path = AStarPathfind(myTarget.Position, plr.Position);
-                foreach (TileCoord coord in path)
+                TileCoord pos = GetClosestDirection(plr.Position);
+                DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(pos), Color.blue);
+                List<TileCoord> path = AStarPathfind(myTarget.Position, pos);
+                for (int i = 0; i < path.Count; i++)
                 {
-                    DebugTools.Instance.AddMarker(new Vector3(coord.x * TileInfo.tileScale, coord.z * TileInfo.tileScale, 0));
+                    //DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(path[i]), i.ToString());
+                    var pp = myTarget.Floor.tilePathPoints[myTarget.Floor.CoordToIndex(path[i])];
+                    DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(path[i]), pp.searchScore.ToString());
+                }
+            }
+            if (GUILayout.Button("Next Iteration"))
+            {
+                iterationCounter++;
+                DebugTools.Instance.ClearMarkers();
+                TileCoord pos = GetClosestDirection(plr.Position);
+                DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(pos), Color.blue);
+                List<TileCoord> path = AStarPathfind(myTarget.Position, pos);
+                for (int i = 0; i < path.Count; i++)
+                {
+                    DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(path[i]), i.ToString());
+                }
+            }
+            if (GUILayout.Button("Prev Iteration"))
+            {
+                iterationCounter--;
+                DebugTools.Instance.ClearMarkers();
+                TileCoord pos = GetClosestDirection(plr.Position);
+                DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(pos), Color.blue);
+                List<TileCoord> path = AStarPathfind(myTarget.Position, pos);
+                for (int i = 0; i < path.Count; i++)
+                {
+                    DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(path[i]), i.ToString());
                 }
             }
         }
     }
 
+    private TileCoord GetClosestDirection(TileCoord pt)
+    {
+        float closestDist = -1;
+        TileCoord closest = null;
+        var directions = pt.GetDirections();
+        for (int i = directions.Count - 1; i >=0; i--)
+        {
+            if (!(DungeonFloor.IsInX(directions[i].x) && DungeonFloor.IsInZ(directions[i].z)))
+            {
+                directions.Remove(directions[i]);
+                continue;
+            }
+
+            var tile = myTarget.Floor.CoordToTileInfo(directions[i]);
+
+            TileCoord currDiff = directions[i] - pt;
+            TileCoord xDiff = new TileCoord(pt.x + currDiff.x, pt.z);
+            TileCoord zDiff = new TileCoord(pt.x, pt.z + currDiff.z);
+
+            TileInfo xTile = myTarget.Floor.CoordToTileInfo(xDiff);
+            TileInfo zTile = myTarget.Floor.CoordToTileInfo(zDiff);
+            if (tile.isWall || xTile.isWall || zTile.isWall || tile.occupyingEntity != null)
+            {
+                directions.Remove(directions[i]);
+            }
+        }
+        for (int i = 0; i <directions.Count; i++)
+        {
+            float dist = myTarget.Position.DistanceSquared(directions[i]);
+            if (closestDist == -1 || dist < closestDist)
+            {
+                closest = directions[i];
+                closestDist = dist;
+            }
+        }
+        return closest;
+    }
+
     private List<TileCoord> AStarPathfind(TileCoord start, TileCoord end)
     {
+        int itCounter = 0;
         myTarget.Floor.ClearSearch();
         List<TileCoord> path = new List<TileCoord>();
-
         path.Add(start);
         myTarget.Floor.tilePathPoints[myTarget.Floor.CoordToIndex(start)].hasSearched = true;
         bool pathFound = false;
         while (!pathFound)
         {
+            if (path.Count == 0)
+            {
+                Debug.Log("NPC Pathfind failed.");
+                break;
+            }
             TileCoord curr = path.Last<TileCoord>();
             List<TileInfo> searchableTiles = new List<TileInfo>();
             var directions = curr.GetDirections();
@@ -60,15 +133,17 @@ public class DGEntityEditor : Editor
 
                 TileInfo xTile = myTarget.Floor.CoordToTileInfo(xDiff);
                 TileInfo zTile = myTarget.Floor.CoordToTileInfo(zDiff);
-
+                //tile.isWall || xTile.isWall || zTile.isWall
                 if (tile.isWall || xTile.isWall || zTile.isWall || tile.occupyingEntity != null || tilePP.hasSearched)
                 {
                     tilePP.searchScore = -1;
                 }
                 else
                 {
-                    float dist = (tile.coord.DistanceSquared(end) - curr.DistanceSquared(end)) * -1;
-                    if (dist > 0)
+                    float currToEnd = curr.DistanceSquared(end);
+                    float newToEnd = tile.coord.DistanceSquared(end);
+                    float dist = newToEnd - currToEnd;
+                    if (newToEnd < currToEnd)
                     {
                         dist *= dist;
                     }
@@ -105,11 +180,14 @@ public class DGEntityEditor : Editor
             {
                 path.Add(found);
                 myTarget.Floor.tilePathPoints[myTarget.Floor.CoordToIndex(found)].hasSearched = true;
-                if (found == end)
+                //if (itCounter == iterationCounter)
+                //    DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(found));
+                if (found.Equals(end))
                     pathFound = true;
             } else
             {
                 path.Remove(path.Last());
+                itCounter++;
             }
         }
 
