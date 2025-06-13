@@ -20,8 +20,8 @@ MonoBehaviour:
   maxRoomX: 10
   minRoomZ: 5
   maxRoomZ: 10
-  minEnemies: 1
-  maxEnemies: 1
+  minEnemies: 3
+  maxEnemies: 6
   possibleEnemies:
   - character: 2
     minLevel: 1

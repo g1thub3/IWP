@@ -14,6 +14,7 @@ public enum DUNGEON_END_CONTEXT
 
 public class DGGameManager : MonoBehaviour
 {
+    public System.Action OnEscape;
     private DGGenerator _dungeonGen;
     private DungeonUIHandler _dungeonUI;
     public List<DGEntity> turnList;
@@ -70,6 +71,19 @@ public class DGGameManager : MonoBehaviour
     {
         _isGameActive = false;
         _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.QUEST, this, GlobalGameManager.Instance.selectedDungeon);
+        if (_inputManager == null)
+        {
+            _inputManager = FindAnyObjectByType<PlayerInput>();
+        }
+        isPressingInit = _inputManager.actions["Accept"].IsPressed();
+        StartCoroutine(WaitForInput());
+    }
+
+    private void PlayerLoss(bool onDeath)
+    {
+        _isGameActive = false;
+        _dungeonUI.Endscreen(onDeath ? DUNGEON_END_CONTEXT.LOSS : DUNGEON_END_CONTEXT.ESCAPE, this, GlobalGameManager.Instance.selectedDungeon);
+        LoseItems();
         if (_inputManager == null)
         {
             _inputManager = FindAnyObjectByType<PlayerInput>();
@@ -146,6 +160,19 @@ public class DGGameManager : MonoBehaviour
         }
     }
 
+    private void LoseItems()
+    {
+        GlobalGameManager.Instance.ownedGold /= 2;
+        for (int i = 0; i < GlobalGameManager.Instance.party.Count; i++)
+        {
+            GlobalGameManager.Instance.party[i].HeldItem = null;
+        }
+        for (int item = 0; item < GlobalGameManager.Instance.inventory.Count / 2; item++)
+        {
+            GlobalGameManager.Instance.inventory.RemoveAt(Random.Range(0, GlobalGameManager.Instance.inventory.Count));
+        }
+    }
+
     public void NextTurn()
     {
         currentTurn++;
@@ -172,11 +199,17 @@ public class DGGameManager : MonoBehaviour
         if (deadTurnNo >= turnList.Count)
             currentTurn = 0;
 
+        if (dead is DGPlayer)
+        {
+            PlayerLoss(true);
+        }
+
         Destroy(dead.gameObject);
     }
 
     private void Start()
     {
+        OnEscape += delegate { PlayerLoss(false); };
         TurnCompleted += NextTurn;
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _currentFloor = 0;

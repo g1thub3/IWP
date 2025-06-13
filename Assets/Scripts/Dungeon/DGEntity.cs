@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -190,12 +191,26 @@ public class DGEntity : DGObject
         return closest;
     }
 
+
+    private float Heuristic(TileCoord curr, TileCoord end)
+    {
+        float D = 1;
+        float D2 = Mathf.Sqrt(2);
+        float dx = Mathf.Abs(curr.x - end.x);
+        float dz = Mathf.Abs(curr.z - end.z);
+        float h = D * (dx + dz) + (D2 - 2 * D) * Mathf.Min(dx, dz);
+        return h;
+    }
+
     public List<TileCoord> AStarPathfind(TileCoord start, TileCoord end)
     {
         Floor.ClearSearch();
         List<TileCoord> path = new List<TileCoord>();
+        List<float> scores = new List<float>();
         path.Add(start);
+
         Floor.tilePathPoints[Floor.CoordToIndex(start)].hasSearched = true;
+        scores.Add(0);
         if (start.Equals(end))
             return path;
         bool pathFound = false;
@@ -235,15 +250,7 @@ public class DGEntity : DGObject
                 }
                 else
                 {
-                    float currToEnd = curr.DistanceSquared(end);
-                    float newToEnd = tile.coord.DistanceSquared(end);
-                    float dist = newToEnd - currToEnd;
-                    if (dist < 0)
-                    {
-                        dist *= -1;
-                    }
-                    dist *= dist;
-                    tilePP.searchScore = float.MaxValue - dist;
+                    tilePP.searchScore = Heuristic(tile.coord, end);
                 }
             }
 
@@ -253,7 +260,7 @@ public class DGEntity : DGObject
                 {
                     var iPP = Floor.tilePathPoints[Floor.CoordToIndex(searchableTiles[i].coord)];
                     var jPP = Floor.tilePathPoints[Floor.CoordToIndex(searchableTiles[j].coord)];
-                    if (jPP.searchScore > iPP.searchScore)
+                    if (jPP.searchScore < iPP.searchScore)
                     {
                         var temp = searchableTiles[i];
                         searchableTiles[i] = searchableTiles[j];
@@ -263,17 +270,29 @@ public class DGEntity : DGObject
             }
 
             TileCoord found = null;
-            if (searchableTiles.Count > 0)
+            for (int i = 0; i < searchableTiles.Count; i++)
             {
-                var tilePP = Floor.tilePathPoints[Floor.CoordToIndex(searchableTiles[0].coord)];
+                var tilePP = Floor.tilePathPoints[Floor.CoordToIndex(searchableTiles[i].coord)];
                 if (tilePP.searchScore != -1)
                 {
-                    found = searchableTiles[0].coord;
+                    found = searchableTiles[i].coord;
+                    break;
                 }
             }
+            //if (path.Count == 1)
+            //{
+            //    DebugTools.Instance.ClearMarkers();
+            //    for (int i = 0; i < searchableTiles.Count; i++)
+            //    {
+            //        var tilePP = Floor.tilePathPoints[Floor.CoordToIndex(searchableTiles[i].coord)];
+            //        DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(searchableTiles[i].coord), tilePP.searchScore.ToString());
+            //    }
+            //}
             if (found != null)
             {
                 path.Add(found);
+                var tilePP = Floor.tilePathPoints[Floor.CoordToIndex(found)];
+                scores.Add(tilePP.searchScore);
                 Floor.tilePathPoints[Floor.CoordToIndex(found)].hasSearched = true;
                 if (found.Equals(end))
                     pathFound = true;
@@ -281,8 +300,14 @@ public class DGEntity : DGObject
             else
             {
                 path.Remove(path.Last());
+                scores.Remove(scores.Last());
             }
         }
+        //DebugTools.Instance.ClearMarkers();
+        //for (int i = 0; i < path.Count; i++)
+        //{
+        //    DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(path[i]), i.ToString() + " (" + (scores[i].ToString()) + ")");
+        //}
         return path;
     }
 

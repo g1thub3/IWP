@@ -50,11 +50,6 @@ public class AIEnemy : DGAIModule
                     break;
                 }
             }
-            DebugTools.Instance.ClearMarkers();
-            for (int i = 0; i < path.Count; i++)
-            {
-                DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(path[i]), i.ToString());
-            }
             // If entity is not in the room, are they close to each other and accessible?
             if (targetRoom == currRoom || path.Count < 5)
             {
@@ -62,19 +57,16 @@ public class AIEnemy : DGAIModule
                 {
                     TileCoord diff = path[1] - entity.Position;
                     user.GetComponent<DGEntity>().Move(diff.x, diff.z);
-                    Debug.Log("MOVED!");
                 }
                 else
                 {
                     TileCoord diff = closestTarget.GetComponent<DGEntity>().Position - entity.Position;
                     user.GetComponent<DGEntity>().Move(diff.x, diff.z);
                     DefaultAttack.Instance.Perform(cb);
-                    Debug.Log("ATTACKED!");
                 }
                 return;
             }
         }
         user.GetComponent<DGEntity>().Move(Random.Range(-1, 2), Random.Range(-1, 2));
-        Debug.Log("RANDOM!");
     }
 }

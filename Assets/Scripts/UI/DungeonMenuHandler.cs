@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -401,6 +402,7 @@ public class DungeonMenuHandler : MonoBehaviour
     }
     private void Start()
     {
+        GlobalCanvasManager.LoadInstance();
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _gameManager = FindAnyObjectByType<DGGameManager>();
         _playerInput = FindAnyObjectByType<PlayerInput>();
@@ -580,8 +582,28 @@ public class DungeonMenuHandler : MonoBehaviour
     {
 
     }
+
+    private IEnumerator WaitForAnswer()
+    {
+        while (GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        if (GlobalCanvasManager.Instance.PromptHandler.TakeAnswer() == 0)
+        {
+            _gameManager.OnEscape.Invoke();
+        }
+    }
+
     private void Escape()
     {
+        PromptInfo prompt = new PromptInfo();
+        prompt.message = "Are you sure you want to escape the dungeon? (This will count as a loss and you will lose your items and gold)";
+        prompt.options = new string[2];
+        prompt.options[0] = "Yes";
+        prompt.options[1] = "No";
+        GlobalCanvasManager.Instance.PromptHandler.Prompt(prompt);
+        StartCoroutine(WaitForAnswer());
 
     }
     public void LoadParty()
@@ -641,6 +663,7 @@ public class DungeonMenuHandler : MonoBehaviour
 
     private void Update()
     {
+        if (GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress || !_gameManager.IsGameActive) return;
         if (CurrentLayer != null)
         {
             if (CurrentLayer.nextFrameTrigger)

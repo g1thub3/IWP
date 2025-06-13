@@ -108,25 +108,25 @@ public class DungeonUIHandler : MonoBehaviour
         switch(statToUpdate)
         {
             case CHARACTER_STAT.HEALTH: //400
-                _leaderHPBar.offsetMax = new Vector2(_leaderHPBar.offsetMax.x, 400 * (1 - perc));
+                _leaderHPBar.offsetMax = new Vector2(_leaderHPBar.offsetMax.x, 400 * (perc - 1));
                 _leaderHPLabel.text = curr.ToString();
                 if (curr == max)
                     _leaderHPLabel.color = _maxHPCol;
                 break;
             case CHARACTER_STAT.ENERGY: //350
-                _leaderENBar.offsetMax = new Vector2(_leaderENBar.offsetMax.x, 350 * (1 - perc));
+                _leaderENBar.offsetMax = new Vector2(_leaderENBar.offsetMax.x, 350 * (perc - 1));
                 _leaderENLabel.text = curr.ToString();
                 if (curr == max)
                     _leaderENLabel.color = _maxENCol;
                 break;
             case CHARACTER_STAT.MANA: //350
-                _leaderMNBar.offsetMax = new Vector2(_leaderMNBar.offsetMax.x, 350 * (1 - perc));
+                _leaderMNBar.offsetMax = new Vector2(_leaderMNBar.offsetMax.x, 350 * (perc - 1));
                 _leaderMNLabel.text = curr.ToString();
                 if (curr == max)
                     _leaderMNLabel.color = _maxMNCol;
                 break;
             case CHARACTER_STAT.HUNGER: //175
-                _leaderHGBar.offsetMax = new Vector2(_leaderHGBar.offsetMax.x, 175 * (1 - perc));
+                _leaderHGBar.offsetMax = new Vector2(_leaderHGBar.offsetMax.x, 175 * (perc - 1));
                 _leaderHGLabel.text = curr.ToString();
                 if (curr == max)
                     _leaderHGLabel.color = _maxHGCol;
