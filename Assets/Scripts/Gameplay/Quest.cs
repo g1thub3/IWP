@@ -131,7 +131,7 @@ public class Quest
             if (quest is RetrievalQuest)
             {
                 var rquest = quest as RetrievalQuest;
-                return "Help " + clientName + " retrieve his " + rquest.ToRetrieve.module.itemName + "!";
+                return "Help " + clientName + " retrieve their " + rquest.ToRetrieve.module.itemName + "!";
             }
             return string.Empty;
         }

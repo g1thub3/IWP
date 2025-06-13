@@ -1,4 +1,3 @@
-using UnityEditorInternal;
 using UnityEngine;
 
 public class SingletonMonobehaviour<T> : MonoBehaviour where T : SingletonMonobehaviour<T>

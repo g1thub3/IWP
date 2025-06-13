@@ -41,6 +41,20 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
         if (item.module.isConsumable)
             inventory.RemoveAt(itemIndex);
     }
+    public bool HoldItem(int itemIndex, int partyIndex)
+    {
+        var selectedCharacter = party[partyIndex];
+        if (selectedCharacter.HeldItem != null && selectedCharacter.HeldItem.module != null)
+        {
+            if (inventory.Count >= inventoryLimit)
+                return false;
+            AddItem(selectedCharacter.HeldItem);
+            selectedCharacter.HeldItem = null;
+        }
+        selectedCharacter.HeldItem = inventory[itemIndex];
+        inventory.Remove(selectedCharacter.HeldItem);
+        return true;
+    }
 
     public static int maxQuestCount = 8;
     public List<Quest> ownedQuests = new List<Quest>();

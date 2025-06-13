@@ -1,13 +1,9 @@
-using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class DGStartLayer : MenuLayer
 {
@@ -480,16 +476,7 @@ public class DungeonMenuHandler : MonoBehaviour
                                 {
                                     partyLayer.functions.Add(delegate
                                     {
-                                        var selectedCharacter = _dungeonGen.ActiveParty[partyLayer.CurrentSelection];
-                                        if (selectedCharacter.character.HeldItem != null && selectedCharacter.character.HeldItem.module != null)
-                                        {
-                                            if (GlobalGameManager.Instance.inventory.Count >= GlobalGameManager.inventoryLimit)
-                                                return;
-                                            GlobalGameManager.Instance.AddItem(selectedCharacter.character.HeldItem);
-                                            selectedCharacter.character.HeldItem = null;
-                                        }
-                                        selectedCharacter.character.HeldItem = GlobalGameManager.Instance.inventory[inventoryLayer.CurrentSelection];
-                                        GlobalGameManager.Instance.inventory.Remove(selectedCharacter.character.HeldItem);
+                                        GlobalGameManager.Instance.HoldItem(inventoryLayer.CurrentSelection, partyLayer.CurrentSelection);
                                         partyLayer.Close();
                                         dialogueLayer.Close();
                                     });

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public enum CHARACTER_ENUM
@@ -17,7 +16,7 @@ public class CharacterProfile
     [Header("Visual")]
     public Sprite characterSprite;
     public string characterName;
-    public AnimatorController animatorController;
+    public RuntimeAnimatorController animatorController;
 
     [Header("Gameplay")] // These are the base stats the characters need to follow
     public CharacterStat maxHealth;

@@ -1,11 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.InputSystem;
-using NUnit.Framework;
 using System.Collections.Generic;
-using UnityEditor.U2D.Animation;
-using Unity.VisualScripting;
-using JetBrains.Annotations;
 
 public struct SearchConditions {
     public static SearchConditions New(bool hasItem = false, bool isWall = false)

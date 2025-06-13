@@ -6,7 +6,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public abstract class MenuLayer {
     protected bool isOpen;
@@ -73,6 +72,14 @@ public class StartLayer : MenuLayer
             _currSelected.Find("Selection").GetComponent<Image>().enabled = !isEnabled;
         }
     }
+    private void Clear()
+    {
+        for (int i = 0; i < _buttons.childCount; i++)
+        {
+            var curr = _buttons.GetChild(i);
+            curr.Find("Selection").GetComponent<Image>().enabled = false;
+        }
+    }
     private void IncSelection(int inc)
     {
         inc = Mathf.Clamp(inc, -1, 1);
@@ -95,6 +102,7 @@ public class StartLayer : MenuLayer
     public override void Close()
     {
         base.Close();
+        Clear();
         _menuGrp.alpha = 0;
     }
 }
@@ -144,7 +152,6 @@ public class ListLayer : MenuLayer {
         base.Open();
         if (addedEntries.Count > 0)
             _currSelected = addedEntries[currentSelection];
-        Highlight();
         _listFrame.alpha = 1;
         _listPageIndicator.text = "Page " + (currPage + 1) + " of " + pageLimit;
     }
@@ -236,7 +243,15 @@ public class ListLayer : MenuLayer {
     public override void OnRefresh()
     {
         base.OnRefresh();
-        IncSelection(0, false);
+        _listFrame.alpha = 1;
+        _listPageIndicator.text = "Page " + (currPage + 1) + " of " + pageLimit;
+    }
+    public override void OnCreateFrameComplete()
+    {
+        base.OnCreateFrameComplete();
+        if (currentSelection < addedEntries.Count)
+            _currSelected = addedEntries[currentSelection];
+        Highlight();
     }
 }
 public class DialogueLayer : MenuLayer
@@ -316,6 +331,7 @@ public class DialogueLayer : MenuLayer
     {
         base.OnRefresh();
         IncSelection(0);
+        _dialogueFrame.alpha = 1;
     }
 }
 public class ReadLayer : MenuLayer
@@ -443,32 +459,33 @@ public class FreeRoamMenuHandler : MonoBehaviour
                 inventoryLayer.functions.Add(delegate
                 {
                     var dialogueLayer = new DialogueLayer(_dialogueGrp, _dialogueContent, _listEntry);
-                    dialogueLayer.functions = new List<MenuLayer.MenuFunction>();
                     dialogueLayer.refresh = delegate
                     {
                         dialogueLayer.ClearList();
+                        dialogueLayer.functions = new List<MenuLayer.MenuFunction>();
                         var holdEntry = dialogueLayer.AddEntry();
                         holdEntry.Find("ItemText").GetComponent<TMP_Text>().text = "Hold";
                         dialogueLayer.functions.Add(delegate
                         {
                             var pLayer = new DialogueLayer(_dialogueGrp, _dialogueContent, _listEntry);
-                            pLayer.functions = new List<MenuLayer.MenuFunction>();
                             pLayer.refresh = delegate
                             {
                                 pLayer.ClearList();
-                                for (int i = 0; i < GlobalGameManager.Instance.party.Count; i++)
+                                pLayer.functions = new List<MenuLayer.MenuFunction>();
+                                for (int j = 0; j < GlobalGameManager.Instance.party.Count; j++)
                                 {
-                                    var character = GlobalGameManager.Instance.party[i];
+                                    var character = GlobalGameManager.Instance.party[j];
                                     var memberEntry = pLayer.AddEntry();
                                     memberEntry.Find("ItemText").GetComponent<TMP_Text>().text = character.Profile.characterName;
                                     pLayer.functions.Add(delegate
                                     {
+                                        GlobalGameManager.Instance.HoldItem(inventoryLayer.CurrentSelection, pLayer.CurrentSelection);
                                         pLayer.Close();
                                         dialogueLayer.Close();
                                     });
                                 }
 
-                                var pEntry = dialogueLayer.AddEntry();
+                                var pEntry = pLayer.AddEntry();
                                 pEntry.Find("ItemText").GetComponent<TMP_Text>().text = "Close";
                                 pLayer.functions.Add(pLayer.Close);
                             };
@@ -523,7 +540,12 @@ public class FreeRoamMenuHandler : MonoBehaviour
             {
                 var quest = GlobalGameManager.Instance.ownedQuests[i];
                 var newEntry = questLayer.AddEntry();
-                newEntry.Find("ItemText").GetComponent<TMP_Text>().text = quest.QuestTitleText;
+                string title = quest.QuestTitleText;
+                if (title.Length > 25)
+                {
+                    title = title.Substring(0, 25) + "...";
+                }
+                newEntry.Find("ItemText").GetComponent<TMP_Text>().text = title;
                 if (quest.isActive)
                 {
                     newEntry.Find("ItemText").GetComponent<TMP_Text>().color = Color.green;
@@ -614,6 +636,11 @@ public class FreeRoamMenuHandler : MonoBehaviour
     {
         if (CurrentLayer != null)
         {
+            if (CurrentLayer.nextFrameTrigger)
+            {
+                CurrentLayer.OnCreateFrameComplete();
+                CurrentLayer.nextFrameTrigger = false;
+            }
             CurrentLayer.Control(_inputManager);
             if (_inputManager.actions["Accept"].WasPressedThisFrame())
             {
@@ -625,6 +652,7 @@ public class FreeRoamMenuHandler : MonoBehaviour
             }
             if (!CurrentLayer.IsOpen)
             {
+                CurrentLayer.Close();
                 _layers.Remove(CurrentLayer);
                 if (CurrentLayer != null)
                 {

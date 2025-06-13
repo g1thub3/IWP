@@ -14,4 +14,12 @@ public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>
     {
         get { return GetComponent<FreeRoamMenuHandler>(); }
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }

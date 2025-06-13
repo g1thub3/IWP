@@ -109,7 +109,6 @@ public class QuestBoardHandler : MonoBehaviour
             if (GlobalGameManager.Instance.ownedQuests.Count < GlobalGameManager.maxQuestCount)
             {
                 GlobalGameManager.Instance.ownedQuests.Add(quest);
-                Debug.Log(GlobalGameManager.Instance.ownedQuests.Last().quest);
                 LoadEntriesOfPage();
                 Select(0);
             }

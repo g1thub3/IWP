@@ -1,9 +1,8 @@
+#if UNITY_EDITOR
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
-using UnityEditor.TerrainTools;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 [CustomEditor(typeof(DGEntity))]
 public class DGEntityEditor : Editor
@@ -189,3 +188,4 @@ public class DGEntityEditor : Editor
         return path;
     }
 }
+#endif
