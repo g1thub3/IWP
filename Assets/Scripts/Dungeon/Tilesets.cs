@@ -39,6 +39,13 @@ public class Tilesets : SingletonScriptableObject<Tilesets>
     {
         var newInteractable = Instantiate(_itemTemplate);
         data.Set();
+        if (data.module == null)
+        {
+            data.itemKey = "Health Potion";
+            Debug.LogWarning("Module not found.");
+            data.Set();
+            return null;
+        }
         newInteractable.GetComponent<SpriteRenderer>().sprite = data.module.itemSprite;
         newInteractable.GetComponent<DGItemContainer>().Item = data;
         return newInteractable;

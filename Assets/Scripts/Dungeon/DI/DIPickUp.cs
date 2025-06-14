@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "DIPickUp", menuName = "Dungeon Interactions/DIPickUp")]
 public class DIPickUp : DGInteraction
 {
-    private IEnumerator WaitForAnswer(PromptHandler p, DGGameManager receiver)
+    private IEnumerator WaitForAnswer(PromptHandler p, DGGameManager receiver, DungeonUIHandler ui)
     {
         while (p.IsPromptInProgress)
         {
@@ -16,6 +16,7 @@ public class DIPickUp : DGInteraction
             receiver.QuestComplete();
         }
         _interactionInProgress = false;
+        ui.UpdateQuestUI();
     }
 
     public override bool Interact(DGEntity interacted, DGInteractable interactable, KeyDataList dataList)
@@ -26,8 +27,8 @@ public class DIPickUp : DGInteraction
             return false;
         if (interacted is DGPlayer && GlobalGameManager.Instance.inventory.Count < GlobalGameManager.inventoryLimit)
         {
-            GlobalGameManager.Instance.inventory.Add(container.Item);
-            ui.AddEntry(interacted.gameObject.name + " picked up a " + container.Item.module.itemName + (container.Item.IsQuestTarget ? "(Quest)" : string.Empty) + " and added it to your inventory.");
+            GlobalGameManager.Instance.AddItem(container.Item);
+            ui.AddEntry(interacted.gameObject.name + " picked up a " + container.Item.module.itemName + (container.Item.IsQuestTarget ? " (Quest)" : string.Empty) + " and added it to your inventory.");
 
             if (interacted is DGPlayer && container.Item.IsQuestTarget)
             {
@@ -60,7 +61,7 @@ public class DIPickUp : DGInteraction
                     hidden[0] = ui.combatGrp;
 
                     p.Prompt(prompt, hidden);
-                    interacted.StartCoroutine(WaitForAnswer(p, dgGameManager));
+                    interacted.StartCoroutine(WaitForAnswer(p, dgGameManager, ui));
                 }
             }
             return true;
@@ -72,12 +73,12 @@ public class DIPickUp : DGInteraction
 
         if (cb.character.HeldItem != null)
         {
-            ui.AddEntry(interacted.gameObject.name + " passed over a " + container.Item.module.itemName + ".");
+            ui.AddEntry(interacted.gameObject.name + " passed over a " + container.Item.module.itemName + (container.Item.IsQuestTarget ? " (Quest)" : string.Empty) + ".");
             return false;
         } else
         {
             cb.character.HeldItem = container.Item;
-            ui.AddEntry(interacted.gameObject.name + " picked up a " + container.Item.module.itemName + ".");
+            ui.AddEntry(interacted.gameObject.name + " picked up a " + container.Item.module.itemName + (container.Item.IsQuestTarget ? " (Quest)" : string.Empty) + ".");
             return true;
         }
     }

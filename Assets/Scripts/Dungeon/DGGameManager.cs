@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -91,6 +92,56 @@ public class DGGameManager : MonoBehaviour
         isPressingInit = _inputManager.actions["Accept"].IsPressed();
         StartCoroutine(WaitForInput());
     }
+    
+    private IEnumerator ImplementQuest()
+    {
+        yield return new WaitForEndOfFrame();
+        _activeQuests.Clear();
+        // GENERATE RETRIEVAL QUEST
+        for (int i = 0; i < GlobalGameManager.Instance.ownedQuests.Count; i++)
+        {
+            var questData = GlobalGameManager.Instance.ownedQuests[i];
+            if (questData.quest.dungeon == GlobalGameManager.Instance.selectedDungeon && questData.isActive)
+            {
+                _activeQuests.Add(questData);
+                if (questData.quest.floor == CurrentFloor) // Add target
+                {
+                    if (questData.quest is RetrievalQuest)
+                    {
+                        var room = _dungeonGen.GetRandomRoom();
+                        var spawnTile = _dungeonGen.SearchRandomTileInRoom(room, SearchConditions.New(false));
+                        if (spawnTile != null)
+                        {
+                            var rQuest = questData.quest as RetrievalQuest;
+                            var questItem = Tilesets.Instance.ConstructItemInteractable(rQuest.ToRetrieve);
+                            questItem.GetComponent<DGItemContainer>().Item.IsQuestTarget = true;
+                            _dungeonGen.InsertItem(questItem, spawnTile);
+                            Debug.Log(spawnTile.coord);
+                        }
+                        else
+                        {
+                            questData.isActive = false;
+                            _activeQuests.Remove(_activeQuests.Last());
+                            Debug.Log("Failed to spawn quest item.");
+                        }
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < _activeQuests.Count; i++)
+        {
+            for (int j = i; j < _activeQuests.Count; j++)
+            {
+                if (_activeQuests[j].quest.floor < _activeQuests[i].quest.floor)
+                {
+                    var temp = _activeQuests[j];
+                    _activeQuests[j] = _activeQuests[i];
+                    _activeQuests[i] = temp;
+                }
+            }
+        }
+        _dungeonUI.UpdateQuestUI();
+    }
 
     public void RefreshGame()
     {
@@ -135,33 +186,15 @@ public class DGGameManager : MonoBehaviour
             _dungeonUI.floorText.text = "Floor\nB" + _currentFloor + "F";
         }
 
-        _activeQuests.Clear();
-        // GENERATE RETRIEVAL QUEST
-        for (int i = 0; i < GlobalGameManager.Instance.ownedQuests.Count; i++)
-        {
-            var questData = GlobalGameManager.Instance.ownedQuests[i];
-            if (questData.quest.dungeon == GlobalGameManager.Instance.selectedDungeon && 
-                questData.quest.floor == CurrentFloor && questData.isActive)
-            {
-                _activeQuests.Add(questData);
-                if (questData.quest is RetrievalQuest)
-                {
-                    var room = _dungeonGen.GetRandomRoom();
-                    var spawnTile = _dungeonGen.SearchRandomTileInRoom(room, SearchConditions.New(false));
-                    if (spawnTile != null)
-                    {
-                        var rQuest = questData.quest as RetrievalQuest;
-                        var questItem = Tilesets.Instance.ConstructItemInteractable(rQuest.ToRetrieve);
-                        questItem.GetComponent<DGItemContainer>().Item.IsQuestTarget = true;
-                        _dungeonGen.InsertItem(questItem, spawnTile);
-                    }
-                }
-            }
-        }
+        StartCoroutine(ImplementQuest());
     }
 
     private void LoseItems()
     {
+        foreach (var quest in GlobalGameManager.Instance.ownedQuests)
+        {
+            quest.quest.questCompleted = false;
+        }
         GlobalGameManager.Instance.ownedGold /= 2;
         for (int i = 0; i < GlobalGameManager.Instance.party.Count; i++)
         {

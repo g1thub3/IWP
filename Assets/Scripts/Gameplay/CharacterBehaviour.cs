@@ -207,15 +207,11 @@ public class CharacterBehaviour : MonoBehaviour
         description.AppendLine("EXP: " + character.experiencePoints + " / " + character.ExpToNextLevel);
         description.AppendLine("Held Item: " + character.HeldItem.ToString());
         description.Append("\n");
-        description.AppendLine("HP: " + health + " / " + character.maxHealth.CurrStat);
-        description.AppendLine("Hunger: " + hunger + " / " + character.hungerSize.CurrStat);
-        description.AppendLine("Energy: " + energy + " / " + character.maxEnergy.CurrStat);
-        description.AppendLine("Mana: " + mana + " / " + character.maxMana.CurrStat);
+        description.AppendLine("HP: " + health + " / " + character.maxHealth.CurrStat + " | Hunger: " + hunger + " / " + character.hungerSize.CurrStat);
+        description.AppendLine("Energy: " + energy + " / " + character.maxEnergy.CurrStat + " | Mana: " + mana + " / " + character.maxMana.CurrStat);
         description.Append("\n");
-        description.AppendLine("PA: " + character.physAtk.CurrStat);
-        description.AppendLine("PD: " + character.physDef.CurrStat);
-        description.AppendLine("MA: " + character.magicAtk.CurrStat);
-        description.AppendLine("MD: " + character.magicDef.CurrStat);
+        description.AppendLine("PA: " + character.physAtk.CurrStat + " | PD: " + character.physDef.CurrStat);
+        description.AppendLine("MA: " + character.magicAtk.CurrStat + " | MD: " + character.magicDef.CurrStat);
 
         return description.ToString();
     }

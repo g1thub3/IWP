@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -42,8 +43,41 @@ public class DungeonUIHandler : MonoBehaviour
     [SerializeField] private Color _maxMNCol;
     [SerializeField] private Color _maxHGCol;
 
+    [Header("Quest Display")]
+    [SerializeField] private Transform _questContent;
+    [SerializeField] private GameObject _listEntry;
+
     private DGPlayer _focusedPlr;
     private PlayerInput _inputManager;
+    private DGGameManager _gameManager;
+    private void Start()
+    {
+        _gameManager = FindAnyObjectByType<DGGameManager>();
+    }
+
+    public void UpdateQuestUI()
+    {
+        for (int i = _questContent.childCount - 1; i >= 0; i--)
+        {
+            Destroy(_questContent.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < _gameManager.ActiveQuests.Count;i++)
+        {
+            var q = _gameManager.ActiveQuests[i];
+            var entry = Instantiate(_listEntry, _questContent);
+            TMP_Text textcomp = entry.GetComponentInChildren<TMP_Text>();
+            string label = "(" + (!GlobalGameManager.Instance.selectedDungeon.isAscending ? "B" : string.Empty) + q.quest.floor + "F) " + q.QuestObjectiveText;
+            textcomp.text = label;
+            if (_gameManager.CurrentFloor == q.quest.floor)
+            {
+                textcomp.color = Color.yellow;
+            }
+            if (q.quest.questCompleted)
+            {
+                textcomp.color = Color.green;
+            }
+        }
+    }
 
     public void ClearTurnLog()
     {

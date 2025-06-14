@@ -1,4 +1,8 @@
+using System.Text;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
+using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.TextCore.Text;
 
 [System.Serializable]
 public class CharacterStat {
@@ -57,6 +61,21 @@ public class CharacterEntry
         {
             return characterLevel * 100;
         }
+    }
+
+    public string GetDescription()
+    {
+        StringBuilder description = new StringBuilder();
+        description.AppendLine("Level: " + characterLevel + " | EXP: " + experiencePoints + " / " + ExpToNextLevel);
+        description.AppendLine("Held Item: " + HeldItem.ToString());
+        description.Append("\n");
+        description.AppendLine("HP: " + maxHealth.CurrStat + " | Hunger: " + hungerSize.CurrStat);
+        description.AppendLine("Energy: " + maxEnergy.CurrStat + " | Mana: " + maxMana.CurrStat);
+        description.Append("\n");
+        description.AppendLine("PA: " + physAtk.CurrStat + " | PD: " + physDef.CurrStat);
+        description.AppendLine("MA: " + magicAtk.CurrStat + " | MD: " + magicDef.CurrStat);
+
+        return description.ToString();
     }
 
     public Item HeldItem

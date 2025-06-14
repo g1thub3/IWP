@@ -18,7 +18,6 @@ public class Item
 {
     public string itemKey;
     public ItemData module;
-    public bool isQuestTarget = false;
     public static ItemData[] foundAssets;
 
     private bool _isQuestTarget = false;

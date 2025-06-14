@@ -7,6 +7,17 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+public struct StaticMenuFunction
+{
+    public string title;
+    public MenuLayer.MenuFunction function;
+    public StaticMenuFunction(string t, MenuLayer.MenuFunction f)
+    {
+        title = t;
+        function = f;
+    }
+}
+
 public abstract class MenuLayer {
     protected bool isOpen;
     protected int currentSelection;
@@ -166,7 +177,7 @@ public class ListLayer : MenuLayer {
             _closeSelect.enabled = !_closeSelect.enabled;
         }
         _arrowLeft.SetActive(currPage != 0);
-        _arrowRight.SetActive(currPage != pageLimit - 1);
+        _arrowRight.SetActive(currPage != pageLimit - 1 && pageLimit > 1);
     }
 
     public Transform AddEntry()
@@ -239,6 +250,7 @@ public class ListLayer : MenuLayer {
     {
         base.Close();
         _listFrame.alpha = 0;
+        _closeSelect.enabled = false;
     }
     public override void OnRefresh()
     {
@@ -416,10 +428,26 @@ public class FreeRoamMenuHandler : MonoBehaviour
                 return _layers.Last();
         }
     }
+
+    private List<StaticMenuFunction> _othersFunctions;
+
     private void Start()
     {
         _inputManager = GetComponent<PlayerInput>();
         _layers = new List<MenuLayer>();
+        _othersFunctions = new List<StaticMenuFunction>();
+        _othersFunctions.Add(new StaticMenuFunction("Controls", delegate
+        {
+            CreateReadLayer("Controls", "Arrow Keys: Up, Down, Left, Right\n\nZ: Accept/Interact\nX: Decline/Open Menu");
+        }));
+        _othersFunctions.Add(new StaticMenuFunction("Item Guide", delegate
+        {
+            CreateReadLayer("Item Guide", "Use items in dungeons. Some items will also apply special effects to your character if they hold them.");
+        }));
+        _othersFunctions.Add(new StaticMenuFunction("Quest Guide", delegate
+        {
+            CreateReadLayer("Quest Guide", "Head to the Guild Hall to take a quest. Activate it in the menu before going into the dungeon the quest gave you. Complete quests for Adventurer XP, Items and Gold.");
+        }));
     }
 
     private void PerformFunction()
@@ -525,7 +553,45 @@ public class FreeRoamMenuHandler : MonoBehaviour
 
     private void OpenParty()
     {
+        var partyLayer = new ListLayer(_listGrp, _listPageIndicator, _closeSelect, _listContent, _arrowLeft, _arrowRight, _listEntry);
+        partyLayer.refresh = delegate
+        {
+            _listTitle.text = "Party";
+            partyLayer.pageLimit = (int)Mathf.Ceil((float)GlobalGameManager.Instance.party.Count / ListLayer.pageMax);
+            partyLayer.ClearList();
+            partyLayer.functions = new List<MenuLayer.MenuFunction>();
+            for (int i = partyLayer.currPage * ListLayer.pageMax; i < Mathf.Clamp(partyLayer.currPage * ListLayer.pageMax + ListLayer.pageMax, 0, GlobalGameManager.Instance.party.Count); i++)
+            {
+                var partyMember = GlobalGameManager.Instance.party[i];
+                var newEntry = partyLayer.AddEntry();
+                newEntry.Find("ItemText").GetComponent<TMP_Text>().text = partyMember.Profile.characterName;
+                partyLayer.functions.Add(delegate
+                {
+                    var dialogueLayer = new DialogueLayer(_dialogueGrp, _dialogueContent, _listEntry);
+                    dialogueLayer.refresh = delegate
+                    {
+                        dialogueLayer.ClearList();
+                        dialogueLayer.functions = new List<MenuLayer.MenuFunction>();
 
+                        var infoEntry = dialogueLayer.AddEntry();
+                        infoEntry.Find("ItemText").GetComponent<TMP_Text>().text = "Info";
+                        dialogueLayer.functions.Add(delegate
+                        {
+                            CreateReadLayer("About: " + partyMember.Profile.characterName, partyMember.GetDescription());
+                        });
+
+                        var closeEntry = dialogueLayer.AddEntry();
+                        closeEntry.Find("ItemText").GetComponent<TMP_Text>().text = "Close";
+                        dialogueLayer.functions.Add(dialogueLayer.Close);
+                    };
+                    _layers.Add(dialogueLayer);
+                    CurrentLayer.Open();
+                });
+            }
+            partyLayer.functions.Add(partyLayer.Close);
+        };
+        _layers.Add(partyLayer);
+        CurrentLayer.Open();
     }
     private void OpenQuests()
     {
@@ -533,7 +599,7 @@ public class FreeRoamMenuHandler : MonoBehaviour
         questLayer.refresh = delegate
         {
             _listTitle.text = "Quests";
-            questLayer.pageLimit = 1;
+            questLayer.pageLimit = (int)Mathf.Ceil((float)GlobalGameManager.Instance.ownedQuests.Count / ListLayer.pageMax);
             questLayer.ClearList();
             questLayer.functions = new List<MenuLayer.MenuFunction>();
             for (int i = questLayer.currPage * ListLayer.pageMax; i < Mathf.Clamp(questLayer.currPage * ListLayer.pageMax + ListLayer.pageMax, 0, GlobalGameManager.Instance.ownedQuests.Count); i++)
@@ -583,7 +649,9 @@ public class FreeRoamMenuHandler : MonoBehaviour
                         infoEntry.Find("ItemText").GetComponent<TMP_Text>().text = "Info";
                         dialogueLayer.functions.Add(delegate
                         {
-                            CreateReadLayer("Quest: " + quest.QuestTitleText, quest.QuestTitleText);
+                            string desc = string.Format("Title: {0}\n\n{1}\n{2}\n{3}\n{4}\n{5}", quest.QuestTitleText, quest.QuestClientText, 
+                                quest.QuestPlaceText, quest.QuestObjectiveText, quest.QuestDifficultyText, quest.QuestRewardText);
+                            CreateReadLayer("About: " + quest.clientName + "'s Quest", desc);
                         });
 
                         var trashEntry = dialogueLayer.AddEntry();
@@ -611,7 +679,24 @@ public class FreeRoamMenuHandler : MonoBehaviour
     }
     private void OpenOthers()
     {
-
+        var othersLayer = new ListLayer(_listGrp, _listPageIndicator, _closeSelect, _listContent, _arrowLeft, _arrowRight, _listEntry);
+        othersLayer.refresh = delegate
+        {
+            _listTitle.text = "Others";
+            othersLayer.pageLimit = (int)Mathf.Ceil((float)_othersFunctions.Count / ListLayer.pageMax);
+            othersLayer.ClearList();
+            othersLayer.functions = new List<MenuLayer.MenuFunction>();
+            for (int i = othersLayer.currPage * ListLayer.pageMax; i < Mathf.Clamp(othersLayer.currPage * ListLayer.pageMax + ListLayer.pageMax, 0, _othersFunctions.Count); i++)
+            {
+                StaticMenuFunction item = _othersFunctions[i];
+                var newEntry = othersLayer.AddEntry();
+                newEntry.Find("ItemText").GetComponent<TMP_Text>().text = item.title;
+                othersLayer.functions.Add(item.function);
+            }
+            othersLayer.functions.Add(othersLayer.Close);
+        };
+        _layers.Add(othersLayer);
+        CurrentLayer.Open();
     }
 
     private void CreateMain()

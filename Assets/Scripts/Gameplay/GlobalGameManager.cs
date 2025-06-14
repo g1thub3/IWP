@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -75,5 +76,6 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
     private void OnEnable()
     {
         CycleDay();
+        ownedQuests.Clear();
     }
 }

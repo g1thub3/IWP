@@ -184,6 +184,8 @@ public class DGEntity : DGObject
                 closestDist = dist;
             }
         }
+        if (closest == null)
+            return pt;
         return closest;
     }
 
