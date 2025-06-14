@@ -29,6 +29,8 @@ public class DGEntity : DGObject
     protected DGGameManager _dgGameManager;
     protected DungeonUIHandler _dungeonUI;
     protected bool _performingAction;
+    protected FloorRoom _currRoom;
+    protected DGGenerator _dungeonGen;
 
     public TileCoord faceDir;
 
@@ -37,6 +39,7 @@ public class DGEntity : DGObject
         get { return _performingAction; }
         set { _performingAction = value; }
     }
+    public FloorRoom CurrentRoom { get { return _currRoom; } }
     private IEnumerator MoveCoroutine(Vector2 original, Vector2 destined)
     {
         _animator.SetBool("isWalking", true);
@@ -68,6 +71,7 @@ public class DGEntity : DGObject
             }
         }
         _performingAction = false;
+        _dungeonUI.UpdateMinimap();
     }
 
     public bool Move(int right, int up) // Limited movement
@@ -107,11 +111,24 @@ public class DGEntity : DGObject
             occupyingTile.occupyingEntity = this;
 
             position = newPosition;
+
+            _currRoom = null;
+            foreach (var room in _dungeonGen.CurrentFloor.rooms)
+            {
+                if (room.IsCoordInRoom(Position))
+                {
+                    _currRoom = room;
+                    break;
+                }
+            }
+
             Vector2 original = transform.position;
             Vector2 destined = tile.CoordToPosition();
             StartCoroutine(MoveCoroutine(original, destined));
             //_dungeonUI.AddEntry(gameObject.name + " moved!");
             _dgGameManager.TurnCompleted.Invoke(); // NOTE: POSSSIBLE TO TRIGGER MULTIPLE INTERACTIONS AT A TIME, MIGHT BUG OUT, MAKE IT ONLY WAIT IF IN VIEW
+
+
             return true;
         }
         _performingAction = false;
@@ -318,6 +335,7 @@ public class DGEntity : DGObject
     {
         base.Start();
         faceDir = new TileCoord(0, -1);
+        _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _performingAction = false;
         _dgGameManager = FindAnyObjectByType<DGGameManager>();
         _dungeonUI = FindAnyObjectByType<DungeonUIHandler>();

@@ -36,6 +36,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
 
     DialogueHandler d;
 
+    public DungeonFloor CurrentFloor { get { return _currentFloor; } }
     private List<DGEntity> _activeEntities;
     public List<DGEntity> ActiveEntities
     {

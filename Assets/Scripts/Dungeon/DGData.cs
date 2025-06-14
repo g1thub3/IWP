@@ -100,6 +100,7 @@ public class TileInfo // Use CastEnum after doing FromJson
 
     // PROPERTIES
     public bool isWall;
+    public bool hasBeenDiscovered;
 
     public TileCoord coord;
     public Vector3 CoordToPosition()
@@ -269,6 +270,7 @@ public class DungeonFloor
         {
             tiles[i] = new TileInfo(IndexToCoord(i));
             tiles[i].isWall = true;
+            tiles[i].hasBeenDiscovered = false;
             tilePathPoints[i] = new TilePathPoint(tiles[i]);
         }
     }

@@ -2162,6 +2162,7 @@ RectTransform:
   - {fileID: 440916990}
   - {fileID: 978820291}
   - {fileID: 163816627}
+  - {fileID: 1296520274}
   m_Father: {fileID: 339289422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2876,6 +2877,8 @@ MonoBehaviour:
   _maxHGCol: {r: 1, g: 0.99607843, b: 0.50980395, a: 1}
   _questContent: {fileID: 1463551092}
   _listEntry: {fileID: 4082755052558958277, guid: 3ff0773ccf8a5bd4f93c1b13d2421370, type: 3}
+  _minimapContainer: {fileID: 1296520274}
+  _minimapPoint: {fileID: 4547755152215406700, guid: 9e982f1ce1fa5d04db81d5453402bf60, type: 3}
 --- !u!1 &354776406
 GameObject:
   m_ObjectHideFlags: 0
@@ -8065,6 +8068,50 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285805916}
+  m_CullTransparentMesh: 1
+--- !u!1 &1296520273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296520274}
+  - component: {fileID: 1296520275}
+  m_Layer: 5
+  m_Name: Minimap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1296520274
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296520273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 261384687}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -650, y: 50}
+  m_SizeDelta: {x: 500, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1296520275
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296520273}
   m_CullTransparentMesh: 1
 --- !u!1 &1321831412
 GameObject:

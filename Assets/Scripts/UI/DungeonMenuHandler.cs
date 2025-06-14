@@ -412,7 +412,7 @@ public class DungeonMenuHandler : MonoBehaviour
         _helpFunctions.Add(new StaticMenuFunction("See Active Quests", SeeQuests));
         _helpFunctions.Add(new StaticMenuFunction("Controls", delegate
         {
-            CreateReadLayer("Controls", "Arrow Keys: Up, Down, Left, Right\n\nZ: Accept/Interact\nX: Decline/Open Menu");
+            CreateReadLayer("Controls", "Arrow Keys: Up, Down, Left, Right\n\nZ: Accept/Interact\nX: Decline/Open Menu\nLeft Shift: Anchor Position");
         }));
         _helpFunctions.Add(new StaticMenuFunction("Dungeon Guide", delegate
         {

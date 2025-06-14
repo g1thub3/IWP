@@ -95,8 +95,8 @@ public class DGGameManager : MonoBehaviour
     
     private IEnumerator ImplementQuest()
     {
-        yield return new WaitForEndOfFrame();
         _activeQuests.Clear();
+        yield return new WaitForEndOfFrame();
         // GENERATE RETRIEVAL QUEST
         for (int i = 0; i < GlobalGameManager.Instance.ownedQuests.Count; i++)
         {
@@ -141,6 +141,7 @@ public class DGGameManager : MonoBehaviour
             }
         }
         _dungeonUI.UpdateQuestUI();
+        _dungeonUI.LoadMinimap();
     }
 
     public void RefreshGame()
@@ -212,6 +213,7 @@ public class DGGameManager : MonoBehaviour
         if (currentTurn >= turnList.Count)
             currentTurn = 0;
         //Debug.Log("Turn changed!");
+        _dungeonUI.UpdateMinimap();
     }
 
     public void RegisterDeath(DGEntity dead)

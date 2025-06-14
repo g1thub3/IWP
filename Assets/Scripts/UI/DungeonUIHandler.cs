@@ -47,12 +47,18 @@ public class DungeonUIHandler : MonoBehaviour
     [SerializeField] private Transform _questContent;
     [SerializeField] private GameObject _listEntry;
 
+    [Header("Minimap")]
+    [SerializeField] private Transform _minimapContainer;
+    [SerializeField] private GameObject _minimapPoint;
+
     private DGPlayer _focusedPlr;
     private PlayerInput _inputManager;
     private DGGameManager _gameManager;
+    private DGGenerator _dungeonGen;
     private void Start()
     {
         _gameManager = FindAnyObjectByType<DGGameManager>();
+        _dungeonGen = FindAnyObjectByType<DGGenerator>();
     }
 
     public void UpdateQuestUI()
@@ -192,6 +198,59 @@ public class DungeonUIHandler : MonoBehaviour
             menu.LoadParty();
             combatGrp.alpha = 0;
             menuGrp.alpha = 1;
+        }
+    }
+
+    public void LoadMinimap()
+    {
+        for (int i = _minimapContainer.childCount - 1; i >= 0; i--)
+        {
+            Destroy(_minimapContainer.GetChild(i).gameObject);
+        }
+        foreach (var tile in _dungeonGen.CurrentFloor.tiles)
+        {
+            if (!tile.isWall)
+            {
+                var pt = Instantiate(_minimapPoint, _minimapContainer);
+                pt.GetComponent<RectTransform>().anchoredPosition = new Vector2(tile.coord.x * 10, tile.coord.z * 10);
+                pt.name = _dungeonGen.CurrentFloor.CoordToIndex(tile.coord).ToString();
+            }
+        }
+        UpdateMinimap();
+    }
+
+    public void UpdateMinimap()
+    {
+        for (int i = 0; i < _minimapContainer.childCount; i++)
+        {
+            GameObject pt = _minimapContainer.GetChild(i).gameObject;
+            TileInfo tile = _dungeonGen.CurrentFloor.tiles[int.Parse(pt.name)];
+            pt.GetComponent<Image>().enabled = tile.hasBeenDiscovered;
+            pt.transform.Find("Staircase").GetComponent<Image>().enabled = tile.structure != null && tile.hasBeenDiscovered;
+            pt.transform.Find("Item").GetComponent<Image>().enabled = tile.item != null && tile.hasBeenDiscovered;
+
+            if (tile.occupyingEntity != null)
+            {
+                if (tile.occupyingEntity is DGPlayer)
+                {
+                    pt.transform.Find("Player").GetComponent<Image>().enabled = true;
+                    pt.transform.Find("Enemy").GetComponent<Image>().enabled = false;
+                }
+                else
+                {
+                    pt.transform.Find("Player").GetComponent<Image>().enabled = false;
+                    DGPlayer plr = FindAnyObjectByType<DGPlayer>();
+                    if (plr != null)
+                    {
+                        float dist = tile.coord.DistanceSquared(plr.Position);
+                        pt.transform.Find("Enemy").GetComponent<Image>().enabled = dist <= 5  || (plr.CurrentRoom == tile.occupyingEntity.CurrentRoom && plr.CurrentRoom != null);
+                    }
+                }
+            } else
+            {
+                pt.transform.Find("Player").GetComponent<Image>().enabled = false;
+                pt.transform.Find("Enemy").GetComponent<Image>().enabled = false;
+            }
         }
     }
 }
