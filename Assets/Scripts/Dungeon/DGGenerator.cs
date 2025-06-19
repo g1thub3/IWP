@@ -241,14 +241,14 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         if (isPlayer)
         {
             newCharacter.AddComponent<DGPlayer>();
-            newCharacter.GetComponent<CharacterBehaviour>().alliance = CharacterBehaviour.ALLIANCE.TEAM_1;
+            newCharacter.GetComponent<CharacterBehaviour>().alliance = 0;
         }
         else
         {
             newCharacter.AddComponent<DGEntity>();
             Destroy(newCharacter.GetComponent<PlayerInput>());
             newCharacter.AddComponent<DGNPC>();
-            newCharacter.GetComponent<CharacterBehaviour>().alliance = CharacterBehaviour.ALLIANCE.TEAM_2;
+            newCharacter.GetComponent<CharacterBehaviour>().alliance = 1;
         }
 
         FloorRoom room = _currentFloor.rooms[Random.Range(0, _currentFloor.rooms.Count)];

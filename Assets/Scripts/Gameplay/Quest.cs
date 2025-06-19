@@ -2,6 +2,7 @@ using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public interface IQuestReward
 {
@@ -69,6 +70,15 @@ public class Quest
     public int competitiveLevel;
     public void CalculateDifficulty()
     {
+        int pts = quest.dungeon.floorDifficulty * quest.floor;
+        
+        if (pts < 15)
+        {
+
+        } else if (pts < 60)
+        {
+
+        }
         difficulty = 'S';
         goldReward = new GoldReward(100);
         var itemData = new List<Item>();

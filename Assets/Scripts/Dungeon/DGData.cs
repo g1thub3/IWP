@@ -281,6 +281,7 @@ public class DGData : ScriptableObject
 {
     public bool isAscending = false;
     public int floorCount;
+    public int floorDifficulty;
     public string dungeonName;
     public Tilesets.TILESET defaultTileset;
     public DGSeed floorSeed;

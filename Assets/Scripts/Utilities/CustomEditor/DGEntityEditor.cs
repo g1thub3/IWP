@@ -17,6 +17,10 @@ public class DGEntityEditor : Editor
         DGPlayer plr = FindAnyObjectByType<DGPlayer>();
         if (DebugTools.Instance.EntityDebugOn && plr != null)
         {
+            if (GUILayout.Button("Clear Markers"))
+            {
+                DebugTools.Instance.ClearMarkers();
+            }
             if (GUILayout.Button("Test Pathfind"))
             {
                 DebugTools.Instance.ClearMarkers();

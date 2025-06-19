@@ -125,6 +125,62 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     aiModule: {fileID: 11400000, guid: bec4a0da65a4a2845bafc8a367e36cde, type: 2}
+  - characterSprite: {fileID: 0}
+    characterName: Adventurer
+    animatorController: {fileID: 9100000, guid: 304aaa11f7edd0b4988562ce2915f84d, type: 2}
+    maxHealth:
+      baseStat: 5
+      incrementPercentage: 15
+    hungerSize:
+      baseStat: 5
+      incrementPercentage: 15
+    physAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    physDef:
+      baseStat: 5
+      incrementPercentage: 15
+    magicAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    magicDef:
+      baseStat: 5
+      incrementPercentage: 15
+    maxEnergy:
+      baseStat: 5
+      incrementPercentage: 15
+    maxMana:
+      baseStat: 5
+      incrementPercentage: 15
+    aiModule: {fileID: 11400000, guid: bec4a0da65a4a2845bafc8a367e36cde, type: 2}
+  - characterSprite: {fileID: 0}
+    characterName: Adventurer
+    animatorController: {fileID: 9100000, guid: 59c9337ecdab8534f821f53529627bd9, type: 2}
+    maxHealth:
+      baseStat: 5
+      incrementPercentage: 15
+    hungerSize:
+      baseStat: 5
+      incrementPercentage: 15
+    physAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    physDef:
+      baseStat: 5
+      incrementPercentage: 15
+    magicAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    magicDef:
+      baseStat: 5
+      incrementPercentage: 15
+    maxEnergy:
+      baseStat: 5
+      incrementPercentage: 15
+    maxMana:
+      baseStat: 5
+      incrementPercentage: 15
+    aiModule: {fileID: 11400000, guid: bec4a0da65a4a2845bafc8a367e36cde, type: 2}
   questNPCNames:
   - Charlie
   - James

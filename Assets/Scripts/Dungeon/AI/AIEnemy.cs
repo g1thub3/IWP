@@ -62,7 +62,10 @@ public class AIEnemy : DGAIModule
                 {
                     TileCoord diff = closestTarget.GetComponent<DGEntity>().Position - entity.Position;
                     user.GetComponent<DGEntity>().Move(diff.x, diff.z);
-                    DefaultAttack.Instance.Perform(cb);
+                    if (DefaultAttack.Instance.CanBePerformed(cb))
+                    {
+                        DefaultAttack.Instance.Perform(cb);
+                    }
                 }
                 return;
             }

@@ -1,0 +1,830 @@
+fileFormatVersion: 2
+guid: 39717f628021932488efdb79e2612b2d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6263194334817005743
+    second: adventurerKnight_thrust_0
+  - first:
+      213: -7383723332212223189
+    second: adventurerKnight_thrust_1
+  - first:
+      213: -8844278457482719474
+    second: adventurerKnight_thrust_2
+  - first:
+      213: -7115300914049284846
+    second: adventurerKnight_thrust_3
+  - first:
+      213: 2879786302725195549
+    second: adventurerKnight_thrust_4
+  - first:
+      213: -6367962290339610960
+    second: adventurerKnight_thrust_5
+  - first:
+      213: -3431951350874012136
+    second: adventurerKnight_thrust_6
+  - first:
+      213: -6881994903155632110
+    second: adventurerKnight_thrust_7
+  - first:
+      213: -2587961361112730892
+    second: adventurerKnight_thrust_8
+  - first:
+      213: 5099776161667374069
+    second: adventurerKnight_thrust_9
+  - first:
+      213: 5448726438394678480
+    second: adventurerKnight_thrust_10
+  - first:
+      213: -556779278925405262
+    second: adventurerKnight_thrust_11
+  - first:
+      213: 1100986338199995249
+    second: adventurerKnight_thrust_12
+  - first:
+      213: 7113398553262111897
+    second: adventurerKnight_thrust_13
+  - first:
+      213: 2768518153051698164
+    second: adventurerKnight_thrust_14
+  - first:
+      213: 8821449950374246110
+    second: adventurerKnight_thrust_15
+  - first:
+      213: 7198233259863311808
+    second: adventurerKnight_thrust_16
+  - first:
+      213: -8384536291237146694
+    second: adventurerKnight_thrust_17
+  - first:
+      213: 1442425775732486408
+    second: adventurerKnight_thrust_18
+  - first:
+      213: 3234616787492215626
+    second: adventurerKnight_thrust_19
+  - first:
+      213: 8979149693406985498
+    second: adventurerKnight_thrust_20
+  - first:
+      213: -6306039695279044129
+    second: adventurerKnight_thrust_21
+  - first:
+      213: -2407902499299410638
+    second: adventurerKnight_thrust_22
+  - first:
+      213: 4805287750943085475
+    second: adventurerKnight_thrust_23
+  - first:
+      213: -3736383945642616224
+    second: adventurerKnight_thrust_24
+  - first:
+      213: 5985703363053498813
+    second: adventurerKnight_thrust_25
+  - first:
+      213: 6203466843174961277
+    second: adventurerKnight_thrust_26
+  - first:
+      213: 4572354428630526749
+    second: adventurerKnight_thrust_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 639
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f4ef1bfe9a419a0800000000000000
+      internalID: -6263194334817005743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_1
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 639
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b231abfffbeb78990800000000000000
+      internalID: -7383723332212223189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_2
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 639
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f4a171a9fc24580800000000000000
+      internalID: -8844278457482719474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_3
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 639
+        width: 31
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2158414648f514d90800000000000000
+      internalID: -7115300914049284846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_4
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 639
+        width: 31
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1788f2726e07f720800000000000000
+      internalID: 2879786302725195549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_5
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 639
+        width: 31
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be793d290470a7a0800000000000000
+      internalID: -6367962290339610960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_6
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 639
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8168bbcfd624f50d0800000000000000
+      internalID: -3431951350874012136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_7
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 447
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2181c53191e3e70a0800000000000000
+      internalID: -6881994903155632110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_8
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 447
+        width: 56
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f2707a8ad6b51cd0800000000000000
+      internalID: -2587961361112730892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_9
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 447
+        width: 60
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb5036366b06c640800000000000000
+      internalID: 5099776161667374069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_10
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 447
+        width: 69
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc4bceb3d3cd9b40800000000000000
+      internalID: 5448726438394678480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_11
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 447
+        width: 75
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b36a5d123ce548f0800000000000000
+      internalID: -556779278925405262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_12
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 447
+        width: 69
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17308f6cd3d774f00800000000000000
+      internalID: 1100986338199995249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_13
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 447
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c37f8bb4ed7b260800000000000000
+      internalID: 7113398553262111897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_14
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 255
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3fdda8790cb6620800000000000000
+      internalID: 2768518153051698164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_15
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 255
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed6b1f7edf51c6a70800000000000000
+      internalID: 8821449950374246110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_16
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 255
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c50e80130345e360800000000000000
+      internalID: 7198233259863311808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_17
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 242
+        width: 28
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf40729aa424ab80800000000000000
+      internalID: -8384536291237146694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_18
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 231
+        width: 28
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 801f669c996840410800000000000000
+      internalID: 1442425775732486408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_19
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 242
+        width: 28
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4b1dfa94daa3ec20800000000000000
+      internalID: 3234616787492215626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_20
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 255
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1db49492195c9c70800000000000000
+      internalID: 8979149693406985498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_21
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 63
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd94167de427c78a0800000000000000
+      internalID: -6306039695279044129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_22
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 63
+        width: 56
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23dbb7b3f69659ed0800000000000000
+      internalID: -2407902499299410638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_23
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 63
+        width: 60
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a39f7effbfcfa240800000000000000
+      internalID: 4805287750943085475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_24
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 63
+        width: 69
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06adf7ff892b52cc0800000000000000
+      internalID: -3736383945642616224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_25
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 63
+        width: 75
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db13aadbe7d711350800000000000000
+      internalID: 5985703363053498813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_26
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 63
+        width: 69
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d708b5bf934271650800000000000000
+      internalID: 6203466843174961277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurerKnight_thrust_27
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 63
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1be4b1a024447f30800000000000000
+      internalID: 4572354428630526749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -176,14 +176,13 @@ public class DGEntity : DGObject
         }
     }
 
-    public TileCoord GetClosestDirection(TileCoord pt)
+    public TileCoord GetClosestDirection(TileCoord pt, bool ignoreEntity = false)
     {
         float closestDist = -1;
         TileCoord closest = null;
         var directions = pt.GetDirections();
         for (int i = directions.Count - 1; i >= 0; i--)
         {
-            if (directions[i].Equals(Position)) return directions[i];
             if (!(DungeonFloor.IsInX(directions[i].x) && DungeonFloor.IsInZ(directions[i].z)))
             {
                 directions.Remove(directions[i]);
@@ -198,9 +197,16 @@ public class DGEntity : DGObject
 
             TileInfo xTile = Floor.CoordToTileInfo(xDiff);
             TileInfo zTile = Floor.CoordToTileInfo(zDiff);
-            if (tile.isWall || xTile.isWall || zTile.isWall || tile.occupyingEntity != null)
+            if (directions[i].Equals(Position)) {
+                if (!(xTile.isWall || zTile.isWall))
+                {
+                    return directions[i];
+                }
+            };
+            if (tile.isWall || xTile.isWall || zTile.isWall || (tile.occupyingEntity != null && ignoreEntity == false))
             {
                 directions.Remove(directions[i]);
+                continue;
             }
         }
         for (int i = 0; i < directions.Count; i++)

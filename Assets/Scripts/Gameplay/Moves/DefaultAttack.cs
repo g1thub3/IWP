@@ -5,6 +5,8 @@ using static UnityEngine.EventSystems.EventTrigger;
 [CreateAssetMenu(fileName = "DefaultAttack", menuName = "Combat Moves/DefaultAttack")]
 public class DefaultAttack : CombatMove
 {
+
+
     public float moveTime1 = 0.3f;
     public float moveTime2 = 0.15f;
     private IEnumerator MoveAnimation(CharacterBehaviour user, DGGameManager _dgGameManager, DungeonUIHandler _dungeonUI)
@@ -26,10 +28,13 @@ public class DefaultAttack : CombatMove
         }
         // attack
         _dungeonUI.AddEntry(user.gameObject.name + " attacked!");
-        var detected = user.HitDetect(hitArea);
-        if (detected != null)
+        if (CanBePerformed(user))
         {
-            detected.Damage(15, ATTACK_TYPE.PHYSICAL, user.character);
+            var detected = user.HitDetect(hitArea);
+            if (detected != null)
+            {
+                detected.Damage(15, ATTACK_TYPE.PHYSICAL, user.character);
+            }
         }
         Transition trans2 = new Transition();
         trans2.max = moveTime2;
@@ -40,6 +45,24 @@ public class DefaultAttack : CombatMove
         }
         _dgGameManager.TurnCompleted.Invoke();
         user.GetComponent<DGEntity>().IsPerformingAction = false;
+    }
+
+    public override bool CanBePerformed(CharacterBehaviour user)
+    {
+        var selfEntity = user.GetComponent<DGEntity>();
+
+        var hitArea = selfEntity.Position + selfEntity.faceDir;
+        TileCoord xDiff = new TileCoord(selfEntity.Position.x + selfEntity.faceDir.x, selfEntity.Position.z);
+        TileCoord zDiff = new TileCoord(selfEntity.Position.x, selfEntity.Position.z + selfEntity.faceDir.z);
+
+        TileInfo tile = selfEntity.Floor.CoordToTileInfo(hitArea);
+        TileInfo xTile = selfEntity.Floor.CoordToTileInfo(xDiff);
+        TileInfo zTile = selfEntity.Floor.CoordToTileInfo(zDiff);
+        if (tile.isWall || xTile.isWall || zTile.isWall)
+        {
+            return false;
+        }
+        return true;
     }
 
     public override bool Perform(CharacterBehaviour user)

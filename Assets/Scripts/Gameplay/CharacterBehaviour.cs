@@ -11,11 +11,6 @@ public enum ATTACK_TYPE
 
 public class CharacterBehaviour : MonoBehaviour
 {
-    public enum ALLIANCE { 
-        NEUTRAL,
-        TEAM_1,
-        TEAM_2
-    }
 
     DungeonUIHandler _dungeonUI;
     DGEntity _entity;
@@ -23,7 +18,7 @@ public class CharacterBehaviour : MonoBehaviour
     DGGenerator _dungeonGen;
 
     public CharacterEntry character;
-    public ALLIANCE alliance;
+    public int alliance;
 
     public int health;
     public int hunger;
@@ -169,7 +164,7 @@ public class CharacterBehaviour : MonoBehaviour
 
     public bool DropItem()
     {
-        if (character.HeldItem == null)
+        if (character.HeldItem == null || character.HeldItem.module == null)
             return false;
         Item toDrop = character.HeldItem;
         TileInfo available = _dungeonGen.SearchNextAvailableTile(_entity.Floor.CoordToTileInfo(_entity.Position), SearchConditions.New(false, false), 0);
