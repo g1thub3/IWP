@@ -19,6 +19,14 @@ public class TilePathPoint {
     }
 }
 
+public enum ANIMATION_ENUM { 
+    IDLE,
+    WALK,
+    JAB,
+    CAST,
+    SLASH
+}
+
 public class DGEntity : DGObject
 {
     [SerializeField]
@@ -31,6 +39,9 @@ public class DGEntity : DGObject
     protected bool _performingAction;
     protected FloorRoom _currRoom;
     protected DGGenerator _dungeonGen;
+    private string[] _actionKeys;
+    private string _direction;
+    private ANIMATION_ENUM _action;
 
     public TileCoord faceDir;
 
@@ -42,7 +53,7 @@ public class DGEntity : DGObject
     public FloorRoom CurrentRoom { get { return _currRoom; } }
     private IEnumerator MoveCoroutine(Vector2 original, Vector2 destined)
     {
-        _animator.SetBool("isWalking", true);
+        _action = ANIMATION_ENUM.WALK;
         float t = 0;
         while (t < _moveTime)
         {
@@ -51,7 +62,7 @@ public class DGEntity : DGObject
             yield return new WaitForEndOfFrame();
         }
         transform.position = destined;
-        _animator.SetBool("isWalking", false);
+        _action = ANIMATION_ENUM.IDLE;
 
         TileInfo tile = floor.tiles[floor.CoordToIndex(position)];
         if (tile.item != null)
@@ -89,13 +100,13 @@ public class DGEntity : DGObject
         _performingAction = true;
 
         if (up == 1)
-            _animator.SetInteger("Direction", 2);
+            NumToDir(2);
         if (right == 1)
-            _animator.SetInteger("Direction", 3);
+            NumToDir(3);
         if (up == -1)
-            _animator.SetInteger("Direction", 0);
+            NumToDir(0);
         if (right == -1)
-            _animator.SetInteger("Direction", 1);
+            NumToDir(1);
 
         TileCoord newPosition = position + new TileCoord(right, up);
         TileCoord xChange = position + new TileCoord(right, 0);
@@ -328,7 +339,33 @@ public class DGEntity : DGObject
 
     protected void Update()
     {
+        PlayAnimation();
+    }
 
+    protected void NumToDir(int num)
+    {
+        switch (num)
+        {
+            case 1:
+                _direction = "west";
+                break;
+            case 2:
+                _direction = "north";
+                break;
+            case 3:
+                _direction = "east";
+                break;
+            default:
+            case 0:
+                _direction = "south";
+                break;
+        }
+    }
+
+    private void PlayAnimation()
+    {
+        string state = string.Format("{0}_{1}", _actionKeys[(int)_action], _direction);
+        _animator.Play(state);
     }
 
     protected new void Start()
@@ -341,12 +378,22 @@ public class DGEntity : DGObject
         _dungeonUI = FindAnyObjectByType<DungeonUIHandler>();
         _characterBehaviour = GetComponent<CharacterBehaviour>();
         _animator = GetComponent<Animator>();
+
         if (_characterBehaviour.character.associatedCharacter != CHARACTER_ENUM.NUM_CHARACTERS)
         {
             _animator.runtimeAnimatorController = CharacterProfiles.Instance.characterProfiles[(int)_characterBehaviour.character.associatedCharacter].animatorController;
-        } else
+        }
+        else
         {
             _animator.runtimeAnimatorController = CharacterProfiles.Instance.characterProfiles[0].animatorController;
         }
+        _action = ANIMATION_ENUM.IDLE;
+        _direction = "south";
+        _actionKeys = new string[5];
+        _actionKeys[(int)ANIMATION_ENUM.IDLE] = "idle";
+        _actionKeys[(int)ANIMATION_ENUM.WALK] = "walk";
+        _actionKeys[(int)ANIMATION_ENUM.JAB] = "jab";
+        _actionKeys[(int)ANIMATION_ENUM.CAST] = "cast";
+        _actionKeys[(int)ANIMATION_ENUM.SLASH] = "slash";
     }
 }

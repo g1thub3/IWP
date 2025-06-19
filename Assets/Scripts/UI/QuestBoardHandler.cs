@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -79,31 +80,34 @@ public class QuestBoardHandler : MonoBehaviour
         _questBoardPage.text = (_currentPage + 1) + "/" + 4;
         for (int i = _currentPage * 2; i < _currentPage * 2 + 2; i++)
         {
+            List<Quest> questField = GlobalGameManager.Instance.availableQuests;
             if (_isCompetitive)
             {
-
-            } else
-            {
-                var questData = GlobalGameManager.Instance.availableQuests[i];
-                var newEntry = Instantiate(_questBoardEntry, _questBoardContent);
-                newEntry.transform.Find("QuestTitle").GetComponent<TMP_Text>().text = questData.QuestTitleText;
-                newEntry.transform.Find("QuestInfo").GetComponent<TMP_Text>().text = 
-                    questData.QuestClientText + "\n" + questData.QuestPlaceText + "\n" + questData.QuestObjectiveText + "\n" + questData.QuestDifficultyText + "\n" + questData.QuestRewardText;
-                if (GlobalGameManager.Instance.ownedQuests.Contains(questData))
-                {
-                    newEntry.transform.Find("IsTaken").GetComponent<TMP_Text>().text = "Taken";
-                    newEntry.transform.Find("IsTaken").GetComponent<TMP_Text>().color = Color.red;
-                }
-                if (i % 2 == _currSelected)
-                    newSelector = newEntry.transform.Find("Selector").GetComponent<RectTransform>();
+                questField = GlobalGameManager.Instance.availableCompetitiveQuests;
             }
+            var questData = questField[i];
+            var newEntry = Instantiate(_questBoardEntry, _questBoardContent);
+            newEntry.transform.Find("QuestTitle").GetComponent<TMP_Text>().text = questData.QuestTitleText;
+            newEntry.transform.Find("QuestInfo").GetComponent<TMP_Text>().text = questData.QuestClientText + "\n" + questData.QuestPlaceText + "\n" + questData.QuestObjectiveText + "\n" + questData.QuestDifficultyText + (_isCompetitive ? "\n" + questData.QuestCompetitiveLevelText : string.Empty) + "\n" + questData.QuestRewardText;
+            if (_isCompetitive)
+            {
+                newEntry.transform.Find("QuestInfo").GetComponent<TMP_Text>().fontSize = 40;
+            }
+            if (GlobalGameManager.Instance.ownedQuests.Contains(questData))
+            {
+                newEntry.transform.Find("IsTaken").GetComponent<TMP_Text>().text = "Taken";
+                newEntry.transform.Find("IsTaken").GetComponent<TMP_Text>().color = Color.red;
+            }
+            if (i % 2 == _currSelected)
+                newSelector = newEntry.transform.Find("Selector").GetComponent<RectTransform>();
         }
         return newSelector;
     }
 
     private void AcceptQuest()
     {
-        var quest = GlobalGameManager.Instance.availableQuests[_currentPage * 2 + _currSelected];
+        var quest = _isCompetitive ? GlobalGameManager.Instance.availableCompetitiveQuests[_currentPage * 2 + _currSelected] 
+            : GlobalGameManager.Instance.availableQuests[_currentPage * 2 + _currSelected];
         if (!GlobalGameManager.Instance.ownedQuests.Contains(quest))
         {
             if (GlobalGameManager.Instance.ownedQuests.Count < GlobalGameManager.maxQuestCount)

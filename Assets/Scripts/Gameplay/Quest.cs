@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -65,6 +66,7 @@ public class Quest
     public CHARACTER_ENUM clientCharacter;
     public bool isActive;
     public char difficulty;
+    public int competitiveLevel;
     public void CalculateDifficulty()
     {
         difficulty = 'S';
@@ -108,7 +110,7 @@ public class Quest
         return newQuest;
     }
 
-    public static Quest CreateQuestData(QUEST_TYPE qType)
+    public static Quest CreateQuestData(QUEST_TYPE qType, int competitiveLevel = 0)
     {
         QuestData newQuest;
         switch (qType)
@@ -119,6 +121,7 @@ public class Quest
                 break;
         }
         var newData = new Quest(newQuest, CharacterProfiles.Instance.GetRandomNPCName(),(CHARACTER_ENUM)Random.Range(2, (int)CHARACTER_ENUM.NUM_CHARACTERS));
+        newData.competitiveLevel = competitiveLevel;
         newData.CalculateDifficulty();
         return newData;
     }
@@ -174,6 +177,13 @@ public class Quest
             return "Difficulty: " + difficulty + " (" + adventurerReward.Amount + ")";
         }
     }
+    public string QuestCompetitiveLevelText
+    {
+        get
+        {
+            return "Competitive Level: " + competitiveLevel;
+        }
+    }
     public string QuestRewardText
     {
         get
@@ -193,16 +203,17 @@ public abstract class QuestData
 {
     public DGData dungeon;
     public int floor;
+    public bool questPossible;
     public bool questCompleted; // NOTE: RESET THIS WHEN THE PLAYER LOSES IN THE DUNGEON
     public void SetData()
     {
         dungeon = GlobalGameManager.Instance.availableDungeons[Random.Range(0, GlobalGameManager.Instance.availableDungeons.Count)];
         floor = Random.Range(1, dungeon.floorCount);
         questCompleted = false;
+        questPossible = true;
     }
 
-    public abstract void Execute();
-    public abstract bool IsComplete();
+    public abstract bool Execute(DGGenerator dungeonGen);
 }
 
 [System.Serializable]
@@ -217,17 +228,34 @@ public class RetrievalQuest : QuestData
         ToRetrieve.module = Item.foundAssets[Random.Range(0, Item.foundAssets.Length)];
         ToRetrieve.Set();
     }
-    public override void Execute() {
+    public override bool Execute(DGGenerator dungeonGen) {
         // Place the item in the dungeon once floor entered
-    }
-    public override bool IsComplete()
-    {
-        // Trigger this with on pickup
-        foreach (var item in GlobalGameManager.Instance.inventory)
+        var room = dungeonGen.GetRandomRoom();
+        var spawnTile = dungeonGen.SearchRandomTileInRoom(room, SearchConditions.New(false));
+        if (spawnTile != null)
         {
-            if (item == ToRetrieve)
-                return true;
+            var questItem = Tilesets.Instance.ConstructItemInteractable(ToRetrieve);
+            questItem.GetComponent<DGItemContainer>().Item.IsQuestTarget = true;
+            dungeonGen.InsertItem(questItem, spawnTile);
+            return true;
         }
         return false;
+    }
+    public static Quest CheckCompletion(DGGameManager gameManager, Item pickedUp)
+    {
+        for (int i = 0; i < gameManager.ActiveQuests.Count; i++)
+        {
+            RetrievalQuest retrieveQuest = gameManager.ActiveQuests[i].quest as RetrievalQuest;
+            if (retrieveQuest != null)
+            {
+                if (retrieveQuest.ToRetrieve == pickedUp)
+                {
+                    var foundQuest = gameManager.ActiveQuests[i];
+                    foundQuest.quest.questCompleted = true;
+                    return foundQuest;
+                }
+            }
+        }
+        return null;
     }
 }

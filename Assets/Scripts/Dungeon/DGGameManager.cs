@@ -106,24 +106,12 @@ public class DGGameManager : MonoBehaviour
                 _activeQuests.Add(questData);
                 if (questData.quest.floor == CurrentFloor) // Add target
                 {
-                    if (questData.quest is RetrievalQuest)
+                    bool success = questData.quest.Execute(_dungeonGen);
+                    if (!success)
                     {
-                        var room = _dungeonGen.GetRandomRoom();
-                        var spawnTile = _dungeonGen.SearchRandomTileInRoom(room, SearchConditions.New(false));
-                        if (spawnTile != null)
-                        {
-                            var rQuest = questData.quest as RetrievalQuest;
-                            var questItem = Tilesets.Instance.ConstructItemInteractable(rQuest.ToRetrieve);
-                            questItem.GetComponent<DGItemContainer>().Item.IsQuestTarget = true;
-                            _dungeonGen.InsertItem(questItem, spawnTile);
-                            Debug.Log(spawnTile.coord);
-                        }
-                        else
-                        {
-                            questData.isActive = false;
-                            _activeQuests.Remove(_activeQuests.Last());
-                            Debug.Log("Failed to spawn quest item.");
-                        }
+                        questData.isActive = false;
+                        _activeQuests.Remove(_activeQuests.Last());
+                        Debug.Log("Failed to spawn quest item.");
                     }
                 }
             }

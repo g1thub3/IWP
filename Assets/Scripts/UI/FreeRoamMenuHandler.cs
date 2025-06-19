@@ -611,6 +611,10 @@ public class FreeRoamMenuHandler : MonoBehaviour
                 {
                     title = title.Substring(0, 25) + "...";
                 }
+                if (quest.competitiveLevel > 0)
+                {
+                    title = string.Format("<i>{0}</i>", title);
+                }
                 newEntry.Find("ItemText").GetComponent<TMP_Text>().text = title;
                 if (quest.isActive)
                 {
@@ -649,8 +653,8 @@ public class FreeRoamMenuHandler : MonoBehaviour
                         infoEntry.Find("ItemText").GetComponent<TMP_Text>().text = "Info";
                         dialogueLayer.functions.Add(delegate
                         {
-                            string desc = string.Format("Title: {0}\n\n{1}\n{2}\n{3}\n{4}\n{5}", quest.QuestTitleText, quest.QuestClientText, 
-                                quest.QuestPlaceText, quest.QuestObjectiveText, quest.QuestDifficultyText, quest.QuestRewardText);
+                            string desc = string.Format("Title: {0}\n\n{1}\n{2}\n{3}\n{4}\n{5}\n{6}", quest.QuestTitleText, quest.QuestClientText, 
+                                quest.QuestPlaceText, quest.QuestObjectiveText, quest.QuestDifficultyText, quest.competitiveLevel > 0 ? quest.QuestCompetitiveLevelText : string.Empty, quest.QuestRewardText);
                             CreateReadLayer("About: " + quest.clientName + "'s Quest", desc);
                         });
 

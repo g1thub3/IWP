@@ -73,6 +73,10 @@ public class DungeonUIHandler : MonoBehaviour
             var entry = Instantiate(_listEntry, _questContent);
             TMP_Text textcomp = entry.GetComponentInChildren<TMP_Text>();
             string label = "(" + (!GlobalGameManager.Instance.selectedDungeon.isAscending ? "B" : string.Empty) + q.quest.floor + "F) " + q.QuestObjectiveText;
+            if (q.competitiveLevel > 0)
+            {
+                label = string.Format("<i>{0}</i>", label);
+            }
             textcomp.text = label;
             if (_gameManager.CurrentFloor == q.quest.floor)
             {

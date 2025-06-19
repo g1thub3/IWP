@@ -32,21 +32,8 @@ public class DIPickUp : DGInteraction
 
             if (interacted is DGPlayer && container.Item.IsQuestTarget)
             {
-                Quest foundQuest = null;
                 DGGameManager dgGameManager = FindAnyObjectByType<DGGameManager>();
-                for (int i = 0; i < dgGameManager.ActiveQuests.Count; i++)
-                {
-                    RetrievalQuest retrieveQuest = dgGameManager.ActiveQuests[i].quest as RetrievalQuest;
-                    if (retrieveQuest != null)
-                    {
-                        if (retrieveQuest.ToRetrieve == container.Item)
-                        {
-                            foundQuest = dgGameManager.ActiveQuests[i];
-                            foundQuest.quest.questCompleted = true;
-                            break;
-                        }
-                    }
-                }
+                Quest foundQuest = RetrievalQuest.CheckCompletion(dgGameManager, container.Item);
                 if (foundQuest != null) {
                     _interactionInProgress = true;
                     var p = GlobalCanvasManager.Instance.PromptHandler;

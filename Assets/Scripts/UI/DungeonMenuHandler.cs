@@ -444,6 +444,10 @@ public class DungeonMenuHandler : MonoBehaviour
                 {
                     label = label.Substring(0, 25) + "...";
                 }
+                if (q.competitiveLevel > 0)
+                {
+                    label = string.Format("<i>{0}</i>", label);
+                }
                 textcomp.text = label;
                 if (_gameManager.CurrentFloor == q.quest.floor)
                 {
@@ -464,8 +468,8 @@ public class DungeonMenuHandler : MonoBehaviour
                         var info = dialogueLayer.AddEntry();
                         info.GetComponent<TMP_Text>().text = "Info";
                         dialogueLayer.functions.Add(delegate {
-                            string desc = string.Format("Title: {0}\n\n{1}\n{2}\n{3}\n{4}\n{5}", q.QuestTitleText, q.QuestClientText,
-                                q.QuestPlaceText, q.QuestObjectiveText, q.QuestDifficultyText, q.QuestRewardText);
+                            string desc = string.Format("Title: {0}\n\n{1}\n{2}\n{3}\n{4}\n{5}\n{6}", q.QuestTitleText, q.QuestClientText,
+                                q.QuestPlaceText, q.QuestObjectiveText, q.QuestDifficultyText, q.competitiveLevel > 0 ? q.QuestCompetitiveLevelText : string.Empty, q.QuestRewardText);
                             CreateReadLayer("About: " + q.clientName + "'s Quest", desc);
                         });
 

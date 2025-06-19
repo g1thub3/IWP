@@ -77,6 +77,14 @@ public class DGPlayer : DGEntity
         {
             faceDir.x = x;
             faceDir.z = y;
+            if (faceDir.z == 1)
+                NumToDir(2);
+            if (faceDir.x == 1)
+                NumToDir(3);
+            if (faceDir.z == -1)
+                NumToDir(0);
+            if (faceDir.x == -1)
+                NumToDir(1);
         }
     }
 

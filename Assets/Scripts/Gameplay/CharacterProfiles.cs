@@ -38,6 +38,7 @@ public class CharacterProfiles : SingletonScriptableObject<CharacterProfiles>
 {
     public CharacterProfile[] characterProfiles = new CharacterProfile[(int)CHARACTER_ENUM.NUM_CHARACTERS];
     public List<string> questNPCNames = new List<string>();
+    public List<CHARACTER_ENUM> possibleCompetitors;
     public string GetRandomNPCName()
     {
         return questNPCNames[Random.Range(0, questNPCNames.Count)];

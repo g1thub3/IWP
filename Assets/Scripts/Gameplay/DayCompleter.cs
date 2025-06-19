@@ -10,7 +10,7 @@ public class DayCompleter : MonoBehaviour
             GlobalGameManager.Instance.DayOver = false;
 
             for (int i = GlobalGameManager.Instance.ownedQuests.Count - 1; i >= 0; i--) { 
-                if (GlobalGameManager.Instance.ownedQuests[i].quest.questCompleted)
+                if (GlobalGameManager.Instance.ownedQuests[i].quest.questCompleted || !GlobalGameManager.Instance.ownedQuests[i].quest.questPossible)
                 {
                     GlobalGameManager.Instance.ownedQuests[i].goldReward.Award();
                     GlobalGameManager.Instance.ownedQuests[i].itemReward.Award();

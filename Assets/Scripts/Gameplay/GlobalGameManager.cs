@@ -60,16 +60,24 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
     public static int maxQuestCount = 8;
     public List<Quest> ownedQuests = new List<Quest>();
     public List<Quest> availableQuests = new List<Quest>();
+    public List<Quest> availableCompetitiveQuests = new List<Quest>();
 
     public bool DayOver = false;
 
     public void CycleDay()
     {
         availableQuests.Clear();
+        availableCompetitiveQuests.Clear();
         for (int i = 0; i < maxQuestCount; i++)
         {
             var newQuest = Quest.CreateQuestData(Quest.QUEST_TYPE.RETRIEVAL);
             availableQuests.Add(newQuest);
+        }
+        for (int i = 0; i < maxQuestCount; i++)
+        {
+            int compLevel = 1 + (Random.Range(0, adventurerRanking));
+            var newQuest = Quest.CreateQuestData(Quest.QUEST_TYPE.RETRIEVAL, compLevel);
+            availableCompetitiveQuests.Add(newQuest);
         }
     }
 
