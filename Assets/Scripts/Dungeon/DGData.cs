@@ -218,6 +218,7 @@ public class DungeonFloor
     public string floorName;
     public static readonly int floorSize = 50;
     public List<FloorRoom> rooms;
+    public List<TileInfo> nonWallTiles;
     public TileInfo[] tiles;
     public TilePathPoint[] tilePathPoints;
     public void ClearSearch()

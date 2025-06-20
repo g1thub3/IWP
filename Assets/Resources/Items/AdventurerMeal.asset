@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d06d6b368959845a13ad9203d0c0fa, type: 3}
+  m_Name: AdventurerMeal
+  m_EditorClassIdentifier: 
+  itemName: Adventurer Meal
+  itemDescription: Replenishes 50 hunger.
+  itemSprite: {fileID: 5325014006326161429, guid: 93f6e3d7d6e9aa4488ebf90cea64f36f, type: 3}
+  isConsumable: 1
+  amount: 50
+  toReplenish: 1

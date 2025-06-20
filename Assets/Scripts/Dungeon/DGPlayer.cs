@@ -105,20 +105,60 @@ public class DGPlayer : DGEntity
             }
             return;
         }
+
+        Floor.ClearSearch();
+
         List<TileCoord> pattern = new List<TileCoord>();
-        pattern.Add(Position);
-        pattern.Add(Position.North);
-        pattern.Add(Position.North.North);
-        pattern.Add(Position.Northeast);
-        pattern.Add(Position.East);
-        pattern.Add(Position.East.East);
-        pattern.Add(Position.Southeast);
-        pattern.Add(Position.South);
-        pattern.Add(Position.South.South);
-        pattern.Add(Position.Southwest);
-        pattern.Add(Position.West);
-        pattern.Add(Position.West.West);
-        pattern.Add(Position.Northwest);
+
+        foreach (var tile in Floor.nonWallTiles)
+        {
+            float dist = tile.coord.DistanceSquared(Position);
+            if (dist <= GlobalGameManager.Instance.party[0].viewDistance)
+                pattern.Add(tile.coord);
+        }
+
+        //TileCoord prev = null;
+        //TileCoord curr = Position;
+
+        //bool isSearching = true;
+        //while (isSearching)
+        //{
+        //    TileCoord foundDirection = null;
+        //    var directions = curr.GetDirections();
+        //    foreach (var direction in directions) {
+        //        if (!(DungeonFloor.IsInX(direction.x) && DungeonFloor.IsInZ(direction.z))) continue;
+        //        if (Floor.tilePathPoints[Floor.CoordToIndex(curr)].hasSearched) continue;
+        //        float dist = direction.DistanceSquared(Position);
+        //        if (dist > GlobalGameManager.Instance.party[0].viewDistance) continue;
+        //        foundDirection = direction;
+        //        break;
+        //    }
+        //    if (foundDirection != null)
+        //    {
+        //        prev = curr;
+        //        curr = foundDirection;
+        //        continue;
+        //    }
+
+        //    Floor.tilePathPoints[Floor.CoordToIndex(curr)].hasSearched = true;
+        //    pattern.Add(curr);
+        //    // NO DIRECTIONS LEFT
+        //    if (prev != null)
+        //    {
+        //        if (Floor.tilePathPoints[Floor.CoordToIndex(prev)].hasSearched)
+        //        {
+        //            isSearching = false;
+        //        } else
+        //        {
+        //            Floor.tilePathPoints[Floor.CoordToIndex(curr)].hasSearched = true;
+        //            curr = prev;
+        //        }
+        //    } else
+        //    {
+        //        isSearching = false;
+        //    }
+        //}
+
         foreach (TileCoord coord in pattern) { 
             if (DungeonFloor.IsInX(coord.x) && DungeonFloor.IsInZ(coord.z))
             {

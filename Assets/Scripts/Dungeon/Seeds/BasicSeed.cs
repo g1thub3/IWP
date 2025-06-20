@@ -26,11 +26,17 @@ public class BasicSeed : DGSeed
 
     public List<NPCGenData> possibleEnemies;
 
+    public uint minItemsGenerated;
+    public uint maxItemsGenerated;
+    public List<ItemData> possibleItems;
+
     public override DungeonFloor Generate(DGData dungeonData)
     {
         DebugTools.Instance.ClearMarkers();
         DungeonFloor floorData = new DungeonFloor();
         floorData.Fill();
+
+        floorData.nonWallTiles = new List<TileInfo>();
 
         int roomCount = Random.Range(minRoomCount, maxRoomCount);
 
@@ -214,15 +220,16 @@ public class BasicSeed : DGSeed
             }
         }
 
+        foreach (var tile in floorData.tiles)
+        {
+            if (tile.isWall) continue;
+            floorData.nonWallTiles.Add(tile);
+        }
+
         FloorRoom selectedStaircaseRoom = floorData.rooms[Random.Range(0, floorData.rooms.Count)];
         floorData.tiles[floorData.CoordToIndex(selectedStaircaseRoom.GetRandomCoordInRoom())]
             .AddStructure(Tilesets.Instance.structureList.GetData("BasementStairs").Obj.GetComponent<DGInteractable>());
 
-        for (int i = 0; i < 3; i++)
-        {
-            floorData.tiles[floorData.CoordToIndex(selectedStaircaseRoom.GetRandomCoordInRoom())]
-                .AddItem(Tilesets.Instance.ConstructItemInteractable("Health Potion").GetComponent<DGInteractable>());
-        } 
 
         return floorData;
     }
@@ -390,6 +397,21 @@ public class BasicSeed : DGSeed
             CharacterEntry newCharacter = CharacterEntry.Create(possibleEnemies[enemyIndex].character, 
                 Random.Range((int)possibleEnemies[enemyIndex].minLevel, (int)possibleEnemies[enemyIndex].maxLevel));
             dgGen.SpawnNPC(newCharacter);
+        }
+    }
+
+    public override void AddItems(DGGenerator dungeonGen)
+    {
+        if (possibleItems.Count < 1) return;
+        int itemCount = Random.Range((int)minItemsGenerated, (int)maxItemsGenerated);
+        for (int i = 0; i < itemCount; i++)
+        {
+            int index = Random.Range(0, possibleItems.Count);
+            var room = dungeonGen.GetRandomRoom();
+            var chosenTile = dungeonGen.SearchRandomTileInRoom(room, SearchConditions.New());
+            if (chosenTile != null) {
+                dungeonGen.InsertItem(Tilesets.Instance.ConstructItemInteractable(Item.New(possibleItems[index])), chosenTile);
+            }
         }
     }
 }

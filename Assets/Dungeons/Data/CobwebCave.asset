@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAscending: 0
   floorCount: 6
+  floorDifficulty: 2
   dungeonName: Cobweb Cave
   defaultTileset: 1
   floorSeed: {fileID: 11400000, guid: 37af94da21fa57045bcfe8f0a7e95ef4, type: 2}

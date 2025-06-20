@@ -29,3 +29,11 @@ MonoBehaviour:
   - character: 3
     minLevel: 12
     maxLevel: 20
+  minItemsGenerated: 0
+  maxItemsGenerated: 0
+  possibleItems:
+  - {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+  - {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
+  - {fileID: 11400000, guid: be6d248d1384dec40a0004f937ba30a3, type: 2}
+  - {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
+  - {fileID: 11400000, guid: 0b88ded5bce88ad429d4e59fb1e48b93, type: 2}

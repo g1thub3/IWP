@@ -40,6 +40,18 @@ public class DGStartLayer : MenuLayer
     public override void Close()
     {
         base.Close();
+        for (int i = 0; i < _buttons1.childCount; i++)
+        {
+            var selectionBacking = _buttons1.GetChild(i).Find("SelectionBacking");
+            var grp = selectionBacking.GetComponent<CanvasGroup>();
+            grp.alpha = 0;
+        }
+        for (int i = 0; i < _buttons2.childCount; i++)
+        {
+            var selectionBacking = _buttons2.GetChild(i).Find("SelectionBacking");
+            var grp = selectionBacking.GetComponent<CanvasGroup>();
+            grp.alpha = 0;
+        }
         _menuGrp.alpha = 0;
     }
     private void IncSelection(int inc)
@@ -312,6 +324,14 @@ public class DGPartyLayer : MenuLayer
         base.Open();
         Highlight();
     }
+    public override void Close()
+    {
+        base.Close();
+        for (int i = 0; i < _partyList.childCount; i++)
+        {
+            _partyList.GetChild(i).Find("Selection").GetComponent<CanvasGroup>().alpha = 0.0f;
+        }
+    }
     public override void Control(PlayerInput inputManager)
     {
         if (inputManager.actions["Up"].WasPressedThisFrame())
@@ -527,27 +547,30 @@ public class DungeonMenuHandler : MonoBehaviour
 
                         if (!invItem.IsQuestTarget)
                         {
-                            var use = dialogueLayer.AddEntry();
-                            use.GetComponent<TMP_Text>().text = "Use";
-                            dialogueLayer.functions.Add(delegate {
-                                var partyLayer = new DGPartyLayer(_partyList);
-                                partyLayer.refresh = delegate
-                                {
-                                    partyLayer.functions = new List<MenuLayer.MenuFunction>();
-                                    for (int j = 0; j < _dungeonGen.ActiveParty.Count; j++)
+                            if (invItem.module.isConsumable)
+                            {
+                                var use = dialogueLayer.AddEntry();
+                                use.GetComponent<TMP_Text>().text = "Use";
+                                dialogueLayer.functions.Add(delegate {
+                                    var partyLayer = new DGPartyLayer(_partyList);
+                                    partyLayer.refresh = delegate
                                     {
-                                        partyLayer.functions.Add(delegate
+                                        partyLayer.functions = new List<MenuLayer.MenuFunction>();
+                                        for (int j = 0; j < _dungeonGen.ActiveParty.Count; j++)
                                         {
-                                            GlobalGameManager.Instance.UseItem(inventoryLayer.CurrentSelection, _dungeonGen.ActiveParty[partyLayer.CurrentSelection]);
-                                            _gameManager.TurnCompleted.Invoke();
-                                            partyLayer.Close();
-                                            dialogueLayer.Close();
-                                        });
-                                    }
-                                };
-                                _layers.Add(partyLayer);
-                                partyLayer.Open();
-                            });
+                                            partyLayer.functions.Add(delegate
+                                            {
+                                                GlobalGameManager.Instance.UseItem(inventoryLayer.CurrentSelection, _dungeonGen.ActiveParty[partyLayer.CurrentSelection]);
+                                                _gameManager.TurnCompleted.Invoke();
+                                                partyLayer.Close();
+                                                dialogueLayer.Close();
+                                            });
+                                        }
+                                    };
+                                    _layers.Add(partyLayer);
+                                    partyLayer.Open();
+                                });
+                            }
 
                             var hold = dialogueLayer.AddEntry();
                             hold.GetComponent<TMP_Text>().text = "Hold";
@@ -773,6 +796,7 @@ public class DungeonMenuHandler : MonoBehaviour
             }
             if (!CurrentLayer.IsOpen)
             {
+                CurrentLayer.Close();
                 _layers.Remove(CurrentLayer);
                 if (CurrentLayer != null)
                 {

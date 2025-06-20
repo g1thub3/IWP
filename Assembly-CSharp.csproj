@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\UI\FreeRoamMenuHandler.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GlobalGameManager.cs" />
     <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Items\ViewDistanceItem.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DI\DINextFloor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\UI\DungeonMenuHandler.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\DefaultAttack.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Quest.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Items\StatChanger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\ReplenishingItem.cs" />
     <Compile Include="Assets\Scripts\Dungeon\AI\AIWander.cs" />

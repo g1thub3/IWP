@@ -73,11 +73,35 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
             var newQuest = Quest.CreateQuestData(Quest.QUEST_TYPE.RETRIEVAL);
             availableQuests.Add(newQuest);
         }
+        for (int i = 0; i < availableQuests.Count; i++)
+        {
+            for (int j = i; j < availableQuests.Count; j++)
+            {
+                if (availableQuests[i].diffPts > availableQuests[j].diffPts)
+                {
+                    var temp = availableQuests[i];
+                    availableQuests[i] = availableQuests[j];
+                    availableQuests[j] = temp;
+                }
+            }
+        }
         for (int i = 0; i < maxQuestCount; i++)
         {
             int compLevel = 1 + (Random.Range(0, adventurerRanking));
             var newQuest = Quest.CreateQuestData(Quest.QUEST_TYPE.RETRIEVAL, compLevel);
             availableCompetitiveQuests.Add(newQuest);
+        }
+        for (int i = 0; i < availableCompetitiveQuests.Count; i++)
+        {
+            for (int j = i; j < availableCompetitiveQuests.Count; j++)
+            {
+                if (availableCompetitiveQuests[i].diffPts > availableCompetitiveQuests[j].diffPts)
+                {
+                    var temp = availableCompetitiveQuests[i];
+                    availableCompetitiveQuests[i] = availableCompetitiveQuests[j];
+                    availableCompetitiveQuests[j] = temp;
+                }
+            }
         }
     }
 

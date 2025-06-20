@@ -68,26 +68,42 @@ public class Quest
     public bool isActive;
     public char difficulty;
     public int competitiveLevel;
+    public int diffPts;
     public void CalculateDifficulty()
     {
-        int pts = quest.dungeon.floorDifficulty * quest.floor;
-        
-        if (pts < 15)
-        {
-
-        } else if (pts < 60)
-        {
-
-        }
-        difficulty = 'S';
-        goldReward = new GoldReward(100);
+        diffPts = quest.dungeon.floorDifficulty * quest.floor + (quest.dungeon.floorDifficulty * quest.floor * competitiveLevel);
         var itemData = new List<Item>();
-        var item = new Item();
-        item.itemKey = "Health Potion";
-        item.Set();
-        itemData.Add(item);
+        if (diffPts < 15)
+        {
+            difficulty = 'S';
+            goldReward = new GoldReward(100);
+            itemData.Add(Item.New("Health Potion"));
+            itemData.Add(Item.New("Adventurer Meal"));
+            adventurerReward = new AdventurerReward(200);
+        } else if (diffPts < 60)
+        {
+            difficulty = 'A';
+            goldReward = new GoldReward(150);
+            itemData.Add(Item.New("Warding Rune"));
+            itemData.Add(Item.New("Steel Plating"));
+            adventurerReward = new AdventurerReward(300);
+        }
+        else if (diffPts < 120)
+        {
+            difficulty = 'B';
+            goldReward = new GoldReward(450);
+            itemData.Add(Item.New("Magic Charm"));
+            itemData.Add(Item.New("Spiked Band"));
+            adventurerReward = new AdventurerReward(400);
+        }
+        else if (diffPts < 200)
+        {
+            difficulty = 'C';
+            goldReward = new GoldReward(600);
+            itemData.Add(Item.New("Clairvoyant Lenses"));
+            adventurerReward = new AdventurerReward(500);
+        }
         itemReward = new ItemReward(itemData);
-        adventurerReward = new AdventurerReward(200);
     }
 
     // WHAT THE QUEST WILL GIVE

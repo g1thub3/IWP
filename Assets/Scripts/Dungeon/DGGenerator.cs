@@ -362,6 +362,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         {
             PlacePlayer();
         }
+        selectedDungeonData.floorSeed.AddItems(this);
         selectedDungeonData.floorSeed.AddEnemies(this);
         RenameEntities();
     }

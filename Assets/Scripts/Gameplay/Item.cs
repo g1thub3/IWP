@@ -67,4 +67,19 @@ public class Item
             itemKey = module.itemName;
         }
     }
+
+    public static Item New(string key)
+    {
+        var item = new Item();
+        item.itemKey = key;
+        item.Set();
+        return item;
+    }
+    public static Item New(ItemData mod)
+    {
+        var item = new Item();
+        item.module = mod;
+        item.itemKey = mod.itemName;
+        return item;
+    }
 }

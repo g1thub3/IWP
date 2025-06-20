@@ -211,14 +211,11 @@ public class DungeonUIHandler : MonoBehaviour
         {
             Destroy(_minimapContainer.GetChild(i).gameObject);
         }
-        foreach (var tile in _dungeonGen.CurrentFloor.tiles)
+        foreach (var tile in _dungeonGen.CurrentFloor.nonWallTiles)
         {
-            if (!tile.isWall)
-            {
-                var pt = Instantiate(_minimapPoint, _minimapContainer);
-                pt.GetComponent<RectTransform>().anchoredPosition = new Vector2(tile.coord.x * 10, tile.coord.z * 10);
-                pt.name = _dungeonGen.CurrentFloor.CoordToIndex(tile.coord).ToString();
-            }
+            var pt = Instantiate(_minimapPoint, _minimapContainer);
+            pt.GetComponent<RectTransform>().anchoredPosition = new Vector2(tile.coord.x * 10, tile.coord.z * 10);
+            pt.name = _dungeonGen.CurrentFloor.CoordToIndex(tile.coord).ToString();
         }
         UpdateMinimap();
     }
@@ -247,7 +244,7 @@ public class DungeonUIHandler : MonoBehaviour
                     if (plr != null)
                     {
                         float dist = tile.coord.DistanceSquared(plr.Position);
-                        pt.transform.Find("Enemy").GetComponent<Image>().enabled = dist <= 5  || (plr.CurrentRoom == tile.occupyingEntity.CurrentRoom && plr.CurrentRoom != null);
+                        pt.transform.Find("Enemy").GetComponent<Image>().enabled = dist <= GlobalGameManager.Instance.party[0].viewDistance  || (plr.CurrentRoom == tile.occupyingEntity.CurrentRoom && plr.CurrentRoom != null);
                     }
                 }
             } else

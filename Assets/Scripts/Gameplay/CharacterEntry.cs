@@ -49,6 +49,8 @@ public class CharacterEntry
     public CharacterStat maxEnergy;
     public CharacterStat maxMana;
 
+    public int viewDistance = 5;
+
     public int experiencePoints;
     public int characterLevel;
     public static readonly int maxLevel = 100;
@@ -149,6 +151,7 @@ public class CharacterEntry
         CharacterEntry newChar = new CharacterEntry();
         newChar.associatedCharacter = chosenCharacter;
         newChar.characterLevel = startingLevel;
+        newChar.viewDistance = 5;
         newChar.ApplyCharacter();
         newChar.Recalculate();
         return newChar;
