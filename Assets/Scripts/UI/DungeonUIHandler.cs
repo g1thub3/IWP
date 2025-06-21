@@ -12,6 +12,7 @@ public class DungeonUIHandler : MonoBehaviour
     public CanvasGroup menuGrp;
     public CanvasGroup endscreenGrp;
     public DungeonMenuHandler menu;
+    public DungeonTransitionHandler transitioner;
 
     [Header("Displays")]
     public TMP_Text dungeonNameText;
@@ -82,6 +83,10 @@ public class DungeonUIHandler : MonoBehaviour
             {
                 textcomp.color = Color.yellow;
             }
+            if (!q.quest.questPossible)
+            {
+                textcomp.color = Color.red;
+            }
             if (q.quest.questCompleted)
             {
                 textcomp.color = Color.green;
@@ -125,10 +130,14 @@ public class DungeonUIHandler : MonoBehaviour
                 _endMsg.text = "Quest Completed!";
                 _blurb.text = "You left the dungeon after completing a quest!";
                 break;
+            case DUNGEON_END_CONTEXT.QUEST_FAIL:
+                _endMsg.text = "Quest Failed...";
+                _blurb.text = "Another adventurer completed your quest before you did, so you left the dungeon safely.";
+                break;
         }
         _dgExplored.text = "Dungeon Explored: " + data.dungeonName;
-        _finalFloor.text = "Final Floor: " + gameManager.CurrentFloor;
-        _remainingFloors.text = "Remaining Floors: " + (data.floorCount - gameManager.CurrentFloor);
+        _finalFloor.text = "Final Floor: " + (gameManager.CurrentFloor - 1);
+        _remainingFloors.text = "Remaining Floors: " + (data.floorCount - (gameManager.CurrentFloor - 1));
         var leader = GlobalGameManager.Instance.party[0];
         if (leader.HeldItem != null && leader.HeldItem.module != null)
         {
@@ -154,24 +163,32 @@ public class DungeonUIHandler : MonoBehaviour
                 _leaderHPLabel.text = curr.ToString();
                 if (curr == max)
                     _leaderHPLabel.color = _maxHPCol;
+                else
+                    _leaderHPLabel.color = Color.white;
                 break;
             case CHARACTER_STAT.ENERGY: //350
                 _leaderENBar.offsetMax = new Vector2(_leaderENBar.offsetMax.x, 350 * (perc - 1));
                 _leaderENLabel.text = curr.ToString();
                 if (curr == max)
                     _leaderENLabel.color = _maxENCol;
+                else
+                    _leaderENLabel.color = Color.white;
                 break;
             case CHARACTER_STAT.MANA: //350
                 _leaderMNBar.offsetMax = new Vector2(_leaderMNBar.offsetMax.x, 350 * (perc - 1));
                 _leaderMNLabel.text = curr.ToString();
                 if (curr == max)
                     _leaderMNLabel.color = _maxMNCol;
+                else
+                    _leaderMNLabel.color = Color.white;
                 break;
             case CHARACTER_STAT.HUNGER: //175
                 _leaderHGBar.offsetMax = new Vector2(_leaderHGBar.offsetMax.x, 175 * (perc - 1));
                 _leaderHGLabel.text = curr.ToString();
                 if (curr == max)
                     _leaderHGLabel.color = _maxHGCol;
+                else
+                    _leaderHGLabel.color = Color.white;
                 break;
         }
     }

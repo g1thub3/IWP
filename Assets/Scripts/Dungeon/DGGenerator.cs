@@ -2,21 +2,24 @@ using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using UnityEditor.U2D.Animation;
 
 public struct SearchConditions {
-    public static SearchConditions New(bool hasItem = false, bool isWall = false)
+    public static SearchConditions New(bool hasItem = false, bool isWall = false, bool hasEntity = false)
     {
         SearchConditions conditions = new SearchConditions();
         conditions.HasItem = hasItem;
         conditions.IsWall = isWall;
+        conditions.HasEntity = hasEntity;
         return conditions;
     }
     public bool AreConditionsMet(TileInfo tile)
     {
-        return ((tile.item != null) == HasItem && tile.isWall == IsWall);
+        return ((tile.item != null) == HasItem && tile.isWall == IsWall) && (tile.occupyingEntity != null) == HasEntity;
     }
     public bool HasItem;
     public bool IsWall;
+    public bool HasEntity;
 }
 
 public class DGGenerator : MonoBehaviour, IDebuggable
@@ -290,11 +293,28 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         }
     }
 
-    public void SpawnNPC(CharacterEntry characterData)
+    public GameObject SpawnNPC(CharacterEntry characterData)
     {
         var newCharacter = AddCharacter(false);
         _activeEntities.Add(newCharacter.GetComponent<DGEntity>());
         newCharacter.GetComponent<CharacterBehaviour>().SetUp(characterData);
+        return newCharacter;
+    }
+
+    public List<GameObject> SpawnNPCParty(List<CharacterEntry> party)
+    {
+        FloorRoom room = _currentFloor.rooms[Random.Range(0, _currentFloor.rooms.Count)];
+        TileInfo point = SearchRandomTileInRoom(room, SearchConditions.New());
+        var newList = new List<GameObject>();
+        foreach (var character in party) {
+            var newCharacter = AddCharacter(false, point.coord);
+            _activeEntities.Add(newCharacter.GetComponent<DGEntity>());
+            newCharacter.GetComponent<CharacterBehaviour>().SetUp(character);
+            newList.Add(newCharacter);
+            TileInfo temp = point;
+            point = SearchNextAvailableTile(temp, SearchConditions.New());
+        }
+        return newList;
     }
 
 

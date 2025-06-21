@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,7 +11,8 @@ public enum DUNGEON_END_CONTEXT
     COMPLETED,
     LOSS,
     ESCAPE,
-    QUEST
+    QUEST,
+    QUEST_FAIL
 }
 
 public class DGGameManager : MonoBehaviour
@@ -29,6 +31,7 @@ public class DGGameManager : MonoBehaviour
     {
         get { return _activeQuests; }
     }
+    private Dictionary<Quest, List<QuestCompetitor>> _questCompetition;
 
     private PlayerInput _inputManager;
     private bool isPressingInit;
@@ -51,6 +54,7 @@ public class DGGameManager : MonoBehaviour
 
     private IEnumerator WaitForInput()
     {
+        _questCompetition.Clear();
         bool cont = false;
         while (!cont)
         {
@@ -68,14 +72,53 @@ public class DGGameManager : MonoBehaviour
         GameSceneManager.Instance.ToDorm();
     }
 
-    public void QuestComplete()
+    private IEnumerator WaitForInputQuestComplete(bool hasCompleted = true)
+    {
+        while (GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        if (GlobalCanvasManager.Instance.PromptHandler.TakeAnswer() == 0)
+        {
+            //progress floor
+            QuestComplete(hasCompleted);
+        }
+    }
+
+    public void QuestCompletePrompt()
+    {
+        PromptInfo prompt = new PromptInfo();
+        prompt.message = "You completed a quest! Would you like to leave the dungeon now?";
+        prompt.options = new string[2];
+        prompt.options[0] = "Yes";
+        prompt.options[1] = "No";
+
+        CanvasGroup[] hidden = new CanvasGroup[1];
+        hidden[0] = _dungeonUI.combatGrp;
+
+        GlobalCanvasManager.Instance.PromptHandler.Prompt(prompt, hidden);
+        StartCoroutine(WaitForInputQuestComplete());
+    }
+
+    public void QuestFailPrompt()
+    {
+        PromptInfo prompt = new PromptInfo();
+        prompt.message = "Another adventurer completed one of your quests before you could. Would you like to leave the dungeon now?";
+        prompt.options = new string[2];
+        prompt.options[0] = "Yes";
+        prompt.options[1] = "No";
+
+        CanvasGroup[] hidden = new CanvasGroup[1];
+        hidden[0] = _dungeonUI.combatGrp;
+
+        GlobalCanvasManager.Instance.PromptHandler.Prompt(prompt, hidden);
+        StartCoroutine(WaitForInputQuestComplete(false));
+    }
+
+    public void QuestComplete(bool hasCompleted = true)
     {
         _isGameActive = false;
-        _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.QUEST, this, GlobalGameManager.Instance.selectedDungeon);
-        if (_inputManager == null)
-        {
-            _inputManager = FindAnyObjectByType<PlayerInput>();
-        }
+        _dungeonUI.Endscreen(hasCompleted ? DUNGEON_END_CONTEXT.QUEST : DUNGEON_END_CONTEXT.QUEST_FAIL, this, GlobalGameManager.Instance.selectedDungeon);
         isPressingInit = _inputManager.actions["Accept"].IsPressed();
         StartCoroutine(WaitForInput());
     }
@@ -85,34 +128,51 @@ public class DGGameManager : MonoBehaviour
         _isGameActive = false;
         _dungeonUI.Endscreen(onDeath ? DUNGEON_END_CONTEXT.LOSS : DUNGEON_END_CONTEXT.ESCAPE, this, GlobalGameManager.Instance.selectedDungeon);
         LoseItems();
-        if (_inputManager == null)
-        {
-            _inputManager = FindAnyObjectByType<PlayerInput>();
-        }
         isPressingInit = _inputManager.actions["Accept"].IsPressed();
         StartCoroutine(WaitForInput());
     }
     
-    private IEnumerator ImplementQuest()
+    private List<QuestCompetitor> GenerateQuestCompetitors(Quest quest)
+    {
+        var newList = new List<QuestCompetitor>();
+        int possibleCompetitors = Random.Range(quest.competitiveLevel, 
+            (int)Mathf.Ceil(quest.competitiveLevel * ((float)quest.competitiveLevel * 0.5f)) + 1);
+        for (int i = 0; i < possibleCompetitors; i++)
+        {
+            var newCompetitor = new QuestCompetitor();
+            newCompetitor.party = new List<CharacterEntry>();
+            newCompetitor.competitorName = CharacterProfiles.Instance.questNPCNames[Random.Range(0, CharacterProfiles.Instance.questNPCNames.Count)];
+            newCompetitor.currentFloor = Random.Range(1, quest.quest.floor - 1);
+            newCompetitor.defaultProgress = Random.Range(QuestCompetitor.minProgress, QuestCompetitor.maxProgress);
+            newCompetitor.floorProgress = newCompetitor.defaultProgress;
+
+            int partySize = Random.Range(1,5);
+            for (int j = 0; j < partySize; j++)
+            {
+                var newCharacter = CharacterEntry.Create(
+                    CharacterProfiles.Instance.possibleCompetitors[Random.Range(0, CharacterProfiles.Instance.possibleCompetitors.Count)],
+                    GlobalGameManager.Instance.party[0].characterLevel);
+                newCompetitor.party.Add(newCharacter);
+            }
+
+            newList.Add(newCompetitor);
+        }
+        return newList;
+    }
+
+    private void GetActiveQuests()
     {
         _activeQuests.Clear();
-        yield return new WaitForEndOfFrame();
-        // GENERATE RETRIEVAL QUEST
         for (int i = 0; i < GlobalGameManager.Instance.ownedQuests.Count; i++)
         {
             var questData = GlobalGameManager.Instance.ownedQuests[i];
             if (questData.quest.dungeon == GlobalGameManager.Instance.selectedDungeon && questData.isActive)
             {
+
                 _activeQuests.Add(questData);
-                if (questData.quest.floor == CurrentFloor) // Add target
+                if (questData.competitiveLevel > 0)
                 {
-                    bool success = questData.quest.Execute(_dungeonGen);
-                    if (!success)
-                    {
-                        questData.isActive = false;
-                        _activeQuests.Remove(_activeQuests.Last());
-                        Debug.Log("Failed to spawn quest item.");
-                    }
+                    _questCompetition.Add(questData, GenerateQuestCompetitors(questData));
                 }
             }
         }
@@ -128,54 +188,120 @@ public class DGGameManager : MonoBehaviour
                 }
             }
         }
-        _dungeonUI.UpdateQuestUI();
+    }
+    private IEnumerator ImplementQuest()
+    {
         _dungeonUI.LoadMinimap();
+        yield return new WaitForEndOfFrame();
+
+        for (int i = ActiveQuests.Count - 1; i >= 0; i--)
+        {
+            var questData = GlobalGameManager.Instance.ownedQuests[i];
+            if (_questCompetition.ContainsKey(questData))
+            {
+                foreach (var competitor in _questCompetition[questData])
+                {
+                    if (competitor.currentFloor != CurrentFloor)
+                    {
+                        competitor.floorProgress = competitor.defaultProgress;
+                    }
+                }
+            }
+            if (questData.quest.floor == CurrentFloor && questData.quest.questPossible) // Add target
+            {
+                bool success = questData.quest.Execute(_dungeonGen);
+                if (!success)
+                {
+                    questData.isActive = false;
+                    if (_questCompetition.ContainsKey(questData))
+                    {
+                        _questCompetition.Remove(questData);
+                    }
+                    _activeQuests.RemoveAt(i);
+                    Debug.Log("Failed to spawn quest item.");
+                    continue;
+                }
+            }
+        }
+
+        if (_questCompetition.Count > 0)
+        {
+            _dungeonUI.transitioner.LoadCompetition(_questCompetition);
+            _dungeonUI.transitioner.ToggleQuestComp(true);
+        }
+
+        _dungeonUI.UpdateQuestUI();
+
+        StartCoroutine(_dungeonUI.transitioner.FadeTransition(false, 0.75f, 3.0f, _dungeonUI.transitioner.floorDispGrp, delegate
+        {
+            StartCoroutine(_dungeonUI.transitioner.FadeTransition(false, 0.75f, 0.0f, _dungeonUI.transitioner.grp, delegate
+            {
+                _isGameActive = true;
+            }));
+        }));
     }
 
     public void RefreshGame()
     {
-        if (_currentFloor + 1 > GlobalGameManager.Instance.selectedDungeon.floorCount)
+        if (_currentFloor > GlobalGameManager.Instance.selectedDungeon.floorCount)
         {
-            _isGameActive = false;
             _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.COMPLETED, this, GlobalGameManager.Instance.selectedDungeon);
-            if (_inputManager == null)
-            {
-                _inputManager = FindAnyObjectByType<PlayerInput>();
-            }
             isPressingInit = _inputManager.actions["Accept"].IsPressed();
             StartCoroutine(WaitForInput());
             return;
         }
-        _currentFloor++;
-        _dungeonGen.NewFloor();
-        turnList = new List<DGEntity>();
-        List<DGEntity> entities = _dungeonGen.ActiveEntities;
-        foreach (DGEntity entity in entities) { 
-            if (entity.GetComponent<DGPlayer>())
+        _dungeonUI.transitioner.ToggleQuestComp(false);
+        StartCoroutine(_dungeonUI.transitioner.FadeTransition(true, 1, 0.25f, _dungeonUI.transitioner.floorDispGrp, delegate
+        {
+            _dungeonGen.NewFloor();
+            turnList = new List<DGEntity>();
+            List<DGEntity> entities = _dungeonGen.ActiveEntities;
+            foreach (DGEntity entity in entities)
             {
-                turnList.Add(entity);
-                break;
+                if (entity.GetComponent<DGPlayer>())
+                {
+                    turnList.Add(entity);
+                    break;
+                }
             }
-        }
-        foreach (DGEntity entity in entities)
-        {
-            if (entity.GetComponent<DGPlayer>() == null)
+            foreach (DGEntity entity in entities)
             {
-                turnList.Add(entity);
+                if (entity.GetComponent<DGPlayer>() == null)
+                {
+                    turnList.Add(entity);
+                }
             }
-        }
-        currentTurn = 0;
-        _isGameActive = true;
-        
-        if (GlobalGameManager.Instance.selectedDungeon.isAscending)
-        {
-            _dungeonUI.floorText.text = "Floor\n" + _currentFloor + "F";
-        } else
-        {
-            _dungeonUI.floorText.text = "Floor\nB" + _currentFloor + "F";
-        }
+            currentTurn = 0;
 
-        StartCoroutine(ImplementQuest());
+            if (GlobalGameManager.Instance.selectedDungeon.isAscending)
+            {
+                _dungeonUI.floorText.text = "Floor\n" + _currentFloor + "F";
+            }
+            else
+            {
+                _dungeonUI.floorText.text = "Floor\nB" + _currentFloor + "F";
+            }
+
+            StartCoroutine(ImplementQuest());
+        }));
+    }
+
+    public void ToNextFloor()
+    {
+        _isGameActive = false;
+        StartCoroutine(_dungeonUI.transitioner.FadeTransition(true, 1, 0.0f, _dungeonUI.transitioner.grp, delegate
+        {
+            _currentFloor++;
+            if (GlobalGameManager.Instance.selectedDungeon.isAscending)
+            {
+                _dungeonUI.transitioner.SetFloorText(CurrentFloor + "F");
+            }
+            else
+            {
+                _dungeonUI.transitioner.SetFloorText("B" + CurrentFloor + "F");
+            }
+            RefreshGame();
+        }));
     }
 
     private void LoseItems()
@@ -183,6 +309,8 @@ public class DGGameManager : MonoBehaviour
         foreach (var quest in GlobalGameManager.Instance.ownedQuests)
         {
             quest.quest.questCompleted = false;
+            if (quest.competitiveLevel > 0)
+                quest.quest.questPossible = false;
         }
         GlobalGameManager.Instance.ownedGold /= 2;
         for (int i = 0; i < GlobalGameManager.Instance.party.Count; i++)
@@ -197,6 +325,75 @@ public class DGGameManager : MonoBehaviour
 
     public void NextTurn()
     {
+        var prev = CurrentEntityTurn();
+        if (prev != null)
+        {
+            prev.GetComponent<CharacterBehaviour>().OnTurnComplete();
+            if (prev is DGPlayer) // PROGRESS THE COMPETITORS
+            {
+                foreach (var q in ActiveQuests)
+                {
+                    if (_questCompetition.ContainsKey(q))
+                    {
+                        Debug.Log(_questCompetition[q].Count);
+                        foreach (var comp in _questCompetition[q])
+                        {
+                            if (comp.currentFloor == CurrentFloor) continue;
+                            int floor = comp.currentFloor;
+                            comp.Progress();
+                            if (comp.currentFloor == floor)
+                            {
+                                switch (comp.floorProgress)
+                                {
+                                    case 15:
+                                        if (comp.currentFloor != q.quest.floor)
+                                            _dungeonUI.AddEntry(comp.competitorName + " is approaching the next floor!");
+                                        else
+                                            _dungeonUI.AddEntry(comp.competitorName + " is approaching the quest target!");
+                                        break;
+                                    case 30:
+                                        if (comp.currentFloor != q.quest.floor)
+                                            _dungeonUI.AddEntry(comp.competitorName + " is close to finding the way to the next floor!");
+                                        else
+                                            _dungeonUI.AddEntry(comp.competitorName + " is close to finding the quest target!");
+                                        break;
+                                    case 60:
+                                        if (comp.currentFloor != q.quest.floor)
+                                            _dungeonUI.AddEntry(comp.competitorName + " has explored half of their current floor!");
+                                        else
+                                            _dungeonUI.AddEntry(comp.competitorName + " is halfway through their search for the quest target!");
+                                        break;
+                                    case 90:
+                                        if (comp.currentFloor != q.quest.floor)
+                                            _dungeonUI.AddEntry(comp.competitorName + " has begun exploring their current floor!");
+                                        else
+                                            _dungeonUI.AddEntry(comp.competitorName + " has begun searching for the quest target!");
+                                        break;
+                                }
+                            }
+                            else
+                            {
+                                _dungeonUI.AddEntry(comp.competitorName + " has entered a new floor!");
+                                if (comp.currentFloor == q.quest.floor)
+                                {
+                                    _dungeonUI.AddEntry(comp.competitorName + " has reached the floor with the quest target!");
+                                }
+                            }
+                            if (comp.currentFloor > q.quest.floor && q.quest.questPossible)
+                            {
+                                q.quest.questPossible = false;
+                                _dungeonUI.UpdateQuestUI();
+                                QuestFailPrompt();
+                            }
+                            //if (comp.currentFloor == CurrentFloor) // When competition arrives on this floor
+                            //{
+                            //    _dungeonGen.SpawnNPCParty(comp.party);
+                            //}
+                        }
+                    }
+                }
+            }
+        }
         currentTurn++;
         if (currentTurn >= turnList.Count)
             currentTurn = 0;
@@ -232,13 +429,19 @@ public class DGGameManager : MonoBehaviour
 
     private void Start()
     {
+        _inputManager = GlobalCanvasManager.Instance.GlobalInput;
         OnEscape += delegate { PlayerLoss(false); };
         TurnCompleted += NextTurn;
+        _questCompetition = new Dictionary<Quest, List<QuestCompetitor>>();
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _currentFloor = 0;
         _dungeonUI = FindAnyObjectByType<DungeonUIHandler>();
         _activeQuests = new List<Quest>();
         _dungeonUI.dungeonNameText.text = GlobalGameManager.Instance.selectedDungeon.dungeonName;
-        RefreshGame();
+
+        _dungeonUI.transitioner.SetDungeonText(GlobalGameManager.Instance.selectedDungeon.dungeonName);
+
+        GetActiveQuests();
+        ToNextFloor();
     }
 }

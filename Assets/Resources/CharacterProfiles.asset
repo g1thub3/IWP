@@ -20,7 +20,7 @@ MonoBehaviour:
       baseStat: 150
       incrementPercentage: 15
     hungerSize:
-      baseStat: 100
+      baseStat: 250
       incrementPercentage: 15
     physAtk:
       baseStat: 20
@@ -48,7 +48,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     hungerSize:
-      baseStat: 5
+      baseStat: 250
       incrementPercentage: 15
     physAtk:
       baseStat: 5
@@ -76,7 +76,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     hungerSize:
-      baseStat: 5
+      baseStat: 250
       incrementPercentage: 15
     physAtk:
       baseStat: 5
@@ -104,7 +104,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     hungerSize:
-      baseStat: 5
+      baseStat: 250
       incrementPercentage: 15
     physAtk:
       baseStat: 5
@@ -132,7 +132,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     hungerSize:
-      baseStat: 5
+      baseStat: 250
       incrementPercentage: 15
     physAtk:
       baseStat: 5
@@ -160,7 +160,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     hungerSize:
-      baseStat: 5
+      baseStat: 250
       incrementPercentage: 15
     physAtk:
       baseStat: 5
@@ -192,4 +192,4 @@ MonoBehaviour:
   - Heidi
   - Luna
   - Perry
-  possibleCompetitors: 0200000003000000
+  possibleCompetitors: 02000000030000000400000005000000

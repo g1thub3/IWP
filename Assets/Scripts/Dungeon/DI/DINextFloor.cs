@@ -14,7 +14,7 @@ public class DINextFloor : DGInteraction
         if (p.TakeAnswer() == 0)
         {
             //progress floor
-            receiver.RefreshGame();
+            receiver.ToNextFloor();
         }
         _interactionInProgress = false;
     }

@@ -6,6 +6,7 @@ public abstract class CombatMove : SingletonScriptableObject<CombatMove>
     public string moveDescription;
 
     public abstract bool CanBePerformed(CharacterBehaviour user);
+    public abstract bool WillMoveSucceed(CharacterBehaviour user);
     public abstract bool Perform(CharacterBehaviour user);
 }
 

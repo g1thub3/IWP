@@ -27,7 +27,8 @@ public class DGPlayer : DGEntity
 
     public bool CanControl
     {
-        get { return !(_performingAction || _dgGameManager.CurrentEntityTurn() != this || _dungeonUI.menu.IsOpen); }
+        get { return !(_performingAction || _dgGameManager.CurrentEntityTurn() != this || _dungeonUI.menu.IsOpen
+                || GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress || GlobalCanvasManager.Instance.DialogueHandler.IsSequenceRunning); }
     }
 
     private new void Update()
@@ -40,7 +41,7 @@ public class DGPlayer : DGEntity
 
         if (_inputManager.actions["Accept"].WasPressedThisFrame())
         {
-            DefaultAttack.Instance.Perform(_cb);
+            _cb.PerformMove(DefaultAttack.Instance);
             return;
         }
 

@@ -5,7 +5,7 @@ using static UnityEngine.EventSystems.EventTrigger;
 [CreateAssetMenu(fileName = "DefaultAttack", menuName = "Combat Moves/DefaultAttack")]
 public class DefaultAttack : CombatMove
 {
-
+    [SerializeField] private int energyRequirement = 5;
 
     public float moveTime1 = 0.3f;
     public float moveTime2 = 0.15f;
@@ -28,7 +28,7 @@ public class DefaultAttack : CombatMove
         }
         // attack
         _dungeonUI.AddEntry(user.gameObject.name + " attacked!");
-        if (CanBePerformed(user))
+        if (WillMoveSucceed(user))
         {
             var detected = user.HitDetect(hitArea);
             if (detected != null)
@@ -47,7 +47,7 @@ public class DefaultAttack : CombatMove
         user.GetComponent<DGEntity>().IsPerformingAction = false;
     }
 
-    public override bool CanBePerformed(CharacterBehaviour user)
+    public override bool WillMoveSucceed(CharacterBehaviour user)
     {
         var selfEntity = user.GetComponent<DGEntity>();
 
@@ -67,11 +67,18 @@ public class DefaultAttack : CombatMove
 
     public override bool Perform(CharacterBehaviour user)
     {
+        user.Consume(energyRequirement, CHARACTER_STAT.ENERGY);
+
         DGGameManager _dgGameManager = FindAnyObjectByType<DGGameManager>();
         DungeonUIHandler _dungeonUI = FindAnyObjectByType<DungeonUIHandler>();
         DGEntity entity = user.GetComponent<DGEntity>();
         entity.IsPerformingAction = true;
         entity.StartCoroutine(MoveAnimation(user, _dgGameManager, _dungeonUI));
         return true;
+    }
+
+    public override bool CanBePerformed(CharacterBehaviour user)
+    {
+        return user.energy >= energyRequirement;
     }
 }

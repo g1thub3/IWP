@@ -44,10 +44,10 @@ public class CharacterBehaviour : MonoBehaviour
         int finalValue = baseDamage;
         if (atkType == ATTACK_TYPE.PHYSICAL)
         {
-
+            finalValue = Mathf.Max(1, finalValue + attacker.physAtk.CurrStat - character.physDef.CurrStat);
         } else if (atkType == ATTACK_TYPE.MAGIC)
         {
-
+            finalValue = Mathf.Max(1, finalValue + attacker.magicAtk.CurrStat - character.magicDef.CurrStat);
         }
 
         var og = health;
@@ -69,7 +69,7 @@ public class CharacterBehaviour : MonoBehaviour
 
     public void Replenish(int amount, CHARACTER_STAT toReplenish)
     {
-        if (amount < 0)
+        if (amount < 0 && toReplenish == CHARACTER_STAT.HEALTH)
         {
             Damage(amount * -1, ATTACK_TYPE.NEUTRAL);
             return;
@@ -146,6 +146,18 @@ public class CharacterBehaviour : MonoBehaviour
                 break;
         }
     }
+    public void Consume(int amount, CHARACTER_STAT toConsume)
+    {
+        switch (toConsume)
+        {
+            case CHARACTER_STAT.ENERGY:
+                energy = Mathf.Clamp(energy - amount, 0, character.maxEnergy.CurrStat);
+                break;
+            case CHARACTER_STAT.MANA:
+                mana = Mathf.Clamp(mana - amount, 0, character.maxMana.CurrStat);
+                break;
+        }
+    }
 
     public CharacterBehaviour HitDetect(TileCoord position)
     {
@@ -195,6 +207,36 @@ public class CharacterBehaviour : MonoBehaviour
         return false;
     }
 
+    public void OnTurnComplete()
+    {
+        if (hunger > 0)
+        {
+            hunger--;
+            if (TryGetComponent<DGPlayer>(out DGPlayer plr))
+            {
+                plr.OnLeaderStatChanged.Invoke(CHARACTER_STAT.HUNGER, hunger, character.hungerSize.CurrStat);
+            }
+        } else
+        {
+            if (health > 1)
+            {
+                health--;
+                if (TryGetComponent<DGPlayer>(out DGPlayer plr))
+                {
+                    plr.OnLeaderStatChanged.Invoke(CHARACTER_STAT.HEALTH, health, character.maxHealth.CurrStat);
+                }
+            }
+        }
+        if (energy < character.maxEnergy.CurrStat)
+        {
+            energy++;
+            if (TryGetComponent<DGPlayer>(out DGPlayer plr))
+            {
+                plr.OnLeaderStatChanged.Invoke(CHARACTER_STAT.ENERGY, energy, character.maxEnergy.CurrStat);
+            }
+        }
+    }
+
     public string GetDescription()
     {
         StringBuilder description = new StringBuilder();
@@ -211,6 +253,12 @@ public class CharacterBehaviour : MonoBehaviour
         return description.ToString();
     }
 
+    public bool PerformMove(CombatMove move)
+    {
+        if (!move.CanBePerformed(this)) return false;
+        move.Perform(this);
+        return true;
+    }
     private void Start()
     {
         _dungeonUI = FindAnyObjectByType<DungeonUIHandler>();

@@ -101,6 +101,7 @@
     <Compile Include="Assets\Scripts\FreeRoam\FRInteractable.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\Dungeon\Seeds\BasicSeed.cs" />
+    <Compile Include="Assets\Scripts\UI\DungeonTransitionHandler.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGNPC.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGInteraction.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGGenerator.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\DefaultAttack.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\QuestCompetitor.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Quest.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\StatChanger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
@@ -125,6 +127,7 @@
     <Compile Include="Assets\Scripts\Dungeon\DGEntity.cs" />
     <Compile Include="Assets\Scripts\Gameplay\CombatMove.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GameSceneManager.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\AI\AICompetitive.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\DungeonEnter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />

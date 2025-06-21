@@ -4,20 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "DIPickUp", menuName = "Dungeon Interactions/DIPickUp")]
 public class DIPickUp : DGInteraction
 {
-    private IEnumerator WaitForAnswer(PromptHandler p, DGGameManager receiver, DungeonUIHandler ui)
-    {
-        while (p.IsPromptInProgress)
-        {
-            yield return new WaitForEndOfFrame();
-        }
-        if (p.TakeAnswer() == 0)
-        {
-            //progress floor
-            receiver.QuestComplete();
-        }
-        _interactionInProgress = false;
-        ui.UpdateQuestUI();
-    }
 
     public override bool Interact(DGEntity interacted, DGInteractable interactable, KeyDataList dataList)
     {
@@ -35,20 +21,9 @@ public class DIPickUp : DGInteraction
                 DGGameManager dgGameManager = FindAnyObjectByType<DGGameManager>();
                 Quest foundQuest = RetrievalQuest.CheckCompletion(dgGameManager, container.Item);
                 if (foundQuest != null) {
-                    _interactionInProgress = true;
-                    var p = GlobalCanvasManager.Instance.PromptHandler;
-
-                    PromptInfo prompt = new PromptInfo();
-                    prompt.message = "You completed a quest! Would you like to leave the dungeon now?";
-                    prompt.options = new string[2];
-                    prompt.options[0] = "Yes";
-                    prompt.options[1] = "No";
-
-                    CanvasGroup[] hidden = new CanvasGroup[1];
-                    hidden[0] = ui.combatGrp;
-
-                    p.Prompt(prompt, hidden);
-                    interacted.StartCoroutine(WaitForAnswer(p, dgGameManager, ui));
+                    ui.UpdateQuestUI();
+                    foundQuest.quest.questCompleted = true;
+                    dgGameManager.QuestCompletePrompt();
                 }
             }
             return true;

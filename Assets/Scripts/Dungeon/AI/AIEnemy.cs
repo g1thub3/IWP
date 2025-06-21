@@ -27,6 +27,10 @@ public class AIEnemy : DGAIModule
         foreach (CharacterBehaviour member in generator.ActiveParty)
         {
             var newpath = entity.AStarPathfind(entity.Position, entity.GetClosestDirection(member.GetComponent<DGEntity>().Position));
+            if (newpath.Count == 0)
+            {
+                continue;
+            }
             if (closestTarget != null)
             {
                 if (newpath.Count > path.Count)
@@ -62,7 +66,7 @@ public class AIEnemy : DGAIModule
                 {
                     TileCoord diff = closestTarget.GetComponent<DGEntity>().Position - entity.Position;
                     user.GetComponent<DGEntity>().Move(diff.x, diff.z);
-                    DefaultAttack.Instance.Perform(cb);
+                    cb.PerformMove(DefaultAttack.Instance);
                 }
                 return;
             }
