@@ -9,6 +9,7 @@ public class DIPickUp : DGInteraction
     {
         DGItemContainer container = interactable.GetComponent<DGItemContainer>();
         DungeonUIHandler ui = FindAnyObjectByType<DungeonUIHandler>();
+        DGGameManager dgGameManager = FindAnyObjectByType<DGGameManager>();
         if (container == null)
             return false;
         if (interacted is DGPlayer && GlobalGameManager.Instance.inventory.Count < GlobalGameManager.inventoryLimit)
@@ -18,7 +19,6 @@ public class DIPickUp : DGInteraction
 
             if (interacted is DGPlayer && container.Item.IsQuestTarget)
             {
-                DGGameManager dgGameManager = FindAnyObjectByType<DGGameManager>();
                 Quest foundQuest = RetrievalQuest.CheckCompletion(dgGameManager, container.Item);
                 if (foundQuest != null) {
                     ui.UpdateQuestUI();
@@ -32,6 +32,23 @@ public class DIPickUp : DGInteraction
         var cb = interacted.GetComponent<CharacterBehaviour>();
         if (cb == null)
             return false;
+
+        if (interacted.TryGetComponent<DGNPC>(out DGNPC npcmod))
+        {
+            if (npcmod.associatedCompetitor != null)
+            {
+                if (interactable as DGObject == npcmod.associatedCompetitor.target)
+                {
+                    // set quest false, destroy party
+                    npcmod.associatedCompetitor.associatedQuest.quest.questPossible = false;
+                    ui.AddEntry(npcmod.associatedCompetitor.competitorName + " retrieved the " + container.Item.module.itemName + "!");
+                    dgGameManager.QuestFailPrompt();
+                    dgGameManager.EndCompetition(npcmod.associatedCompetitor.associatedQuest);
+                    return true;
+                }
+                return false;
+            }
+        }
 
         if (cb.character.HeldItem != null)
         {

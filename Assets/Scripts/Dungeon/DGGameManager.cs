@@ -140,6 +140,7 @@ public class DGGameManager : MonoBehaviour
         for (int i = 0; i < possibleCompetitors; i++)
         {
             var newCompetitor = new QuestCompetitor();
+            newCompetitor.associatedQuest = quest;
             newCompetitor.party = new List<CharacterEntry>();
             newCompetitor.competitorName = CharacterProfiles.Instance.questNPCNames[Random.Range(0, CharacterProfiles.Instance.questNPCNames.Count)];
             newCompetitor.currentFloor = Random.Range(1, quest.quest.floor - 1);
@@ -201,6 +202,7 @@ public class DGGameManager : MonoBehaviour
             {
                 foreach (var competitor in _questCompetition[questData])
                 {
+                    competitor.target = _dungeonGen.CurrentFloor.stairs;
                     if (competitor.currentFloor != CurrentFloor)
                     {
                         competitor.floorProgress = competitor.defaultProgress;
@@ -209,8 +211,8 @@ public class DGGameManager : MonoBehaviour
             }
             if (questData.quest.floor == CurrentFloor && questData.quest.questPossible) // Add target
             {
-                bool success = questData.quest.Execute(_dungeonGen);
-                if (!success)
+                var success = questData.quest.Execute(_dungeonGen);
+                if (success == null)
                 {
                     questData.isActive = false;
                     if (_questCompetition.ContainsKey(questData))
@@ -220,6 +222,10 @@ public class DGGameManager : MonoBehaviour
                     _activeQuests.RemoveAt(i);
                     Debug.Log("Failed to spawn quest item.");
                     continue;
+                }
+                foreach (var competitor in _questCompetition[questData])
+                {
+                    competitor.target = success;
                 }
             }
         }
@@ -379,16 +385,17 @@ public class DGGameManager : MonoBehaviour
                                     _dungeonUI.AddEntry(comp.competitorName + " has reached the floor with the quest target!");
                                 }
                             }
-                            if (comp.currentFloor > q.quest.floor && q.quest.questPossible)
+                            if (comp.currentFloor == CurrentFloor) // When competition arrives on this floor
+                            {
+                                _dungeonGen.SpawnCompetitors(comp);
+                            }
+                            else if (comp.currentFloor > q.quest.floor && q.quest.questPossible)
                             {
                                 q.quest.questPossible = false;
                                 _dungeonUI.UpdateQuestUI();
                                 QuestFailPrompt();
+                                EndCompetition(q);
                             }
-                            //if (comp.currentFloor == CurrentFloor) // When competition arrives on this floor
-                            //{
-                            //    _dungeonGen.SpawnNPCParty(comp.party);
-                            //}
                         }
                     }
                 }
@@ -401,11 +408,23 @@ public class DGGameManager : MonoBehaviour
         _dungeonUI.UpdateMinimap();
     }
 
-    public void RegisterDeath(DGEntity dead)
+    public void EndCompetition(Quest quest)
     {
-        _dungeonUI.AddEntry(dead.gameObject.name + " has been defeated!");
-        dead.GetComponent<CharacterBehaviour>().DropItem();
+        foreach (var competitior in _questCompetition[quest])
+        {
+            if (competitior.partySpawned != null && competitior.partySpawned.Count > 0)
+            {
+                for (int i = competitior.partySpawned.Count - 1; i >= 0; i--)
+                {
+                    RegisterRemoval(competitior.partySpawned[i]);
+                }
+            }
+        }
+        _questCompetition.Remove(quest);
+    }
 
+    public void RegisterRemoval(DGEntity dead)
+    {
         int deadTurnNo;
         for (deadTurnNo = 0; deadTurnNo < turnList.Count; deadTurnNo++)
         {

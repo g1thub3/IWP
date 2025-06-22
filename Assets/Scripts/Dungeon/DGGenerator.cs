@@ -3,6 +3,7 @@ using Unity.Cinemachine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using UnityEditor.U2D.Animation;
+using UnityEngine.TextCore.Text;
 
 public struct SearchConditions {
     public static SearchConditions New(bool hasItem = false, bool isWall = false, bool hasEntity = false)
@@ -250,7 +251,8 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         {
             newCharacter.AddComponent<DGEntity>();
             Destroy(newCharacter.GetComponent<PlayerInput>());
-            newCharacter.AddComponent<DGNPC>();
+            var npcMod = newCharacter.AddComponent<DGNPC>();
+            npcMod.main = AIEnemy.Instance;
             newCharacter.GetComponent<CharacterBehaviour>().alliance = 1;
         }
 
@@ -301,19 +303,33 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         return newCharacter;
     }
 
-    public List<GameObject> SpawnNPCParty(List<CharacterEntry> party)
+    public List<DGEntity> SpawnCompetitors(QuestCompetitor competitor)
     {
+        var party = competitor.party;
         FloorRoom room = _currentFloor.rooms[Random.Range(0, _currentFloor.rooms.Count)];
         TileInfo point = SearchRandomTileInRoom(room, SearchConditions.New());
-        var newList = new List<GameObject>();
-        foreach (var character in party) {
+        var newList = new List<DGEntity>();
+        GameObject leader = null;
+        for (int i = 0; i < party.Count; i++)
+        {
+            var character = party[i];
             var newCharacter = AddCharacter(false, point.coord);
+            if (i == 0)
+            {
+                leader = newCharacter;
+            }
             _activeEntities.Add(newCharacter.GetComponent<DGEntity>());
+
+            var dgnpc = newCharacter.GetComponent<DGNPC>();
+            dgnpc.main = AICompetitive.Instance;
+            dgnpc.associatedCompetitor = competitor;
+
             newCharacter.GetComponent<CharacterBehaviour>().SetUp(character);
-            newList.Add(newCharacter);
+            newList.Add(newCharacter.GetComponent<DGEntity>());
             TileInfo temp = point;
             point = SearchNextAvailableTile(temp, SearchConditions.New());
         }
+        competitor.partySpawned = newList;
         return newList;
     }
 

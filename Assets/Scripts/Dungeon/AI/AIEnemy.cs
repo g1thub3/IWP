@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "AIEnemy", menuName = "Dungeon AI/AIEnemy")]
-public class AIEnemy : DGAIModule
+public class AIEnemy : SingletonScriptableObject<AIEnemy>, DGAIModule
 {
-    public override void Run(DGNPC user, KeyDataList dataList = null)
+    public void Run(DGNPC user, KeyDataList dataList = null)
     {
         DGGenerator generator = FindAnyObjectByType<DGGenerator>();
         DGEntity entity = user.GetComponent<DGEntity>();
@@ -71,6 +71,9 @@ public class AIEnemy : DGAIModule
                 return;
             }
         }
-        user.GetComponent<DGEntity>().Move(Random.Range(-1, 2), Random.Range(-1, 2));
+        if (!(user.GetComponent<DGEntity>().Move(Random.Range(-1, 2), Random.Range(-1, 2))))
+        {
+            user.GetComponent<DGEntity>().Wait();
+        }
     }
 }

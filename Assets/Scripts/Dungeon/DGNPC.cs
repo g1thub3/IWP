@@ -8,15 +8,13 @@ public class DGNPC : MonoBehaviour
     public KeyDataList aiDataList;
     private DGGameManager _dgGameManager;
 
+    public QuestCompetitor associatedCompetitor = null;
+
     private void Start()
     {
         _dgGameManager = FindAnyObjectByType<DGGameManager>();
         _entity = GetComponent<DGEntity>();
         _characterBehaviour = GetComponent<CharacterBehaviour>();
-        if (_characterBehaviour.character.associatedCharacter != CHARACTER_ENUM.NUM_CHARACTERS)
-        {
-            main = CharacterProfiles.Instance.characterProfiles[(int)_characterBehaviour.character.associatedCharacter].aiModule;
-        }
     }
     private void Update()
     {

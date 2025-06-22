@@ -31,8 +31,6 @@ public class CharacterProfile
 
     public CharacterStat maxEnergy;
     public CharacterStat maxMana;
-
-    public DGAIModule aiModule;
 }
 
 [CreateAssetMenu(fileName = "CharacterProfiles", menuName = "Scriptable Objects/CharacterProfiles")]

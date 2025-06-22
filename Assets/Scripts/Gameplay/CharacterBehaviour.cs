@@ -63,7 +63,9 @@ public class CharacterBehaviour : MonoBehaviour
         }
         if (health <= 0)
         {
-            _dgGameManager.RegisterDeath(_entity);
+            _dungeonUI.AddEntry(gameObject.name + " has been defeated!");
+            DropItem();
+            _dgGameManager.RegisterRemoval(_entity);
         }
     }
 

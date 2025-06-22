@@ -1,3 +1,4 @@
+using NUnit;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,27 @@ public class DINextFloor : DGInteraction
     }
     public override bool Interact(DGEntity interacted, DGInteractable interactable, KeyDataList dataList)
     {
+        DungeonUIHandler ui = FindAnyObjectByType<DungeonUIHandler>();
+        DGGameManager receiver = FindAnyObjectByType<DGGameManager>();
+        if (interacted.TryGetComponent<DGNPC>(out DGNPC npcmod))
+        {
+            if (npcmod.associatedCompetitor != null) {
+                if (interactable.GetComponent<CharacterBehaviour>().character == npcmod.associatedCompetitor.party[0])
+                {
+                    if (interactable as DGObject == npcmod.associatedCompetitor.target)
+                    {
+                        // Despawn them, increase the competitor floor
+                        npcmod.associatedCompetitor.currentFloor++;
+                        for (int i = npcmod.associatedCompetitor.partySpawned.Count - 1; i >= 0; i--)
+                        {
+                            receiver.RegisterRemoval(npcmod.associatedCompetitor.partySpawned[i]);
+                        }
+                        ui.AddEntry(npcmod.associatedCompetitor.competitorName + " has found the exit and has gone to the next floor!");
+
+                    }
+                }
+            }
+        }
         if (!(interacted is DGPlayer))
         {
             return false;
@@ -27,8 +49,6 @@ public class DINextFloor : DGInteraction
         _interactionInProgress = true;
         DungeonFloor floorData = interacted.Floor;
         var p = GlobalCanvasManager.Instance.PromptHandler;
-        DGGameManager receiver = FindAnyObjectByType<DGGameManager>();
-        DungeonUIHandler ui = FindAnyObjectByType<DungeonUIHandler>();
         if (receiver != null)
         {
             PromptInfo prompt = new PromptInfo();

@@ -175,6 +175,10 @@ public class DGEntity : DGObject
             }
         }
     }
+    public void Wait()
+    {
+        _dgGameManager.TurnCompleted.Invoke();
+    }
 
     public TileCoord GetClosestDirection(TileCoord pt, bool ignoreEntity = false)
     {

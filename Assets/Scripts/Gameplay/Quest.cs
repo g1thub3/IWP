@@ -239,7 +239,7 @@ public abstract class QuestData
         questPossible = true;
     }
 
-    public abstract bool Execute(DGGenerator dungeonGen);
+    public abstract DGObject Execute(DGGenerator dungeonGen);
 }
 
 [System.Serializable]
@@ -254,7 +254,7 @@ public class RetrievalQuest : QuestData
         ToRetrieve.module = Item.foundAssets[Random.Range(0, Item.foundAssets.Length)];
         ToRetrieve.Set();
     }
-    public override bool Execute(DGGenerator dungeonGen) {
+    public override DGObject Execute(DGGenerator dungeonGen) {
         // Place the item in the dungeon once floor entered
         var room = dungeonGen.GetRandomRoom();
         var spawnTile = dungeonGen.SearchRandomTileInRoom(room, SearchConditions.New(false));
@@ -263,9 +263,9 @@ public class RetrievalQuest : QuestData
             var questItem = Tilesets.Instance.ConstructItemInteractable(ToRetrieve);
             questItem.GetComponent<DGItemContainer>().Item.IsQuestTarget = true;
             dungeonGen.InsertItem(questItem, spawnTile);
-            return true;
+            return spawnTile.item;
         }
-        return false;
+        return null;
     }
     public static Quest CheckCompletion(DGGameManager gameManager, Item pickedUp)
     {

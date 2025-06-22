@@ -221,6 +221,7 @@ public class DungeonFloor
     public List<TileInfo> nonWallTiles;
     public TileInfo[] tiles;
     public TilePathPoint[] tilePathPoints;
+    public DGInteractable stairs = null;
     public void ClearSearch()
     {
         foreach (var tile in tilePathPoints)

@@ -8,7 +8,7 @@ public class KeyDataEntry
     public string Key;
     public int Int;
     public float Float;
-    public GameObject Obj;
+    public Object Obj;
 
     public KeyDataEntry(string mKey, int data)
     {
@@ -22,7 +22,7 @@ public class KeyDataEntry
         Float = data;
     }
 
-    public KeyDataEntry(string mKey, GameObject obj) { 
+    public KeyDataEntry(string mKey, Object obj) { 
         Key = mKey;
         Obj = obj;
     }
