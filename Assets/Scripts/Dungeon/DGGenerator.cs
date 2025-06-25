@@ -306,19 +306,16 @@ public class DGGenerator : MonoBehaviour, IDebuggable
     public List<DGEntity> SpawnCompetitors(QuestCompetitor competitor)
     {
         var party = competitor.party;
-        FloorRoom room = _currentFloor.rooms[Random.Range(0, _currentFloor.rooms.Count)];
+        FloorRoom room = GetRandomRoom();
         TileInfo point = SearchRandomTileInRoom(room, SearchConditions.New());
         var newList = new List<DGEntity>();
-        GameObject leader = null;
         for (int i = 0; i < party.Count; i++)
         {
             var character = party[i];
             var newCharacter = AddCharacter(false, point.coord);
-            if (i == 0)
-            {
-                leader = newCharacter;
-            }
+            newCharacter.gameObject.name = character.characterName;
             _activeEntities.Add(newCharacter.GetComponent<DGEntity>());
+            
 
             var dgnpc = newCharacter.GetComponent<DGNPC>();
             dgnpc.main = AICompetitive.Instance;

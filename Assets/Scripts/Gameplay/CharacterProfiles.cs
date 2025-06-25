@@ -31,6 +31,8 @@ public class CharacterProfile
 
     public CharacterStat maxEnergy;
     public CharacterStat maxMana;
+
+    public int expAward;
 }
 
 [CreateAssetMenu(fileName = "CharacterProfiles", menuName = "Scriptable Objects/CharacterProfiles")]

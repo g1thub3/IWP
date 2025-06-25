@@ -52,6 +52,8 @@ public class FRController : FRMovement
             _moveDir.x = -1;
         if (_inputManager.actions["Right"].IsPressed())
             _moveDir.x = 1;
+        if (_inputManager.actions["Anchor"].IsPressed())
+            _moveDir *= 2;
     }
 
     private void Interact()

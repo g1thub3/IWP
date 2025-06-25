@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: idle_north
-  m_Speed: 1
+  m_Speed: 0.35
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -86,7 +86,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: idle_east
-  m_Speed: 1
+  m_Speed: 0.35
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -290,7 +290,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: idle_west
-  m_Speed: 1
+  m_Speed: 0.35
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -504,25 +504,25 @@ AnimatorStateMachine:
     m_Position: {x: -938.1506, y: 437.15283, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5046798187099189489}
-    m_Position: {x: -447.22266, y: 738.1745, z: 0}
+    m_Position: {x: -360, y: 590, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1029470351397929531}
-    m_Position: {x: -437.22266, y: 748.1745, z: 0}
+    m_Position: {x: -500, y: 500, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1233430591043771175}
-    m_Position: {x: -427.22266, y: 758.1745, z: 0}
+    m_Position: {x: -200, y: 490, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 547969742880278286}
-    m_Position: {x: -417.22266, y: 768.1745, z: 0}
+    m_Position: {x: -390, y: 650, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2955723692654189847}
-    m_Position: {x: -407.22266, y: 778.1745, z: 0}
+    m_Position: {x: -1050, y: 540, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7113596691703120100}
-    m_Position: {x: -397.22266, y: 788.1745, z: 0}
+    m_Position: {x: -810, y: 550, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1113165104937584893}
-    m_Position: {x: -387.22266, y: 798.1745, z: 0}
+    m_Position: {x: -990, y: 640, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1091751949464184139}
     m_Position: {x: -377.22266, y: 808.1745, z: 0}
@@ -603,7 +603,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: idle_south
-  m_Speed: 1
+  m_Speed: 0.35
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

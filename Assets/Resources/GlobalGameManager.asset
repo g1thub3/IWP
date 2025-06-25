@@ -17,6 +17,7 @@ MonoBehaviour:
   ownedGold: 31
   party:
   - associatedCharacter: 0
+    characterName: 
     maxHealth:
       baseStat: 150
       incrementPercentage: 15
@@ -41,8 +42,9 @@ MonoBehaviour:
     maxMana:
       baseStat: 400
       incrementPercentage: 15
+    experienceAward: 0
     viewDistance: 5
-    experiencePoints: 0
+    experiencePoints: 30
     characterLevel: 1
   inventory:
   - itemKey: Energizer
@@ -59,105 +61,127 @@ MonoBehaviour:
     module: {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
   - itemKey: Adventurer Meal
     module: {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
+  - itemKey: Magic In A Bottle
+    module: {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
+  - itemKey: Health Potion
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+  - itemKey: Adventurer Meal
+    module: {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
+  - itemKey: Adventurer Meal
+    module: {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
+  - itemKey: Health Potion
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+  - itemKey: Health Potion
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+  - itemKey: Adventurer Meal
+    module: {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
+  - itemKey: Energizer
+    module: {fileID: 11400000, guid: be6d248d1384dec40a0004f937ba30a3, type: 2}
+  - itemKey: Health Potion
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+  - itemKey: Adventurer Meal
+    module: {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
+  - itemKey: Health Potion
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
   availableDungeons:
   - {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
   - {fileID: 11400000, guid: dbb6bf07f332800408c082e8dc82cfac, type: 2}
   selectedDungeon: {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
   ownedQuests: []
   availableQuests:
-  - clientName: Perry
-    clientCharacter: 3
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 0
-    diffPts: 1
-  - clientName: Perry
-    clientCharacter: 4
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 0
-    diffPts: 1
-  - clientName: James
-    clientCharacter: 4
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 0
-    diffPts: 1
-  - clientName: James
-    clientCharacter: 3
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 0
-    diffPts: 1
   - clientName: Andy
+    clientCharacter: 4
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 0
+    diffPts: 1
+  - clientName: Perry
     clientCharacter: 3
     isActive: 0
     difficulty: 83
     competitiveLevel: 0
     diffPts: 1
   - clientName: Zack
-    clientCharacter: 3
+    clientCharacter: 2
     isActive: 0
     difficulty: 83
     competitiveLevel: 0
     diffPts: 2
-  - clientName: Andy
+  - clientName: Zack
     clientCharacter: 4
     isActive: 0
     difficulty: 83
     competitiveLevel: 0
-    diffPts: 4
-  - clientName: Mary
-    clientCharacter: 2
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 0
-    diffPts: 8
-  availableCompetitiveQuests:
-  - clientName: Arthur
-    clientCharacter: 3
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 1
-    diffPts: 2
-  - clientName: Andy
-    clientCharacter: 2
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 1
-    diffPts: 2
-  - clientName: Luna
-    clientCharacter: 5
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 1
     diffPts: 4
   - clientName: Charlie
+    clientCharacter: 3
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 0
+    diffPts: 4
+  - clientName: Perry
+    clientCharacter: 3
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 0
+    diffPts: 6
+  - clientName: Mary
+    clientCharacter: 5
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 0
+    diffPts: 6
+  - clientName: Mary
+    clientCharacter: 2
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 0
+    diffPts: 6
+  availableCompetitiveQuests:
+  - clientName: Julie
+    clientCharacter: 5
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 1
+    diffPts: 2
+  - clientName: Perry
+    clientCharacter: 4
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 1
+    diffPts: 2
+  - clientName: Julie
     clientCharacter: 5
     isActive: 0
     difficulty: 83
     competitiveLevel: 1
     diffPts: 4
-  - clientName: Luna
-    clientCharacter: 5
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 1
-    diffPts: 4
-  - clientName: Andy
+  - clientName: Perry
     clientCharacter: 2
     isActive: 0
     difficulty: 83
     competitiveLevel: 1
     diffPts: 4
   - clientName: Mary
-    clientCharacter: 2
+    clientCharacter: 3
     isActive: 0
     difficulty: 83
     competitiveLevel: 1
-    diffPts: 4
+    diffPts: 8
+  - clientName: Arthur
+    clientCharacter: 5
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 1
+    diffPts: 8
+  - clientName: Andy
+    clientCharacter: 3
+    isActive: 0
+    difficulty: 65
+    competitiveLevel: 1
+    diffPts: 16
   - clientName: Luna
-    clientCharacter: 4
+    clientCharacter: 2
     isActive: 0
     difficulty: 65
     competitiveLevel: 1

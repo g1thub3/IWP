@@ -33,7 +33,7 @@ public class DefaultAttack : CombatMove
             var detected = user.HitDetect(hitArea);
             if (detected != null)
             {
-                detected.Damage(15, ATTACK_TYPE.PHYSICAL, user.character);
+                detected.Damage(15, ATTACK_TYPE.PHYSICAL, user);
             }
         }
         Transition trans2 = new Transition();

@@ -18,7 +18,7 @@ public class DGNPC : MonoBehaviour
     }
     private void Update()
     {
-        if (_entity.IsPerformingAction || _dgGameManager.CurrentEntityTurn() != _entity) return;
+        if (_entity.IsPerformingAction || _dgGameManager.CurrentEntityTurn() != _entity || GlobalCanvasManager.Instance.IsInteractionActive) return;
         if (main != null)
         {
             main.Run(this, aiDataList);

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d196a0535c375e54bbd06bd3726e1d9a, type: 3}
-  m_Name: QuestSignRead
+  m_Name: NPC2
   m_EditorClassIdentifier: 
   sequence:
-  - character: 6
+  - character: 5
     speakerSprite: {fileID: 0}
     speakerName: 
     content:
-    - Some words are engraved in the stone.
-    - '"Take normal quests from the wall to the left."'
+    - I could never do a competitive quest.
+    - Having so many adventurers chase after one thing just overwhelms me.
     waitTime: 0
     textSpeed: 0.05
     isRight: 0

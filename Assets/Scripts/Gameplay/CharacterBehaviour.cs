@@ -1,6 +1,9 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public enum ATTACK_TYPE
 {
@@ -39,15 +42,15 @@ public class CharacterBehaviour : MonoBehaviour
         mana = character.maxMana.CurrStat;
     }
 
-    public void Damage(int baseDamage, ATTACK_TYPE atkType, CharacterEntry attacker = null)
+    public void Damage(int baseDamage, ATTACK_TYPE atkType, CharacterBehaviour attacker = null)
     {
         int finalValue = baseDamage;
         if (atkType == ATTACK_TYPE.PHYSICAL)
         {
-            finalValue = Mathf.Max(1, finalValue + attacker.physAtk.CurrStat - character.physDef.CurrStat);
+            finalValue = Mathf.Max(1, finalValue + attacker.character.physAtk.CurrStat - character.physDef.CurrStat);
         } else if (atkType == ATTACK_TYPE.MAGIC)
         {
-            finalValue = Mathf.Max(1, finalValue + attacker.magicAtk.CurrStat - character.magicDef.CurrStat);
+            finalValue = Mathf.Max(1, finalValue + attacker.character.magicAtk.CurrStat - character.magicDef.CurrStat);
         }
 
         var og = health;
@@ -63,8 +66,26 @@ public class CharacterBehaviour : MonoBehaviour
         }
         if (health <= 0)
         {
-            _dungeonUI.AddEntry(gameObject.name + " has been defeated!");
-            DropItem();
+            _dgGameManager.OnCharacterDeath(this);
+            if (GlobalGameManager.Instance.party.Contains(attacker.character))
+            {
+                _dungeonUI.AddEntry(character.ExperienceAward + " XP was awarded to the whole party!");
+                List<CharacterEntry> levelledUp = new List<CharacterEntry>();
+                List<int> changes = new List<int>();
+                foreach (var member in GlobalGameManager.Instance.party)
+                {
+                    int added = member.GainXP(character.ExperienceAward);
+                    if (added > 0)
+                    {
+                        levelledUp.Add(member);
+                        changes.Add(added);
+                    }
+                }
+                if (levelledUp.Count > 0)
+                {
+                    GlobalCanvasManager.Instance.LevelUpHandler.LevelUpSequence(levelledUp, changes);
+                }
+            }
             _dgGameManager.RegisterRemoval(_entity);
         }
     }
@@ -188,6 +209,7 @@ public class CharacterBehaviour : MonoBehaviour
             _dungeonGen.InsertItem(itemContainer, available);
             character.HeldItem = null;
             _dungeonUI.AddEntry(gameObject.name + " has dropped a " + toDrop.module.itemName + "!");
+            _dgGameManager.OnItemDropped(itemContainer);
             return true;
         }
         return false;

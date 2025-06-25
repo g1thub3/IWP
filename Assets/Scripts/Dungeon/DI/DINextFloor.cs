@@ -26,7 +26,7 @@ public class DINextFloor : DGInteraction
         if (interacted.TryGetComponent<DGNPC>(out DGNPC npcmod))
         {
             if (npcmod.associatedCompetitor != null) {
-                if (interactable.GetComponent<CharacterBehaviour>().character == npcmod.associatedCompetitor.party[0])
+                if (interacted.GetComponent<CharacterBehaviour>().character == npcmod.associatedCompetitor.party[0])
                 {
                     if (interactable as DGObject == npcmod.associatedCompetitor.target)
                     {

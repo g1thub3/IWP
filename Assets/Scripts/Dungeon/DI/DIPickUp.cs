@@ -42,8 +42,7 @@ public class DIPickUp : DGInteraction
                     // set quest false, destroy party
                     npcmod.associatedCompetitor.associatedQuest.quest.questPossible = false;
                     ui.AddEntry(npcmod.associatedCompetitor.competitorName + " retrieved the " + container.Item.module.itemName + "!");
-                    dgGameManager.QuestFailPrompt();
-                    dgGameManager.EndCompetition(npcmod.associatedCompetitor.associatedQuest);
+                    dgGameManager.QuestFailPrompt(npcmod.associatedCompetitor.associatedQuest);
                     return true;
                 }
                 return false;

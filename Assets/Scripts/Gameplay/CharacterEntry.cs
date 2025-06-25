@@ -3,6 +3,7 @@ using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
 using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.TextCore.Text;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 [System.Serializable]
 public class CharacterStat {
@@ -24,7 +25,7 @@ public class CharacterStat {
 
     public void CalculateAfterLevel(int level)
     {
-        currStat = baseStat + (baseStat * ((incrementPercentage * level - 1) / 100));
+        currStat = baseStat + (int)Mathf.Floor((baseStat * ((float)(incrementPercentage * level - 1) / 100)));
     }
 }
 
@@ -38,6 +39,8 @@ public class CharacterEntry
         get { return CharacterProfiles.Instance.characterProfiles[(int)associatedCharacter]; }
     }
 
+    public string characterName; // note: use this more often
+
     public CharacterStat maxHealth;
     public CharacterStat hungerSize;
 
@@ -48,6 +51,8 @@ public class CharacterEntry
 
     public CharacterStat maxEnergy;
     public CharacterStat maxMana;
+
+    public int experienceAward;
 
     public int viewDistance = 5;
 
@@ -61,8 +66,35 @@ public class CharacterEntry
     {
         get
         {
+            if (characterLevel == maxLevel) return 0;
             return characterLevel * 100;
         }
+    }
+    public int ExperienceAward
+    {
+        get
+        {
+            return experienceAward * characterLevel;
+        }
+    }
+
+    public int GainXP(int amount) // Returns level difference
+    {
+        if (characterLevel == maxLevel) return 0;
+
+        int lvlsIncreaased = 0;
+        experiencePoints += amount;
+        while (characterLevel < maxLevel && experiencePoints >= ExpToNextLevel)
+        {
+            experiencePoints -= ExpToNextLevel;
+            characterLevel++;
+            lvlsIncreaased++;
+            if (characterLevel == maxLevel)
+            {
+                experiencePoints = 0;
+            }
+        }
+        return lvlsIncreaased;
     }
 
     public string GetDescription()
@@ -124,6 +156,7 @@ public class CharacterEntry
             magicDef.Apply(foundCharacter.magicDef);
             maxEnergy.Apply(foundCharacter.maxEnergy);
             maxMana.Apply(foundCharacter.maxMana);
+            experienceAward = foundCharacter.expAward;
         }
     }
     public void Recalculate()

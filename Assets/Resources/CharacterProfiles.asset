@@ -40,7 +40,7 @@ MonoBehaviour:
     maxMana:
       baseStat: 400
       incrementPercentage: 15
-    aiModule: {fileID: 11400000, guid: 81ca022384e9d0b4dbeaeb00a0af30ba, type: 2}
+    expAward: 0
   - characterSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
     characterName: Damson
     animatorController: {fileID: 9100000, guid: 5819b751b3768bb46adb12913d2184f1, type: 2}
@@ -68,8 +68,8 @@ MonoBehaviour:
     maxMana:
       baseStat: 5
       incrementPercentage: 15
-    aiModule: {fileID: 11400000, guid: 81ca022384e9d0b4dbeaeb00a0af30ba, type: 2}
-  - characterSprite: {fileID: 0}
+    expAward: 0
+  - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Bandit
     animatorController: {fileID: 9100000, guid: 68dc13f499ce93b49b4916ee751a0d68, type: 2}
     maxHealth:
@@ -96,8 +96,8 @@ MonoBehaviour:
     maxMana:
       baseStat: 5
       incrementPercentage: 15
-    aiModule: {fileID: 11400000, guid: bec4a0da65a4a2845bafc8a367e36cde, type: 2}
-  - characterSprite: {fileID: 0}
+    expAward: 5
+  - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Cave Thief
     animatorController: {fileID: 9100000, guid: 093727f09f9de8e4ab319f2b0a80e0e1, type: 2}
     maxHealth:
@@ -124,8 +124,8 @@ MonoBehaviour:
     maxMana:
       baseStat: 5
       incrementPercentage: 15
-    aiModule: {fileID: 11400000, guid: bec4a0da65a4a2845bafc8a367e36cde, type: 2}
-  - characterSprite: {fileID: 0}
+    expAward: 10
+  - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: 304aaa11f7edd0b4988562ce2915f84d, type: 2}
     maxHealth:
@@ -152,8 +152,8 @@ MonoBehaviour:
     maxMana:
       baseStat: 5
       incrementPercentage: 15
-    aiModule: {fileID: 11400000, guid: bec4a0da65a4a2845bafc8a367e36cde, type: 2}
-  - characterSprite: {fileID: 0}
+    expAward: 25
+  - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: 59c9337ecdab8534f821f53529627bd9, type: 2}
     maxHealth:
@@ -180,7 +180,7 @@ MonoBehaviour:
     maxMana:
       baseStat: 5
       incrementPercentage: 15
-    aiModule: {fileID: 11400000, guid: bec4a0da65a4a2845bafc8a367e36cde, type: 2}
+    expAward: 25
   questNPCNames:
   - Charlie
   - James

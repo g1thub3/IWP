@@ -78,10 +78,10 @@ public class DungeonTransitionHandler : MonoBehaviour
                 string title = string.Empty;
                 if (GlobalGameManager.Instance.selectedDungeon.isAscending)
                 {
-                    title = "(" + _gameManager.CurrentFloor + "F) ";
+                    title = "(" + q.quest.floor + "F) ";
                 } else
                 {
-                    title = "(B" + _gameManager.CurrentFloor + "F) ";
+                    title = "(B" + q.quest.floor + "F) ";
                 }
                 title += q.QuestObjectiveText;
                 if (title.Length > 25)
@@ -108,11 +108,11 @@ public class DungeonTransitionHandler : MonoBehaviour
                         TMP_Text txt = listItem.GetComponent<TMP_Text>();
                         if (GlobalGameManager.Instance.selectedDungeon.isAscending)
                         {
-                            txt.text = "(" + _gameManager.CurrentFloor + "F) ";
+                            txt.text = "(" + comp.currentFloor + "F) ";
                         }
                         else
                         {
-                            txt.text = "(B" + _gameManager.CurrentFloor + "F) ";
+                            txt.text = "(B" + comp.currentFloor + "F) ";
                         }
                         txt.text += comp.competitorName;
                         if (comp.currentFloor == q.quest.floor)
