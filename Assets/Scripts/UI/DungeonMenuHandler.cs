@@ -26,10 +26,10 @@ public class DGStartLayer : MenuLayer
     {
         if (isFirstPage)
         {
-            _currSelected = _buttons1.GetChild(currentSelection);
+            _currSelected = _buttons1.GetChild(CurrentSelection);
         } else
         {
-            _currSelected = _buttons2.GetChild(currentSelection);
+            _currSelected = _buttons2.GetChild(CurrentSelection);
         }
         _buttons1.gameObject.SetActive(isFirstPage);
         _buttons2.gameObject.SetActive(!isFirstPage);
@@ -58,22 +58,25 @@ public class DGStartLayer : MenuLayer
     {
         inc = Mathf.Clamp(inc, -1, 1);
         Highlight();
-        currentSelection += inc;
         if (isFirstPage)
         {
-            if (currentSelection >= 5)
-                currentSelection = 0;
-            else if (currentSelection < 0)
-                currentSelection = 4;
-            _currSelected = _buttons1.GetChild(currentSelection);
+            if (CurrentSelection + inc >= 5)
+                CurrentSelection = 0;
+            else if (CurrentSelection + inc < 0)
+                CurrentSelection = 4;
+            else
+                CurrentSelection += inc;
+            _currSelected = _buttons1.GetChild(CurrentSelection);
         }
         else
         {
-            if (currentSelection >= 10)
-                currentSelection = 5;
-            else if (currentSelection < 5)
-                currentSelection = 9;
-            _currSelected = _buttons2.GetChild(currentSelection - 5);
+            if (CurrentSelection + inc >= 10)
+                CurrentSelection = 5;
+            else if (CurrentSelection + inc < 5)
+                CurrentSelection = 9;
+            else
+                CurrentSelection += inc;
+            _currSelected = _buttons2.GetChild(CurrentSelection - 5);
         }
         Highlight();
     }
@@ -81,11 +84,11 @@ public class DGStartLayer : MenuLayer
     {
         if (isFirstPage)
         {
-            currentSelection += 5;
+            CurrentSelection += 5;
         }
         else
         {
-            currentSelection -= 5;
+            CurrentSelection -= 5;
         }
         isFirstPage = !isFirstPage;
         _buttons1.gameObject.SetActive(isFirstPage);
@@ -157,9 +160,9 @@ public class DGListLayer : MenuLayer
 
     public override void Highlight()
     {
-        if (currentSelection < addedEntries.Count)
+        if (CurrentSelection < addedEntries.Count)
         {
-            var selected = addedEntries[currentSelection];
+            var selected = addedEntries[CurrentSelection];
             _selectionBacking.position = selected.GetComponent<RectTransform>().position;
             _selectionBacking.sizeDelta = selected.GetComponent<RectTransform>().sizeDelta + new Vector2(50, 0);
         }
@@ -177,11 +180,13 @@ public class DGListLayer : MenuLayer
     private void IncSelection(int inc)
     {
         inc = Mathf.Clamp(inc, -1, 1);
-        currentSelection += inc;
-        if (currentSelection >= functions.Count)
-            currentSelection = 0;
-        if (currentSelection < 0)
-            currentSelection = functions.Count - 1;
+        CurrentSelection += inc;
+        if (CurrentSelection + inc >= functions.Count)
+            CurrentSelection = 0;
+        else if (CurrentSelection + inc < 0)
+            CurrentSelection = functions.Count - 1;
+        else
+            CurrentSelection += inc;
         Highlight();
     }
 
@@ -245,7 +250,7 @@ public class DGDialogueLayer : MenuLayer
 
     public override void Highlight()
     {
-        var selected = addedEntries[currentSelection];
+        var selected = addedEntries[CurrentSelection];
         _selectionBacking.position = selected.GetComponent<RectTransform>().position;
         _selectionBacking.sizeDelta = selected.GetComponent<RectTransform>().sizeDelta + new Vector2(50, 0);
     }
@@ -257,11 +262,13 @@ public class DGDialogueLayer : MenuLayer
     private void IncSelection(int inc)
     {
         inc = Mathf.Clamp(inc, -1, 1);
-        currentSelection += inc;
-        if (currentSelection >= functions.Count)
-            currentSelection = 0;
-        if (currentSelection < 0)
-            currentSelection = functions.Count - 1;
+        CurrentSelection += inc;
+        if (CurrentSelection + inc >= functions.Count)
+            CurrentSelection = 0;
+        else if (CurrentSelection + inc < 0)
+            CurrentSelection = functions.Count - 1;
+        else
+            CurrentSelection += inc;
         Highlight();
     }
 
@@ -357,27 +364,30 @@ public class DGPartyLayer : MenuLayer
         int inc = increase == true ? 1 : -1;
         if (isHorizontal)
         {
-            currentSelection += inc;
-            if (currentSelection > 1)
-                currentSelection = 0;
-            else if (currentSelection < 0)
-                currentSelection = 1;
+            if (CurrentSelection + inc > 1)
+                CurrentSelection = 0;
+            else if (CurrentSelection + inc < 0)
+                CurrentSelection = 1;
+            else
+                CurrentSelection += inc;
         }
         else
         {
             inc *= 2;
-            currentSelection += inc;
-            if (currentSelection > functions.Count - 1)
-                currentSelection %= 2;
-            else if (currentSelection < 0)
-                currentSelection = (currentSelection % 2) * -1;
+            CurrentSelection += inc;
+            if (CurrentSelection + inc > functions.Count - 1)
+                CurrentSelection %= 2;
+            else if (CurrentSelection + inc < 0)
+                CurrentSelection = (CurrentSelection % 2) * -1;
+            else
+                CurrentSelection += inc;
         }
         Highlight();
     }
 
     public override void Highlight()
     {
-        var child = _partyList.GetChild(currentSelection);
+        var child = _partyList.GetChild(CurrentSelection);
         var selection = child.Find("Selection").GetComponent<CanvasGroup>();
         selection.alpha = selection.alpha == 1 ? 0 : 1;
     }
@@ -389,7 +399,7 @@ public class DGPartyLayer : MenuLayer
 }
 
 
-public class DungeonMenuHandler : MonoBehaviour
+public class DungeonMenuHandler : LayeredUI
 {
     [Header("Assets")]
     [SerializeField] private Transform _partyList;
@@ -408,26 +418,16 @@ public class DungeonMenuHandler : MonoBehaviour
 
     private DGGenerator _dungeonGen;
     private DGGameManager _gameManager;
-    private PlayerInput _playerInput;
-    private List<MenuLayer> _layers;
     private List<StaticMenuFunction> _helpFunctions;
-    private MenuLayer CurrentLayer
+
+    private new void Start()
     {
-        get
-        {
-            if (_layers.Count < 1)
-                return null;
-            else
-                return _layers.Last();
-        }
-    }
-    private void Start()
-    {
+        base.Start();
         GlobalCanvasManager.LoadInstance();
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _gameManager = FindAnyObjectByType<DGGameManager>();
-        _playerInput = FindAnyObjectByType<PlayerInput>();
-        _layers = new List<MenuLayer>();
+        _inputManager = FindAnyObjectByType<PlayerInput>();
+
         _helpFunctions = new List<StaticMenuFunction>();
         _helpFunctions.Add(new StaticMenuFunction("See Active Quests", SeeQuests));
         _helpFunctions.Add(new StaticMenuFunction("Controls", delegate
@@ -529,7 +529,7 @@ public class DungeonMenuHandler : MonoBehaviour
     {
         var inventoryLayer = new DGListLayer(_sWindow, _itemList, _itemEntry, _closeMsg, _selectionBacking);
         inventoryLayer.refresh = delegate {
-            _sWindowTitle.text = "Inventory";
+            _sWindowTitle.text = "Inventory + (" + GlobalGameManager.Instance.inventory.Count + "/" + GlobalGameManager.inventoryLimit + ")";
             inventoryLayer.ClearList();
             inventoryLayer.functions = new List<MenuLayer.MenuFunction>();
             for (int i = 0; i < GlobalGameManager.Instance.inventory.Count; i++)
@@ -767,50 +767,12 @@ public class DungeonMenuHandler : MonoBehaviour
         CurrentLayer.Open();
     }
 
-    private void PerformFunction()
-    {
-        if (CurrentLayer != null)
-        {
-            CurrentLayer.functions[CurrentLayer.CurrentSelection]();
-        }
-    }
-
     private void Update()
     {
         if (GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress || !_gameManager.IsGameActive) return;
-        if (CurrentLayer != null)
+        if (!Process())
         {
-            if (CurrentLayer.nextFrameTrigger)
-            {
-                CurrentLayer.OnCreateFrameComplete();
-                CurrentLayer.nextFrameTrigger = false;
-            }
-            CurrentLayer.Control(_playerInput);
-            if (_playerInput.actions["Accept"].WasPressedThisFrame())
-            {
-                PerformFunction();
-            }
-            if (_playerInput.actions["Decline"].WasPressedThisFrame())
-            {
-                CurrentLayer.Close();
-            }
-            if (!CurrentLayer.IsOpen)
-            {
-                CurrentLayer.Close();
-                _layers.Remove(CurrentLayer);
-                if (CurrentLayer != null)
-                {
-                    if (CurrentLayer.refresh != null)
-                    {
-                        CurrentLayer.refresh();
-                        CurrentLayer.OnRefresh();
-                    }
-                }
-            }
-        }
-        else
-        {
-            if (_playerInput.actions["Decline"].WasPressedThisFrame())
+            if (_inputManager.actions["Decline"].WasPressedThisFrame())
             {
                 DGPlayer controller = FindAnyObjectByType<DGPlayer>();
                 if (controller != null)

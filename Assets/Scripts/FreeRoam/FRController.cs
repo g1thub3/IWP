@@ -4,22 +4,34 @@ using UnityEngine.InputSystem;
 public class FRController : FRMovement
 {
     private QuestBoardHandler _questBoardHandler;
+    private ShopStorageHandler _shopStorageHandler;
+    private BankHandler _bankHandler;
     private CircleCollider2D _interactHitbox;
     private PlayerInput _inputManager;
 
     public bool CanControl
     {
         get {
-            bool global = !GlobalCanvasManager.Instance.DialogueHandler.IsSequenceRunning
-                && !GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress
-                && !GlobalCanvasManager.Instance.FreeRoamMenuHandler.IsOpen;
+            bool global = !GlobalCanvasManager.Instance.IsInteractionActive;
             bool questBoard = true;
+            bool shopStor = true;
+            bool bank = true;
             if (_questBoardHandler != null)
             {
                 if (_questBoardHandler.IsOpen)
                     questBoard = false;
             }
-            return global && questBoard;
+            if (_shopStorageHandler != null)
+            {
+                if (_shopStorageHandler.IsOpen)
+                    shopStor = false;
+            }
+            if (_bankHandler != null)
+            {
+                if (_bankHandler.IsOpen)
+                    bank = false;
+            }
+            return global && questBoard && shopStor && bank;
         }
     }
 
@@ -29,6 +41,8 @@ public class FRController : FRMovement
         _inputManager = GetComponent<PlayerInput>();
         _interactHitbox = GetComponent<CircleCollider2D>();
         _questBoardHandler = FindAnyObjectByType<QuestBoardHandler>();
+        _shopStorageHandler = FindAnyObjectByType<ShopStorageHandler>();
+        _bankHandler = FindAnyObjectByType<BankHandler>();
     }
 
     private new void Update()

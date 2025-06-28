@@ -60,13 +60,19 @@ public class AIEnemy : SingletonScriptableObject<AIEnemy>, DGAIModule
                 if (path.Count > 1)
                 {
                     TileCoord diff = path[1] - entity.Position;
-                    user.GetComponent<DGEntity>().Move(diff.x, diff.z);
+                    if (!user.GetComponent<DGEntity>().Move(diff.x, diff.z))
+                    {
+                        user.GetComponent<DGEntity>().Wait();
+                    }
                 }
                 else
                 {
                     TileCoord diff = closestTarget.GetComponent<DGEntity>().Position - entity.Position;
                     user.GetComponent<DGEntity>().Move(diff.x, diff.z);
-                    cb.PerformMove(DefaultAttack.Instance);
+                    if (!cb.PerformMove(DefaultAttack.Instance))
+                    {
+                        user.GetComponent<DGEntity>().Wait();
+                    }
                 }
                 return;
             }

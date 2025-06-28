@@ -23,7 +23,7 @@ public class GoldReward : IQuestReward
     }
     public void Award()
     {
-        GlobalGameManager.Instance.ownedGold += amount;
+        GlobalGameManager.Instance.AddGold(amount);
     }
 }
 
@@ -31,6 +31,9 @@ public class GoldReward : IQuestReward
 public class ItemReward : IQuestReward
 {
     List<Item> reward;
+    public List<Item> Reward {
+        get { return reward; }
+    }
     public ItemReward(List<Item> reward)
     {
         this.reward = reward;
@@ -55,7 +58,11 @@ public class AdventurerReward : IQuestReward {
         amount = amt;
     }
     public void Award() {
-        GlobalGameManager.Instance.AddAdventurerEXP(amount);
+        var data = GlobalGameManager.Instance.AddAdventurerEXP(amount);
+        if (data["OldRank"] < data["NewRank"])
+        {
+            GlobalCanvasManager.Instance.LevelUpHandler.RankUpSequence(data);
+        }
     }
 }
 

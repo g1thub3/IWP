@@ -142,15 +142,16 @@ public class DGGameManager : MonoBehaviour
     private List<QuestCompetitor> GenerateQuestCompetitors(Quest quest)
     {
         var newList = new List<QuestCompetitor>();
-        int possibleCompetitors = Random.Range(quest.competitiveLevel, 
-            (int)Mathf.Ceil(quest.competitiveLevel * ((float)quest.competitiveLevel * 0.5f)) + 1);
+        int amt = (int)Mathf.Ceil(quest.competitiveLevel * ((float)quest.competitiveLevel * 0.5f)) + 1;
+        amt = Mathf.Min(GlobalGameManager.Instance.selectedDungeon.floorDifficulty, amt);
+        int possibleCompetitors = Random.Range(quest.competitiveLevel, amt);
         for (int i = 0; i < possibleCompetitors; i++)
         {
             var newCompetitor = new QuestCompetitor();
             newCompetitor.associatedQuest = quest;
             newCompetitor.party = new List<CharacterEntry>();
             newCompetitor.competitorName = CharacterProfiles.Instance.questNPCNames[Random.Range(0, CharacterProfiles.Instance.questNPCNames.Count)];
-            newCompetitor.currentFloor = Random.Range(1, quest.quest.floor - 1);
+            newCompetitor.currentFloor = Random.Range(1, Mathf.Min(quest.quest.floor - 1, 5));
             newCompetitor.defaultProgress = Random.Range(QuestCompetitor.minProgress, QuestCompetitor.maxProgress);
             newCompetitor.floorProgress = newCompetitor.defaultProgress;
 
@@ -240,9 +241,12 @@ public class DGGameManager : MonoBehaviour
                     Debug.Log("Failed to spawn quest item.");
                     continue;
                 }
-                foreach (var competitor in _questCompetition[questData])
+                if (_questCompetition.ContainsKey(questData))
                 {
-                    competitor.target = success;
+                    foreach (var competitor in _questCompetition[questData])
+                    {
+                        competitor.target = success;
+                    }
                 }
             }
         }

@@ -192,22 +192,29 @@ public class DungeonUIHandler : MonoBehaviour
                 break;
         }
     }
+    public void UpdateLeaderInfo()
+    {
+        _leaderNameLabel.text = GlobalGameManager.Instance.party[0].Profile.characterName;
+        _leaderLvlLabel.text = "Lv. " + GlobalGameManager.Instance.party[0].characterLevel;
+    }
     public void RegisterPlayer(DGPlayer newPlr)
     {
         _focusedPlr = newPlr;
         _inputManager = _focusedPlr.GetComponent<PlayerInput>();
         _focusedPlr.OnLeaderStatChanged += UpdateLeaderUI;
-
-        var cb = newPlr.GetComponent<CharacterBehaviour>();
-
-        _leaderNameLabel.text = cb.character.Profile.characterName;
-        _leaderLvlLabel.text = "Lv. " + cb.character.characterLevel.ToString();
-
+        _focusedPlr.OnLeaderLevelChanged += UpdateLeaderWhole;
+        UpdateLeaderWhole();
+    }
+    private void UpdateLeaderWhole()
+    {
+        var cb = _focusedPlr.GetComponent<CharacterBehaviour>();
+        UpdateLeaderInfo();
         UpdateLeaderUI(CHARACTER_STAT.HEALTH, cb.health, cb.character.maxHealth.CurrStat);
         UpdateLeaderUI(CHARACTER_STAT.ENERGY, cb.energy, cb.character.maxEnergy.CurrStat);
         UpdateLeaderUI(CHARACTER_STAT.MANA, cb.mana, cb.character.maxMana.CurrStat);
         UpdateLeaderUI(CHARACTER_STAT.HUNGER, cb.hunger, cb.character.hungerSize.CurrStat);
     }
+
     public void ToggleMenu()
     {
         if (menu.IsOpen)

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class DialogueHandler : MonoBehaviour, IDebuggable
+public class DialogueHandler : MonoBehaviour, IDebuggable, IYieldable
 {
     [Header("UI Assets")]
     [SerializeField] private CanvasGroup _dialogueFrame;
@@ -36,6 +36,11 @@ public class DialogueHandler : MonoBehaviour, IDebuggable
     public bool IsSequenceRunning
     {
         get { return sequenceRunning; }
+    }
+
+    public bool IsInProgress()
+    {
+        return IsSequenceRunning;
     }
 
     public void DebugControls()
@@ -156,19 +161,24 @@ public class DialogueHandler : MonoBehaviour, IDebuggable
 
     public void PromptSequence(DialogueSequence sequence, CanvasGroup[] hidden = null)
     {
-        if (sequence.sequence == null || sequence.sequence.Length < 1)
+        PromptSequence(sequence.sequence, hidden);
+    }
+
+    public void PromptSequence(DialogueData[] sequence, CanvasGroup[] hidden = null)
+    {
+        if (sequence == null || sequence.Length < 1)
             return;
         // Hide UIs
 
         prevDialogueSkipped = false;
         sequenceRunning = true;
-        sequence.sequence[0].ImplementCharacter();
+        sequence[0].ImplementCharacter();
         Refresh();
-        SetSpeaker(sequence.sequence[0]);
+        SetSpeaker(sequence[0]);
         StartCoroutine(SequenceRunner(sequence, hidden));
     }
 
-    private IEnumerator SequenceRunner(DialogueSequence sequence, CanvasGroup[] hidden)
+    private IEnumerator SequenceRunner(DialogueData[] sequence, CanvasGroup[] hidden)
     {
         while (_dialogueTransition.Progression < 1)
         {
@@ -177,9 +187,9 @@ public class DialogueHandler : MonoBehaviour, IDebuggable
             yield return new WaitForEndOfFrame();
         }
 
-        for (int i = 0; i < sequence.sequence.Length; i++)
+        for (int i = 0; i < sequence.Length; i++)
         {
-            RunDialogue(sequence.sequence[i]);
+            RunDialogue(sequence[i]);
             while (dialogueRunning)
                 yield return new WaitForSeconds(0.05f);
         }

@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\UI\DungeonUIHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scripts\Utilities\SingletonScriptableObject.cs" />
+    <Compile Include="Assets\Scripts\Utilities\IYieldable.cs" />
     <Compile Include="Assets\Scripts\Gameplay\CharacterProfiles.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGObject.cs" />
+    <Compile Include="Assets\Scripts\UI\LayeredUI.cs" />
     <Compile Include="Assets\Scripts\Dungeon\Tilesets.cs" />
     <Compile Include="Assets\Scripts\UI\GlobalCanvasManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -140,6 +142,7 @@
     <Compile Include="Assets\Scripts\Gameplay\DialogueSequence.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGAIModule.cs" />
     <Compile Include="Assets\Scripts\Gameplay\DayCompleter.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopStorageHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -150,6 +153,7 @@
     <Compile Include="Assets\Scripts\Dungeon\DGGameManager.cs" />
     <Compile Include="Assets\Scripts\Utilities\DebugTools.cs" />
     <Compile Include="Assets\Scripts\UI\DialogueHandler.cs" />
+    <Compile Include="Assets\Scripts\UI\BankHandler.cs" />
     <Compile Include="Assets\Scripts\UI\PromptHandler.cs" />
     <Compile Include="Assets\Scripts\Utilities\Transition.cs" />
   </ItemGroup>

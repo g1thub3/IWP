@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class DGPlayer : DGEntity
 {
     public System.Action<CHARACTER_STAT, int, int> OnLeaderStatChanged;
+    public System.Action OnLeaderLevelChanged;
     private PlayerInput _inputManager;
     private CharacterBehaviour _cb;
     private Transform _orientationRotator;

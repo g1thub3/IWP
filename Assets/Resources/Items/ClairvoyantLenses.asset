@@ -16,4 +16,6 @@ MonoBehaviour:
   itemDescription: Allows you to see farther on the dungeon minimap.
   itemSprite: {fileID: -1466605603685142154, guid: fa9f02893de09fd4c97b2c571abba86a, type: 3}
   isConsumable: 0
+  ShopPrice: 1500
+  SellValue: 300
   amount: 35

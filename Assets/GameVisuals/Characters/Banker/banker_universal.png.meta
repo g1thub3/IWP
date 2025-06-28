@@ -1,0 +1,5380 @@
+fileFormatVersion: 2
+guid: d6c49aba67d69a2478e999319c356af4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1650275612188637656
+    second: banker_universal_0
+  - first:
+      213: -9001001115711595441
+    second: banker_universal_1
+  - first:
+      213: 1788259828488058501
+    second: banker_universal_2
+  - first:
+      213: 9153366207256085941
+    second: banker_universal_3
+  - first:
+      213: -6132282462954752663
+    second: banker_universal_4
+  - first:
+      213: 123800918806390722
+    second: banker_universal_5
+  - first:
+      213: -1323301549142579058
+    second: banker_universal_6
+  - first:
+      213: 5381859897997528426
+    second: banker_universal_7
+  - first:
+      213: 6274507610683035201
+    second: banker_universal_8
+  - first:
+      213: -9153838735274855536
+    second: banker_universal_9
+  - first:
+      213: -2548770086478533076
+    second: banker_universal_10
+  - first:
+      213: -2107854693178565624
+    second: banker_universal_11
+  - first:
+      213: 7577896543669526872
+    second: banker_universal_12
+  - first:
+      213: -2664431515225384552
+    second: banker_universal_13
+  - first:
+      213: -4704810789935857348
+    second: banker_universal_14
+  - first:
+      213: -2012201366199486221
+    second: banker_universal_15
+  - first:
+      213: 7287396422703445066
+    second: banker_universal_16
+  - first:
+      213: 8985111265102455864
+    second: banker_universal_17
+  - first:
+      213: -4707000515093337688
+    second: banker_universal_18
+  - first:
+      213: 9151361078573603129
+    second: banker_universal_19
+  - first:
+      213: -7906336550171189645
+    second: banker_universal_20
+  - first:
+      213: 3300116324251839548
+    second: banker_universal_21
+  - first:
+      213: 6728935371450179614
+    second: banker_universal_22
+  - first:
+      213: 7269736837402026128
+    second: banker_universal_23
+  - first:
+      213: 1855283000453391209
+    second: banker_universal_24
+  - first:
+      213: -8397071491846608014
+    second: banker_universal_25
+  - first:
+      213: 6184207934760988111
+    second: banker_universal_26
+  - first:
+      213: 4352416436879958292
+    second: banker_universal_27
+  - first:
+      213: 4178224572724627886
+    second: banker_universal_28
+  - first:
+      213: -7462718927594009138
+    second: banker_universal_29
+  - first:
+      213: 4724411503813857883
+    second: banker_universal_30
+  - first:
+      213: -3175647707065262061
+    second: banker_universal_31
+  - first:
+      213: -6858282415845378073
+    second: banker_universal_32
+  - first:
+      213: 8039493230290763965
+    second: banker_universal_33
+  - first:
+      213: -2500249984673059539
+    second: banker_universal_34
+  - first:
+      213: -9219794513000432867
+    second: banker_universal_35
+  - first:
+      213: 1626573982798806452
+    second: banker_universal_36
+  - first:
+      213: 8275461892360730387
+    second: banker_universal_37
+  - first:
+      213: 841080239003317051
+    second: banker_universal_38
+  - first:
+      213: -5903163960293854712
+    second: banker_universal_39
+  - first:
+      213: 7928215131280255512
+    second: banker_universal_40
+  - first:
+      213: 7678119221021753716
+    second: banker_universal_41
+  - first:
+      213: 1878993242092070906
+    second: banker_universal_42
+  - first:
+      213: -8794540308851659211
+    second: banker_universal_43
+  - first:
+      213: 6519576473891053252
+    second: banker_universal_44
+  - first:
+      213: -7237292612501274721
+    second: banker_universal_45
+  - first:
+      213: 4185558000885644510
+    second: banker_universal_46
+  - first:
+      213: 7585344932761388924
+    second: banker_universal_47
+  - first:
+      213: 406268587905948246
+    second: banker_universal_48
+  - first:
+      213: 1566587596059896083
+    second: banker_universal_49
+  - first:
+      213: -7859645204589437169
+    second: banker_universal_50
+  - first:
+      213: 3015840275562054353
+    second: banker_universal_51
+  - first:
+      213: 6138868808596763577
+    second: banker_universal_52
+  - first:
+      213: 4179013950806154855
+    second: banker_universal_53
+  - first:
+      213: -8013397061601287054
+    second: banker_universal_54
+  - first:
+      213: -8306907913038433490
+    second: banker_universal_55
+  - first:
+      213: 8690554772277944013
+    second: banker_universal_56
+  - first:
+      213: -9051336016218335722
+    second: banker_universal_57
+  - first:
+      213: 1192410851561003071
+    second: banker_universal_58
+  - first:
+      213: 3337514783261959699
+    second: banker_universal_59
+  - first:
+      213: -3351924519030074454
+    second: banker_universal_60
+  - first:
+      213: 3151543973122149335
+    second: banker_universal_61
+  - first:
+      213: -347951751982193066
+    second: banker_universal_62
+  - first:
+      213: -1460568947626254068
+    second: banker_universal_63
+  - first:
+      213: 1112388512754234530
+    second: banker_universal_64
+  - first:
+      213: -6979966053655972577
+    second: banker_universal_65
+  - first:
+      213: -4979255550304171394
+    second: banker_universal_66
+  - first:
+      213: 3908460352180774733
+    second: banker_universal_67
+  - first:
+      213: 7763083759256589617
+    second: banker_universal_68
+  - first:
+      213: -1863964267781476967
+    second: banker_universal_69
+  - first:
+      213: -2358117752029536475
+    second: banker_universal_70
+  - first:
+      213: 1233168885750714060
+    second: banker_universal_71
+  - first:
+      213: 4432945064776385226
+    second: banker_universal_72
+  - first:
+      213: -4102998048184502928
+    second: banker_universal_73
+  - first:
+      213: -4383842598456544354
+    second: banker_universal_74
+  - first:
+      213: 700523031482948699
+    second: banker_universal_75
+  - first:
+      213: -7194344978457846372
+    second: banker_universal_76
+  - first:
+      213: 7040856947847611955
+    second: banker_universal_77
+  - first:
+      213: -7002181776243015233
+    second: banker_universal_78
+  - first:
+      213: 2865985436162019046
+    second: banker_universal_79
+  - first:
+      213: -2956449344404371820
+    second: banker_universal_80
+  - first:
+      213: -5030633883703885056
+    second: banker_universal_81
+  - first:
+      213: -5233182138661436711
+    second: banker_universal_82
+  - first:
+      213: 6435730353603902168
+    second: banker_universal_83
+  - first:
+      213: -7107586324046652095
+    second: banker_universal_84
+  - first:
+      213: 8051785054868348741
+    second: banker_universal_85
+  - first:
+      213: 1015632013279387732
+    second: banker_universal_86
+  - first:
+      213: 501121440632940079
+    second: banker_universal_87
+  - first:
+      213: -8993798118603456704
+    second: banker_universal_88
+  - first:
+      213: -3756583494495629106
+    second: banker_universal_89
+  - first:
+      213: -3847533953753865710
+    second: banker_universal_90
+  - first:
+      213: 4330677272492121001
+    second: banker_universal_91
+  - first:
+      213: -8618066437942605877
+    second: banker_universal_92
+  - first:
+      213: -2569601986645928723
+    second: banker_universal_93
+  - first:
+      213: 5542459838736748022
+    second: banker_universal_94
+  - first:
+      213: -452338556728216836
+    second: banker_universal_95
+  - first:
+      213: -6064241585739418172
+    second: banker_universal_96
+  - first:
+      213: -7145767558736354864
+    second: banker_universal_97
+  - first:
+      213: -8027580672334498394
+    second: banker_universal_98
+  - first:
+      213: -1438143810903574050
+    second: banker_universal_99
+  - first:
+      213: 4831150420690836814
+    second: banker_universal_100
+  - first:
+      213: -8936736555876713553
+    second: banker_universal_101
+  - first:
+      213: -2189496210083385220
+    second: banker_universal_102
+  - first:
+      213: 5931352089306510353
+    second: banker_universal_103
+  - first:
+      213: -5218273725542610601
+    second: banker_universal_104
+  - first:
+      213: -187724518224914604
+    second: banker_universal_105
+  - first:
+      213: 4949518565111835964
+    second: banker_universal_106
+  - first:
+      213: 7386135204114888290
+    second: banker_universal_107
+  - first:
+      213: -896468894496869019
+    second: banker_universal_108
+  - first:
+      213: -6365447471179646213
+    second: banker_universal_109
+  - first:
+      213: 2446013148088457530
+    second: banker_universal_110
+  - first:
+      213: -4753147606707549390
+    second: banker_universal_111
+  - first:
+      213: 1979509428889103179
+    second: banker_universal_112
+  - first:
+      213: -7417099153945737223
+    second: banker_universal_113
+  - first:
+      213: 2973419140279528855
+    second: banker_universal_114
+  - first:
+      213: -1915491442662639391
+    second: banker_universal_115
+  - first:
+      213: -2398467761256289646
+    second: banker_universal_116
+  - first:
+      213: -5960153999489864463
+    second: banker_universal_117
+  - first:
+      213: -1773698240343936471
+    second: banker_universal_118
+  - first:
+      213: -956462721679755291
+    second: banker_universal_119
+  - first:
+      213: 8524624731184727030
+    second: banker_universal_120
+  - first:
+      213: -60959315420168522
+    second: banker_universal_121
+  - first:
+      213: 6352636343381323726
+    second: banker_universal_122
+  - first:
+      213: -6170547536556849519
+    second: banker_universal_123
+  - first:
+      213: 1104585275047755740
+    second: banker_universal_124
+  - first:
+      213: -3052584533223916106
+    second: banker_universal_125
+  - first:
+      213: 1978759342439323214
+    second: banker_universal_126
+  - first:
+      213: -6867660433572492908
+    second: banker_universal_127
+  - first:
+      213: 1827380410351117010
+    second: banker_universal_128
+  - first:
+      213: 7854654013932842747
+    second: banker_universal_129
+  - first:
+      213: 2336491395022530640
+    second: banker_universal_130
+  - first:
+      213: -2318739531327895931
+    second: banker_universal_131
+  - first:
+      213: -6973914858768636805
+    second: banker_universal_132
+  - first:
+      213: -5481732080936474167
+    second: banker_universal_133
+  - first:
+      213: -5095739916364452935
+    second: banker_universal_134
+  - first:
+      213: 650593321068238269
+    second: banker_universal_135
+  - first:
+      213: 1021745365152061366
+    second: banker_universal_136
+  - first:
+      213: 3598792520569332073
+    second: banker_universal_137
+  - first:
+      213: 1783267224738109336
+    second: banker_universal_138
+  - first:
+      213: 9095103564400842605
+    second: banker_universal_139
+  - first:
+      213: -469924626023447914
+    second: banker_universal_140
+  - first:
+      213: -9217982796649224
+    second: banker_universal_141
+  - first:
+      213: 7460306016890681211
+    second: banker_universal_142
+  - first:
+      213: 7449169647596060876
+    second: banker_universal_143
+  - first:
+      213: 2520607352961107441
+    second: banker_universal_144
+  - first:
+      213: -8411192757679608172
+    second: banker_universal_145
+  - first:
+      213: 6728968733807887978
+    second: banker_universal_146
+  - first:
+      213: -7605466118350948520
+    second: banker_universal_147
+  - first:
+      213: 353508104111449688
+    second: banker_universal_148
+  - first:
+      213: 4493093132505090460
+    second: banker_universal_149
+  - first:
+      213: -5433198117582845517
+    second: banker_universal_150
+  - first:
+      213: 125807302012572387
+    second: banker_universal_151
+  - first:
+      213: -6633279729426244651
+    second: banker_universal_152
+  - first:
+      213: -1532416004278422879
+    second: banker_universal_153
+  - first:
+      213: 8979595540253720994
+    second: banker_universal_154
+  - first:
+      213: -7888763039801159274
+    second: banker_universal_155
+  - first:
+      213: -6157476723994437561
+    second: banker_universal_156
+  - first:
+      213: -3274622532878731662
+    second: banker_universal_157
+  - first:
+      213: -4884439489653309957
+    second: banker_universal_158
+  - first:
+      213: 1522609675013939838
+    second: banker_universal_159
+  - first:
+      213: -7159998237420972862
+    second: banker_universal_160
+  - first:
+      213: -1246877874450761104
+    second: banker_universal_161
+  - first:
+      213: -8335518458909747538
+    second: banker_universal_162
+  - first:
+      213: 809229592689525631
+    second: banker_universal_163
+  - first:
+      213: 950972299511192897
+    second: banker_universal_164
+  - first:
+      213: -799916726954183374
+    second: banker_universal_165
+  - first:
+      213: 4997646260046206803
+    second: banker_universal_166
+  - first:
+      213: 1591884654956727486
+    second: banker_universal_167
+  - first:
+      213: 1190217617913028278
+    second: banker_universal_168
+  - first:
+      213: -6478017742068606295
+    second: banker_universal_169
+  - first:
+      213: 4495086307664980741
+    second: banker_universal_170
+  - first:
+      213: 3651908825127932434
+    second: banker_universal_171
+  - first:
+      213: 3397114268585743833
+    second: banker_universal_172
+  - first:
+      213: 6059892091539643138
+    second: banker_universal_173
+  - first:
+      213: -3461939926304288742
+    second: banker_universal_174
+  - first:
+      213: -4128648954621225157
+    second: banker_universal_175
+  - first:
+      213: 8404443060524780780
+    second: banker_universal_176
+  - first:
+      213: -395595072184554065
+    second: banker_universal_177
+  - first:
+      213: -9020133179747825171
+    second: banker_universal_178
+  - first:
+      213: -1398793577254947950
+    second: banker_universal_179
+  - first:
+      213: -374254962237074631
+    second: banker_universal_180
+  - first:
+      213: 2122540579709842696
+    second: banker_universal_181
+  - first:
+      213: -7013746818756733598
+    second: banker_universal_182
+  - first:
+      213: -5575813481753286850
+    second: banker_universal_183
+  - first:
+      213: -6790454012213540346
+    second: banker_universal_184
+  - first:
+      213: 8853580867256716447
+    second: banker_universal_185
+  - first:
+      213: -2877719131302315977
+    second: banker_universal_186
+  - first:
+      213: -6422009431847721550
+    second: banker_universal_187
+  - first:
+      213: -4305630012676896677
+    second: banker_universal_188
+  - first:
+      213: 7547885818210913538
+    second: banker_universal_189
+  - first:
+      213: -5483173431250256770
+    second: banker_universal_190
+  - first:
+      213: -8366445449437206267
+    second: banker_universal_191
+  - first:
+      213: -318355139388331554
+    second: banker_universal_192
+  - first:
+      213: -7618155003276726365
+    second: banker_universal_193
+  - first:
+      213: -5665150923109250485
+    second: banker_universal_194
+  - first:
+      213: 7203303580231131331
+    second: banker_universal_195
+  - first:
+      213: 4265740047512819805
+    second: banker_universal_196
+  - first:
+      213: -8072181688532173912
+    second: banker_universal_197
+  - first:
+      213: 8195058152616285717
+    second: banker_universal_198
+  - first:
+      213: -1250883347663797989
+    second: banker_universal_199
+  - first:
+      213: -3172467873311663196
+    second: banker_universal_200
+  - first:
+      213: -2560584573104216223
+    second: banker_universal_201
+  - first:
+      213: 5099588720862025448
+    second: banker_universal_202
+  - first:
+      213: 8637032883569767817
+    second: banker_universal_203
+  - first:
+      213: -6856369178101584612
+    second: banker_universal_204
+  - first:
+      213: -9179700321215745723
+    second: banker_universal_205
+  - first:
+      213: 8674050736042814729
+    second: banker_universal_206
+  - first:
+      213: -1281492867229038367
+    second: banker_universal_207
+  - first:
+      213: -6014611814037849721
+    second: banker_universal_208
+  - first:
+      213: 7877755291395624364
+    second: banker_universal_209
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: banker_universal_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1279
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d97efdfce4f6e610800000000000000
+      internalID: 1650275612188637656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1279
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c9d13bc25061380800000000000000
+      internalID: -9001001115711595441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1279
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 586b123e6dc21d810800000000000000
+      internalID: 1788259828488058501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1279
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b54092a11a470f70800000000000000
+      internalID: 9153366207256085941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_4
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1279
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96579351791c5eaa0800000000000000
+      internalID: -6132282462954752663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1279
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7625c9744d7b100800000000000000
+      internalID: 123800918806390722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1279
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e88e1a09040b2ade0800000000000000
+      internalID: -1323301549142579058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1215
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d001b101530ba40800000000000000
+      internalID: 5381859897997528426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1215
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e4f3b9d67831750800000000000000
+      internalID: 6274507610683035201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1215
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0933bbc5b2807f080800000000000000
+      internalID: -9153838735274855536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1215
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e2e4d3c13f0acd0800000000000000
+      internalID: -2548770086478533076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_11
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1215
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c93fe03556fb2e0800000000000000
+      internalID: -2107854693178565624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_12
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1215
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851251ec1c81a2960800000000000000
+      internalID: 7577896543669526872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_13
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1215
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89992a657a9060bd0800000000000000
+      internalID: -2664431515225384552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1151
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31c272838725beb0800000000000000
+      internalID: -4704810789935857348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1151
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8bf1fb4893314e0800000000000000
+      internalID: -2012201366199486221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1151
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44f0b8af68022560800000000000000
+      internalID: 7287396422703445066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_17
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1151
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 834eac7271781bc70800000000000000
+      internalID: 8985111265102455864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_18
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1151
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a9e74468ff5daeb0800000000000000
+      internalID: -4707000515093337688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_19
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1151
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93917bb3a6a200f70800000000000000
+      internalID: 9151361078573603129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1151
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37edb541ccc074290800000000000000
+      internalID: -7906336550171189645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_21
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1087
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3caf78ef4e5ccd20800000000000000
+      internalID: 3300116324251839548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1087
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1069d3a11bf16d50800000000000000
+      internalID: 6728935371450179614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_23
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1087
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0906beb032b43e460800000000000000
+      internalID: 7269736837402026128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_24
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1087
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96368d72f0a4fb910800000000000000
+      internalID: 1855283000453391209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_25
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1087
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b6ceeb7fb977b80800000000000000
+      internalID: -8397071491846608014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1087
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcda490f958b2d550800000000000000
+      internalID: 6184207934760988111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_27
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1087
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4112dc270b3e66c30800000000000000
+      internalID: 4352416436879958292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1023
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea94f099c190cf930800000000000000
+      internalID: 4178224572724627886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1023
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecdcc2eaca81f6890800000000000000
+      internalID: -7462718927594009138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_30
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1023
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5218915b3b709140800000000000000
+      internalID: 4724411503813857883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_31
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1023
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31067985c35dde3d0800000000000000
+      internalID: -3175647707065262061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_32
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1023
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e77a32ca7c72d0a0800000000000000
+      internalID: -6858282415845378073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_33
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1023
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db083a57f74029f60800000000000000
+      internalID: 8039493230290763965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_34
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1023
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2de2e5c2e35d4dd0800000000000000
+      internalID: -2500249984673059539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_35
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1023
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b738e2db5bc0080800000000000000
+      internalID: -9219794513000432867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_36
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 959
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd7d9d5b60c29610800000000000000
+      internalID: 1626573982798806452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_37
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 959
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317717eeeb858d270800000000000000
+      internalID: 8275461892360730387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_38
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 959
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33b469650e1cab00800000000000000
+      internalID: 841080239003317051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_39
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 959
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 802fbc787afb31ea0800000000000000
+      internalID: -5903163960293854712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_40
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 959
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a26da08ada60e60800000000000000
+      internalID: 7928215131280255512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_41
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 959
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 471c91840c82e8a60800000000000000
+      internalID: 7678119221021753716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_42
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 959
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7e14af566831a10800000000000000
+      internalID: 1878993242092070906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_43
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 959
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53eea004f2483f580800000000000000
+      internalID: -8794540308851659211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 895
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce1544c2403a7a50800000000000000
+      internalID: 6519576473891053252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 895
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f7d48b6b8ff8b90800000000000000
+      internalID: -7237292612501274721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_46
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 895
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc359563d6161a30800000000000000
+      internalID: 4185558000885644510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_47
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 896
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c774d08070f844960800000000000000
+      internalID: 7585344932761388924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_48
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 896
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a9881d02b53a500800000000000000
+      internalID: 406268587905948246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_49
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 895
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319eea45e13adb510800000000000000
+      internalID: 1566587596059896083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_50
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 896
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f18df145eece290800000000000000
+      internalID: -7859645204589437169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_51
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 896
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2413480ca6ad920800000000000000
+      internalID: 3015840275562054353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_52
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 831
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3b22308a4a13550800000000000000
+      internalID: 6138868808596763577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_53
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 831
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ed3310c07def930800000000000000
+      internalID: 4179013950806154855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_54
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 831
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274a81b44d1bac090800000000000000
+      internalID: -8013397061601287054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_55
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 831
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e237675d34fe7bc80800000000000000
+      internalID: -8306907913038433490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_56
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 831
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dced3b6558d0b9870800000000000000
+      internalID: 8690554772277944013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_57
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 831
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6165b9a69d1336280800000000000000
+      internalID: -9051336016218335722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_58
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 831
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f385d911a5b4c8010800000000000000
+      internalID: 1192410851561003071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_59
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 831
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316a1f0330c315e20800000000000000
+      internalID: 3337514783261959699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_60
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 767
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa35a41c8629b71d0800000000000000
+      internalID: -3351924519030074454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_61
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 767
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7db08f3cb888cbb20800000000000000
+      internalID: 3151543973122149335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_62
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 767
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6566020a9b3db2bf0800000000000000
+      internalID: -347951751982193066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_63
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 767
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0165c2d7440bbbe0800000000000000
+      internalID: -1460568947626254068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_64
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 767
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4f0fa657fff6f00800000000000000
+      internalID: 1112388512754234530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_65
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 767
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15fc8b0bdd222f90800000000000000
+      internalID: -6979966053655972577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_66
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 767
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a4a3e457126eab0800000000000000
+      internalID: -4979255550304171394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_67
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 767
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d47ee6e7bf3ad3630800000000000000
+      internalID: 3908460352180774733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_68
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 767
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 135d7186c830cbb60800000000000000
+      internalID: 7763083759256589617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_69
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 767
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d2dd8cf5ed126e0800000000000000
+      internalID: -1863964267781476967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_70
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 767
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f9cbbf568464fd0800000000000000
+      internalID: -2358117752029536475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_71
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 703
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce4c3761981d1110800000000000000
+      internalID: 1233168885750714060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_72
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 703
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac241d6bc0cf48d30800000000000000
+      internalID: 4432945064776385226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_73
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 703
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07577d783093f07c0800000000000000
+      internalID: -4102998048184502928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_74
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 703
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93b5cf12667923c0800000000000000
+      internalID: -4383842598456544354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_75
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 703
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c55805cf1c8b900800000000000000
+      internalID: 700523031482948699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_76
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 703
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d976ffb5d882c90800000000000000
+      internalID: -7194344978457846372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_77
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 703
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3364cca071626b160800000000000000
+      internalID: 7040856947847611955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_78
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 703
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1425e06c043de90800000000000000
+      internalID: -7002181776243015233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_79
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 703
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee41edc19606c720800000000000000
+      internalID: 2865985436162019046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_80
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 703
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49647563cf498f6d0800000000000000
+      internalID: -2956449344404371820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_81
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 703
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00349ced2299f2ab0800000000000000
+      internalID: -5030633883703885056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_82
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d28a2c42900067b0800000000000000
+      internalID: -5233182138661436711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_83
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da72cc98ae405950800000000000000
+      internalID: 6435730353603902168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_84
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14d56c855e7cc5d90800000000000000
+      internalID: -7107586324046652095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_85
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 639
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f1a33e8dfadbf60800000000000000
+      internalID: 8051785054868348741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_86
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 450680e5fef381e00800000000000000
+      internalID: 1015632013279387732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_87
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2622429b4754f600800000000000000
+      internalID: 501121440632940079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_88
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f7017234c9f2380800000000000000
+      internalID: -8993798118603456704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_89
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 639
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec01e79073feddbc0800000000000000
+      internalID: -3756583494495629106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_90
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2122f311140da9ac0800000000000000
+      internalID: -3847533953753865710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_91
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab10cfc808a91c30800000000000000
+      internalID: 4330677272492121001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_92
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 639
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc707b33c3a766880800000000000000
+      internalID: -8618066437942605877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_93
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 575
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4d4d38b90f65cd0800000000000000
+      internalID: -2569601986645928723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_94
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 575
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fdc5cdabd5caec40800000000000000
+      internalID: 5542459838736748022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_95
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 575
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf27000ba78f8b9f0800000000000000
+      internalID: -452338556728216836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_96
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 575
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5b9d1586c77dba0800000000000000
+      internalID: -6064241585739418172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_97
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 575
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d16206e34225dc90800000000000000
+      internalID: -7145767558736354864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_98
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 575
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5f5b319ed489090800000000000000
+      internalID: -8027580672334498394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_99
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 575
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed97a27d2dfaa0ce0800000000000000
+      internalID: -1438143810903574050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_100
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 575
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4d91c906b1bb0340800000000000000
+      internalID: 4831150420690836814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_101
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 575
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab78b783755af380800000000000000
+      internalID: -8936736555876713553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_102
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 575
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c707ae02cc85d91e0800000000000000
+      internalID: -2189496210083385220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_103
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 575
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114b2e0bc45605250800000000000000
+      internalID: 5931352089306510353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_104
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 511
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7594748b1b7f497b0800000000000000
+      internalID: -5218273725542610601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_105
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 511
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45792979b81156df0800000000000000
+      internalID: -187724518224914604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_106
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 511
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d21ba49e830b440800000000000000
+      internalID: 4949518565111835964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_107
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 511
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2667640b5d2d08660800000000000000
+      internalID: 7386135204114888290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_108
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 511
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565b3574a4a1f83f0800000000000000
+      internalID: -896468894496869019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_109
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 511
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfabde3204369a7a0800000000000000
+      internalID: -6365447471179646213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_110
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 511
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a395fb7affbf1f120800000000000000
+      internalID: 2446013148088457530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_111
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 511
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23bc2395f6d690eb0800000000000000
+      internalID: -4753147606707549390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_112
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 511
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ba8727651a87b10800000000000000
+      internalID: 1979509428889103179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_113
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 511
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7c631fd9b211990800000000000000
+      internalID: -7417099153945737223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_114
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 511
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d65b844f4b34920800000000000000
+      internalID: 2973419140279528855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_115
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 511
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8facd7eaeca65e0800000000000000
+      internalID: -1915491442662639391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_116
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 447
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29aa71d574ee6bed0800000000000000
+      internalID: -2398467761256289646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_117
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 447
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc68c50487494da0800000000000000
+      internalID: -5960153999489864463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_118
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 447
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 922709d09de8267e0800000000000000
+      internalID: -1773698240343936471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_119
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 447
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7ff51e836f9b2f0800000000000000
+      internalID: -956462721679755291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_120
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 447
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f386c1170d8d4670800000000000000
+      internalID: 8524624731184727030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_121
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 447
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be31aa53dd672ff0800000000000000
+      internalID: -60959315420168522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_122
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 447
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfea7ab819192850800000000000000
+      internalID: 6352636343381323726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_123
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 447
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1960edd55bfcd5aa0800000000000000
+      internalID: -6170547536556849519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_124
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 447
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf395f8476445f00800000000000000
+      internalID: 1104585275047755740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_125
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 447
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd36525a8a03a5d0800000000000000
+      internalID: -3052584533223916106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_126
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 447
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46d4165327f57b10800000000000000
+      internalID: 1978759342439323214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_127
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 447
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49908ead83b21b0a0800000000000000
+      internalID: -6867660433572492908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_128
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 383
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d26c742dc82c5910800000000000000
+      internalID: 1827380410351117010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_129
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 383
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe201eb536510d60800000000000000
+      internalID: 7854654013932842747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_130
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 383
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05823156b82ec6020800000000000000
+      internalID: 2336491395022530640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_131
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 383
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5868b847eae22dfd0800000000000000
+      internalID: -2318739531327895931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_132
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 383
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74e645a26da73f90800000000000000
+      internalID: -6973914858768636805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_133
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 383
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c92be147b9fce3b0800000000000000
+      internalID: -5481732080936474167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_134
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 383
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb61516b8b4849b0800000000000000
+      internalID: -5095739916364452935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_135
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 383
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db59383bd2f570900800000000000000
+      internalID: 650593321068238269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_136
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 383
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b75ac40ff7fd2e00800000000000000
+      internalID: 1021745365152061366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_137
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 383
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9612ed0faba71f130800000000000000
+      internalID: 3598792520569332073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_138
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 383
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8979c1eb7107fb810800000000000000
+      internalID: 1783267224738109336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_139
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 383
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67508ff08c483e70800000000000000
+      internalID: 9095103564400842605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_140
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 319
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6920aaada0e7a79f0800000000000000
+      internalID: -469924626023447914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_141
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 319
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc2cd12b404fdff0800000000000000
+      internalID: -9217982796649224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_142
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 319
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b777a74cbc4588760800000000000000
+      internalID: 7460306016890681211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_143
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 319
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0c59cb354c06760800000000000000
+      internalID: 7449169647596060876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_144
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 319
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f50c73680ffaf220800000000000000
+      internalID: 2520607352961107441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_145
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 319
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e2b2550c0754b80800000000000000
+      internalID: -8411192757679608172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_146
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 319
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a66445b6969126d50800000000000000
+      internalID: 6728968733807887978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_147
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 319
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8573c606cd4f37690800000000000000
+      internalID: -7605466118350948520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_148
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 319
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856e8ca6fb9e7e400800000000000000
+      internalID: 353508104111449688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_149
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 319
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9986b9066caa5e30800000000000000
+      internalID: 4493093132505090460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_150
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 319
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9472f29176994b0800000000000000
+      internalID: -5433198117582845517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_151
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 319
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e21c9a1315feb100800000000000000
+      internalID: 125807302012572387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_152
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 255
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dbdfbf0b3bd1f3a0800000000000000
+      internalID: -6633279729426244651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_153
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a27cd063c3cbbae0800000000000000
+      internalID: -1532416004278422879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_154
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 255
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a14183619eed9c70800000000000000
+      internalID: 8979595540253720994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_155
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 255
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691db6fcfcb758290800000000000000
+      internalID: -7888763039801159274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_156
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 255
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74853911b8f3c8aa0800000000000000
+      internalID: -6157476723994437561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_157
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 255
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276f542f7243e82d0800000000000000
+      internalID: -3274622532878731662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_158
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 255
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfdf25cb92cf63cb0800000000000000
+      internalID: -4884439489653309957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_159
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 255
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7267caae65612510800000000000000
+      internalID: 1522609675013939838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_160
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 255
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c49912d98392ac90800000000000000
+      internalID: -7159998237420972862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_161
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 255
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a711fed2332bee0800000000000000
+      internalID: -1246877874450761104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_162
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 255
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea619f5002a425c80800000000000000
+      internalID: -8335518458909747538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_163
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 255
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f734efde606fa3b00800000000000000
+      internalID: 809229592689525631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_164
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 255
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14dd9979448823d00800000000000000
+      internalID: 950972299511192897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_165
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 191
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235b00899ff16e4f0800000000000000
+      internalID: -799916726954183374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_166
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 191
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3571d1b7bc43b5540800000000000000
+      internalID: 4997646260046206803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_167
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 191
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc4716d8a2871610800000000000000
+      internalID: 1591884654956727486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_168
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 191
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be1e111e90848010800000000000000
+      internalID: 1190217617913028278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_169
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 191
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa92538f257916a0800000000000000
+      internalID: -6478017742068606295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_170
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 191
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50be71b4e21c16e30800000000000000
+      internalID: 4495086307664980741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_171
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 191
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2125dd15abf2ea230800000000000000
+      internalID: 3651908825127932434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_172
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 191
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5d678bd69f42f20800000000000000
+      internalID: 3397114268585743833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_173
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 191
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b5b6520cf091450800000000000000
+      internalID: 6059892091539643138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_174
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 191
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1014eaaaf7b4ffc0800000000000000
+      internalID: -3461939926304288742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_175
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 191
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b37938976a714b6c0800000000000000
+      internalID: -4128648954621225157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_176
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 191
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec83955f6492a470800000000000000
+      internalID: 8404443060524780780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_177
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 191
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad6b87b060928af0800000000000000
+      internalID: -395595072184554065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_178
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de98a6ae9ac02d280800000000000000
+      internalID: -9020133179747825171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_179
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293fe9117ac769ce0800000000000000
+      internalID: -1398793577254947950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_180
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9339e6048116ecaf0800000000000000
+      internalID: -374254962237074631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_181
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 805f4fa5967c47d10800000000000000
+      internalID: 2122540579709842696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_182
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 127
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2659a73cd6a2aae90800000000000000
+      internalID: -7013746818756733598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_183
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 127
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e37e2462e2bbe92b0800000000000000
+      internalID: -5575813481753286850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_184
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 127
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ac262ad0673c1a0800000000000000
+      internalID: -6790454012213540346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_185
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 127
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c0807f3ec3eda70800000000000000
+      internalID: 8853580867256716447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_186
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 127
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 738316762b94018d0800000000000000
+      internalID: -2877719131302315977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_187
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 127
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5228e627070e6a0800000000000000
+      internalID: -6422009431847721550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_188
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 127
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b580220d0545f34c0800000000000000
+      internalID: -4305630012676896677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_189
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 127
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d8ba7492a7fb860800000000000000
+      internalID: 7547885818210913538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_190
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 127
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7cf77cb0dad7e3b0800000000000000
+      internalID: -5483173431250256770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_191
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 63
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509ac99e03a64eb80800000000000000
+      internalID: -8366445449437206267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_192
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 63
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9a65cffa9f49bf0800000000000000
+      internalID: -318355139388331554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_193
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 63
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af63d12360e64690800000000000000
+      internalID: -7618155003276726365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_194
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 63
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ac81d20475161b0800000000000000
+      internalID: -5665150923109250485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_195
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 63
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0e9f4017647f360800000000000000
+      internalID: 7203303580231131331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_196
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 63
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58d82ce8f3f23b30800000000000000
+      internalID: 4265740047512819805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_197
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 63
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab70a4c589d9ff80800000000000000
+      internalID: -8072181688532173912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_198
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 63
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516dc5478f1bab170800000000000000
+      internalID: 8195058152616285717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_199
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 63
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b114c070938f3aee0800000000000000
+      internalID: -1250883347663797989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_200
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 63
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab5be5174129f3d0800000000000000
+      internalID: -3172467873311663196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_201
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 63
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16727c6b5e9f67cd0800000000000000
+      internalID: -2560584573104216223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_202
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 63
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6d19f3ce065c640800000000000000
+      internalID: 5099588720862025448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_203
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 63
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9853b8a85a7ecd770800000000000000
+      internalID: 8637032883569767817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_204
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d61522f8849d0a0800000000000000
+      internalID: -6856369178101584612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_205
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5417569a1372b9080800000000000000
+      internalID: -9179700321215745723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_206
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 37
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d2c85ff2b606870800000000000000
+      internalID: 8674050736042814729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_207
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8cd92e609373ee0800000000000000
+      internalID: -1281492867229038367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_208
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789f7620c6ec78ca0800000000000000
+      internalID: -6014611814037849721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banker_universal_209
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad071b03b8635d60800000000000000
+      internalID: 7877755291395624364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

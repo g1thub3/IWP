@@ -24,17 +24,26 @@ public abstract class MenuLayer {
     public int CurrentSelection
     {
         get { return currentSelection; }
+        set {
+            currentSelection = value;
+            if (selectionChanged != null)
+                selectionChanged();
+        }
     }
     public bool IsOpen { get { return isOpen; } }
     public delegate void MenuFunction();
     public List<MenuFunction> functions;
     public MenuFunction refresh;
+    public MenuFunction selectionChanged;
+
     public virtual void Open()
     {
         isOpen = true;
         currentSelection = 0;
         if (refresh != null)
             refresh();
+        if (selectionChanged != null)
+            selectionChanged();
         nextFrameTrigger = true;
     }
     public abstract void Highlight();
@@ -46,6 +55,8 @@ public abstract class MenuLayer {
 
     public virtual void OnRefresh()
     {
+        if (selectionChanged != null)
+            selectionChanged();
         nextFrameTrigger = true;
     }
     public bool nextFrameTrigger;
@@ -70,7 +81,7 @@ public class StartLayer : MenuLayer
     }
     public override void Open()
     {
-        _currSelected = _buttons.GetChild(currentSelection);
+        _currSelected = _buttons.GetChild(CurrentSelection);
         base.Open();
         Highlight();
         _menuGrp.alpha = 1;
@@ -95,11 +106,12 @@ public class StartLayer : MenuLayer
     {
         inc = Mathf.Clamp(inc, -1, 1);
         Highlight();
-        currentSelection += inc;
-        if (currentSelection >= functions.Count)
-            currentSelection = 0;
-        if (currentSelection < 0)
-            currentSelection = functions.Count - 1;
+        if (CurrentSelection + inc >= functions.Count)
+            CurrentSelection = 0;
+        else if (CurrentSelection + inc < 0)
+            CurrentSelection = functions.Count - 1;
+        else
+            CurrentSelection += inc;
         _currSelected = _buttons.GetChild(currentSelection);
         Highlight();
     }
@@ -162,7 +174,7 @@ public class ListLayer : MenuLayer {
     {
         base.Open();
         if (addedEntries.Count > 0)
-            _currSelected = addedEntries[currentSelection];
+            _currSelected = addedEntries[CurrentSelection];
         _listFrame.alpha = 1;
         _listPageIndicator.text = "Page " + (currPage + 1) + " of " + pageLimit;
     }
@@ -192,37 +204,37 @@ public class ListLayer : MenuLayer {
         inc = Mathf.Clamp(inc, -1, 1);
         if (isHorizontal)
         {
-            if (currentSelection != functions.Count - 1)
+            if (CurrentSelection != functions.Count - 1)
             {
                 Highlight();
                 currPage = Mathf.Clamp(currPage + inc, 0, pageLimit - 1);
                 refresh();
-                if (currentSelection >= addedEntries.Count - 1)
-                    currentSelection = addedEntries.Count - 1;
+                if (CurrentSelection >= addedEntries.Count - 1)
+                    CurrentSelection = addedEntries.Count - 1;
                 _listPageIndicator.text = "Page " + (currPage + 1) + " of " + pageLimit;
-                _currSelected = addedEntries[currentSelection];
+                _currSelected = addedEntries[CurrentSelection];
                 Highlight();
             }
         } else
         {
             Highlight();
-            if (currentSelection != functions.Count - 1) {
-                currentSelection += inc;
-                if (currentSelection >= functions.Count - 1 || currentSelection < 0)
+            if (CurrentSelection != functions.Count - 1) {
+                if (CurrentSelection + inc >= functions.Count - 1 || CurrentSelection + inc < 0)
                 {
-                    currentSelection = functions.Count - 1;
+                    CurrentSelection = functions.Count - 1;
                     _currSelected = null;
                 } else
                 {
-                    _currSelected = addedEntries[currentSelection];
+                    CurrentSelection += inc;
+                    _currSelected = addedEntries[CurrentSelection];
                 }
             } else
             {
-                currentSelection = Mathf.Clamp(inc > 0 ? 0 : addedEntries.Count - 1, 0, addedEntries.Count - 1);
-                if (currentSelection < 0)
-                    currentSelection = 0;
+                CurrentSelection = Mathf.Clamp(inc > 0 ? 0 : addedEntries.Count - 1, 0, addedEntries.Count - 1);
+                if (CurrentSelection < 0)
+                    CurrentSelection = 0;
                 if (addedEntries.Count > 0)
-                    _currSelected = addedEntries[currentSelection];
+                    _currSelected = addedEntries[CurrentSelection];
             }
             Highlight();
         }
@@ -261,8 +273,8 @@ public class ListLayer : MenuLayer {
     public override void OnCreateFrameComplete()
     {
         base.OnCreateFrameComplete();
-        if (currentSelection < addedEntries.Count)
-            _currSelected = addedEntries[currentSelection];
+        if (CurrentSelection < addedEntries.Count)
+            _currSelected = addedEntries[CurrentSelection];
         Highlight();
     }
 }
@@ -284,7 +296,7 @@ public class DialogueLayer : MenuLayer
     public override void Open()
     {
         base.Open();
-        _currSelected = addedEntries[currentSelection];
+        _currSelected = addedEntries[CurrentSelection];
         Highlight();
         _dialogueFrame.alpha = 1;
     }
@@ -317,12 +329,13 @@ public class DialogueLayer : MenuLayer
     {
         inc = Mathf.Clamp(inc, -1, 1);
         Highlight();
-        currentSelection += inc;
-        if (currentSelection >= functions.Count)
-            currentSelection = 0;
-        if (currentSelection < 0)
-            currentSelection = functions.Count - 1;
-        _currSelected = addedEntries[currentSelection];
+        if (CurrentSelection + inc >= functions.Count)
+            CurrentSelection = 0;
+        else if (CurrentSelection + inc < 0)
+            CurrentSelection = functions.Count - 1;
+        else
+            CurrentSelection += inc;
+        _currSelected = addedEntries[CurrentSelection];
         Highlight();
     }
 
@@ -377,7 +390,7 @@ public class ReadLayer : MenuLayer
     }
 }
 
-public class FreeRoamMenuHandler : MonoBehaviour
+public class FreeRoamMenuHandler : LayeredUI
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -385,6 +398,9 @@ public class FreeRoamMenuHandler : MonoBehaviour
     [SerializeField] CanvasGroup _menuGrp;
     [SerializeField] Transform _menuButtons;
     [SerializeField] TMP_Text _goldText;
+    [SerializeField] TMP_Text _advRankText;
+    [SerializeField] TMP_Text _advRankExp;
+    [SerializeField] RectTransform _advRankBar;
 
     [Header("List")]
     [SerializeField] CanvasGroup _listGrp;
@@ -407,9 +423,6 @@ public class FreeRoamMenuHandler : MonoBehaviour
     [SerializeField] TMP_Text _readContent;
     [SerializeField] Image _readCloseSelect;
 
-    private PlayerInput _inputManager;
-    private List<MenuLayer> _layers;
-
     public bool IsOpen
     {
         get
@@ -419,22 +432,12 @@ public class FreeRoamMenuHandler : MonoBehaviour
         }
     }
 
-    private MenuLayer CurrentLayer
-    {
-        get {
-            if (_layers.Count < 1)
-                return null;
-            else
-                return _layers.Last();
-        }
-    }
-
     private List<StaticMenuFunction> _othersFunctions;
 
-    private void Start()
+    private new void Start()
     {
+        base.Start();
         _inputManager = GetComponent<PlayerInput>();
-        _layers = new List<MenuLayer>();
         _othersFunctions = new List<StaticMenuFunction>();
         _othersFunctions.Add(new StaticMenuFunction("Controls", delegate
         {
@@ -448,14 +451,6 @@ public class FreeRoamMenuHandler : MonoBehaviour
         {
             CreateReadLayer("Quest Guide", "Head to the Guild Hall to take a quest. Activate it in the menu before going into the dungeon the quest gave you. Complete quests for Adventurer XP, Items and Gold.");
         }));
-    }
-
-    private void PerformFunction()
-    {
-        if (CurrentLayer != null)
-        {
-            CurrentLayer.functions[CurrentLayer.CurrentSelection]();
-        }
     }
 
     private void CreateReadLayer(string title, string content)
@@ -476,7 +471,7 @@ public class FreeRoamMenuHandler : MonoBehaviour
         var inventoryLayer = new ListLayer(_listGrp, _listPageIndicator, _closeSelect, _listContent, _arrowLeft, _arrowRight, _listEntry);
         inventoryLayer.refresh = delegate
         {
-            _listTitle.text = "Inventory";
+            _listTitle.text = "Inventory (" + GlobalGameManager.Instance.inventory.Count + "/" + GlobalGameManager.inventoryLimit + ")";
             inventoryLayer.pageLimit = (int)Mathf.Ceil((float)GlobalGameManager.Instance.inventory.Count / ListLayer.pageMax);
             inventoryLayer.ClearList();
             inventoryLayer.functions = new List<MenuLayer.MenuFunction>();
@@ -703,9 +698,18 @@ public class FreeRoamMenuHandler : MonoBehaviour
         CurrentLayer.Open();
     }
 
-    private void CreateMain()
+    private void LoadStats()
     {
         _goldText.text = GlobalGameManager.Instance.ownedGold.ToString();
+        _advRankText.text = GlobalGameManager.Instance.adventurerRanking.ToString();
+        _advRankExp.text = "Adv. Exp: " + GlobalGameManager.Instance.adventurerEXP + " / " + GlobalGameManager.Instance.GetExpToNextRank();
+        float perc = GlobalGameManager.Instance.GetExpToNextRank() == 0 ? 1 : (float)GlobalGameManager.Instance.adventurerEXP / GlobalGameManager.Instance.GetExpToNextRank();
+        _advRankBar.sizeDelta = new Vector2(_advRankBar.sizeDelta.x, 400.0f * perc);
+    }
+
+    private void CreateMain()
+    {
+        LoadStats();
 
         var newLayer = new StartLayer(_menuButtons, _menuGrp);
         newLayer.refresh = delegate
@@ -723,36 +727,7 @@ public class FreeRoamMenuHandler : MonoBehaviour
 
     private void Update()
     {
-        if (CurrentLayer != null)
-        {
-            if (CurrentLayer.nextFrameTrigger)
-            {
-                CurrentLayer.OnCreateFrameComplete();
-                CurrentLayer.nextFrameTrigger = false;
-            }
-            CurrentLayer.Control(_inputManager);
-            if (_inputManager.actions["Accept"].WasPressedThisFrame())
-            {
-                PerformFunction();
-            }
-            if (_inputManager.actions["Decline"].WasPressedThisFrame())
-            {
-                CurrentLayer.Close();
-            }
-            if (!CurrentLayer.IsOpen)
-            {
-                CurrentLayer.Close();
-                _layers.Remove(CurrentLayer);
-                if (CurrentLayer != null)
-                {
-                    if (CurrentLayer.refresh != null)
-                    {
-                        CurrentLayer.refresh();
-                        CurrentLayer.OnRefresh();
-                    }
-                }
-            }
-        } else
+        if (!Process())
         {
             if (_inputManager.actions["Decline"].WasPressedThisFrame())
             {

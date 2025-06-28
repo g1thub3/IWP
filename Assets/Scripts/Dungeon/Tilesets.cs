@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -58,4 +59,7 @@ public class Tilesets : SingletonScriptableObject<Tilesets>
     }
 
     public Tileset[] tilesets = new Tileset[(int)TILESET.NUM_SETS];
+
+    public List<ItemData> merchantItems;
+    public List<ItemData> armouryItems;
 }

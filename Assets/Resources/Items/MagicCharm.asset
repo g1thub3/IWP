@@ -16,5 +16,7 @@ MonoBehaviour:
   itemDescription: Increases magic attack by 10 when held.
   itemSprite: {fileID: 96007641928467070, guid: 716e245fa9958394db1e00417c17a46f, type: 3}
   isConsumable: 0
+  ShopPrice: 1500
+  SellValue: 500
   amount: 10
   toChange: 2

@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: AdventurerMeal
   m_EditorClassIdentifier: 
   itemName: Adventurer Meal
-  itemDescription: Replenishes 50 hunger.
+  itemDescription: Replenishes 300 hunger.
   itemSprite: {fileID: 5325014006326161429, guid: 93f6e3d7d6e9aa4488ebf90cea64f36f, type: 3}
   isConsumable: 1
-  amount: 50
+  ShopPrice: 100
+  SellValue: 50
+  amount: 300
   toReplenish: 1

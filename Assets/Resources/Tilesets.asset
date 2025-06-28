@@ -33,3 +33,13 @@ MonoBehaviour:
   - tileSprite: {fileID: 556922540119661293, guid: 613148a29f90d0a428ee215b4bc1c950, type: 3}
     floorColour: {r: 0.49698105, g: 0.5133498, b: 0.5999999, a: 1}
     wallColour: {r: 0.2589035, g: 0.27306348, b: 0.3509434, a: 1}
+  merchantItems:
+  - {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
+  - {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+  - {fileID: 11400000, guid: be6d248d1384dec40a0004f937ba30a3, type: 2}
+  - {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
+  armouryItems:
+  - {fileID: 11400000, guid: f3fbf8d9acefa3442a50e2a5a1cbd106, type: 2}
+  - {fileID: 11400000, guid: 0b88ded5bce88ad429d4e59fb1e48b93, type: 2}
+  - {fileID: 11400000, guid: a6647c01dee3f554f9094573586c68b4, type: 2}
+  - {fileID: 11400000, guid: d73f3ba58c91f2544ad48f356e0aa8de, type: 2}

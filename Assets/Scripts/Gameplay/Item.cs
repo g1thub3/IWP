@@ -7,7 +7,8 @@ public abstract class ItemData : ScriptableObject
     public string itemDescription;
     public Sprite itemSprite;
     public bool isConsumable;
-
+    public int ShopPrice;
+    public int SellValue;
     public virtual void ApplyEffect(CharacterEntry holder) { }
     public virtual void RemoveEffect(CharacterEntry holder) { }
     public virtual void Use(CharacterBehaviour user) { }

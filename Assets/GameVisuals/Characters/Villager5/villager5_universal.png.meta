@@ -1,0 +1,5380 @@
+fileFormatVersion: 2
+guid: a7e6ca575db755940bcba476c4298621
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7128241377226265883
+    second: villager5_universal_0
+  - first:
+      213: 7147645264397401779
+    second: villager5_universal_1
+  - first:
+      213: 2639722048282997907
+    second: villager5_universal_2
+  - first:
+      213: -3765701504261912467
+    second: villager5_universal_3
+  - first:
+      213: -6229547304371536763
+    second: villager5_universal_4
+  - first:
+      213: 8570054939351780066
+    second: villager5_universal_5
+  - first:
+      213: 8573796609567961423
+    second: villager5_universal_6
+  - first:
+      213: -3150009047029572936
+    second: villager5_universal_7
+  - first:
+      213: 4437189780515028913
+    second: villager5_universal_8
+  - first:
+      213: -1723845519241254139
+    second: villager5_universal_9
+  - first:
+      213: 7320614081009632743
+    second: villager5_universal_10
+  - first:
+      213: -4732490236801526988
+    second: villager5_universal_11
+  - first:
+      213: 1265349083205101263
+    second: villager5_universal_12
+  - first:
+      213: -1937368947102423189
+    second: villager5_universal_13
+  - first:
+      213: -7381192786031702578
+    second: villager5_universal_14
+  - first:
+      213: -4699895040775739507
+    second: villager5_universal_15
+  - first:
+      213: 597203331130259791
+    second: villager5_universal_16
+  - first:
+      213: 2520804821019569533
+    second: villager5_universal_17
+  - first:
+      213: -9097861965144754668
+    second: villager5_universal_18
+  - first:
+      213: 847440847450616418
+    second: villager5_universal_19
+  - first:
+      213: 3543761865966400010
+    second: villager5_universal_20
+  - first:
+      213: -3220903358405626656
+    second: villager5_universal_21
+  - first:
+      213: 585525209308135110
+    second: villager5_universal_22
+  - first:
+      213: 4192655987524210512
+    second: villager5_universal_23
+  - first:
+      213: 7415828641027529300
+    second: villager5_universal_24
+  - first:
+      213: 158127115669850140
+    second: villager5_universal_25
+  - first:
+      213: -8592008052814174909
+    second: villager5_universal_26
+  - first:
+      213: 6622333862384350029
+    second: villager5_universal_27
+  - first:
+      213: 2054351976147323346
+    second: villager5_universal_28
+  - first:
+      213: 3172679719565147176
+    second: villager5_universal_29
+  - first:
+      213: 3456525642218730623
+    second: villager5_universal_30
+  - first:
+      213: 3207258460516127792
+    second: villager5_universal_31
+  - first:
+      213: 4579022435169338205
+    second: villager5_universal_32
+  - first:
+      213: 817020037145934723
+    second: villager5_universal_33
+  - first:
+      213: 8019274292765803111
+    second: villager5_universal_34
+  - first:
+      213: 7091179285411765132
+    second: villager5_universal_35
+  - first:
+      213: -7237726464066562276
+    second: villager5_universal_36
+  - first:
+      213: 14334023923075525
+    second: villager5_universal_37
+  - first:
+      213: -8387641774263188061
+    second: villager5_universal_38
+  - first:
+      213: 6244502737725516607
+    second: villager5_universal_39
+  - first:
+      213: -4950760370582761601
+    second: villager5_universal_40
+  - first:
+      213: -1254069667217090722
+    second: villager5_universal_41
+  - first:
+      213: 2610027532779915071
+    second: villager5_universal_42
+  - first:
+      213: 3854903744141352003
+    second: villager5_universal_43
+  - first:
+      213: 3051869520187862205
+    second: villager5_universal_44
+  - first:
+      213: 8014249521728560853
+    second: villager5_universal_45
+  - first:
+      213: -6162020044815826902
+    second: villager5_universal_46
+  - first:
+      213: 804064066736125030
+    second: villager5_universal_47
+  - first:
+      213: 2751009947147035960
+    second: villager5_universal_48
+  - first:
+      213: -3502988972629645687
+    second: villager5_universal_49
+  - first:
+      213: -2709052451970078354
+    second: villager5_universal_50
+  - first:
+      213: -4170254680046853640
+    second: villager5_universal_51
+  - first:
+      213: -2647306041265241503
+    second: villager5_universal_52
+  - first:
+      213: 8319262563068255555
+    second: villager5_universal_53
+  - first:
+      213: 8797135088388814198
+    second: villager5_universal_54
+  - first:
+      213: 7021767358903527709
+    second: villager5_universal_55
+  - first:
+      213: 8736246252302010465
+    second: villager5_universal_56
+  - first:
+      213: 5576666513360628685
+    second: villager5_universal_57
+  - first:
+      213: -4199619003759102967
+    second: villager5_universal_58
+  - first:
+      213: -4907191387762614651
+    second: villager5_universal_59
+  - first:
+      213: -5071734822678927435
+    second: villager5_universal_60
+  - first:
+      213: -4196379585209017882
+    second: villager5_universal_61
+  - first:
+      213: 8871126390038841492
+    second: villager5_universal_62
+  - first:
+      213: 7752767088748915926
+    second: villager5_universal_63
+  - first:
+      213: -7279304798751529225
+    second: villager5_universal_64
+  - first:
+      213: 5189845494430333378
+    second: villager5_universal_65
+  - first:
+      213: -2953125981271289903
+    second: villager5_universal_66
+  - first:
+      213: -9029373102711086226
+    second: villager5_universal_67
+  - first:
+      213: -6561206448706262186
+    second: villager5_universal_68
+  - first:
+      213: -6983830365558723884
+    second: villager5_universal_69
+  - first:
+      213: 395518661144048962
+    second: villager5_universal_70
+  - first:
+      213: -5606372728584400891
+    second: villager5_universal_71
+  - first:
+      213: -7368092909205463633
+    second: villager5_universal_72
+  - first:
+      213: 187184492150144720
+    second: villager5_universal_73
+  - first:
+      213: 5661483413847029868
+    second: villager5_universal_74
+  - first:
+      213: 5187412912674529150
+    second: villager5_universal_75
+  - first:
+      213: -6783370857112127828
+    second: villager5_universal_76
+  - first:
+      213: -1919640665633591753
+    second: villager5_universal_77
+  - first:
+      213: -3193754465778180055
+    second: villager5_universal_78
+  - first:
+      213: -4559459012673053216
+    second: villager5_universal_79
+  - first:
+      213: 7620610089803362668
+    second: villager5_universal_80
+  - first:
+      213: 1955425520109162942
+    second: villager5_universal_81
+  - first:
+      213: -6107895292227112681
+    second: villager5_universal_82
+  - first:
+      213: 815765812429130357
+    second: villager5_universal_83
+  - first:
+      213: -2453730680830191512
+    second: villager5_universal_84
+  - first:
+      213: 3971438998145815759
+    second: villager5_universal_85
+  - first:
+      213: 4220506264906580826
+    second: villager5_universal_86
+  - first:
+      213: -6411318544639615811
+    second: villager5_universal_87
+  - first:
+      213: 2966819239030321846
+    second: villager5_universal_88
+  - first:
+      213: -1568003611291869248
+    second: villager5_universal_89
+  - first:
+      213: -758019679727316185
+    second: villager5_universal_90
+  - first:
+      213: 7566147855563529214
+    second: villager5_universal_91
+  - first:
+      213: 3268090322052615339
+    second: villager5_universal_92
+  - first:
+      213: -5533382839368499030
+    second: villager5_universal_93
+  - first:
+      213: -5478962941161689851
+    second: villager5_universal_94
+  - first:
+      213: 1278124230307116315
+    second: villager5_universal_95
+  - first:
+      213: -2239637981806526563
+    second: villager5_universal_96
+  - first:
+      213: 2111238814865763583
+    second: villager5_universal_97
+  - first:
+      213: 2627027533790909362
+    second: villager5_universal_98
+  - first:
+      213: 87137960649763967
+    second: villager5_universal_99
+  - first:
+      213: -6273147872010072705
+    second: villager5_universal_100
+  - first:
+      213: -8772656405298550372
+    second: villager5_universal_101
+  - first:
+      213: -411099943552405533
+    second: villager5_universal_102
+  - first:
+      213: -8862387660541571270
+    second: villager5_universal_103
+  - first:
+      213: -5312797312346861087
+    second: villager5_universal_104
+  - first:
+      213: 3226918871337867265
+    second: villager5_universal_105
+  - first:
+      213: 6727133950641289117
+    second: villager5_universal_106
+  - first:
+      213: -8467933373738041246
+    second: villager5_universal_107
+  - first:
+      213: -4526336219098381136
+    second: villager5_universal_108
+  - first:
+      213: 1270663998635239936
+    second: villager5_universal_109
+  - first:
+      213: -2185301721204906911
+    second: villager5_universal_110
+  - first:
+      213: -8633817382054505103
+    second: villager5_universal_111
+  - first:
+      213: -8427557834979417581
+    second: villager5_universal_112
+  - first:
+      213: -8589017815350452402
+    second: villager5_universal_113
+  - first:
+      213: -5536355757118182801
+    second: villager5_universal_114
+  - first:
+      213: -7943755465522746044
+    second: villager5_universal_115
+  - first:
+      213: -5139280538240222089
+    second: villager5_universal_116
+  - first:
+      213: 1632864598854714583
+    second: villager5_universal_117
+  - first:
+      213: -4155511451472952496
+    second: villager5_universal_118
+  - first:
+      213: 1693197747492273033
+    second: villager5_universal_119
+  - first:
+      213: 5171884124797393222
+    second: villager5_universal_120
+  - first:
+      213: 1239860670547473196
+    second: villager5_universal_121
+  - first:
+      213: -5851246607279419690
+    second: villager5_universal_122
+  - first:
+      213: -891662093513619713
+    second: villager5_universal_123
+  - first:
+      213: -2194213592724660778
+    second: villager5_universal_124
+  - first:
+      213: 5582129191704135524
+    second: villager5_universal_125
+  - first:
+      213: 4771587154215127841
+    second: villager5_universal_126
+  - first:
+      213: 7996674577204305097
+    second: villager5_universal_127
+  - first:
+      213: -4574366940869561489
+    second: villager5_universal_128
+  - first:
+      213: -5793838361309521224
+    second: villager5_universal_129
+  - first:
+      213: 3916926315567296738
+    second: villager5_universal_130
+  - first:
+      213: 6010614624049162494
+    second: villager5_universal_131
+  - first:
+      213: 6028449559497891900
+    second: villager5_universal_132
+  - first:
+      213: 3711457654371080286
+    second: villager5_universal_133
+  - first:
+      213: 6239960038476249004
+    second: villager5_universal_134
+  - first:
+      213: -8390472395566614850
+    second: villager5_universal_135
+  - first:
+      213: -6607849919738366341
+    second: villager5_universal_136
+  - first:
+      213: -860949566987745911
+    second: villager5_universal_137
+  - first:
+      213: 9132077497527098862
+    second: villager5_universal_138
+  - first:
+      213: 3418456982284973830
+    second: villager5_universal_139
+  - first:
+      213: -4300259234040900001
+    second: villager5_universal_140
+  - first:
+      213: -8865290881932862709
+    second: villager5_universal_141
+  - first:
+      213: -8106712628032376023
+    second: villager5_universal_142
+  - first:
+      213: 1187600309802896157
+    second: villager5_universal_143
+  - first:
+      213: 1919129375760765388
+    second: villager5_universal_144
+  - first:
+      213: 8903385152112405625
+    second: villager5_universal_145
+  - first:
+      213: 3040756490701438206
+    second: villager5_universal_146
+  - first:
+      213: -693696103275820769
+    second: villager5_universal_147
+  - first:
+      213: 4683628574078736582
+    second: villager5_universal_148
+  - first:
+      213: 8159630219879470205
+    second: villager5_universal_149
+  - first:
+      213: 1662965753178503643
+    second: villager5_universal_150
+  - first:
+      213: 1114540539032191975
+    second: villager5_universal_151
+  - first:
+      213: -2308551774449063413
+    second: villager5_universal_152
+  - first:
+      213: -1532037464638616600
+    second: villager5_universal_153
+  - first:
+      213: -2378640598472885839
+    second: villager5_universal_154
+  - first:
+      213: 6529711778520896268
+    second: villager5_universal_155
+  - first:
+      213: 6407825019488948666
+    second: villager5_universal_156
+  - first:
+      213: 8328761239378191077
+    second: villager5_universal_157
+  - first:
+      213: 831539690606104192
+    second: villager5_universal_158
+  - first:
+      213: -5237354494151553640
+    second: villager5_universal_159
+  - first:
+      213: -556926563059613785
+    second: villager5_universal_160
+  - first:
+      213: 5256515190706873628
+    second: villager5_universal_161
+  - first:
+      213: 8339286487403946429
+    second: villager5_universal_162
+  - first:
+      213: 2675337513251345135
+    second: villager5_universal_163
+  - first:
+      213: -8900104730396352325
+    second: villager5_universal_164
+  - first:
+      213: 1722825071585308229
+    second: villager5_universal_165
+  - first:
+      213: 3191076763823782767
+    second: villager5_universal_166
+  - first:
+      213: -4969640760036181237
+    second: villager5_universal_167
+  - first:
+      213: -3176701259069369880
+    second: villager5_universal_168
+  - first:
+      213: -7249793876759877953
+    second: villager5_universal_169
+  - first:
+      213: -8065795532725450941
+    second: villager5_universal_170
+  - first:
+      213: -6835460779537431563
+    second: villager5_universal_171
+  - first:
+      213: 1927919124549187460
+    second: villager5_universal_172
+  - first:
+      213: 7653692111098771063
+    second: villager5_universal_173
+  - first:
+      213: 1388325051039310114
+    second: villager5_universal_174
+  - first:
+      213: 3725795980834657512
+    second: villager5_universal_175
+  - first:
+      213: 1073411663593264163
+    second: villager5_universal_176
+  - first:
+      213: -7918929393039924593
+    second: villager5_universal_177
+  - first:
+      213: -6013779655886708640
+    second: villager5_universal_178
+  - first:
+      213: -7976733531761997137
+    second: villager5_universal_179
+  - first:
+      213: 9214324405831054680
+    second: villager5_universal_180
+  - first:
+      213: -6543211183356920358
+    second: villager5_universal_181
+  - first:
+      213: 8914766354444636052
+    second: villager5_universal_182
+  - first:
+      213: 3029925205201184772
+    second: villager5_universal_183
+  - first:
+      213: -8109300550538062271
+    second: villager5_universal_184
+  - first:
+      213: -1092533716836632064
+    second: villager5_universal_185
+  - first:
+      213: 2877676983862204489
+    second: villager5_universal_186
+  - first:
+      213: -1118641297446692720
+    second: villager5_universal_187
+  - first:
+      213: -4543664078288543632
+    second: villager5_universal_188
+  - first:
+      213: 3833335415325886241
+    second: villager5_universal_189
+  - first:
+      213: -2072701678497715795
+    second: villager5_universal_190
+  - first:
+      213: -4090909996579367024
+    second: villager5_universal_191
+  - first:
+      213: -949122962228809288
+    second: villager5_universal_192
+  - first:
+      213: -3210047832245880034
+    second: villager5_universal_193
+  - first:
+      213: 2975843247427654006
+    second: villager5_universal_194
+  - first:
+      213: 208877964363626351
+    second: villager5_universal_195
+  - first:
+      213: -2279871729714977660
+    second: villager5_universal_196
+  - first:
+      213: -4693163485427228534
+    second: villager5_universal_197
+  - first:
+      213: 5324422278640893634
+    second: villager5_universal_198
+  - first:
+      213: -3102255752130784359
+    second: villager5_universal_199
+  - first:
+      213: -6975445890402791031
+    second: villager5_universal_200
+  - first:
+      213: 8024717021871808840
+    second: villager5_universal_201
+  - first:
+      213: 8535274852173961720
+    second: villager5_universal_202
+  - first:
+      213: -1115214269806970064
+    second: villager5_universal_203
+  - first:
+      213: -4767839699033013620
+    second: villager5_universal_204
+  - first:
+      213: -684722602168173368
+    second: villager5_universal_205
+  - first:
+      213: 5985974207465620531
+    second: villager5_universal_206
+  - first:
+      213: 1382131671131947599
+    second: villager5_universal_207
+  - first:
+      213: 6510844569105565902
+    second: villager5_universal_208
+  - first:
+      213: 547112735089598431
+    second: villager5_universal_209
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: villager5_universal_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1279
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1510daf3c99ce260800000000000000
+      internalID: 7128241377226265883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1279
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bef8e48f79813360800000000000000
+      internalID: 7147645264397401779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1279
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 394bca1973d22a420800000000000000
+      internalID: 2639722048282997907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1279
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d688054fe6a8dbbc0800000000000000
+      internalID: -3765701504261912467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_4
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1279
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c31737bb33c89a0800000000000000
+      internalID: -6229547304371536763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_5
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1279
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea05adaf83fee670800000000000000
+      internalID: 8570054939351780066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1279
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f413fb9279e3cf670800000000000000
+      internalID: 8573796609567961423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1215
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba1980167be844d0800000000000000
+      internalID: -3150009047029572936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1215
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf779c9890149d30800000000000000
+      internalID: 4437189780515028913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1215
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50be9f132aba318e0800000000000000
+      internalID: -1723845519241254139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1215
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e54d4c68bb089560800000000000000
+      internalID: 7320614081009632743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_11
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1215
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433d0741431d25eb0800000000000000
+      internalID: -4732490236801526988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_12
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1215
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc66e4d794c6f8110800000000000000
+      internalID: 1265349083205101263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_13
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1215
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67661d05351d15e0800000000000000
+      internalID: -1937368947102423189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1151
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd87e1b44cb09990800000000000000
+      internalID: -7381192786031702578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1151
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8721fc8c5e96ceb0800000000000000
+      internalID: -4699895040775739507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1151
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49f2baf341b94800800000000000000
+      internalID: 597203331130259791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_17
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1151
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7da6f001a2bbf220800000000000000
+      internalID: 2520804821019569533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_18
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1151
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4167208ceb6edb180800000000000000
+      internalID: -9097861965144754668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_19
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1151
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2623378f5f6b2cb00800000000000000
+      internalID: 847440847450616418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1151
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02b08534a8fd2130800000000000000
+      internalID: 3543761865966400010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_21
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1087
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e4be5ae57d0d43d0800000000000000
+      internalID: -3220903358405626656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1087
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cef8db5314302800800000000000000
+      internalID: 585525209308135110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_23
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1087
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f8bc1386e4f2a30800000000000000
+      internalID: 4192655987524210512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_24
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1087
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a1d97bbd05ae660800000000000000
+      internalID: 7415828641027529300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_25
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1087
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18cbde16c7c13200800000000000000
+      internalID: 158127115669850140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_26
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1087
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34527b8c23e03c880800000000000000
+      internalID: -8592008052814174909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_27
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1087
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43b57baf8147eb50800000000000000
+      internalID: 6622333862384350029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1023
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d902e5ec36828c10800000000000000
+      internalID: 2054351976147323346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1023
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c34c6356f970c20800000000000000
+      internalID: 3172679719565147176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_30
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1023
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74f97512cb08ff20800000000000000
+      internalID: 3456525642218730623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_31
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1023
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0341ee9b398728c20800000000000000
+      internalID: 3207258460516127792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_32
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1023
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5300d2e4a4fb8f30800000000000000
+      internalID: 4579022435169338205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_33
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1023
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38bb5702563a65b00800000000000000
+      internalID: 817020037145934723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_34
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1023
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7624ab83b7f2a4f60800000000000000
+      internalID: 8019274292765803111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_35
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1023
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b93994dfde86260800000000000000
+      internalID: 7091179285411765132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_36
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 959
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c175ed7c02e6e8b90800000000000000
+      internalID: -7237726464066562276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_37
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 959
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9032408bce23000800000000000000
+      internalID: 14334023923075525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_38
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 959
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a5c0d5fe3c199b80800000000000000
+      internalID: -8387641774263188061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_39
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 959
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b6519b72ee8a650800000000000000
+      internalID: 6244502737725516607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_40
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 959
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f45575cad5b4bb0800000000000000
+      internalID: -4950760370582761601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_41
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 959
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57dee13846a89ee0800000000000000
+      internalID: -1254069667217090722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_42
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 959
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f370659663ea83420800000000000000
+      internalID: 2610027532779915071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_43
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 959
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c5ed8f78e5f7530800000000000000
+      internalID: 3854903744141352003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 895
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbca3abb82b6a5a20800000000000000
+      internalID: 3051869520187862205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 895
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5de99fb8a75583f60800000000000000
+      internalID: 8014249521728560853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_46
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 895
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a208ae1ca6b1c7aa0800000000000000
+      internalID: -6162020044815826902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_47
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 896
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6647672320c982b00800000000000000
+      internalID: 804064066736125030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_48
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 895
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835e341b8fc8d2620800000000000000
+      internalID: 2751009947147035960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_49
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 895
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986ac4ac612e26fc0800000000000000
+      internalID: -3502988972629645687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_50
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 895
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e692c6ae523876ad0800000000000000
+      internalID: -2709052451970078354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_51
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 896
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1a5e4a6774026c0800000000000000
+      internalID: -4170254680046853640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_52
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 831
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162c3a67e21e24bd0800000000000000
+      internalID: -2647306041265241503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_53
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 831
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34d93e84935f37370800000000000000
+      internalID: 8319262563068255555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_54
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 831
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6753a80f0c3b51a70800000000000000
+      internalID: 8797135088388814198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_55
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 831
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19a0e2c534527160800000000000000
+      internalID: 7021767358903527709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_56
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 831
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1688cca0ea16d3970800000000000000
+      internalID: 8736246252302010465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_57
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 831
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb2dafb5ac446d40800000000000000
+      internalID: 5576666513360628685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_58
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 831
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90475f044c4f7b5c0800000000000000
+      internalID: -4199619003759102967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_59
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 831
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e9d87ae6726ebb0800000000000000
+      internalID: -4907191387762614651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_60
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 767
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b76e3bcc049d99b0800000000000000
+      internalID: -5071734822678927435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_61
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 767
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e95ae8200773c5c0800000000000000
+      internalID: -4196379585209017882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_62
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 767
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 498cbd353729c1b70800000000000000
+      internalID: 8871126390038841492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_63
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 767
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dce73f579c579b60800000000000000
+      internalID: 7752767088748915926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_64
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 767
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f66e9a5ad6bafa90800000000000000
+      internalID: -7279304798751529225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_65
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 767
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c97eaeeaf8060840800000000000000
+      internalID: 5189845494430333378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_66
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 767
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df095df0936407d0800000000000000
+      internalID: -2953125981271289903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_67
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 767
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e636074b00931b280800000000000000
+      internalID: -9029373102711086226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_68
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 767
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b6cd66f79e1f4a0800000000000000
+      internalID: -6561206448706262186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_69
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 767
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da2941d843741f90800000000000000
+      internalID: -6983830365558723884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_70
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 767
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2457783702a2d7500800000000000000
+      internalID: 395518661144048962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_71
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 703
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5001a4a05b92232b0800000000000000
+      internalID: -5606372728584400891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_72
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 703
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faddbb279864fb990800000000000000
+      internalID: -7368092909205463633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_73
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 703
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de321acd43099200800000000000000
+      internalID: 187184492150144720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_74
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 703
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c683e184b21a19e40800000000000000
+      internalID: 5661483413847029868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_75
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 703
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f5d3b5f846df740800000000000000
+      internalID: 5187412912674529150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_76
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 703
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca638123520acd1a0800000000000000
+      internalID: -6783370857112127828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_77
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 703
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ee38c3cf01c55e0800000000000000
+      internalID: -1919640665633591753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_78
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 703
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920697f0c318da3d0800000000000000
+      internalID: -3193754465778180055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_79
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 703
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed5bad5f2c89b0c0800000000000000
+      internalID: -4559459012673053216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_80
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 703
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61bc7e3088d1c960800000000000000
+      internalID: 7620610089803362668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_81
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 703
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb117d67621132b10800000000000000
+      internalID: 1955425520109162942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_82
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 639
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 711b58db7956c3ba0800000000000000
+      internalID: -6107895292227112681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_83
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 639
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a0fbd2fae225b00800000000000000
+      internalID: 815765812429130357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_84
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 639
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86893aa32f892fdd0800000000000000
+      internalID: -2453730680830191512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_85
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 639
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc45d9b2ab26d1730800000000000000
+      internalID: 3971438998145815759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_86
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 639
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5341143610429a30800000000000000
+      internalID: 4220506264906580826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_87
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 639
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc91e490cb6607a0800000000000000
+      internalID: -6411318544639615811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_88
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 639
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2723701624c2920800000000000000
+      internalID: 2966819239030321846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_89
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 639
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf1b6ee5055d3ae0800000000000000
+      internalID: -1568003611291869248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_90
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 639
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72319111e19fa75f0800000000000000
+      internalID: -758019679727316185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_91
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 639
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb92f0336b500960800000000000000
+      internalID: 7566147855563529214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_92
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 639
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac86d335d69a5d20800000000000000
+      internalID: 3268090322052615339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_93
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 575
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0c23def997533b0800000000000000
+      internalID: -5533382839368499030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_94
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 575
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d278adb30d6f3b0800000000000000
+      internalID: -5478962941161689851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_95
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 575
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b157646373fccb110800000000000000
+      internalID: 1278124230307116315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_96
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 575
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ff2f42f153be0e0800000000000000
+      internalID: -2239637981806526563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_97
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 575
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc271c2480ac4d10800000000000000
+      internalID: 2111238814865763583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_98
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 575
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b317c69f93157420800000000000000
+      internalID: 2627027533790909362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_99
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 575
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c2bf67383953100800000000000000
+      internalID: 87137960649763967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_100
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 575
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d87593f3d41f8a0800000000000000
+      internalID: -6273147872010072705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_101
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 575
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99ef999a73414680800000000000000
+      internalID: -8772656405298550372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_102
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 575
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef206987ca7b4af0800000000000000
+      internalID: -411099943552405533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_103
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 575
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f4d9fa069720580800000000000000
+      internalID: -8862387660541571270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_104
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 511
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e15ae92ef62546b0800000000000000
+      internalID: -5312797312346861087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_105
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 511
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1081915dd9158cc20800000000000000
+      internalID: 3226918871337867265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_106
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 511
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d97b17cafa49b5d50800000000000000
+      internalID: 6727133950641289117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_107
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 511
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2604bac267bdb7a80800000000000000
+      internalID: -8467933373738041246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_108
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 511
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b408a6b0393f21c0800000000000000
+      internalID: -4526336219098381136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_109
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 511
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ae78bac2e42a110800000000000000
+      internalID: 1270663998635239936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_110
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 511
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164288ca9af3ca1e0800000000000000
+      internalID: -2185301721204906911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_111
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 511
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1755c0fb5d48e2880800000000000000
+      internalID: -8633817382054505103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_112
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 511
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 312edf9dccc4b0b80800000000000000
+      internalID: -8427557834979417581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_113
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 511
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4fd882bdcdadc880800000000000000
+      internalID: -8589017815350452402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_114
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 511
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a28c295c9ea23b0800000000000000
+      internalID: -5536355757118182801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_115
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 511
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44de2feed7c12c190800000000000000
+      internalID: -7943755465522746044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_116
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 447
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77cfc1d549b9da8b0800000000000000
+      internalID: -5139280538240222089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_117
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 447
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4cb0d83b919a610800000000000000
+      internalID: 1632864598854714583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_118
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 447
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05303ea0a58a456c0800000000000000
+      internalID: -4155511451472952496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_119
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 447
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98bb4c161627f7710800000000000000
+      internalID: 1693197747492273033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_120
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 447
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 649d70ea53936c740800000000000000
+      internalID: 5171884124797393222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_121
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 447
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23b5f6f5bed43110800000000000000
+      internalID: 1239860670547473196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_122
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 447
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de86ef36323ccea0800000000000000
+      internalID: -5851246607279419690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_123
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 447
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff68078dc0e20a3f0800000000000000
+      internalID: -891662093513619713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_124
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 447
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd1054ec569c81e0800000000000000
+      internalID: -2194213592724660778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_125
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 447
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4670dd9ace4b77d40800000000000000
+      internalID: 5582129191704135524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_126
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 447
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b4fcd5c35183240800000000000000
+      internalID: 4771587154215127841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_127
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 447
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ccd8a6e825e9fe60800000000000000
+      internalID: 7996674577204305097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_128
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 383
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63fd29d0859480c0800000000000000
+      internalID: -4574366940869561489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_129
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 383
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba5d1c15b6289fa0800000000000000
+      internalID: -5793838361309521224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_130
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 383
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0b4c23bb7bb5630800000000000000
+      internalID: 3916926315567296738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_131
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 383
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8e73ca72ef96350800000000000000
+      internalID: 6010614624049162494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_132
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 383
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c306b3c2fea59a350800000000000000
+      internalID: 6028449559497891900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_133
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 383
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5851bf821fb18330800000000000000
+      internalID: 3711457654371080286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_134
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 383
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca77202289ac89650800000000000000
+      internalID: 6239960038476249004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_135
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 383
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6f7849fcd0f8b80800000000000000
+      internalID: -8390472395566614850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_136
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 383
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76b6e402833c44a0800000000000000
+      internalID: -6607849919738366341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_137
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 383
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9854b2a2eea4d04f0800000000000000
+      internalID: -860949566987745911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_138
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 383
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eedd075a918abbe70800000000000000
+      internalID: 9132077497527098862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_139
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 383
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607bc0d738cc07f20800000000000000
+      internalID: 3418456982284973830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_140
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 319
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5616e8a2096254c0800000000000000
+      internalID: -4300259234040900001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_141
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 319
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0bd1e7c9e828f480800000000000000
+      internalID: -8865290881932862709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_142
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 319
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923f4f5e0db2f7f80800000000000000
+      internalID: -8106712628032376023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_143
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 319
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b02f880343b7010800000000000000
+      internalID: 1187600309802896157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_144
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 319
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1dc30dffd12aa10800000000000000
+      internalID: 1919129375760765388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_145
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 319
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ca52aaf9d2f8b70800000000000000
+      internalID: 8903385152112405625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_146
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 319
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efcf8bceaefe23a20800000000000000
+      internalID: 3040756490701438206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_147
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 319
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f190c26c11f7f56f0800000000000000
+      internalID: -693696103275820769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_148
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 319
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c815d98f579ff040800000000000000
+      internalID: 4683628574078736582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_149
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 319
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7455721474dc3170800000000000000
+      internalID: 8159630219879470205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_150
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 319
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd938dfaa8a041710800000000000000
+      internalID: 1662965753178503643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_151
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 319
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e349c417b4a77f00800000000000000
+      internalID: 1114540539032191975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_152
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0aad52746066ffd0800000000000000
+      internalID: -2308551774449063413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_153
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb00a10b0c1dbae0800000000000000
+      internalID: -1532037464638616600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_154
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b973bf6afe5dfed0800000000000000
+      internalID: -2378640598472885839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_155
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c031c6444423e9a50800000000000000
+      internalID: 6529711778520896268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_156
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 255
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1df75b7ea2de850800000000000000
+      internalID: 6407825019488948666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_157
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 255
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2ed243834b59370800000000000000
+      internalID: 8328761239378191077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_158
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 255
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e073361f83a8b00800000000000000
+      internalID: 831539690606104192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_159
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 255
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d0d4516dd2157b0800000000000000
+      internalID: -5237354494151553640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_160
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 255
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af3adadd366548f0800000000000000
+      internalID: -556926563059613785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_161
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 255
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c15278a37b4e2f840800000000000000
+      internalID: 5256515190706873628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_162
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db16de970e81bb370800000000000000
+      internalID: 8339286487403946429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_163
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe29f933b45b02520800000000000000
+      internalID: 2675337513251345135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_164
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb0a3f807e97c7480800000000000000
+      internalID: -8900104730396352325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_165
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 191
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54eaaf15644b8e710800000000000000
+      internalID: 1722825071585308229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_166
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 191
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b38bed86bf84c20800000000000000
+      internalID: 3191076763823782767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_167
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 191
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0bbdbc1f0a480bb0800000000000000
+      internalID: -4969640760036181237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_168
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 191
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e152a729071ae3d0800000000000000
+      internalID: -3176701259069369880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_169
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 191
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6ece051ee836b90800000000000000
+      internalID: -7249793876759877953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_170
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 191
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34787f882b9801090800000000000000
+      internalID: -8065795532725450941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_171
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 191
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f38e8703a09321a0800000000000000
+      internalID: -6835460779537431563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_172
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 191
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487bf6eaa3851ca10800000000000000
+      internalID: 1927919124549187460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_173
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 191
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776704e8c60673a60800000000000000
+      internalID: 7653692111098771063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_174
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 191
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22169fb3742544310800000000000000
+      internalID: 1388325051039310114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_175
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 191
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e45a3754bfa4b330800000000000000
+      internalID: 3725795980834657512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_176
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 191
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324dc3a883685ee00800000000000000
+      internalID: 1073411663593264163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_177
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 191
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82a47e5caf4a1290800000000000000
+      internalID: -7918929393039924593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_178
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 127
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060e66de343ca8ca0800000000000000
+      internalID: -6013779655886708640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_179
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 127
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa016b8d13fc4190800000000000000
+      internalID: -7976733531761997137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_180
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 127
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855b5ce3a3bdfdf70800000000000000
+      internalID: 9214324405831054680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_181
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 127
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: addb5ad9818d135a0800000000000000
+      internalID: -6543211183356920358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_182
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 127
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49fc64454cc97bb70800000000000000
+      internalID: 8914766354444636052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_183
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 127
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 408e400cbe47c0a20800000000000000
+      internalID: 3029925205201184772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_184
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 127
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1469c4c3d1af57f80800000000000000
+      internalID: -8109300550538062271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_185
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 127
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ab0de7f5a86d0f0800000000000000
+      internalID: -1092533716836632064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_186
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 127
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9489c6168ff8fe720800000000000000
+      internalID: 2877676983862204489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_187
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 127
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0989b92baa9c970f0800000000000000
+      internalID: -1118641297446692720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_188
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 127
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070a8ea1899a1f0c0800000000000000
+      internalID: -4543664078288543632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_189
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 127
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1278c67104eb23530800000000000000
+      internalID: 3833335415325886241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_190
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 127
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9a9c71ec84c33e0800000000000000
+      internalID: -2072701678497715795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_191
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 63
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 097dacd580b2a37c0800000000000000
+      internalID: -4090909996579367024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_192
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 63
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b17f2cc1b904d2f0800000000000000
+      internalID: -949122962228809288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_193
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 63
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bb8fe018e9373d0800000000000000
+      internalID: -3210047832245880034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_194
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 63
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6719b26baa15c4920800000000000000
+      internalID: 2975843247427654006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_195
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 63
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67fc43e66516e200800000000000000
+      internalID: 208877964363626351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_196
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 63
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48422e8bdb44c50e0800000000000000
+      internalID: -2279871729714977660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_197
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 63
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80a64aeca88edeb0800000000000000
+      internalID: -4693163485427228534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_198
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 63
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cef0983ad524e940800000000000000
+      internalID: 5324422278640893634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_199
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 63
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99315d374d292f4d0800000000000000
+      internalID: -3102255752130784359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_200
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 63
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98155909bec323f90800000000000000
+      internalID: -6975445890402791031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_201
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 63
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84123b75d958d5f60800000000000000
+      internalID: 8024717021871808840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_202
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 63
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f957289143637670800000000000000
+      internalID: 8535274852173961720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_203
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 63
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b75bfb786f580f0800000000000000
+      internalID: -1115214269806970064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_204
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82c1290e0b35ddb0800000000000000
+      internalID: -4767839699033013620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_205
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ccb510db606f76f0800000000000000
+      internalID: -684722602168173368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_206
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33483ae93d3721350800000000000000
+      internalID: 5985974207465620531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_207
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4203aa9e615e2310800000000000000
+      internalID: 1382131671131947599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_208
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec88151c3aa2b5a50800000000000000
+      internalID: 6510844569105565902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villager5_universal_209
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf9b13422cb79700800000000000000
+      internalID: 547112735089598431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

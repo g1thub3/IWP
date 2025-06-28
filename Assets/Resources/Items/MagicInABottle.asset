@@ -16,5 +16,7 @@ MonoBehaviour:
   itemDescription: Restores 75 Mana.
   itemSprite: {fileID: -565166018588600098, guid: 92683eb4585175c4fb6e81ef2474511f, type: 3}
   isConsumable: 1
+  ShopPrice: 100
+  SellValue: 50
   amount: 75
   toReplenish: 3

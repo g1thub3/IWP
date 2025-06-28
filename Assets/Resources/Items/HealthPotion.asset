@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: HealthPotion
   m_EditorClassIdentifier: 
   itemName: Health Potion
-  itemDescription: Heals for 20 HP.
+  itemDescription: Heals for 150 HP.
   itemSprite: {fileID: 8660236739610685244, guid: 27ce598448e68c44e83cff441c602be8, type: 3}
   isConsumable: 1
-  amount: 20
+  ShopPrice: 100
+  SellValue: 50
+  amount: 150
   toReplenish: 0

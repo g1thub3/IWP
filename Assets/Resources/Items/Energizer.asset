@@ -16,5 +16,7 @@ MonoBehaviour:
   itemDescription: Restores 50 Energy.
   itemSprite: {fileID: 8022892658418099552, guid: 92683eb4585175c4fb6e81ef2474511f, type: 3}
   isConsumable: 1
+  ShopPrice: 125
+  SellValue: 50
   amount: 50
   toReplenish: 2

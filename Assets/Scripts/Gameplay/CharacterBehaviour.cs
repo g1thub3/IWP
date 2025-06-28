@@ -84,6 +84,18 @@ public class CharacterBehaviour : MonoBehaviour
                 if (levelledUp.Count > 0)
                 {
                     GlobalCanvasManager.Instance.LevelUpHandler.LevelUpSequence(levelledUp, changes);
+                    if (levelledUp.Contains(GlobalGameManager.Instance.party[0]))
+                    {
+                        foreach (var entity in _dgGameManager.turnList)
+                        {
+                            if (entity is DGPlayer)
+                            {
+                                var plr = entity as DGPlayer;
+                                plr.OnLeaderLevelChanged.Invoke();
+                                break;
+                            }
+                        }
+                    }
                 }
             }
             _dgGameManager.RegisterRemoval(_entity);
@@ -289,5 +301,6 @@ public class CharacterBehaviour : MonoBehaviour
         _entity = GetComponent<DGEntity>();
         _dgGameManager = FindAnyObjectByType<DGGameManager>();
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
+        _dungeonUI.UpdateLeaderInfo();
     }
 }

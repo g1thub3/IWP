@@ -16,5 +16,7 @@ MonoBehaviour:
   itemDescription: Increases physical defense by 10 when held.
   itemSprite: {fileID: 3908677815742933047, guid: 716e245fa9958394db1e00417c17a46f, type: 3}
   isConsumable: 0
+  ShopPrice: 1000
+  SellValue: 250
   amount: 10
   toChange: 1
