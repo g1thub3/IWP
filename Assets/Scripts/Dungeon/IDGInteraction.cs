@@ -49,12 +49,7 @@ public class KeyDataList
     }
 }
 
-public abstract class DGInteraction : SingletonScriptableObject<DGInteraction>
+public interface IDGInteraction : IYieldable
 {
-    protected bool _interactionInProgress = false;
-    public bool InteractionInProgress
-    {
-        get { return _interactionInProgress; }
-    }
     public abstract bool Interact(DGEntity interacted, DGInteractable interactable, KeyDataList dataList); // Returns true if interaction was successful
 }

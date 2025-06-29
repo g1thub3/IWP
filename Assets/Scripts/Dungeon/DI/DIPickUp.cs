@@ -2,10 +2,13 @@ using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DIPickUp", menuName = "Dungeon Interactions/DIPickUp")]
-public class DIPickUp : DGInteraction
+public class DIPickUp : SingletonScriptableObject<DIPickUp>, IDGInteraction
 {
-
-    public override bool Interact(DGEntity interacted, DGInteractable interactable, KeyDataList dataList)
+    public bool IsInProgress()
+    {
+        return false;
+    }
+    public bool Interact(DGEntity interacted, DGInteractable interactable, KeyDataList dataList)
     {
         DGItemContainer container = interactable.GetComponent<DGItemContainer>();
         DungeonUIHandler ui = FindAnyObjectByType<DungeonUIHandler>();

@@ -228,7 +228,7 @@ public class BasicSeed : DGSeed
 
         FloorRoom selectedStaircaseRoom = floorData.rooms[Random.Range(0, floorData.rooms.Count)];
         var chosenTile = floorData.CoordToTileInfo(selectedStaircaseRoom.GetRandomCoordInRoom());
-        chosenTile.AddStructure(Tilesets.Instance.structureList.GetData("BasementStairs").Obj.GetComponent<DGInteractable>());
+        chosenTile.AddStructure(Tilesets.Instance.structureList.GetData("BasementStairs").Obj.GetComponent<DGInteractable>(), DINextFloor.Instance);
         floorData.stairs = chosenTile.structure;
 
         return floorData;

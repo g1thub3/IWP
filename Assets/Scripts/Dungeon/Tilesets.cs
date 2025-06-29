@@ -51,7 +51,7 @@ public class Tilesets : SingletonScriptableObject<Tilesets>
         newInteractable.GetComponent<DGItemContainer>().Item = data;
         return newInteractable;
     }
-    public GameObject ConstructStructure(DGInteraction interaction)
+    public GameObject ConstructStructure(IDGInteraction interaction)
     {
         var newInteractable = Instantiate(_structureTemplate);
         newInteractable.GetComponent<DGInteractable>().interaction = interaction;

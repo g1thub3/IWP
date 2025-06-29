@@ -123,10 +123,11 @@ public class TileInfo // Use CastEnum after doing FromJson
     public DGInteractable structure;
     public DGInteractable item;
     public DGEntity occupyingEntity;
-    public void AddStructure(DGInteractable newStructure)
+    public void AddStructure(DGInteractable newStructure, IDGInteraction interaction)
     {
         var newObj = Transform.Instantiate(newStructure.gameObject);
         structure = newObj.GetComponent<DGInteractable>();
+        structure.interaction = interaction;
         structure.Position = coord;
     }
 
@@ -134,7 +135,9 @@ public class TileInfo // Use CastEnum after doing FromJson
     public void AddItem(DGInteractable newItem)
     {
         item = newItem;
+        item.interaction = DIPickUp.Instance;
         item.Position = coord;
+        Debug.Log(item);
     }
 }
 

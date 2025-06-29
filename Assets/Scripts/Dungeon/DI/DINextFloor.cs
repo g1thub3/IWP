@@ -4,8 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DINextFloor", menuName = "Dungeon Interactions/DINextFloor")]
-public class DINextFloor : DGInteraction
+public class DINextFloor : SingletonScriptableObject<DINextFloor>, IDGInteraction
 {
+    public bool IsInProgress()
+    {
+        return GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress;
+    }
+
     private IEnumerator WaitForAnswer(PromptHandler p, DGGameManager receiver)
     {
         while (p.IsPromptInProgress)
@@ -17,9 +22,8 @@ public class DINextFloor : DGInteraction
             //progress floor
             receiver.ToNextFloor();
         }
-        _interactionInProgress = false;
     }
-    public override bool Interact(DGEntity interacted, DGInteractable interactable, KeyDataList dataList)
+    public bool Interact(DGEntity interacted, DGInteractable interactable, KeyDataList dataList)
     {
         DungeonUIHandler ui = FindAnyObjectByType<DungeonUIHandler>();
         DGGameManager receiver = FindAnyObjectByType<DGGameManager>();
@@ -46,7 +50,6 @@ public class DINextFloor : DGInteraction
         {
             return false;
         }
-        _interactionInProgress = true;
         DungeonFloor floorData = interacted.Floor;
         var p = GlobalCanvasManager.Instance.PromptHandler;
         if (receiver != null)

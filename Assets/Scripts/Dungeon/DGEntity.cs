@@ -68,7 +68,7 @@ public class DGEntity : DGObject
         if (tile.item != null)
         {
             tile.item.OnInteract(this, floor);
-            while (tile.item.interaction.InteractionInProgress)
+            while (tile.item.interaction.IsInProgress())
             {
                 yield return new WaitForEndOfFrame();
             }
@@ -76,13 +76,57 @@ public class DGEntity : DGObject
         if (tile.structure != null)
         {
             tile.structure.OnInteract(this, floor);
-            while (tile.structure.interaction.InteractionInProgress)
+            while (tile.structure.interaction.IsInProgress())
             {
                 yield return new WaitForEndOfFrame();
             }
         }
         _performingAction = false;
         _dungeonUI.UpdateMinimap();
+    }
+    
+    private IEnumerator InteractableYield(DGInteractable interacted)
+    {
+        _performingAction = true;
+        interacted.OnInteract(this, floor);
+        while (interacted.interaction.IsInProgress())
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        _performingAction = false;
+    }
+
+    public bool InteractAction()
+    {
+        TileInfo tile = floor.tiles[floor.CoordToIndex(position + faceDir)];
+        if (tile.item != null)
+        {
+            if (tile.item.CanInteractWithAction)
+            {
+                StartCoroutine(InteractableYield(tile.item));
+                return true;
+            }
+        }
+        if (tile.structure != null)
+        {
+            if (tile.structure.CanInteractWithAction)
+            {
+                StartCoroutine(InteractableYield(tile.structure));
+                return true;
+            }
+        }
+        if (tile.occupyingEntity != null)
+        {
+            if (tile.occupyingEntity.TryGetComponent<DGInteractable>(out DGInteractable interactable))
+            {
+                if (interactable.CanInteractWithAction)
+                {
+                    StartCoroutine(InteractableYield(interactable));
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public bool Move(int right, int up) // Limited movement

@@ -292,3 +292,42 @@ public class RetrievalQuest : QuestData
         return null;
     }
 }
+
+[System.Serializable]
+public class RescueQuest : QuestData
+{
+    public CharacterEntry ToRescue;
+    public RescueQuest()
+    {
+        ToRescue = CharacterEntry.Create(CharacterProfiles.Instance.GetRandomEnum(), 5);
+    }
+    public override DGObject Execute(DGGenerator dungeonGen)
+    {
+        // Place the item in the dungeon once floor entered
+        var newNPC = dungeonGen.SpawnNPC(ToRescue);
+        newNPC.GetComponent<DGNPC>().main = AIWander.Instance;
+        newNPC.GetComponent<CharacterBehaviour>().alliance = -1;
+        var interactable = newNPC.AddComponent<DGInteractable>();
+        interactable.DestroyOnInteract = false;
+        interactable.CanInteractWithAction = true;
+        interactable.interaction = DIRescue.Instance;
+        return newNPC.GetComponent<DGObject>();
+    }
+    public static Quest CheckCompletion(DGGameManager gameManager, CharacterEntry rescued)
+    {
+        for (int i = 0; i < gameManager.ActiveQuests.Count; i++)
+        {
+            RescueQuest rescueQuest = gameManager.ActiveQuests[i].quest as RescueQuest;
+            if (rescueQuest != null)
+            {
+                if (rescueQuest.ToRescue == rescued)
+                {
+                    var foundQuest = gameManager.ActiveQuests[i];
+                    foundQuest.quest.questCompleted = true;
+                    return foundQuest;
+                }
+            }
+        }
+        return null;
+    }
+}

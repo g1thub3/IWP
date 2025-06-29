@@ -20,6 +20,8 @@ public class CharacterBehaviour : MonoBehaviour
     DGGameManager _dgGameManager;
     DGGenerator _dungeonGen;
 
+    [SerializeField] GameObject _dmgIndicator;
+
     public CharacterEntry character;
     public int alliance;
 
@@ -59,6 +61,20 @@ public class CharacterBehaviour : MonoBehaviour
         if (diff > 0)
         {
             _dungeonUI.AddEntry(gameObject.name + " took " + diff + " damage!");
+            var indicator = Instantiate(_dmgIndicator);
+            indicator.transform.position = TileInfo.CoordToPosition(_entity.Position);
+            indicator.GetComponent<DamageIndicator>().text.text = "-" + diff;
+
+            VFXManager.Instance.Create("hit_effect", TileInfo.CoordToPosition(_entity.Position));
+
+            if (atkType == ATTACK_TYPE.PHYSICAL)
+            {
+                indicator.GetComponent<DamageIndicator>().text.color = new Color(1.0f, 0.68f, 0.41f);
+            }
+            else if (atkType == ATTACK_TYPE.MAGIC)
+            {
+                indicator.GetComponent<DamageIndicator>().text.color = new Color(0.73f, 0.61f, 0.88f);
+            }
             if (TryGetComponent<DGPlayer>(out DGPlayer plr))
             {
                 plr.OnLeaderStatChanged.Invoke(CHARACTER_STAT.HEALTH, health, character.maxHealth.CurrStat);

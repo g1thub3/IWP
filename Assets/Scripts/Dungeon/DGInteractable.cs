@@ -5,12 +5,13 @@ using UnityEngine;
 public class DGInteractable : DGObject
 {
     public KeyDataList dataList;
-    public DGInteraction interaction;
+    public IDGInteraction interaction;
     public bool DestroyOnInteract = false;
+    public bool CanInteractWithAction = false;
 
     private IEnumerator WaitForCompletion()
     {
-        while (interaction.InteractionInProgress)
+        while (interaction.IsInProgress())
         {
             yield return new WaitForEndOfFrame();
         }

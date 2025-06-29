@@ -125,8 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b254d129ace8f04c88dbe93800ac575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dmgIndicator: {fileID: 1215284338264338444, guid: a59fc7b9e597398459890f899e9b2b4e, type: 3}
   character:
     associatedCharacter: 0
+    characterName: 
     maxHealth:
       baseStat: 5
       incrementPercentage: 15
@@ -151,6 +153,8 @@ MonoBehaviour:
     maxMana:
       baseStat: 5
       incrementPercentage: 15
+    experienceAward: 0
+    viewDistance: 5
     experiencePoints: 0
     characterLevel: 0
   alliance: 0
