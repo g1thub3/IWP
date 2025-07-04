@@ -33,14 +33,10 @@ public class DialogueHandler : MonoBehaviour, IDebuggable, IYieldable
     private bool dialogueSkipped = false;
     private bool prevDialogueSkipped = false;
 
-    public bool IsSequenceRunning
-    {
-        get { return sequenceRunning; }
-    }
 
     public bool IsInProgress()
     {
-        return IsSequenceRunning;
+        return sequenceRunning;
     }
 
     public void DebugControls()

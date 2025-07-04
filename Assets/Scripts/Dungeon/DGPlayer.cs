@@ -41,7 +41,10 @@ public class DGPlayer : DGEntity
 
         if (_inputManager.actions["Accept"].WasPressedThisFrame())
         {
-            _cb.PerformMove(DefaultAttack.Instance);
+            if (!InteractAction())
+            {
+                _cb.PerformMove(DefaultAttack.Instance);
+            }
             return;
         }
 

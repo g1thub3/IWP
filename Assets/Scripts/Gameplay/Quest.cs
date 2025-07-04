@@ -1,8 +1,5 @@
-using NUnit.Framework;
-using NUnit.Framework.Interfaces;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public interface IQuestReward
 {
@@ -133,28 +130,35 @@ public class Quest
 
     public enum QUEST_TYPE
     {
-        RETRIEVAL
+        RETRIEVAL,
+        RESCUE,
+        NUM_QUEST_TYPES
     }
 
-    private static RetrievalQuest CreateRetrievalQuest()
-    {
-        var newQuest = new RetrievalQuest();
-        newQuest.SetData();
-        return newQuest;
-    }
-
-    public static Quest CreateQuestData(QUEST_TYPE qType, int competitiveLevel = 0)
+    public static Quest CreateQuestData(QUEST_TYPE qType, bool isComp = false)
     {
         QuestData newQuest;
         switch (qType)
         {
             default:
             case QUEST_TYPE.RETRIEVAL:
-                newQuest = CreateRetrievalQuest();
+                newQuest = new RetrievalQuest();
+                break;
+            case QUEST_TYPE.RESCUE:
+                newQuest = new RescueQuest();
                 break;
         }
         var newData = new Quest(newQuest, CharacterProfiles.Instance.GetRandomNPCName(),(CHARACTER_ENUM)Random.Range(2, (int)CHARACTER_ENUM.NUM_CHARACTERS));
-        newData.competitiveLevel = competitiveLevel;
+        if (isComp)
+        {
+            int compLevel = 1 + (Random.Range(0, GlobalGameManager.Instance.adventurerRanking));
+            compLevel = Mathf.Min(newQuest.dungeon.floorDifficulty, compLevel);
+            newData.competitiveLevel = compLevel;
+        }
+        else
+        {
+            newData.competitiveLevel = 0;
+        }
         newData.CalculateDifficulty();
         return newData;
     }
@@ -164,12 +168,7 @@ public class Quest
     {
         get
         {
-            if (quest is RetrievalQuest)
-            {
-                var rquest = quest as RetrievalQuest;
-                return "Help " + clientName + " retrieve their " + rquest.ToRetrieve.module.itemName + "!";
-            }
-            return string.Empty;
+            return quest.GetTitle(this);
         }
     }
     public string QuestClientText
@@ -195,12 +194,7 @@ public class Quest
     {
         get
         {
-            if (quest is RetrievalQuest)
-            {
-                var rquest = quest as RetrievalQuest;
-                return "Objective: Retrieve " + rquest.ToRetrieve.module.itemName + ".";
-            }
-            return string.Empty;
+            return quest.GetObjective(this);
         }
     }
     public string QuestDifficultyText
@@ -238,7 +232,7 @@ public abstract class QuestData
     public int floor;
     public bool questPossible;
     public bool questCompleted; // NOTE: RESET THIS WHEN THE PLAYER LOSES IN THE DUNGEON
-    public void SetData()
+    public QuestData()
     {
         dungeon = GlobalGameManager.Instance.availableDungeons[Random.Range(0, GlobalGameManager.Instance.availableDungeons.Count)];
         floor = Random.Range(1, dungeon.floorCount);
@@ -246,7 +240,10 @@ public abstract class QuestData
         questPossible = true;
     }
 
-    public abstract DGObject Execute(DGGenerator dungeonGen);
+    public abstract string GetTitle(Quest info);
+    public abstract string GetObjective(Quest info);
+
+    public abstract DGObject Execute(Quest info, DGGenerator dungeonGen);
 }
 
 [System.Serializable]
@@ -261,7 +258,7 @@ public class RetrievalQuest : QuestData
         ToRetrieve.module = Item.foundAssets[Random.Range(0, Item.foundAssets.Length)];
         ToRetrieve.Set();
     }
-    public override DGObject Execute(DGGenerator dungeonGen) {
+    public override DGObject Execute(Quest info, DGGenerator dungeonGen) {
         // Place the item in the dungeon once floor entered
         var room = dungeonGen.GetRandomRoom();
         var spawnTile = dungeonGen.SearchRandomTileInRoom(room, SearchConditions.New(false));
@@ -274,6 +271,15 @@ public class RetrievalQuest : QuestData
         }
         return null;
     }
+    public override string GetTitle(Quest info)
+    {
+        return "Help " + info.clientName + " retrieve their " + ToRetrieve.module.itemName + "!";
+    }
+    public override string GetObjective(Quest info)
+    {
+        return "Objective: Retrieve " + ToRetrieve.module.itemName + ".";
+    }
+
     public static Quest CheckCompletion(DGGameManager gameManager, Item pickedUp)
     {
         for (int i = 0; i < gameManager.ActiveQuests.Count; i++)
@@ -301,18 +307,32 @@ public class RescueQuest : QuestData
     {
         ToRescue = CharacterEntry.Create(CharacterProfiles.Instance.GetRandomEnum(), 5);
     }
-    public override DGObject Execute(DGGenerator dungeonGen)
+    public override DGObject Execute(Quest info, DGGenerator dungeonGen)
     {
         // Place the item in the dungeon once floor entered
         var newNPC = dungeonGen.SpawnNPC(ToRescue);
         newNPC.GetComponent<DGNPC>().main = AIWander.Instance;
+        newNPC.GetComponent<DGNPC>().isQuestTarget = true;
         newNPC.GetComponent<CharacterBehaviour>().alliance = -1;
+        newNPC.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(0, 0.64f, 1.0f, 0.25f);
+        newNPC.gameObject.name = info.clientName;
         var interactable = newNPC.AddComponent<DGInteractable>();
         interactable.DestroyOnInteract = false;
         interactable.CanInteractWithAction = true;
         interactable.interaction = DIRescue.Instance;
+        interactable.transform.localScale /= TileInfo.tileScale;
         return newNPC.GetComponent<DGObject>();
     }
+
+    public override string GetTitle(Quest info)
+    {
+        return "Rescue " + info.clientName + " from " + dungeon.dungeonName + "!";
+    }
+    public override string GetObjective(Quest info)
+    {
+        return "Objective: Rescue " + info.clientName + ".";
+    }
+
     public static Quest CheckCompletion(DGGameManager gameManager, CharacterEntry rescued)
     {
         for (int i = 0; i < gameManager.ActiveQuests.Count; i++)

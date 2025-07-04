@@ -20,6 +20,7 @@ public class CharacterBehaviour : MonoBehaviour
     DGGameManager _dgGameManager;
     DGGenerator _dungeonGen;
 
+    public Transform allianceIndicator;
     [SerializeField] GameObject _dmgIndicator;
 
     public CharacterEntry character;
@@ -217,7 +218,7 @@ public class CharacterBehaviour : MonoBehaviour
         if (hit != null)
         {
             var target = hit.GetComponent<CharacterBehaviour>();
-            if (target.alliance != alliance)
+            if (target.alliance != alliance && target.alliance != -1)
             {
                 return target;
             }
@@ -318,5 +319,18 @@ public class CharacterBehaviour : MonoBehaviour
         _dgGameManager = FindAnyObjectByType<DGGameManager>();
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _dungeonUI.UpdateLeaderInfo();
+    }
+
+    private void Update()
+    {
+        if (allianceIndicator != null)
+        {
+            allianceIndicator.Rotate(new Vector3(0, 0, 5 * Time.deltaTime));
+        }
+    }
+
+    private void OnDestroy()
+    {
+        AIEnemy.RemoveEntry(this);
     }
 }

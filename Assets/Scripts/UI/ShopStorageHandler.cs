@@ -297,7 +297,7 @@ public class ShopStorageHandler : LayeredUI
 
     private IEnumerator ProcessPromptMerchant()
     {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress)
+        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
         {
             yield return new WaitForEndOfFrame();
         }
@@ -313,7 +313,7 @@ public class ShopStorageHandler : LayeredUI
     }
     private IEnumerator ProcessPromptWarehouse()
     {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress)
+        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
         {
             yield return new WaitForEndOfFrame();
         }

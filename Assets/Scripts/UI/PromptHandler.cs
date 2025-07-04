@@ -16,7 +16,7 @@ public class OptionAsset
     public float basePos;
 }
 
-public class PromptHandler : MonoBehaviour, IDebuggable
+public class PromptHandler : MonoBehaviour, IDebuggable, IYieldable
 {
     [Header("Assets")]
     [SerializeField] CanvasGroup _promptMsgGrp;
@@ -43,9 +43,10 @@ public class PromptHandler : MonoBehaviour, IDebuggable
         _returnedAnswer = -1;
         return takenAnswer;
     }
-    public bool IsPromptInProgress
+
+    public bool IsInProgress()
     {
-        get { return _prompting; }
+        return _prompting;
     }
 
     private void Refresh()
@@ -241,7 +242,7 @@ public class PromptHandler : MonoBehaviour, IDebuggable
 
     private IEnumerator test()
     {
-        while (IsPromptInProgress)
+        while (IsInProgress())
         {
             yield return new WaitForEndOfFrame();
         }

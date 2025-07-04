@@ -8,12 +8,12 @@ public class DINextFloor : SingletonScriptableObject<DINextFloor>, IDGInteractio
 {
     public bool IsInProgress()
     {
-        return GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress;
+        return GlobalCanvasManager.Instance.PromptHandler.IsInProgress();
     }
 
     private IEnumerator WaitForAnswer(PromptHandler p, DGGameManager receiver)
     {
-        while (p.IsPromptInProgress)
+        while (p.IsInProgress())
         {
             yield return new WaitForEndOfFrame();
         }

@@ -44,7 +44,7 @@ public class DayCompleter : MonoBehaviour
                 DialogueData[] sequence = { begin };
 
                 _dialogueHandler.PromptSequence(sequence);
-                while (_dialogueHandler.IsSequenceRunning)
+                while (_dialogueHandler.IsInProgress())
                 {
                     yield return new WaitForEndOfFrame();
                 }
@@ -53,7 +53,7 @@ public class DayCompleter : MonoBehaviour
 
                 sequence[0].content[0] = q.clientName + " awarded " + q.goldReward.Amount + " Gold!";
                 _dialogueHandler.PromptSequence(sequence);
-                while (_dialogueHandler.IsSequenceRunning)
+                while (_dialogueHandler.IsInProgress())
                 {
                     yield return new WaitForEndOfFrame();
                 }
@@ -67,15 +67,15 @@ public class DayCompleter : MonoBehaviour
                     sequence[0].content[0] += q.itemReward.Reward[j].ToString() + (j == q.itemReward.Reward.Count - 1 ? "!" : ", ");
                 }
                 _dialogueHandler.PromptSequence(sequence);
-                while (_dialogueHandler.IsSequenceRunning)
+                while (_dialogueHandler.IsInProgress())
                 {
                     yield return new WaitForEndOfFrame();
                 }
 
                 q.adventurerReward.Award();
-                if (_levelupHandler.SequenceInProgress)
+                if (_levelupHandler.IsInProgress())
                 {
-                    while (_levelupHandler.SequenceInProgress)
+                    while (_levelupHandler.IsInProgress())
                     {
                         yield return new WaitForEndOfFrame();
                     }
@@ -83,7 +83,7 @@ public class DayCompleter : MonoBehaviour
                 {
                     sequence[0].content[0] = q.clientName + " awarded " + q.adventurerReward.Amount + " Adventurer Exp!";
                     _dialogueHandler.PromptSequence(sequence);
-                    while (_dialogueHandler.IsSequenceRunning)
+                    while (_dialogueHandler.IsInProgress())
                     {
                         yield return new WaitForEndOfFrame();
                     }

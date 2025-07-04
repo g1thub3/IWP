@@ -1,12 +1,32 @@
+using NUnit.Framework.Constraints;
 using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DIRescue", menuName = "Dungeon Interactions/DIRescue")]
 public class DIRescue : SingletonScriptableObject<DIRescue>, IDGInteraction
 {
-    private IEnumerator QuestCoroutine()
+    private IEnumerator QuestCoroutine(DGEntity interactable, DungeonUIHandler ui, DGGameManager dgGameManager, Quest q, bool playerCompleted)
     {
-        yield return null;
+        string[] seq = {"Oh, thank you so much for rescuing me! Meet me back at the guild hall and I'll pass you your reward!"};
+        DialogueData[] newData = { new DialogueData(seq) };
+        GlobalCanvasManager.Instance.DialogueHandler.PromptSequence(newData);
+        while (GlobalCanvasManager.Instance.DialogueHandler.IsInProgress())
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        if (playerCompleted)
+        {
+            q.quest.questCompleted = true;
+            q.quest.questPossible = false;
+            ui.UpdateQuestUI();
+            dgGameManager.QuestCompletePrompt();
+        } else
+        {
+            q.quest.questPossible = false;
+            ui.UpdateQuestUI();
+            dgGameManager.QuestFailPrompt(q);
+        }
+        dgGameManager.RegisterRemoval(interactable);
     }
     public bool IsInProgress()
     {
@@ -20,11 +40,8 @@ public class DIRescue : SingletonScriptableObject<DIRescue>, IDGInteraction
         {
             Quest foundQuest = RescueQuest.CheckCompletion(dgGameManager, cb.character);
             if (foundQuest != null) {
-                ui.UpdateQuestUI();
                 ui.AddEntry(interacted.gameObject.name + " has been rescued and has left the dungeon safely!");
-                foundQuest.quest.questCompleted = true;
-
-                dgGameManager.QuestCompletePrompt();
+                interacted.StartCoroutine(QuestCoroutine(intEntity, ui, dgGameManager, foundQuest, interacted is DGPlayer));
             }
         }
         return false;

@@ -21,7 +21,7 @@ public class DungeonEnter : MonoBehaviour
 
     private IEnumerator ProcessPrompt()
     {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress)
+        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
         {
             yield return new WaitForEndOfFrame();
         }

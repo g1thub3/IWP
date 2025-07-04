@@ -137,7 +137,6 @@ public class TileInfo // Use CastEnum after doing FromJson
         item = newItem;
         item.interaction = DIPickUp.Instance;
         item.Position = coord;
-        Debug.Log(item);
     }
 }
 

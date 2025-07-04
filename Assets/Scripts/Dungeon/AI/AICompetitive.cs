@@ -17,11 +17,15 @@ public class AICompetitive : SingletonScriptableObject<AICompetitive>, DGAIModul
             }
             return;
         }
-        Debug.Log(user.associatedCompetitor.target);
-        if (user.associatedCompetitor.target != null) // PROBLEM: When an enemy picks up the target, the target is null and it doesn't return after it gets dropped
+        if (user.associatedCompetitor.target != null)
         {
             List<TileCoord> path = new List<TileCoord>();
-            if (user.associatedCompetitor.target is DGInteractable)
+            if (user.associatedCompetitor.target is DGEntity)
+            {
+                var target = user.associatedCompetitor.target as DGEntity;
+                path = entity.AStarPathfind(entity.Position, entity.GetClosestDirection(target.Position));
+            }
+            else if (user.associatedCompetitor.target is DGInteractable)
             {
                 path = entity.AStarPathfind(entity.Position, user.associatedCompetitor.target.Position);
             }
@@ -30,6 +34,22 @@ public class AICompetitive : SingletonScriptableObject<AICompetitive>, DGAIModul
                 TileCoord diff = path[1] - entity.Position;
                 entity.Move(diff.x, diff.z);
                 return;
+            } else
+            {
+                if (user.associatedCompetitor.target is DGEntity)
+                {
+                    var target = user.associatedCompetitor.target as DGEntity;
+                    if (entity.GetClosestDirection(target.Position, true).Equals(entity.Position))
+                    {
+                        TileCoord diff = target.Position - entity.Position;
+                        entity.FaceDirection(diff.x, diff.z);
+                        if (!entity.InteractAction())
+                        {
+                            entity.Wait();
+                        }
+                        return;
+                    }
+                }
             }
         }
         if (!(user.GetComponent<DGEntity>().Move(Random.Range(-1, 2), Random.Range(-1, 2))))

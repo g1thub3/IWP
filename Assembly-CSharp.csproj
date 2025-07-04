@@ -66,7 +66,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\UI\LevelUpHandler.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuHandler.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\FRController.cs" />
+    <Compile Include="Assets\Scripts\UI\MinimapPoint.cs" />
     <Compile Include="Assets\Scripts\UI\FreeRoamMenuHandler.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GlobalGameManager.cs" />
     <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />

@@ -37,7 +37,7 @@ public class FRInteraction
         {
             if (objectToInteract is DialogueSequence)
             {
-                return !GlobalCanvasManager.Instance.DialogueHandler.IsSequenceRunning;
+                return !GlobalCanvasManager.Instance.DialogueHandler.IsInProgress();
             }
         }
         return true;

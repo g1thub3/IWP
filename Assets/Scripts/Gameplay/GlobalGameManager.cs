@@ -4,6 +4,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static Quest;
 
 [CreateAssetMenu(fileName = "GlobalGameManager", menuName = "Scriptable Objects/GlobalGameManager")]
 public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
@@ -149,9 +150,11 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
     {
         availableQuests.Clear();
         availableCompetitiveQuests.Clear();
+        int max = (int)QUEST_TYPE.NUM_QUEST_TYPES;
         for (int i = 0; i < maxQuestCount; i++)
         {
-            var newQuest = Quest.CreateQuestData(Quest.QUEST_TYPE.RETRIEVAL);
+            QUEST_TYPE rand = (QUEST_TYPE)Random.Range(0, max);
+            var newQuest = Quest.CreateQuestData(rand);
             availableQuests.Add(newQuest);
         }
         for (int i = 0; i < availableQuests.Count; i++)
@@ -168,8 +171,8 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
         }
         for (int i = 0; i < maxQuestCount; i++)
         {
-            int compLevel = 1 + (Random.Range(0, adventurerRanking));
-            var newQuest = Quest.CreateQuestData(Quest.QUEST_TYPE.RETRIEVAL, compLevel);
+            QUEST_TYPE rand = (QUEST_TYPE)Random.Range(0, max);
+            var newQuest = Quest.CreateQuestData(rand, true);
             availableCompetitiveQuests.Add(newQuest);
         }
         for (int i = 0; i < availableCompetitiveQuests.Count; i++)

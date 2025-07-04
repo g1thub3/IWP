@@ -1,11 +1,7 @@
-using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static Unity.Burst.Intrinsics.X86.Avx;
 
 public enum DUNGEON_END_CONTEXT
 {
@@ -75,7 +71,7 @@ public class DGGameManager : MonoBehaviour
 
     private IEnumerator WaitForInputQuestComplete(bool hasCompleted = true, Quest questFailed = null)
     {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress)
+        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
         {
             yield return new WaitForEndOfFrame();
         }
@@ -143,7 +139,6 @@ public class DGGameManager : MonoBehaviour
     {
         var newList = new List<QuestCompetitor>();
         int amt = (int)Mathf.Ceil(quest.competitiveLevel * ((float)quest.competitiveLevel * 0.5f)) + 1;
-        amt = Mathf.Min(GlobalGameManager.Instance.selectedDungeon.floorDifficulty, amt);
         int possibleCompetitors = Random.Range(quest.competitiveLevel, amt);
         for (int i = 0; i < possibleCompetitors; i++)
         {
@@ -229,7 +224,7 @@ public class DGGameManager : MonoBehaviour
             }
             if (questData.quest.floor == CurrentFloor && questData.quest.questPossible) // Add target
             {
-                var success = questData.quest.Execute(_dungeonGen);
+                var success = questData.quest.Execute(questData, _dungeonGen);
                 if (success == null)
                 {
                     questData.isActive = false;

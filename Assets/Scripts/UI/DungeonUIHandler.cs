@@ -248,33 +248,35 @@ public class DungeonUIHandler : MonoBehaviour
     {
         for (int i = 0; i < _minimapContainer.childCount; i++)
         {
-            GameObject pt = _minimapContainer.GetChild(i).gameObject;
+            MinimapPoint pt = _minimapContainer.GetChild(i).GetComponent<MinimapPoint>();
             TileInfo tile = _dungeonGen.CurrentFloor.tiles[int.Parse(pt.name)];
-            pt.GetComponent<Image>().enabled = tile.hasBeenDiscovered;
-            pt.transform.Find("Staircase").GetComponent<Image>().enabled = tile.structure != null && tile.hasBeenDiscovered;
-            pt.transform.Find("Item").GetComponent<Image>().enabled = tile.item != null && tile.hasBeenDiscovered;
+            pt.image.enabled = tile.hasBeenDiscovered;
+            pt.staircase.enabled = tile.structure != null && tile.hasBeenDiscovered;
+            pt.item.enabled = tile.item != null && tile.hasBeenDiscovered;
 
+            float dist = -1;
+            if (_focusedPlr != null)
+            {
+                dist = tile.coord.DistanceSquared(_focusedPlr.Position);
+            }
+
+            pt.player.enabled = false;
+            pt.enemy.enabled = false;
+            pt.questrescue.enabled = false;
             if (tile.occupyingEntity != null)
             {
                 if (tile.occupyingEntity is DGPlayer)
                 {
-                    pt.transform.Find("Player").GetComponent<Image>().enabled = true;
-                    pt.transform.Find("Enemy").GetComponent<Image>().enabled = false;
+                    pt.player.enabled = true;
+                }
+                else if (tile.occupyingEntity.GetComponent<CharacterBehaviour>().alliance == -1)
+                {
+                    pt.questrescue.enabled = (dist <= GlobalGameManager.Instance.party[0].viewDistance && dist != -1) || (_focusedPlr.CurrentRoom == tile.occupyingEntity.CurrentRoom && _focusedPlr.CurrentRoom != null);
                 }
                 else
                 {
-                    pt.transform.Find("Player").GetComponent<Image>().enabled = false;
-                    DGPlayer plr = FindAnyObjectByType<DGPlayer>();
-                    if (plr != null)
-                    {
-                        float dist = tile.coord.DistanceSquared(plr.Position);
-                        pt.transform.Find("Enemy").GetComponent<Image>().enabled = dist <= GlobalGameManager.Instance.party[0].viewDistance  || (plr.CurrentRoom == tile.occupyingEntity.CurrentRoom && plr.CurrentRoom != null);
-                    }
+                    pt.enemy.enabled = (dist <= GlobalGameManager.Instance.party[0].viewDistance && dist != -1) || (_focusedPlr.CurrentRoom == tile.occupyingEntity.CurrentRoom && _focusedPlr.CurrentRoom != null);
                 }
-            } else
-            {
-                pt.transform.Find("Player").GetComponent<Image>().enabled = false;
-                pt.transform.Find("Enemy").GetComponent<Image>().enabled = false;
             }
         }
     }

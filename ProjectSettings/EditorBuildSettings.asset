@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 94800348be687f94e91994cc98a74926
+  - enabled: 1
     path: Assets/Scenes/FreeRoam/FRDorm.unity
     guid: 5c023da251ab01d4ea08ed9da0ffdbf8
   - enabled: 1

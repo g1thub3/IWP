@@ -2,8 +2,6 @@ using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
-using UnityEditor.U2D.Animation;
-using UnityEngine.TextCore.Text;
 
 public struct SearchConditions {
     public static SearchConditions New(bool hasItem = false, bool isWall = false, bool hasEntity = false)
@@ -72,6 +70,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
     }
     public TileInfo SearchNextAvailableTile(TileInfo origin, SearchConditions conditions, int direction = 0, int dist = 0, int maxDist = 2)
     {
+        if (origin == null) return null;
         if (conditions.AreConditionsMet(origin))
             return origin;
         TileInfo foundTile = null;
@@ -254,6 +253,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
             var npcMod = newCharacter.AddComponent<DGNPC>();
             npcMod.main = AIEnemy.Instance;
             newCharacter.GetComponent<CharacterBehaviour>().alliance = 1;
+            newCharacter.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.25f);
         }
 
         FloorRoom room = _currentFloor.rooms[Random.Range(0, _currentFloor.rooms.Count)];
@@ -284,6 +284,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         _currentPlayer = newPlayer.GetComponent<DGPlayer>();
         _activeEntities.Add(_currentPlayer);
         _activeParty.Add(newPlayer.GetComponent<CharacterBehaviour>());
+        newPlayer.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.25f);
         newPlayer.GetComponent<CharacterBehaviour>().SetUp(GlobalGameManager.Instance.party[0]);
         _dungeonUI.RegisterPlayer(_currentPlayer);
         PlacePlayer();
@@ -312,7 +313,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         for (int i = 0; i < party.Count; i++)
         {
             var character = party[i];
-            var newCharacter = AddCharacter(false, point.coord);
+            var newCharacter = AddCharacter(false, point != null ? point.coord : null);
             newCharacter.gameObject.name = character.characterName;
             _activeEntities.Add(newCharacter.GetComponent<DGEntity>());
             
@@ -323,8 +324,6 @@ public class DGGenerator : MonoBehaviour, IDebuggable
 
             newCharacter.GetComponent<CharacterBehaviour>().SetUp(character);
             newList.Add(newCharacter.GetComponent<DGEntity>());
-            TileInfo temp = point;
-            point = SearchNextAvailableTile(temp, SearchConditions.New());
         }
         competitor.partySpawned = newList;
         return newList;

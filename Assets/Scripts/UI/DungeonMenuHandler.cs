@@ -699,7 +699,7 @@ public class DungeonMenuHandler : LayeredUI
 
     private IEnumerator WaitForAnswer()
     {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress)
+        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
         {
             yield return new WaitForEndOfFrame();
         }
@@ -769,7 +769,7 @@ public class DungeonMenuHandler : LayeredUI
 
     private void Update()
     {
-        if (GlobalCanvasManager.Instance.PromptHandler.IsPromptInProgress || !_gameManager.IsGameActive) return;
+        if (GlobalCanvasManager.Instance.PromptHandler.IsInProgress() || !_gameManager.IsGameActive) return;
         if (!Process())
         {
             if (_inputManager.actions["Decline"].WasPressedThisFrame())

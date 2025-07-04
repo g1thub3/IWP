@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   adventurerEXP: 100
   adventurerRanking: 3
-  ownedGold: 231
-  bankGold: 0
+  ownedGold: 0
+  bankGold: 231
   party:
   - associatedCharacter: 0
     characterName: 
@@ -45,17 +45,13 @@ MonoBehaviour:
       incrementPercentage: 15
     experienceAward: 0
     viewDistance: 5
-    experiencePoints: 325
-    characterLevel: 4
+    experiencePoints: 40
+    characterLevel: 6
   inventory:
   - itemKey: Spiked Band
     module: {fileID: 11400000, guid: 0b88ded5bce88ad429d4e59fb1e48b93, type: 2}
   - itemKey: Adventurer Meal
     module: {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
-  - itemKey: Magic In A Bottle
-    module: {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
-  - itemKey: Health Potion
-    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
   - itemKey: Health Potion
     module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
   - itemKey: Adventurer Meal
@@ -69,16 +65,18 @@ MonoBehaviour:
   - itemKey: Adventurer Meal
     module: {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
   storageLimit: 100
-  storage: []
+  storage:
+  - itemKey: Magic In A Bottle
+    module: {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
+  - itemKey: Health Potion
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
   merchantShop:
-  - itemKey: Magic In A Bottle
-    module: {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
-  - itemKey: Magic In A Bottle
-    module: {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
-  - itemKey: Magic In A Bottle
-    module: {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
-  - itemKey: Magic In A Bottle
-    module: {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
+  - itemKey: Health Potion
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+  - itemKey: Health Potion
+    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
+  - itemKey: Adventurer Meal
+    module: {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
   - itemKey: Health Potion
     module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
   - itemKey: Magic In A Bottle
@@ -91,144 +89,146 @@ MonoBehaviour:
     module: {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
   - itemKey: Magic In A Bottle
     module: {fileID: 11400000, guid: 23908dabdce979040bdf72df4817aca9, type: 2}
-  - itemKey: Health Potion
-    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
-  - itemKey: Health Potion
-    module: {fileID: 11400000, guid: 820dcb749c932df45b97671b3e87dac1, type: 2}
-  - itemKey: Adventurer Meal
-    module: {fileID: 11400000, guid: 3efdc8368256d8743b3b8a811b9320e4, type: 2}
+  - itemKey: Energizer
+    module: {fileID: 11400000, guid: be6d248d1384dec40a0004f937ba30a3, type: 2}
+  - itemKey: Energizer
+    module: {fileID: 11400000, guid: be6d248d1384dec40a0004f937ba30a3, type: 2}
+  - itemKey: Energizer
+    module: {fileID: 11400000, guid: be6d248d1384dec40a0004f937ba30a3, type: 2}
+  - itemKey: Energizer
+    module: {fileID: 11400000, guid: be6d248d1384dec40a0004f937ba30a3, type: 2}
   - itemKey: Energizer
     module: {fileID: 11400000, guid: be6d248d1384dec40a0004f937ba30a3, type: 2}
   armouryShop:
-  - itemKey: Warding Rune
-    module: {fileID: 11400000, guid: d73f3ba58c91f2544ad48f356e0aa8de, type: 2}
   - itemKey: Steel Plating
     module: {fileID: 11400000, guid: a6647c01dee3f554f9094573586c68b4, type: 2}
   - itemKey: Warding Rune
     module: {fileID: 11400000, guid: d73f3ba58c91f2544ad48f356e0aa8de, type: 2}
+  - itemKey: Warding Rune
+    module: {fileID: 11400000, guid: d73f3ba58c91f2544ad48f356e0aa8de, type: 2}
+  - itemKey: Warding Rune
+    module: {fileID: 11400000, guid: d73f3ba58c91f2544ad48f356e0aa8de, type: 2}
   - itemKey: Steel Plating
     module: {fileID: 11400000, guid: a6647c01dee3f554f9094573586c68b4, type: 2}
   - itemKey: Steel Plating
     module: {fileID: 11400000, guid: a6647c01dee3f554f9094573586c68b4, type: 2}
+  - itemKey: Warding Rune
+    module: {fileID: 11400000, guid: d73f3ba58c91f2544ad48f356e0aa8de, type: 2}
+  - itemKey: Warding Rune
+    module: {fileID: 11400000, guid: d73f3ba58c91f2544ad48f356e0aa8de, type: 2}
+  - itemKey: Magic Charm
+    module: {fileID: 11400000, guid: f3fbf8d9acefa3442a50e2a5a1cbd106, type: 2}
+  - itemKey: Magic Charm
+    module: {fileID: 11400000, guid: f3fbf8d9acefa3442a50e2a5a1cbd106, type: 2}
+  - itemKey: Spiked Band
+    module: {fileID: 11400000, guid: 0b88ded5bce88ad429d4e59fb1e48b93, type: 2}
   - itemKey: Spiked Band
     module: {fileID: 11400000, guid: 0b88ded5bce88ad429d4e59fb1e48b93, type: 2}
   - itemKey: Magic Charm
     module: {fileID: 11400000, guid: f3fbf8d9acefa3442a50e2a5a1cbd106, type: 2}
-  - itemKey: Magic Charm
-    module: {fileID: 11400000, guid: f3fbf8d9acefa3442a50e2a5a1cbd106, type: 2}
-  - itemKey: Magic Charm
-    module: {fileID: 11400000, guid: f3fbf8d9acefa3442a50e2a5a1cbd106, type: 2}
   - itemKey: Spiked Band
     module: {fileID: 11400000, guid: 0b88ded5bce88ad429d4e59fb1e48b93, type: 2}
-  - itemKey: Spiked Band
-    module: {fileID: 11400000, guid: 0b88ded5bce88ad429d4e59fb1e48b93, type: 2}
-  - itemKey: Magic Charm
-    module: {fileID: 11400000, guid: f3fbf8d9acefa3442a50e2a5a1cbd106, type: 2}
-  - itemKey: Magic Charm
-    module: {fileID: 11400000, guid: f3fbf8d9acefa3442a50e2a5a1cbd106, type: 2}
-  - itemKey: Magic Charm
-    module: {fileID: 11400000, guid: f3fbf8d9acefa3442a50e2a5a1cbd106, type: 2}
   availableDungeons:
   - {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
   - {fileID: 11400000, guid: dbb6bf07f332800408c082e8dc82cfac, type: 2}
-  selectedDungeon: {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
+  selectedDungeon: {fileID: 11400000, guid: dbb6bf07f332800408c082e8dc82cfac, type: 2}
   ownedQuests: []
   availableQuests:
+  - clientName: Zack
+    clientCharacter: 8
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 0
+    diffPts: 1
   - clientName: Arthur
-    clientCharacter: 17
+    clientCharacter: 21
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 0
+    diffPts: 1
+  - clientName: Arthur
+    clientCharacter: 15
     isActive: 0
     difficulty: 83
     competitiveLevel: 0
     diffPts: 1
   - clientName: Andy
-    clientCharacter: 15
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 0
-    diffPts: 1
-  - clientName: Heidi
-    clientCharacter: 15
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 0
-    diffPts: 2
-  - clientName: Julie
-    clientCharacter: 2
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 0
-    diffPts: 2
-  - clientName: Julie
-    clientCharacter: 19
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 0
-    diffPts: 2
-  - clientName: Charlie
     clientCharacter: 5
     isActive: 0
     difficulty: 83
     competitiveLevel: 0
-    diffPts: 4
-  - clientName: Heidi
-    clientCharacter: 3
+    diffPts: 2
+  - clientName: Zack
+    clientCharacter: 15
     isActive: 0
     difficulty: 83
     competitiveLevel: 0
-    diffPts: 8
-  - clientName: Zack
-    clientCharacter: 14
+    diffPts: 2
+  - clientName: Heidi
+    clientCharacter: 11
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 0
+    diffPts: 2
+  - clientName: James
+    clientCharacter: 22
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 0
+    diffPts: 10
+  - clientName: Luna
+    clientCharacter: 2
     isActive: 0
     difficulty: 83
     competitiveLevel: 0
     diffPts: 10
   availableCompetitiveQuests:
-  - clientName: Arthur
-    clientCharacter: 13
+  - clientName: Julie
+    clientCharacter: 4
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 1
+    diffPts: 2
+  - clientName: Charlie
+    clientCharacter: 15
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 1
+    diffPts: 4
+  - clientName: Julie
+    clientCharacter: 21
     isActive: 0
     difficulty: 83
     competitiveLevel: 2
-    diffPts: 3
-  - clientName: Zack
-    clientCharacter: 17
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 2
-    diffPts: 3
-  - clientName: Arthur
-    clientCharacter: 22
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 2
-    diffPts: 6
-  - clientName: James
-    clientCharacter: 5
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 2
-    diffPts: 6
-  - clientName: Zack
-    clientCharacter: 16
-    isActive: 0
-    difficulty: 83
-    competitiveLevel: 3
-    diffPts: 8
-  - clientName: Perry
-    clientCharacter: 8
+    diffPts: 12
+  - clientName: Julie
+    clientCharacter: 15
     isActive: 0
     difficulty: 83
     competitiveLevel: 1
     diffPts: 12
-  - clientName: Charlie
-    clientCharacter: 4
+  - clientName: James
+    clientCharacter: 18
+    isActive: 0
+    difficulty: 83
+    competitiveLevel: 2
+    diffPts: 12
+  - clientName: James
+    clientCharacter: 2
     isActive: 0
     difficulty: 65
     competitiveLevel: 2
     diffPts: 18
-  - clientName: Julie
-    clientCharacter: 15
+  - clientName: Arthur
+    clientCharacter: 3
     isActive: 0
     difficulty: 65
-    competitiveLevel: 3
-    diffPts: 24
+    competitiveLevel: 2
+    diffPts: 18
+  - clientName: Andy
+    clientCharacter: 18
+    isActive: 0
+    difficulty: 65
+    competitiveLevel: 2
+    diffPts: 30
   DayOver: 0

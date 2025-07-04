@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class LevelUpHandler : MonoBehaviour
+public class LevelUpHandler : MonoBehaviour, IYieldable
 {
     [Header("Assets")]
     [SerializeField] CanvasGroup _lvlupGrp;
@@ -28,9 +28,9 @@ public class LevelUpHandler : MonoBehaviour
     private Transition _rankTrans;
     private int _check;
 
-    public bool SequenceInProgress
+    public bool IsInProgress()
     {
-        get {  return _isInProgress; }
+        return _isInProgress;
     }
     
     private void Start()

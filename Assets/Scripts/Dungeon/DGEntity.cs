@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 public class TilePathPoint {
     public TileInfo tile;
@@ -44,6 +45,12 @@ public class DGEntity : DGObject
     private ANIMATION_ENUM _action;
 
     public TileCoord faceDir;
+    private Transition _moveTransition;
+    private bool _hasInteractedItem, _hasInteractedStructure;
+    private bool _isMoving;
+    private Vector3 _prevPos;
+    private Vector3 _newPos;
+    private DGInteractable _currentlyInteracting;
 
     public bool IsPerformingAction
     {
@@ -51,39 +58,6 @@ public class DGEntity : DGObject
         set { _performingAction = value; }
     }
     public FloorRoom CurrentRoom { get { return _currRoom; } }
-    private IEnumerator MoveCoroutine(Vector2 original, Vector2 destined)
-    {
-        _action = ANIMATION_ENUM.WALK;
-        float t = 0;
-        while (t < _moveTime)
-        {
-            t += Time.deltaTime;
-            transform.position = Vector2.Lerp(original, destined, t/_moveTime);   
-            yield return new WaitForEndOfFrame();
-        }
-        transform.position = destined;
-        _action = ANIMATION_ENUM.IDLE;
-
-        TileInfo tile = floor.tiles[floor.CoordToIndex(position)];
-        if (tile.item != null)
-        {
-            tile.item.OnInteract(this, floor);
-            while (tile.item.interaction.IsInProgress())
-            {
-                yield return new WaitForEndOfFrame();
-            }
-        }
-        if (tile.structure != null)
-        {
-            tile.structure.OnInteract(this, floor);
-            while (tile.structure.interaction.IsInProgress())
-            {
-                yield return new WaitForEndOfFrame();
-            }
-        }
-        _performingAction = false;
-        _dungeonUI.UpdateMinimap();
-    }
     
     private IEnumerator InteractableYield(DGInteractable interacted)
     {
@@ -177,9 +151,12 @@ public class DGEntity : DGObject
                 }
             }
 
-            Vector2 original = transform.position;
-            Vector2 destined = tile.CoordToPosition();
-            StartCoroutine(MoveCoroutine(original, destined));
+            _moveTransition.t = 0;
+            _hasInteractedItem = _hasInteractedStructure = false;
+
+            _prevPos = transform.position;
+            _newPos = tile.CoordToPosition();
+            _isMoving = true;
             //_dungeonUI.AddEntry(gameObject.name + " moved!");
             _dgGameManager.TurnCompleted.Invoke(); // NOTE: POSSSIBLE TO TRIGGER MULTIPLE INTERACTIONS AT A TIME, MIGHT BUG OUT, MAKE IT ONLY WAIT IF IN VIEW
 
@@ -188,6 +165,49 @@ public class DGEntity : DGObject
         }
         _performingAction = false;
         return false;
+    }
+
+    private void MoveCycle()
+    {
+        if (!_isMoving)
+        {
+            return;
+        }
+        if (_moveTransition.Progression < 1)
+        {
+            _action = ANIMATION_ENUM.WALK;
+            _moveTransition.Progress();
+            transform.position = Vector2.Lerp(_prevPos, _newPos, _moveTransition.Progression);
+            return;
+        }
+        if (_currentlyInteracting != null)
+        {
+            if (_currentlyInteracting.interaction.IsInProgress())
+                return;
+            _currentlyInteracting = null;
+        }
+        if (!_hasInteractedItem)
+        {
+            _hasInteractedItem = true;
+            if (occupyingTile.item != null)
+            {
+                _currentlyInteracting = occupyingTile.item;
+                _currentlyInteracting.OnInteract(this, floor);
+                return;
+            }
+        }
+        if (!_hasInteractedStructure)
+        {
+            _hasInteractedStructure = true;
+            if (occupyingTile.structure != null)
+            {
+                _currentlyInteracting = occupyingTile.structure;
+                _currentlyInteracting.OnInteract(this, floor);
+                return;
+            }
+        }
+        _isMoving = false;
+        _performingAction = false;
     }
 
     public void Warp(TileCoord newPosition, bool animate = false) // No conditions for movement
@@ -221,7 +241,8 @@ public class DGEntity : DGObject
     }
     public void Wait()
     {
-        _dgGameManager.TurnCompleted.Invoke();
+        if (_dgGameManager.CurrentEntityTurn() == this)
+            _dgGameManager.TurnCompleted.Invoke();
     }
 
     public TileCoord GetClosestDirection(TileCoord pt, bool ignoreEntity = false)
@@ -388,11 +409,14 @@ public class DGEntity : DGObject
         //{
         //    DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(path[i]), i.ToString() + " (" + (scores[i].ToString()) + ")");
         //}
+
         return path;
     }
 
     protected void Update()
     {
+        _action = ANIMATION_ENUM.IDLE;
+        MoveCycle();
         PlayAnimation();
     }
 
@@ -422,9 +446,20 @@ public class DGEntity : DGObject
         _animator.Play(state);
     }
 
+    public void FaceDirection(int x, int z)
+    {
+        if (x == z && z == 0)
+            return;
+        faceDir.x = x;
+        faceDir.z = z;
+    }
     protected new void Start()
     {
         base.Start();
+        _currentlyInteracting = null;
+        _hasInteractedItem = _hasInteractedStructure = _isMoving = false;
+        _moveTransition = new Transition();
+        _moveTransition.max = _moveTime;
         faceDir = new TileCoord(0, -1);
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _performingAction = false;

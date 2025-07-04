@@ -26,10 +26,14 @@ public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>
     }
 
     public bool IsInteractionActive
-    {
-        get { return PromptHandler.IsPromptInProgress || DialogueHandler.IsSequenceRunning || LevelUpHandler.SequenceInProgress || FreeRoamMenuHandler.IsOpen; }
+    {   
+        get { return PromptHandler.IsInProgress() || DialogueHandler.IsInProgress() || LevelUpHandler.IsInProgress() || FreeRoamMenuHandler.IsOpen; }
     }
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
