@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.Experimental.GraphView;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
 
 public enum DUNGEON_END_CONTEXT
 {
@@ -32,7 +36,14 @@ public class DGGameManager : MonoBehaviour
 
     private PlayerInput _inputManager;
     private bool isPressingInit;
-    private int _turnCount;
+
+    public struct DeathInstance
+    {
+        public CharacterBehaviour death;
+        public CharacterBehaviour cause;
+    }
+    private List<DeathInstance> _deaths;
+
 
     public bool IsGameActive
     {
@@ -352,7 +363,7 @@ public class DGGameManager : MonoBehaviour
 
     public void NextTurn()
     {
-        _turnCount++;
+        ProcessDeaths();
         var prev = CurrentEntityTurn();
         if (prev != null)
         {
@@ -451,6 +462,67 @@ public class DGGameManager : MonoBehaviour
             }
         }
     }
+
+    public void RegisterDead(CharacterBehaviour dead, CharacterBehaviour cause)
+    {
+        var death = new DeathInstance();
+        death.death = dead;
+        death.cause = cause;
+        _deaths.Add(death);
+    }
+
+    public void ProcessDeaths()
+    {
+        List<CharacterEntry> changedCharacters = new List<CharacterEntry>();
+        Dictionary<CharacterEntry, int> levelChanges = new Dictionary<CharacterEntry, int>();
+        foreach(var dead in _deaths)
+        {
+            OnCharacterDeath(dead.death);
+
+            if (dead.cause != null && GlobalGameManager.Instance.party.Contains(dead.cause.character))
+            {
+                _dungeonUI.AddEntry(dead.death.character.ExperienceAward + " XP was awarded to the whole party!");
+                foreach (var member in GlobalGameManager.Instance.party)
+                {
+                    int added = member.GainXP(dead.death.character.ExperienceAward);
+                    if (added > 0)
+                    {
+                        if (!levelChanges.ContainsKey(member))
+                        {
+                            levelChanges.Add(member, 0);
+                            changedCharacters.Add(member);
+                        }
+                        levelChanges[member] += added;
+                    }
+                }
+            }
+            RegisterRemoval(dead.death.GetComponent<DGEntity>());
+        }
+        _deaths.Clear();
+
+        List<int> changes = new List<int>();
+        for (int i = 0; i < changedCharacters.Count; i++)
+        {
+            changes.Add(levelChanges[changedCharacters[i]]);
+        }
+        if (levelChanges.Count > 0)
+        {
+            GlobalCanvasManager.Instance.LevelUpHandler.LevelUpSequence(changedCharacters, changes);
+            if (levelChanges.ContainsKey(GlobalGameManager.Instance.party[0]))
+            {
+                foreach (var entity in turnList)
+                {
+                    if (entity is DGPlayer)
+                    {
+                        var plr = entity as DGPlayer;
+                        plr.OnLeaderLevelChanged.Invoke();
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
     public void OnCharacterDeath(CharacterBehaviour dead)
     {
         _dungeonUI.AddEntry(dead.gameObject.name + " has been defeated!");
@@ -522,6 +594,7 @@ public class DGGameManager : MonoBehaviour
 
     private void Start()
     {
+        _deaths = new List<DeathInstance>();
         _inputManager = GlobalCanvasManager.Instance.GlobalInput;
         OnEscape += delegate { PlayerLoss(false); };
         TurnCompleted += NextTurn;

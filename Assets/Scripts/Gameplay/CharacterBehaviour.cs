@@ -85,39 +85,7 @@ public class CharacterBehaviour : MonoBehaviour
         }
         if (health <= 0)
         {
-            _dgGameManager.OnCharacterDeath(this);
-            if (GlobalGameManager.Instance.party.Contains(attacker.character))
-            {
-                _dungeonUI.AddEntry(character.ExperienceAward + " XP was awarded to the whole party!");
-                List<CharacterEntry> levelledUp = new List<CharacterEntry>();
-                List<int> changes = new List<int>();
-                foreach (var member in GlobalGameManager.Instance.party)
-                {
-                    int added = member.GainXP(character.ExperienceAward);
-                    if (added > 0)
-                    {
-                        levelledUp.Add(member);
-                        changes.Add(added);
-                    }
-                }
-                if (levelledUp.Count > 0)
-                {
-                    GlobalCanvasManager.Instance.LevelUpHandler.LevelUpSequence(levelledUp, changes);
-                    if (levelledUp.Contains(GlobalGameManager.Instance.party[0]))
-                    {
-                        foreach (var entity in _dgGameManager.turnList)
-                        {
-                            if (entity is DGPlayer)
-                            {
-                                var plr = entity as DGPlayer;
-                                plr.OnLeaderLevelChanged.Invoke();
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-            _dgGameManager.RegisterRemoval(_entity);
+            _dgGameManager.RegisterDead(this, attacker);
         }
     }
 
