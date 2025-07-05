@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f89345e4195e6844af283bb141d4bf9, type: 3}
+  m_Name: MagicOrbAttack
+  m_EditorClassIdentifier: 
+  moveName: Magic Orb
+  moveDescription: Channel your energy into creating a magic orb that can be flung
+    4 tiles forward, hitting an opponent.
+  energyRequirement: 50
+  consumptionType: 3
+  baseDamage: 50
+  moveType: 1
+  shootRange: 4
+  projectileSpeed: 10
+  waitTime: 0.25

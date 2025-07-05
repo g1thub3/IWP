@@ -71,6 +71,10 @@ public class TileCoord // To be serialized, dont need to store these as floats s
     {
         return new TileCoord(a.x + b.x, a.z + b.z);
     }
+    public static TileCoord operator *(TileCoord a, int mult)
+    {
+        return new TileCoord(a.x * mult, a.z * mult);
+    }
     public static TileCoord operator -(TileCoord a, TileCoord b)
     {
         return new TileCoord(a.x - b.x, a.z - b.z);

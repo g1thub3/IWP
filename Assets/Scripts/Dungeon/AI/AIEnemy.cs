@@ -5,12 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AIEnemy", menuName = "Dungeon AI/AIEnemy")]
 public class AIEnemy : SingletonScriptableObject<AIEnemy>, DGAIModule
 {
-    private static Dictionary<CharacterBehaviour, TileCoord> _plrPositions = new Dictionary<CharacterBehaviour, TileCoord>();
-    public static void RemoveEntry(CharacterBehaviour behaviour)
-    {
-        _plrPositions.Remove(behaviour);
-    }
-    public static readonly int detectionRange = 5;
+
     public void Run(DGNPC user, KeyDataList dataList = null)
     {
         DGGenerator generator = FindAnyObjectByType<DGGenerator>();
@@ -39,7 +34,6 @@ public class AIEnemy : SingletonScriptableObject<AIEnemy>, DGAIModule
             }
             path = newpath;
             closestTarget = member.GetComponent<CharacterBehaviour>();
-            _plrPositions[member] = member.GetComponent<DGEntity>().Position;
         }
         if (closestTarget != null && path.Count > 0)
         {
@@ -55,7 +49,7 @@ public class AIEnemy : SingletonScriptableObject<AIEnemy>, DGAIModule
                 }
             }
             // If entity is not in the room, are they close to each other and accessible?
-            if (targetRoom == currRoom || path.Count < detectionRange)
+            if (targetRoom == currRoom || path.Count < 5)
             {
                 if (path.Count > 1)
                 {
@@ -70,7 +64,7 @@ public class AIEnemy : SingletonScriptableObject<AIEnemy>, DGAIModule
                 {
                     TileCoord diff = closestTarget.GetComponent<DGEntity>().Position - entity.Position;
                     user.GetComponent<DGEntity>().Move(diff.x, diff.z);
-                    if (!cb.PerformMove(DefaultAttack.Instance))
+                    if (!cb.PerformMove(cb.defaultAttackInstance))
                     {
                         user.GetComponent<DGEntity>().Wait();
                     }

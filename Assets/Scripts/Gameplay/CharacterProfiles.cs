@@ -50,6 +50,8 @@ public class CharacterProfile
     public CharacterStat maxMana;
 
     public int expAward;
+
+    public List<CombatMove> availableMoves;
 }
 
 [CreateAssetMenu(fileName = "CharacterProfiles", menuName = "Scriptable Objects/CharacterProfiles")]

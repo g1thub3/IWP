@@ -1,13 +1,60 @@
+using System.Text;
+using Unity.VisualScripting;
 using UnityEngine;
+
+public enum MOVE_TYPE
+{
+    PHYSICAL,
+    MAGICAL
+}
 
 public abstract class CombatMove : SingletonScriptableObject<CombatMove>
 {
     public string moveName;
     public string moveDescription;
+    public int energyRequirement;
+    public CHARACTER_STAT consumptionType;
 
-    public abstract bool CanBePerformed(CharacterBehaviour user);
+    public virtual bool CanBePerformed(CharacterBehaviour user) {
+        switch (consumptionType)
+        {
+            case CHARACTER_STAT.MANA:
+                return user.mana >= energyRequirement;
+            default:
+            case CHARACTER_STAT.ENERGY:
+                return user.energy >= energyRequirement;
+        }
+    }
     public abstract bool WillMoveSucceed(CharacterBehaviour user);
-    public abstract bool Perform(CharacterBehaviour user);
+    public virtual bool Perform(CharacterBehaviour user) {
+        user.Consume(energyRequirement, consumptionType);
+        return true;
+    }
+
+    public virtual string MoveDescription {
+        get {  return moveDescription; }
+    }
+}
+
+public abstract class AttackMove : CombatMove
+{
+    public int baseDamage;
+    public MOVE_TYPE moveType;
+
+    public override string MoveDescription
+    {
+        get
+        {
+            StringBuilder newString = new StringBuilder();
+            newString.Append("Move: " + moveName + "\n");
+            newString.Append(energyRequirement + " " + (consumptionType == CHARACTER_STAT.ENERGY ? "EN" : "MN") + " Needed\n");
+            newString.Append("DMG: " + baseDamage + "\n");
+            newString.Append("Type: " + (moveType == MOVE_TYPE.PHYSICAL ? "Physical" : "Magic"));
+            newString.Append("\nDescription:\n");
+            newString.Append(moveDescription);
+            return newString.ToString();
+        }
+    }
 }
 
 //public class CombatMoveData {

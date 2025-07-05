@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: DefaultAttack
   m_EditorClassIdentifier: 
   moveName: Default
-  moveDescription: Default
+  moveDescription: The default attack. Hit the opponent in front of you.
   energyRequirement: 3
-  moveTime1: 0.1
-  moveTime2: 0.2
+  consumptionType: 2
+  baseDamage: 15
+  moveType: 0
+  moveTime1: 0.2
+  moveTime2: 0.35

@@ -42,7 +42,7 @@ public class DGEntity : DGObject
     protected DGGenerator _dungeonGen;
     private string[] _actionKeys;
     private string _direction;
-    private ANIMATION_ENUM _action;
+    public ANIMATION_ENUM _action;
 
     public TileCoord faceDir;
     private Transition _moveTransition;

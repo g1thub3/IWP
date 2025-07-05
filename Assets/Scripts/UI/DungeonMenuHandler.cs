@@ -180,7 +180,6 @@ public class DGListLayer : MenuLayer
     private void IncSelection(int inc)
     {
         inc = Mathf.Clamp(inc, -1, 1);
-        CurrentSelection += inc;
         if (CurrentSelection + inc >= functions.Count)
             CurrentSelection = 0;
         else if (CurrentSelection + inc < 0)
@@ -262,7 +261,6 @@ public class DGDialogueLayer : MenuLayer
     private void IncSelection(int inc)
     {
         inc = Mathf.Clamp(inc, -1, 1);
-        CurrentSelection += inc;
         if (CurrentSelection + inc >= functions.Count)
             CurrentSelection = 0;
         else if (CurrentSelection + inc < 0)
@@ -419,6 +417,8 @@ public class DungeonMenuHandler : LayeredUI
     private DGGenerator _dungeonGen;
     private DGGameManager _gameManager;
     private List<StaticMenuFunction> _helpFunctions;
+    private List<CombatMove> _availableMoves;
+    [SerializeField] DefaultAttack _defaultAttackInstance;
 
     private new void Start()
     {
@@ -427,6 +427,12 @@ public class DungeonMenuHandler : LayeredUI
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _gameManager = FindAnyObjectByType<DGGameManager>();
         _inputManager = FindAnyObjectByType<PlayerInput>();
+
+        _availableMoves = new List<CombatMove>();
+        _availableMoves.Add(_defaultAttackInstance);
+        for (int i = 0; i < GlobalGameManager.Instance.party[0].Profile.availableMoves.Count; i++) {
+            _availableMoves.Add(GlobalGameManager.Instance.party[0].Profile.availableMoves[i]);
+        }
 
         _helpFunctions = new List<StaticMenuFunction>();
         _helpFunctions.Add(new StaticMenuFunction("See Active Quests", SeeQuests));
@@ -523,7 +529,62 @@ public class DungeonMenuHandler : LayeredUI
 
     private void OpenMoves()
     {
-        CreateReadLayer("None", "Feature not implemented yet.");
+
+
+        var moveLayer = new DGListLayer(_sWindow, _itemList, _itemEntry, _closeMsg, _selectionBacking);
+        moveLayer.refresh = delegate {
+            _sWindowTitle.text = "Moves";
+            moveLayer.ClearList();
+            moveLayer.functions = new List<MenuLayer.MenuFunction>();
+            for (int i = 0; i < _availableMoves.Count; i++)
+            {
+                var moveItem = _availableMoves[i];
+                var item = moveLayer.AddEntry();
+                item.GetComponent<TMP_Text>().text = moveItem.moveName + " (" + moveItem.energyRequirement + " " + (moveItem.consumptionType == CHARACTER_STAT.ENERGY ? "EN" : "MN") + ")";
+                if (!moveItem.CanBePerformed(_dungeonGen.ActiveParty[0]))
+                {
+                    item.GetComponent<TMP_Text>().color = Color.red;
+                }
+                moveLayer.functions.Add(delegate
+                {
+                    var dialogueLayer = new DGDialogueLayer(_dialogueOptions, _optionsContainer, _itemEntry, _selectionBacking);
+                    dialogueLayer.refresh = delegate {
+                        dialogueLayer.ClearList();
+                        dialogueLayer.functions = new List<MenuLayer.MenuFunction>();
+
+                        var use = dialogueLayer.AddEntry();
+                        use.GetComponent<TMP_Text>().text = "Use";
+                        if (!moveItem.CanBePerformed(_dungeonGen.ActiveParty[0]))
+                        {
+                            use.GetComponent<TMP_Text>().color = Color.red;
+                        }
+                        dialogueLayer.functions.Add(delegate {
+                            if (_dungeonGen.ActiveParty[0].PerformMove(moveItem))
+                            {
+                                dialogueLayer.Close();
+                                moveLayer.Close();
+                            }
+                        });
+
+                        var info = dialogueLayer.AddEntry();
+                        info.GetComponent<TMP_Text>().text = "Info";
+                        dialogueLayer.functions.Add(delegate {
+                            CreateReadLayer("About: " + moveItem.moveName, moveItem.MoveDescription);
+                        });
+
+                        var close = dialogueLayer.AddEntry();
+                        close.GetComponent<TMP_Text>().text = "Close";
+                        dialogueLayer.functions.Add(dialogueLayer.Close);
+                    };
+                    _layers.Add(dialogueLayer);
+                    dialogueLayer.Open();
+                });
+            }
+
+            moveLayer.functions.Add(moveLayer.Close);
+        };
+        _layers.Add(moveLayer);
+        moveLayer.Open();
     }
     private void OpenInventory()
     {
@@ -564,6 +625,7 @@ public class DungeonMenuHandler : LayeredUI
                                                 _gameManager.TurnCompleted.Invoke();
                                                 partyLayer.Close();
                                                 dialogueLayer.Close();
+                                                inventoryLayer.Close();
                                             });
                                         }
                                     };

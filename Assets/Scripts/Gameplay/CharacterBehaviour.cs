@@ -32,6 +32,8 @@ public class CharacterBehaviour : MonoBehaviour
     public int energy;
     public int mana;
 
+    public DefaultAttack defaultAttackInstance;
+
     public void SetUp(CharacterEntry characterData)
     {
         character = characterData;
@@ -204,9 +206,17 @@ public class CharacterBehaviour : MonoBehaviour
         {
             case CHARACTER_STAT.ENERGY:
                 energy = Mathf.Clamp(energy - amount, 0, character.maxEnergy.CurrStat);
+                if (TryGetComponent<DGPlayer>(out DGPlayer plr))
+                {
+                    plr.OnLeaderStatChanged.Invoke(CHARACTER_STAT.ENERGY, energy, character.maxEnergy.CurrStat);
+                }
                 break;
             case CHARACTER_STAT.MANA:
                 mana = Mathf.Clamp(mana - amount, 0, character.maxMana.CurrStat);
+                if (TryGetComponent<DGPlayer>(out DGPlayer plr2))
+                {
+                    plr2.OnLeaderStatChanged.Invoke(CHARACTER_STAT.MANA, mana, character.maxMana.CurrStat);
+                }
                 break;
         }
     }
@@ -329,8 +339,4 @@ public class CharacterBehaviour : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        AIEnemy.RemoveEntry(this);
-    }
 }

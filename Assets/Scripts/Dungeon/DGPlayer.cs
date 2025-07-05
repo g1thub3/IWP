@@ -14,6 +14,8 @@ public class DGPlayer : DGEntity
     private static readonly float _transparency = 35.0f / 255.0f;
     private Color _indicatorColor;
 
+    [SerializeField] DefaultAttack _defaultAttackInstance;
+
     private new void Start()
     {
         base.Start();
@@ -43,7 +45,7 @@ public class DGPlayer : DGEntity
         {
             if (!InteractAction())
             {
-                _cb.PerformMove(DefaultAttack.Instance);
+                _cb.PerformMove(_cb.defaultAttackInstance);
             }
             return;
         }

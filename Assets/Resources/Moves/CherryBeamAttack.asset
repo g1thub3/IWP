@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22fc9b405e1c99443b26bcdd8ddefbd1, type: 3}
+  m_Name: CherryBeamAttack
+  m_EditorClassIdentifier: 
+  moveName: Cherry Beam!
+  moveDescription: Cherry's signature beam attack! Shoot a glaring ray of light and
+    destroy any opponents in its path! Uses up a lot of mana though...
+  energyRequirement: 400
+  consumptionType: 3
+  baseDamage: 200
+  moveType: 1
+  cherryBeam: {fileID: 7627034810098605874, guid: 6f1d22d79295a3b42b149c70dc350f91, type: 3}
+  runeCircle: {fileID: 4979615792679322027, guid: f03b45cdaf4285744a15d43db157189d, type: 3}
+  beamTime: 0.075
+  tweenLength: 0.6

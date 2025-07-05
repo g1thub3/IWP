@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9e6200c7c5e1a4cb0763219cc34224, type: 3}
   m_Name: AIEnemy
   m_EditorClassIdentifier: 
+  _defaultAttackInstance: {fileID: 11400000, guid: caa49499536e52e4481389498b1c947a, type: 2}

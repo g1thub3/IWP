@@ -41,6 +41,14 @@ MonoBehaviour:
       baseStat: 400
       incrementPercentage: 15
     expAward: 0
+    availableMoves:
+    - {fileID: 11400000, guid: b87b721d7a84e694e90fc8e747856969, type: 2}
+    - {fileID: 11400000, guid: bbe099ecf13b9ba4cac9be1721d4661f, type: 2}
+    - {fileID: 11400000, guid: dde3038a1a540fa4d8a18ce042f2d9a5, type: 2}
+    - {fileID: 11400000, guid: 9fa6b59d17bc7864aa911d9deeaa932b, type: 2}
+    - {fileID: 11400000, guid: 7793416ab4792c24093881b62c07dfb6, type: 2}
+    - {fileID: 11400000, guid: 9dc8d9d240bdd5d44b88d82a010036af, type: 2}
+    - {fileID: 11400000, guid: f6cf7da7c605a3645af77d61648950d0, type: 2}
   - characterSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
     characterName: Damson
     animatorController: {fileID: 9100000, guid: 5819b751b3768bb46adb12913d2184f1, type: 2}
@@ -69,6 +77,9 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 0
+    availableMoves:
+    - {fileID: 11400000, guid: bbe099ecf13b9ba4cac9be1721d4661f, type: 2}
+    - {fileID: 11400000, guid: dde3038a1a540fa4d8a18ce042f2d9a5, type: 2}
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Bandit
     animatorController: {fileID: 9100000, guid: 68dc13f499ce93b49b4916ee751a0d68, type: 2}
@@ -97,6 +108,9 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 5
+    availableMoves:
+    - {fileID: 11400000, guid: b87b721d7a84e694e90fc8e747856969, type: 2}
+    - {fileID: 11400000, guid: dde3038a1a540fa4d8a18ce042f2d9a5, type: 2}
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Cave Thief
     animatorController: {fileID: 9100000, guid: 093727f09f9de8e4ab319f2b0a80e0e1, type: 2}
@@ -125,6 +139,8 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 10
+    availableMoves:
+    - {fileID: 11400000, guid: b87b721d7a84e694e90fc8e747856969, type: 2}
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: 304aaa11f7edd0b4988562ce2915f84d, type: 2}
@@ -153,6 +169,8 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves:
+    - {fileID: 11400000, guid: b87b721d7a84e694e90fc8e747856969, type: 2}
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: 59c9337ecdab8534f821f53529627bd9, type: 2}
@@ -181,6 +199,10 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves:
+    - {fileID: 11400000, guid: 9fa6b59d17bc7864aa911d9deeaa932b, type: 2}
+    - {fileID: 11400000, guid: 7793416ab4792c24093881b62c07dfb6, type: 2}
+    - {fileID: 11400000, guid: 9dc8d9d240bdd5d44b88d82a010036af, type: 2}
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: d04121ea4a313b84a8bc1d332c5bccf3, type: 2}
@@ -209,6 +231,8 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves:
+    - {fileID: 11400000, guid: dde3038a1a540fa4d8a18ce042f2d9a5, type: 2}
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: 4ed2fd37a74401f468c3ac16823eec31, type: 2}
@@ -237,6 +261,8 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves:
+    - {fileID: 11400000, guid: dde3038a1a540fa4d8a18ce042f2d9a5, type: 2}
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: 8675cab908d04414ba956a52cff7177a, type: 2}
@@ -265,6 +291,10 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves:
+    - {fileID: 11400000, guid: 9fa6b59d17bc7864aa911d9deeaa932b, type: 2}
+    - {fileID: 11400000, guid: 7793416ab4792c24093881b62c07dfb6, type: 2}
+    - {fileID: 11400000, guid: 9dc8d9d240bdd5d44b88d82a010036af, type: 2}
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Armourer
     animatorController: {fileID: 9100000, guid: c9f5ce071b26fd04f859b08edcd62fb0, type: 2}
@@ -293,6 +323,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Banker
     animatorController: {fileID: 9100000, guid: 19301f1c39853de4f9662ac779dcb867, type: 2}
@@ -321,6 +352,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Merchant
     animatorController: {fileID: 9100000, guid: fa9860238e0138243929e106214d9e13, type: 2}
@@ -349,6 +381,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Warehouse Owner
     animatorController: {fileID: 9100000, guid: 04ebf959f9ac85546b098491326201e9, type: 2}
@@ -377,6 +410,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Villager
     animatorController: {fileID: 9100000, guid: e5fd649fe9810e8438fbdc9fea9b6ee3, type: 2}
@@ -405,6 +439,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Villager
     animatorController: {fileID: 9100000, guid: 153474b5f8eb359478e297933f25275f, type: 2}
@@ -433,6 +468,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Villager
     animatorController: {fileID: 9100000, guid: da7cf99b732ea5945bef0457448c6f5a, type: 2}
@@ -461,6 +497,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Villager
     animatorController: {fileID: 9100000, guid: 22d9a8ec787a7704cbbcd9d198b31be2, type: 2}
@@ -489,6 +526,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Villager
     animatorController: {fileID: 9100000, guid: 6a2d077211881e54eb5c427096a05957, type: 2}
@@ -517,6 +555,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Villager
     animatorController: {fileID: 9100000, guid: b9c50f7c4e06ecc428b7899085277e85, type: 2}
@@ -545,6 +584,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Villager
     animatorController: {fileID: 9100000, guid: 22a9868dcd672584fad78ad8215be47a, type: 2}
@@ -573,6 +613,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Villager
     animatorController: {fileID: 9100000, guid: 68056638be419704caf74faf7fe79ef6, type: 2}
@@ -601,6 +642,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Villager
     animatorController: {fileID: 9100000, guid: fa2acdce5a55d7540821104ecf436450, type: 2}
@@ -629,6 +671,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
     characterName: Villager
     animatorController: {fileID: 9100000, guid: 00bf6a701dbd47b49a6f17e6a51d9f1d, type: 2}
@@ -657,6 +700,7 @@ MonoBehaviour:
       baseStat: 5
       incrementPercentage: 15
     expAward: 25
+    availableMoves: []
   questNPCNames:
   - Charlie
   - James

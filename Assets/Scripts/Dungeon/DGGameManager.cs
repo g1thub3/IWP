@@ -353,7 +353,6 @@ public class DGGameManager : MonoBehaviour
     public void NextTurn()
     {
         _turnCount++;
-        Debug.Log(_turnCount);
         var prev = CurrentEntityTurn();
         if (prev != null)
         {

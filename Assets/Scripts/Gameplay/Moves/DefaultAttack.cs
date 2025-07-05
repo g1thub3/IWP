@@ -3,9 +3,8 @@ using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
 
 [CreateAssetMenu(fileName = "DefaultAttack", menuName = "Combat Moves/DefaultAttack")]
-public class DefaultAttack : CombatMove
+public class DefaultAttack : AttackMove
 {
-    [SerializeField] private int energyRequirement = 5;
 
     public float moveTime1 = 0.3f;
     public float moveTime2 = 0.15f;
@@ -18,6 +17,8 @@ public class DefaultAttack : CombatMove
         Vector3 startPos = selfTile.CoordToPosition();
         Vector3 endPos = hitTile.CoordToPosition();
 
+        _dungeonUI.AddEntry(user.gameObject.name + " attacked!");
+
         Transition trans = new Transition();
         trans.max = moveTime1;
         while (trans.Progression < 1)
@@ -27,13 +28,12 @@ public class DefaultAttack : CombatMove
             yield return new WaitForEndOfFrame();
         }
         // attack
-        _dungeonUI.AddEntry(user.gameObject.name + " attacked!");
         if (WillMoveSucceed(user))
         {
             var detected = user.HitDetect(hitArea);
             if (detected != null)
             {
-                detected.Damage(15, ATTACK_TYPE.PHYSICAL, user);
+                detected.Damage(baseDamage, ATTACK_TYPE.PHYSICAL, user);
             }
         }
         Transition trans2 = new Transition();
@@ -67,7 +67,7 @@ public class DefaultAttack : CombatMove
 
     public override bool Perform(CharacterBehaviour user)
     {
-        user.Consume(energyRequirement, CHARACTER_STAT.ENERGY);
+        base.Perform(user);
 
         DGGameManager _dgGameManager = FindAnyObjectByType<DGGameManager>();
         DungeonUIHandler _dungeonUI = FindAnyObjectByType<DungeonUIHandler>();
@@ -75,10 +75,5 @@ public class DefaultAttack : CombatMove
         entity.IsPerformingAction = true;
         entity.StartCoroutine(MoveAnimation(user, _dgGameManager, _dungeonUI));
         return true;
-    }
-
-    public override bool CanBePerformed(CharacterBehaviour user)
-    {
-        return user.energy >= energyRequirement;
     }
 }
