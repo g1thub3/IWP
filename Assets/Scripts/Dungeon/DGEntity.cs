@@ -46,11 +46,6 @@ public class DGEntity : DGObject
 
     public TileCoord faceDir;
     private Transition _moveTransition;
-    private bool _hasInteractedItem, _hasInteractedStructure;
-    private bool _isMoving;
-    private Vector3 _prevPos;
-    private Vector3 _newPos;
-    private DGInteractable _currentlyInteracting;
 
     public bool IsPerformingAction
     {
@@ -68,6 +63,40 @@ public class DGEntity : DGObject
             yield return new WaitForEndOfFrame();
         }
         _performingAction = false;
+    }
+
+    private IEnumerator MoveCoroutine(Vector2 original, Vector2 destined)
+    {
+        _action = ANIMATION_ENUM.WALK;
+        float t = 0;
+        while (t < _moveTime)
+        {
+            t += Time.deltaTime;
+            transform.position = Vector2.Lerp(original, destined, t / _moveTime);
+            yield return new WaitForEndOfFrame();
+        }
+        transform.position = destined;
+        _action = ANIMATION_ENUM.IDLE;
+
+        TileInfo tile = floor.tiles[floor.CoordToIndex(position)];
+        if (tile.item != null)
+        {
+            tile.item.OnInteract(this, floor);
+            while (tile.item.interaction.IsInProgress())
+            {
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        if (tile.structure != null)
+        {
+            tile.structure.OnInteract(this, floor);
+            while (tile.structure.interaction.IsInProgress())
+            {
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        _performingAction = false;
+        _dungeonUI.UpdateMinimap();
     }
 
     public bool InteractAction()
@@ -115,8 +144,6 @@ public class DGEntity : DGObject
         faceDir.x = right;
         faceDir.z = up;
 
-        _performingAction = true;
-
         if (up == 1)
             NumToDir(2);
         if (right == 1)
@@ -129,6 +156,8 @@ public class DGEntity : DGObject
         TileCoord newPosition = position + new TileCoord(right, up);
         TileCoord xChange = position + new TileCoord(right, 0);
         TileCoord yChange = position + new TileCoord(0, up);
+
+        _performingAction = true;
 
         TileInfo tile = floor.tiles[floor.CoordToIndex(newPosition)];
         TileInfo xTile = floor.tiles[floor.CoordToIndex(xChange)];
@@ -151,14 +180,13 @@ public class DGEntity : DGObject
                 }
             }
 
-            _moveTransition.t = 0;
-            _hasInteractedItem = _hasInteractedStructure = false;
+            Vector2 original = transform.position;
+            Vector2 destined = tile.CoordToPosition();
+            _dgGameManager.TurnCompleted.Invoke();
 
-            _prevPos = transform.position;
-            _newPos = tile.CoordToPosition();
-            _isMoving = true;
+            StartCoroutine(MoveCoroutine(original, destined));
             //_dungeonUI.AddEntry(gameObject.name + " moved!");
-            _dgGameManager.TurnCompleted.Invoke(); // NOTE: POSSSIBLE TO TRIGGER MULTIPLE INTERACTIONS AT A TIME, MIGHT BUG OUT, MAKE IT ONLY WAIT IF IN VIEW
+            // NOTE: POSSSIBLE TO TRIGGER MULTIPLE INTERACTIONS AT A TIME, MIGHT BUG OUT, MAKE IT ONLY WAIT IF IN VIEW
 
 
             return true;
@@ -166,50 +194,6 @@ public class DGEntity : DGObject
         _performingAction = false;
         return false;
     }
-
-    private void MoveCycle()
-    {
-        if (!_isMoving)
-        {
-            return;
-        }
-        if (_moveTransition.Progression < 1)
-        {
-            _action = ANIMATION_ENUM.WALK;
-            _moveTransition.Progress();
-            transform.position = Vector2.Lerp(_prevPos, _newPos, _moveTransition.Progression);
-            return;
-        }
-        if (_currentlyInteracting != null)
-        {
-            if (_currentlyInteracting.interaction.IsInProgress())
-                return;
-            _currentlyInteracting = null;
-        }
-        if (!_hasInteractedItem)
-        {
-            _hasInteractedItem = true;
-            if (occupyingTile.item != null)
-            {
-                _currentlyInteracting = occupyingTile.item;
-                _currentlyInteracting.OnInteract(this, floor);
-                return;
-            }
-        }
-        if (!_hasInteractedStructure)
-        {
-            _hasInteractedStructure = true;
-            if (occupyingTile.structure != null)
-            {
-                _currentlyInteracting = occupyingTile.structure;
-                _currentlyInteracting.OnInteract(this, floor);
-                return;
-            }
-        }
-        _isMoving = false;
-        _performingAction = false;
-    }
-
     public void Warp(TileCoord newPosition, bool animate = false) // No conditions for movement
     {
         _performingAction = true;
@@ -415,8 +399,6 @@ public class DGEntity : DGObject
 
     protected void Update()
     {
-        _action = ANIMATION_ENUM.IDLE;
-        MoveCycle();
         PlayAnimation();
     }
 
@@ -456,8 +438,6 @@ public class DGEntity : DGObject
     protected new void Start()
     {
         base.Start();
-        _currentlyInteracting = null;
-        _hasInteractedItem = _hasInteractedStructure = _isMoving = false;
         _moveTransition = new Transition();
         _moveTransition.max = _moveTime;
         faceDir = new TileCoord(0, -1);

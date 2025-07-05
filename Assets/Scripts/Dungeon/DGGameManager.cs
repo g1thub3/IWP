@@ -32,6 +32,7 @@ public class DGGameManager : MonoBehaviour
 
     private PlayerInput _inputManager;
     private bool isPressingInit;
+    private int _turnCount;
 
     public bool IsGameActive
     {
@@ -351,6 +352,8 @@ public class DGGameManager : MonoBehaviour
 
     public void NextTurn()
     {
+        _turnCount++;
+        Debug.Log(_turnCount);
         var prev = CurrentEntityTurn();
         if (prev != null)
         {

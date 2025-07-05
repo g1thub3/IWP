@@ -7,16 +7,12 @@ public class DGNPC : MonoBehaviour
     public DGAIModule main;
     public KeyDataList aiDataList;
     private DGGameManager _dgGameManager;
-
-    public DGObject chaseTarget = null;
-    public List<TileCoord> pathfind;
     public QuestCompetitor associatedCompetitor = null;
     public bool isQuestTarget = false;
     private void Start()
     {
         _dgGameManager = FindAnyObjectByType<DGGameManager>();
         _entity = GetComponent<DGEntity>();
-        pathfind = new List<TileCoord>();
     }
     private void Update()
     {
