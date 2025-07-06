@@ -1,11 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.TextCore.Text;
 
 public enum DUNGEON_END_CONTEXT
 {
@@ -217,20 +213,23 @@ public class DGGameManager : MonoBehaviour
         _dungeonUI.LoadMinimap();
         yield return new WaitForEndOfFrame();
 
+        int allianceIndex = 3;
         for (int i = ActiveQuests.Count - 1; i >= 0; i--)
         {
+            allianceIndex++;
             var questData = GlobalGameManager.Instance.ownedQuests[i];
             if (_questCompetition.ContainsKey(questData))
             {
                 foreach (var competitor in _questCompetition[questData])
                 {
+                    allianceIndex++;
                     competitor.target = _dungeonGen.CurrentFloor.stairs;
                     if (competitor.currentFloor != CurrentFloor)
                     {
                         competitor.floorProgress = competitor.defaultProgress;
                     } else
                     {
-                        _dungeonGen.SpawnCompetitors(competitor);
+                        _dungeonGen.SpawnCompetitors(competitor, allianceIndex);
                     }
                 }
             }
@@ -370,13 +369,16 @@ public class DGGameManager : MonoBehaviour
             prev.GetComponent<CharacterBehaviour>().OnTurnComplete();
             if (prev is DGPlayer) // PROGRESS THE COMPETITORS
             {
+                int allianceIndex = 3;
                 foreach (var q in ActiveQuests)
                 {
+                    allianceIndex++;
                     if (_questCompetition.ContainsKey(q))
                     {
                         foreach (var comp in _questCompetition[q])
                         {
                             if (comp.currentFloor == CurrentFloor) continue;
+                            allianceIndex++;
                             int floor = comp.currentFloor;
                             comp.Progress();
                             if (comp.currentFloor == floor)
@@ -419,7 +421,7 @@ public class DGGameManager : MonoBehaviour
                             }
                             if (comp.currentFloor == CurrentFloor) // When competition arrives on this floor
                             {
-                                _dungeonGen.SpawnCompetitors(comp);
+                                _dungeonGen.SpawnCompetitors(comp, allianceIndex);
                                 RefreshTurnList();
                             }
                             else if (comp.currentFloor > q.quest.floor && q.quest.questPossible)
@@ -482,8 +484,9 @@ public class DGGameManager : MonoBehaviour
             if (dead.cause != null && GlobalGameManager.Instance.party.Contains(dead.cause.character))
             {
                 _dungeonUI.AddEntry(dead.death.character.ExperienceAward + " XP was awarded to the whole party!");
-                foreach (var member in GlobalGameManager.Instance.party)
+                foreach (var activeMember in _dungeonGen.ActiveParty)
                 {
+                    var member = activeMember.character;
                     int added = member.GainXP(dead.death.character.ExperienceAward);
                     if (added > 0)
                     {

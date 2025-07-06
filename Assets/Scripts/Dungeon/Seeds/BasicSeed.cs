@@ -396,7 +396,7 @@ public class BasicSeed : DGSeed
             int enemyIndex = Random.Range(0, possibleEnemies.Count);
             CharacterEntry newCharacter = CharacterEntry.Create(possibleEnemies[enemyIndex].character, 
                 Random.Range((int)possibleEnemies[enemyIndex].minLevel, (int)possibleEnemies[enemyIndex].maxLevel));
-            dgGen.SpawnNPC(newCharacter);
+            dgGen.SpawnNPC(DG_CHARACTER_TYPE.ENEMY,newCharacter);
         }
     }
 

@@ -51,6 +51,15 @@ public class AIEnemy : SingletonScriptableObject<AIEnemy>, DGAIModule
             // If entity is not in the room, are they close to each other and accessible?
             if (targetRoom == currRoom || path.Count < 5)
             {
+                CombatMove move = cb.SelectMove();
+                if (move != null)
+                {
+                    if (!cb.PerformMove(move))
+                    {
+                        user.GetComponent<DGEntity>().Wait();
+                    }
+                    return;
+                }
                 if (path.Count > 1)
                 {
                     TileCoord diff = path[1] - entity.Position;
@@ -63,8 +72,15 @@ public class AIEnemy : SingletonScriptableObject<AIEnemy>, DGAIModule
                 else
                 {
                     TileCoord diff = closestTarget.GetComponent<DGEntity>().Position - entity.Position;
-                    user.GetComponent<DGEntity>().Move(diff.x, diff.z);
-                    if (!cb.PerformMove(cb.defaultAttackInstance))
+                    user.GetComponent<DGEntity>().FaceDirection(diff.x, diff.z);
+                    move = cb.SelectMove();
+                    if (move != null)
+                    {
+                        if (!cb.PerformMove(move))
+                        {
+                            user.GetComponent<DGEntity>().Wait();
+                        }
+                    } else
                     {
                         user.GetComponent<DGEntity>().Wait();
                     }

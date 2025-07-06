@@ -2020,6 +2020,8 @@ MonoBehaviour:
   _leaderENLabel: {fileID: 2120568445}
   _leaderMNLabel: {fileID: 1067522653}
   _leaderHGLabel: {fileID: 2006595796}
+  _partyMemberEntry: {fileID: 4148596826965075028, guid: 421b99c1db3906547b2ce4ca493dcda5, type: 3}
+  _memberList: {fileID: 1127816570}
   _endMsg: {fileID: 1401567720}
   _dgExplored: {fileID: 95960285}
   _finalFloor: {fileID: 1878439245}
@@ -4297,7 +4299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -650, y: 50}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1296520275

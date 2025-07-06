@@ -15,6 +15,7 @@ public class FRAreaManager : MonoBehaviour
 
     private void Start()
     {
+        GlobalCanvasManager.LoadInstance();
         foreach (var spawnPoint in spawnPoints) { 
             if (spawnPoint.Origin.Equals(GameSceneManager.Instance.previousArea))
             {

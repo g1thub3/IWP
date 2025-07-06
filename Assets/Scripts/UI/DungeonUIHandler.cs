@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.Runtime.Serialization.Json;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class DungeonUIHandler : MonoBehaviour
@@ -24,6 +26,28 @@ public class DungeonUIHandler : MonoBehaviour
 
     [SerializeField] private RectTransform _leaderHPBar, _leaderENBar, _leaderMNBar, _leaderHGBar;
     [SerializeField] private TMP_Text _leaderNameLabel, _leaderLvlLabel, _leaderHPLabel, _leaderENLabel, _leaderMNLabel, _leaderHGLabel;
+    [SerializeField] private GameObject _partyMemberEntry;
+    [SerializeField] private Transform _memberList;
+
+    public struct PartyMemberUIEntry {
+        public Image sprite;
+        public RectTransform hpAmt; // height: 300
+        public RectTransform hungerAmt; // height: 100
+        public TMP_Text charName;
+        public TMP_Text charLevel;
+        public Image deathCover;
+        public static PartyMemberUIEntry New(Transform obj)
+        {
+            PartyMemberUIEntry newData = new PartyMemberUIEntry();
+            newData.sprite = obj.Find("Mask").Find("Sprite").GetComponent<Image>();
+            newData.hpAmt = obj.Find("HPBar").Find("Amount").GetComponent<RectTransform>();
+            newData.hungerAmt = obj.Find("HungerBar").Find("Amount").GetComponent<RectTransform>();
+            newData.charName = obj.Find("CharacterName").GetComponent<TMP_Text>();
+            newData.charLevel = obj.Find("CharacterLevel").GetComponent<TMP_Text>();
+            newData.deathCover = obj.Find("DeathCover").GetComponent<Image>();
+            return newData;
+        }
+    }
 
     [Header("Endscreen")]
     [SerializeField] private TMP_Text _endMsg;
@@ -56,10 +80,14 @@ public class DungeonUIHandler : MonoBehaviour
     private PlayerInput _inputManager;
     private DGGameManager _gameManager;
     private DGGenerator _dungeonGen;
+
+    private Dictionary<CharacterEntry, PartyMemberUIEntry> _partyUIDictionary;
+
     private void Start()
     {
         _gameManager = FindAnyObjectByType<DGGameManager>();
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
+        _partyUIDictionary = new Dictionary<CharacterEntry, PartyMemberUIEntry>();
     }
 
     public void UpdateQuestUI()
@@ -205,6 +233,35 @@ public class DungeonUIHandler : MonoBehaviour
         _focusedPlr.OnLeaderLevelChanged += UpdateLeaderWhole;
         UpdateLeaderWhole();
     }
+
+    public void RegisterParty(List<CharacterBehaviour> activeParty)
+    {
+        if (activeParty.Count < 2) return;
+        for (int i = 1; i < activeParty.Count; i++) {
+            var newEntry = Instantiate(_partyMemberEntry, _memberList);
+            PartyMemberUIEntry newEntryData = PartyMemberUIEntry.New(newEntry.transform);
+            CharacterEntry character = activeParty[i].character;
+            _partyUIDictionary.Add(character, newEntryData);
+
+            newEntryData.sprite.sprite = character.Profile.characterSprite;
+            newEntryData.charName.text = character.Profile.characterName;
+            newEntryData.charLevel.text = "Lv. " + character.characterLevel;
+        }
+    }
+
+    public void UpdatePartyStatus(CharacterBehaviour changedMember)
+    {
+        if (!_partyUIDictionary.ContainsKey(changedMember.character)) return;
+        var ui = _partyUIDictionary[changedMember.character];
+        ui.charLevel.text = "Lv. " + changedMember.character.characterLevel;
+        float perc = (float)changedMember.health / changedMember.character.maxHealth.CurrStat;
+        ui.hpAmt.offsetMax = new Vector2(ui.hpAmt.offsetMax.x, 300 * (perc - 1));
+        perc = (float)changedMember.hunger / changedMember.character.hungerSize.CurrStat;
+        ui.hungerAmt.offsetMax = new Vector2(ui.hungerAmt.offsetMax.x, 100 * (perc - 1));
+        if (changedMember.health <= 0)
+            ui.deathCover.enabled = true;
+    }
+
     private void UpdateLeaderWhole()
     {
         var cb = _focusedPlr.GetComponent<CharacterBehaviour>();
@@ -263,15 +320,25 @@ public class DungeonUIHandler : MonoBehaviour
             pt.player.enabled = false;
             pt.enemy.enabled = false;
             pt.questrescue.enabled = false;
+            pt.party.enabled = false;
+            pt.competition.enabled = false;
             if (tile.occupyingEntity != null)
             {
                 if (tile.occupyingEntity is DGPlayer)
                 {
                     pt.player.enabled = true;
                 }
+                else if (tile.occupyingEntity.GetComponent<CharacterBehaviour>().alliance == 0)
+                {
+                    pt.party.enabled = true;
+                }
                 else if (tile.occupyingEntity.GetComponent<CharacterBehaviour>().alliance == -1)
                 {
                     pt.questrescue.enabled = (dist <= GlobalGameManager.Instance.party[0].viewDistance && dist != -1) || (_focusedPlr.CurrentRoom == tile.occupyingEntity.CurrentRoom && _focusedPlr.CurrentRoom != null);
+                }
+                else if (tile.occupyingEntity.GetComponent<DGNPC>().associatedCompetitor != null)
+                {
+                    pt.competition.enabled = (dist <= GlobalGameManager.Instance.party[0].viewDistance && dist != -1) || (_focusedPlr.CurrentRoom == tile.occupyingEntity.CurrentRoom && _focusedPlr.CurrentRoom != null);
                 }
                 else
                 {

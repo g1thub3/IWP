@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Rendering;
 using UnityEngine;
 using static UnityEngine.UI.Image;
 
@@ -65,7 +66,7 @@ public class DGEntity : DGObject
         _performingAction = false;
     }
 
-    private IEnumerator MoveCoroutine(Vector2 original, Vector2 destined)
+    public IEnumerator MoveCoroutine(Vector2 original, Vector2 destined)
     {
         _action = ANIMATION_ENUM.WALK;
         float t = 0;
@@ -132,6 +133,19 @@ public class DGEntity : DGObject
         return false;
     }
 
+    public void RefreshRoom()
+    {
+        _currRoom = null;
+        foreach (var room in _dungeonGen.CurrentFloor.rooms)
+        {
+            if (room.IsCoordInRoom(Position))
+            {
+                _currRoom = room;
+                break;
+            }
+        }
+    }
+
     public bool Move(int right, int up) // Limited movement
     {
         right = Mathf.Clamp(right, -1, 1);
@@ -162,34 +176,59 @@ public class DGEntity : DGObject
         TileInfo tile = floor.tiles[floor.CoordToIndex(newPosition)];
         TileInfo xTile = floor.tiles[floor.CoordToIndex(xChange)];
         TileInfo yTile = floor.tiles[floor.CoordToIndex(yChange)];
-        if (!tile.isWall && !xTile.isWall && !yTile.isWall && tile.occupyingEntity == null)
+        if (!tile.isWall && !xTile.isWall && !yTile.isWall)
         {
-            occupyingTile.occupyingEntity = null;
-            occupyingTile = tile;
-            occupyingTile.occupyingEntity = this;
-
-            position = newPosition;
-
-            _currRoom = null;
-            foreach (var room in _dungeonGen.CurrentFloor.rooms)
+            if (tile.occupyingEntity == null)
             {
-                if (room.IsCoordInRoom(Position))
-                {
-                    _currRoom = room;
-                    break;
-                }
+                occupyingTile.occupyingEntity = null;
+                occupyingTile = tile;
+                occupyingTile.occupyingEntity = this;
+
+                position = newPosition;
+
+                RefreshRoom();
+
+                Vector2 original = transform.position;
+                Vector2 destined = tile.CoordToPosition();
+                _dgGameManager.TurnCompleted.Invoke();
+
+                StartCoroutine(MoveCoroutine(original, destined));
+                return true;
+            } else if (tile.occupyingEntity.GetComponent<CharacterBehaviour>().alliance == 0 && _characterBehaviour.alliance == 0) // Swap position with allies
+            {
+                var temp = tile.occupyingEntity;
+                var oldTile = occupyingTile;
+
+                occupyingTile = tile;
+                occupyingTile.occupyingEntity = this;
+
+                oldTile.occupyingEntity = temp;
+                temp.occupyingTile = oldTile;
+
+                temp.position = position;
+                position = newPosition;
+
+                RefreshRoom();
+                temp.RefreshRoom();
+
+                Vector2 original = transform.position;
+                Vector2 destined = tile.CoordToPosition();
+                _dgGameManager.TurnCompleted.Invoke();
+
+                if (-up == 1)
+                    temp.NumToDir(2);
+                if (-right == 1)
+                    temp.NumToDir(3);
+                if (-up == -1)
+                    temp.NumToDir(0);
+                if (-right == -1)
+                    temp.NumToDir(1);
+
+                StartCoroutine(MoveCoroutine(original, destined));
+                StartCoroutine(temp.MoveCoroutine(destined, original));
+                return true;
             }
 
-            Vector2 original = transform.position;
-            Vector2 destined = tile.CoordToPosition();
-            _dgGameManager.TurnCompleted.Invoke();
-
-            StartCoroutine(MoveCoroutine(original, destined));
-            //_dungeonUI.AddEntry(gameObject.name + " moved!");
-            // NOTE: POSSSIBLE TO TRIGGER MULTIPLE INTERACTIONS AT A TIME, MIGHT BUG OUT, MAKE IT ONLY WAIT IF IN VIEW
-
-
-            return true;
         }
         _performingAction = false;
         return false;

@@ -8,5 +8,7 @@ public class MinimapPoint : MonoBehaviour
     public Image item;
     public Image player;
     public Image enemy;
+    public Image party;
     public Image questrescue;
+    public Image competition;
 }

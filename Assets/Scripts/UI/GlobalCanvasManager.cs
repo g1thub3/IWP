@@ -27,7 +27,7 @@ public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>
 
     public bool IsInteractionActive
     {   
-        get { return PromptHandler.IsInProgress() || DialogueHandler.IsInProgress() || LevelUpHandler.IsInProgress() || FreeRoamMenuHandler.IsOpen; }
+        get { return PromptHandler.IsInProgress() || DialogueHandler.IsInProgress() || LevelUpHandler.IsInProgress() || FreeRoamMenuHandler.IsOpen || CutsceneManager.Instance.IsInProgress(); }
     }
 
     private void Start()

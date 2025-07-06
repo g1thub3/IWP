@@ -56,6 +56,8 @@ public class JabAttack : AttackMove
         var selfEntity = user.GetComponent<DGEntity>();
 
         var hitArea = selfEntity.Position + selfEntity.faceDir;
+        if (user.HitDetect(hitArea) == null)
+            return false;
         TileInfo tile = selfEntity.Floor.CoordToTileInfo(hitArea);
         if (tile.isWall)
         {

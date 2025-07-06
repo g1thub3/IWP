@@ -76,6 +76,8 @@ public class SlashAttack : AttackMove
         var selfEntity = user.GetComponent<DGEntity>();
 
         var hitArea = selfEntity.Position + selfEntity.faceDir;
+        if (user.HitDetect(hitArea) == null)
+            return false;
         TileCoord xDiff = new TileCoord(selfEntity.Position.x + selfEntity.faceDir.x, selfEntity.Position.z);
         TileCoord zDiff = new TileCoord(selfEntity.Position.x, selfEntity.Position.z + selfEntity.faceDir.z);
 

@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Dungeon\DI\DIPickUp.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGPlayer.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\JabAttack.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\AI\AIAlly.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\BodySlamAttack.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGSeed.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Visuals\RuneCircle.cs" />
@@ -99,8 +100,10 @@
     <Compile Include="Assets\Scripts\Gameplay\CharacterProfiles.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\CutsceneManager.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\FRAreaManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Cutscene.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGInteractable.cs" />

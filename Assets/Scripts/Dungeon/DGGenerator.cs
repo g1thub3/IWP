@@ -21,6 +21,14 @@ public struct SearchConditions {
     public bool HasEntity;
 }
 
+public enum DG_CHARACTER_TYPE
+{
+    PLAYER,
+    ENEMY,
+    QUEST,
+    COMPETITIVE,
+    ALLY
+}
 public class DGGenerator : MonoBehaviour, IDebuggable
 {
     [SerializeField] private DungeonUIHandler _uiHandler;
@@ -74,136 +82,34 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         if (conditions.AreConditionsMet(origin))
             return origin;
         TileInfo foundTile = null;
+
+        var directions = origin.coord.GetDirections();
+        foreach (var pt in directions)
+        {
+            if (DungeonFloor.IsInZ(pt.z) && DungeonFloor.IsInX(pt.x))
+            {
+                TileInfo tile = _currentFloor.CoordToTileInfo(pt);
+                if (conditions.AreConditionsMet(tile))
+                {
+                    foundTile = tile;
+                    return foundTile;
+                }
+            }
+        }
+
         int currDist = dist + 1;
         if (currDist > maxDist)
             return foundTile;
-        if (direction == 0)
+        if (foundTile == null)
         {
-            TileCoord upCoord = origin.coord.North;
-            if (DungeonFloor.IsInZ(upCoord.z) && DungeonFloor.IsInX(upCoord.x))
+            foreach (var pt in directions)
             {
-                TileInfo tile = _currentFloor.tiles[_currentFloor.CoordToIndex(upCoord)];
-                if (conditions.AreConditionsMet(tile))
+                if (foundTile != null)
+                    break;
+                if (DungeonFloor.IsInZ(pt.z) && DungeonFloor.IsInX(pt.x))
                 {
-                    foundTile = tile;
-                } else
-                {
-                    TileInfo upSearch = SearchNextAvailableTile(tile, conditions, 0, currDist, maxDist);
-                    if (upSearch != null)
-                    {
-                        foundTile = upSearch;
-                        return foundTile;
-                    }
-                    TileInfo rightSearch = SearchNextAvailableTile(tile, conditions, 1, currDist, maxDist);
-                    if (rightSearch != null)
-                    {
-                        foundTile = rightSearch;
-                        return foundTile;
-                    }
-                    TileInfo leftSearch = SearchNextAvailableTile(tile, conditions, 3, currDist, maxDist);
-                    if (leftSearch != null)
-                    {
-                        foundTile = leftSearch;
-                        return foundTile;
-                    }
-                }
-            }
-        }
-        if (direction == 1) {
-            TileCoord rightCoord = origin.coord.East;
-            if (DungeonFloor.IsInZ(rightCoord.z) && DungeonFloor.IsInX(rightCoord.x))
-            {
-                TileInfo tile = _currentFloor.tiles[_currentFloor.CoordToIndex(rightCoord)];
-                if (conditions.AreConditionsMet(tile))
-                {
-                    foundTile = tile;
-                }
-                else
-                {
-                    TileInfo upSearch = SearchNextAvailableTile(tile, conditions, 0, currDist, maxDist);
-                    if (upSearch != null)
-                    {
-                        foundTile = upSearch;
-                        return foundTile;
-                    }
-                    TileInfo rightSearch = SearchNextAvailableTile(tile, conditions, 1, currDist, maxDist);
-                    if (rightSearch != null)
-                    {
-                        foundTile = rightSearch;
-                        return foundTile;
-                    }
-                    TileInfo downSearch = SearchNextAvailableTile(tile, conditions, 2, currDist, maxDist);
-                    if (downSearch != null)
-                    {
-                        foundTile = downSearch;
-                        return foundTile;
-                    }
-                }
-            }
-        }
-        if (direction == 2)
-        {
-            TileCoord downCoord = origin.coord.South;
-            if (DungeonFloor.IsInZ(downCoord.z) && DungeonFloor.IsInX(downCoord.x))
-            {
-                TileInfo tile = _currentFloor.tiles[_currentFloor.CoordToIndex(downCoord)];
-                if (conditions.AreConditionsMet(tile))
-                {
-                    foundTile = tile;
-                }
-                else
-                {
-                    TileInfo leftSearch = SearchNextAvailableTile(tile, conditions, 3, currDist, maxDist);
-                    if (leftSearch != null)
-                    {
-                        foundTile = leftSearch;
-                        return foundTile;
-                    }
-                    TileInfo rightSearch = SearchNextAvailableTile(tile, conditions, 1, currDist, maxDist);
-                    if (rightSearch != null)
-                    {
-                        foundTile = rightSearch;
-                        return foundTile;
-                    }
-                    TileInfo downSearch = SearchNextAvailableTile(tile, conditions, 2, currDist, maxDist);
-                    if (downSearch != null)
-                    {
-                        foundTile = downSearch;
-                        return foundTile;
-                    }
-                }
-            }
-        }
-        if (direction == 3)
-        {
-            TileCoord leftCoord = origin.coord.West;
-            if (DungeonFloor.IsInZ(leftCoord.z) && DungeonFloor.IsInX(leftCoord.x))
-            {
-                TileInfo tile = _currentFloor.tiles[_currentFloor.CoordToIndex(leftCoord)];
-                if (conditions.AreConditionsMet(tile))
-                {
-                    foundTile = tile;
-                }
-                else
-                {
-                    TileInfo leftSearch = SearchNextAvailableTile(tile, conditions, 3, currDist, maxDist);
-                    if (leftSearch != null)
-                    {
-                        foundTile = leftSearch;
-                        return foundTile;
-                    }
-                    TileInfo upSearch = SearchNextAvailableTile(tile, conditions, 0, currDist, maxDist);
-                    if (upSearch != null)
-                    {
-                        foundTile = upSearch;
-                        return foundTile;
-                    }
-                    TileInfo downSearch = SearchNextAvailableTile(tile, conditions, 2, currDist, maxDist);
-                    if (downSearch != null)
-                    {
-                        foundTile = downSearch;
-                        return foundTile;
-                    }
+                    TileInfo tile = _currentFloor.CoordToTileInfo(pt);
+                    foundTile = SearchNextAvailableTile(tile, conditions, currDist, maxDist);
                 }
             }
         }
@@ -237,26 +143,59 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         }
     }
 
-    public GameObject AddCharacter(bool isPlayer, TileCoord coord = null)
+    public GameObject AddCharacter(DG_CHARACTER_TYPE charType, TileCoord coord = null)
     {
         if (_currentFloor == null) return null;
         var newCharacter = Instantiate(_playerCharacter, _entityContainer);
-        if (isPlayer)
-        {
-            newCharacter.AddComponent<DGPlayer>();
-            newCharacter.GetComponent<CharacterBehaviour>().alliance = 0;
-        }
-        else
-        {
-            newCharacter.AddComponent<DGEntity>();
-            Destroy(newCharacter.GetComponent<PlayerInput>());
-            var npcMod = newCharacter.AddComponent<DGNPC>();
-            npcMod.main = AIEnemy.Instance;
-            newCharacter.GetComponent<CharacterBehaviour>().alliance = 1;
-            newCharacter.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.25f);
+        switch(charType) {
+            case DG_CHARACTER_TYPE.PLAYER:
+                newCharacter.AddComponent<DGPlayer>();
+                newCharacter.GetComponent<CharacterBehaviour>().alliance = 0;
+                newCharacter.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.25f);
+                newCharacter.GetComponent<CharacterBehaviour>().SetUp(GlobalGameManager.Instance.party[0]);
+                break;
+            case DG_CHARACTER_TYPE.ALLY:
+                newCharacter.AddComponent<DGEntity>();
+                Destroy(newCharacter.GetComponent<PlayerInput>());
+                var allyNPC = newCharacter.AddComponent<DGNPC>();
+                allyNPC.main = AIAlly.Instance;
+                newCharacter.GetComponent<CharacterBehaviour>().alliance = 0;
+                newCharacter.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(1, 1, 0, 0.25f);
+                break;
+            case DG_CHARACTER_TYPE.COMPETITIVE:
+                newCharacter.AddComponent<DGEntity>();
+                Destroy(newCharacter.GetComponent<PlayerInput>());
+                var dgnpc = newCharacter.AddComponent<DGNPC>();
+                dgnpc.main = AICompetitive.Instance;
+                newCharacter.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.25f);
+                break;
+            case DG_CHARACTER_TYPE.QUEST:
+                newCharacter.AddComponent<DGEntity>();
+                Destroy(newCharacter.GetComponent<PlayerInput>());
+                var npc = newCharacter.AddComponent<DGNPC>();
+                npc.main = AIWander.Instance;
+                npc.isQuestTarget = true;
+                newCharacter.GetComponent<CharacterBehaviour>().alliance = -1;
+                newCharacter.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(0, 0.64f, 1.0f, 0.25f);
+                var interactable = newCharacter.AddComponent<DGInteractable>();
+                interactable.DestroyOnInteract = false;
+                interactable.CanInteractWithAction = true;
+                interactable.interaction = DIRescue.Instance;
+                interactable.transform.localScale /= TileInfo.tileScale;
+                break;
+            default:
+            case DG_CHARACTER_TYPE.ENEMY:
+                newCharacter.AddComponent<DGEntity>();
+                Destroy(newCharacter.GetComponent<PlayerInput>());
+                var npcMod = newCharacter.AddComponent<DGNPC>();
+                npcMod.main = AIEnemy.Instance;
+                newCharacter.GetComponent<CharacterBehaviour>().alliance = 1;
+                newCharacter.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.25f);
+                break;
+                
         }
 
-        FloorRoom room = _currentFloor.rooms[Random.Range(0, _currentFloor.rooms.Count)];
+        FloorRoom room = GetRandomRoom();
         newCharacter.GetComponent<DGEntity>().Set(_currentFloor, coord == null ? room.GetRandomCoordInRoom() : coord);
         newCharacter.GetComponent<DGEntity>().Warp(newCharacter.GetComponent<DGEntity>().Position);
         return newCharacter;
@@ -273,21 +212,18 @@ public class DGGenerator : MonoBehaviour, IDebuggable
     private void PlacePlayer()
     {
         if (_currentFloor == null) return;
-        FloorRoom room = _currentFloor.rooms[Random.Range(0, _currentFloor.rooms.Count)];
+        FloorRoom room = GetRandomRoom();
         _currentPlayer.Set(_currentFloor, room.GetRandomCoordInRoom());
         _currentPlayer.Warp(_currentPlayer.Position);
     }
 
     private void SpawnPlayer()
     {
-        var newPlayer = AddCharacter(true);
+        var newPlayer = AddCharacter(DG_CHARACTER_TYPE.PLAYER);
         _currentPlayer = newPlayer.GetComponent<DGPlayer>();
         _activeEntities.Add(_currentPlayer);
         _activeParty.Add(newPlayer.GetComponent<CharacterBehaviour>());
-        newPlayer.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.25f);
-        newPlayer.GetComponent<CharacterBehaviour>().SetUp(GlobalGameManager.Instance.party[0]);
         _dungeonUI.RegisterPlayer(_currentPlayer);
-        PlacePlayer();
         _virtualCam = GameObject.FindFirstObjectByType<CinemachineCamera>();
         if (_virtualCam)
         {
@@ -296,15 +232,41 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         }
     }
 
-    public GameObject SpawnNPC(CharacterEntry characterData)
+    private void SpawnParty()
     {
-        var newCharacter = AddCharacter(false);
+        if (GlobalGameManager.Instance.party.Count < 2)
+            return;
+        for (int i = 1; i < GlobalGameManager.Instance.party.Count; i++)
+        {
+            var spawnTile = SearchNextAvailableTile(_currentFloor.CoordToTileInfo(_currentPlayer.Position), SearchConditions.New(), 0, 0, 10);
+            var newPartyMember = AddCharacter(DG_CHARACTER_TYPE.ALLY, spawnTile.coord);
+            newPartyMember.GetComponent<CharacterBehaviour>().SetUp(GlobalGameManager.Instance.party[i]);
+            _activeEntities.Add(newPartyMember.GetComponent<DGEntity>());
+            _activeParty.Add(newPartyMember.GetComponent<CharacterBehaviour>());
+        }
+        _dungeonUI.RegisterParty(ActiveParty);
+    }
+
+    private void PlaceParty()
+    {
+        if (_currentFloor == null || _currentPlayer == null || ActiveParty.Count < 2) return;
+        for (int i = 1; i < ActiveParty.Count; i++)
+        {
+            var spawnTile = SearchNextAvailableTile(_currentFloor.CoordToTileInfo(_currentPlayer.Position), SearchConditions.New(), 0, 0, 10);
+            ActiveParty[i].GetComponent<DGEntity>().Set(_currentFloor, spawnTile != null ? spawnTile.coord : GetRandomRoom().GetRandomCoordInRoom());
+            ActiveParty[i].GetComponent<DGEntity>().Warp(ActiveParty[i].GetComponent<DGEntity>().Position);
+        }
+    }
+
+    public GameObject SpawnNPC(DG_CHARACTER_TYPE charType, CharacterEntry characterData)
+    {
+        var newCharacter = AddCharacter(charType);
         _activeEntities.Add(newCharacter.GetComponent<DGEntity>());
         newCharacter.GetComponent<CharacterBehaviour>().SetUp(characterData);
         return newCharacter;
     }
 
-    public List<DGEntity> SpawnCompetitors(QuestCompetitor competitor)
+    public List<DGEntity> SpawnCompetitors(QuestCompetitor competitor, int questIndex)
     {
         var party = competitor.party;
         FloorRoom room = GetRandomRoom();
@@ -313,15 +275,12 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         for (int i = 0; i < party.Count; i++)
         {
             var character = party[i];
-            var newCharacter = AddCharacter(false, point != null ? point.coord : null);
+            var newCharacter = AddCharacter(DG_CHARACTER_TYPE.COMPETITIVE, point != null ? point.coord : null);
             newCharacter.gameObject.name = character.characterName;
+            newCharacter.GetComponent<DGNPC>().associatedCompetitor = competitor;
+            newCharacter.GetComponent<CharacterBehaviour>().alliance = questIndex;
             _activeEntities.Add(newCharacter.GetComponent<DGEntity>());
             
-
-            var dgnpc = newCharacter.GetComponent<DGNPC>();
-            dgnpc.main = AICompetitive.Instance;
-            dgnpc.associatedCompetitor = competitor;
-
             newCharacter.GetComponent<CharacterBehaviour>().SetUp(character);
             newList.Add(newCharacter.GetComponent<DGEntity>());
         }
@@ -349,7 +308,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         }
         for (int i = _entityContainer.childCount - 1; i >= 1; i--)
         {
-            if (_entityContainer.GetChild(i) != _currentPlayer.gameObject)
+            if (!ActiveParty.Contains(_entityContainer.GetChild(i).GetComponent<CharacterBehaviour>()))
             {
                 _activeEntities.Remove(_entityContainer.GetChild(i).GetComponent<DGEntity>());
                 Destroy(_entityContainer.GetChild(i).gameObject);
@@ -390,9 +349,11 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         if (_currentPlayer == null)
         {
             SpawnPlayer();
+            SpawnParty();
         } else
         {
             PlacePlayer();
+            PlaceParty();
         }
         selectedDungeonData.floorSeed.AddItems(this);
         selectedDungeonData.floorSeed.AddEnemies(this);

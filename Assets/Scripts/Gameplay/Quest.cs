@@ -310,17 +310,8 @@ public class RescueQuest : QuestData
     public override DGObject Execute(Quest info, DGGenerator dungeonGen)
     {
         // Place the item in the dungeon once floor entered
-        var newNPC = dungeonGen.SpawnNPC(ToRescue);
-        newNPC.GetComponent<DGNPC>().main = AIWander.Instance;
-        newNPC.GetComponent<DGNPC>().isQuestTarget = true;
-        newNPC.GetComponent<CharacterBehaviour>().alliance = -1;
-        newNPC.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(0, 0.64f, 1.0f, 0.25f);
+        var newNPC = dungeonGen.SpawnNPC(DG_CHARACTER_TYPE.QUEST, ToRescue);
         newNPC.gameObject.name = info.clientName;
-        var interactable = newNPC.AddComponent<DGInteractable>();
-        interactable.DestroyOnInteract = false;
-        interactable.CanInteractWithAction = true;
-        interactable.interaction = DIRescue.Instance;
-        interactable.transform.localScale /= TileInfo.tileScale;
         return newNPC.GetComponent<DGObject>();
     }
 

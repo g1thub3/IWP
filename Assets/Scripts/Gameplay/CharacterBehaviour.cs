@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -33,6 +34,7 @@ public class CharacterBehaviour : MonoBehaviour
     public int mana;
 
     public DefaultAttack defaultAttackInstance;
+    private List<CombatMove> _availableMoves;
 
     public void SetUp(CharacterEntry characterData)
     {
@@ -45,6 +47,50 @@ public class CharacterBehaviour : MonoBehaviour
 
         energy = character.maxEnergy.CurrStat;
         mana = character.maxMana.CurrStat;
+
+        _availableMoves = new List<CombatMove>();
+        _availableMoves.Add(defaultAttackInstance);
+        for (int i = 0; i < character.Profile.availableMoves.Count; i++) { 
+            _availableMoves.Add(character.Profile.availableMoves[i]);
+        }
+
+        List<int> scores = new List<int>(_availableMoves.Count); // Sort by the best moves to use, then select them based on whether they'll succeed
+        for (int i = 0; i < _availableMoves.Count; i++)
+        {
+            scores.Add(0);
+        }
+        for (int i = 0; i < _availableMoves.Count; i++)
+        {
+            scores[i] -= _availableMoves[i].energyRequirement;
+            if (_availableMoves[i] is AttackMove)
+            {
+                var move = _availableMoves[i] as AttackMove;
+                int dmg = move.baseDamage;
+                if (move.moveType == MOVE_TYPE.PHYSICAL)
+                {
+                    dmg += character.physAtk.CurrStat;
+                } else if (move.moveType == MOVE_TYPE.MAGICAL)
+                {
+                    dmg += character.magicAtk.CurrStat;
+                }
+                scores[i] += dmg;
+            }
+        }
+        for (int i = 0; i < _availableMoves.Count; i++)
+        {
+            for (int j = i; j < _availableMoves.Count; j++)
+            {
+                if (scores[i] < scores[j])
+                {
+                    var temp1 = scores[j];
+                    var temp2 = _availableMoves[j];
+                    scores[j] = scores[i];
+                    _availableMoves[j] = _availableMoves[i];
+                    scores[i] = temp1;
+                    _availableMoves[i] = temp2;
+                }
+            }
+        }
     }
 
     public void Damage(int baseDamage, ATTACK_TYPE atkType, CharacterBehaviour attacker = null)
@@ -87,6 +133,8 @@ public class CharacterBehaviour : MonoBehaviour
         {
             _dgGameManager.RegisterDead(this, attacker);
         }
+        if (_dungeonGen.ActiveParty.Contains(this))
+            _dungeonUI.UpdatePartyStatus(this);
     }
 
     public void Replenish(int amount, CHARACTER_STAT toReplenish)
@@ -167,6 +215,8 @@ public class CharacterBehaviour : MonoBehaviour
                 }
                 break;
         }
+        if (_dungeonGen.ActiveParty.Contains(this))
+            _dungeonUI.UpdatePartyStatus(this);
     }
     public void Consume(int amount, CHARACTER_STAT toConsume)
     {
@@ -187,6 +237,8 @@ public class CharacterBehaviour : MonoBehaviour
                 }
                 break;
         }
+        if (_dungeonGen.ActiveParty.Contains(this))
+            _dungeonUI.UpdatePartyStatus(this);
     }
 
     public CharacterBehaviour HitDetect(TileCoord position)
@@ -266,6 +318,8 @@ public class CharacterBehaviour : MonoBehaviour
                 plr.OnLeaderStatChanged.Invoke(CHARACTER_STAT.ENERGY, energy, character.maxEnergy.CurrStat);
             }
         }
+        if (_dungeonGen.ActiveParty.Contains(this))
+            _dungeonUI.UpdatePartyStatus(this);
     }
 
     public string GetDescription()
@@ -282,6 +336,20 @@ public class CharacterBehaviour : MonoBehaviour
         description.AppendLine("MA: " + character.magicAtk.CurrStat + " | MD: " + character.magicDef.CurrStat);
 
         return description.ToString();
+    }
+
+    public CombatMove SelectMove()
+    {
+        for (int i = 0; i < _availableMoves.Count; i++)
+        {
+            bool canPerform = _availableMoves[i].CanBePerformed(this);
+            bool willSucceed = _availableMoves[i].WillMoveSucceed(this);
+            if (canPerform && willSucceed)
+            {
+                return _availableMoves[i];
+            }
+        }
+        return null;
     }
 
     public bool PerformMove(CombatMove move)

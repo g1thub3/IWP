@@ -110,13 +110,13 @@ public class LevelUpHandler : MonoBehaviour, IYieldable
             }
         }
 
-        _canSkip = false;
-        _isPressingInit = _inputManager.actions["Accept"].IsPressed();
-
         Transition itemTrans = new Transition();
         itemTrans.max = _fadeInStat;
         for (int i = 0; i < _lvlupContainer.childCount; i++)
         {
+            _canSkip = false;
+            _isPressingInit = _inputManager.actions["Accept"].IsPressed();
+
             var item = _lvlupContainer.GetChild(i);
             var grp = item.GetComponent<CanvasGroup>();
             while (itemTrans.Progression < 1)

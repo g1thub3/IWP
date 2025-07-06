@@ -53,30 +53,30 @@ MonoBehaviour:
     characterName: Damson
     animatorController: {fileID: 9100000, guid: 5819b751b3768bb46adb12913d2184f1, type: 2}
     maxHealth:
-      baseStat: 5
+      baseStat: 200
       incrementPercentage: 15
     hungerSize:
       baseStat: 250
       incrementPercentage: 15
     physAtk:
-      baseStat: 5
+      baseStat: 60
       incrementPercentage: 15
     physDef:
-      baseStat: 5
+      baseStat: 90
       incrementPercentage: 15
     magicAtk:
-      baseStat: 5
+      baseStat: 20
       incrementPercentage: 15
     magicDef:
-      baseStat: 5
+      baseStat: 30
       incrementPercentage: 15
     maxEnergy:
-      baseStat: 5
+      baseStat: 200
       incrementPercentage: 15
     maxMana:
-      baseStat: 5
+      baseStat: 125
       incrementPercentage: 15
-    expAward: 0
+    expAward: 2
     availableMoves:
     - {fileID: 11400000, guid: bbe099ecf13b9ba4cac9be1721d4661f, type: 2}
     - {fileID: 11400000, guid: dde3038a1a540fa4d8a18ce042f2d9a5, type: 2}
@@ -84,28 +84,28 @@ MonoBehaviour:
     characterName: Bandit
     animatorController: {fileID: 9100000, guid: 68dc13f499ce93b49b4916ee751a0d68, type: 2}
     maxHealth:
-      baseStat: 5
+      baseStat: 50
       incrementPercentage: 15
     hungerSize:
       baseStat: 250
       incrementPercentage: 15
     physAtk:
-      baseStat: 5
+      baseStat: 15
       incrementPercentage: 15
     physDef:
-      baseStat: 5
+      baseStat: 20
       incrementPercentage: 15
     magicAtk:
-      baseStat: 5
+      baseStat: 15
       incrementPercentage: 15
     magicDef:
-      baseStat: 5
+      baseStat: 10
       incrementPercentage: 15
     maxEnergy:
-      baseStat: 5
+      baseStat: 100
       incrementPercentage: 15
     maxMana:
-      baseStat: 5
+      baseStat: 100
       incrementPercentage: 15
     expAward: 5
     availableMoves:
@@ -115,28 +115,28 @@ MonoBehaviour:
     characterName: Cave Thief
     animatorController: {fileID: 9100000, guid: 093727f09f9de8e4ab319f2b0a80e0e1, type: 2}
     maxHealth:
-      baseStat: 5
+      baseStat: 80
       incrementPercentage: 15
     hungerSize:
       baseStat: 250
       incrementPercentage: 15
     physAtk:
-      baseStat: 5
+      baseStat: 20
       incrementPercentage: 15
     physDef:
-      baseStat: 5
+      baseStat: 15
       incrementPercentage: 15
     magicAtk:
-      baseStat: 5
+      baseStat: 20
       incrementPercentage: 15
     magicDef:
-      baseStat: 5
+      baseStat: 20
       incrementPercentage: 15
     maxEnergy:
-      baseStat: 5
+      baseStat: 150
       incrementPercentage: 15
     maxMana:
-      baseStat: 5
+      baseStat: 100
       incrementPercentage: 15
     expAward: 10
     availableMoves:
@@ -145,28 +145,28 @@ MonoBehaviour:
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: 304aaa11f7edd0b4988562ce2915f84d, type: 2}
     maxHealth:
-      baseStat: 5
+      baseStat: 125
       incrementPercentage: 15
     hungerSize:
       baseStat: 250
       incrementPercentage: 15
     physAtk:
-      baseStat: 5
+      baseStat: 50
       incrementPercentage: 15
     physDef:
-      baseStat: 5
+      baseStat: 50
       incrementPercentage: 15
     magicAtk:
-      baseStat: 5
+      baseStat: 50
       incrementPercentage: 15
     magicDef:
-      baseStat: 5
+      baseStat: 50
       incrementPercentage: 15
     maxEnergy:
-      baseStat: 5
+      baseStat: 200
       incrementPercentage: 15
     maxMana:
-      baseStat: 5
+      baseStat: 100
       incrementPercentage: 15
     expAward: 25
     availableMoves:
@@ -175,28 +175,28 @@ MonoBehaviour:
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: 59c9337ecdab8534f821f53529627bd9, type: 2}
     maxHealth:
-      baseStat: 5
+      baseStat: 125
       incrementPercentage: 15
     hungerSize:
       baseStat: 250
       incrementPercentage: 15
     physAtk:
-      baseStat: 5
+      baseStat: 50
       incrementPercentage: 15
     physDef:
-      baseStat: 5
+      baseStat: 40
       incrementPercentage: 15
     magicAtk:
-      baseStat: 5
+      baseStat: 100
       incrementPercentage: 15
     magicDef:
-      baseStat: 5
+      baseStat: 100
       incrementPercentage: 15
     maxEnergy:
-      baseStat: 5
+      baseStat: 50
       incrementPercentage: 15
     maxMana:
-      baseStat: 5
+      baseStat: 150
       incrementPercentage: 15
     expAward: 25
     availableMoves:
@@ -207,28 +207,28 @@ MonoBehaviour:
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: d04121ea4a313b84a8bc1d332c5bccf3, type: 2}
     maxHealth:
-      baseStat: 5
+      baseStat: 300
       incrementPercentage: 15
     hungerSize:
       baseStat: 250
       incrementPercentage: 15
     physAtk:
-      baseStat: 5
+      baseStat: 40
       incrementPercentage: 15
     physDef:
-      baseStat: 5
+      baseStat: 200
       incrementPercentage: 15
     magicAtk:
-      baseStat: 5
+      baseStat: 20
       incrementPercentage: 15
     magicDef:
-      baseStat: 5
+      baseStat: 50
       incrementPercentage: 15
     maxEnergy:
-      baseStat: 5
+      baseStat: 300
       incrementPercentage: 15
     maxMana:
-      baseStat: 5
+      baseStat: 90
       incrementPercentage: 15
     expAward: 25
     availableMoves:
@@ -237,28 +237,28 @@ MonoBehaviour:
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: 4ed2fd37a74401f468c3ac16823eec31, type: 2}
     maxHealth:
-      baseStat: 5
+      baseStat: 125
       incrementPercentage: 15
     hungerSize:
       baseStat: 250
       incrementPercentage: 15
     physAtk:
-      baseStat: 5
+      baseStat: 100
       incrementPercentage: 15
     physDef:
-      baseStat: 5
+      baseStat: 50
       incrementPercentage: 15
     magicAtk:
-      baseStat: 5
+      baseStat: 30
       incrementPercentage: 15
     magicDef:
-      baseStat: 5
+      baseStat: 50
       incrementPercentage: 15
     maxEnergy:
-      baseStat: 5
+      baseStat: 300
       incrementPercentage: 15
     maxMana:
-      baseStat: 5
+      baseStat: 100
       incrementPercentage: 15
     expAward: 25
     availableMoves:
@@ -267,28 +267,28 @@ MonoBehaviour:
     characterName: Adventurer
     animatorController: {fileID: 9100000, guid: 8675cab908d04414ba956a52cff7177a, type: 2}
     maxHealth:
-      baseStat: 5
+      baseStat: 100
       incrementPercentage: 15
     hungerSize:
       baseStat: 250
       incrementPercentage: 15
     physAtk:
-      baseStat: 5
+      baseStat: 20
       incrementPercentage: 15
     physDef:
-      baseStat: 5
+      baseStat: 20
       incrementPercentage: 15
     magicAtk:
-      baseStat: 5
+      baseStat: 200
       incrementPercentage: 15
     magicDef:
-      baseStat: 5
+      baseStat: 200
       incrementPercentage: 15
     maxEnergy:
-      baseStat: 5
+      baseStat: 100
       incrementPercentage: 15
     maxMana:
-      baseStat: 5
+      baseStat: 300
       incrementPercentage: 15
     expAward: 25
     availableMoves:
