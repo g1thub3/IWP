@@ -4,23 +4,73 @@ using UnityEngine;
 [System.Serializable]
 public class CutsceneSetup
 {
+    public Transform CameraFocusPoint;
     public GameObject props; // Obj to add to the scene for the cutscene to work with
     public List<string> toOmit; // Gameobjects already in the scene to be deactivated and reactivated once the scene is over
     GameObject cutsceneObjects;
     List<GameObject> omitted;
 
+    public Dictionary<string, CutsceneActor> Actors;
+    public Dictionary<string, Transform> Points;
+
     public GameObject CutsceneObjects
     {
         get { return cutsceneObjects; }
     }
-    public void AddProps()
+    public void SetUp()
     {
-        if (props == null) return;
-        cutsceneObjects = MonoBehaviour.Instantiate(props, Vector3.zero, Quaternion.identity);
+        Actors = new Dictionary<string, CutsceneActor>();
+        Points = new Dictionary<string, Transform>();
+        if (props != null)
+        {
+            cutsceneObjects = MonoBehaviour.Instantiate(props, Vector3.zero, Quaternion.identity);
+        } else
+        {
+            cutsceneObjects = new GameObject();
+        }
+        CameraFocusPoint = new GameObject().transform;
+        CameraFocusPoint.SetParent(cutsceneObjects.transform);
+
+        Transform actors = cutsceneObjects.transform.Find("Actors");
+        if (actors != null)
+        {
+            for (int i = 0; i < actors.childCount; i++)
+            {
+                if (actors.GetChild(i).TryGetComponent<CutsceneActor>(out CutsceneActor actor))
+                    Actors.Add(actors.GetChild(i).gameObject.name, actor);
+            }
+        }
+
+        Transform points = cutsceneObjects.transform.Find("Points");
+        if (points != null)
+        {
+            for (int i = 0; i < points.childCount; i++)
+            {
+                Points.Add(points.GetChild(i).gameObject.name, points.GetChild(i));
+            }
+        }
+
+        Omit();
     }
     public void Omit()
     {
         omitted = new List<GameObject>();
+        var dayComplete = GameObject.FindFirstObjectByType<DayCompleter>();
+        if (dayComplete != null) {
+            omitted.Add(dayComplete.gameObject);
+            dayComplete.gameObject.SetActive(false);
+        }
+        var areaManager = GameObject.FindFirstObjectByType<FRAreaManager>();
+        if (areaManager != null) { 
+            omitted.Add(areaManager.gameObject);
+            areaManager.gameObject.SetActive(false);
+        }
+        var controller = GameObject.FindFirstObjectByType<FRController>();
+        if (controller != null)
+        {
+            omitted.Add(controller.gameObject);
+            controller.gameObject.SetActive(false);
+        }
         for (int i = 0; i < toOmit.Count; i++) { 
             var obj = GameObject.Find(toOmit[i]);
             if (obj != null)
@@ -35,6 +85,10 @@ public class CutsceneSetup
         foreach (var obj in omitted)
         {
             obj.SetActive(true);
+            if (obj.GetComponent<FRController>() != null)
+            {
+                CutsceneManager.Instance._currentCinemachine.Follow = obj.transform;
+            }
         }
     }
 }

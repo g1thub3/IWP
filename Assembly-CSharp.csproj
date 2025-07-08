@@ -61,6 +61,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.47f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Gameplay\CutsceneActor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\FRMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Assets\Scripts\UI\DungeonTransitionHandler.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGNPC.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGGenerator.cs" />
+    <Compile Include="Assets\Scripts\Utilities\CustomEditor\CutsceneActorEditor.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Visuals\SpriteAnimation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
@@ -155,6 +157,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Moves\ManaExplosionAttack.cs" />
     <Compile Include="Assets\Scripts\Gameplay\DialogueSequence.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGAIModule.cs" />
+    <Compile Include="Assets\Scripts\Utilities\CustomEditor\CutsceneEditor.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\SingeAttack.cs" />
     <Compile Include="Assets\Scripts\Gameplay\DayCompleter.cs" />
     <Compile Include="Assets\Scripts\UI\ShopStorageHandler.cs" />

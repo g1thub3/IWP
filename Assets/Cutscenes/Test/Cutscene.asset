@@ -12,8 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e2563a6a7e9a84b90ef6af5686b68f, type: 3}
   m_Name: Cutscene
   m_EditorClassIdentifier: 
-  setups: []
+  setups:
+  - key: FRDorm
+    setup:
+      CameraFocusPoint: {fileID: 0}
+      props: {fileID: 3712430215820998846, guid: 4232f6fbf6e1cb748bb08e8ddf0620a4, type: 3}
+      toOmit: []
   instructions:
+  - function: 0
+    Yield: 1
+    Data:
+      dataList:
+      - Key: SetupKey
+        Int: 0
+        Float: 0
+        String: FRDorm
+        Obj: {fileID: 0}
   - function: 1
     Yield: 1
     Data:
@@ -21,4 +35,61 @@ MonoBehaviour:
       - Key: DialogueSequence
         Int: 0
         Float: 0
+        String: 
         Obj: {fileID: 11400000, guid: b188a99716c2cff4baada3cdd9171ed9, type: 2}
+  - function: 2
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 2
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 2
+        Float: 0
+        String: Centre
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 2
+        Float: 1
+        String: Centre
+        Obj: {fileID: 0}
+  - function: 4
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Anim
+        Int: 0
+        Float: 0
+        String: cast
+        Obj: {fileID: 0}
+  - function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 11400000, guid: 60c9fe1be708e1149a98a8710ab546d3, type: 2}

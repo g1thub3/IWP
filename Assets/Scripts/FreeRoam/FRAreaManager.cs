@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FRAreaManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class FRAreaManager : MonoBehaviour
     }
 
     public AreaSpawnPoint[] spawnPoints;
-
+    public UnityEvent OnSceneEnter;
     private void Start()
     {
         GlobalCanvasManager.LoadInstance();
@@ -23,5 +24,6 @@ public class FRAreaManager : MonoBehaviour
                 break;
             }
         }
+        OnSceneEnter.Invoke();
     }
 }

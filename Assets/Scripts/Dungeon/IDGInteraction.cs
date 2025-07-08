@@ -8,24 +8,8 @@ public class KeyDataEntry
     public string Key;
     public int Int;
     public float Float;
+    public string String;
     public Object Obj;
-
-    public KeyDataEntry(string mKey, int data)
-    {
-        Key = mKey;
-        Int = data;
-    }
-
-    public KeyDataEntry(string mKey, float data)
-    {
-        Key = mKey;
-        Float = data;
-    }
-
-    public KeyDataEntry(string mKey, Object obj) { 
-        Key = mKey;
-        Obj = obj;
-    }
 }
 
 [System.Serializable]
