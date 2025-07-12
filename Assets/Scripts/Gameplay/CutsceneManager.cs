@@ -79,13 +79,16 @@ public enum CUTSCENE_FUNCTION
     DIALOGUE,
     ACTOR_FACE,
     ACTOR_MOVE,
-    ACTOR_ANIMATE
+    ACTOR_ANIMATE,
+    SET_CONTROLLER_POSITION,
+    SET_CAMERA_FOCUS
 }
 
 public static class CutsceneFunctions
 {
     private static bool Yield;
-    private static bool SceneSetupFinish;
+    private static bool SceneSetupInProgress;
+
     public static void Instantiate()
     {
         Yield = false;
@@ -95,6 +98,8 @@ public static class CutsceneFunctions
         functions.Add(CUTSCENE_FUNCTION.ACTOR_FACE, FaceActor);
         functions.Add(CUTSCENE_FUNCTION.ACTOR_MOVE, MoveActor);
         functions.Add(CUTSCENE_FUNCTION.ACTOR_ANIMATE, AnimateActor);
+        functions.Add(CUTSCENE_FUNCTION.SET_CONTROLLER_POSITION, SetControllerPosition);
+        functions.Add(CUTSCENE_FUNCTION.SET_CAMERA_FOCUS, SetCameraFocus);
     }
     public static Dictionary<CUTSCENE_FUNCTION, System.Action<Cutscene, KeyDataList>> functions;
     public static void Run(CutsceneInstruction instruction, Cutscene cutscene)
@@ -108,10 +113,10 @@ public static class CutsceneFunctions
         CutsceneManager.Instance.CurrentSetup = cutscene.FindSetup(dataList.GetData("SetupKey").String);
         GameSceneManager.Instance.previousArea = SceneManager.GetActiveScene().name;
         yield return SceneManager.LoadSceneAsync(dataList.GetData("SetupKey").String);
-        CutsceneManager.Instance._currentCinemachine = GameObject.FindFirstObjectByType<CinemachineCamera>();
         CutsceneManager.Instance.CurrentSetup.SetUp();
+        CutsceneManager.Instance._currentCinemachine = GameObject.FindFirstObjectByType<CinemachineCamera>();
         CutsceneManager.Instance._currentCinemachine.Follow = CutsceneManager.Instance.CurrentSetup.CameraFocusPoint;
-        SceneSetupFinish = true;
+        SceneSetupInProgress = false;
     }
     public static void CleanScene()
     {
@@ -125,10 +130,10 @@ public static class CutsceneFunctions
     {
         if (dataList.GetData("SetupKey") == null)
             return;
-        SceneSetupFinish = false;
+        SceneSetupInProgress = true;
         CutsceneManager.Instance.FunctionYieldCheck = delegate
         {
-            return SceneSetupFinish;
+            return SceneSetupInProgress;
         };
         GlobalCanvasManager.Instance.StartCoroutine(SetupCoroutine(cutscene,dataList));
     }
@@ -185,5 +190,38 @@ public static class CutsceneFunctions
             CutsceneManager.Instance.FunctionYieldCheck = actor.IsInProgress;
         }
         actor.PlayAnimation(dataList.GetData("Anim").String);
+    }
+    public static void SetControllerPosition(Cutscene cutscene, KeyDataList dataList)
+    {
+        if (dataList.GetData("Point") == null || CutsceneManager.Instance.CurrentSetup.Controller == null)
+            return;
+        var point = CutsceneManager.Instance.GetPoint(dataList.GetData("Point").String);
+        if (point == null) return;
+        CutsceneManager.Instance.CurrentSetup.Controller.position = point.position;
+    }
+
+    public static void SetCameraFocus(Cutscene cutscene, KeyDataList dataList)
+    {
+        var point = dataList.GetData("Point");
+        if (point != null)
+        {
+            var foundPoint = CutsceneManager.Instance.GetPoint(point.String);
+            if (foundPoint != null)
+            {
+                CutsceneManager.Instance._currentCinemachine.Follow = CutsceneManager.Instance.CurrentSetup.CameraFocusPoint;
+                CutsceneManager.Instance.CurrentSetup.CameraFocusPoint.position = foundPoint.position;
+                return;
+            }
+        }
+        var actor = dataList.GetData("Actor");
+        if (actor != null)
+        {
+            var foundActor = CutsceneManager.Instance.GetActor(actor.String);
+            if (foundActor != null)
+            {
+                CutsceneManager.Instance._currentCinemachine.Follow = foundActor.transform;
+                return;
+            }
+        }
     }
 }

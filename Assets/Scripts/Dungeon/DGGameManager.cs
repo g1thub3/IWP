@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public enum DUNGEON_END_CONTEXT
@@ -41,6 +42,9 @@ public class DGGameManager : MonoBehaviour
     private List<DeathInstance> _deaths;
 
 
+    public UnityEvent OnDungeonComplete;
+    public UnityEvent<CharacterBehaviour> OnDeath;
+
     public bool IsGameActive
     {
         get { return _isGameActive; }
@@ -55,6 +59,12 @@ public class DGGameManager : MonoBehaviour
         if (turnList == null || currentTurn >= turnList.Count || !IsGameActive)
             return null;
         return turnList[currentTurn];
+    }
+
+    private void ExitDungeon()
+    {
+        GlobalGameManager.Instance.DayOver = true;
+        GameSceneManager.Instance.ToDorm();
     }
 
     private IEnumerator WaitForInput()
@@ -73,8 +83,7 @@ public class DGGameManager : MonoBehaviour
             }
             yield return new WaitForEndOfFrame();
         }
-        GlobalGameManager.Instance.DayOver = true;
-        GameSceneManager.Instance.ToDorm();
+        ExitDungeon();
     }
 
     private IEnumerator WaitForInputQuestComplete(bool hasCompleted = true, Quest questFailed = null)
@@ -299,7 +308,7 @@ public class DGGameManager : MonoBehaviour
 
     public void RefreshGame()
     {
-        if (_currentFloor > GlobalGameManager.Instance.selectedDungeon.floorCount)
+        if (_currentFloor > GlobalGameManager.Instance.selectedDungeon.floorCount) // EVENT: DUNGEON COMPLETED
         {
             _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.COMPLETED, this, GlobalGameManager.Instance.selectedDungeon);
             isPressingInit = _inputManager.actions["Accept"].IsPressed();
@@ -572,7 +581,7 @@ public class DGGameManager : MonoBehaviour
         _questCompetition.Remove(quest);
     }
 
-    public void RegisterRemoval(DGEntity dead)
+    public void RegisterRemoval(DGEntity dead) // EVENT: PLAYER DEATH
     {
         int deadTurnNo;
         for (deadTurnNo = 0; deadTurnNo < turnList.Count; deadTurnNo++)
@@ -595,7 +604,7 @@ public class DGGameManager : MonoBehaviour
         Destroy(dead.gameObject);
     }
 
-    private void Start()
+    private void Start() // EVENT: DUNGEON ENTER
     {
         _deaths = new List<DeathInstance>();
         _inputManager = GlobalCanvasManager.Instance.GlobalInput;

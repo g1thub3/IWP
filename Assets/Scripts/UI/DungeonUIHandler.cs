@@ -29,6 +29,18 @@ public class DungeonUIHandler : MonoBehaviour
     [SerializeField] private GameObject _partyMemberEntry;
     [SerializeField] private Transform _memberList;
 
+    public struct DungeonEndContext
+    {
+        public string endMsg;
+        public string blurb;
+        public static DungeonEndContext New(string end, string blrb)
+        {
+            var newData = new DungeonEndContext();
+            newData.endMsg = end;
+            newData.blurb = blrb;
+            return newData;
+        }
+    }
     public struct PartyMemberUIEntry {
         public Image sprite;
         public RectTransform hpAmt; // height: 300
@@ -82,12 +94,19 @@ public class DungeonUIHandler : MonoBehaviour
     private DGGenerator _dungeonGen;
 
     private Dictionary<CharacterEntry, PartyMemberUIEntry> _partyUIDictionary;
+    private Dictionary<DUNGEON_END_CONTEXT, DungeonEndContext> _endContextDictionary;
 
     private void Start()
     {
         _gameManager = FindAnyObjectByType<DGGameManager>();
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _partyUIDictionary = new Dictionary<CharacterEntry, PartyMemberUIEntry>();
+        _endContextDictionary = new Dictionary<DUNGEON_END_CONTEXT, DungeonEndContext>();
+        _endContextDictionary.Add(DUNGEON_END_CONTEXT.COMPLETED, DungeonEndContext.New("Dungeon Completed!", "You went through all the floors and reached the end!"));
+        _endContextDictionary.Add(DUNGEON_END_CONTEXT.LOSS, DungeonEndContext.New("Defeated...", "You were defeated while in the dungeon..."));
+        _endContextDictionary.Add(DUNGEON_END_CONTEXT.ESCAPE, DungeonEndContext.New("Escaped...", "You escaped the dungeon and didn't complete it..."));
+        _endContextDictionary.Add(DUNGEON_END_CONTEXT.QUEST, DungeonEndContext.New("Quest Completed!", "You left the dungeon after completing a quest!"));
+        _endContextDictionary.Add(DUNGEON_END_CONTEXT.QUEST_FAIL, DungeonEndContext.New("Quest Failed...", "Another adventurer completed your quest before you did, so you left the dungeon safely."));
     }
 
     public void UpdateQuestUI()
@@ -140,29 +159,9 @@ public class DungeonUIHandler : MonoBehaviour
     {
         displayGrp.alpha = combatGrp.alpha = menuGrp.alpha = 0;
         endscreenGrp.alpha = 1;
-        switch (context)
-        {
-            case DUNGEON_END_CONTEXT.COMPLETED:
-                _endMsg.text = "Dungeon Completed!";
-                _blurb.text = "You went through all the floors and reached the end!";
-                break;
-            case DUNGEON_END_CONTEXT.LOSS:
-                _endMsg.text = "Defeated...";
-                _blurb.text = "You were defeated while in the dungeon...";
-                break;
-            case DUNGEON_END_CONTEXT.ESCAPE:
-                _endMsg.text = "Escaped...";
-                _blurb.text = "You escaped the dungeon and didn't complete it...";
-                break;
-            case DUNGEON_END_CONTEXT.QUEST:
-                _endMsg.text = "Quest Completed!";
-                _blurb.text = "You left the dungeon after completing a quest!";
-                break;
-            case DUNGEON_END_CONTEXT.QUEST_FAIL:
-                _endMsg.text = "Quest Failed...";
-                _blurb.text = "Another adventurer completed your quest before you did, so you left the dungeon safely.";
-                break;
-        }
+        var content = _endContextDictionary[context];
+        _endMsg.text = content.endMsg;
+        _blurb.text = content.blurb;
         _dgExplored.text = "Dungeon Explored: " + data.dungeonName;
         _finalFloor.text = "Final Floor: " + (gameManager.CurrentFloor - 1);
         _remainingFloors.text = "Remaining Floors: " + (data.floorCount - (gameManager.CurrentFloor - 1));

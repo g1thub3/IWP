@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d196a0535c375e54bbd06bd3726e1d9a, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  sequence:
+  - character: 24
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Dahlia
+    content:
+    - Now that you two are here, I can talk to you about our friend here.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 1
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - What did you want to discuss, Guildmaster Dahlia?
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 0
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - Yeah, what's the deal?
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 24
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Dahlia
+    content:
+    - Well, you know how it's Fern's first day around the area, right?
+    - You two were the ones that brought him in, after all.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 23
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Fern
+    content:
+    - H-hey... Uh... It's great seeing you guys again.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 24
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Dahlia
+    content:
+    - See, I was thinking, since you two haven't been around for very long either,
+      how about you show our new member the ropes?
+    - Fern has expressed a great interest in becoming an adventurer just like you
+      two.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 1
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - It'll be our pleasure, Madam Dahlia.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 0
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - Ooh, a little guild orientation? Sounds fun!
+    - Oh my... Fern, now that you're a member of our guild, it looks like you've
+      come so far!
+    - To think that just last week, you were a lowly thief trying to steal my wallet.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 23
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - Uh, yeah, hahah...
+    - Well, I'm happy to be in your hands...
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 24
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - Wonderful! I'm sure the three of you will get along well.
+    - Now, I must return to my guildmaster duties. I'm counting on you two to show
+      our new friend around.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 0
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - Sure thing, 'Lia!
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 1
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - You can count on us.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0

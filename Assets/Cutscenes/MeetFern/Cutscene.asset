@@ -1,0 +1,603 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e2563a6a7e9a84b90ef6af5686b68f, type: 3}
+  m_Name: Cutscene
+  m_EditorClassIdentifier: 
+  setups:
+  - key: FRGuildHall
+    setup:
+      CameraFocusPoint: {fileID: 0}
+      props: {fileID: 6855673629575493306, guid: 5fba5b9915d6f7a44977783f493fe61b, type: 3}
+      toOmit:
+      - Damson
+      Controller: {fileID: 0}
+  instructions:
+  - name: (Y) SCENESETUP (FRGuildHall)
+    function: 0
+    Yield: 1
+    Data:
+      dataList:
+      - Key: SetupKey
+        Int: 0
+        Float: 0
+        String: FRGuildHall
+        Obj: {fileID: 0}
+  - name: (Y) SET_CAMERA_FOCUS (DamsonStairs)
+    function: 6
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: DamsonStairs
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Cherry, CherryStairs, 1.5)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryStairs
+        Obj: {fileID: 0}
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 1.5
+        String: Cherry
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (1)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: c02f163b793e95d41a82b015c0daa207, type: 2}
+  - name: (_) ACTOR_FACE (Fern, north)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Dahlia, north)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Dahlia
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Damson, north)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (2)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 11400000, guid: f736a66135e8d484d8cb8a8368796d3e, type: 2}
+  - name: (_) ACTOR_MOVE (Damson, DamsonStairs, 1.5)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: DamsonStairs
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 1.5
+        String: DamsonStairs
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (3)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 11400000, guid: a6667e55876fc2549ace0ed30ec45e34, type: 2}
+  - name: (_) ACTOR_FACE (Damson, south)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 2
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Fern, south)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 2
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (4)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 11400000, guid: c23b64c906185e749b4626a3eb4052de, type: 2}
+  - name: (_) ACTOR_FACE (Dahlia, south)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Dahlia
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 2
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_MOVE (Dahlia, DahliaOut, 2)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Dahlia
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: DahliaOut
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 2
+        String: DahliaOut
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (5)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 11400000, guid: 69770afbbdc5a6546ba93b2762cd4c1a, type: 2}
+  - name: (_) ACTOR_MOVE (Cherry, CherryMove1, 2)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryMove1
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 2
+        String: CherryMove1
+        Obj: {fileID: 0}
+  - name: (_) SET_CAMERA_FOCUS (Cherry)
+    function: 6
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (6)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 11400000, guid: 78c99ac0cbda4a64a943c8ee215014e5, type: 2}
+  - name: (_) ACTOR_FACE (Cherry, west)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 3
+        Float: 3
+        String: 
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Fern, west)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 3
+        Float: 3
+        String: 
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Damson, west)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 3
+        Float: 3
+        String: 
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Damson, DamsonMove1, 2)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: DamsonMove1
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 2
+        String: DamsonMove1
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Fern, FernMove1, 2)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: FernMove1
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 2
+        String: FernMove1
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_MOVE (Cherry, CherryMove2, 2)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryMove2
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 2
+        String: CherryMove2
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Damson, DamsonMove2, 2)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: DamsonMove2
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 2
+        String: DamsonMove2
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Fern, FernMove2, 2)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: FernMove2
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 2
+        String: FernMove2
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_MOVE (Cherry, CherryMove3, 2)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryMove3
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 2
+        String: CherryMove3
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Cherry, north)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Damson, north)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Fern, north)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (_) SET_CAMERA_FOCUS (CherryMove3)
+    function: 6
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryMove3
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (7)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 11400000, guid: 356fbb13eedf8454fb8653429fcf7619, type: 2}
+  - name: (Y) ACTOR_MOVE (Cherry, CherryBoard, 1.5)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryBoard
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 1.5
+        String: CherryBoard
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_ANIMATE (Cherry, slash)
+    function: 4
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Anim
+        Int: 0
+        Float: 0
+        String: slash
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Cherry, south)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 2
+        Float: 0
+        String: slash
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_MOVE (Cherry, CherryMove3, 1.5)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 2
+        Float: 0
+        String: CherryMove3
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 2
+        Float: 1.5
+        String: CherryMove3
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (8)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 11400000, guid: 5f3a0e1d71447384698f04f17802c58d, type: 2}
+  - name: (Y) SET_CONTROLLER_POSITION (CherryMove3)
+    function: 5
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryMove3
+        Obj: {fileID: 0}

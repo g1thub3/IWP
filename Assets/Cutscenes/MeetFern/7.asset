@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d196a0535c375e54bbd06bd3726e1d9a, type: 3}
-  m_Name: 1
+  m_Name: 7
   m_EditorClassIdentifier: 
   sequence:
   - character: 0
-    speakerSprite: {fileID: 0}
-    speakerName: 
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
     content:
-    - Hmm... Hmm... Hmm...~
+    - Now, this is where you can take a quest!
+    - Let me see... Which one should I take... Oh!
+    - A quest in Begonia Forest would be great for beginners!
     waitTime: 0.05
-    textSpeed: 0.02
+    textSpeed: 0.05
     isRight: 0
     isSpriteShowing: 1
     canSkip: 1

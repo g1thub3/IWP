@@ -8128,6 +8128,9 @@ MonoBehaviour:
     Spawn: {fileID: 1147854909}
   - Origin: FROutside
     Spawn: {fileID: 362566084}
+  OnSceneEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1459344398
 GameObject:
   m_ObjectHideFlags: 0

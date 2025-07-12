@@ -1,0 +1,5380 @@
+fileFormatVersion: 2
+guid: da23d35934198b34186120c0b3e95101
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1791804280109323481
+    second: dahlia_universal_0
+  - first:
+      213: 178868407455370352
+    second: dahlia_universal_1
+  - first:
+      213: -3469915147181842586
+    second: dahlia_universal_2
+  - first:
+      213: -2098856417517797901
+    second: dahlia_universal_3
+  - first:
+      213: -7730846396663414323
+    second: dahlia_universal_4
+  - first:
+      213: -4159217093301818385
+    second: dahlia_universal_5
+  - first:
+      213: -7087509495294016416
+    second: dahlia_universal_6
+  - first:
+      213: -685206078600959783
+    second: dahlia_universal_7
+  - first:
+      213: 1636772920004739824
+    second: dahlia_universal_8
+  - first:
+      213: -729845207566424627
+    second: dahlia_universal_9
+  - first:
+      213: 5068395786846566865
+    second: dahlia_universal_10
+  - first:
+      213: -8419204510169792385
+    second: dahlia_universal_11
+  - first:
+      213: -7999352691777742667
+    second: dahlia_universal_12
+  - first:
+      213: 6770051246869989636
+    second: dahlia_universal_13
+  - first:
+      213: 5673351293471264591
+    second: dahlia_universal_14
+  - first:
+      213: -6939595964902094569
+    second: dahlia_universal_15
+  - first:
+      213: -284638747301058444
+    second: dahlia_universal_16
+  - first:
+      213: -8320723561898825705
+    second: dahlia_universal_17
+  - first:
+      213: 8028547285139501577
+    second: dahlia_universal_18
+  - first:
+      213: 6634245360885912026
+    second: dahlia_universal_19
+  - first:
+      213: -7069264923228591176
+    second: dahlia_universal_20
+  - first:
+      213: -4306631428719189064
+    second: dahlia_universal_21
+  - first:
+      213: 1481707261131021007
+    second: dahlia_universal_22
+  - first:
+      213: 8994832059434979901
+    second: dahlia_universal_23
+  - first:
+      213: 8125426335571389691
+    second: dahlia_universal_24
+  - first:
+      213: -7884287198215651478
+    second: dahlia_universal_25
+  - first:
+      213: -4754366206412926358
+    second: dahlia_universal_26
+  - first:
+      213: -5983144597378338097
+    second: dahlia_universal_27
+  - first:
+      213: -450045057089698663
+    second: dahlia_universal_28
+  - first:
+      213: 951241637039825967
+    second: dahlia_universal_29
+  - first:
+      213: -6853767832500906563
+    second: dahlia_universal_30
+  - first:
+      213: -97305586524585863
+    second: dahlia_universal_31
+  - first:
+      213: 5378209160891457547
+    second: dahlia_universal_32
+  - first:
+      213: -927759170752204976
+    second: dahlia_universal_33
+  - first:
+      213: -3973009407393219781
+    second: dahlia_universal_34
+  - first:
+      213: 6283628016911831362
+    second: dahlia_universal_35
+  - first:
+      213: 1829956939688885218
+    second: dahlia_universal_36
+  - first:
+      213: 1781147650665020003
+    second: dahlia_universal_37
+  - first:
+      213: -3854009688052854426
+    second: dahlia_universal_38
+  - first:
+      213: 4853385147501913960
+    second: dahlia_universal_39
+  - first:
+      213: -8170420026102501160
+    second: dahlia_universal_40
+  - first:
+      213: -7631517713426640833
+    second: dahlia_universal_41
+  - first:
+      213: 6217824003547356995
+    second: dahlia_universal_42
+  - first:
+      213: 856027583526813138
+    second: dahlia_universal_43
+  - first:
+      213: -2390247445044637356
+    second: dahlia_universal_44
+  - first:
+      213: 4540982700881710744
+    second: dahlia_universal_45
+  - first:
+      213: -9058251211749228808
+    second: dahlia_universal_46
+  - first:
+      213: -4762026992971448454
+    second: dahlia_universal_47
+  - first:
+      213: -5571381862918567120
+    second: dahlia_universal_48
+  - first:
+      213: 5050708105450706301
+    second: dahlia_universal_49
+  - first:
+      213: -939540352468680766
+    second: dahlia_universal_50
+  - first:
+      213: 7183350685839394577
+    second: dahlia_universal_51
+  - first:
+      213: 4455462662486092293
+    second: dahlia_universal_52
+  - first:
+      213: 4857245926693689417
+    second: dahlia_universal_53
+  - first:
+      213: -7883295800457061979
+    second: dahlia_universal_54
+  - first:
+      213: 4731205096065269001
+    second: dahlia_universal_55
+  - first:
+      213: 4978840140896257778
+    second: dahlia_universal_56
+  - first:
+      213: -908965329624700982
+    second: dahlia_universal_57
+  - first:
+      213: -1300811157151363959
+    second: dahlia_universal_58
+  - first:
+      213: 8368408477889222094
+    second: dahlia_universal_59
+  - first:
+      213: -3452006649559041369
+    second: dahlia_universal_60
+  - first:
+      213: -852917298214393364
+    second: dahlia_universal_61
+  - first:
+      213: -2019706643881650659
+    second: dahlia_universal_62
+  - first:
+      213: 5612268556711369248
+    second: dahlia_universal_63
+  - first:
+      213: -5140479919437206385
+    second: dahlia_universal_64
+  - first:
+      213: -7810253843385736546
+    second: dahlia_universal_65
+  - first:
+      213: -937917174926830598
+    second: dahlia_universal_66
+  - first:
+      213: -4445564916436987764
+    second: dahlia_universal_67
+  - first:
+      213: -3891116134573462701
+    second: dahlia_universal_68
+  - first:
+      213: 9206296153613478624
+    second: dahlia_universal_69
+  - first:
+      213: 6371534675765296582
+    second: dahlia_universal_70
+  - first:
+      213: 3199785547611044981
+    second: dahlia_universal_71
+  - first:
+      213: -2122028240102329567
+    second: dahlia_universal_72
+  - first:
+      213: 4661607393599537378
+    second: dahlia_universal_73
+  - first:
+      213: 2573419648825663698
+    second: dahlia_universal_74
+  - first:
+      213: 5767342850280619207
+    second: dahlia_universal_75
+  - first:
+      213: -2742192328161657841
+    second: dahlia_universal_76
+  - first:
+      213: -3905746789515000915
+    second: dahlia_universal_77
+  - first:
+      213: 3595082429657777430
+    second: dahlia_universal_78
+  - first:
+      213: 7680534887707519149
+    second: dahlia_universal_79
+  - first:
+      213: -6548338808318350396
+    second: dahlia_universal_80
+  - first:
+      213: -5149388163681363469
+    second: dahlia_universal_81
+  - first:
+      213: 5483665976666197322
+    second: dahlia_universal_82
+  - first:
+      213: 4680550533616827154
+    second: dahlia_universal_83
+  - first:
+      213: 322436762292371766
+    second: dahlia_universal_84
+  - first:
+      213: -2063353966968897543
+    second: dahlia_universal_85
+  - first:
+      213: -2815339796046624770
+    second: dahlia_universal_86
+  - first:
+      213: -244227492428924397
+    second: dahlia_universal_87
+  - first:
+      213: 3161877762625620092
+    second: dahlia_universal_88
+  - first:
+      213: 2825085574562596069
+    second: dahlia_universal_89
+  - first:
+      213: 2074045431107481930
+    second: dahlia_universal_90
+  - first:
+      213: 1362278311114962319
+    second: dahlia_universal_91
+  - first:
+      213: 3208590128936801900
+    second: dahlia_universal_92
+  - first:
+      213: -6144052196482179707
+    second: dahlia_universal_93
+  - first:
+      213: -4716932238964722013
+    second: dahlia_universal_94
+  - first:
+      213: -5510191928360303684
+    second: dahlia_universal_95
+  - first:
+      213: -8779205675976727721
+    second: dahlia_universal_96
+  - first:
+      213: -3380528222972789535
+    second: dahlia_universal_97
+  - first:
+      213: -6057954344322319396
+    second: dahlia_universal_98
+  - first:
+      213: -8271579252120984425
+    second: dahlia_universal_99
+  - first:
+      213: 5852097493141335818
+    second: dahlia_universal_100
+  - first:
+      213: -7500402783137468229
+    second: dahlia_universal_101
+  - first:
+      213: 3404264676848322691
+    second: dahlia_universal_102
+  - first:
+      213: -3283152975853526259
+    second: dahlia_universal_103
+  - first:
+      213: -7077178497562415086
+    second: dahlia_universal_104
+  - first:
+      213: -480618631046417786
+    second: dahlia_universal_105
+  - first:
+      213: 1022737896263928462
+    second: dahlia_universal_106
+  - first:
+      213: 7163517348988648429
+    second: dahlia_universal_107
+  - first:
+      213: -7487621498888095407
+    second: dahlia_universal_108
+  - first:
+      213: -137288403352428026
+    second: dahlia_universal_109
+  - first:
+      213: 5235644385080648245
+    second: dahlia_universal_110
+  - first:
+      213: 3893090166259065762
+    second: dahlia_universal_111
+  - first:
+      213: 6207953843307758370
+    second: dahlia_universal_112
+  - first:
+      213: 1161575636089005518
+    second: dahlia_universal_113
+  - first:
+      213: -8761097383644476665
+    second: dahlia_universal_114
+  - first:
+      213: -9180457866825207690
+    second: dahlia_universal_115
+  - first:
+      213: -4982966905711529104
+    second: dahlia_universal_116
+  - first:
+      213: 7763655314523334716
+    second: dahlia_universal_117
+  - first:
+      213: -2287243767059205878
+    second: dahlia_universal_118
+  - first:
+      213: 2632631039818393496
+    second: dahlia_universal_119
+  - first:
+      213: 490992337417624170
+    second: dahlia_universal_120
+  - first:
+      213: -2803629872208491178
+    second: dahlia_universal_121
+  - first:
+      213: 8426140458423644505
+    second: dahlia_universal_122
+  - first:
+      213: -7199573265061887227
+    second: dahlia_universal_123
+  - first:
+      213: 5073431584329523945
+    second: dahlia_universal_124
+  - first:
+      213: -7089649696940163497
+    second: dahlia_universal_125
+  - first:
+      213: 8465248263906581500
+    second: dahlia_universal_126
+  - first:
+      213: 847438228621259553
+    second: dahlia_universal_127
+  - first:
+      213: 7345987631969508245
+    second: dahlia_universal_128
+  - first:
+      213: 1593755972100603204
+    second: dahlia_universal_129
+  - first:
+      213: 4723555405151343265
+    second: dahlia_universal_130
+  - first:
+      213: -5622373919668848994
+    second: dahlia_universal_131
+  - first:
+      213: 8418693657230036536
+    second: dahlia_universal_132
+  - first:
+      213: -6682150811228195393
+    second: dahlia_universal_133
+  - first:
+      213: 1677765702177943092
+    second: dahlia_universal_134
+  - first:
+      213: 5165841762132482668
+    second: dahlia_universal_135
+  - first:
+      213: 1024525776048617385
+    second: dahlia_universal_136
+  - first:
+      213: -6153091090563347591
+    second: dahlia_universal_137
+  - first:
+      213: 5391683825721614704
+    second: dahlia_universal_138
+  - first:
+      213: 1590953830645627776
+    second: dahlia_universal_139
+  - first:
+      213: -1986942956742145645
+    second: dahlia_universal_140
+  - first:
+      213: -4171371046067355039
+    second: dahlia_universal_141
+  - first:
+      213: -3618201215681155892
+    second: dahlia_universal_142
+  - first:
+      213: -5255453942627223769
+    second: dahlia_universal_143
+  - first:
+      213: -8370476708693617533
+    second: dahlia_universal_144
+  - first:
+      213: 3671536483566315670
+    second: dahlia_universal_145
+  - first:
+      213: -4791038612494536155
+    second: dahlia_universal_146
+  - first:
+      213: 7491140772394380373
+    second: dahlia_universal_147
+  - first:
+      213: 3510566144777398386
+    second: dahlia_universal_148
+  - first:
+      213: -72149061857932581
+    second: dahlia_universal_149
+  - first:
+      213: -7948477414634521625
+    second: dahlia_universal_150
+  - first:
+      213: 5517512945608184473
+    second: dahlia_universal_151
+  - first:
+      213: 2610543496466521859
+    second: dahlia_universal_152
+  - first:
+      213: -2474607910367405577
+    second: dahlia_universal_153
+  - first:
+      213: 5630159455505359270
+    second: dahlia_universal_154
+  - first:
+      213: -6079580318448858627
+    second: dahlia_universal_155
+  - first:
+      213: -4882903265216981390
+    second: dahlia_universal_156
+  - first:
+      213: 8469819709856056839
+    second: dahlia_universal_157
+  - first:
+      213: -932748704166704513
+    second: dahlia_universal_158
+  - first:
+      213: -982666261353441945
+    second: dahlia_universal_159
+  - first:
+      213: -53214391558361201
+    second: dahlia_universal_160
+  - first:
+      213: 2944900394145359958
+    second: dahlia_universal_161
+  - first:
+      213: 6510000943287600316
+    second: dahlia_universal_162
+  - first:
+      213: 501318353745444637
+    second: dahlia_universal_163
+  - first:
+      213: -3244886066739896348
+    second: dahlia_universal_164
+  - first:
+      213: -9131510734608700562
+    second: dahlia_universal_165
+  - first:
+      213: -1741692780610251286
+    second: dahlia_universal_166
+  - first:
+      213: 6547278211625527127
+    second: dahlia_universal_167
+  - first:
+      213: -6859426313096237464
+    second: dahlia_universal_168
+  - first:
+      213: 8364947947523268854
+    second: dahlia_universal_169
+  - first:
+      213: -4237382635183069541
+    second: dahlia_universal_170
+  - first:
+      213: 7317987435972574997
+    second: dahlia_universal_171
+  - first:
+      213: -7259148798754604455
+    second: dahlia_universal_172
+  - first:
+      213: -6732843196236460701
+    second: dahlia_universal_173
+  - first:
+      213: 298955489534367040
+    second: dahlia_universal_174
+  - first:
+      213: -8505839650635115517
+    second: dahlia_universal_175
+  - first:
+      213: 6318235208072018728
+    second: dahlia_universal_176
+  - first:
+      213: -5574856652636223624
+    second: dahlia_universal_177
+  - first:
+      213: -4041508252615071356
+    second: dahlia_universal_178
+  - first:
+      213: -6605562911775538862
+    second: dahlia_universal_179
+  - first:
+      213: -1216628447867882385
+    second: dahlia_universal_180
+  - first:
+      213: -6177763299719370861
+    second: dahlia_universal_181
+  - first:
+      213: 68087300771254377
+    second: dahlia_universal_182
+  - first:
+      213: 2804229354871225962
+    second: dahlia_universal_183
+  - first:
+      213: 5270336307043983670
+    second: dahlia_universal_184
+  - first:
+      213: -1441244273642021483
+    second: dahlia_universal_185
+  - first:
+      213: 4425537637920247181
+    second: dahlia_universal_186
+  - first:
+      213: -742157095847262308
+    second: dahlia_universal_187
+  - first:
+      213: -2890998591352236154
+    second: dahlia_universal_188
+  - first:
+      213: -7539933796870525293
+    second: dahlia_universal_189
+  - first:
+      213: -6008792757954639104
+    second: dahlia_universal_190
+  - first:
+      213: 8398456488341509386
+    second: dahlia_universal_191
+  - first:
+      213: 8926305286112808641
+    second: dahlia_universal_192
+  - first:
+      213: -6159899720388261742
+    second: dahlia_universal_193
+  - first:
+      213: -2307858147750111454
+    second: dahlia_universal_194
+  - first:
+      213: 5805501098706194106
+    second: dahlia_universal_195
+  - first:
+      213: 6786754956135295017
+    second: dahlia_universal_196
+  - first:
+      213: -6543395485118510466
+    second: dahlia_universal_197
+  - first:
+      213: 5842336171417533867
+    second: dahlia_universal_198
+  - first:
+      213: -6990830164494871194
+    second: dahlia_universal_199
+  - first:
+      213: 765563681479123974
+    second: dahlia_universal_200
+  - first:
+      213: 7413930872817292475
+    second: dahlia_universal_201
+  - first:
+      213: -2022609208790983344
+    second: dahlia_universal_202
+  - first:
+      213: 2661809396755341806
+    second: dahlia_universal_203
+  - first:
+      213: 8601484801760343348
+    second: dahlia_universal_204
+  - first:
+      213: 1545202060842392735
+    second: dahlia_universal_205
+  - first:
+      213: 8759918560687755041
+    second: dahlia_universal_206
+  - first:
+      213: 1168961998229285012
+    second: dahlia_universal_207
+  - first:
+      213: -252511830647759973
+    second: dahlia_universal_208
+  - first:
+      213: -3302068475260244868
+    second: dahlia_universal_209
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dahlia_universal_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1279
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b2f09208b3227e0800000000000000
+      internalID: -1791804280109323481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1279
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ccaef6ed77b7200800000000000000
+      internalID: 178868407455370352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1279
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f9a7bde8268dfc0800000000000000
+      internalID: -3469915147181842586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1279
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd7d4f553d5fd2e0800000000000000
+      internalID: -2098856417517797901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_4
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1279
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1c4c9792486b490800000000000000
+      internalID: -7730846396663414323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_5
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1279
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb2302171e7746c0800000000000000
+      internalID: -4159217093301818385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1279
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064cace4aab14ad90800000000000000
+      internalID: -7087509495294016416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1215
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d82d0fa3b8ad76f0800000000000000
+      internalID: -685206078600959783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1215
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f28cda7c4cf6b610800000000000000
+      internalID: 1636772920004739824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1215
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc56bfd86a11fd5f0800000000000000
+      internalID: -729845207566424627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1215
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d973185d1f865640800000000000000
+      internalID: 5068395786846566865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_11
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1215
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7086f7da1af82b80800000000000000
+      internalID: -8419204510169792385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_12
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1215
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8d585fb179cf090800000000000000
+      internalID: -7999352691777742667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_13
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1215
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40940e06dbd04fd50800000000000000
+      internalID: 6770051246869989636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1151
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f8b5551facbbe40800000000000000
+      internalID: 5673351293471264591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1151
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719c64bcc3a91bf90800000000000000
+      internalID: -6939595964902094569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1151
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 478eec14192cc0cf0800000000000000
+      internalID: -284638747301058444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_17
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1151
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7182cca610ad68c80800000000000000
+      internalID: -8320723561898825705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_18
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1151
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 902ba2108312b6f60800000000000000
+      internalID: 8028547285139501577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_19
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1151
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad153688103911c50800000000000000
+      internalID: 6634245360885912026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1151
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bba4d3c10de4ed90800000000000000
+      internalID: -7069264923228591176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_21
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1087
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3e8a87885cb34c0800000000000000
+      internalID: -4306631428719189064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_22
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1087
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcad4d057e4109410800000000000000
+      internalID: 1481707261131021007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_23
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1087
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32dae4f91014dc70800000000000000
+      internalID: 8994832059434979901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_24
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1087
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc265ca33053c070800000000000000
+      internalID: 8125426335571389691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_25
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1087
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f3233e092659290800000000000000
+      internalID: -7884287198215651478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_26
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1087
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a62d2aeff19150eb0800000000000000
+      internalID: -4754366206412926358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_27
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1087
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2777150b997fca0800000000000000
+      internalID: -5983144597378338097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_28
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1023
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9948f3fa76e11c9f0800000000000000
+      internalID: -450045057089698663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_29
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1023
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24e15f9a3d733d00800000000000000
+      internalID: 951241637039825967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_30
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1023
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5d8ca187682e0a0800000000000000
+      internalID: -6853767832500906563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_31
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1023
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9708a88a51d46aef0800000000000000
+      internalID: -97305586524585863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_32
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1023
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00efa2acbc33aa40800000000000000
+      internalID: 5378209160891457547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_33
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1023
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f243e13ffef13f0800000000000000
+      internalID: -927759170752204976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_34
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1023
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bba0f6ef80dd8c0800000000000000
+      internalID: -3973009407393219781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_35
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1023
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 241d8b8a36ee33750800000000000000
+      internalID: 6283628016911831362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_36
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 959
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ebba602420556910800000000000000
+      internalID: 1829956939688885218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_37
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 959
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36af862f958e7b810800000000000000
+      internalID: 1781147650665020003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_38
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 959
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66112beab9ec38ac0800000000000000
+      internalID: -3854009688052854426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_39
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 959
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867220bc310ba5340800000000000000
+      internalID: 4853385147501913960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_40
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 959
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d03c666646dc9e80800000000000000
+      internalID: -8170420026102501160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_41
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 959
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f309a1ab217671690800000000000000
+      internalID: -7631517713426640833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_42
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 959
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f565fdcf52a4650800000000000000
+      internalID: 6217824003547356995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_43
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 959
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd3d024d8831eb00800000000000000
+      internalID: 856027583526813138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 895
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45154d0ec9224ded0800000000000000
+      internalID: -2390247445044637356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 895
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e8f3115bfc40f30800000000000000
+      internalID: 4540982700881710744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_46
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 895
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe7f6df380aa4280800000000000000
+      internalID: -9058251211749228808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_47
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 896
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f7d112ea1e9edb0800000000000000
+      internalID: -4762026992971448454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_48
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 895
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b4fa0d6b97ea2b0800000000000000
+      internalID: -5571381862918567120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_49
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 895
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7553991348b71640800000000000000
+      internalID: 5050708105450706301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_50
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 895
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf75fef60516f2f0800000000000000
+      internalID: -939540352468680766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_51
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 896
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1170486c36360b360800000000000000
+      internalID: 7183350685839394577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_52
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 831
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50aef7b7fabf4dd30800000000000000
+      internalID: 4455462662486092293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_53
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 831
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9485a4f7f67686340800000000000000
+      internalID: 4857245926693689417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_54
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 831
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a99d6aac38e89290800000000000000
+      internalID: -7883295800457061979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_55
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 831
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90dfc76c7fd98a140800000000000000
+      internalID: 4731205096065269001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_56
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 831
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6c397aab4681540800000000000000
+      internalID: 4978840140896257778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_57
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 831
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7e29e39d4b263f0800000000000000
+      internalID: -908965329624700982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_58
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 831
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98cc022052792fde0800000000000000
+      internalID: -1300811157151363959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_59
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 831
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec554f34c2f822470800000000000000
+      internalID: 8368408477889222094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_60
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 767
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa3fb2ed320810d0800000000000000
+      internalID: -3452006649559041369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_61
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 767
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce925297c34d924f0800000000000000
+      internalID: -852917298214393364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_62
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 767
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1610fc128f88f3e0800000000000000
+      internalID: -2019706643881650659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_63
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 767
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a10ea6488c2ed40800000000000000
+      internalID: 5612268556711369248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_64
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 767
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8caaeaafb859a8b0800000000000000
+      internalID: -5140479919437206385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_65
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 767
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e922d5b82876c9390800000000000000
+      internalID: -7810253843385736546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_66
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 767
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af39fb77c49dbf2f0800000000000000
+      internalID: -937917174926830598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_67
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 767
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8095d9134e2e42c0800000000000000
+      internalID: -4445564916436987764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_68
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 767
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b25fadd7afff9c0800000000000000
+      internalID: -3891116134573462701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_69
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 767
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea2d2d139553cf70800000000000000
+      internalID: 9206296153613478624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_70
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 767
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cdf21f970d3c6850800000000000000
+      internalID: 6371534675765296582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_71
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 703
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57cf8ca900ce76c20800000000000000
+      internalID: 3199785547611044981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_72
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 703
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1237a510f8a0d82e0800000000000000
+      internalID: -2122028240102329567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_73
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 703
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0c5d9e93b51b040800000000000000
+      internalID: 4661607393599537378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_74
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 703
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0a34a398f96b320800000000000000
+      internalID: 2573419648825663698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_75
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 703
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc7dd004c7b90050800000000000000
+      internalID: 5767342850280619207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_76
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 703
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0c7f163b96c1f9d0800000000000000
+      internalID: -2742192328161657841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_77
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 703
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3065c0dfffbc9c0800000000000000
+      internalID: -3905746789515000915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_78
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 703
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61500061c6c44e130800000000000000
+      internalID: 3595082429657777430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_79
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 703
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da82dc289cdb69a60800000000000000
+      internalID: 7680534887707519149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_80
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 703
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cba7456c80af15a0800000000000000
+      internalID: -6548338808318350396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_81
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 703
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9db2d6fb2b988b0800000000000000
+      internalID: -5149388163681363469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_82
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d851ee625e91c40800000000000000
+      internalID: 5483665976666197322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_83
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21bfe7569e7a4f040800000000000000
+      internalID: 4680550533616827154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_84
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631c6f6e686897400800000000000000
+      internalID: 322436762292371766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_85
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 639
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fffce8cf7e7d53e0800000000000000
+      internalID: -2063353966968897543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_86
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef7ce9e2f57ede8d0800000000000000
+      internalID: -2815339796046624770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_87
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ab36db3645c9cf0800000000000000
+      internalID: -244227492428924397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_88
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78c180a21f31eb20800000000000000
+      internalID: 3161877762625620092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_89
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 639
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e442e3bc58b43720800000000000000
+      internalID: 2825085574562596069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_90
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41fe21b45d78cc10800000000000000
+      internalID: 2074045431107481930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_91
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 639
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85f93308e8c7e210800000000000000
+      internalID: 1362278311114962319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_92
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 639
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c665a11f8b3378c20800000000000000
+      internalID: 3208590128936801900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_93
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 575
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d98337411fbbaa0800000000000000
+      internalID: -6144052196482179707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_94
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 575
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a67beabe171a8eb0800000000000000
+      internalID: -4716932238964722013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_95
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 575
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb30cd9a2add783b0800000000000000
+      internalID: -5510191928360303684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_96
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 575
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7536051b3fef92680800000000000000
+      internalID: -8779205675976727721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_97
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 575
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec3684fd73f511d0800000000000000
+      internalID: -3380528222972789535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_98
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 575
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdb3229ce92ddeba0800000000000000
+      internalID: -6057954344322319396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_99
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 575
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79466d1be72753d80800000000000000
+      internalID: -8271579252120984425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_100
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 575
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0fa4ad0aa3d63150800000000000000
+      internalID: 5852097493141335818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_101
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 575
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb07db6586739e790800000000000000
+      internalID: -7500402783137468229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_102
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 575
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38844f0efa06e3f20800000000000000
+      internalID: 3404264676848322691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_103
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 575
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03ebfa63c5ef62d0800000000000000
+      internalID: -3283152975853526259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_104
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 511
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21072c827afc8cd90800000000000000
+      internalID: -7077178497562415086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_105
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 511
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6823b08c6ef7459f0800000000000000
+      internalID: -480618631046417786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_106
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 511
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a442da2be713e00800000000000000
+      internalID: 1022737896263928462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_107
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 511
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: debf0d0331de96360800000000000000
+      internalID: 7163517348988648429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_108
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 511
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 159723afaef961890800000000000000
+      internalID: -7487621498888095407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_109
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 511
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 602e56eace0481ef0800000000000000
+      internalID: -137288403352428026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_110
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 511
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 532200f14deb8a840800000000000000
+      internalID: 5235644385080648245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_111
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 511
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3207631e8070630800000000000000
+      internalID: 3893090166259065762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_112
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 511
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223416c1125172650800000000000000
+      internalID: 6207953843307758370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_113
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 511
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec565d003eebe1010800000000000000
+      internalID: 1161575636089005518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_114
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 511
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b444d09545a6680800000000000000
+      internalID: -8761097383644476665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_115
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 511
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6707174d536789080800000000000000
+      internalID: -9180457866825207690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_116
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 447
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07379890002f8dab0800000000000000
+      internalID: -4982966905711529104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_117
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 447
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38acbcff5b0ebb60800000000000000
+      internalID: 7763655314523334716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_118
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 447
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a01b5b589e31240e0800000000000000
+      internalID: -2287243767059205878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_119
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 447
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897ea018bfbf88420800000000000000
+      internalID: 2632631039818393496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_120
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 447
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a5733fdea50d600800000000000000
+      internalID: 490992337417624170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_121
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 447
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65dc6594c718719d0800000000000000
+      internalID: -2803629872208491178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_122
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 447
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95173e37a1aafe470800000000000000
+      internalID: 8426140458423644505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_123
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 447
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5034699a24af51c90800000000000000
+      internalID: -7199573265061887227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_124
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 447
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e265305523786640800000000000000
+      internalID: 5073431584329523945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_125
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 447
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75efce7c9218c9d90800000000000000
+      internalID: -7089649696940163497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_126
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 447
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfbd4a9f17a9a7570800000000000000
+      internalID: 8465248263906581500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_127
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 447
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1237e0a3494b2cb00800000000000000
+      internalID: 847438228621259553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_128
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 383
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b94ff94d032f560800000000000000
+      internalID: 7345987631969508245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_129
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 383
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44db6bfcc982e1610800000000000000
+      internalID: 1593755972100603204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_130
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 383
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a21ce05d907d8140800000000000000
+      internalID: 4723555405151343265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_131
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 383
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96b7bb65b059f1b0800000000000000
+      internalID: -5622373919668848994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_132
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 383
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ec700f64535d470800000000000000
+      internalID: 8418693657230036536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_133
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 383
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5b721ad3b3443a0800000000000000
+      internalID: -6682150811228195393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_134
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 383
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e66a6540f984710800000000000000
+      internalID: 1677765702177943092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_135
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 383
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ad8cd76b1c0b740800000000000000
+      internalID: 5165841762132482668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_136
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 383
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7fb90e3c8d73e00800000000000000
+      internalID: 1024525776048617385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_137
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 383
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bc95ce044db9aa0800000000000000
+      internalID: -6153091090563347591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_138
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 383
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0712b558fdb13da40800000000000000
+      internalID: 5391683825721614704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_139
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 383
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08bfda96414341610800000000000000
+      internalID: 1590953830645627776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_140
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 319
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3998b6a78e5fc64e0800000000000000
+      internalID: -1986942956742145645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_141
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 319
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1624ecc62205c16c0800000000000000
+      internalID: -4171371046067355039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_142
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 319
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc20751a2199cdc0800000000000000
+      internalID: -3618201215681155892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_143
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 319
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7273748db70e017b0800000000000000
+      internalID: -5255453942627223769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_144
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 319
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384d2a938c716db80800000000000000
+      internalID: -8370476708693617533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_145
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 319
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6986bdaaafae3f230800000000000000
+      internalID: 3671536483566315670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_146
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 319
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522351514cfc28db0800000000000000
+      internalID: -4791038612494536155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_147
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 319
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c230db7d0e5f760800000000000000
+      internalID: 7491140772394380373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_148
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 319
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27828f31f4908b030800000000000000
+      internalID: 3510566144777398386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_149
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 319
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda841d7fccaffef0800000000000000
+      internalID: -72149061857932581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_150
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 319
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb7e7b77e551b190800000000000000
+      internalID: -7948477414634521625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_151
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 319
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992589e7ac4229c40800000000000000
+      internalID: 5517512945608184473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_152
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 255
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30fd7919a738a3420800000000000000
+      internalID: 2610543496466521859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_153
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 255
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9dd20773d68add0800000000000000
+      internalID: -2474607910367405577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_154
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 255
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a12436e138522e40800000000000000
+      internalID: 5630159455505359270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_155
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 255
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9466f49edf0aba0800000000000000
+      internalID: -6079580318448858627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_156
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 255
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276952cd9517c3cb0800000000000000
+      internalID: -4882903265216981390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_157
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 255
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706829da628da8570800000000000000
+      internalID: 8469819709856056839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_158
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 255
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a0077def53e03f0800000000000000
+      internalID: -932748704166704513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_159
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 255
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765544fdd3edc52f0800000000000000
+      internalID: -982666261353441945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_160
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 255
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fa936fac1f24ff0800000000000000
+      internalID: -53214391558361201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_161
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 255
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65821f34e436ed820800000000000000
+      internalID: 2944900394145359958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_162
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 255
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb48d10dd5b285a50800000000000000
+      internalID: 6510000943287600316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_163
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 255
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f716af26a05f600800000000000000
+      internalID: 501318353745444637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_164
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 255
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef9a5f7059d7f2d0800000000000000
+      internalID: -3244886066739896348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_165
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 191
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b6bf02e5b564180800000000000000
+      internalID: -9131510734608700562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_166
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 191
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae51dd7d4a344d7e0800000000000000
+      internalID: -1741692780610251286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_167
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 191
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757289138da9cda50800000000000000
+      internalID: 6547278211625527127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_168
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 191
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e6eec6c1c6ec0a0800000000000000
+      internalID: -6859426313096237464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_169
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 191
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0e1c0c6d3461470800000000000000
+      internalID: 8364947947523268854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_170
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 191
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b962184a1fac135c0800000000000000
+      internalID: -4237382635183069541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_171
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 191
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51fbae7fcc6be8560800000000000000
+      internalID: 7317987435972574997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_172
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 191
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a378ec0a2524b90800000000000000
+      internalID: -7259148798754604455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_173
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 191
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d8beff8c22092a0800000000000000
+      internalID: -6732843196236460701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_174
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 191
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045595d0f6a162400800000000000000
+      internalID: 298955489534367040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_175
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 191
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 304167357ef25f980800000000000000
+      internalID: -8505839650635115517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_176
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 191
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82bbf704271eea750800000000000000
+      internalID: 6318235208072018728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_177
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 191
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87705e9496122a2b0800000000000000
+      internalID: -5574856652636223624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_178
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 489a11638ada9e7c0800000000000000
+      internalID: -4041508252615071356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_179
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 127
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251cf1e87835454a0800000000000000
+      internalID: -6605562911775538862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_180
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 127
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6433356fdaad1fe0800000000000000
+      internalID: -1216628447867882385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_181
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 127
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39728c5920d244aa0800000000000000
+      internalID: -6177763299719370861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_182
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9609f201a05e1f000800000000000000
+      internalID: 68087300771254377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_183
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e72d5adbf9ae620800000000000000
+      internalID: 2804229354871225962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_184
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6316334a2fef32940800000000000000
+      internalID: 5270336307043983670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_185
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d500b18fbaffbe0800000000000000
+      internalID: -1441244273642021483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_186
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d8b50c80baa6d30800000000000000
+      internalID: 4425537637920247181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_187
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c970d7ead0453b5f0800000000000000
+      internalID: -742157095847262308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_188
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6879b4c291c11e7d0800000000000000
+      internalID: -2890998591352236154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_189
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ee197f826cc5790800000000000000
+      internalID: -7539933796870525293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_190
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 127
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b8c2592da7c9ca0800000000000000
+      internalID: -6008792757954639104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_191
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 63
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a059b21edaf4d8470800000000000000
+      internalID: 8398456488341509386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_192
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 63
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce02773d5b90eb70800000000000000
+      internalID: 8926305286112808641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_193
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 63
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298ca3247d3a38aa0800000000000000
+      internalID: -6159899720388261742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_194
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 63
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2271d5ffd37d8ffd0800000000000000
+      internalID: -2307858147750111454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_195
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 63
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abec58b8d78419050800000000000000
+      internalID: 5805501098706194106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_196
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 63
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928e012cca56f2e50800000000000000
+      internalID: 6786754956135295017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_197
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 63
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7acd9489703135a0800000000000000
+      internalID: -6543395485118510466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_198
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 63
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: badf1cb3bc5241150800000000000000
+      internalID: 5842336171417533867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_199
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 63
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 665923021059bfe90800000000000000
+      internalID: -6990830164494871194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_200
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 63
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604e087bc14df9a00800000000000000
+      internalID: 765563681479123974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_201
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 63
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4939f19d293e660800000000000000
+      internalID: 7413930872817292475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_202
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 63
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d549e04af3ee3e0800000000000000
+      internalID: -2022609208790983344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_203
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 63
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee126612b85a0f420800000000000000
+      internalID: 2661809396755341806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_204
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 435b8d5cadc9e5770800000000000000
+      internalID: 8601484801760343348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_205
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c56b66619a17510800000000000000
+      internalID: 1545202060842392735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_206
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f0527d48b719970800000000000000
+      internalID: 8759918560687755041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_207
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49823647ebcf83010800000000000000
+      internalID: 1168961998229285012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_208
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b18a0f3d5ee7cf0800000000000000
+      internalID: -252511830647759973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dahlia_universal_209
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ce8148732bc22d0800000000000000
+      internalID: -3302068475260244868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

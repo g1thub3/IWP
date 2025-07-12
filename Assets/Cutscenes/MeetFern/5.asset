@@ -10,17 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d196a0535c375e54bbd06bd3726e1d9a, type: 3}
-  m_Name: 2
+  m_Name: 5
   m_EditorClassIdentifier: 
   sequence:
   - character: 0
-    speakerSprite: {fileID: 0}
-    speakerName: 
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
     content:
-    - Alright! It's time for another day of adventuring!
-    - Hm... Where will I go today?
+    - I suppose I should lead the way.
     waitTime: 0.05
-    textSpeed: 0.02
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - character: 1
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - Go ahead...
+    waitTime: 0.05
+    textSpeed: 0.05
     isRight: 0
     isSpriteShowing: 1
     canSkip: 1

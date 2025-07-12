@@ -1,0 +1,5380 @@
+fileFormatVersion: 2
+guid: 9e793fab17269004487f33adbaeffed7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6787558259696407213
+    second: fern_universal_0
+  - first:
+      213: -7878314342147222953
+    second: fern_universal_1
+  - first:
+      213: 8468313592194344197
+    second: fern_universal_2
+  - first:
+      213: -4597037165305788815
+    second: fern_universal_3
+  - first:
+      213: 3041830412274968245
+    second: fern_universal_4
+  - first:
+      213: -5599029305730980892
+    second: fern_universal_5
+  - first:
+      213: -2699853229178124203
+    second: fern_universal_6
+  - first:
+      213: -203661984085773339
+    second: fern_universal_7
+  - first:
+      213: -7106276115552821641
+    second: fern_universal_8
+  - first:
+      213: -7263663332896762878
+    second: fern_universal_9
+  - first:
+      213: -8188598958779823838
+    second: fern_universal_10
+  - first:
+      213: -201484086595040108
+    second: fern_universal_11
+  - first:
+      213: 3616902320562159160
+    second: fern_universal_12
+  - first:
+      213: -6432099676093670999
+    second: fern_universal_13
+  - first:
+      213: 8194607447759800251
+    second: fern_universal_14
+  - first:
+      213: 3409822752147522387
+    second: fern_universal_15
+  - first:
+      213: 899474382501739641
+    second: fern_universal_16
+  - first:
+      213: -8063097742157332273
+    second: fern_universal_17
+  - first:
+      213: 3290605433961028222
+    second: fern_universal_18
+  - first:
+      213: -5823372500955741580
+    second: fern_universal_19
+  - first:
+      213: 3733281635187985355
+    second: fern_universal_20
+  - first:
+      213: -1956612929459601722
+    second: fern_universal_21
+  - first:
+      213: 7979825010014675668
+    second: fern_universal_22
+  - first:
+      213: 792610941650338993
+    second: fern_universal_23
+  - first:
+      213: -194702454931032640
+    second: fern_universal_24
+  - first:
+      213: -3593112900935648254
+    second: fern_universal_25
+  - first:
+      213: -4820798248271936896
+    second: fern_universal_26
+  - first:
+      213: -5180456250419750246
+    second: fern_universal_27
+  - first:
+      213: 6303563458586261895
+    second: fern_universal_28
+  - first:
+      213: 8159598241778630898
+    second: fern_universal_29
+  - first:
+      213: -794911064864670855
+    second: fern_universal_30
+  - first:
+      213: -1444547257866358483
+    second: fern_universal_31
+  - first:
+      213: 4897245107115006769
+    second: fern_universal_32
+  - first:
+      213: -1411620361929545599
+    second: fern_universal_33
+  - first:
+      213: 3297716215146167564
+    second: fern_universal_34
+  - first:
+      213: -6991591151187231994
+    second: fern_universal_35
+  - first:
+      213: 2653435137977395646
+    second: fern_universal_36
+  - first:
+      213: 1048832097301149007
+    second: fern_universal_37
+  - first:
+      213: -5582493620679011623
+    second: fern_universal_38
+  - first:
+      213: 1430765429855006321
+    second: fern_universal_39
+  - first:
+      213: 4480132800727469645
+    second: fern_universal_40
+  - first:
+      213: 5173153649492553377
+    second: fern_universal_41
+  - first:
+      213: -418090416282705840
+    second: fern_universal_42
+  - first:
+      213: -7709314429574936184
+    second: fern_universal_43
+  - first:
+      213: -7292251655853526176
+    second: fern_universal_44
+  - first:
+      213: -4111502596545886925
+    second: fern_universal_45
+  - first:
+      213: 6539481701823732499
+    second: fern_universal_46
+  - first:
+      213: -1846390326233724099
+    second: fern_universal_47
+  - first:
+      213: 443022297588047359
+    second: fern_universal_48
+  - first:
+      213: -6791133261161172526
+    second: fern_universal_49
+  - first:
+      213: -3619458077226138520
+    second: fern_universal_50
+  - first:
+      213: -7606116536676117105
+    second: fern_universal_51
+  - first:
+      213: 4795275278172628419
+    second: fern_universal_52
+  - first:
+      213: -6690587164187278610
+    second: fern_universal_53
+  - first:
+      213: -7062922710795136155
+    second: fern_universal_54
+  - first:
+      213: 6044749786487056554
+    second: fern_universal_55
+  - first:
+      213: 3382985379059020279
+    second: fern_universal_56
+  - first:
+      213: 2859672978684909354
+    second: fern_universal_57
+  - first:
+      213: -383231607999299393
+    second: fern_universal_58
+  - first:
+      213: 7949348412943664613
+    second: fern_universal_59
+  - first:
+      213: -2849248527867779223
+    second: fern_universal_60
+  - first:
+      213: 5796214344892301537
+    second: fern_universal_61
+  - first:
+      213: 4650146219749846625
+    second: fern_universal_62
+  - first:
+      213: 2247962131426770434
+    second: fern_universal_63
+  - first:
+      213: 1754094700933460410
+    second: fern_universal_64
+  - first:
+      213: -3711701341435174363
+    second: fern_universal_65
+  - first:
+      213: -8011864656981600099
+    second: fern_universal_66
+  - first:
+      213: -945655902332541790
+    second: fern_universal_67
+  - first:
+      213: -8180103696458573835
+    second: fern_universal_68
+  - first:
+      213: -2352861787059738233
+    second: fern_universal_69
+  - first:
+      213: -6813162826959609404
+    second: fern_universal_70
+  - first:
+      213: 3427881367401220284
+    second: fern_universal_71
+  - first:
+      213: 2277612707551138760
+    second: fern_universal_72
+  - first:
+      213: 799697951800014220
+    second: fern_universal_73
+  - first:
+      213: 2924990335906908311
+    second: fern_universal_74
+  - first:
+      213: 9006999480828794900
+    second: fern_universal_75
+  - first:
+      213: 3503477536800634979
+    second: fern_universal_76
+  - first:
+      213: -8880286508027867181
+    second: fern_universal_77
+  - first:
+      213: 8552391647256271346
+    second: fern_universal_78
+  - first:
+      213: 1492048398330101609
+    second: fern_universal_79
+  - first:
+      213: 522572800909492819
+    second: fern_universal_80
+  - first:
+      213: -2454830287239155618
+    second: fern_universal_81
+  - first:
+      213: -4388020308742272944
+    second: fern_universal_82
+  - first:
+      213: 2771006043499325040
+    second: fern_universal_83
+  - first:
+      213: 4697274159831364375
+    second: fern_universal_84
+  - first:
+      213: 1275619000659031875
+    second: fern_universal_85
+  - first:
+      213: -1217371061845574232
+    second: fern_universal_86
+  - first:
+      213: 347108976776143290
+    second: fern_universal_87
+  - first:
+      213: -8702845148463283480
+    second: fern_universal_88
+  - first:
+      213: 904518781507281009
+    second: fern_universal_89
+  - first:
+      213: -4342658492577151603
+    second: fern_universal_90
+  - first:
+      213: 6277454715311591320
+    second: fern_universal_91
+  - first:
+      213: -3619130709045354197
+    second: fern_universal_92
+  - first:
+      213: 2678748087392879978
+    second: fern_universal_93
+  - first:
+      213: -4453462157586864517
+    second: fern_universal_94
+  - first:
+      213: 6007820843093194391
+    second: fern_universal_95
+  - first:
+      213: 5193737295956953883
+    second: fern_universal_96
+  - first:
+      213: -6101030773839088523
+    second: fern_universal_97
+  - first:
+      213: 8553179916558985373
+    second: fern_universal_98
+  - first:
+      213: -3496526572174331834
+    second: fern_universal_99
+  - first:
+      213: 527596399763303783
+    second: fern_universal_100
+  - first:
+      213: 8510335794083259448
+    second: fern_universal_101
+  - first:
+      213: -3538653197217981837
+    second: fern_universal_102
+  - first:
+      213: 5279047749665224193
+    second: fern_universal_103
+  - first:
+      213: -813708244579783027
+    second: fern_universal_104
+  - first:
+      213: -6107419972124568462
+    second: fern_universal_105
+  - first:
+      213: -1670729750300860874
+    second: fern_universal_106
+  - first:
+      213: -4882291840223315833
+    second: fern_universal_107
+  - first:
+      213: -2430382210140665681
+    second: fern_universal_108
+  - first:
+      213: 7705496123517080501
+    second: fern_universal_109
+  - first:
+      213: -1222529849751729255
+    second: fern_universal_110
+  - first:
+      213: 121749358171501937
+    second: fern_universal_111
+  - first:
+      213: -4710972995428296159
+    second: fern_universal_112
+  - first:
+      213: 6483453864343237389
+    second: fern_universal_113
+  - first:
+      213: 176615954854444228
+    second: fern_universal_114
+  - first:
+      213: -1590985208404857786
+    second: fern_universal_115
+  - first:
+      213: 5016305361433966160
+    second: fern_universal_116
+  - first:
+      213: -5081993330070075377
+    second: fern_universal_117
+  - first:
+      213: 9324756404140442
+    second: fern_universal_118
+  - first:
+      213: 7497819366044691440
+    second: fern_universal_119
+  - first:
+      213: 168029100090052635
+    second: fern_universal_120
+  - first:
+      213: 3256436033653466421
+    second: fern_universal_121
+  - first:
+      213: -6869411597430298559
+    second: fern_universal_122
+  - first:
+      213: 350314322035755253
+    second: fern_universal_123
+  - first:
+      213: 5418181814460985853
+    second: fern_universal_124
+  - first:
+      213: -17681188519062897
+    second: fern_universal_125
+  - first:
+      213: -6946971069569787516
+    second: fern_universal_126
+  - first:
+      213: -2702741352035047929
+    second: fern_universal_127
+  - first:
+      213: 2999938011632931278
+    second: fern_universal_128
+  - first:
+      213: -5602140791981627456
+    second: fern_universal_129
+  - first:
+      213: -8277711781487396732
+    second: fern_universal_130
+  - first:
+      213: -8083135148086508946
+    second: fern_universal_131
+  - first:
+      213: 2599617469746064758
+    second: fern_universal_132
+  - first:
+      213: -5760873414764246159
+    second: fern_universal_133
+  - first:
+      213: 6251392261259777294
+    second: fern_universal_134
+  - first:
+      213: 6050814049483000432
+    second: fern_universal_135
+  - first:
+      213: -2356681519373767530
+    second: fern_universal_136
+  - first:
+      213: 1962014987256845941
+    second: fern_universal_137
+  - first:
+      213: -6062477018054091371
+    second: fern_universal_138
+  - first:
+      213: 6253623476436818314
+    second: fern_universal_139
+  - first:
+      213: 1062422621864897556
+    second: fern_universal_140
+  - first:
+      213: 4149126396426882758
+    second: fern_universal_141
+  - first:
+      213: 9131906929311073900
+    second: fern_universal_142
+  - first:
+      213: 4374796090945043578
+    second: fern_universal_143
+  - first:
+      213: -7232468442172292770
+    second: fern_universal_144
+  - first:
+      213: 6721893222747704083
+    second: fern_universal_145
+  - first:
+      213: -697374135161174125
+    second: fern_universal_146
+  - first:
+      213: 5982273995200548777
+    second: fern_universal_147
+  - first:
+      213: 701788910974977389
+    second: fern_universal_148
+  - first:
+      213: 6493606685201710954
+    second: fern_universal_149
+  - first:
+      213: 3701623345294986754
+    second: fern_universal_150
+  - first:
+      213: 3685799299435200344
+    second: fern_universal_151
+  - first:
+      213: 5652438112089120744
+    second: fern_universal_152
+  - first:
+      213: 7421456352812639106
+    second: fern_universal_153
+  - first:
+      213: -7972476922737817447
+    second: fern_universal_154
+  - first:
+      213: 5304656352666249803
+    second: fern_universal_155
+  - first:
+      213: -5312712987551236235
+    second: fern_universal_156
+  - first:
+      213: -3176908454310647244
+    second: fern_universal_157
+  - first:
+      213: 8837263115734314706
+    second: fern_universal_158
+  - first:
+      213: 4934771784374712280
+    second: fern_universal_159
+  - first:
+      213: 1577475383318139706
+    second: fern_universal_160
+  - first:
+      213: -175548391957737066
+    second: fern_universal_161
+  - first:
+      213: -6441647462139332947
+    second: fern_universal_162
+  - first:
+      213: -1396658336963541763
+    second: fern_universal_163
+  - first:
+      213: 4621908320068615445
+    second: fern_universal_164
+  - first:
+      213: -6501263526226541005
+    second: fern_universal_165
+  - first:
+      213: 62416273515351337
+    second: fern_universal_166
+  - first:
+      213: -4881831326696077580
+    second: fern_universal_167
+  - first:
+      213: -2798660253342224190
+    second: fern_universal_168
+  - first:
+      213: 5211769726547384840
+    second: fern_universal_169
+  - first:
+      213: -2956983092213483994
+    second: fern_universal_170
+  - first:
+      213: -1152024899229431462
+    second: fern_universal_171
+  - first:
+      213: 3254005620030668645
+    second: fern_universal_172
+  - first:
+      213: -2009496394902615600
+    second: fern_universal_173
+  - first:
+      213: 3786638013514938112
+    second: fern_universal_174
+  - first:
+      213: -1620081822481862313
+    second: fern_universal_175
+  - first:
+      213: -2303477750437365625
+    second: fern_universal_176
+  - first:
+      213: 1865180873759652153
+    second: fern_universal_177
+  - first:
+      213: 2573962985241548634
+    second: fern_universal_178
+  - first:
+      213: 1799073099960692316
+    second: fern_universal_179
+  - first:
+      213: -5309537951790742438
+    second: fern_universal_180
+  - first:
+      213: 6037799455268051429
+    second: fern_universal_181
+  - first:
+      213: -4147056502404399579
+    second: fern_universal_182
+  - first:
+      213: 8421206202163454400
+    second: fern_universal_183
+  - first:
+      213: 8079522162989418823
+    second: fern_universal_184
+  - first:
+      213: 3789501426507545112
+    second: fern_universal_185
+  - first:
+      213: 1382809603932320858
+    second: fern_universal_186
+  - first:
+      213: 3403065313377027659
+    second: fern_universal_187
+  - first:
+      213: 4011477509741031922
+    second: fern_universal_188
+  - first:
+      213: -8613893541320031585
+    second: fern_universal_189
+  - first:
+      213: 5011883346060050479
+    second: fern_universal_190
+  - first:
+      213: 660953291941400399
+    second: fern_universal_191
+  - first:
+      213: -7481681634845908305
+    second: fern_universal_192
+  - first:
+      213: -2097172464961931376
+    second: fern_universal_193
+  - first:
+      213: 7782740487255533460
+    second: fern_universal_194
+  - first:
+      213: -6897536797144810365
+    second: fern_universal_195
+  - first:
+      213: -1206467928457645393
+    second: fern_universal_196
+  - first:
+      213: 1420324261013119688
+    second: fern_universal_197
+  - first:
+      213: 4435906203156214154
+    second: fern_universal_198
+  - first:
+      213: -965813379553437926
+    second: fern_universal_199
+  - first:
+      213: 8518571996943480136
+    second: fern_universal_200
+  - first:
+      213: 7842290243704229678
+    second: fern_universal_201
+  - first:
+      213: 8424471554402287270
+    second: fern_universal_202
+  - first:
+      213: -6312131532776129690
+    second: fern_universal_203
+  - first:
+      213: 8624013017429844403
+    second: fern_universal_204
+  - first:
+      213: 1767034392748583660
+    second: fern_universal_205
+  - first:
+      213: -2886703934689950792
+    second: fern_universal_206
+  - first:
+      213: 4578966066115330213
+    second: fern_universal_207
+  - first:
+      213: -7559702727617419527
+    second: fern_universal_208
+  - first:
+      213: -5528930147825362659
+    second: fern_universal_209
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fern_universal_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1279
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35de68e89bfbdc1a0800000000000000
+      internalID: -6787558259696407213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1279
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752137fc8da9aa290800000000000000
+      internalID: -7878314342147222953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1279
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5052b55585e758570800000000000000
+      internalID: 8468313592194344197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1279
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1760ea6ed0b0430c0800000000000000
+      internalID: -4597037165305788815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_4
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1279
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b621a6c4a0c63a20800000000000000
+      internalID: 3041830412274968245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1279
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e327e8e2804c42b0800000000000000
+      internalID: -5599029305730980892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1279
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5588521eac1388ad0800000000000000
+      internalID: -2699853229178124203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_7
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1215
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e3f05821827c2df0800000000000000
+      internalID: -203661984085773339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1215
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e91a8068f616d90800000000000000
+      internalID: -7106276115552821641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_9
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1215
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20498aaeea8423b90800000000000000
+      internalID: -7263663332896762878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_10
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1215
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2298bcdc1a04c5e80800000000000000
+      internalID: -8188598958779823838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_11
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1215
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ccb9e6a4f243df0800000000000000
+      internalID: -201484086595040108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_12
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1215
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83eb4645f71d13230800000000000000
+      internalID: 3616902320562159160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_13
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1215
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9188e5c679cb6a0800000000000000
+      internalID: -6432099676093670999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_14
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1151
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb74e7d8e0819b170800000000000000
+      internalID: 8194607447759800251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_15
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1151
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3534cc02abf125f20800000000000000
+      internalID: 3409822752147522387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1151
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c749d6f239b7c00800000000000000
+      internalID: 899474382501739641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_17
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1151
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc04579d25f1a1090800000000000000
+      internalID: -8063097742157332273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_18
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1151
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a973335349aad20800000000000000
+      internalID: 3290605433961028222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_19
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1151
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47241cd50993f2fa0800000000000000
+      internalID: -5823372500955741580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1151
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb8edf0ed74fc330800000000000000
+      internalID: 3733281635187985355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_21
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1087
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cebf9048e6b8d4e0800000000000000
+      internalID: -1956612929459601722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1087
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d2e3b351980ebe60800000000000000
+      internalID: 7979825010014675668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_23
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1087
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b40826b37beffa00800000000000000
+      internalID: 792610941650338993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_24
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1087
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c570f816274c4df0800000000000000
+      internalID: -194702454931032640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_25
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1087
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c7bdd8ad2b22ec0800000000000000
+      internalID: -3593112900935648254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1087
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0820dede885191db0800000000000000
+      internalID: -4820798248271936896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_27
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1087
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a574bcc725b18b0800000000000000
+      internalID: -5180456250419750246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_28
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1023
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789ba206191ca7750800000000000000
+      internalID: 6303563458586261895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_29
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1023
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f00e179e57bc3170800000000000000
+      internalID: 8159598241778630898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_30
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1023
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bb6be1998e7f4f0800000000000000
+      internalID: -794911064864670855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_31
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1023
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d217c992cefe3fbe0800000000000000
+      internalID: -1444547257866358483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_32
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1023
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b1c9b6a7286f340800000000000000
+      internalID: 4897245107115006769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_33
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1023
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1882b7982cae86ce0800000000000000
+      internalID: -1411620361929545599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_34
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1023
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d35d5fc67d3cd20800000000000000
+      internalID: 3297716215146167564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_35
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1023
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b78ba14e0e8fe90800000000000000
+      internalID: -6991591151187231994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_36
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 959
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb9aea11335e2d420800000000000000
+      internalID: 2653435137977395646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 959
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45b9ac4c333e8e00800000000000000
+      internalID: 1048832097301149007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_38
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 959
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d21b8a11aff682b0800000000000000
+      internalID: -5582493620679011623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_39
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 959
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17eaa63f3991bd310800000000000000
+      internalID: 1430765429855006321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_40
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 959
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4ecfe5ab01ac2e30800000000000000
+      internalID: 4480132800727469645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_41
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 959
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aee48ee5dbbac740800000000000000
+      internalID: 5173153649492553377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_42
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 959
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05069754bf4a23af0800000000000000
+      internalID: -418090416282705840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_43
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 959
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889846b3f53030590800000000000000
+      internalID: -7709314429574936184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_44
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 895
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063b81841c7bcca90800000000000000
+      internalID: -7292251655853526176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_45
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 895
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33549cf0c2201f6c0800000000000000
+      internalID: -4111502596545886925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_46
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 895
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31bde5cc5f7e0ca50800000000000000
+      internalID: 6539481701823732499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_47
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 896
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b0f18e7cd4066e0800000000000000
+      internalID: -1846390326233724099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_48
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 896
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd1053be6ee52600800000000000000
+      internalID: 443022297588047359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_49
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 895
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d1f52aa74c01c1a0800000000000000
+      internalID: -6791133261161172526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_50
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 896
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86484833e0a15cdc0800000000000000
+      internalID: -3619458077226138520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_51
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 896
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85123f0f45a17690800000000000000
+      internalID: -7606116536676117105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_52
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 831
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c521b3857d3c8240800000000000000
+      internalID: 4795275278172628419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_53
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 831
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee244d32c624623a0800000000000000
+      internalID: -6690587164187278610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_54
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 831
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563540b27357bfd90800000000000000
+      internalID: -7062922710795136155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_55
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 831
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa8eda387e343e350800000000000000
+      internalID: 6044749786487056554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_56
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 831
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f137274747c2fe20800000000000000
+      internalID: 3382985379059020279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_57
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 831
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a271c444c699fa720800000000000000
+      internalID: 2859672978684909354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_58
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 831
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0008a02ec7eaaf0800000000000000
+      internalID: -383231607999299393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_59
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 831
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e5825d9342c15e60800000000000000
+      internalID: 7949348412943664613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_60
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 767
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967e2a35f8f6578d0800000000000000
+      internalID: -2849248527867779223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_61
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 767
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0445dac3a407050800000000000000
+      internalID: 5796214344892301537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_62
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 767
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ea0dd6953a88040800000000000000
+      internalID: 4650146219749846625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_63
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 767
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ef838f5ad523f10800000000000000
+      internalID: 2247962131426770434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_64
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 767
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1b88f36dbc75810800000000000000
+      internalID: 1754094700933460410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_65
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 767
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5226a6f9b436d7cc0800000000000000
+      internalID: -3711701341435174363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_66
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 767
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98da1c0b8320d090800000000000000
+      internalID: -8011864656981600099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_67
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 767
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4a7b597fa50e2f0800000000000000
+      internalID: -945655902332541790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_68
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 767
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f71ab2370f6a7e80800000000000000
+      internalID: -8180103696458573835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_69
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 767
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789a6b0bba4f85fd0800000000000000
+      internalID: -2352861787059738233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_70
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 767
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c12d2ea188c271a0800000000000000
+      internalID: -6813162826959609404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_71
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 703
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8412421f7429f20800000000000000
+      internalID: 3427881367401220284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_72
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 703
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c35081b0b4bb9f10800000000000000
+      internalID: 2277612707551138760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_73
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 703
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85b5a8dc09191b00800000000000000
+      internalID: 799697951800014220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_74
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 703
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7988e279637a79820800000000000000
+      internalID: 2924990335906908311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_75
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 703
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4189de28e4a4ffc70800000000000000
+      internalID: 9006999480828794900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_76
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 703
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368ff8be14ade9030800000000000000
+      internalID: 3503477536800634979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_77
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 703
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df0e418872e2c480800000000000000
+      internalID: -8880286508027867181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_78
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 703
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f95ab204e230b670800000000000000
+      internalID: 8552391647256271346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_79
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 703
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ff722fc12d4b410800000000000000
+      internalID: 1492048398330101609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_80
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 703
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 352cd77913d804700800000000000000
+      internalID: 522572800909492819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_81
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 703
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e507d392cd0beedd0800000000000000
+      internalID: -2454830287239155618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_82
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 639
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058873627ce9a13c0800000000000000
+      internalID: -4388020308742272944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_83
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 639
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076ec3da057947620800000000000000
+      internalID: 2771006043499325040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_84
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 639
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 713be5d06f1103140800000000000000
+      internalID: 4697274159831364375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_85
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 639
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 347350bf8b8e3b110800000000000000
+      internalID: 1275619000659031875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_86
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 639
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8adbada18770b1fe0800000000000000
+      internalID: -1217371061845574232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_87
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 639
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1671b76cd21d400800000000000000
+      internalID: 347108976776143290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_88
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 639
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e24d967278493780800000000000000
+      internalID: -8702845148463283480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_89
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 639
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17029681a0f7d8c00800000000000000
+      internalID: 904518781507281009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_90
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 639
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d850b110c17cbb3c0800000000000000
+      internalID: -4342658492577151603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_91
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 639
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89f8fbfddcffd1750800000000000000
+      internalID: 6277454715311591320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_92
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 639
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b21e4ab8bc346cdc0800000000000000
+      internalID: -3619130709045354197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_93
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 575
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a654fcf5133dc2520800000000000000
+      internalID: 2678748087392879978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_94
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 575
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76e36c53cf1232c0800000000000000
+      internalID: -4453462157586864517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_95
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 575
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796f1cad931106350800000000000000
+      internalID: 6007820843093194391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_96
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 575
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b46369d8cd31840800000000000000
+      internalID: 5193737295956953883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_97
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 575
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5743899f5d8c45ba0800000000000000
+      internalID: -6101030773839088523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_98
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 575
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98e08241dff2b670800000000000000
+      internalID: 8553179916558985373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_99
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 575
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640b5d5ab97d97fc0800000000000000
+      internalID: -3496526572174331834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_100
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 575
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76daaa85126625700800000000000000
+      internalID: 527596399763303783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_101
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 575
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 834ef95a059ca1670800000000000000
+      internalID: 8510335794083259448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_102
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 575
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a958c6aad24eec0800000000000000
+      internalID: -3538653197217981837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_103
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 575
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106fe1f65f1f24940800000000000000
+      internalID: 5279047749665224193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_104
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 511
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ee30ba9a025b4f0800000000000000
+      internalID: -813708244579783027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_105
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 511
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2749363d4e51e3ba0800000000000000
+      internalID: -6107419972124568462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_106
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 511
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ed3add42060d8e0800000000000000
+      internalID: -1670729750300860874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_107
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 511
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78873b5507d9e3cb0800000000000000
+      internalID: -4882291840223315833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_108
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 511
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa80320b14c854ed0800000000000000
+      internalID: -2430382210140665681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_109
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 511
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3926c16eb6fea60800000000000000
+      internalID: 7705496123517080501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_110
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 511
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b8c323493b80fe0800000000000000
+      internalID: -1222529849751729255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_111
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 511
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 175b17d656a80b100800000000000000
+      internalID: 121749358171501937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_112
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 511
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ad90d35034f9eb0800000000000000
+      internalID: -4710972995428296159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_113
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 511
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03ffc550fad9f950800000000000000
+      internalID: 6483453864343237389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_114
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 511
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ccf3c27647737200800000000000000
+      internalID: 176615954854444228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_115
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 511
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ca022e16fabe9e0800000000000000
+      internalID: -1590985208404857786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_116
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 447
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 056b821162f7d9540800000000000000
+      internalID: 5016305361433966160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_117
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 447
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f08c44aedf12979b0800000000000000
+      internalID: -5081993330070075377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_118
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 447
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99f51901d0212000800000000000000
+      internalID: 9324756404140442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_119
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 447
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb632ffcfa9d0860800000000000000
+      internalID: 7497819366044691440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_120
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 447
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b10dbc68395f45200800000000000000
+      internalID: 168029100090052635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_121
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 447
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53562bbb15f213d20800000000000000
+      internalID: 3256436033653466421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_122
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 447
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148e73f3c82faa0a0800000000000000
+      internalID: -6869411597430298559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_123
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 447
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f84ca415019cd400800000000000000
+      internalID: 350314322035755253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_124
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 447
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1bd6b47af313b40800000000000000
+      internalID: 5418181814460985853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_125
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 447
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f825d1f7d0f21cff0800000000000000
+      internalID: -17681188519062897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_126
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 447
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 489906d6e96679f90800000000000000
+      internalID: -6946971069569787516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_127
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 447
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70621306f0fed7ad0800000000000000
+      internalID: -2702741352035047929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_128
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 383
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1929b2abbe1a920800000000000000
+      internalID: 2999938011632931278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_129
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 383
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7a53091a23142b0800000000000000
+      internalID: -5602140791981627456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_130
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 383
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488b06fedf8af1d80800000000000000
+      internalID: -8277711781487396732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_131
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 383
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6244dab86fe2df80800000000000000
+      internalID: -8083135148086508946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_132
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 383
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d2d1cb052b31420800000000000000
+      internalID: 2599617469746064758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_133
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 383
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b4cf4d6244d00b0800000000000000
+      internalID: -5760873414764246159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_134
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 383
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05d30ce32861c650800000000000000
+      internalID: 6251392261259777294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_135
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 383
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a8065c15fc8f350800000000000000
+      internalID: 6050814049483000432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_136
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 383
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69caff4f4a26b4fd0800000000000000
+      internalID: -2356681519373767530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_137
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 383
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 576df675c3a7a3b10800000000000000
+      internalID: 1962014987256845941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_138
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 383
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d9aefb541cddba0800000000000000
+      internalID: -6062477018054091371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_139
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 383
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a895f003b6559c650800000000000000
+      internalID: 6253623476436818314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_140
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 319
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ca891eebb7ebe00800000000000000
+      internalID: 1062422621864897556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_141
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 319
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce883b7978a49930800000000000000
+      internalID: 4149126396426882758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_142
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 319
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66c38328fc0bbe70800000000000000
+      internalID: 9131906929311073900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_143
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 319
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cfb85bdd566bc30800000000000000
+      internalID: 4374796090945043578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_144
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 319
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e510917654c11ab90800000000000000
+      internalID: -7232468442172292770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_145
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 319
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b8bff9546f84d50800000000000000
+      internalID: 6721893222747704083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_146
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 319
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3974c2e3bed6256f0800000000000000
+      internalID: -697374135161174125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_147
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 319
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af4cf0d08e450350800000000000000
+      internalID: 5982273995200548777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_148
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 319
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65c8f9db414db900800000000000000
+      internalID: 701788910974977389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_149
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 319
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6fbc8620eced1a50800000000000000
+      internalID: 6493606685201710954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_150
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 319
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ec99c02dece5330800000000000000
+      internalID: 3701623345294986754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_151
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 319
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ff7344fe6962330800000000000000
+      internalID: 3685799299435200344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_152
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 255
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef93f9d38e717e40800000000000000
+      internalID: 5652438112089120744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_153
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 255
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283a6797b3f4ef660800000000000000
+      internalID: 7421456352812639106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_154
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 255
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99886309a721c5190800000000000000
+      internalID: -7972476922737817447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_155
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 255
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ae034f8dced9940800000000000000
+      internalID: 5304656352666249803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_156
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 255
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f776f8fa37546b0800000000000000
+      internalID: -5312712987551236235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_157
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 255
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ae0e0c79a59e3d0800000000000000
+      internalID: -3176908454310647244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_158
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 255
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de61006bf344aa70800000000000000
+      internalID: 8837263115734314706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_159
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 255
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d77647dac4db7440800000000000000
+      internalID: 4934771784374712280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_160
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 255
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33d998d08154e510800000000000000
+      internalID: 1577475383318139706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_161
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 255
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691d778eaa3509df0800000000000000
+      internalID: -175548391957737066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_162
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 255
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da673e233cbaa96a0800000000000000
+      internalID: -6441647462139332947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_163
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 255
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df443b074a21e9ce0800000000000000
+      internalID: -1396658336963541763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_164
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 255
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51dbc121121542040800000000000000
+      internalID: 4621908320068615445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_165
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 191
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3364010a44fd6c5a0800000000000000
+      internalID: -6501263526226541005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_166
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 191
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d0613254fbdd000800000000000000
+      internalID: 62416273515351337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_167
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 191
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f608eef540404cb0800000000000000
+      internalID: -4881831326696077580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_168
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 191
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c03888d3592929d0800000000000000
+      internalID: -2798660253342224190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_169
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 191
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80addf104fce35840800000000000000
+      internalID: 5211769726547384840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_170
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 191
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62677cd5b8fa6f6d0800000000000000
+      internalID: -2956983092213483994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_171
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 191
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a594605357f2300f0800000000000000
+      internalID: -1152024899229431462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_172
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 191
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56f7d07fedc882d20800000000000000
+      internalID: 3254005620030668645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_173
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 191
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9c664fca5dc14e0800000000000000
+      internalID: -2009496394902615600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_174
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 191
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0077c88f537dc8430800000000000000
+      internalID: 3786638013514938112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_175
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 191
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751b6ef7a205489e0800000000000000
+      internalID: -1620081822481862313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_176
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 191
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7883a29b0376800e0800000000000000
+      internalID: -2303477750437365625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_177
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 191
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939fb4e5f1472e910800000000000000
+      internalID: 1865180873759652153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_178
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 127
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57935892bd88b320800000000000000
+      internalID: 2573962985241548634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_179
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 127
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e2e18d37797f810800000000000000
+      internalID: 1799073099960692316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_180
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 127
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54ce0e2d5bb056b0800000000000000
+      internalID: -5309537951790742438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_181
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 127
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e99c4c6d929ac350800000000000000
+      internalID: 6037799455268051429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_182
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 127
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52e36b64512b276c0800000000000000
+      internalID: -4147056502404399579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_183
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 127
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1e4446c622ed470800000000000000
+      internalID: 8421206202163454400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_184
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 127
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74941ef999a302070800000000000000
+      internalID: 8079522162989418823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_185
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 127
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a71d24873079430800000000000000
+      internalID: 3789501426507545112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_186
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 127
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a547262220ab03310800000000000000
+      internalID: 1382809603932320858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_187
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 127
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b468a4f4fdd1a3f20800000000000000
+      internalID: 3403065313377027659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_188
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 127
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f135989a81aba730800000000000000
+      internalID: 4011477509741031922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_189
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 127
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f928698667d457880800000000000000
+      internalID: -8613893541320031585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_190
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 127
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f200b916959cd8540800000000000000
+      internalID: 5011883346060050479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_191
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 63
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4fca43648d2c2900800000000000000
+      internalID: 660953291941400399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_192
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 63
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa22278513abb2890800000000000000
+      internalID: -7481681634845908305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_193
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 63
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 097b63121c855e2e0800000000000000
+      internalID: -2097172464961931376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_194
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 63
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497aae90d39d10c60800000000000000
+      internalID: 7782740487255533460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_195
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 63
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38c7ff4e3d60740a0800000000000000
+      internalID: -6897536797144810365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_196
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 63
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2716bafc3c14fe0800000000000000
+      internalID: -1206467928457645393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_197
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 63
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c26e83e36106b310800000000000000
+      internalID: 1420324261013119688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_198
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 63
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81f31870318f8d30800000000000000
+      internalID: 4435906203156214154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_199
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 63
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17d56039ddb892f0800000000000000
+      internalID: -965813379553437926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_200
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 63
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845f76f091c083670800000000000000
+      internalID: 8518571996943480136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_201
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 63
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f80892d6965dc60800000000000000
+      internalID: 7842290243704229678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_202
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 63
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aef7847e3cb9e470800000000000000
+      internalID: 8424471554402287270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_203
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 63
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b365560ddc668a0800000000000000
+      internalID: -6312131532776129690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_204
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1204ab526aea770800000000000000
+      internalID: 8624013017429844403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_205
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cea6da50b64c58810800000000000000
+      internalID: 1767034392748583660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_206
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b34519d01e50f7d0800000000000000
+      internalID: -2886703934689950792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_207
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a04f517061cb8f30800000000000000
+      internalID: 4578966066115330213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_208
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6efc81c6a861790800000000000000
+      internalID: -7559702727617419527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fern_universal_209
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19dbe6f25b4543b0800000000000000
+      internalID: -5528930147825362659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameSceneManager : SingletonScriptableObject<GameSceneManager>
 {
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += GameStoryManager.Instance.OnSceneChange;
+    }
     // FREE ROAM
     public string previousArea;
     public void Navigate(string nextArea)

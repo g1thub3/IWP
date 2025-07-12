@@ -19,7 +19,7 @@ public class CutsceneActor : MonoBehaviour, IYieldable
 
     public bool IsInProgress()
     {
-        return _moveInProgress || _animInProgress;
+        return (_moveInProgress || _animInProgress);
     }
 
     public void MoveActor(Transform point, float speed = 1)
@@ -30,20 +30,28 @@ public class CutsceneActor : MonoBehaviour, IYieldable
     }
     public void PlayAnimation(string name)
     {
+        _animInProgress = true;
         _animator.Play(name + "_" + Directions[_direction]);
+        StartCoroutine(YieldCoroutine());
+    }
+    private IEnumerator YieldCoroutine()
+    {
+        yield return new WaitForEndOfFrame();
         if (!_animator.GetCurrentAnimatorStateInfo(0).loop)
         {
             StartCoroutine(AnimationCoroutine());
+        } else
+        {
+            _animInProgress = false;
         }
     }
     private IEnumerator AnimationCoroutine()
     {
-        _animInProgress = true;
-        var clip = _animator.GetCurrentAnimatorStateInfo(0);
-        while (clip.normalizedTime < 1)
+        while (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1)
         {
             yield return new WaitForEndOfFrame();
         }
+        _animator.Play("idle_" + Directions[_direction]);
         _animInProgress = false;
     }
 
@@ -74,7 +82,6 @@ public class CutsceneActor : MonoBehaviour, IYieldable
         _moveInProgress = false;
         _animInProgress = false;
         _animator = GetComponent<Animator>();
-        _direction = 0;
 
         PlayAnimation("idle");
     }

@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\UI\LevelUpHandler.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuHandler.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\FRController.cs" />
+    <Compile Include="Assets\Scripts\Utilities\CustomEditor\StorylineEditor.cs" />
     <Compile Include="Assets\Scripts\UI\MinimapPoint.cs" />
     <Compile Include="Assets\Scripts\UI\FreeRoamMenuHandler.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GlobalGameManager.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Visuals\RuneCircle.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Item.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\CherryBeamAttack.cs" />
+    <Compile Include="Assets\Scripts\Story\GameStoryManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
@@ -111,6 +113,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\UI\QuestBoardHandler.cs" />
     <Compile Include="Assets\Scripts\Utilities\IDebuggable.cs" />
+    <Compile Include="Assets\Scripts\Story\Storyline.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\SlashAttack.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\FRInteractable.cs" />
@@ -141,6 +144,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGData.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGEntity.cs" />
+    <Compile Include="Assets\Scripts\Story\GameStoryFunctions.cs" />
     <Compile Include="Assets\Scripts\Gameplay\CombatMove.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GameSceneManager.cs" />
     <Compile Include="Assets\Scripts\Dungeon\AI\AICompetitive.cs" />

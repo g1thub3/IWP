@@ -26,6 +26,8 @@ public enum CHARACTER_ENUM
     VILLAGER_8,
     VILLAGER_9,
     VILLAGER_10,
+    FERN,
+    DAHLIA,
     NUM_CHARACTERS
 }
 

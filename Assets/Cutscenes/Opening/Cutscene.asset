@@ -18,6 +18,7 @@ MonoBehaviour:
       CameraFocusPoint: {fileID: 0}
       props: {fileID: 3712430215820998846, guid: 4232f6fbf6e1cb748bb08e8ddf0620a4, type: 3}
       toOmit: []
+      Controller: {fileID: 0}
   instructions:
   - function: 0
     Yield: 1
@@ -93,3 +94,12 @@ MonoBehaviour:
         Float: 0
         String: Cherry
         Obj: {fileID: 11400000, guid: 60c9fe1be708e1149a98a8710ab546d3, type: 2}
+  - function: 5
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Centre
+        Obj: {fileID: 0}

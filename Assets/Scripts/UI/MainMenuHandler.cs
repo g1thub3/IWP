@@ -78,6 +78,7 @@ public class MainMenuHandler : LayeredUI
             layer.functions = new List<MenuLayer.MenuFunction>();
             layer.functions.Add(delegate
             {
+                GameStoryManager.Instance.BeginStory("Main Story");
                 GameSceneManager.Instance.ToDorm();
             });
             layer.functions.Add(delegate

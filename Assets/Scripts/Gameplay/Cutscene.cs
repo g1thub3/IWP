@@ -12,6 +12,7 @@ public class CutsceneSetup
 
     public Dictionary<string, CutsceneActor> Actors;
     public Dictionary<string, Transform> Points;
+    public Transform Controller;
 
     public GameObject CutsceneObjects
     {
@@ -19,6 +20,7 @@ public class CutsceneSetup
     }
     public void SetUp()
     {
+        Omit();
         Actors = new Dictionary<string, CutsceneActor>();
         Points = new Dictionary<string, Transform>();
         if (props != null)
@@ -28,7 +30,8 @@ public class CutsceneSetup
         {
             cutsceneObjects = new GameObject();
         }
-        CameraFocusPoint = new GameObject().transform;
+        var focus = new GameObject();
+        CameraFocusPoint = focus.transform;
         CameraFocusPoint.SetParent(cutsceneObjects.transform);
 
         Transform actors = cutsceneObjects.transform.Find("Actors");
@@ -49,8 +52,6 @@ public class CutsceneSetup
                 Points.Add(points.GetChild(i).gameObject.name, points.GetChild(i));
             }
         }
-
-        Omit();
     }
     public void Omit()
     {
@@ -68,6 +69,7 @@ public class CutsceneSetup
         var controller = GameObject.FindFirstObjectByType<FRController>();
         if (controller != null)
         {
+            Controller = controller.transform;
             omitted.Add(controller.gameObject);
             controller.gameObject.SetActive(false);
         }
@@ -96,6 +98,7 @@ public class CutsceneSetup
 [System.Serializable]
 public class CutsceneInstruction
 {
+    public string name;
     public CUTSCENE_FUNCTION function;
     public bool Yield;
     public KeyDataList Data;

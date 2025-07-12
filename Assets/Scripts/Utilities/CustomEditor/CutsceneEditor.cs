@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using static CutsceneFunctions;
 
 [CustomEditor(typeof(Cutscene))]
 public class CutsceneEditor : Editor
@@ -11,9 +12,134 @@ public class CutsceneEditor : Editor
 
     Cutscene myTarget;
     List<CUTSCENE_FUNCTION> selections;
+
+    public delegate string InstructionData(CutsceneInstruction instruction);
+    public static Dictionary<CUTSCENE_FUNCTION, InstructionData> getInstructionData;
+
+    private void OnEnable()
+    {
+        getInstructionData = new Dictionary<CUTSCENE_FUNCTION, InstructionData>();
+        getInstructionData.Add(CUTSCENE_FUNCTION.SCENESETUP, delegate(CutsceneInstruction instruction)
+        {
+            if (instruction.Data.GetData("SetupKey") != null)
+            {
+                return "(" + instruction.Data.GetData("SetupKey").String + ")";
+            }
+            return "(Null)";
+        });
+        getInstructionData.Add(CUTSCENE_FUNCTION.DIALOGUE, delegate (CutsceneInstruction instruction)
+        {
+            if (instruction.Data.GetData("DialogueSequence") != null)
+            {
+                return "(" + instruction.Data.GetData("DialogueSequence").Obj.name + ")";
+            }
+            return "(Null)";
+        });
+
+        getInstructionData.Add(CUTSCENE_FUNCTION.ACTOR_FACE, delegate (CutsceneInstruction instruction)
+        {
+            string newString = "(";
+            if (instruction.Data.GetData("Actor") != null)
+            {
+                newString += instruction.Data.GetData("Actor").String + ", ";
+            } else
+            {
+                newString += "Null, ";
+            }
+            if (instruction.Data.GetData("Direction") != null)
+            {
+                newString += CutsceneActor.Directions[instruction.Data.GetData("Direction").Int] + ")";
+            }
+            else
+            {
+                newString += "Null)";
+            }
+            return newString;
+        });
+        getInstructionData.Add(CUTSCENE_FUNCTION.ACTOR_MOVE, delegate (CutsceneInstruction instruction)
+        {
+            string newString = "(";
+            if (instruction.Data.GetData("Actor") != null)
+            {
+                newString += instruction.Data.GetData("Actor").String + ", ";
+            }
+            else
+            {
+                newString += "Null, ";
+            }
+            if (instruction.Data.GetData("Point") != null)
+            {
+                newString += instruction.Data.GetData("Point").String + ", ";
+            }
+            else
+            {
+                newString += "Null, ";
+            }
+            if (instruction.Data.GetData("MoveSpeed") != null)
+            {
+                newString += instruction.Data.GetData("MoveSpeed").Float + ")";
+            }
+            else
+            {
+                newString += "1)";
+            }
+            return newString;
+        });
+        getInstructionData.Add(CUTSCENE_FUNCTION.ACTOR_ANIMATE, delegate (CutsceneInstruction instruction)
+        {
+            string newString = "(";
+            if (instruction.Data.GetData("Actor") != null)
+            {
+                newString += instruction.Data.GetData("Actor").String + ", ";
+            }
+            else
+            {
+                newString += "Null, ";
+            }
+            if (instruction.Data.GetData("Anim") != null)
+            {
+                newString += instruction.Data.GetData("Anim").String + ")";
+            }
+            else
+            {
+                newString += "Null)";
+            }
+            return newString;
+        });
+        getInstructionData.Add(CUTSCENE_FUNCTION.SET_CONTROLLER_POSITION, delegate (CutsceneInstruction instruction)
+        {
+            string newString = "(";
+            if (instruction.Data.GetData("Point") != null)
+            {
+                newString += instruction.Data.GetData("Point").String + ")";
+            }
+            else
+            {
+                newString += "Null)";
+            }
+            return newString;
+        });
+        getInstructionData.Add(CUTSCENE_FUNCTION.SET_CAMERA_FOCUS, delegate (CutsceneInstruction instruction)
+        {
+            if (instruction.Data.GetData("Point") != null)
+            {
+                return "(" + instruction.Data.GetData("Point").String + ")";
+            }
+            if (instruction.Data.GetData("Actor") != null)
+            {
+                return "(" + instruction.Data.GetData("Actor").String + ")";
+            }
+            return "(Null)";
+        });
+    }
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
+        myTarget = target as Cutscene;
+        for (int i = 0; i < myTarget.instructions.Count; i++)
+        {
+            myTarget.instructions[i].name = "(" + (myTarget.instructions[i].Yield ? "Y" : "_") + ") "+ myTarget.instructions[i].function.ToString() + " " + getInstructionData[myTarget.instructions[i].function].Invoke(myTarget.instructions[i]);
+        }
         //if (myTarget == null)
         //{
         //    requiredKeys = new Dictionary<CUTSCENE_FUNCTION, List<string>>();

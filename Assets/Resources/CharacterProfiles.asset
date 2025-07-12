@@ -701,6 +701,64 @@ MonoBehaviour:
       incrementPercentage: 15
     expAward: 25
     availableMoves: []
+  - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    characterName: Fern
+    animatorController: {fileID: 9100000, guid: a1455584170615d418243c6ee93fbbb7, type: 2}
+    maxHealth:
+      baseStat: 5
+      incrementPercentage: 15
+    hungerSize:
+      baseStat: 250
+      incrementPercentage: 15
+    physAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    physDef:
+      baseStat: 5
+      incrementPercentage: 15
+    magicAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    magicDef:
+      baseStat: 5
+      incrementPercentage: 15
+    maxEnergy:
+      baseStat: 5
+      incrementPercentage: 15
+    maxMana:
+      baseStat: 5
+      incrementPercentage: 15
+    expAward: 25
+    availableMoves: []
+  - characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    characterName: Dahlia
+    animatorController: {fileID: 9100000, guid: 25137caca0a4f9142b4bed8cfbf2b5ee, type: 2}
+    maxHealth:
+      baseStat: 5
+      incrementPercentage: 15
+    hungerSize:
+      baseStat: 250
+      incrementPercentage: 15
+    physAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    physDef:
+      baseStat: 5
+      incrementPercentage: 15
+    magicAtk:
+      baseStat: 5
+      incrementPercentage: 15
+    magicDef:
+      baseStat: 5
+      incrementPercentage: 15
+    maxEnergy:
+      baseStat: 5
+      incrementPercentage: 15
+    maxMana:
+      baseStat: 5
+      incrementPercentage: 15
+    expAward: 25
+    availableMoves: []
   questNPCNames:
   - Charlie
   - James
