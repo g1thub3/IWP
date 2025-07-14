@@ -67,6 +67,15 @@ public class PromptHandler : MonoBehaviour, IDebuggable, IYieldable
             var obj = Instantiate(_optionPrefab, _optionListGrp.transform);
             newAsset.optiontext = obj.GetComponentInChildren<TMP_Text>();
             newAsset.optiontext.text = options[i];
+            foreach (var story in GameStoryManager.Instance.ActiveStories)
+            {
+                if (story.targetDungeon == null) continue;
+                if (story.targetDungeon.dungeonName == options[i])
+                {
+                    newAsset.optiontext.color = Color.yellow;
+                    break;
+                }
+            }
             newAsset.bobber = obj.transform.Find("Selector").gameObject;
             newAsset.bobber.SetActive(false);
             newAsset.basePos = newAsset.bobber.GetComponent<RectTransform>().position.x + 500;

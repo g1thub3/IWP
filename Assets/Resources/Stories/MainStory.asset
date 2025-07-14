@@ -17,50 +17,130 @@ MonoBehaviour:
   - Wake Up
   - Meet Fern At Guild
   - Quest With Fern
-  OnBegin:
-    name: Wake Up
-    stateTrigger: 0
-    functions: []
-  OnSceneChange:
-  - name: Wake Up
-    stateTrigger: 0
-    functions:
-    - function: 2
-      data:
-        dataList:
-        - Key: Scene
-          Int: 0
-          Float: 0
-          String: FRDorm
-          Obj: {fileID: 0}
-        - Key: Cutscene
-          Int: 0
-          Float: 0
-          String: FRDorm
-          Obj: {fileID: 11400000, guid: d5a0ad26fecf27c4296c90168a8ea5a5, type: 2}
-    - function: 1
-      data:
-        dataList: []
-  - name: Meet Fern At Guild
-    stateTrigger: 1
-    functions:
-    - function: 2
-      data:
-        dataList:
-        - Key: Scene
-          Int: 0
-          Float: 0
-          String: FRGuildHall
-          Obj: {fileID: 0}
-        - Key: Cutscene
-          Int: 0
-          Float: 0
-          String: FRDorm
-          Obj: {fileID: 11400000, guid: 6f69b78b520f8f54fa1a1568051bf1dd, type: 2}
-    - function: 1
-      data:
-        dataList: []
-  OnEnd:
-    name: Wake Up
-    stateTrigger: 0
-    functions: []
+  - Quest Complete
+  storyContexts:
+  - name: ON_STORY_START
+    context: 0
+    events: []
+  - name: ON_SCENE_CHANGE
+    context: 2
+    events:
+    - name: Wake Up
+      stateTrigger: 0
+      functions:
+      - name: 'PLAY_CUTSCENE (Cutscene) (FRDorm) '
+        function: 2
+        data:
+          dataList:
+          - Key: Scene
+            Int: 0
+            Float: 0
+            String: FRDorm
+            Obj: {fileID: 0}
+          - Key: Cutscene
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: d5a0ad26fecf27c4296c90168a8ea5a5, type: 2}
+      - name: 'NEXT_STATE  (FRDorm) '
+        function: 1
+        data:
+          dataList:
+          - Key: Scene
+            Int: 0
+            Float: 0
+            String: FRDorm
+            Obj: {fileID: 0}
+    - name: Meet Fern At Guild
+      stateTrigger: 1
+      functions:
+      - name: 'PLAY_CUTSCENE (Cutscene) (FRGuildHall) '
+        function: 2
+        data:
+          dataList:
+          - Key: Scene
+            Int: 0
+            Float: 0
+            String: FRGuildHall
+            Obj: {fileID: 0}
+          - Key: Cutscene
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 6f69b78b520f8f54fa1a1568051bf1dd, type: 2}
+      - name: 'NEXT_STATE  '
+        function: 1
+        data:
+          dataList: []
+      - name: 'SET_TARGET_DUNGEON (Begonia Forest) '
+        function: 5
+        data:
+          dataList:
+          - Key: Dungeon
+            Int: 0
+            Float: 0
+            String: Begonia Forest
+            Obj: {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
+  - name: ON_DUNGEON_PRELOAD
+    context: 3
+    events:
+    - name: Quest With Fern
+      stateTrigger: 2
+      functions:
+      - name: 'DG_ADD_TEMPMEMBER (FERN, 5) '
+        function: 3
+        data:
+          dataList:
+          - Key: Character
+            Int: 23
+            Float: 0
+            String: 
+            Obj: {fileID: 0}
+  - name: ON_DUNGEON_NEWFLOOR
+    context: 4
+    events:
+    - name: Quest With Fern
+      stateTrigger: 2
+      functions:
+      - name: 'DIALOGUE (UponEnter) (Floor 1) '
+        function: 6
+        data:
+          dataList:
+          - Key: Dialogue
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 22f034ff16c248b418fc55f3bb8775b3, type: 2}
+          - Key: Floor
+            Int: 1
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 22f034ff16c248b418fc55f3bb8775b3, type: 2}
+  - name: ON_DUNGEON_COMPLETE
+    context: 5
+    events:
+    - name: Quest With Fern
+      stateTrigger: 2
+      functions:
+      - name: 'NEXT_STATE  '
+        function: 1
+        data:
+          dataList: []
+      - name: 'REMOVE_TARGET_DUNGEON  '
+        function: 4
+        data:
+          dataList:
+          - Key: Cutscene
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 9801facc74f123540921d6dc2583de48, type: 2}
+      - name: 'PLAY_CUTSCENE (Cutscene) '
+        function: 2
+        data:
+          dataList:
+          - Key: Cutscene
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 9801facc74f123540921d6dc2583de48, type: 2}

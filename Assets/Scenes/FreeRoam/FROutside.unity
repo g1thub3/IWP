@@ -53674,6 +53674,9 @@ MonoBehaviour:
     Spawn: {fileID: 1147854909}
   - Origin: FRTown
     Spawn: {fileID: 1062247613}
+  OnSceneEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1652381076
 GameObject:
   m_ObjectHideFlags: 0

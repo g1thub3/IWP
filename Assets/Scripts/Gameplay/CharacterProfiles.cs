@@ -34,6 +34,9 @@ public enum CHARACTER_ENUM
 [System.Serializable]
 public class CharacterProfile
 {
+    [HideInInspector]
+    public string name = "yup";
+
     [Header("Visual")]
     public Sprite characterSprite;
     public string characterName;

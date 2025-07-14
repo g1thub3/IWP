@@ -7,7 +7,11 @@ public enum STORY_FUNCTION
 {
     CREATE_SPECIAL_DATA,
     NEXT_STATE,
-    PLAY_CUTSCENE
+    PLAY_CUTSCENE,
+    DG_ADD_TEMPMEMBER,
+    REMOVE_TARGET_DUNGEON,
+    SET_TARGET_DUNGEON,
+    DIALOGUE
 }
 [CreateAssetMenu(fileName = "GameStoryFunctions", menuName = "Scriptable Objects/GameStoryFunctions")]
 public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> // Functions to handle the story
@@ -19,6 +23,10 @@ public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> 
         _storyFunctions.Add(STORY_FUNCTION.CREATE_SPECIAL_DATA, CreateSpecialData);
         _storyFunctions.Add(STORY_FUNCTION.NEXT_STATE, NextState);
         _storyFunctions.Add(STORY_FUNCTION.PLAY_CUTSCENE, PlayCutscene);
+        _storyFunctions.Add(STORY_FUNCTION.DG_ADD_TEMPMEMBER, DGAddTempMember);
+        _storyFunctions.Add(STORY_FUNCTION.REMOVE_TARGET_DUNGEON, RemoveTargetDungeon);
+        _storyFunctions.Add(STORY_FUNCTION.SET_TARGET_DUNGEON, SetTargetDungeon);
+        _storyFunctions.Add(STORY_FUNCTION.DIALOGUE, Dialogue);
     }
 
     public void Invoke(STORY_FUNCTION function, StoryData data, KeyDataList dataList)
@@ -28,6 +36,16 @@ public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> 
             if (dataList.GetData("Scene").String != SceneManager.GetActiveScene().name)
             {
                 return;
+            }
+        }
+        if (dataList.GetData("Floor") != null)
+        {
+            if (GameStoryManager.Instance.currentGameManager != null)
+            {
+                if (GameStoryManager.Instance.currentGameManager.CurrentFloor != dataList.GetData("Floor").Int)
+                {
+                    return;
+                }
             }
         }
         _storyFunctions[function].Invoke(data, dataList);
@@ -54,5 +72,47 @@ public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> 
         var cutscene = keyDataList.GetData("Cutscene");
         if (cutscene == null) return;
         CutsceneManager.Instance.RunCutscene(cutscene.Obj as Cutscene);
+    }
+
+    private void Dialogue(StoryData story, KeyDataList keyDataList)
+    {
+        var cutscene = keyDataList.GetData("Dialogue");
+        if (cutscene == null) return;
+        GlobalCanvasManager.Instance.DialogueHandler.PromptSequence(cutscene.Obj as DialogueSequence);
+    }
+
+    private void RemoveTargetDungeon(StoryData story, KeyDataList keyDataList)
+    {
+        story.targetDungeon = null;
+    }
+    private void SetTargetDungeon(StoryData story, KeyDataList keyDataList)
+    {
+        var dungeonData = keyDataList.GetData("Dungeon");
+        if (dungeonData == null) return;
+        story.targetDungeon = dungeonData.Obj as DGData;
+    }
+
+    private void DGAddTempMember(StoryData story, KeyDataList keyDataList)
+    {
+        if (SceneManager.GetActiveScene().name != "DungeonScene") return;
+        var dgGenerator = GameObject.FindFirstObjectByType<DGGenerator>();
+        if (dgGenerator == null) return;
+        // If not in the indicated dungeon
+        if (story.targetDungeon != null)
+        {
+            if (GlobalGameManager.Instance.selectedDungeon != story.targetDungeon)
+            {
+                return;
+            }
+        }
+
+        var character = keyDataList.GetData("Character");
+        var startingLevel = keyDataList.GetData("Level");
+
+        CHARACTER_ENUM chosenChar = character != null ? (CHARACTER_ENUM)character.Int : CHARACTER_ENUM.DAMSON;
+        int lvl = startingLevel != null ? startingLevel.Int : 5;
+
+        // Add party here
+        dgGenerator.AddTempParty(chosenChar, lvl);
     }
 }

@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d196a0535c375e54bbd06bd3726e1d9a, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  sequence:
+  - name: Cherry
+    character: 0
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - So, Fern, what did you think? Was your first adventure exciting?
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Fern
+    character: 23
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Fern
+    content:
+    - Uh... It was certainly something.
+    - I guess the dungeons aren't really that scary...
+    - And you really seemed like an experienced adventurer out there.
+    - Plus, I'm earning more than I did back at my home town...
+    - I think... I could get used to work like this...
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Cherry
+    character: 0
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - Aw, thanks, Fern! I'm sure you'll fit right in!
+    - Man, I must be some role model, huh? I'm better at this than I thought.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Damson
+    character: 1
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - Don't get so cocky, Cherry. You haven't even been here that long.
+    - Anyway, we should probably show Fern around town. He needs to know about his
+      Guild Privileges.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Fern
+    character: 23
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Fern
+    content:
+    - Guild Privileges?
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Damson
+    character: 1
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - Now that you're a part of the guild, you can use the bank and the warehouse
+      free of charge.
+    - I'll show you where to find them.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Cherry
+    character: 0
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - A tour of the town? Count me in! I'll show him what this town has to offer!
+    - I know this place like the back of my... ha...
+    - '*yaaaaaaaaaaaaaaaaaaawwwwnnn*'
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Fern
+    character: 23
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Fern
+    content:
+    - Cherry, are you alright?
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Cherry
+    character: 0
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - Of course! It's just... Haaah...
+    - Using magic can make you very tired...
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Damson
+    character: 1
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - You should sit out, then. Head back to the dorm and get some rest.
+    - I can show Fern around on my own.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Cherry
+    character: 0
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - Ugh... Okay... But don't go having fun without me...
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0

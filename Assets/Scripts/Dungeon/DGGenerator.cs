@@ -47,6 +47,9 @@ public class DGGenerator : MonoBehaviour, IDebuggable
     DialogueHandler d;
 
     public DungeonFloor CurrentFloor { get { return _currentFloor; } }
+
+    private List<CharacterEntry> _tempParty; // Outside of actual party;
+
     private List<DGEntity> _activeEntities;
     public List<DGEntity> ActiveEntities
     {
@@ -234,13 +237,21 @@ public class DGGenerator : MonoBehaviour, IDebuggable
 
     private void SpawnParty()
     {
-        if (GlobalGameManager.Instance.party.Count < 2)
+        if ((GlobalGameManager.Instance.party.Count + _tempParty.Count) < 2)
             return;
         for (int i = 1; i < GlobalGameManager.Instance.party.Count; i++)
         {
             var spawnTile = SearchNextAvailableTile(_currentFloor.CoordToTileInfo(_currentPlayer.Position), SearchConditions.New(), 0, 0, 10);
             var newPartyMember = AddCharacter(DG_CHARACTER_TYPE.ALLY, spawnTile.coord);
             newPartyMember.GetComponent<CharacterBehaviour>().SetUp(GlobalGameManager.Instance.party[i]);
+            _activeEntities.Add(newPartyMember.GetComponent<DGEntity>());
+            _activeParty.Add(newPartyMember.GetComponent<CharacterBehaviour>());
+        }
+        for (int i = 0; i < _tempParty.Count; i++)
+        {
+            var spawnTile = SearchNextAvailableTile(_currentFloor.CoordToTileInfo(_currentPlayer.Position), SearchConditions.New(), 0, 0, 10);
+            var newPartyMember = AddCharacter(DG_CHARACTER_TYPE.ALLY, spawnTile.coord);
+            newPartyMember.GetComponent<CharacterBehaviour>().SetUp(_tempParty[i]);
             _activeEntities.Add(newPartyMember.GetComponent<DGEntity>());
             _activeParty.Add(newPartyMember.GetComponent<CharacterBehaviour>());
         }
@@ -256,6 +267,12 @@ public class DGGenerator : MonoBehaviour, IDebuggable
             ActiveParty[i].GetComponent<DGEntity>().Set(_currentFloor, spawnTile != null ? spawnTile.coord : GetRandomRoom().GetRandomCoordInRoom());
             ActiveParty[i].GetComponent<DGEntity>().Warp(ActiveParty[i].GetComponent<DGEntity>().Position);
         }
+    }
+
+    public void AddTempParty(CHARACTER_ENUM character, int startingLevel)
+    {
+        var newCharacter = CharacterEntry.Create(character, startingLevel);
+        _tempParty.Add(newCharacter);
     }
 
     public GameObject SpawnNPC(DG_CHARACTER_TYPE charType, CharacterEntry characterData)
@@ -297,6 +314,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         selectedDungeonData = GlobalGameManager.Instance.selectedDungeon;
         _dungeonUI = FindAnyObjectByType<DungeonUIHandler>();
         _activeParty = new List<CharacterBehaviour>();
+        _tempParty = new List<CharacterEntry>();
     }
 
     private void ClearFloor()

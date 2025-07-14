@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class DialogueData
 {
+    [HideInInspector] public string name;
     public DialogueData()
     {
         character = CHARACTER_ENUM.NUM_CHARACTERS;

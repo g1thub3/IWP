@@ -7,9 +7,15 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "GameStoryManager", menuName = "Scriptable Objects/GameStoryManager")]
 public class GameStoryManager : SingletonScriptableObject<GameStoryManager> // Handles and stores story data
 {
+    public DGGameManager currentGameManager;
+
     private List<string> _completedStories = new List<string>();
     private List<StoryData> _activeStories = new List<StoryData>();
 
+    public List<StoryData> ActiveStories
+    {
+        get { return _activeStories; }
+    }
     private void OnEnable()
     {
         _completedStories.Clear();
@@ -26,27 +32,43 @@ public class GameStoryManager : SingletonScriptableObject<GameStoryManager> // H
         var newStory = new StoryData(storyName);
         if (newStory.foundStoryline == null) return;
         _activeStories.Add(newStory);
-        newStory.foundStoryline.OnBegin.Invoke(newStory);
+        StoryContext onStart = newStory.foundStoryline.GetContext(STORY_CONTEXT.ON_STORY_START);
+        if (onStart != null)
+        {
+            onStart.Invoke(newStory);
+        }
     }
-    public void OnSceneChange(Scene scene, LoadSceneMode mode)
+
+    private StoryContext RunStoryEvent(STORY_CONTEXT context)
     {
-        if (GlobalCanvasManager.Instance == null) return;
-        if (GlobalCanvasManager.Instance.IsInteractionActive) return;
-        bool eventComplete = false;
+        if (GlobalCanvasManager.Instance == null) return null;
+        if (GlobalCanvasManager.Instance.IsInteractionActive) return null;
         foreach (StoryData data in _activeStories)
         {
-            if (eventComplete) break;
-            if (data.foundStoryline == null) continue;
-            if (data.foundStoryline.OnSceneChange == null) continue;
-            foreach (StoryEvent storyEvent in data.foundStoryline.OnSceneChange)
-            {
-                if (storyEvent.stateTrigger == data.currentState)
-                {
-                    eventComplete = true;
-                    storyEvent.Invoke(data);
-                    break;
-                }
-            }
+            StoryContext onScene = data.foundStoryline.GetContext(context);
+            if (onScene == null) continue;
+            onScene.Invoke(data);
+            return onScene;
         }
+        return null;
+    }
+
+    public void OnSceneChange(Scene scene, LoadSceneMode mode)
+    {
+        RunStoryEvent(STORY_CONTEXT.ON_SCENE_CHANGE);
+    }
+    public void OnDungeonPreload()
+    {
+        RunStoryEvent(STORY_CONTEXT.ON_DUNGEON_PRELOAD);
+    }
+
+    public void OnDungeonNewFloor()
+    {
+        RunStoryEvent(STORY_CONTEXT.ON_DUNGEON_NEWFLOOR);
+    }
+
+    public bool OnDungeonComplete()
+    {
+        return RunStoryEvent(STORY_CONTEXT.ON_DUNGEON_COMPLETE) != null;
     }
 }

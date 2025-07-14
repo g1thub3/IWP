@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d196a0535c375e54bbd06bd3726e1d9a, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  sequence:
+  - name: Anna
+    character: 25
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Anna
+    content:
+    - Thank you so much for helping to retrieve my rune!
+    - I ended up getting lost in those woods, but when I came out, I realised I didn't
+      have my rune on me!
+    - There was just no way I could go in there and take it back myself.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 0
+    canSkip: 1
+    autoNext: 0
+  - name: Cherry
+    character: 0
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - We're happy to help, Anna!
+    - If you ever need help again, just put up another quest. Us adventurers will
+      be at your call!
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Anna
+    character: 25
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Anna
+    content:
+    - I definitely will! You've provided only such wonderful service.
+    - I've passed your reward to the guild. You should be receiving it soon.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 0
+    canSkip: 1
+    autoNext: 0
+  - name: Damson
+    character: 1
+    speakerSprite: {fileID: -2733444605593320565, guid: dc0969557c4cf8f40bb757f8cb06197d, type: 3}
+    speakerName: Damson
+    content:
+    - Thank you, Anna. It means a lot to us.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Anna
+    character: 25
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Anna
+    content:
+    - Well, I best be going now.
+    - Good luck on your future adventures!
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 0
+    isSpriteShowing: 0
+    canSkip: 1
+    autoNext: 0

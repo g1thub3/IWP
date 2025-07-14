@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -41,10 +42,6 @@ public class DGGameManager : MonoBehaviour
     }
     private List<DeathInstance> _deaths;
 
-
-    public UnityEvent OnDungeonComplete;
-    public UnityEvent<CharacterBehaviour> OnDeath;
-
     public bool IsGameActive
     {
         get { return _isGameActive; }
@@ -63,7 +60,6 @@ public class DGGameManager : MonoBehaviour
 
     private void ExitDungeon()
     {
-        GlobalGameManager.Instance.DayOver = true;
         GameSceneManager.Instance.ToDorm();
     }
 
@@ -280,6 +276,8 @@ public class DGGameManager : MonoBehaviour
             StartCoroutine(_dungeonUI.transitioner.FadeTransition(false, 0.75f, 0.0f, _dungeonUI.transitioner.grp, delegate
             {
                 _isGameActive = true;
+
+                GameStoryManager.Instance.OnDungeonNewFloor();
             }));
         }));
     }
@@ -310,9 +308,15 @@ public class DGGameManager : MonoBehaviour
     {
         if (_currentFloor > GlobalGameManager.Instance.selectedDungeon.floorCount) // EVENT: DUNGEON COMPLETED
         {
-            _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.COMPLETED, this, GlobalGameManager.Instance.selectedDungeon);
-            isPressingInit = _inputManager.actions["Accept"].IsPressed();
-            StartCoroutine(WaitForInput());
+            GlobalGameManager.Instance.DayOver = true;
+            // ADD END EVENT HERE
+            bool eventHappening = GameStoryManager.Instance.OnDungeonComplete();
+            if (!eventHappening)
+            {
+                _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.COMPLETED, this, GlobalGameManager.Instance.selectedDungeon);
+                isPressingInit = _inputManager.actions["Accept"].IsPressed();
+                StartCoroutine(WaitForInput());
+            }
             return;
         }
         _dungeonUI.transitioner.ToggleQuestComp(false);
@@ -496,6 +500,7 @@ public class DGGameManager : MonoBehaviour
                 foreach (var activeMember in _dungeonGen.ActiveParty)
                 {
                     var member = activeMember.character;
+                    if (!GlobalGameManager.Instance.party.Contains(member)) continue;
                     int added = member.GainXP(dead.death.character.ExperienceAward);
                     if (added > 0)
                     {
@@ -618,6 +623,9 @@ public class DGGameManager : MonoBehaviour
         _dungeonUI.dungeonNameText.text = GlobalGameManager.Instance.selectedDungeon.dungeonName;
         turnList = new List<DGEntity>();
         _dungeonUI.transitioner.SetDungeonText(GlobalGameManager.Instance.selectedDungeon.dungeonName);
+
+        GameStoryManager.Instance.currentGameManager = this;
+        GameStoryManager.Instance.OnDungeonPreload();
 
         GetActiveQuests();
         ToNextFloor();

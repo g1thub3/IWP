@@ -11,6 +11,7 @@ public class StoryData
     public int currentState;
     public KeyDataList specialData;
     public Storyline foundStoryline;
+    public DGData targetDungeon;
 
     public void GetStory()
     {
@@ -36,6 +37,7 @@ public class StoryData
         storyName = name;
         currentState = 0;
         specialData = new KeyDataList();
+        targetDungeon = null;
 
         GetStory();
     }
@@ -44,6 +46,7 @@ public class StoryData
 [Serializable]
 public class StoryFunction
 {
+    [HideInInspector] public string name;
     public STORY_FUNCTION function;
     public KeyDataList data;
 }
@@ -52,7 +55,7 @@ public class StoryFunction
 [Serializable]
 public class StoryEvent
 {
-    public string name;
+    [HideInInspector] public string name;
     public int stateTrigger;
     public List<StoryFunction> functions;
     public void Invoke(StoryData data)
@@ -60,6 +63,36 @@ public class StoryEvent
         for (int i = 0; i < functions.Count; i++)
         {
             GameStoryFunctions.Instance.Invoke(functions[i].function, data, functions[i].data);
+        }
+    }
+}
+
+
+public enum STORY_CONTEXT
+{
+    ON_STORY_START,
+    ON_STORY_END,
+    ON_SCENE_CHANGE,
+    ON_DUNGEON_PRELOAD,
+    ON_DUNGEON_NEWFLOOR,
+    ON_DUNGEON_COMPLETE
+}
+
+[Serializable]
+public class StoryContext
+{
+    [HideInInspector] public string name;
+    public STORY_CONTEXT context;
+    public List<StoryEvent> events;
+    public void Invoke(StoryData data)
+    {
+        foreach(var evt in events)
+        {
+            if (evt.stateTrigger == data.currentState)
+            {
+                evt.Invoke(data);
+                break;
+            }
         }
     }
 }
@@ -75,7 +108,22 @@ public class Storyline : ScriptableObject
         return storyStates[state];
     }
 
-    public StoryEvent OnBegin;
-    public List<StoryEvent> OnSceneChange;
-    public StoryEvent OnEnd;
+    public List<StoryContext> storyContexts;
+
+    private Dictionary<STORY_CONTEXT, StoryContext> _storyDictionary;
+    private void OnEnable()
+    {
+        _storyDictionary = new Dictionary<STORY_CONTEXT, StoryContext>();
+        foreach (var strContext in storyContexts)
+        {
+            _storyDictionary.Add(strContext.context, strContext);
+        }
+    }
+
+    public StoryContext GetContext(STORY_CONTEXT givenContext)
+    {
+        if (_storyDictionary.ContainsKey(givenContext))
+            return _storyDictionary[givenContext];
+        return null;
+    }
 }

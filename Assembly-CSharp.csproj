@@ -126,6 +126,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Visuals\SpriteAnimation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\Scripts\Utilities\CustomEditor\CharacterProfileEditor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Gameplay\CharacterBehaviour.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Items\StatChanger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\ReplenishingItem.cs" />
+    <Compile Include="Assets\Scripts\Utilities\CustomEditor\DialogueSequenceEditor.cs" />
     <Compile Include="Assets\Scripts\Dungeon\AI\AIWander.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGData.cs" />

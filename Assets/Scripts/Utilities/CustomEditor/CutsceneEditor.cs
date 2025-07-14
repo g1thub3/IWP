@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using static CutsceneFunctions;
+using static UnityEngine.Analytics.IAnalytic;
 
 [CustomEditor(typeof(Cutscene))]
 public class CutsceneEditor : Editor
@@ -11,8 +12,6 @@ public class CutsceneEditor : Editor
     public static Dictionary<CUTSCENE_FUNCTION, List<string>> requiredKeys;
 
     Cutscene myTarget;
-    List<CUTSCENE_FUNCTION> selections;
-
     public delegate string InstructionData(CutsceneInstruction instruction);
     public static Dictionary<CUTSCENE_FUNCTION, InstructionData> getInstructionData;
 
@@ -29,9 +28,10 @@ public class CutsceneEditor : Editor
         });
         getInstructionData.Add(CUTSCENE_FUNCTION.DIALOGUE, delegate (CutsceneInstruction instruction)
         {
-            if (instruction.Data.GetData("DialogueSequence") != null)
+            var data = instruction.Data.GetData("DialogueSequence");
+            if (data != null && data.Obj != null)
             {
-                return "(" + instruction.Data.GetData("DialogueSequence").Obj.name + ")";
+                return "(" + data.Obj.name + ")";
             }
             return "(Null)";
         });
@@ -121,13 +121,38 @@ public class CutsceneEditor : Editor
         });
         getInstructionData.Add(CUTSCENE_FUNCTION.SET_CAMERA_FOCUS, delegate (CutsceneInstruction instruction)
         {
+            string confine = "Confine";
+            var confdata = instruction.Data.GetData("Confiner");
+            if (confdata != null)
+            {
+                if (confdata.Int < 0)
+                {
+                    confine = "Don't Confine";
+                }
+            }
+            var pt = instruction.Data.GetData("Point");
             if (instruction.Data.GetData("Point") != null)
             {
-                return "(" + instruction.Data.GetData("Point").String + ")";
+                return "(" + confine + ", " + pt.String + ")";
             }
+            var actor = instruction.Data.GetData("Actor");
             if (instruction.Data.GetData("Actor") != null)
             {
-                return "(" + instruction.Data.GetData("Actor").String + ")";
+                return "(" + confine + ", " + actor.String + ")";
+            }
+            return "(Null)";
+        });
+        getInstructionData.Add(CUTSCENE_FUNCTION.DESTROY_PROP, delegate (CutsceneInstruction instruction)
+        {
+            var prop = instruction.Data.GetData("Prop");
+            if (prop != null)
+            {
+                return "(" + prop.String + ")";
+            }
+            var actor = instruction.Data.GetData("Actor");
+            if (actor != null)
+            {
+                return "(" + actor.String + ")";
             }
             return "(Null)";
         });

@@ -10,31 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d196a0535c375e54bbd06bd3726e1d9a, type: 3}
-  m_Name: 2
+  m_Name: 1
   m_EditorClassIdentifier: 
   sequence:
-  - character: 0
+  - name: Cherry
+    character: 0
     speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
     speakerName: Cherry
     content:
-    - Alright! It's time for another day of adventuring!
-    - Hm... Where will I go today?
+    - Hey, there it is! Anna's Warding Rune!
     waitTime: 0.05
     textSpeed: 0.05
-    isRight: 0
+    isRight: 1
     isSpriteShowing: 1
-    canSkip: 1
-    autoNext: 0
-  - character: 25
-    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
-    speakerName: Cherry
-    content:
-    - Use Arrow Keys to move Cherry around.
-    - Press Z to interact with things.
-    - Press X to open your menu.
-    waitTime: 0.05
-    textSpeed: 0.05
-    isRight: 0
-    isSpriteShowing: 0
     canSkip: 1
     autoNext: 0

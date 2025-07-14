@@ -12,6 +12,7 @@ public class CutsceneSetup
 
     public Dictionary<string, CutsceneActor> Actors;
     public Dictionary<string, Transform> Points;
+    public Dictionary<string, GameObject> CutsceneProps;
     public Transform Controller;
 
     public GameObject CutsceneObjects
@@ -23,6 +24,7 @@ public class CutsceneSetup
         Omit();
         Actors = new Dictionary<string, CutsceneActor>();
         Points = new Dictionary<string, Transform>();
+        CutsceneProps = new Dictionary<string, GameObject>();
         if (props != null)
         {
             cutsceneObjects = MonoBehaviour.Instantiate(props, Vector3.zero, Quaternion.identity);
@@ -52,6 +54,14 @@ public class CutsceneSetup
                 Points.Add(points.GetChild(i).gameObject.name, points.GetChild(i));
             }
         }
+        Transform cutprops = cutsceneObjects.transform.Find("CutsceneProps");
+        if (cutprops != null)
+        {
+            for (int i = 0; i < cutprops.childCount; i++)
+            {
+                CutsceneProps.Add(cutprops.GetChild(i).gameObject.name, cutprops.GetChild(i).gameObject);
+            }
+        }
     }
     public void Omit()
     {
@@ -72,6 +82,18 @@ public class CutsceneSetup
             Controller = controller.transform;
             omitted.Add(controller.gameObject);
             controller.gameObject.SetActive(false);
+        }
+        var gameManager = GameObject.FindFirstObjectByType<DGGameManager>();
+        if (gameManager != null)
+        {
+            omitted.Add(gameManager.gameObject);
+            gameManager.gameObject.SetActive(false);
+        }
+        var ui = GameObject.FindFirstObjectByType<DungeonUIHandler>();
+        if (ui != null)
+        {
+            omitted.Add(ui.gameObject);
+            ui.gameObject.SetActive(false);
         }
         for (int i = 0; i < toOmit.Count; i++) { 
             var obj = GameObject.Find(toOmit[i]);
@@ -98,7 +120,7 @@ public class CutsceneSetup
 [System.Serializable]
 public class CutsceneInstruction
 {
-    public string name;
+    [HideInInspector] public string name;
     public CUTSCENE_FUNCTION function;
     public bool Yield;
     public KeyDataList Data;

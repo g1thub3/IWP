@@ -326,7 +326,7 @@ MonoBehaviour:
         Float: 3
         String: 
         Obj: {fileID: 0}
-  - name: (_) ACTOR_MOVE (Damson, DamsonMove1, 2)
+  - name: (_) ACTOR_MOVE (Damson, DamsonMove1, 3)
     function: 3
     Yield: 0
     Data:
@@ -343,10 +343,10 @@ MonoBehaviour:
         Obj: {fileID: 0}
       - Key: MoveSpeed
         Int: 0
-        Float: 2
+        Float: 3
         String: DamsonMove1
         Obj: {fileID: 0}
-  - name: (_) ACTOR_MOVE (Fern, FernMove1, 2)
+  - name: (_) ACTOR_MOVE (Fern, FernMove1, 3)
     function: 3
     Yield: 0
     Data:
@@ -363,10 +363,10 @@ MonoBehaviour:
         Obj: {fileID: 0}
       - Key: MoveSpeed
         Int: 0
-        Float: 2
+        Float: 3
         String: FernMove1
         Obj: {fileID: 0}
-  - name: (Y) ACTOR_MOVE (Cherry, CherryMove2, 2)
+  - name: (Y) ACTOR_MOVE (Cherry, CherryMove2, 3)
     function: 3
     Yield: 1
     Data:
@@ -383,10 +383,10 @@ MonoBehaviour:
         Obj: {fileID: 0}
       - Key: MoveSpeed
         Int: 0
-        Float: 2
+        Float: 3
         String: CherryMove2
         Obj: {fileID: 0}
-  - name: (_) ACTOR_MOVE (Damson, DamsonMove2, 2)
+  - name: (_) ACTOR_MOVE (Damson, DamsonMove2, 3)
     function: 3
     Yield: 0
     Data:
@@ -403,10 +403,10 @@ MonoBehaviour:
         Obj: {fileID: 0}
       - Key: MoveSpeed
         Int: 0
-        Float: 2
+        Float: 3
         String: DamsonMove2
         Obj: {fileID: 0}
-  - name: (_) ACTOR_MOVE (Fern, FernMove2, 2)
+  - name: (_) ACTOR_MOVE (Fern, FernMove2, 3)
     function: 3
     Yield: 0
     Data:
@@ -423,10 +423,10 @@ MonoBehaviour:
         Obj: {fileID: 0}
       - Key: MoveSpeed
         Int: 0
-        Float: 2
+        Float: 3
         String: FernMove2
         Obj: {fileID: 0}
-  - name: (Y) ACTOR_MOVE (Cherry, CherryMove3, 2)
+  - name: (Y) ACTOR_MOVE (Cherry, CherryMove3, 3)
     function: 3
     Yield: 1
     Data:
@@ -443,7 +443,7 @@ MonoBehaviour:
         Obj: {fileID: 0}
       - Key: MoveSpeed
         Int: 0
-        Float: 2
+        Float: 3
         String: CherryMove3
         Obj: {fileID: 0}
   - name: (_) ACTOR_FACE (Cherry, north)
