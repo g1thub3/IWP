@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,12 +12,18 @@ public enum STORY_FUNCTION
     DG_ADD_TEMPMEMBER,
     REMOVE_TARGET_DUNGEON,
     SET_TARGET_DUNGEON,
-    DIALOGUE
+    DIALOGUE,
+    DG_PARTY_LOSS,
+    DG_LEADER_LOSS
 }
 [CreateAssetMenu(fileName = "GameStoryFunctions", menuName = "Scriptable Objects/GameStoryFunctions")]
 public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> // Functions to handle the story
 {
     private Dictionary<STORY_FUNCTION, System.Action<StoryData, KeyDataList>> _storyFunctions;
+    private delegate bool YieldCheck();
+    private YieldCheck CurrentYieldCheck;
+
+
     private void OnEnable()
     {
         _storyFunctions = new Dictionary<STORY_FUNCTION, System.Action<StoryData, KeyDataList>>();
@@ -27,10 +34,34 @@ public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> 
         _storyFunctions.Add(STORY_FUNCTION.REMOVE_TARGET_DUNGEON, RemoveTargetDungeon);
         _storyFunctions.Add(STORY_FUNCTION.SET_TARGET_DUNGEON, SetTargetDungeon);
         _storyFunctions.Add(STORY_FUNCTION.DIALOGUE, Dialogue);
+        _storyFunctions.Add(STORY_FUNCTION.DG_PARTY_LOSS, DGPartyLoss);
+        _storyFunctions.Add(STORY_FUNCTION.DG_LEADER_LOSS, DGLeaderLoss);
+    }
+
+    private IEnumerator HandleCoroutine(StoryEvent passedEvent, StoryData data)
+    {
+        for (int i = 0; i < passedEvent.functions.Count; i++)
+        {
+            var currFunction = passedEvent.functions[i];
+            Invoke(currFunction.function, data, currFunction.data);
+            if (currFunction.Yield && CurrentYieldCheck != null)
+            {
+                while (CurrentYieldCheck.Invoke())
+                {
+                    yield return new WaitForEndOfFrame();
+                }
+            }
+        }
+    }
+
+    public void Handle(StoryEvent passedEvent, StoryData data)
+    {
+        GlobalCanvasManager.Instance.StartCoroutine(HandleCoroutine(passedEvent, data));
     }
 
     public void Invoke(STORY_FUNCTION function, StoryData data, KeyDataList dataList)
     {
+        CurrentYieldCheck = null;
         if (dataList.GetData("Scene") != null)
         {
             if (dataList.GetData("Scene").String != SceneManager.GetActiveScene().name)
@@ -71,6 +102,7 @@ public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> 
     {
         var cutscene = keyDataList.GetData("Cutscene");
         if (cutscene == null) return;
+        CurrentYieldCheck = CutsceneManager.Instance.IsInProgress;
         CutsceneManager.Instance.RunCutscene(cutscene.Obj as Cutscene);
     }
 
@@ -78,6 +110,7 @@ public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> 
     {
         var cutscene = keyDataList.GetData("Dialogue");
         if (cutscene == null) return;
+        CurrentYieldCheck = GlobalCanvasManager.Instance.DialogueHandler.IsInProgress;
         GlobalCanvasManager.Instance.DialogueHandler.PromptSequence(cutscene.Obj as DialogueSequence);
     }
 
@@ -114,5 +147,35 @@ public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> 
 
         // Add party here
         dgGenerator.AddTempParty(chosenChar, lvl);
+    }
+
+    private void DGPartyLoss(StoryData story, KeyDataList keyDataList)
+    {
+        // Possible yield check: When player finishes input
+        if (GameStoryManager.Instance.currentGameManager == null) return;
+        // If not in the indicated dungeon
+        if (story.targetDungeon != null)
+        {
+            if (GlobalGameManager.Instance.selectedDungeon != story.targetDungeon)
+            {
+                return;
+            }
+        }
+        GameStoryManager.Instance.currentGameManager.PartyLoss();
+    }
+
+    private void DGLeaderLoss(StoryData story, KeyDataList keyDataList)
+    {
+        // Possible yield check: When player finishes input
+        if (GameStoryManager.Instance.currentGameManager == null) return;
+        // If not in the indicated dungeon
+        if (story.targetDungeon != null)
+        {
+            if (GlobalGameManager.Instance.selectedDungeon != story.targetDungeon)
+            {
+                return;
+            }
+        }
+        GameStoryManager.Instance.currentGameManager.PlayerLoss(true);
     }
 }

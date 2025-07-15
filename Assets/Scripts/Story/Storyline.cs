@@ -47,6 +47,7 @@ public class StoryData
 public class StoryFunction
 {
     [HideInInspector] public string name;
+    public bool Yield = false;
     public STORY_FUNCTION function;
     public KeyDataList data;
 }
@@ -60,10 +61,7 @@ public class StoryEvent
     public List<StoryFunction> functions;
     public void Invoke(StoryData data)
     {
-        for (int i = 0; i < functions.Count; i++)
-        {
-            GameStoryFunctions.Instance.Invoke(functions[i].function, data, functions[i].data);
-        }
+        GameStoryFunctions.Instance.Handle(this, data);
     }
 }
 
@@ -75,7 +73,10 @@ public enum STORY_CONTEXT
     ON_SCENE_CHANGE,
     ON_DUNGEON_PRELOAD,
     ON_DUNGEON_NEWFLOOR,
-    ON_DUNGEON_COMPLETE
+    ON_DUNGEON_COMPLETE,
+    ON_QUEST_BOARD_INTERACT,
+    ON_DUNGEON_LEADER_DEFEAT,
+    ON_DUNGEON_PARTY_DEFEAT,
 }
 
 [Serializable]

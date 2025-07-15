@@ -62,6 +62,7 @@ public class MainMenuHandler : LayeredUI
     private new void Start()
     {
         base.Start();
+        GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = false;
         _inputManager = GetComponent<PlayerInput>();
         CreateMain();
     }

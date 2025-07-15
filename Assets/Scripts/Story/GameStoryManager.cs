@@ -42,6 +42,7 @@ public class GameStoryManager : SingletonScriptableObject<GameStoryManager> // H
     private StoryContext RunStoryEvent(STORY_CONTEXT context)
     {
         if (GlobalCanvasManager.Instance == null) return null;
+        if (context == STORY_CONTEXT.ON_DUNGEON_LEADER_DEFEAT)
         if (GlobalCanvasManager.Instance.IsInteractionActive) return null;
         foreach (StoryData data in _activeStories)
         {
@@ -70,5 +71,23 @@ public class GameStoryManager : SingletonScriptableObject<GameStoryManager> // H
     public bool OnDungeonComplete()
     {
         return RunStoryEvent(STORY_CONTEXT.ON_DUNGEON_COMPLETE) != null;
+    }
+
+    public bool OnQuestBoardInteract()
+    {
+        return RunStoryEvent(STORY_CONTEXT.ON_QUEST_BOARD_INTERACT) != null;
+    }
+
+    public bool OnDungeonDefeat(bool isLeader)
+    {
+        if (isLeader)
+        {
+            var foundEvent = RunStoryEvent(STORY_CONTEXT.ON_DUNGEON_LEADER_DEFEAT);
+            Debug.Log(foundEvent);
+            return foundEvent != null;
+        } else
+        {
+            return RunStoryEvent(STORY_CONTEXT.ON_DUNGEON_PARTY_DEFEAT) != null;
+        }
     }
 }

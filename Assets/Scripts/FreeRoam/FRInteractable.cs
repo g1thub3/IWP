@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -44,21 +45,39 @@ public class FRInteraction
     }
 }
 
+[System.Serializable]
+public class FRAlternateSequence
+{
+    public string story;
+    public int stateTrigger;
+    public FRInteraction[] sequence;
+}
+
 
 public class FRInteractable : MonoBehaviour
 {
 
     public bool interactOnTrigger = false;
     public FRInteraction[] interactSequence;
+    public List<FRAlternateSequence> alternateSequences;
+    private Dictionary<string, FRAlternateSequence> sequenceDictionary;
 
     private void Start()
     {
         GlobalCanvasManager.LoadInstance();
+        if (alternateSequences != null)
+        {
+            sequenceDictionary = new Dictionary<string, FRAlternateSequence>();
+            foreach (var alternateSequence in alternateSequences)
+            {
+                sequenceDictionary.Add(alternateSequence.story, alternateSequence);
+            }
+        }
     }
 
-    private IEnumerator InteractSequence()
+    private IEnumerator InteractSequence(FRInteraction[] sequence)
     {
-        foreach (var interactableObject in interactSequence)
+        foreach (var interactableObject in sequence)
         {
             interactableObject.Invoke();
             while (!interactableObject.IsComplete())
@@ -70,7 +89,19 @@ public class FRInteractable : MonoBehaviour
 
     public void OnInteract()
     {
+        for (int i = 0; i < GameStoryManager.Instance.ActiveStories.Count; i++)
+        {
+            var story = GameStoryManager.Instance.ActiveStories[i];
+            if (sequenceDictionary.ContainsKey(story.storyName))
+            {
+                if (story.currentState == sequenceDictionary[story.storyName].stateTrigger)
+                {
+                    StartCoroutine(InteractSequence(sequenceDictionary[story.storyName].sequence));
+                    return;
+                }
+            }
+        }
         if (interactSequence == null) return;
-        StartCoroutine(InteractSequence());
+        StartCoroutine(InteractSequence(interactSequence));
     }
 }

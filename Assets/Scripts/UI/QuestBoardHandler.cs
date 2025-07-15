@@ -166,6 +166,10 @@ public class QuestBoardHandler : MonoBehaviour
 
     public void Open()
     {
+        if (GameStoryManager.Instance.OnQuestBoardInteract())
+        {
+            return;
+        }
         GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = false;
         if (_isCompetitive)
         {

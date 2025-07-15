@@ -30,6 +30,12 @@ public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>
         get { return PromptHandler.IsInProgress() || DialogueHandler.IsInProgress() || LevelUpHandler.IsInProgress() || FreeRoamMenuHandler.IsOpen || CutsceneManager.Instance.IsInProgress(); }
     }
 
+    public void PrintInteractions()
+    {
+        Debug.Log(string.Format("Prompt: {0} | Dialogue: {1} | Level Up: {2} | FreeRoam: {3} | Cutscene: {4}", 
+            PromptHandler.IsInProgress(), DialogueHandler.IsInProgress(), LevelUpHandler.IsInProgress(), FreeRoamMenuHandler.IsOpen, CutsceneManager.Instance.IsInProgress()));
+    }
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;

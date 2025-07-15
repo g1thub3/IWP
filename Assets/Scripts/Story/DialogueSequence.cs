@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 [System.Serializable]
@@ -65,6 +64,7 @@ public class DialogueData
 public class DialogueSequence : ScriptableObject
 {
     public DialogueData[] sequence;
+
     public void Prompt()
     {
         GlobalCanvasManager.Instance.DialogueHandler.PromptSequence(sequence);

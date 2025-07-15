@@ -134,6 +134,8 @@ public static class CutsceneFunctions
         MonoBehaviour.Destroy(CutsceneManager.Instance.CurrentSetup.CutsceneObjects);
         CutsceneManager.Instance.CurrentSetup = null;
         CutsceneManager.Instance._currentCinemachine.GetComponent<CinemachineConfiner2D>().enabled = true;
+        if (SceneManager.GetActiveScene().name != "DungeonScene")
+            GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = true;
     }
 
     public static void SceneSetup(Cutscene cutscene, KeyDataList dataList)

@@ -11,7 +11,8 @@ public enum DUNGEON_END_CONTEXT
     LOSS,
     ESCAPE,
     QUEST,
-    QUEST_FAIL
+    QUEST_FAIL,
+    PARTY_DEFEAT
 }
 
 public class DGGameManager : MonoBehaviour
@@ -60,6 +61,7 @@ public class DGGameManager : MonoBehaviour
 
     private void ExitDungeon()
     {
+        GlobalGameManager.Instance.DayOver = true;
         GameSceneManager.Instance.ToDorm();
     }
 
@@ -139,7 +141,7 @@ public class DGGameManager : MonoBehaviour
         StartCoroutine(WaitForInput());
     }
 
-    private void PlayerLoss(bool onDeath)
+    public void PlayerLoss(bool onDeath)
     {
         _isGameActive = false;
         _dungeonUI.Endscreen(onDeath ? DUNGEON_END_CONTEXT.LOSS : DUNGEON_END_CONTEXT.ESCAPE, this, GlobalGameManager.Instance.selectedDungeon);
@@ -147,7 +149,16 @@ public class DGGameManager : MonoBehaviour
         isPressingInit = _inputManager.actions["Accept"].IsPressed();
         StartCoroutine(WaitForInput());
     }
-    
+
+    public void PartyLoss()
+    {
+        _isGameActive = false;
+        _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.PARTY_DEFEAT, this, GlobalGameManager.Instance.selectedDungeon);
+        LoseItems();
+        isPressingInit = _inputManager.actions["Accept"].IsPressed();
+        StartCoroutine(WaitForInput());
+    }
+
     private List<QuestCompetitor> GenerateQuestCompetitors(Quest quest)
     {
         var newList = new List<QuestCompetitor>();
@@ -586,8 +597,9 @@ public class DGGameManager : MonoBehaviour
         _questCompetition.Remove(quest);
     }
 
-    public void RegisterRemoval(DGEntity dead) // EVENT: PLAYER DEATH
+    public void RegisterRemoval(DGEntity dead)
     {
+        var deadcb = dead.GetComponent<CharacterBehaviour>();
         int deadTurnNo;
         for (deadTurnNo = 0; deadTurnNo < turnList.Count; deadTurnNo++)
         {
@@ -595,15 +607,26 @@ public class DGGameManager : MonoBehaviour
                 break;
         }
         _dungeonGen.ActiveEntities.Remove(dead);
-        if (_dungeonGen.ActiveParty.Contains(dead.GetComponent<CharacterBehaviour>()))
-            _dungeonGen.ActiveParty.Remove(dead.GetComponent<CharacterBehaviour>());
+        if (_dungeonGen.ActiveParty.Contains(deadcb)) // EVENT: PARTY DEATH
+        {
+            if (!(dead is DGPlayer))
+            {
+                GameStoryManager.Instance.OnDungeonDefeat(false);
+            }
+            _dungeonGen.ActiveParty.Remove(deadcb);
+        }
         turnList.RemoveAt(deadTurnNo);
         if (deadTurnNo >= turnList.Count)
             currentTurn = 0;
 
-        if (dead is DGPlayer)
+        if (dead is DGPlayer) // EVENT: PLAYER DEATH
         {
-            PlayerLoss(true);
+            bool eventfound = GameStoryManager.Instance.OnDungeonDefeat(true);
+            Debug.Log(eventfound);
+            if (!eventfound)
+            {
+                PlayerLoss(true);
+            }
         }
 
         Destroy(dead.gameObject);

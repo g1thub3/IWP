@@ -28,7 +28,8 @@ MonoBehaviour:
     - name: Wake Up
       stateTrigger: 0
       functions:
-      - name: 'PLAY_CUTSCENE (Cutscene) (FRDorm) '
+      - name: '(_) PLAY_CUTSCENE (Cutscene) (FRDorm) '
+        Yield: 0
         function: 2
         data:
           dataList:
@@ -42,7 +43,8 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: d5a0ad26fecf27c4296c90168a8ea5a5, type: 2}
-      - name: 'NEXT_STATE  (FRDorm) '
+      - name: '(_) NEXT_STATE  (FRDorm) '
+        Yield: 0
         function: 1
         data:
           dataList:
@@ -54,7 +56,23 @@ MonoBehaviour:
     - name: Meet Fern At Guild
       stateTrigger: 1
       functions:
-      - name: 'PLAY_CUTSCENE (Cutscene) (FRGuildHall) '
+      - name: '(_) NEXT_STATE  '
+        Yield: 0
+        function: 1
+        data:
+          dataList: []
+      - name: '(_) SET_TARGET_DUNGEON (Begonia Forest) '
+        Yield: 0
+        function: 5
+        data:
+          dataList:
+          - Key: Dungeon
+            Int: 0
+            Float: 0
+            String: Begonia Forest
+            Obj: {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
+      - name: '(_) PLAY_CUTSCENE (Cutscene) (FRGuildHall) '
+        Yield: 0
         function: 2
         data:
           dataList:
@@ -68,26 +86,14 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: 6f69b78b520f8f54fa1a1568051bf1dd, type: 2}
-      - name: 'NEXT_STATE  '
-        function: 1
-        data:
-          dataList: []
-      - name: 'SET_TARGET_DUNGEON (Begonia Forest) '
-        function: 5
-        data:
-          dataList:
-          - Key: Dungeon
-            Int: 0
-            Float: 0
-            String: Begonia Forest
-            Obj: {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
   - name: ON_DUNGEON_PRELOAD
     context: 3
     events:
     - name: Quest With Fern
       stateTrigger: 2
       functions:
-      - name: 'DG_ADD_TEMPMEMBER (FERN, 5) '
+      - name: '(_) DG_ADD_TEMPMEMBER (FERN, 5) '
+        Yield: 0
         function: 3
         data:
           dataList:
@@ -102,7 +108,8 @@ MonoBehaviour:
     - name: Quest With Fern
       stateTrigger: 2
       functions:
-      - name: 'DIALOGUE (UponEnter) (Floor 1) '
+      - name: '(_) DIALOGUE (UponEnter) (Floor 1) '
+        Yield: 0
         function: 6
         data:
           dataList:
@@ -122,11 +129,13 @@ MonoBehaviour:
     - name: Quest With Fern
       stateTrigger: 2
       functions:
-      - name: 'NEXT_STATE  '
+      - name: '(_) NEXT_STATE  '
+        Yield: 0
         function: 1
         data:
           dataList: []
-      - name: 'REMOVE_TARGET_DUNGEON  '
+      - name: '(_) REMOVE_TARGET_DUNGEON  '
+        Yield: 0
         function: 4
         data:
           dataList:
@@ -135,7 +144,8 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: 9801facc74f123540921d6dc2583de48, type: 2}
-      - name: 'PLAY_CUTSCENE (Cutscene) '
+      - name: '(_) PLAY_CUTSCENE (Cutscene) '
+        Yield: 0
         function: 2
         data:
           dataList:
@@ -144,3 +154,71 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: 9801facc74f123540921d6dc2583de48, type: 2}
+  - name: ON_QUEST_BOARD_INTERACT
+    context: 6
+    events:
+    - name: Quest With Fern
+      stateTrigger: 2
+      functions:
+      - name: '(_) DIALOGUE (QuestBoardInteract) '
+        Yield: 0
+        function: 6
+        data:
+          dataList:
+          - Key: Dialogue
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: c31768835664324498adecdc9bb0ad97, type: 2}
+  - name: ON_DUNGEON_LEADER_DEFEAT
+    context: 7
+    events:
+    - name: Quest With Fern
+      stateTrigger: 2
+      functions:
+      - name: '(Y) DIALOGUE (LeaderLoss) '
+        Yield: 1
+        function: 6
+        data:
+          dataList:
+          - Key: Dialogue
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: ae374902f244b6c40875efd86576bec2, type: 2}
+      - name: '(_) DG_LEADER_LOSS  '
+        Yield: 0
+        function: 8
+        data:
+          dataList:
+          - Key: Dialogue
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: ae374902f244b6c40875efd86576bec2, type: 2}
+  - name: ON_DUNGEON_PARTY_DEFEAT
+    context: 8
+    events:
+    - name: Quest With Fern
+      stateTrigger: 2
+      functions:
+      - name: '(Y) DIALOGUE (PartyLoss) '
+        Yield: 1
+        function: 6
+        data:
+          dataList:
+          - Key: Dialogue
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 577270bd3d2919d41b9c51b6e3ee3ef6, type: 2}
+      - name: '(_) DG_LEADER_LOSS  '
+        Yield: 0
+        function: 8
+        data:
+          dataList:
+          - Key: Dialogue
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: ae374902f244b6c40875efd86576bec2, type: 2}

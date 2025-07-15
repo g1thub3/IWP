@@ -87,6 +87,14 @@ public class StorylineEditor : Editor
             newString += ")";
             return newString;
         });
+        getInstructionData.Add(STORY_FUNCTION.DG_PARTY_LOSS, delegate (StoryFunction instruction)
+        {
+            return string.Empty;
+        });
+        getInstructionData.Add(STORY_FUNCTION.DG_LEADER_LOSS, delegate (StoryFunction instruction)
+        {
+            return string.Empty;
+        });
     }
 
     private string GetConstants(StoryFunction instruction)
@@ -118,7 +126,8 @@ public class StorylineEditor : Editor
                 evt.name = myTarget.storyStates[evt.stateTrigger];
                 foreach (var func in evt.functions)
                 {
-                    func.name = func.function.ToString() + " " + getInstructionData[func.function].Invoke(func) + " " + GetConstants(func);
+                    var str = string.Format("({0}) {1} {2} {3}", func.Yield ? "Y" : "_", func.function.ToString(), getInstructionData[func.function].Invoke(func), GetConstants(func));
+                    func.name = str;
                 }
             }
         }

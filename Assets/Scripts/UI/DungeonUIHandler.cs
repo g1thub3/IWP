@@ -107,6 +107,7 @@ public class DungeonUIHandler : MonoBehaviour
         _endContextDictionary.Add(DUNGEON_END_CONTEXT.ESCAPE, DungeonEndContext.New("Escaped...", "You escaped the dungeon and didn't complete it..."));
         _endContextDictionary.Add(DUNGEON_END_CONTEXT.QUEST, DungeonEndContext.New("Quest Completed!", "You left the dungeon after completing a quest!"));
         _endContextDictionary.Add(DUNGEON_END_CONTEXT.QUEST_FAIL, DungeonEndContext.New("Quest Failed...", "Another adventurer completed your quest before you did, so you left the dungeon safely."));
+        _endContextDictionary.Add(DUNGEON_END_CONTEXT.PARTY_DEFEAT, DungeonEndContext.New("Defeated...", "One of your party members got defeated, so you had to escape the dungeon..."));
     }
 
     public void UpdateQuestUI()

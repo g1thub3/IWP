@@ -61,7 +61,6 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.47f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Gameplay\CutsceneActor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\FRMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
@@ -80,7 +79,9 @@
     <Compile Include="Assets\Scripts\UI\DungeonMenuHandler.cs" />
     <Compile Include="Assets\Scripts\Gameplay\CharacterEntry.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DI\DIPickUp.cs" />
+    <Compile Include="Assets\Scripts\Story\Cutscene.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGPlayer.cs" />
+    <Compile Include="Assets\Scripts\Story\CutsceneManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\JabAttack.cs" />
     <Compile Include="Assets\Scripts\Dungeon\AI\AIAlly.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\BodySlamAttack.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets\Scripts\Dungeon\DGItemContainer.cs" />
     <Compile Include="Assets\Scripts\Utilities\CustomEditor\DGEntityEditor.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Visuals\DamageIndicator.cs" />
+    <Compile Include="Assets\Scripts\Story\CutsceneActor.cs" />
     <Compile Include="Assets\Scripts\UI\DungeonUIHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scripts\Utilities\SingletonScriptableObject.cs" />
@@ -103,10 +105,8 @@
     <Compile Include="Assets\Scripts\Gameplay\CharacterProfiles.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\CutsceneManager.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\FRAreaManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Cutscene.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGInteractable.cs" />
@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\Gameplay\CombatMove.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GameSceneManager.cs" />
     <Compile Include="Assets\Scripts\Dungeon\AI\AICompetitive.cs" />
+    <Compile Include="Assets\Scripts\Story\DialogueSequence.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DI\DIRescue.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\DungeonEnter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -161,7 +162,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\ManaExplosionAttack.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\DialogueSequence.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGAIModule.cs" />
     <Compile Include="Assets\Scripts\Utilities\CustomEditor\CutsceneEditor.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\SingeAttack.cs" />
