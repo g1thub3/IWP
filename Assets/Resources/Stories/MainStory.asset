@@ -18,6 +18,11 @@ MonoBehaviour:
   - Meet Fern At Guild
   - Quest With Fern
   - Quest Complete
+  - Doing Quest
+  - Wake Up 2
+  - Fern Trouble
+  - Fern Saved
+  - Story Completed
   storyContexts:
   - name: ON_STORY_START
     context: 0
@@ -86,6 +91,72 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: 6f69b78b520f8f54fa1a1568051bf1dd, type: 2}
+    - name: Quest Complete
+      stateTrigger: 3
+      functions:
+      - name: '(_) NEXT_STATE  '
+        Yield: 0
+        function: 1
+        data:
+          dataList: []
+      - name: '(_) PLAY_CUTSCENE (Cutscene) (FRGuildHall) '
+        Yield: 0
+        function: 2
+        data:
+          dataList:
+          - Key: Scene
+            Int: 0
+            Float: 0
+            String: FRGuildHall
+            Obj: {fileID: 0}
+          - Key: Cutscene
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: f1af5debf8e4ae848a2a8409a15e5bbb, type: 2}
+    - name: Wake Up 2
+      stateTrigger: 5
+      functions:
+      - name: '(_) NEXT_STATE  '
+        Yield: 0
+        function: 1
+        data:
+          dataList: []
+      - name: '(_) OPEN_DUNGEON (CobwebCave) '
+        Yield: 0
+        function: 12
+        data:
+          dataList:
+          - Key: Dungeon
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: dbb6bf07f332800408c082e8dc82cfac, type: 2}
+      - name: '(_) SET_TARGET_DUNGEON (Cobweb Cave) '
+        Yield: 0
+        function: 5
+        data:
+          dataList:
+          - Key: Dungeon
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: dbb6bf07f332800408c082e8dc82cfac, type: 2}
+      - name: '(_) PLAY_CUTSCENE (Cutscene) (FRGuildHall) '
+        Yield: 0
+        function: 2
+        data:
+          dataList:
+          - Key: Scene
+            Int: 0
+            Float: 0
+            String: FRGuildHall
+            Obj: {fileID: 0}
+          - Key: Cutscene
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: ada111f77a0af074bb73a91aaf7742ea, type: 2}
   - name: ON_DUNGEON_PRELOAD
     context: 3
     events:
@@ -154,6 +225,24 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: 9801facc74f123540921d6dc2583de48, type: 2}
+    - name: Fern Trouble
+      stateTrigger: 6
+      functions:
+      - name: '(_) PLAY_CUTSCENE (Null) '
+        Yield: 0
+        function: 2
+        data:
+          dataList: []
+      - name: '(_) DG_NEW_FLOOR (CobwebCaveBoss) '
+        Yield: 0
+        function: 10
+        data:
+          dataList:
+          - Key: Seed
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 3b2d202d7888b32478c249e6baa712be, type: 2}
   - name: ON_QUEST_BOARD_INTERACT
     context: 6
     events:
@@ -222,3 +311,35 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: ae374902f244b6c40875efd86576bec2, type: 2}
+  - name: ON_QUEST_COMPLETE
+    context: 10
+    events:
+    - name: Doing Quest
+      stateTrigger: 4
+      functions:
+      - name: '(_) NEXT_STATE  '
+        Yield: 0
+        function: 1
+        data:
+          dataList: []
+  - name: ON_DUNGEON_ENEMIES_CLEARED
+    context: 9
+    events:
+    - name: Fern Trouble
+      stateTrigger: 6
+      functions:
+      - name: '(_) NEXT_STATE  '
+        Yield: 0
+        function: 1
+        data:
+          dataList: []
+      - name: '(_) REMOVE_TARGET_DUNGEON  '
+        Yield: 0
+        function: 4
+        data:
+          dataList: []
+      - name: '(_) PLAY_CUTSCENE (Null) '
+        Yield: 0
+        function: 2
+        data:
+          dataList: []

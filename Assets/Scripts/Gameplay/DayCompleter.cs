@@ -32,11 +32,13 @@ public class DayCompleter : MonoBehaviour
 
     private IEnumerator QuestCompleteSequence()
     {
+        bool hasQuestComplete = false;
         for (int i = GlobalGameManager.Instance.ownedQuests.Count - 1; i >= 0; i--)
         {
             var q = GlobalGameManager.Instance.ownedQuests[i];
             if (q.quest.questCompleted)
             {
+                hasQuestComplete = true;
                 string[] speech = {
                     "Cherry completed a quest from " + q.clientName + "!"
                 };
@@ -96,6 +98,10 @@ public class DayCompleter : MonoBehaviour
                 GlobalGameManager.Instance.ownedQuests.RemoveAt(i);
             }
             yield return new WaitForEndOfFrame();
+        }
+        if (hasQuestComplete)
+        {
+            GameStoryManager.Instance.OnQuestComplete();
         }
     }
 }

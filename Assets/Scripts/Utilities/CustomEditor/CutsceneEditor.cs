@@ -156,6 +156,15 @@ public class CutsceneEditor : Editor
             }
             return "(Null)";
         });
+        getInstructionData.Add(CUTSCENE_FUNCTION.WAIT, delegate (CutsceneInstruction instruction)
+        {
+            var time = instruction.Data.GetData("Time");
+            if (time != null)
+            {
+                return "(" + time.Float + ")";
+            }
+            return "(1)";
+        });
     }
     public override void OnInspectorGUI()
     {

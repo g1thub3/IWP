@@ -42,14 +42,16 @@ public class GameStoryManager : SingletonScriptableObject<GameStoryManager> // H
     private StoryContext RunStoryEvent(STORY_CONTEXT context)
     {
         if (GlobalCanvasManager.Instance == null) return null;
-        if (context == STORY_CONTEXT.ON_DUNGEON_LEADER_DEFEAT)
         if (GlobalCanvasManager.Instance.IsInteractionActive) return null;
         foreach (StoryData data in _activeStories)
         {
             StoryContext onScene = data.foundStoryline.GetContext(context);
             if (onScene == null) continue;
-            onScene.Invoke(data);
-            return onScene;
+            bool found = onScene.Invoke(data);
+            if (found)
+            {
+                return onScene;
+            }
         }
         return null;
     }
@@ -75,7 +77,8 @@ public class GameStoryManager : SingletonScriptableObject<GameStoryManager> // H
 
     public bool OnQuestBoardInteract()
     {
-        return RunStoryEvent(STORY_CONTEXT.ON_QUEST_BOARD_INTERACT) != null;
+        var foundEvent = RunStoryEvent(STORY_CONTEXT.ON_QUEST_BOARD_INTERACT);
+        return foundEvent != null;
     }
 
     public bool OnDungeonDefeat(bool isLeader)
@@ -83,11 +86,20 @@ public class GameStoryManager : SingletonScriptableObject<GameStoryManager> // H
         if (isLeader)
         {
             var foundEvent = RunStoryEvent(STORY_CONTEXT.ON_DUNGEON_LEADER_DEFEAT);
-            Debug.Log(foundEvent);
             return foundEvent != null;
         } else
         {
             return RunStoryEvent(STORY_CONTEXT.ON_DUNGEON_PARTY_DEFEAT) != null;
         }
+    }
+
+    public void OnDungeonEnemiesCleared()
+    {
+        RunStoryEvent(STORY_CONTEXT.ON_DUNGEON_ENEMIES_CLEARED);
+    }
+
+    public void OnQuestComplete()
+    {
+        RunStoryEvent(STORY_CONTEXT.ON_QUEST_COMPLETE);
     }
 }

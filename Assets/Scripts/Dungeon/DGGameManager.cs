@@ -315,6 +315,13 @@ public class DGGameManager : MonoBehaviour
         currentTurn = 0;
     }
 
+    public void PlayerComplete()
+    {
+        _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.COMPLETED, this, GlobalGameManager.Instance.selectedDungeon);
+        isPressingInit = _inputManager.actions["Accept"].IsPressed();
+        StartCoroutine(WaitForInput());
+    }
+
     public void RefreshGame()
     {
         if (_currentFloor > GlobalGameManager.Instance.selectedDungeon.floorCount) // EVENT: DUNGEON COMPLETED
@@ -324,9 +331,7 @@ public class DGGameManager : MonoBehaviour
             bool eventHappening = GameStoryManager.Instance.OnDungeonComplete();
             if (!eventHappening)
             {
-                _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.COMPLETED, this, GlobalGameManager.Instance.selectedDungeon);
-                isPressingInit = _inputManager.actions["Accept"].IsPressed();
-                StartCoroutine(WaitForInput());
+                PlayerComplete();
             }
             return;
         }
@@ -334,6 +339,25 @@ public class DGGameManager : MonoBehaviour
         StartCoroutine(_dungeonUI.transitioner.FadeTransition(true, 1, 0.25f, _dungeonUI.transitioner.floorDispGrp, delegate
         {
             _dungeonGen.NewFloor();
+            if (GlobalGameManager.Instance.selectedDungeon.isAscending)
+            {
+                _dungeonUI.floorText.text = "Floor\n" + _currentFloor + "F";
+            }
+            else
+            {
+                _dungeonUI.floorText.text = "Floor\nB" + _currentFloor + "F";
+            }
+
+            StartCoroutine(ImplementQuest());
+        }));
+    }
+
+    public void ForceRefreshGame(DGSeed newSeed = null)
+    {
+        _dungeonUI.transitioner.ToggleQuestComp(false);
+        StartCoroutine(_dungeonUI.transitioner.FadeTransition(true, 1, 0.25f, _dungeonUI.transitioner.floorDispGrp, delegate
+        {
+            _dungeonGen.NewFloor(newSeed);
             if (GlobalGameManager.Instance.selectedDungeon.isAscending)
             {
                 _dungeonUI.floorText.text = "Floor\n" + _currentFloor + "F";
@@ -501,6 +525,8 @@ public class DGGameManager : MonoBehaviour
     {
         List<CharacterEntry> changedCharacters = new List<CharacterEntry>();
         Dictionary<CharacterEntry, int> levelChanges = new Dictionary<CharacterEntry, int>();
+
+        bool deathHappened = _deaths.Count > 0;
         foreach(var dead in _deaths)
         {
             OnCharacterDeath(dead.death);
@@ -548,6 +574,30 @@ public class DGGameManager : MonoBehaviour
                     }
                 }
             }
+        }
+        if (deathHappened)
+        {
+            StartCoroutine(WaitForLevelSequenceEnd());
+        }
+    }
+
+    private IEnumerator WaitForLevelSequenceEnd()
+    {
+        while (GlobalCanvasManager.Instance.LevelUpHandler.IsInProgress())
+            yield return new WaitForEndOfFrame();
+        bool allEnemiesDead = true;
+        foreach (var entity in _dungeonGen.ActiveEntities)
+        {
+            var cb = entity.GetComponent<CharacterBehaviour>();
+            if (cb.alliance == 1)
+            {
+                allEnemiesDead = false;
+                break;
+            }
+        }
+        if (allEnemiesDead)
+        {
+            GameStoryManager.Instance.OnDungeonEnemiesCleared();
         }
     }
 

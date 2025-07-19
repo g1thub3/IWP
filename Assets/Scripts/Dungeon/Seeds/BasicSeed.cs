@@ -3,6 +3,15 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.UI.Image;
 
+
+[System.Serializable]
+public class NPCGenData
+{
+    public CHARACTER_ENUM character;
+    public uint minLevel;
+    public uint maxLevel;
+}
+
 [CreateAssetMenu(fileName = "BasicSeed", menuName = "Dungeon Seeds/Basic Seed")]
 public class BasicSeed : DGSeed
 {

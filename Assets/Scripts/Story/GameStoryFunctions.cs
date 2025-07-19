@@ -14,7 +14,11 @@ public enum STORY_FUNCTION
     SET_TARGET_DUNGEON,
     DIALOGUE,
     DG_PARTY_LOSS,
-    DG_LEADER_LOSS
+    DG_LEADER_LOSS,
+    DG_END_DAY,
+    DG_NEW_FLOOR,
+    DG_PLAYER_WIN,
+    OPEN_DUNGEON
 }
 [CreateAssetMenu(fileName = "GameStoryFunctions", menuName = "Scriptable Objects/GameStoryFunctions")]
 public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> // Functions to handle the story
@@ -36,6 +40,10 @@ public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> 
         _storyFunctions.Add(STORY_FUNCTION.DIALOGUE, Dialogue);
         _storyFunctions.Add(STORY_FUNCTION.DG_PARTY_LOSS, DGPartyLoss);
         _storyFunctions.Add(STORY_FUNCTION.DG_LEADER_LOSS, DGLeaderLoss);
+        _storyFunctions.Add(STORY_FUNCTION.DG_END_DAY, DGEndDay);
+        _storyFunctions.Add(STORY_FUNCTION.DG_NEW_FLOOR, DGNewFloor);
+        _storyFunctions.Add(STORY_FUNCTION.DG_PLAYER_WIN, DGPlayerWin);
+        _storyFunctions.Add(STORY_FUNCTION.OPEN_DUNGEON, OpenDungeon);
     }
 
     private IEnumerator HandleCoroutine(StoryEvent passedEvent, StoryData data)
@@ -177,5 +185,51 @@ public class GameStoryFunctions : SingletonScriptableObject<GameStoryFunctions> 
             }
         }
         GameStoryManager.Instance.currentGameManager.PlayerLoss(true);
+    }
+
+    private void DGEndDay(StoryData story, KeyDataList keyDataList)
+    {
+        GlobalGameManager.Instance.DayOver = true;
+    }
+
+    private void DGNewFloor(StoryData story, KeyDataList keyDataList)
+    {
+        if (GameStoryManager.Instance.currentGameManager == null) return;
+        if (story.targetDungeon != null)
+        {
+            if (GlobalGameManager.Instance.selectedDungeon != story.targetDungeon)
+            {
+                return;
+            }
+        }
+        DGSeed seed = null;
+        var seedData = keyDataList.GetData("Seed");
+        if (seedData != null)
+            seed = seedData.Obj as DGSeed;
+        GameStoryManager.Instance.currentGameManager.ForceRefreshGame(seed);
+    }
+
+    private void DGPlayerWin(StoryData story, KeyDataList keyDataList)
+    {
+        // Possible yield check: When player finishes input
+        if (GameStoryManager.Instance.currentGameManager == null) return;
+        // If not in the indicated dungeon
+        if (story.targetDungeon != null)
+        {
+            if (GlobalGameManager.Instance.selectedDungeon != story.targetDungeon)
+            {
+                return;
+            }
+        }
+        GameStoryManager.Instance.currentGameManager.PlayerComplete();
+    }
+
+    private void OpenDungeon(StoryData story, KeyDataList keyDataList)
+    {
+        var chosen = keyDataList.GetData("Dungeon");
+        if (chosen == null || chosen.Obj == null || !(chosen.Obj is DGData)) return;
+        var data = chosen.Obj as DGData;
+        if (!GlobalGameManager.Instance.availableDungeons.Contains(data))
+            GlobalGameManager.Instance.availableDungeons.Add(data);
     }
 }

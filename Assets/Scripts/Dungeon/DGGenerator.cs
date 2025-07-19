@@ -212,17 +212,17 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         tile.item.transform.SetParent(tileObj, false);
         tile.item.transform.position = tile.CoordToPosition();
     }
-    private void PlacePlayer()
+    private void PlacePlayer(TileCoord point = null)
     {
         if (_currentFloor == null) return;
         FloorRoom room = GetRandomRoom();
-        _currentPlayer.Set(_currentFloor, room.GetRandomCoordInRoom());
+        _currentPlayer.Set(_currentFloor, point != null ? point : room.GetRandomCoordInRoom());
         _currentPlayer.Warp(_currentPlayer.Position);
     }
 
-    private void SpawnPlayer()
+    private void SpawnPlayer(TileCoord point = null)
     {
-        var newPlayer = AddCharacter(DG_CHARACTER_TYPE.PLAYER);
+        var newPlayer = AddCharacter(DG_CHARACTER_TYPE.PLAYER, point);
         _currentPlayer = newPlayer.GetComponent<DGPlayer>();
         _activeEntities.Add(_currentPlayer);
         _activeParty.Add(newPlayer.GetComponent<CharacterBehaviour>());
@@ -275,9 +275,9 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         _tempParty.Add(newCharacter);
     }
 
-    public GameObject SpawnNPC(DG_CHARACTER_TYPE charType, CharacterEntry characterData)
+    public GameObject SpawnNPC(DG_CHARACTER_TYPE charType, CharacterEntry characterData, TileCoord point = null)
     {
-        var newCharacter = AddCharacter(charType);
+        var newCharacter = AddCharacter(charType, point);
         _activeEntities.Add(newCharacter.GetComponent<DGEntity>());
         newCharacter.GetComponent<CharacterBehaviour>().SetUp(characterData);
         return newCharacter;
@@ -359,22 +359,36 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         }
     }
 
-    public void NewFloor()
+    public void NewFloor(DGSeed givenSeed = null)
     {
         ClearFloor();
-        _currentFloor = selectedDungeonData.floorSeed.Generate(selectedDungeonData);
+        DGSeed selectedSeed = null;
+        if (givenSeed)
+        {
+            selectedSeed = givenSeed;
+        } else
+        {
+            selectedSeed = selectedDungeonData.floorSeed;
+        }
+        _currentFloor = selectedSeed.Generate(selectedDungeonData);
         RenderCurrentFloor();
+        TileCoord point = null;
+        if (selectedSeed is StaticSeed)
+        {
+            var seed = selectedSeed as StaticSeed;
+            point = new TileCoord(seed.playerSpawnX, seed.playerSpawnY);
+        }
         if (_currentPlayer == null)
         {
-            SpawnPlayer();
+            SpawnPlayer(point);
             SpawnParty();
         } else
         {
-            PlacePlayer();
+            PlacePlayer(point);
             PlaceParty();
         }
-        selectedDungeonData.floorSeed.AddItems(this);
-        selectedDungeonData.floorSeed.AddEnemies(this);
+        selectedSeed.AddItems(this);
+        selectedSeed.AddEnemies(this);
         RenameEntities();
     }
 

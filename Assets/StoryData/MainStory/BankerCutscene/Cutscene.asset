@@ -1,0 +1,505 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e2563a6a7e9a84b90ef6af5686b68f, type: 3}
+  m_Name: Cutscene
+  m_EditorClassIdentifier: 
+  setups:
+  - key: FRGuildHall
+    setup:
+      CameraFocusPoint: {fileID: 0}
+      props: {fileID: 2610771741184258737, guid: 6692f6468e2de6347bfb9462aec8716a, type: 3}
+      toOmit:
+      - Damson
+      Controller: {fileID: 0}
+  - key: FRTown
+    setup:
+      CameraFocusPoint: {fileID: 0}
+      props: {fileID: 273039395008762774, guid: 6c35ea6c50f9535429a10fcbb3984406, type: 3}
+      toOmit:
+      - Banker
+      Controller: {fileID: 0}
+  instructions:
+  - name: (Y) SCENESETUP (FRGuildHall)
+    function: 0
+    Yield: 1
+    Data:
+      dataList:
+      - Key: SetupKey
+        Int: 0
+        Float: 0
+        String: FRGuildHall
+        Obj: {fileID: 0}
+  - name: (_) SET_CAMERA_FOCUS (Confine, DamsonStairs)
+    function: 6
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: DamsonStairs
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_MOVE (Cherry, CherryStairs, 1.5)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryStairs
+        Obj: {fileID: 0}
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 1.5
+        String: Cherry
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Damson, north)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (1)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: e4b77b24db5a6c543ad8043114068c52, type: 2}
+  - name: (_) ACTOR_FACE (Damson, south)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 2
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Damson, Exit, 3)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Exit
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 3
+        String: Exit
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_MOVE (Cherry, Exit, 3)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Exit
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 3
+        String: Exit
+        Obj: {fileID: 0}
+  - name: (Y) SCENESETUP (FRTown)
+    function: 0
+    Yield: 1
+    Data:
+      dataList:
+      - Key: SetupKey
+        Int: 0
+        Float: 0
+        String: FRTown
+        Obj: {fileID: 0}
+  - name: (Y) SET_CAMERA_FOCUS (Confine, Banker)
+    function: 6
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_FACE (Banker, east)
+    function: 2
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 1
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+  - name: (Y) WAIT (0.5)
+    function: 8
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Time
+        Int: 0
+        Float: 0.5
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_FACE (Banker, west)
+    function: 2
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 3
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+  - name: (Y) WAIT (0.5)
+    function: 8
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Time
+        Int: 0
+        Float: 0.5
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_FACE (Banker, east)
+    function: 2
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 1
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+  - name: (Y) WAIT (0.5)
+    function: 8
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Time
+        Int: 0
+        Float: 0.5
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_FACE (Banker, west)
+    function: 2
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 3
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+  - name: (Y) WAIT (0.5)
+    function: 8
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Time
+        Int: 0
+        Float: 0.5
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_FACE (Banker, south)
+    function: 2
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 2
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (2)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: 114216a288726ea468682288019eed98, type: 2}
+  - name: (_) ACTOR_MOVE (Cherry, Cherry, 3)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 3
+        String: Exit
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_MOVE (Damson, Damson, 3)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 3
+        String: Exit
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Damson, north)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Cherry, north)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (3)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: d45b3680cb9537c40a63e69c01e790aa, type: 2}
+  - name: (_) ACTOR_FACE (Cherry, east)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 1
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Damson, west)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 3
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (4)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: 960ea8cfdc7f4364c92610913c18a5ab, type: 2}
+  - name: (Y) SET_CAMERA_FOCUS (Confine, Warehouse)
+    function: 6
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Warehouse
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (5)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: 72654db151e303e48b53b89a7be37e7f, type: 2}
+  - name: (Y) SET_CAMERA_FOCUS (Confine, Merchant)
+    function: 6
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Merchant
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (6)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: 1f12f96f5186b2b4cb2e5f3036d3d23a, type: 2}
+  - name: (Y) SET_CAMERA_FOCUS (Confine, Armourer)
+    function: 6
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Armourer
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (7)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: 90bcaa76847d43f4c862619bec89b6cd, type: 2}
+  - name: (Y) SET_CAMERA_FOCUS (Confine, South)
+    function: 6
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: South
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (8)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: faff61fe865d0df4083e6057f0e9ea7d, type: 2}
+  - name: (Y) SET_CONTROLLER_POSITION (Cherry)
+    function: 5
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}

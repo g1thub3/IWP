@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e2563a6a7e9a84b90ef6af5686b68f, type: 3}
+  m_Name: Cutscene
+  m_EditorClassIdentifier: 
+  setups:
+  - key: FRGuildHall
+    setup:
+      CameraFocusPoint: {fileID: 0}
+      props: {fileID: 5883703939275817358, guid: c10c9caf3f40ee9488b80de1697ca0a9, type: 3}
+      toOmit:
+      - Damson
+      Controller: {fileID: 0}
+  instructions:
+  - name: (Y) SCENESETUP (FRGuildHall)
+    function: 0
+    Yield: 1
+    Data:
+      dataList:
+      - Key: SetupKey
+        Int: 0
+        Float: 0
+        String: FRGuildHall
+        Obj: {fileID: 0}
+  - name: (_) SET_CAMERA_FOCUS (Confine, DamsonStairs)
+    function: 6
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: DamsonStairs
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_MOVE (Cherry, CherryStairs, 1.5)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryStairs
+        Obj: {fileID: 0}
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 1.5
+        String: Cherry
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Damson, north)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (1)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: 477e8ae9678dc3f4c8beca4161c87e16, type: 2}
+  - name: (_) SET_CAMERA_FOCUS (Confine, QuestBoard)
+    function: 6
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: QuestBoard
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (2)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 0
+        String: 
+        Obj: {fileID: 11400000, guid: bbcc1047ad19c394d9fde4483b45de6a, type: 2}
+  - name: (Y) SET_CONTROLLER_POSITION (CherryStairs)
+    function: 5
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryStairs
+        Obj: {fileID: 0}

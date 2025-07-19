@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251267bee3f126446be4ae11b8b4d42e, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  storyName: Test
+  storyStates:
+  - Test
+  storyContexts:
+  - name: ON_STORY_START
+    context: 0
+    events:
+    - name: Test
+      stateTrigger: 0
+      functions:
+      - name: '(_) SET_TARGET_DUNGEON (Begonia Forest) '
+        Yield: 0
+        function: 5
+        data:
+          dataList:
+          - Key: Dungeon
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
+  - name: ON_DUNGEON_COMPLETE
+    context: 5
+    events:
+    - name: Test
+      stateTrigger: 0
+      functions:
+      - name: '(_) DG_NEW_FLOOR (CobwebCaveBoss) '
+        Yield: 0
+        function: 10
+        data:
+          dataList:
+          - Key: Seed
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 3b2d202d7888b32478c249e6baa712be, type: 2}
+  - name: ON_DUNGEON_ENEMIES_CLEARED
+    context: 9
+    events:
+    - name: Test
+      stateTrigger: 0
+      functions:
+      - name: '(_) DG_PLAYER_WIN  (Floor 4) '
+        Yield: 0
+        function: 11
+        data:
+          dataList:
+          - Key: Floor
+            Int: 4
+            Float: 0
+            String: 
+            Obj: {fileID: 0}

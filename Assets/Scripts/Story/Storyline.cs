@@ -77,6 +77,8 @@ public enum STORY_CONTEXT
     ON_QUEST_BOARD_INTERACT,
     ON_DUNGEON_LEADER_DEFEAT,
     ON_DUNGEON_PARTY_DEFEAT,
+    ON_DUNGEON_ENEMIES_CLEARED,
+    ON_QUEST_COMPLETE
 }
 
 [Serializable]
@@ -85,16 +87,19 @@ public class StoryContext
     [HideInInspector] public string name;
     public STORY_CONTEXT context;
     public List<StoryEvent> events;
-    public void Invoke(StoryData data)
+    public bool Invoke(StoryData data)
     {
+        bool found = false;
         foreach(var evt in events)
         {
             if (evt.stateTrigger == data.currentState)
             {
                 evt.Invoke(data);
+                found = true;
                 break;
             }
         }
+        return found;
     }
 }
 

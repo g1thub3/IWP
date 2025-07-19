@@ -88,13 +88,15 @@ public enum CUTSCENE_FUNCTION
     ACTOR_ANIMATE,
     SET_CONTROLLER_POSITION,
     SET_CAMERA_FOCUS,
-    DESTROY_PROP
+    DESTROY_PROP,
+    WAIT
 }
 
 public static class CutsceneFunctions
 {
     private static bool Yield;
     private static bool SceneSetupInProgress;
+    private static float WaitTime;
 
     public static void Instantiate()
     {
@@ -108,6 +110,7 @@ public static class CutsceneFunctions
         functions.Add(CUTSCENE_FUNCTION.SET_CONTROLLER_POSITION, SetControllerPosition);
         functions.Add(CUTSCENE_FUNCTION.SET_CAMERA_FOCUS, SetCameraFocus);
         functions.Add(CUTSCENE_FUNCTION.DESTROY_PROP, DestroyProp);
+        functions.Add(CUTSCENE_FUNCTION.WAIT, Wait);
     }
     public static Dictionary<CUTSCENE_FUNCTION, System.Action<Cutscene, KeyDataList>> functions;
     public static void Run(CutsceneInstruction instruction, Cutscene cutscene)
@@ -259,5 +262,34 @@ public static class CutsceneFunctions
             MonoBehaviour.Destroy(found.gameObject);
             return;
         }
+    }
+
+    private static IEnumerator WaitCoroutine()
+    {
+        while (WaitTime > 0)
+        {
+            WaitTime -= Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    public static void Wait(Cutscene cutscene, KeyDataList dataList)
+    {
+        float time = 1;
+        var timeData = dataList.GetData("Time");
+        if (timeData != null)
+        {
+            time = timeData.Float;
+        }
+
+        WaitTime = time;
+        if (Yield)
+        {
+            CutsceneManager.Instance.FunctionYieldCheck = delegate
+            {
+                return WaitTime > 0;
+            };
+        }
+        GlobalCanvasManager.Instance.StartCoroutine(WaitCoroutine());
     }
 }

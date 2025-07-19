@@ -18,8 +18,20 @@ MonoBehaviour:
     speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
     speakerName: 
     content:
-    - Insert controls dialogue here
-    - yuuuuuuup
+    - Try to reach the end of the dungeon by going through floors!
+    - Find the staircase to go down to the next floor.
+    - Use arrow keys to move around the dungeon. Do note that you can only move in
+      8 directions.
+    - As you traverse through the dungeon, enemies may attack you!
+    - Press X to open your menu. You can find some special moves there!
+    - Don't let you or your party members' health reach 0, or it's game over.
+    - The orange bar and purple bar under your health are your energy(EN) and mana(MN).
+      You'll need those to use moves.
+    - The tall yellow bar is your hunger. Eat something food to fill it up. Once
+      it reaches 0, your health will drain over time.
+    - If you're struggling to face a certain direction, you can hold Shift to anchor
+      your character in position while you change direction.
+    - Good luck!
     waitTime: 0.05
     textSpeed: 0.05
     isRight: 0

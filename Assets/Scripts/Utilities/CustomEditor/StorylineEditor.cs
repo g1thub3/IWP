@@ -95,6 +95,44 @@ public class StorylineEditor : Editor
         {
             return string.Empty;
         });
+        getInstructionData.Add(STORY_FUNCTION.DG_END_DAY, delegate (StoryFunction instruction)
+        {
+            return string.Empty;
+        });
+        getInstructionData.Add(STORY_FUNCTION.DG_NEW_FLOOR, delegate (StoryFunction instruction)
+        {
+            string newString = "(";
+            var data = instruction.data.GetData("Seed");
+            if (data != null)
+            {
+                newString += data.Obj.name;
+            }
+            else
+            {
+                newString += "Null";
+            }
+            newString += ")";
+            return newString;
+        });
+        getInstructionData.Add(STORY_FUNCTION.DG_PLAYER_WIN, delegate (StoryFunction instruction)
+        {
+            return string.Empty;
+        });
+        getInstructionData.Add(STORY_FUNCTION.OPEN_DUNGEON, delegate (StoryFunction instruction)
+        {
+            string newString = "(";
+            var dungeonData = instruction.data.GetData("Dungeon");
+            if (dungeonData != null)
+            {
+                newString += dungeonData.Obj.name;
+            }
+            else
+            {
+                newString += "Null";
+            }
+            newString += ")";
+            return newString;
+        });
     }
 
     private string GetConstants(StoryFunction instruction)

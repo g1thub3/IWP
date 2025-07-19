@@ -61,6 +61,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.47f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Utilities\CustomEditor\StaticSeedEditor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\FRMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets\Scripts\Dungeon\AI\AIAlly.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\BodySlamAttack.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGSeed.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\Seeds\StaticSeed.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Visuals\RuneCircle.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Item.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\CherryBeamAttack.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Visuals\DamageIndicator.cs" />
     <Compile Include="Assets\Scripts\Story\CutsceneActor.cs" />
     <Compile Include="Assets\Scripts\UI\DungeonUIHandler.cs" />
+    <Compile Include="Assets\Scripts\Utilities\CustomEditor\GameStoryManagerEditor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scripts\Utilities\SingletonScriptableObject.cs" />
     <Compile Include="Assets\Scripts\Utilities\IYieldable.cs" />

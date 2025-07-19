@@ -580,6 +580,7 @@ MonoBehaviour:
             m_StringArgument: FRDungeon
             m_BoolArgument: 0
           m_CallState: 2
+  alternateSequences: []
 --- !u!4 &152123239
 Transform:
   m_ObjectHideFlags: 0
@@ -30923,6 +30924,7 @@ MonoBehaviour:
             m_StringArgument: FROutside
             m_BoolArgument: 0
           m_CallState: 2
+  alternateSequences: []
 --- !u!4 &583446877
 Transform:
   m_ObjectHideFlags: 0
@@ -38511,6 +38513,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  alternateSequences: []
 --- !u!61 &1222346734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -86935,6 +86938,9 @@ MonoBehaviour:
     Spawn: {fileID: 1147854909}
   - Origin: FRDungeon
     Spawn: {fileID: 551813937}
+  OnSceneEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1460599708
 PrefabInstance:
   m_ObjectHideFlags: 0
