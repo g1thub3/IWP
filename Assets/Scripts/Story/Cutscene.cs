@@ -111,7 +111,7 @@ public class CutsceneSetup
             obj.SetActive(true);
             if (obj.GetComponent<FRController>() != null)
             {
-                CutsceneManager.Instance._currentCinemachine.Follow = obj.transform;
+                CutsceneManager.Instance.currentCinemachine.Follow = obj.transform;
             }
         }
     }

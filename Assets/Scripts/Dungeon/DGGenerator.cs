@@ -2,6 +2,7 @@ using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using Unity.Jobs;
 
 public struct SearchConditions {
     public static SearchConditions New(bool hasItem = false, bool isWall = false, bool hasEntity = false)
@@ -117,6 +118,12 @@ public class DGGenerator : MonoBehaviour, IDebuggable
             }
         }
         return foundTile;
+    }
+
+    public void FocusCameraOnPlayer()
+    {
+        _virtualCam.ForceCameraPosition(_currentFloor.tiles[_currentFloor.CoordToIndex(_currentPlayer.Position)].CoordToPosition(), Quaternion.identity);
+        _virtualCam.Follow = _currentPlayer.transform;
     }
 
     private void RenderCurrentFloor()
@@ -317,7 +324,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         _tempParty = new List<CharacterEntry>();
     }
 
-    private void ClearFloor()
+    public void ClearFloor()
     {
         _uiHandler.ClearTurnLog();
         for (int i = _tileContainer.childCount - 1; i >= 0; i--)

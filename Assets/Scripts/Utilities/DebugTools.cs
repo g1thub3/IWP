@@ -11,6 +11,7 @@ public class DebugTools : SingletonScriptableObject<DebugTools>
     public bool PromptDebugOn = false;
     public bool DungeonDebugOn = false;
     public bool EntityDebugOn = false;
+    public bool DungeonGameDebugOn = false;
     public DialogueSequence testDialogueSequence;
     public DGData placeholderDungeon;
     public GameObject debugMarker;

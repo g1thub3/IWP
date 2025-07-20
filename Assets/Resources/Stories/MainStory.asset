@@ -157,6 +157,34 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: ada111f77a0af074bb73a91aaf7742ea, type: 2}
+    - name: Fern Saved
+      stateTrigger: 7
+      functions:
+      - name: '(_) NEXT_STATE  (FRGuildHall) '
+        Yield: 0
+        function: 1
+        data:
+          dataList:
+          - Key: Scene
+            Int: 0
+            Float: 0
+            String: FRGuildHall
+            Obj: {fileID: 0}
+      - name: '(_) PLAY_CUTSCENE (Cutscene) (FRGuildHall) '
+        Yield: 0
+        function: 2
+        data:
+          dataList:
+          - Key: Scene
+            Int: 0
+            Float: 0
+            String: FRGuildHall
+            Obj: {fileID: 0}
+          - Key: Cutscene
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 94cead3092d849f4aa7ea11a5fb1cdc9, type: 2}
   - name: ON_DUNGEON_PRELOAD
     context: 3
     events:
@@ -228,11 +256,16 @@ MonoBehaviour:
     - name: Fern Trouble
       stateTrigger: 6
       functions:
-      - name: '(_) PLAY_CUTSCENE (Null) '
-        Yield: 0
+      - name: '(Y) PLAY_CUTSCENE (Cutscene) '
+        Yield: 1
         function: 2
         data:
-          dataList: []
+          dataList:
+          - Key: Cutscene
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 99650cd551f35b74284bdebea7424519, type: 2}
       - name: '(_) DG_NEW_FLOOR (CobwebCaveBoss) '
         Yield: 0
         function: 10
@@ -259,6 +292,19 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: c31768835664324498adecdc9bb0ad97, type: 2}
+    - name: Fern Trouble
+      stateTrigger: 6
+      functions:
+      - name: '(_) DIALOGUE (QuestBoardInteract) '
+        Yield: 0
+        function: 6
+        data:
+          dataList:
+          - Key: Dialogue
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 62f217db5e0fb6446b26a37e8887b293, type: 2}
   - name: ON_DUNGEON_LEADER_DEFEAT
     context: 7
     events:
@@ -338,8 +384,23 @@ MonoBehaviour:
         function: 4
         data:
           dataList: []
-      - name: '(_) PLAY_CUTSCENE (Null) '
-        Yield: 0
+      - name: '(Y) PLAY_CUTSCENE (Cutscene) '
+        Yield: 1
         function: 2
         data:
-          dataList: []
+          dataList:
+          - Key: Cutscene
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 27d74aa749974fb43a241f967a97f6f3, type: 2}
+      - name: '(_) DG_PLAYER_WIN  '
+        Yield: 0
+        function: 11
+        data:
+          dataList:
+          - Key: Cutscene
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 27d74aa749974fb43a241f967a97f6f3, type: 2}

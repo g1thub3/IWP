@@ -1,0 +1,347 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e2563a6a7e9a84b90ef6af5686b68f, type: 3}
+  m_Name: Cutscene
+  m_EditorClassIdentifier: 
+  setups:
+  - key: DungeonScene
+    setup:
+      CameraFocusPoint: {fileID: 0}
+      props: {fileID: 367626636560848605, guid: bb125905926ca7849a3cdd8e9d52e1a4, type: 3}
+      toOmit: []
+      Controller: {fileID: 0}
+  instructions:
+  - name: (Y) SCENESETUP (DungeonScene, Don't Refresh)
+    function: 0
+    Yield: 1
+    Data:
+      dataList:
+      - Key: SetupKey
+        Int: 0
+        Float: 0
+        String: DungeonScene
+        Obj: {fileID: 0}
+      - Key: NoRefresh
+        Int: 0
+        Float: 0
+        String: DungeonScene
+        Obj: {fileID: 0}
+  - name: (_) SET_CAMERA_FOCUS (Don't Confine, Focus)
+    function: 6
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Focus
+        Obj: {fileID: 0}
+      - Key: Confiner
+        Int: -1
+        Float: 0
+        String: Object
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (1)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 3
+        String: Fern
+        Obj: {fileID: 11400000, guid: ca73b54b1a7c4344197a79bb164b2039, type: 2}
+  - name: (_) ACTOR_MOVE (Fern, Fern, 3)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Fern
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 3
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_MOVE (Thief1, Thief1, 3)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Thief1
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Thief1
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 3
+        String: 
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (2)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 3
+        String: Fern
+        Obj: {fileID: 11400000, guid: b65750cca8993034fb719f5f6f1a50b8, type: 2}
+  - name: (_) ACTOR_FACE (Thief1, south)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Thief1
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 2
+        Float: 0
+        String: Thief1
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (3)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 3
+        String: Fern
+        Obj: {fileID: 11400000, guid: b2455379a1ebd21489d142cdcce06c37, type: 2}
+  - name: (_) ACTOR_MOVE (Damson, Damson, 4)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 4
+        String: Damson
+        Obj: {fileID: 0}
+  - name: (Y) ACTOR_MOVE (Cherry, Cherry, 4)
+    function: 3
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 4
+        String: Damson
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (4)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 3
+        String: Fern
+        Obj: {fileID: 11400000, guid: a137b4b0b615f1f47a3c859efc0850d4, type: 2}
+  - name: (_) ACTOR_MOVE (Thief2, Thief2, 4)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Thief2
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Thief2
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 4
+        String: Damson
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Thief3, Thief3, 4)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Thief3
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Thief3
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 4
+        String: Damson
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Thief4, Thief4, 4)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Thief4
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Thief4
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 4
+        String: Damson
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Thief5, Thief5, 4)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Thief5
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Thief5
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 4
+        String: Damson
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Thief6, Thief6, 4)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Thief6
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Thief6
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 4
+        String: Damson
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_MOVE (Thief7, Thief7, 4)
+    function: 3
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Thief7
+        Obj: {fileID: 0}
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: Thief7
+        Obj: {fileID: 0}
+      - Key: MoveSpeed
+        Int: 0
+        Float: 4
+        String: Damson
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Cherry, south)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Cherry
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 2
+        Float: 0
+        String: Thief1
+        Obj: {fileID: 0}
+  - name: (_) ACTOR_FACE (Damson, south)
+    function: 2
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Actor
+        Int: 0
+        Float: 0
+        String: Damson
+        Obj: {fileID: 0}
+      - Key: Direction
+        Int: 2
+        Float: 0
+        String: Thief1
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (5)
+    function: 1
+    Yield: 1
+    Data:
+      dataList:
+      - Key: DialogueSequence
+        Int: 0
+        Float: 3
+        String: Fern
+        Obj: {fileID: 11400000, guid: b49e4ab35c372e2458c77b141b18b967, type: 2}

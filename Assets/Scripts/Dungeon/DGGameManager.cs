@@ -15,7 +15,7 @@ public enum DUNGEON_END_CONTEXT
     PARTY_DEFEAT
 }
 
-public class DGGameManager : MonoBehaviour
+public class DGGameManager : MonoBehaviour, IDebuggable
 {
     public System.Action OnEscape;
     private DGGenerator _dungeonGen;
@@ -332,6 +332,9 @@ public class DGGameManager : MonoBehaviour
             if (!eventHappening)
             {
                 PlayerComplete();
+            } else
+            {
+                _dungeonGen.ClearFloor();
             }
             return;
         }
@@ -354,6 +357,7 @@ public class DGGameManager : MonoBehaviour
 
     public void ForceRefreshGame(DGSeed newSeed = null)
     {
+        _dungeonGen.FocusCameraOnPlayer();
         _dungeonUI.transitioner.ToggleQuestComp(false);
         StartCoroutine(_dungeonUI.transitioner.FadeTransition(true, 1, 0.25f, _dungeonUI.transitioner.floorDispGrp, delegate
         {
@@ -702,5 +706,19 @@ public class DGGameManager : MonoBehaviour
 
         GetActiveQuests();
         ToNextFloor();
+    }
+
+    public void DebugControls()
+    {
+        if (!DebugTools.Instance.DungeonGameDebugOn) return;
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            DINextFloor.Instance.Interact(_dungeonGen.ActiveParty[0].GetComponent<DGEntity>(), _dungeonGen.CurrentFloor.stairs, null);
+        }
+    }
+
+    private void Update()
+    {
+        DebugControls();
     }
 }

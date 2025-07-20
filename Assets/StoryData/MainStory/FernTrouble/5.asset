@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d196a0535c375e54bbd06bd3726e1d9a, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  sequence:
+  - name: Cave Thief
+    character: 3
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Cave Thief
+    content:
+    - You'll have to get through all of US!
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 0
+    canSkip: 1
+    autoNext: 0
+  - name: Cherry
+    character: 0
+    speakerSprite: {fileID: -2069185945796123168, guid: 337ce6c3564cc8a4fb044661efac34b3, type: 3}
+    speakerName: Cherry
+    content:
+    - Stand back, Fern! We'll take them on!
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0

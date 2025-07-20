@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d196a0535c375e54bbd06bd3726e1d9a, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  sequence:
+  - name: Fern
+    character: 23
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Fern
+    content:
+    - H-hey! Don't get any closer!
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 1
+    canSkip: 1
+    autoNext: 0
+  - name: Cave Thief
+    character: 3
+    speakerSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    speakerName: Cave Thief
+    content:
+    - I didn't want this to get violent, but you're leaving me no choice here.
+    waitTime: 0.05
+    textSpeed: 0.05
+    isRight: 1
+    isSpriteShowing: 0
+    canSkip: 1
+    autoNext: 0

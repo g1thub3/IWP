@@ -831,7 +831,7 @@ public class DungeonMenuHandler : LayeredUI
 
     private void Update()
     {
-        if (GlobalCanvasManager.Instance.PromptHandler.IsInProgress() || !_gameManager.IsGameActive) return;
+        if (GlobalCanvasManager.Instance.IsInteractionActive || !_gameManager.IsGameActive) return;
         if (!Process())
         {
             if (_inputManager.actions["Decline"].WasPressedThisFrame())

@@ -32,7 +32,7 @@ public class CutsceneManager : SingletonScriptableObject<CutsceneManager>, IYiel
     public YieldCheck FunctionYieldCheck;
     public CutsceneSetup CurrentSetup;
     private bool _isCutsceneRunning = false;
-    public CinemachineCamera _currentCinemachine;
+    [HideInInspector] public CinemachineCamera currentCinemachine;
 
     private IEnumerator CutsceneCoroutine(Cutscene cutscene)
     {
@@ -124,10 +124,13 @@ public static class CutsceneFunctions
         var key = dataList.GetData("SetupKey");
         CutsceneManager.Instance.CurrentSetup = cutscene.FindSetup(key.String);
         GameSceneManager.Instance.previousArea = SceneManager.GetActiveScene().name;
-        yield return SceneManager.LoadSceneAsync(key.String);
+        if (dataList.GetData("NoRefresh") == null)
+        {
+            yield return SceneManager.LoadSceneAsync(key.String);
+        }
         CutsceneManager.Instance.CurrentSetup.SetUp();
-        CutsceneManager.Instance._currentCinemachine = GameObject.FindFirstObjectByType<CinemachineCamera>();
-        CutsceneManager.Instance._currentCinemachine.Follow = CutsceneManager.Instance.CurrentSetup.CameraFocusPoint;
+        CutsceneManager.Instance.currentCinemachine = GameObject.FindFirstObjectByType<CinemachineCamera>();
+        CutsceneManager.Instance.currentCinemachine.Follow = CutsceneManager.Instance.CurrentSetup.CameraFocusPoint;
         SceneSetupInProgress = false;
     }
     public static void CleanScene()
@@ -136,7 +139,7 @@ public static class CutsceneFunctions
         CutsceneManager.Instance.CurrentSetup.UndoOmit();
         MonoBehaviour.Destroy(CutsceneManager.Instance.CurrentSetup.CutsceneObjects);
         CutsceneManager.Instance.CurrentSetup = null;
-        CutsceneManager.Instance._currentCinemachine.GetComponent<CinemachineConfiner2D>().enabled = true;
+        CutsceneManager.Instance.currentCinemachine.GetComponent<CinemachineConfiner2D>().enabled = true;
         if (SceneManager.GetActiveScene().name != "DungeonScene")
             GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = true;
     }
@@ -221,7 +224,7 @@ public static class CutsceneFunctions
         if (confiner != null)
         {
             bool confine = confiner.Int >= 0;
-            CutsceneManager.Instance._currentCinemachine.GetComponent<CinemachineConfiner2D>().enabled = confine;
+            CutsceneManager.Instance.currentCinemachine.GetComponent<CinemachineConfiner2D>().enabled = confine;
         }
         var point = dataList.GetData("Point");
         if (point != null)
@@ -229,7 +232,7 @@ public static class CutsceneFunctions
             var foundPoint = CutsceneManager.Instance.GetPoint(point.String);
             if (foundPoint != null)
             {
-                CutsceneManager.Instance._currentCinemachine.Follow = CutsceneManager.Instance.CurrentSetup.CameraFocusPoint;
+                CutsceneManager.Instance.currentCinemachine.Follow = CutsceneManager.Instance.CurrentSetup.CameraFocusPoint;
                 CutsceneManager.Instance.CurrentSetup.CameraFocusPoint.position = foundPoint.position;
                 return;
             }
@@ -240,7 +243,7 @@ public static class CutsceneFunctions
             var foundActor = CutsceneManager.Instance.GetActor(actor.String);
             if (foundActor != null)
             {
-                CutsceneManager.Instance._currentCinemachine.Follow = foundActor.transform;
+                CutsceneManager.Instance.currentCinemachine.Follow = foundActor.transform;
                 return;
             }
         }

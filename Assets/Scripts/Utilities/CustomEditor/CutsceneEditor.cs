@@ -22,7 +22,7 @@ public class CutsceneEditor : Editor
         {
             if (instruction.Data.GetData("SetupKey") != null)
             {
-                return "(" + instruction.Data.GetData("SetupKey").String + ")";
+                return string.Format("({0}, {1})", instruction.Data.GetData("SetupKey").String, instruction.Data.GetData("NoRefresh") == null ? "Refresh" : "Don't Refresh");
             }
             return "(Null)";
         });
