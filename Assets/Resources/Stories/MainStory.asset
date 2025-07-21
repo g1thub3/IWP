@@ -26,7 +26,20 @@ MonoBehaviour:
   storyContexts:
   - name: ON_STORY_START
     context: 0
-    events: []
+    events:
+    - name: Wake Up
+      stateTrigger: 0
+      functions:
+      - name: '(_) OPEN_DUNGEON (BegoniaForest) '
+        Yield: 0
+        function: 12
+        data:
+          dataList:
+          - Key: Dungeon
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
   - name: ON_SCENE_CHANGE
     context: 2
     events:
@@ -347,9 +360,32 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: 577270bd3d2919d41b9c51b6e3ee3ef6, type: 2}
-      - name: '(_) DG_LEADER_LOSS  '
+      - name: '(_) DG_PARTY_LOSS  '
         Yield: 0
-        function: 8
+        function: 7
+        data:
+          dataList:
+          - Key: Dialogue
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: ae374902f244b6c40875efd86576bec2, type: 2}
+    - name: Fern Trouble
+      stateTrigger: 6
+      functions:
+      - name: '(Y) DIALOGUE (PartyLoss) '
+        Yield: 1
+        function: 6
+        data:
+          dataList:
+          - Key: Dialogue
+            Int: 0
+            Float: 0
+            String: 
+            Obj: {fileID: 11400000, guid: 577270bd3d2919d41b9c51b6e3ee3ef6, type: 2}
+      - name: '(_) DG_PARTY_LOSS  '
+        Yield: 0
+        function: 7
         data:
           dataList:
           - Key: Dialogue
@@ -374,17 +410,27 @@ MonoBehaviour:
     - name: Fern Trouble
       stateTrigger: 6
       functions:
-      - name: '(_) NEXT_STATE  '
+      - name: '(_) NEXT_STATE  (Floor 7) '
         Yield: 0
         function: 1
         data:
-          dataList: []
-      - name: '(_) REMOVE_TARGET_DUNGEON  '
+          dataList:
+          - Key: Floor
+            Int: 7
+            Float: 0
+            String: 
+            Obj: {fileID: 0}
+      - name: '(_) REMOVE_TARGET_DUNGEON  (Floor 7) '
         Yield: 0
         function: 4
         data:
-          dataList: []
-      - name: '(Y) PLAY_CUTSCENE (Cutscene) '
+          dataList:
+          - Key: Floor
+            Int: 7
+            Float: 0
+            String: 
+            Obj: {fileID: 0}
+      - name: '(Y) PLAY_CUTSCENE (Cutscene) (Floor 7) '
         Yield: 1
         function: 2
         data:
@@ -394,13 +440,18 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: 27d74aa749974fb43a241f967a97f6f3, type: 2}
-      - name: '(_) DG_PLAYER_WIN  '
+          - Key: Floor
+            Int: 7
+            Float: 0
+            String: 
+            Obj: {fileID: 0}
+      - name: '(_) DG_PLAYER_WIN  (Floor 7) '
         Yield: 0
         function: 11
         data:
           dataList:
-          - Key: Cutscene
-            Int: 0
+          - Key: Floor
+            Int: 7
             Float: 0
             String: 
-            Obj: {fileID: 11400000, guid: 27d74aa749974fb43a241f967a97f6f3, type: 2}
+            Obj: {fileID: 0}

@@ -1,10 +1,6 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public enum ATTACK_TYPE
 {
@@ -327,7 +323,14 @@ public class CharacterBehaviour : MonoBehaviour
         StringBuilder description = new StringBuilder();
         description.AppendLine("Level: " + character.characterLevel);
         description.AppendLine("EXP: " + character.experiencePoints + " / " + character.ExpToNextLevel);
-        description.AppendLine("Held Item: " + character.HeldItem.ToString());
+        if (character.HeldItem == null)
+        {
+            description.AppendLine("Held Item: None");
+        }
+        else
+        {
+            description.AppendLine("Held Item: " + character.HeldItem.ToString());
+        }
         description.Append("\n");
         description.AppendLine("HP: " + health + " / " + character.maxHealth.CurrStat + " | Hunger: " + hunger + " / " + character.hungerSize.CurrStat);
         description.AppendLine("Energy: " + energy + " / " + character.maxEnergy.CurrStat + " | Mana: " + mana + " / " + character.maxMana.CurrStat);

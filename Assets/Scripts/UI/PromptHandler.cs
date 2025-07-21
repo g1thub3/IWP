@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public struct PromptInfo
 {
@@ -72,8 +73,15 @@ public class PromptHandler : MonoBehaviour, IDebuggable, IYieldable
                 if (story.targetDungeon == null) continue;
                 if (story.targetDungeon.dungeonName == options[i])
                 {
-                    newAsset.optiontext.color = Color.yellow;
+                    obj.transform.Find("StoryTarget").GetComponent<Image>().enabled = true;
                     break;
+                }
+            }
+            foreach (var quest in GlobalGameManager.Instance.ownedQuests)
+            {
+                if (quest.isActive && quest.quest.dungeon.dungeonName == options[i])
+                {
+                    obj.transform.Find("QuestTarget").GetComponent<Image>().enabled = true;
                 }
             }
             newAsset.bobber = obj.transform.Find("Selector").gameObject;

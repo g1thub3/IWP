@@ -372,7 +372,6 @@ public class DGPartyLayer : MenuLayer
         else
         {
             inc *= 2;
-            CurrentSelection += inc;
             if (CurrentSelection + inc > functions.Count - 1)
                 CurrentSelection %= 2;
             else if (CurrentSelection + inc < 0)

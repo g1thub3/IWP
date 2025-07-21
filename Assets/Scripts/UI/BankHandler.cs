@@ -32,7 +32,7 @@ public class BankHandler : MonoBehaviour
 
     private void SetGivenAmount(int amt)
     {
-        _givenAmount = amt;
+        _givenAmount = Mathf.Clamp(amt, 0, GlobalGameManager.maxGold);
         Highlight();
     }
 

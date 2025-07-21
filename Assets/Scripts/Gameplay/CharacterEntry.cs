@@ -101,7 +101,13 @@ public class CharacterEntry
     {
         StringBuilder description = new StringBuilder();
         description.AppendLine("Level: " + characterLevel + " | EXP: " + experiencePoints + " / " + ExpToNextLevel);
-        description.AppendLine("Held Item: " + HeldItem.ToString());
+        if (HeldItem == null)
+        {
+            description.AppendLine("Held Item: None");
+        } else
+        {
+            description.AppendLine("Held Item: " + HeldItem.ToString());
+        }
         description.Append("\n");
         description.AppendLine("HP: " + maxHealth.CurrStat + " | Hunger: " + hungerSize.CurrStat);
         description.AppendLine("Energy: " + maxEnergy.CurrStat + " | Mana: " + maxMana.CurrStat);

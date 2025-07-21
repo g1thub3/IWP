@@ -67,20 +67,21 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
     }
     
     public static int partyLimit = 4;
-    public List<CharacterEntry> party = new List<CharacterEntry>();
+    public List<CharacterEntry> party;
 
     public static int inventoryLimit = 20;
-    public List<Item> inventory = new List<Item>();
+    public List<Item> inventory;
 
     public int storageLimit = 100;
-    public List<Item> storage = new List<Item>();
+    public List<Item> storage;
 
     public static int shopLimit = 14;
-    public List<Item> merchantShop = new List<Item>();
-    public List<Item> armouryShop = new List<Item>();
+    public List<Item> merchantShop;
+    public List<Item> armouryShop;
 
     public void AddItem(Item newItem)
     {
+        if (inventory.Count >= inventoryLimit) return;
         inventory.Add(newItem);
     }
 
@@ -111,7 +112,7 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
         storage.RemoveAt(index);
     }
 
-    public List<DGData> availableDungeons = new List<DGData>();
+    public List<DGData> availableDungeons;
     public DGData selectedDungeon;
 
     public void UseItem(int itemIndex, CharacterBehaviour affected)
@@ -140,16 +141,66 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
     }
 
     public static int maxQuestCount = 8;
-    public List<Quest> ownedQuests = new List<Quest>();
-    public List<Quest> availableQuests = new List<Quest>();
-    public List<Quest> availableCompetitiveQuests = new List<Quest>();
+    public List<Quest> ownedQuests;
+    public List<Quest> availableQuests;
+    public List<Quest> availableCompetitiveQuests;
 
     public bool DayOver = false;
 
     public void CycleDay()
     {
-        availableQuests.Clear();
-        availableCompetitiveQuests.Clear();
+        if (availableQuests == null)
+            availableQuests = new List<Quest>();
+        else
+            availableQuests.Clear();
+
+        if (availableCompetitiveQuests == null)
+            availableCompetitiveQuests = new List<Quest>();
+        else
+            availableCompetitiveQuests.Clear();
+
+
+        if (merchantShop == null)
+            merchantShop = new List<Item>();
+        else
+            merchantShop.Clear();
+        if (armouryShop == null)
+            armouryShop = new List<Item>();
+        else
+            armouryShop.Clear();
+
+        for (int i = 0; i < 14; i++)
+        {
+            merchantShop.Add(Item.New(Tilesets.Instance.merchantItems[Random.Range(0, Tilesets.Instance.merchantItems.Count)]));
+            armouryShop.Add(Item.New(Tilesets.Instance.armouryItems[Random.Range(0, Tilesets.Instance.armouryItems.Count)]));
+        }
+        for (int i = 0; i < merchantShop.Count; i++)
+        {
+            for (int j = i; j < merchantShop.Count; j++)
+            {
+                if (merchantShop[j].module.ShopPrice < merchantShop[i].module.ShopPrice)
+                {
+                    var temp = merchantShop[j];
+                    merchantShop[j] = merchantShop[i];
+                    merchantShop[i] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < armouryShop.Count; i++)
+        {
+            for (int j = i; j < armouryShop.Count; j++)
+            {
+                if (armouryShop[j].module.ShopPrice < armouryShop[i].module.ShopPrice)
+                {
+                    var temp = armouryShop[j];
+                    armouryShop[j] = armouryShop[i];
+                    armouryShop[i] = temp;
+                }
+            }
+        }
+
+        if (availableDungeons.Count < 1)
+            return;
         int max = (int)QUEST_TYPE.NUM_QUEST_TYPES;
         for (int i = 0; i < maxQuestCount; i++)
         {
@@ -187,43 +238,55 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
                 }
             }
         }
+    }
 
-        merchantShop.Clear();
-        armouryShop.Clear();
-        for (int i = 0; i < 14; i++)
-        {
-            merchantShop.Add(Item.New(Tilesets.Instance.merchantItems[Random.Range(0, Tilesets.Instance.merchantItems.Count)]));
-            armouryShop.Add(Item.New(Tilesets.Instance.armouryItems[Random.Range(0, Tilesets.Instance.armouryItems.Count)]));
-        }
-        for (int i = 0; i < merchantShop.Count; i++)
-        {
-            for (int j = i; j < merchantShop.Count; j++)
-            {
-                if (merchantShop[j].module.ShopPrice < merchantShop[i].module.ShopPrice)
-                {
-                    var temp = merchantShop[j];
-                    merchantShop[j] = merchantShop[i];
-                    merchantShop[i] = temp;
-                }
-            }
-        }
-        for (int i = 0; i < armouryShop.Count; i++)
-        {
-            for (int j = i; j < armouryShop.Count; j++)
-            {
-                if (armouryShop[j].module.ShopPrice < armouryShop[i].module.ShopPrice)
-                {
-                    var temp = armouryShop[j];
-                    armouryShop[j] = armouryShop[i];
-                    armouryShop[i] = temp;
-                }
-            }
-        }
+    private void Default()
+    {
+        var cherry = CharacterEntry.Create(CHARACTER_ENUM.CHERRY, 5);
+        var damson = CharacterEntry.Create(CHARACTER_ENUM.DAMSON, 5);
+        party.Add(cherry);
+        party.Add(damson);
+
+        AddItem(Item.New("Health Potion"));
+        AddItem(Item.New("Health Potion"));
+        AddItem(Item.New("Health Potion"));
+
+        ownedGold = 200;
+        bankGold = 500;
+        adventurerRanking = 1;
+        adventurerEXP = 0;
     }
 
     private void OnEnable()
     {
+        if (ownedQuests == null)
+            ownedQuests = new List<Quest>();
+        else
+            ownedQuests.Clear();
+        selectedDungeon = null;
+
+        if (availableDungeons == null)
+            availableDungeons = new List<DGData>();
+        else
+            availableDungeons.Clear();
+
+        if (storage == null)
+            storage = new List<Item>();
+        else
+            storage.Clear();
+
+        if (inventory == null)
+            inventory = new List<Item>();
+        else
+            inventory.Clear();
+
+        if (party == null)
+            party = new List<CharacterEntry>();
+        else
+            party.Clear();
+
+        Default();
+
         CycleDay();
-        ownedQuests.Clear();
     }
 }

@@ -35,6 +35,7 @@ public class Item
 
     public override string ToString()
     {
+        Debug.Log(module);
         if (module != null)
         {
             return module.itemName;
