@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEngine.Rendering.STP;
 
 
 
@@ -234,6 +232,10 @@ public static class CutsceneFunctions
             {
                 CutsceneManager.Instance.currentCinemachine.Follow = CutsceneManager.Instance.CurrentSetup.CameraFocusPoint;
                 CutsceneManager.Instance.CurrentSetup.CameraFocusPoint.position = foundPoint.position;
+                if (dataList.GetData("Force") != null)
+                {
+                    CutsceneManager.Instance.currentCinemachine.ForceCameraPosition(CutsceneManager.Instance.currentCinemachine.Follow.position, Quaternion.identity);
+                }
                 return;
             }
         }
@@ -244,6 +246,10 @@ public static class CutsceneFunctions
             if (foundActor != null)
             {
                 CutsceneManager.Instance.currentCinemachine.Follow = foundActor.transform;
+                if (dataList.GetData("Force") != null)
+                {
+                    CutsceneManager.Instance.currentCinemachine.ForceCameraPosition(CutsceneManager.Instance.currentCinemachine.Follow.position, Quaternion.identity);
+                }
                 return;
             }
         }

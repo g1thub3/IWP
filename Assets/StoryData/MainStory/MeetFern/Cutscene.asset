@@ -21,7 +21,7 @@ MonoBehaviour:
       - Damson
       Controller: {fileID: 0}
   instructions:
-  - name: (Y) SCENESETUP (FRGuildHall)
+  - name: (Y) SCENESETUP (FRGuildHall, Refresh)
     function: 0
     Yield: 1
     Data:
@@ -31,12 +31,17 @@ MonoBehaviour:
         Float: 0
         String: FRGuildHall
         Obj: {fileID: 0}
-  - name: (Y) SET_CAMERA_FOCUS (DamsonStairs)
+  - name: (Y) SET_CAMERA_FOCUS (DamsonStairs, Force, Confine)
     function: 6
     Yield: 1
     Data:
       dataList:
       - Key: Point
+        Int: 0
+        Float: 0
+        String: DamsonStairs
+        Obj: {fileID: 0}
+      - Key: Force
         Int: 0
         Float: 0
         String: DamsonStairs
@@ -261,7 +266,7 @@ MonoBehaviour:
         Float: 2
         String: CherryMove1
         Obj: {fileID: 0}
-  - name: (_) SET_CAMERA_FOCUS (Cherry)
+  - name: (_) SET_CAMERA_FOCUS (Cherry, Don't Force, Confine)
     function: 6
     Yield: 0
     Data:
@@ -491,7 +496,7 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 0}
-  - name: (_) SET_CAMERA_FOCUS (CherryMove3)
+  - name: (_) SET_CAMERA_FOCUS (CherryMove3, Don't Force, Confine)
     function: 6
     Yield: 0
     Data:

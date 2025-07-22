@@ -28,7 +28,7 @@ MonoBehaviour:
       - Banker
       Controller: {fileID: 0}
   instructions:
-  - name: (Y) SCENESETUP (FRGuildHall)
+  - name: (Y) SCENESETUP (FRGuildHall, Refresh)
     function: 0
     Yield: 1
     Data:
@@ -38,7 +38,7 @@ MonoBehaviour:
         Float: 0
         String: FRGuildHall
         Obj: {fileID: 0}
-  - name: (_) SET_CAMERA_FOCUS (Confine, DamsonStairs)
+  - name: (_) SET_CAMERA_FOCUS (DamsonStairs, Don't Force, Confine)
     function: 6
     Yield: 0
     Data:
@@ -148,7 +148,7 @@ MonoBehaviour:
         Float: 3
         String: Exit
         Obj: {fileID: 0}
-  - name: (Y) SCENESETUP (FRTown)
+  - name: (Y) SCENESETUP (FRTown, Refresh)
     function: 0
     Yield: 1
     Data:
@@ -158,12 +158,17 @@ MonoBehaviour:
         Float: 0
         String: FRTown
         Obj: {fileID: 0}
-  - name: (Y) SET_CAMERA_FOCUS (Confine, Banker)
+  - name: (Y) SET_CAMERA_FOCUS (Banker, Force, Confine)
     function: 6
     Yield: 1
     Data:
       dataList:
       - Key: Point
+        Int: 0
+        Float: 0
+        String: Banker
+        Obj: {fileID: 0}
+      - Key: Force
         Int: 0
         Float: 0
         String: Banker
@@ -413,7 +418,7 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 11400000, guid: 960ea8cfdc7f4364c92610913c18a5ab, type: 2}
-  - name: (Y) SET_CAMERA_FOCUS (Confine, Warehouse)
+  - name: (Y) SET_CAMERA_FOCUS (Warehouse, Don't Force, Confine)
     function: 6
     Yield: 1
     Data:
@@ -433,7 +438,7 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 11400000, guid: 72654db151e303e48b53b89a7be37e7f, type: 2}
-  - name: (Y) SET_CAMERA_FOCUS (Confine, Merchant)
+  - name: (Y) SET_CAMERA_FOCUS (Merchant, Don't Force, Confine)
     function: 6
     Yield: 1
     Data:
@@ -453,7 +458,7 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 11400000, guid: 1f12f96f5186b2b4cb2e5f3036d3d23a, type: 2}
-  - name: (Y) SET_CAMERA_FOCUS (Confine, Armourer)
+  - name: (Y) SET_CAMERA_FOCUS (Armourer, Don't Force, Confine)
     function: 6
     Yield: 1
     Data:
@@ -473,7 +478,7 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 11400000, guid: 90bcaa76847d43f4c862619bec89b6cd, type: 2}
-  - name: (Y) SET_CAMERA_FOCUS (Confine, South)
+  - name: (Y) SET_CAMERA_FOCUS (South, Don't Force, Confine)
     function: 6
     Yield: 1
     Data:

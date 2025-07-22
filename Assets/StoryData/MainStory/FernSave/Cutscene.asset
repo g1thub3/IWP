@@ -35,7 +35,7 @@ MonoBehaviour:
         Float: 0
         String: DungeonScene
         Obj: {fileID: 0}
-  - name: (_) SET_CAMERA_FOCUS (Don't Confine, Focus)
+  - name: (_) SET_CAMERA_FOCUS (Focus, Force, Don't Confine)
     function: 6
     Yield: 0
     Data:
@@ -46,6 +46,11 @@ MonoBehaviour:
         String: Focus
         Obj: {fileID: 0}
       - Key: Confiner
+        Int: -1
+        Float: 0
+        String: Object
+        Obj: {fileID: 0}
+      - Key: Force
         Int: -1
         Float: 0
         String: Object

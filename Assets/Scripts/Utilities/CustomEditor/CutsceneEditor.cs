@@ -130,15 +130,21 @@ public class CutsceneEditor : Editor
                     confine = "Don't Confine";
                 }
             }
+            string force = "Force";
+            var forceData = instruction.Data.GetData("Force");
+            if (forceData == null)
+            {
+                force = "Don't Force";
+            }
             var pt = instruction.Data.GetData("Point");
             if (instruction.Data.GetData("Point") != null)
             {
-                return "(" + confine + ", " + pt.String + ")";
+                return string.Format("({0}, {1}, {2})", pt.String, force, confine);
             }
             var actor = instruction.Data.GetData("Actor");
             if (instruction.Data.GetData("Actor") != null)
             {
-                return "(" + confine + ", " + actor.String + ")";
+                return string.Format("({0}, {1}, {2})", actor.String, force, confine);
             }
             return "(Null)";
         });

@@ -32,7 +32,7 @@ MonoBehaviour:
       toOmit: []
       Controller: {fileID: 0}
   instructions:
-  - name: (Y) SCENESETUP (DungeonScene)
+  - name: (Y) SCENESETUP (DungeonScene, Refresh)
     function: 0
     Yield: 1
     Data:
@@ -42,7 +42,7 @@ MonoBehaviour:
         Float: 0
         String: DungeonScene
         Obj: {fileID: 0}
-  - name: (_) SET_CAMERA_FOCUS (Object)
+  - name: (_) SET_CAMERA_FOCUS (Object, Force, Don't Confine)
     function: 6
     Yield: 0
     Data:
@@ -56,6 +56,11 @@ MonoBehaviour:
         Int: -1
         Float: 0
         String: Object
+        Obj: {fileID: 0}
+      - Key: Force
+        Int: 0
+        Float: 0
+        String: 
         Obj: {fileID: 0}
   - name: (Y) DIALOGUE (1)
     function: 1
@@ -302,7 +307,7 @@ MonoBehaviour:
         Float: 3
         String: Fern
         Obj: {fileID: 0}
-  - name: (Y) SCENESETUP (FROutside)
+  - name: (Y) SCENESETUP (FROutside, Refresh)
     function: 0
     Yield: 1
     Data:
@@ -312,7 +317,7 @@ MonoBehaviour:
         Float: 0
         String: FROutside
         Obj: {fileID: 0}
-  - name: (_) SET_CAMERA_FOCUS (Focus)
+  - name: (_) SET_CAMERA_FOCUS (Focus, Force, Don't Confine)
     function: 6
     Yield: 0
     Data:
@@ -326,6 +331,11 @@ MonoBehaviour:
         Int: -1
         Float: 0
         String: Focus
+        Obj: {fileID: 0}
+      - Key: Force
+        Int: 0
+        Float: 0
+        String: 
         Obj: {fileID: 0}
   - name: (Y) DIALOGUE (4)
     function: 1
@@ -537,7 +547,7 @@ MonoBehaviour:
         Float: 2
         String: DamsonMove1
         Obj: {fileID: 0}
-  - name: (Y) SCENESETUP (FRDorm)
+  - name: (Y) SCENESETUP (FRDorm, Refresh)
     function: 0
     Yield: 1
     Data:
