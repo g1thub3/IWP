@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Story\Cutscene.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGPlayer.cs" />
     <Compile Include="Assets\Scripts\Story\CutsceneManager.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\JabAttack.cs" />
     <Compile Include="Assets\Scripts\Dungeon\AI\AIAlly.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\BodySlamAttack.cs" />
@@ -95,7 +96,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-    <Compile Include="Assets\Scripts\Utilities\VFXManager.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGItemContainer.cs" />
     <Compile Include="Assets\Scripts\Utilities\CustomEditor\DGEntityEditor.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Visuals\DamageIndicator.cs" />
@@ -140,6 +140,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\DefaultAttack.cs" />
     <Compile Include="Assets\Scripts\Gameplay\QuestCompetitor.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\VFXManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Quest.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\StatChanger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
@@ -173,7 +174,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\Utilities\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Dungeon\AI\AIEnemy.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\MagicOrbAttack.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />

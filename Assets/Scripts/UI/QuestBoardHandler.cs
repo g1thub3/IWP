@@ -40,6 +40,7 @@ public class QuestBoardHandler : MonoBehaviour
     }
     private void Select(int inc, RectTransform newSelector = null)
     {
+        AudioManager.Instance.PlaySFXInScreen("Select");
         Highlight();
         inc = Mathf.Clamp(inc, -1, 1);
         _currSelected += inc;
@@ -112,6 +113,7 @@ public class QuestBoardHandler : MonoBehaviour
         {
             if (GlobalGameManager.Instance.ownedQuests.Count < GlobalGameManager.maxQuestCount)
             {
+                AudioManager.Instance.PlaySFXInScreen("Inventory");
                 GlobalGameManager.Instance.ownedQuests.Add(quest);
                 LoadEntriesOfPage();
                 Select(0);
@@ -150,6 +152,7 @@ public class QuestBoardHandler : MonoBehaviour
         if (_inputManager.actions["Decline"].WasPressedThisFrame())
         {
             _questBoardGrp.alpha = 0;
+            AudioManager.Instance.PlaySFXInScreen("Close");
             GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = true;
         }
         if (_inputManager.actions["Accept"].WasPressedThisFrame())

@@ -12,6 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d62d4ee006cc547a2e6b825d291870, type: 3}
   m_Name: AudioManager
   m_EditorClassIdentifier: 
+  _bgmList:
+  - name: MainMenu
+    clip: {fileID: 8300000, guid: 821543a8a7bd21c43b20ea032cde0d63, type: 3}
+    volume: 0.5
+  - name: Dorm
+    clip: {fileID: 8300000, guid: b34e4025ad8543942b75c6d44fa7f3dc, type: 3}
+    volume: 0.5
+  - name: Guild
+    clip: {fileID: 8300000, guid: e38c0f1462fa991419f04c617db9daa6, type: 3}
+    volume: 0.5
+  - name: Town
+    clip: {fileID: 8300000, guid: 033de588dc6e74c44a44c19890b09ebd, type: 3}
+    volume: 0.5
+  - name: BegoniaForest
+    clip: {fileID: 8300000, guid: a17ff20901c5cc545a21c328690b651e, type: 3}
+    volume: 0.5
+  - name: CobwebCave
+    clip: {fileID: 8300000, guid: 1bfffc797b506ec4cbc103da6c3a5d84, type: 3}
+    volume: 0.5
+  - name: Prelude
+    clip: {fileID: 8300000, guid: f32928b64a1954a4b8d3e27ad1c9aa9e, type: 3}
+    volume: 0.5
+  - name: BossBattle
+    clip: {fileID: 8300000, guid: c62a34a0bdb9771468fe707bb71bbecf, type: 3}
+    volume: 0.5
   _sfxList:
   - name: TextSFX
     clip: {fileID: 8300000, guid: ee75c1666cf03c54285fe0f755321c00, type: 3}
@@ -24,4 +49,67 @@ MonoBehaviour:
     volume: 0.5
   - name: Confirm
     clip: {fileID: 8300000, guid: cef707017b165e647aec656446c8bb86, type: 3}
+    volume: 0.5
+  - name: Close
+    clip: {fileID: 8300000, guid: aa086b948b9c5da469c4adf5bb10a257, type: 3}
+    volume: 0.5
+  - name: Coins
+    clip: {fileID: 8300000, guid: c80ecbbbafe1fe24fab16f170f280364, type: 3}
+    volume: 0.5
+  - name: Inventory
+    clip: {fileID: 8300000, guid: 7fb734426470a44458052f3471bd1bfd, type: 3}
+    volume: 0.5
+  - name: Gulp
+    clip: {fileID: 8300000, guid: b1c6c17a8e812894bab758e1e5798f2b, type: 3}
+    volume: 0.5
+  - name: Damage
+    clip: {fileID: 8300000, guid: c17e52a0427d4f34b92f0e5fae7fdf43, type: 3}
+    volume: 0.5
+  - name: BodySlam
+    clip: {fileID: 8300000, guid: fbc3de28b1547544b9279ef313d18e49, type: 3}
+    volume: 0.5
+  - name: Laser
+    clip: {fileID: 8300000, guid: a4bbd53bd8a2ae640ac408035dfa937c, type: 3}
+    volume: 0.5
+  - name: Charge1
+    clip: {fileID: 8300000, guid: 740c2d8d761b97e4496ef5cb2749a508, type: 3}
+    volume: 0.5
+  - name: Charge2
+    clip: {fileID: 8300000, guid: be1f067c6def5b944b4d6818f09af905, type: 3}
+    volume: 0.5
+  - name: Spear
+    clip: {fileID: 8300000, guid: e4e606d7d28ce984da6ad169adea8288, type: 3}
+    volume: 0.5
+  - name: MagicOrb
+    clip: {fileID: 8300000, guid: e427da58fca82bd4ca6d0208eaafeaef, type: 3}
+    volume: 0.5
+  - name: Singe
+    clip: {fileID: 8300000, guid: d35aff9be884fbc4db784bbbe5e0bc7f, type: 3}
+    volume: 0.5
+  - name: Slash
+    clip: {fileID: 8300000, guid: 48b1f7dba1d7f7d40ab1fca2c1c6b945, type: 3}
+    volume: 0.5
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 035ad89f3e5ab7d4dae7d607b779c0fb, type: 3}
+    volume: 0.5
+  - name: Stairs
+    clip: {fileID: 8300000, guid: 9216db1248adee643abd79d9054b73ad, type: 3}
+    volume: 0.5
+  - name: CharacterDefeat
+    clip: {fileID: 8300000, guid: 8f34f4ecce055924fa2313baae01098a, type: 3}
+    volume: 0.5
+  - name: Win
+    clip: {fileID: 8300000, guid: 7115b9f07bd364a419232749c468891a, type: 3}
+    volume: 0.5
+  - name: Lose
+    clip: {fileID: 8300000, guid: f00a695a83bc1a244a35e6146933cef7, type: 3}
+    volume: 0.5
+  - name: XP
+    clip: {fileID: 8300000, guid: f575f971bf91c374cbeffc5abde9197e, type: 3}
+    volume: 0.5
+  - name: RankUp
+    clip: {fileID: 8300000, guid: 154166e91373c2744a83669613ed8a4c, type: 3}
+    volume: 0.5
+  - name: LevelUp
+    clip: {fileID: 8300000, guid: 487feb0e3b3c6d3478497169e292d96d, type: 3}
     volume: 0.5

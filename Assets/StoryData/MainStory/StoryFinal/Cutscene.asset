@@ -21,7 +21,7 @@ MonoBehaviour:
       - Damson
       Controller: {fileID: 0}
   instructions:
-  - name: (Y) SCENESETUP (FRGuildHall)
+  - name: (Y) SCENESETUP (FRGuildHall, Refresh)
     function: 0
     Yield: 1
     Data:
@@ -31,7 +31,17 @@ MonoBehaviour:
         Float: 0
         String: FRGuildHall
         Obj: {fileID: 0}
-  - name: (_) SET_CAMERA_FOCUS (Confine, DamsonStairs)
+  - name: (_) BGM (Guild)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: Guild
+        Obj: {fileID: 0}
+  - name: (_) SET_CAMERA_FOCUS (DamsonStairs, Don't Force, Confine)
     function: 6
     Yield: 0
     Data:
@@ -86,7 +96,7 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 11400000, guid: 0b622a0fd99773e4a8c7f885550d4399, type: 2}
-  - name: (_) SET_CAMERA_FOCUS (Confine, QuestBoard)
+  - name: (_) SET_CAMERA_FOCUS (QuestBoard, Don't Force, Confine)
     function: 6
     Yield: 0
     Data:

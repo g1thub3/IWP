@@ -277,6 +277,8 @@ public class LevelUpHandler : MonoBehaviour, IYieldable
         float perc = (float)data["OldEXP"] / GlobalGameManager.Instance.GetExpToNextRank(data["OldRank"]);
         _barAmt.sizeDelta = new Vector2(_barAmt.sizeDelta.x, 1500.0f * perc);
 
+        AudioManager.Instance.PlaySFXInScreen("RankUp");
+
         StartCoroutine(RankUpCoroutine(data));
     }
 

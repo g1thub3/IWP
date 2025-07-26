@@ -35,6 +35,16 @@ MonoBehaviour:
         Float: 0
         String: DungeonScene
         Obj: {fileID: 0}
+  - name: (_) BGM (Guild)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: Guild
+        Obj: {fileID: 0}
   - name: (_) SET_CAMERA_FOCUS (Focus, Force, Don't Confine)
     function: 6
     Yield: 0

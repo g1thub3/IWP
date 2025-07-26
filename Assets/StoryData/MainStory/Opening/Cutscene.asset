@@ -20,7 +20,8 @@ MonoBehaviour:
       toOmit: []
       Controller: {fileID: 0}
   instructions:
-  - function: 0
+  - name: (Y) SCENESETUP (FRDorm, Refresh)
+    function: 0
     Yield: 1
     Data:
       dataList:
@@ -29,7 +30,18 @@ MonoBehaviour:
         Float: 0
         String: FRDorm
         Obj: {fileID: 0}
-  - function: 1
+  - name: (_) BGM (Dorm)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: Dorm
+        Obj: {fileID: 0}
+  - name: (Y) DIALOGUE (1)
+    function: 1
     Yield: 1
     Data:
       dataList:
@@ -38,7 +50,8 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 11400000, guid: b188a99716c2cff4baada3cdd9171ed9, type: 2}
-  - function: 2
+  - name: (Y) ACTOR_FACE (Cherry, south)
+    function: 2
     Yield: 1
     Data:
       dataList:
@@ -52,7 +65,8 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 0}
-  - function: 3
+  - name: (Y) ACTOR_MOVE (Cherry, Centre, 1)
+    function: 3
     Yield: 1
     Data:
       dataList:
@@ -71,7 +85,8 @@ MonoBehaviour:
         Float: 1
         String: Centre
         Obj: {fileID: 0}
-  - function: 4
+  - name: (Y) ACTOR_ANIMATE (Cherry, cast)
+    function: 4
     Yield: 1
     Data:
       dataList:
@@ -85,7 +100,8 @@ MonoBehaviour:
         Float: 0
         String: cast
         Obj: {fileID: 0}
-  - function: 1
+  - name: (Y) DIALOGUE (2)
+    function: 1
     Yield: 1
     Data:
       dataList:
@@ -94,7 +110,8 @@ MonoBehaviour:
         Float: 0
         String: Cherry
         Obj: {fileID: 11400000, guid: 60c9fe1be708e1149a98a8710ab546d3, type: 2}
-  - function: 5
+  - name: (Y) SET_CONTROLLER_POSITION (Centre)
+    function: 5
     Yield: 1
     Data:
       dataList:

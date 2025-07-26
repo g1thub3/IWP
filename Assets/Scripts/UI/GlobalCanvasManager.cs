@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>
 {
+    public AudioSource SFXSource, BGMSource;
     public PlayerInput GlobalInput
     {
         get { return GetComponent<PlayerInput>(); }

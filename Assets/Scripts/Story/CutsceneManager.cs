@@ -87,7 +87,9 @@ public enum CUTSCENE_FUNCTION
     SET_CONTROLLER_POSITION,
     SET_CAMERA_FOCUS,
     DESTROY_PROP,
-    WAIT
+    WAIT,
+    SFX,
+    BGM
 }
 
 public static class CutsceneFunctions
@@ -109,6 +111,8 @@ public static class CutsceneFunctions
         functions.Add(CUTSCENE_FUNCTION.SET_CAMERA_FOCUS, SetCameraFocus);
         functions.Add(CUTSCENE_FUNCTION.DESTROY_PROP, DestroyProp);
         functions.Add(CUTSCENE_FUNCTION.WAIT, Wait);
+        functions.Add(CUTSCENE_FUNCTION.SFX, SFX);
+        functions.Add(CUTSCENE_FUNCTION.BGM, BGM);
     }
     public static Dictionary<CUTSCENE_FUNCTION, System.Action<Cutscene, KeyDataList>> functions;
     public static void Run(CutsceneInstruction instruction, Cutscene cutscene)
@@ -300,5 +304,23 @@ public static class CutsceneFunctions
             };
         }
         GlobalCanvasManager.Instance.StartCoroutine(WaitCoroutine());
+    }
+
+    public static void SFX(Cutscene cutscene, KeyDataList dataList)
+    {
+        var data = dataList.GetData("SFX");
+        if (data != null)
+        {
+            AudioManager.Instance.PlaySFXInScreen(data.String);
+        }
+    }
+
+    public static void BGM(Cutscene cutscene, KeyDataList dataList)
+    {
+        var data = dataList.GetData("BGM");
+        if (data != null)
+        {
+            AudioManager.Instance.PlayBGM(data.String);
+        }
     }
 }

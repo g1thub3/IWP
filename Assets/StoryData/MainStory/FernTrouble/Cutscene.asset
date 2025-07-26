@@ -35,6 +35,16 @@ MonoBehaviour:
         Float: 0
         String: DungeonScene
         Obj: {fileID: 0}
+  - name: (_) BGM (Prelude)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: Prelude
+        Obj: {fileID: 0}
   - name: (_) SET_CAMERA_FOCUS (Focus, Force, Don't Confine)
     function: 6
     Yield: 0
@@ -350,3 +360,13 @@ MonoBehaviour:
         Float: 3
         String: Fern
         Obj: {fileID: 11400000, guid: b49e4ab35c372e2458c77b141b18b967, type: 2}
+  - name: (_) BGM (BossBattle)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: BossBattle
+        Obj: {fileID: 0}

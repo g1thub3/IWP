@@ -15,6 +15,7 @@ public class ReplenishingItem : ItemData
     public CHARACTER_STAT toReplenish;
     public override void Use(CharacterBehaviour user)
     {
+        AudioManager.Instance.PlaySFXInScreen("Gulp");
         user.Replenish(amount, toReplenish);
     }
 }

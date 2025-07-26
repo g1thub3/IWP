@@ -14,7 +14,9 @@ public class Transition
     }
     public float Progression
     {
-        get { return t / max; }
+        get {
+            if (max == 0) return 1;
+            return t / max; }
     }
     public void Progress()
     {

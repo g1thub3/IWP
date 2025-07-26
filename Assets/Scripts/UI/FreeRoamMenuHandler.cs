@@ -25,9 +25,12 @@ public abstract class MenuLayer {
     {
         get { return currentSelection; }
         set {
+            AudioManager.Instance.PlaySFXInScreen("Select");
             currentSelection = value;
             if (selectionChanged != null)
+            {
                 selectionChanged();
+            }
         }
     }
     public bool IsOpen { get { return isOpen; } }
@@ -710,7 +713,7 @@ public class FreeRoamMenuHandler : LayeredUI
     private void CreateMain()
     {
         LoadStats();
-
+        AudioManager.Instance.PlaySFXInScreen("Confirm");
         var newLayer = new StartLayer(_menuButtons, _menuGrp);
         newLayer.refresh = delegate
         {

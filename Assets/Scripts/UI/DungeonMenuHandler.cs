@@ -835,6 +835,7 @@ public class DungeonMenuHandler : LayeredUI
     private void CreateMain()
     {
         LoadParty();
+        AudioManager.Instance.PlaySFXInScreen("Confirm");
         var newLayer = new DGStartLayer(_btns1, _btns2, GetComponent<CanvasGroup>(), _combatFrame);
         _startLayer = newLayer;
         newLayer.refresh = delegate

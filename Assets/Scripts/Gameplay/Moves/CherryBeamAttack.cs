@@ -24,6 +24,7 @@ public class CherryBeamAttack : AttackMove
             Quaternion.Euler(0, 0, Mathf.Atan2(selfEntity.faceDir.z, selfEntity.faceDir.x) * Mathf.Rad2Deg - 90.0f));
         circle.transform.localScale = Vector3.zero;
 
+        AudioManager.Instance.PlayFromObject(user.personalSource, "Charge2");
         circle.GetComponent<RuneCircle>().Scale(1, tweenLength);
         while (circle.GetComponent<RuneCircle>().IsInProgress())
         {
@@ -36,6 +37,7 @@ public class CherryBeamAttack : AttackMove
             yield return new WaitForEndOfFrame();
         }
 
+        AudioManager.Instance.PlayFromObject(user.personalSource, "Laser");
         transition.max = beamTime;
         var beam = Instantiate(cherryBeam, extPosition, Quaternion.Euler(0,0, Mathf.Atan2(selfEntity.faceDir.z, selfEntity.faceDir.x) * Mathf.Rad2Deg));
         var beamrenderer = beam.GetComponent<SpriteRenderer>();

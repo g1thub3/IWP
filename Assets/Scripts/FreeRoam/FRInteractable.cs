@@ -61,7 +61,7 @@ public class FRInteractable : MonoBehaviour
     public FRInteraction[] interactSequence;
     public List<FRAlternateSequence> alternateSequences;
     private Dictionary<string, FRAlternateSequence> sequenceDictionary;
-
+    public bool playSoundOnInteract = true;
     private void Start()
     {
         GlobalCanvasManager.LoadInstance();
@@ -89,6 +89,9 @@ public class FRInteractable : MonoBehaviour
 
     public void OnInteract()
     {
+        if (playSoundOnInteract)
+            AudioManager.Instance.PlaySFXInScreen("Confirm");
+
         for (int i = 0; i < GameStoryManager.Instance.ActiveStories.Count; i++)
         {
             var story = GameStoryManager.Instance.ActiveStories[i];

@@ -19,6 +19,7 @@ public class CharacterBehaviour : MonoBehaviour
 
     public Transform allianceIndicator;
     [SerializeField] GameObject _dmgIndicator;
+    public AudioSource personalSource;
 
     public CharacterEntry character;
     public int alliance;
@@ -111,6 +112,7 @@ public class CharacterBehaviour : MonoBehaviour
             indicator.GetComponent<DamageIndicator>().text.text = "-" + diff;
 
             VFXManager.Instance.Create("hit_effect", TileInfo.CoordToPosition(_entity.Position));
+            AudioManager.Instance.PlayFromObject(personalSource, "Damage");
 
             if (atkType == ATTACK_TYPE.PHYSICAL)
             {
@@ -363,6 +365,7 @@ public class CharacterBehaviour : MonoBehaviour
     }
     private void Start()
     {
+        personalSource = GetComponent<AudioSource>();
         _dungeonUI = FindAnyObjectByType<DungeonUIHandler>();
         _entity = GetComponent<DGEntity>();
         _dgGameManager = FindAnyObjectByType<DGGameManager>();

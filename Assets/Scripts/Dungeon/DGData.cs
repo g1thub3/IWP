@@ -291,6 +291,7 @@ public class DGData : ScriptableObject
     public int floorCount;
     public int floorDifficulty;
     public string dungeonName;
+    public string bgm;
     public Tilesets.TILESET defaultTileset;
     public DGSeed floorSeed;
 }

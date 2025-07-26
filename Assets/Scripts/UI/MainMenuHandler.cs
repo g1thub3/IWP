@@ -62,6 +62,7 @@ public class MainMenuHandler : LayeredUI
     private new void Start()
     {
         base.Start();
+        AudioManager.Instance.PlayBGM("MainMenu", 0.0f);
         GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = false;
         _inputManager = GetComponent<PlayerInput>();
         CreateMain();
@@ -79,6 +80,7 @@ public class MainMenuHandler : LayeredUI
             layer.functions = new List<MenuLayer.MenuFunction>();
             layer.functions.Add(delegate
             {
+
                 if (DebugTools.Instance.StoryDebugOn)
                 {
                     GameStoryManager.Instance.BeginStory("Test");
@@ -94,7 +96,6 @@ public class MainMenuHandler : LayeredUI
             });
             layer.functions.Add(delegate
             {
-
             });
             layer.functions.Add(delegate
             {

@@ -534,7 +534,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -581,6 +581,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   alternateSequences: []
+  playSoundOnInteract: 0
 --- !u!4 &152123239
 Transform:
   m_ObjectHideFlags: 0
@@ -30878,7 +30879,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -30925,6 +30926,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   alternateSequences: []
+  playSoundOnInteract: 0
 --- !u!4 &583446877
 Transform:
   m_ObjectHideFlags: 0
@@ -38514,6 +38516,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   alternateSequences: []
+  playSoundOnInteract: 1
 --- !u!61 &1222346734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -86940,7 +86943,19 @@ MonoBehaviour:
     Spawn: {fileID: 551813937}
   OnSceneEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1c50e57991bfd2f418f433162d016736, type: 2}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayBGM
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Town
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1460599708
 PrefabInstance:
   m_ObjectHideFlags: 0

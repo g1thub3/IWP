@@ -171,6 +171,24 @@ public class CutsceneEditor : Editor
             }
             return "(1)";
         });
+        getInstructionData.Add(CUTSCENE_FUNCTION.SFX, delegate (CutsceneInstruction instruction)
+        {
+            var data = instruction.Data.GetData("SFX");
+            if (data != null)
+            {
+                return "(" + data.String + ")";
+            }
+            return "(Null)";
+        });
+        getInstructionData.Add(CUTSCENE_FUNCTION.BGM, delegate (CutsceneInstruction instruction)
+        {
+            var data = instruction.Data.GetData("BGM");
+            if (data != null)
+            {
+                return "(" + data.String + ")";
+            }
+            return "(Null)";
+        });
     }
     public override void OnInspectorGUI()
     {

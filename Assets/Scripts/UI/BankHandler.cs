@@ -137,6 +137,7 @@ public class BankHandler : MonoBehaviour
             }
             if (_inputManager.actions["Accept"].WasPressedThisFrame())
             {
+                AudioManager.Instance.PlaySFXInScreen("Coins");
                 if (_isDepositing)
                 {
                     _givenAmount = Mathf.Clamp(_givenAmount, 0, GlobalGameManager.Instance.ownedGold);

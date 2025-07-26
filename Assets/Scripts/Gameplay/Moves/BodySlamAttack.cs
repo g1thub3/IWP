@@ -38,6 +38,7 @@ public class BodySlamAttack : AttackMove
             yield return new WaitForEndOfFrame();
         }
         // attack
+        AudioManager.Instance.PlayFromObject(user.personalSource, "BodySlam");
         VFXManager.Instance.Create("bodyslam_effect", endPos, 1);
         if (WillMoveSucceed(user))
         {

@@ -34,6 +34,7 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
 
     public void AddGold(int amt)
     {
+        AudioManager.Instance.PlaySFXInScreen("Coins");
         ownedGold = Mathf.Clamp(ownedGold + amt, 0, maxGold);
     }
 
@@ -89,12 +90,14 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
     {
         if (inventory.Count >= inventoryLimit) return false;
         if (ownedGold < newItem.module.ShopPrice) return false;
+        AudioManager.Instance.PlaySFXInScreen("Inventory");
         AddItem(newItem);
         ownedGold -= newItem.module.ShopPrice;
         return true;
     }
     public void SellItem(int index)
     {
+        AudioManager.Instance.PlaySFXInScreen("Coins");
         ownedGold += inventory[index].module.SellValue;
         inventory.RemoveAt(index);
     }
@@ -102,12 +105,14 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
     public void StoreItem(int index)
     {
         if (storage.Count >= storageLimit) return;
+        AudioManager.Instance.PlaySFXInScreen("Inventory");
         storage.Add(inventory[index]);
         inventory.RemoveAt(index);
     }
     public void RetrieveItem(int index)
     {
         if (inventory.Count >= inventoryLimit) return;
+        AudioManager.Instance.PlaySFXInScreen("Inventory");
         inventory.Add(storage[index]);
         storage.RemoveAt(index);
     }
@@ -132,6 +137,7 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
         {
             if (inventory.Count >= inventoryLimit)
                 return false;
+            AudioManager.Instance.PlaySFXInScreen("Inventory");
             AddItem(selectedCharacter.HeldItem);
             selectedCharacter.HeldItem = null;
         }

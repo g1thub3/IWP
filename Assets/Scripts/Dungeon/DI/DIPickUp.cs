@@ -17,6 +17,7 @@ public class DIPickUp : SingletonScriptableObject<DIPickUp>, IDGInteraction
             return false;
         if (interacted is DGPlayer && GlobalGameManager.Instance.inventory.Count < GlobalGameManager.inventoryLimit)
         {
+            AudioManager.Instance.PlaySFXInScreen("Inventory");
             GlobalGameManager.Instance.AddItem(container.Item);
             ui.AddEntry(interacted.gameObject.name + " picked up a " + container.Item.module.itemName + (container.Item.IsQuestTarget ? " (Quest)" : string.Empty) + " and added it to your inventory.");
 

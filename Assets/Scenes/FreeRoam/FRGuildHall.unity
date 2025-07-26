@@ -6886,6 +6886,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   alternateSequences: []
+  playSoundOnInteract: 1
 --- !u!4 &1253628265
 Transform:
   m_ObjectHideFlags: 0
@@ -8245,6 +8246,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   alternateSequences: []
+  playSoundOnInteract: 0
 --- !u!4 &1426822294
 Transform:
   m_ObjectHideFlags: 0
@@ -8312,7 +8314,19 @@ MonoBehaviour:
     Spawn: {fileID: 362566084}
   OnSceneEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1c50e57991bfd2f418f433162d016736, type: 2}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayBGM
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Guild
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1459344398
 GameObject:
   m_ObjectHideFlags: 0
@@ -8408,6 +8422,7 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
   alternateSequences: []
+  playSoundOnInteract: 1
 --- !u!4 &1459344401
 Transform:
   m_ObjectHideFlags: 0
@@ -9013,6 +9028,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   alternateSequences: []
+  playSoundOnInteract: 1
 --- !u!4 &1635719022
 Transform:
   m_ObjectHideFlags: 0
@@ -10952,6 +10968,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   alternateSequences: []
+  playSoundOnInteract: 1
 --- !u!4 &1692735497
 Transform:
   m_ObjectHideFlags: 0
@@ -11296,6 +11313,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   alternateSequences: []
+  playSoundOnInteract: 0
 --- !u!4 &1942897399
 Transform:
   m_ObjectHideFlags: 0

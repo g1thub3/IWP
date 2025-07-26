@@ -42,6 +42,16 @@ MonoBehaviour:
         Float: 0
         String: DungeonScene
         Obj: {fileID: 0}
+  - name: (_) BGM (Guild)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: Guild
+        Obj: {fileID: 0}
   - name: (_) SET_CAMERA_FOCUS (Object, Force, Don't Confine)
     function: 6
     Yield: 0
@@ -161,6 +171,16 @@ MonoBehaviour:
         Int: 0
         Float: 2
         String: 
+        Obj: {fileID: 0}
+  - name: (_) SFX (Inventory)
+    function: 9
+    Yield: 0
+    Data:
+      dataList:
+      - Key: SFX
+        Int: 0
+        Float: 0
+        String: Inventory
         Obj: {fileID: 0}
   - name: (_) DESTROY_PROP (Rune)
     function: 7
@@ -556,6 +576,16 @@ MonoBehaviour:
         Int: 0
         Float: 0
         String: FRDorm
+        Obj: {fileID: 0}
+  - name: (_) BGM (Dorm)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: Dorm
         Obj: {fileID: 0}
   - name: (_) ACTOR_MOVE (Cherry, CherryMove1, 2)
     function: 3

@@ -31,6 +31,7 @@ public class SingeAttack : AttackMove
         }
         // attack
         VFXManager.Instance.Create("singe_effect", endPos2, 1);
+        AudioManager.Instance.PlayFromObject(user.personalSource, "Singe");
         if (WillMoveSucceed(user))
         {
             var detected = user.HitDetect(hitArea);

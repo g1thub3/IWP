@@ -27,6 +27,7 @@ public class JabAttack : AttackMove
             yield return new WaitForEndOfFrame();
         }
 
+        AudioManager.Instance.PlayFromObject(user.personalSource, "Spear");
         VFXManager.Instance.Create("jab_effect", endPos, 1);
 
         // attack

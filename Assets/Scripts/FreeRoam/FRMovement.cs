@@ -80,7 +80,10 @@ public class FRMovement : MonoBehaviour
         {
             _animator.Play(anims[_direction][1]);
         }
+    }
 
+    private void FixedUpdate()
+    {
         var move = _moveDir * _moveSpeed * Time.deltaTime;
         _rb.position += move;
     }

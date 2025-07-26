@@ -16,6 +16,7 @@ public class ManaExplosionAttack : AttackMove
         Vector3 startPos = selfTile.CoordToPosition();
 
         _dungeonUI.AddEntry(user.gameObject.name + " attacked using Mana Explosion!");
+        AudioManager.Instance.PlayFromObject(user.personalSource, "Charge1");
 
         selfEntity._action = ANIMATION_ENUM.CAST;
         Transition trans = new Transition();
@@ -26,6 +27,7 @@ public class ManaExplosionAttack : AttackMove
             yield return new WaitForEndOfFrame();
         }
 
+        AudioManager.Instance.PlayFromObject(user.personalSource, "Explosion");
         var obj = VFXManager.Instance.Create("manaexplosion_effect", startPos, 1);
         obj.transform.localScale *= 3f;
 

@@ -44,10 +44,12 @@ public class LayeredUI : MonoBehaviour
             CurrentLayer.Control(_inputManager);
             if (_inputManager.actions["Accept"].WasPressedThisFrame())
             {
+                AudioManager.Instance.PlaySFXInScreen("Confirm");
                 PerformFunction();
             }
             if (_inputManager.actions["Decline"].WasPressedThisFrame())
             {
+                AudioManager.Instance.PlaySFXInScreen("Close");
                 CurrentLayer.Close();
             }
             if (!CurrentLayer.IsOpen)

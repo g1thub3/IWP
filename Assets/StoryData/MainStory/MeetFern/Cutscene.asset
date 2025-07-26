@@ -31,6 +31,16 @@ MonoBehaviour:
         Float: 0
         String: FRGuildHall
         Obj: {fileID: 0}
+  - name: (_) BGM (Guild)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: Guild
+        Obj: {fileID: 0}
   - name: (Y) SET_CAMERA_FOCUS (DamsonStairs, Force, Confine)
     function: 6
     Yield: 1
@@ -535,6 +545,16 @@ MonoBehaviour:
         Int: 0
         Float: 1.5
         String: CherryBoard
+        Obj: {fileID: 0}
+  - name: (_) SFX (Inventory)
+    function: 9
+    Yield: 0
+    Data:
+      dataList:
+      - Key: SFX
+        Int: 0
+        Float: 0
+        String: Inventory
         Obj: {fileID: 0}
   - name: (Y) ACTOR_ANIMATE (Cherry, slash)
     function: 4

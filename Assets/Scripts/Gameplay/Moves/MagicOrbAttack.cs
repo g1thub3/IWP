@@ -44,7 +44,7 @@ public class MagicOrbAttack : AttackMove
         trans.max = (startPos - endPos).magnitude / projectileSpeed;
         GameObject orb = VFXManager.Instance.CreateLooped("orb_loop", startPos, 1);
         orb.transform.localScale *= 2;
-        Destroy(orb, trans.max * 2);
+        AudioManager.Instance.PlayFromObject(user.personalSource, "MagicOrb");
         while (trans.Progression < 1)
         {
             trans.Progress();

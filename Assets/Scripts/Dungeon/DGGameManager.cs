@@ -135,6 +135,10 @@ public class DGGameManager : MonoBehaviour, IDebuggable
 
     public void QuestComplete(bool hasCompleted = true)
     {
+        if (hasCompleted)
+            AudioManager.Instance.PlaySFXInScreen("Win");
+        else
+            AudioManager.Instance.PlaySFXInScreen("Lose");
         _isGameActive = false;
         _dungeonUI.Endscreen(hasCompleted ? DUNGEON_END_CONTEXT.QUEST : DUNGEON_END_CONTEXT.QUEST_FAIL, this, GlobalGameManager.Instance.selectedDungeon);
         isPressingInit = _inputManager.actions["Accept"].IsPressed();
@@ -143,6 +147,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
 
     public void PlayerLoss(bool onDeath)
     {
+        AudioManager.Instance.PlaySFXInScreen("Lose");
         _isGameActive = false;
         _dungeonUI.Endscreen(onDeath ? DUNGEON_END_CONTEXT.LOSS : DUNGEON_END_CONTEXT.ESCAPE, this, GlobalGameManager.Instance.selectedDungeon);
         LoseItems();
@@ -152,6 +157,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
 
     public void PartyLoss()
     {
+        AudioManager.Instance.PlaySFXInScreen("Lose");
         _isGameActive = false;
         _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.PARTY_DEFEAT, this, GlobalGameManager.Instance.selectedDungeon);
         LoseItems();
@@ -317,6 +323,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
 
     public void PlayerComplete()
     {
+        AudioManager.Instance.PlaySFXInScreen("Win");
         _dungeonUI.Endscreen(DUNGEON_END_CONTEXT.COMPLETED, this, GlobalGameManager.Instance.selectedDungeon);
         isPressingInit = _inputManager.actions["Accept"].IsPressed();
         StartCoroutine(WaitForInput());
@@ -543,6 +550,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
                     var member = activeMember.character;
                     if (!GlobalGameManager.Instance.party.Contains(member)) continue;
                     int added = member.GainXP(dead.death.character.ExperienceAward);
+                    AudioManager.Instance.PlaySFXInScreen("XP");
                     if (added > 0)
                     {
                         if (!levelChanges.ContainsKey(member))
@@ -554,6 +562,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
                     }
                 }
             }
+            AudioManager.Instance.PlaySFXInScreen("CharacterDefeat");
             RegisterRemoval(dead.death.GetComponent<DGEntity>());
         }
         _deaths.Clear();
@@ -565,6 +574,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
         }
         if (levelChanges.Count > 0)
         {
+            AudioManager.Instance.PlaySFXInScreen("LevelUp");
             GlobalCanvasManager.Instance.LevelUpHandler.LevelUpSequence(changedCharacters, changes);
             if (levelChanges.ContainsKey(GlobalGameManager.Instance.party[0]))
             {
@@ -703,6 +713,8 @@ public class DGGameManager : MonoBehaviour, IDebuggable
 
         GameStoryManager.Instance.currentGameManager = this;
         GameStoryManager.Instance.OnDungeonPreload();
+
+        AudioManager.Instance.PlayBGM(GlobalGameManager.Instance.selectedDungeon.bgm);
 
         GetActiveQuests();
         ToNextFloor();

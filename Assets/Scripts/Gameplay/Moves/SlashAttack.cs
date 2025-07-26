@@ -32,7 +32,7 @@ public class SlashAttack : AttackMove
         }
 
         VFXManager.Instance.Create("slash_effect", endPos, 1);
-
+        AudioManager.Instance.PlayFromObject(user.personalSource, "Slash");
         trans.t = 0;
         trans.max = moveTime1;
         while (trans.Progression < 1)

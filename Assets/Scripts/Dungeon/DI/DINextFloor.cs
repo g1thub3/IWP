@@ -20,6 +20,7 @@ public class DINextFloor : SingletonScriptableObject<DINextFloor>, IDGInteractio
         if (p.TakeAnswer() == 0)
         {
             //progress floor
+            AudioManager.Instance.PlaySFXInScreen("Stairs");
             receiver.ToNextFloor();
         }
     }

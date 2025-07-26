@@ -38,6 +38,16 @@ MonoBehaviour:
         Float: 0
         String: FRGuildHall
         Obj: {fileID: 0}
+  - name: (_) BGM (Guild)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: Guild
+        Obj: {fileID: 0}
   - name: (_) SET_CAMERA_FOCUS (DamsonStairs, Don't Force, Confine)
     function: 6
     Yield: 0
@@ -157,6 +167,16 @@ MonoBehaviour:
         Int: 0
         Float: 0
         String: FRTown
+        Obj: {fileID: 0}
+  - name: (_) BGM (Town)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: Town
         Obj: {fileID: 0}
   - name: (Y) SET_CAMERA_FOCUS (Banker, Force, Confine)
     function: 6
