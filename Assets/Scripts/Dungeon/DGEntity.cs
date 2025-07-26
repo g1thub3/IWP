@@ -64,7 +64,7 @@ public class DGEntity : DGObject
         _performingAction = false;
     }
 
-    public IEnumerator MoveCoroutine(Vector2 original, Vector2 destined)
+    public IEnumerator MoveCoroutine(Vector2 original, Vector2 destined, bool isSwap = false)
     {
         _action = ANIMATION_ENUM.WALK;
         float t = 0;
@@ -94,7 +94,8 @@ public class DGEntity : DGObject
                 yield return new WaitForEndOfFrame();
             }
         }
-        _performingAction = false;
+        if (!isSwap)
+            _performingAction = false;
         _dungeonUI.UpdateMinimap();
     }
 
@@ -223,7 +224,7 @@ public class DGEntity : DGObject
                     temp.NumToDir(1);
 
                 StartCoroutine(MoveCoroutine(original, destined));
-                StartCoroutine(temp.MoveCoroutine(destined, original));
+                StartCoroutine(temp.MoveCoroutine(destined, original, true));
                 return true;
             }
 
@@ -366,8 +367,12 @@ public class DGEntity : DGObject
                 TileInfo xTile = Floor.CoordToTileInfo(xDiff);
                 TileInfo zTile = Floor.CoordToTileInfo(zDiff);
                 //tile.isWall || xTile.isWall || zTile.isWall
-                if (tile.isWall || xTile.isWall || zTile.isWall || tile.occupyingEntity != null || tilePP.hasSearched)
+                bool entityCheck = tile.occupyingEntity != null;
+                if (tile.isWall || xTile.isWall || zTile.isWall || entityCheck || tilePP.hasSearched)
                 {
+                    if (DebugTools.Instance.EntityDebugOn)
+                        DebugTools.Instance.AddMarker(tile.CoordToPosition(), 
+                            string.Format("Wall={0}\nXWall={1}\nZWall={2}\nOccupied={3}\nSearched={4}", tile.isWall, xTile.isWall, zTile.isWall, entityCheck, tilePP.hasSearched));
                     tilePP.searchScore = -1;
                 }
                 else

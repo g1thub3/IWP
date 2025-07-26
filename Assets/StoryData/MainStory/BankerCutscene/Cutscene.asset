@@ -298,7 +298,7 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 11400000, guid: 114216a288726ea468682288019eed98, type: 2}
-  - name: (_) ACTOR_MOVE (Cherry, Cherry, 3)
+  - name: (_) ACTOR_MOVE (Cherry, Cherry, 4)
     function: 3
     Yield: 0
     Data:
@@ -315,10 +315,10 @@ MonoBehaviour:
         Obj: {fileID: 0}
       - Key: MoveSpeed
         Int: 0
-        Float: 3
+        Float: 4
         String: Exit
         Obj: {fileID: 0}
-  - name: (Y) ACTOR_MOVE (Damson, Damson, 3)
+  - name: (Y) ACTOR_MOVE (Damson, Damson, 4)
     function: 3
     Yield: 1
     Data:
@@ -335,7 +335,7 @@ MonoBehaviour:
         Obj: {fileID: 0}
       - Key: MoveSpeed
         Int: 0
-        Float: 3
+        Float: 4
         String: Exit
         Obj: {fileID: 0}
   - name: (_) ACTOR_FACE (Damson, north)

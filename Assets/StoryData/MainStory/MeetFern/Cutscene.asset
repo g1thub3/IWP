@@ -216,7 +216,7 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 0}
-  - name: (Y) ACTOR_MOVE (Dahlia, DahliaOut, 2)
+  - name: (Y) ACTOR_MOVE (Dahlia, DahliaOut, 4)
     function: 3
     Yield: 1
     Data:
@@ -233,7 +233,7 @@ MonoBehaviour:
         Obj: {fileID: 0}
       - Key: MoveSpeed
         Int: 0
-        Float: 2
+        Float: 4
         String: DahliaOut
         Obj: {fileID: 0}
   - name: (Y) DIALOGUE (5)

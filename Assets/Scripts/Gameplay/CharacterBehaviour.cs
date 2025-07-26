@@ -45,7 +45,6 @@ public class CharacterBehaviour : MonoBehaviour
         mana = character.maxMana.CurrStat;
 
         _availableMoves = new List<CombatMove>();
-        _availableMoves.Add(defaultAttackInstance);
         for (int i = 0; i < character.Profile.availableMoves.Count; i++) { 
             _availableMoves.Add(character.Profile.availableMoves[i]);
         }
@@ -87,6 +86,7 @@ public class CharacterBehaviour : MonoBehaviour
                 }
             }
         }
+        _availableMoves.Add(defaultAttackInstance);
     }
 
     public void Damage(int baseDamage, ATTACK_TYPE atkType, CharacterBehaviour attacker = null)

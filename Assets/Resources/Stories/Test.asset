@@ -22,9 +22,9 @@ MonoBehaviour:
     - name: Test
       stateTrigger: 0
       functions:
-      - name: '(_) SET_TARGET_DUNGEON (Begonia Forest) '
+      - name: '(_) OPEN_DUNGEON (BegoniaForest) '
         Yield: 0
-        function: 5
+        function: 12
         data:
           dataList:
           - Key: Dungeon
@@ -32,35 +32,29 @@ MonoBehaviour:
             Float: 0
             String: 
             Obj: {fileID: 11400000, guid: 632f8358faecbd84db97e794c93618e2, type: 2}
-  - name: ON_DUNGEON_COMPLETE
-    context: 5
-    events:
-    - name: Test
-      stateTrigger: 0
-      functions:
-      - name: '(_) DG_NEW_FLOOR (CobwebCaveBoss) '
+      - name: '(_) OPEN_DUNGEON (CobwebCave) '
         Yield: 0
-        function: 10
+        function: 12
         data:
           dataList:
-          - Key: Seed
+          - Key: Dungeon
             Int: 0
             Float: 0
             String: 
-            Obj: {fileID: 11400000, guid: 3b2d202d7888b32478c249e6baa712be, type: 2}
-  - name: ON_DUNGEON_ENEMIES_CLEARED
-    context: 9
+            Obj: {fileID: 11400000, guid: dbb6bf07f332800408c082e8dc82cfac, type: 2}
+  - name: ON_DUNGEON_PRELOAD
+    context: 3
     events:
     - name: Test
       stateTrigger: 0
       functions:
-      - name: '(_) DG_PLAYER_WIN  (Floor 4) '
+      - name: '(_) DG_ADD_TEMPMEMBER (DAMSON, 5) '
         Yield: 0
-        function: 11
+        function: 3
         data:
-          dataList:
-          - Key: Floor
-            Int: 4
-            Float: 0
-            String: 
-            Obj: {fileID: 0}
+          dataList: []
+      - name: '(_) DG_ADD_TEMPMEMBER (DAMSON, 5) '
+        Yield: 0
+        function: 3
+        data:
+          dataList: []

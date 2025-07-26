@@ -715,6 +715,11 @@ public class DGGameManager : MonoBehaviour, IDebuggable
         {
             DINextFloor.Instance.Interact(_dungeonGen.ActiveParty[0].GetComponent<DGEntity>(), _dungeonGen.CurrentFloor.stairs, null);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            _currentFloor = GlobalGameManager.Instance.selectedDungeon.floorCount - 1;
+            DINextFloor.Instance.Interact(_dungeonGen.ActiveParty[0].GetComponent<DGEntity>(), _dungeonGen.CurrentFloor.stairs, null);
+        }
     }
 
     private void Update()

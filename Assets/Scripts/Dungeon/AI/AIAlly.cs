@@ -22,10 +22,10 @@ public class AIAlly : SingletonScriptableObject<AIAlly>, DGAIModule
 
         // Follow Leader
         CharacterBehaviour partyLeader = generator.ActiveParty[0];
-        List<TileCoord> leaderPath = null;
+        List<TileCoord> partyPath = null;
         if (partyLeader != null)
         {
-            leaderPath = entity.AStarPathfind(entity.Position, entity.GetClosestDirection(partyLeader.GetComponent<DGEntity>().Position));
+            partyPath = entity.AStarPathfind(entity.Position, entity.GetClosestDirection(partyLeader.GetComponent<DGEntity>().Position));
         }
 
         CharacterBehaviour closestTarget = null;
@@ -59,9 +59,9 @@ public class AIAlly : SingletonScriptableObject<AIAlly>, DGAIModule
         bool isFollowingLeader = false;
         if (enemyPath != null)
         {
-            if (leaderPath != null)
+            if (partyPath != null)
             {
-                if (enemyPath.Count <= leaderPath.Count)
+                if (enemyPath.Count <= partyPath.Count)
                 {
                     isTargetingEnemy = true;
                 } else
@@ -74,7 +74,7 @@ public class AIAlly : SingletonScriptableObject<AIAlly>, DGAIModule
             }
         } else
         {
-            if (leaderPath != null)
+            if (partyPath != null)
                 isFollowingLeader = true;
         }
         if (isTargetingEnemy)
@@ -104,11 +104,11 @@ public class AIAlly : SingletonScriptableObject<AIAlly>, DGAIModule
         }
         if (isFollowingLeader)
         {
-            if (leaderPath.Count > 0 && leaderPath.Count < 25)
+            if (partyPath.Count > 0 && partyPath.Count < 25)
             {
-                if (leaderPath.Count > 1)
+                if (partyPath.Count > 1)
                 {
-                    TileCoord diff = leaderPath[1] - entity.Position;
+                    TileCoord diff = partyPath[1] - entity.Position;
                     if (!user.GetComponent<DGEntity>().Move(diff.x, diff.z))
                     {
                         user.GetComponent<DGEntity>().Wait();

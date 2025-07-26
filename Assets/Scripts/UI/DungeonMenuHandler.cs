@@ -12,7 +12,8 @@ public class DGStartLayer : MenuLayer
     Transform _buttons2;
     Transform _currSelected;
     CanvasGroup _menuGrp;
-    public DGStartLayer(Transform buttons1, Transform buttons2, CanvasGroup menuGrp)
+    CanvasGroup _combatGrp;
+    public DGStartLayer(Transform buttons1, Transform buttons2, CanvasGroup menuGrp, CanvasGroup combatGrp)
     {
         _buttons1 = buttons1;
         _buttons2 = buttons2;
@@ -20,6 +21,7 @@ public class DGStartLayer : MenuLayer
         _currSelected = null;
         isFirstPage = true;
         _buttons2.gameObject.SetActive(false);
+        _combatGrp = combatGrp;
     }
 
     public override void Open()
@@ -36,6 +38,7 @@ public class DGStartLayer : MenuLayer
         base.Open();
         Highlight();
         _menuGrp.alpha = 1;
+        _combatGrp.alpha = 0;
     }
     public override void Close()
     {
@@ -52,6 +55,7 @@ public class DGStartLayer : MenuLayer
             var grp = selectionBacking.GetComponent<CanvasGroup>();
             grp.alpha = 0;
         }
+        _combatGrp.alpha = 1;
         _menuGrp.alpha = 0;
     }
     private void IncSelection(int inc)
@@ -362,22 +366,24 @@ public class DGPartyLayer : MenuLayer
         int inc = increase == true ? 1 : -1;
         if (isHorizontal)
         {
-            if (CurrentSelection + inc > 1)
-                CurrentSelection = 0;
-            else if (CurrentSelection + inc < 0)
-                CurrentSelection = 1;
-            else
-                CurrentSelection += inc;
+            int div = Mathf.FloorToInt((float)CurrentSelection / 2); // row
+            int mod = (CurrentSelection % 2) + inc; // column
+            if (mod < 0)
+                mod = 1;
+            else if (mod > 1)
+                mod = 0;
+            CurrentSelection = (mod + (div * 2));
         }
         else
         {
             inc *= 2;
-            if (CurrentSelection + inc > functions.Count - 1)
-                CurrentSelection %= 2;
-            else if (CurrentSelection + inc < 0)
-                CurrentSelection = (CurrentSelection % 2) * -1;
+            int destined = CurrentSelection + inc;
+            if (destined > functions.Count - 1)
+                CurrentSelection = destined % 2;
+            else if (destined < 0)
+                CurrentSelection = CurrentSelection - inc;
             else
-                CurrentSelection += inc;
+                CurrentSelection = destined;
         }
         Highlight();
     }
@@ -399,6 +405,7 @@ public class DGPartyLayer : MenuLayer
 public class DungeonMenuHandler : LayeredUI
 {
     [Header("Assets")]
+    [SerializeField] private CanvasGroup _combatFrame;
     [SerializeField] private Transform _partyList;
     [SerializeField] private GameObject _partyEntry;
     [SerializeField] private Transform _btns1, _btns2;
@@ -418,6 +425,8 @@ public class DungeonMenuHandler : LayeredUI
     private List<StaticMenuFunction> _helpFunctions;
     private List<CombatMove> _availableMoves;
     [SerializeField] DefaultAttack _defaultAttackInstance;
+
+    private DGStartLayer _startLayer;
 
     private new void Start()
     {
@@ -562,6 +571,7 @@ public class DungeonMenuHandler : LayeredUI
                             {
                                 dialogueLayer.Close();
                                 moveLayer.Close();
+                                CloseStartLayer();
                             }
                         });
 
@@ -625,6 +635,7 @@ public class DungeonMenuHandler : LayeredUI
                                                 partyLayer.Close();
                                                 dialogueLayer.Close();
                                                 inventoryLayer.Close();
+                                                CloseStartLayer();
                                             });
                                         }
                                     };
@@ -798,6 +809,15 @@ public class DungeonMenuHandler : LayeredUI
             newEntry.transform.Find("Energy").GetComponent<TMP_Text>().text = "EN: " + cb.energy + "/" + c.maxEnergy.CurrStat;
             newEntry.transform.Find("Mana").GetComponent<TMP_Text>().text = "MN: " + cb.mana + "/" + c.maxMana.CurrStat;
             newEntry.transform.Find("Hunger").GetComponent<TMP_Text>().text = "HG: " + cb.hunger + "/" + c.hungerSize.CurrStat;
+
+            if (CurrentLayer is DGPartyLayer)
+            {
+                var layer = CurrentLayer as DGPartyLayer;
+                if (layer.CurrentSelection == i)
+                {
+                    newEntry.transform.Find("Selection").GetComponent<CanvasGroup>();
+                }
+            }
         }
     }
 
@@ -806,10 +826,17 @@ public class DungeonMenuHandler : LayeredUI
         get { return GetComponent<CanvasGroup>().alpha > 0; }
     }
 
+    private void CloseStartLayer()
+    {
+        _startLayer.Close();
+        _startLayer = null;
+    }
+
     private void CreateMain()
     {
         LoadParty();
-        var newLayer = new DGStartLayer(_btns1, _btns2, GetComponent<CanvasGroup>());
+        var newLayer = new DGStartLayer(_btns1, _btns2, GetComponent<CanvasGroup>(), _combatFrame);
+        _startLayer = newLayer;
         newLayer.refresh = delegate
         {
             newLayer.functions = new List<MenuLayer.MenuFunction>();
