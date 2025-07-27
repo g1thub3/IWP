@@ -459,6 +459,10 @@ public class DungeonMenuHandler : LayeredUI
                 "When a quest is labelled in yellow, that means your quest target is in the floor you're on. When a quest is labelled in green, the quest has been completed." +
                 "If you lose or escape, you won't get the rewards for any quest.");
         }));
+        _helpFunctions.Add(new StaticMenuFunction("Settings", delegate
+        {
+            GlobalCanvasManager.Instance.SettingsHandler.Open();
+        }));
     }
     private void SeeQuests()
     {

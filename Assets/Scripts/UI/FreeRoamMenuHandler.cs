@@ -454,6 +454,10 @@ public class FreeRoamMenuHandler : LayeredUI
         {
             CreateReadLayer("Quest Guide", "Head to the Guild Hall to take a quest. Activate it in the menu before going into the dungeon the quest gave you. Complete quests for Adventurer XP, Items and Gold.");
         }));
+        _othersFunctions.Add(new StaticMenuFunction("Settings", delegate
+        {
+            GlobalCanvasManager.Instance.SettingsHandler.Open();
+        }));
     }
 
     private void CreateReadLayer(string title, string content)

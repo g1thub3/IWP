@@ -14,6 +14,28 @@ public class AudioData
 [CreateAssetMenu(fileName = "AudioManager", menuName = "Scriptable Objects/Audio Manager")]
 public class AudioManager : SingletonScriptableObject<AudioManager>
 {
+    AudioData _currBGM;
+    private float _sfxVol, _bgmVol;
+    public float SFXVolume
+    {
+        get { return _sfxVol; }
+        set { 
+            _sfxVol = value;
+            GlobalCanvasManager.Instance.SFXSource.volume = _sfxVol;
+        }
+    }
+    public float BGMVolume
+    {
+        get { return _bgmVol; }
+        set { 
+            _bgmVol = value;
+            float scale = 0.0f;
+            if (_currBGM != null)
+                scale = _currBGM.volume;
+            GlobalCanvasManager.Instance.BGMSource.volume = _bgmVol * scale;
+        }
+    }
+
     private int _bgmCounter;
     private Dictionary<string, AudioData> _sfxDictionary;
     private Dictionary<string, AudioData> _bgmDictionary;
@@ -22,6 +44,7 @@ public class AudioManager : SingletonScriptableObject<AudioManager>
 
     private void OnEnable()
     {
+        
         _bgmCounter = 0;
         _sfxDictionary = new Dictionary<string, AudioData>();
         if (_sfxList != null) {
@@ -101,13 +124,14 @@ public class AudioManager : SingletonScriptableObject<AudioManager>
 
         if (counter == _bgmCounter) {
             GlobalCanvasManager.Instance.BGMSource.volume = 0;
-            GlobalCanvasManager.Instance.BGMSource.clip = audio.clip;
-            GlobalCanvasManager.Instance.BGMSource.Play();
         }
+        GlobalCanvasManager.Instance.BGMSource.clip = audio.clip;
+        GlobalCanvasManager.Instance.BGMSource.Play();
+        _currBGM = audio;
 
         if (newTrans.max > 0.0f)
         {
-            var curr = audio.volume;
+            var curr = audio.volume * _bgmVol;
             while (newTrans.Progression < 1.0f)
             {
                 if (counter != _bgmCounter) break;
@@ -115,6 +139,10 @@ public class AudioManager : SingletonScriptableObject<AudioManager>
                 GlobalCanvasManager.Instance.BGMSource.volume = curr * newTrans.Progression;
                 yield return new WaitForEndOfFrame();
             }
+        } else
+        {
+            var curr = audio.volume * _bgmVol;
+            GlobalCanvasManager.Instance.BGMSource.volume = curr;
         }
     }
 }

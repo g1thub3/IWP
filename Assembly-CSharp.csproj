@@ -143,6 +143,7 @@
     <Compile Include="Assets\Scripts\Gameplay\VFXManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Quest.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\StatChanger.cs" />
+    <Compile Include="Assets\Scripts\UI\SettingsHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\ReplenishingItem.cs" />
     <Compile Include="Assets\Scripts\Utilities\CustomEditor\DialogueSequenceEditor.cs" />

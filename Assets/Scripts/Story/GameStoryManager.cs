@@ -42,7 +42,7 @@ public class GameStoryManager : SingletonScriptableObject<GameStoryManager> // H
     private StoryContext RunStoryEvent(STORY_CONTEXT context)
     {
         if (GlobalCanvasManager.Instance == null) return null;
-        if (GlobalCanvasManager.Instance.IsInteractionActive) return null;
+        if (GlobalCanvasManager.Instance.IsInteractionActiveFreeRoam) return null;
         foreach (StoryData data in _activeStories)
         {
             StoryContext onScene = data.foundStoryline.GetContext(context);

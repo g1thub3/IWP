@@ -12,7 +12,7 @@ public class FRController : FRMovement
     public bool CanControl
     {
         get {
-            bool global = !GlobalCanvasManager.Instance.IsInteractionActive;
+            bool global = !GlobalCanvasManager.Instance.IsInteractionActiveFreeRoam;
             bool questBoard = true;
             bool shopStor = true;
             bool bank = true;

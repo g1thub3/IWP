@@ -41,16 +41,19 @@ public class LayeredUI : MonoBehaviour
                 CurrentLayer.OnCreateFrameComplete();
                 CurrentLayer.nextFrameTrigger = false;
             }
-            CurrentLayer.Control(_inputManager);
-            if (_inputManager.actions["Accept"].WasPressedThisFrame())
+            if (!GlobalCanvasManager.Instance.IsInteractionActive)
             {
-                AudioManager.Instance.PlaySFXInScreen("Confirm");
-                PerformFunction();
-            }
-            if (_inputManager.actions["Decline"].WasPressedThisFrame())
-            {
-                AudioManager.Instance.PlaySFXInScreen("Close");
-                CurrentLayer.Close();
+                CurrentLayer.Control(_inputManager);
+                if (_inputManager.actions["Accept"].WasPressedThisFrame())
+                {
+                    AudioManager.Instance.PlaySFXInScreen("Confirm");
+                    PerformFunction();
+                }
+                if (_inputManager.actions["Decline"].WasPressedThisFrame())
+                {
+                    AudioManager.Instance.PlaySFXInScreen("Close");
+                    CurrentLayer.Close();
+                }
             }
             if (!CurrentLayer.IsOpen)
             {

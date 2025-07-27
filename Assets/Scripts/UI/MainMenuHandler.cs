@@ -58,12 +58,13 @@ public class MainMenuHandler : LayeredUI
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     [SerializeField] Transform _menuButtons;
-
+    SettingsHandler _settings;
     private new void Start()
     {
         base.Start();
         AudioManager.Instance.PlayBGM("MainMenu", 0.0f);
         GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = false;
+        _settings = GlobalCanvasManager.Instance.SettingsHandler;
         _inputManager = GetComponent<PlayerInput>();
         CreateMain();
     }
@@ -96,6 +97,7 @@ public class MainMenuHandler : LayeredUI
             });
             layer.functions.Add(delegate
             {
+                _settings.Open();
             });
             layer.functions.Add(delegate
             {
