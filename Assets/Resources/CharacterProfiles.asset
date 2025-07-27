@@ -27,7 +27,7 @@ MonoBehaviour:
       baseStat: 20
       incrementPercentage: 15
     physDef:
-      baseStat: 20
+      baseStat: 25
       incrementPercentage: 15
     magicAtk:
       baseStat: 125
@@ -64,7 +64,7 @@ MonoBehaviour:
       baseStat: 60
       incrementPercentage: 15
     physDef:
-      baseStat: 75
+      baseStat: 45
       incrementPercentage: 15
     magicAtk:
       baseStat: 20
@@ -94,7 +94,7 @@ MonoBehaviour:
       incrementPercentage: 15
     physAtk:
       baseStat: 30
-      incrementPercentage: 15
+      incrementPercentage: 5
     physDef:
       baseStat: 20
       incrementPercentage: 15
@@ -729,7 +729,7 @@ MonoBehaviour:
     characterName: Fern
     animatorController: {fileID: 9100000, guid: a1455584170615d418243c6ee93fbbb7, type: 2}
     maxHealth:
-      baseStat: 100
+      baseStat: 125
       incrementPercentage: 15
     hungerSize:
       baseStat: 250
@@ -738,7 +738,7 @@ MonoBehaviour:
       baseStat: 20
       incrementPercentage: 15
     physDef:
-      baseStat: 20
+      baseStat: 35
       incrementPercentage: 15
     magicAtk:
       baseStat: 20

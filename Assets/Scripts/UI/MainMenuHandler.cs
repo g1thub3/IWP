@@ -101,7 +101,7 @@ public class MainMenuHandler : LayeredUI
             });
             layer.functions.Add(delegate
             {
-                Application.Quit();
+                GlobalCanvasManager.Instance.PauseHandler.Open();
             });
         };
         _layers.Add(layer);

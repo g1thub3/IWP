@@ -372,18 +372,25 @@ public class DGPartyLayer : MenuLayer
                 mod = 1;
             else if (mod > 1)
                 mod = 0;
-            CurrentSelection = (mod + (div * 2));
+            int newSelection = (mod + (div * 2));
+            if (newSelection > functions.Count - 1)
+            {
+                newSelection = functions.Count - 1;
+            }
+            CurrentSelection = newSelection;
         }
         else
         {
             inc *= 2;
-            int destined = CurrentSelection + inc;
-            if (destined > functions.Count - 1)
-                CurrentSelection = destined % 2;
-            else if (destined < 0)
-                CurrentSelection = CurrentSelection - inc;
-            else
-                CurrentSelection = destined;
+            int div = Mathf.FloorToInt((float)(CurrentSelection + inc) / 2); // row
+            int mod = (CurrentSelection % 2); // column
+
+            int newSelection = (mod + (div * 2));
+            if (newSelection > functions.Count - 1)
+            {
+                newSelection = functions.Count - 1;
+            }
+            CurrentSelection = newSelection;
         }
         Highlight();
     }

@@ -25,10 +25,10 @@ MonoBehaviour:
   possibleEnemies:
   - character: 2
     minLevel: 4
-    maxLevel: 8
+    maxLevel: 6
   - character: 3
     minLevel: 4
-    maxLevel: 8
+    maxLevel: 6
   minItemsGenerated: 3
   maxItemsGenerated: 12
   possibleItems:

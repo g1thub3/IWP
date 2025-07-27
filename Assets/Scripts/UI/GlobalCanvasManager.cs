@@ -30,10 +30,14 @@ public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>
     {
         get { return GetComponent<SettingsHandler>(); }
     }
+    public PauseHandler PauseHandler
+    {
+        get { return GetComponent<PauseHandler>(); }
+    }
 
     public bool IsInteractionActive
     {   
-        get { return PromptHandler.IsInProgress() || DialogueHandler.IsInProgress() || LevelUpHandler.IsInProgress() || CutsceneManager.Instance.IsInProgress() || SettingsHandler.IsOpen; }
+        get { return PromptHandler.IsInProgress() || DialogueHandler.IsInProgress() || LevelUpHandler.IsInProgress() || CutsceneManager.Instance.IsInProgress() || SettingsHandler.IsOpen || PauseHandler.IsOpen; }
     }
 
     public bool IsInteractionActiveFreeRoam
@@ -55,7 +59,7 @@ public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            PauseHandler.Open();
         }
     }
 }
