@@ -36,6 +36,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
     [SerializeField] private Transform _tileContainer;
     [SerializeField] private Transform _entityContainer;
     [SerializeField] private GameObject _playerCharacter;
+    [SerializeField] private GameObject _playerCanvases;
     private DGData selectedDungeonData;
     private DungeonFloor _currentFloor;
     private DGPlayer _currentPlayer;
@@ -163,6 +164,8 @@ public class DGGenerator : MonoBehaviour, IDebuggable
                 newCharacter.GetComponent<CharacterBehaviour>().alliance = 0;
                 newCharacter.GetComponent<CharacterBehaviour>().allianceIndicator.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.25f);
                 newCharacter.GetComponent<CharacterBehaviour>().SetUp(GlobalGameManager.Instance.party[0]);
+                var newCanvases = Instantiate(_playerCanvases, newCharacter.transform);
+                newCanvases.name = "PlayerCanvases";
                 break;
             case DG_CHARACTER_TYPE.ALLY:
                 newCharacter.AddComponent<DGEntity>();

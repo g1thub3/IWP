@@ -220,8 +220,15 @@ public class DialogueHandler : MonoBehaviour, IDebuggable, IYieldable
 
                     if (data.canSkip && !prevDialogueSkipped)
                     {
-                        dialogueSkipped = _inputManager.actions["Accept"].IsPressed();
-                        prevDialogueSkipped = dialogueSkipped;
+                        if (_inputManager.actions["Accept"].IsPressed())
+                        {
+                            dialogueSkipped = true;
+                            prevDialogueSkipped = dialogueSkipped;
+                        }
+                        if (_inputManager.actions["Skip"].IsPressed())
+                        {
+                            dialogueSkipped = true;
+                        }
                     }
                     AudioManager.Instance.PlaySFXInScreen("TextSFX");
                     yield return new WaitForSeconds(data.textSpeed);
@@ -234,7 +241,7 @@ public class DialogueHandler : MonoBehaviour, IDebuggable, IYieldable
             else
             {
                 _interactPrompt.SetActive(true);
-                while (!_inputManager.actions["Accept"].WasPressedThisFrame())
+                while (!_inputManager.actions["Accept"].WasPressedThisFrame() && !_inputManager.actions["Skip"].IsPressed())
                 {
                     yield return new WaitForEndOfFrame();
                 }

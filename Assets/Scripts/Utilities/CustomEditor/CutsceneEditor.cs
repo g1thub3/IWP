@@ -189,6 +189,33 @@ public class CutsceneEditor : Editor
             }
             return "(Null)";
         });
+        getInstructionData.Add(CUTSCENE_FUNCTION.FADE_IN, delegate (CutsceneInstruction instruction)
+        {
+            var data = instruction.Data.GetData("Time");
+            if (data != null)
+            {
+                return "(" + data.Float + ")";
+            }
+            return "(1)";
+        });
+        getInstructionData.Add(CUTSCENE_FUNCTION.FADE_OUT, delegate (CutsceneInstruction instruction)
+        {
+            var data = instruction.Data.GetData("Time");
+            if (data != null)
+            {
+                return "(" + data.Float + ")";
+            }
+            return "(1)";
+        });
+        getInstructionData.Add(CUTSCENE_FUNCTION.FADE_INOUT, delegate (CutsceneInstruction instruction)
+        {
+            var data = instruction.Data.GetData("Time");
+            if (data != null)
+            {
+                return "(" + data.Float + ")";
+            }
+            return "(1)";
+        });
     }
     public override void OnInspectorGUI()
     {

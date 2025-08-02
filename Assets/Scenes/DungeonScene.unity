@@ -1403,6 +1403,7 @@ MonoBehaviour:
   _tileContainer: {fileID: 530048819}
   _entityContainer: {fileID: 197319005}
   _playerCharacter: {fileID: 352734293315194953, guid: 9f7764c6c8609624f96343ebb8a989e3, type: 3}
+  _playerCanvases: {fileID: 2435837335538873764, guid: fae49da4cde73554689a709311ae08e0, type: 3}
 --- !u!1 &219674111
 GameObject:
   m_ObjectHideFlags: 0
@@ -5737,6 +5738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnList: []
   currentTurn: 0
+  floorName: 
 --- !u!4 &1914930515
 Transform:
   m_ObjectHideFlags: 0

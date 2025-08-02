@@ -444,7 +444,7 @@ public class FreeRoamMenuHandler : LayeredUI
         _othersFunctions = new List<StaticMenuFunction>();
         _othersFunctions.Add(new StaticMenuFunction("Controls", delegate
         {
-            CreateReadLayer("Controls", "Arrow Keys: Up, Down, Left, Right\n\nZ: Accept/Interact\nX: Decline/Open Menu\nLeft Shift: Anchor Position");
+            CreateReadLayer("Controls", "Arrow Keys: Up, Down, Left, Right\n\nZ: Accept/Interact\nX: Decline/Open Menu\nLeft Shift: Run\nControl: Fast Skip Dialogue & Cutscenes\n\nControls may differ in the dungeon.");
         }));
         _othersFunctions.Add(new StaticMenuFunction("Item Guide", delegate
         {
@@ -717,6 +717,7 @@ public class FreeRoamMenuHandler : LayeredUI
     private void CreateMain()
     {
         LoadStats();
+        GlobalCanvasManager.Instance.QuestReminder.gameObject.SetActive(false);
         AudioManager.Instance.PlaySFXInScreen("Confirm");
         var newLayer = new StartLayer(_menuButtons, _menuGrp);
         newLayer.refresh = delegate

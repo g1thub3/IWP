@@ -25,6 +25,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
     public System.Action TurnCompleted;
     private bool _isGameActive;
     private int _currentFloor;
+    public string floorName;
 
     private List<Quest> _activeQuests;
     public List<Quest> ActiveQuests
@@ -349,15 +350,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
         StartCoroutine(_dungeonUI.transitioner.FadeTransition(true, 1, 0.25f, _dungeonUI.transitioner.floorDispGrp, delegate
         {
             _dungeonGen.NewFloor();
-            if (GlobalGameManager.Instance.selectedDungeon.isAscending)
-            {
-                _dungeonUI.floorText.text = "Floor\n" + _currentFloor + "F";
-            }
-            else
-            {
-                _dungeonUI.floorText.text = "Floor\nB" + _currentFloor + "F";
-            }
-
+            _dungeonUI.floorText.text = "Floor\n" + floorName;
             StartCoroutine(ImplementQuest());
         }));
     }
@@ -366,18 +359,17 @@ public class DGGameManager : MonoBehaviour, IDebuggable
     {
         _dungeonGen.FocusCameraOnPlayer();
         _dungeonUI.transitioner.ToggleQuestComp(false);
+        if (newSeed is StaticSeed)
+        {
+            floorName = (newSeed as StaticSeed).floorName;
+            _dungeonUI.floorText.text = floorName;
+            _dungeonUI.transitioner.SetFloorText(floorName);
+        }
+        else
+            _dungeonUI.floorText.text = "Floor\n" + floorName;
         StartCoroutine(_dungeonUI.transitioner.FadeTransition(true, 1, 0.25f, _dungeonUI.transitioner.floorDispGrp, delegate
         {
             _dungeonGen.NewFloor(newSeed);
-            if (GlobalGameManager.Instance.selectedDungeon.isAscending)
-            {
-                _dungeonUI.floorText.text = "Floor\n" + _currentFloor + "F";
-            }
-            else
-            {
-                _dungeonUI.floorText.text = "Floor\nB" + _currentFloor + "F";
-            }
-
             StartCoroutine(ImplementQuest());
         }));
     }
@@ -390,12 +382,13 @@ public class DGGameManager : MonoBehaviour, IDebuggable
             _currentFloor++;
             if (GlobalGameManager.Instance.selectedDungeon.isAscending)
             {
-                _dungeonUI.transitioner.SetFloorText(CurrentFloor + "F");
+                floorName = CurrentFloor + "F";
             }
             else
             {
-                _dungeonUI.transitioner.SetFloorText("B" + CurrentFloor + "F");
+                floorName = "B" + CurrentFloor + "F";
             }
+            _dungeonUI.transitioner.SetFloorText(floorName);
             RefreshGame();
         }));
     }
@@ -715,7 +708,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
         GameStoryManager.Instance.OnDungeonPreload();
 
         AudioManager.Instance.PlayBGM(GlobalGameManager.Instance.selectedDungeon.bgm);
-
+        GameSceneManager.Instance.SetLocationName(GlobalGameManager.Instance.selectedDungeon.dungeonName);
         GetActiveQuests();
         ToNextFloor();
     }

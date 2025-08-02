@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ceb23b369778a42a7fee27235ddbeb, type: 3}
   m_Name: CobwebCaveBoss
   m_EditorClassIdentifier: 
+  floorName: Opening
   playerSpawnX: 21
   playerSpawnY: 22
   enemyPlacements:

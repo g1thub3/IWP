@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allianceIndicator: {fileID: 2448235214387891859}
   _dmgIndicator: {fileID: 1215284338264338444, guid: a59fc7b9e597398459890f899e9b2b4e, type: 3}
+  personalSource: {fileID: 0}
   character:
     associatedCharacter: 0
     characterName: 

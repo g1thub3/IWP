@@ -31,8 +31,7 @@ public class CharacterBehaviour : MonoBehaviour
     public int mana;
 
     public DefaultAttack defaultAttackInstance;
-    private List<CombatMove> _availableMoves;
-
+    public List<CombatMove> AvailableMoves;
     public void SetUp(CharacterEntry characterData)
     {
         character = characterData;
@@ -45,22 +44,22 @@ public class CharacterBehaviour : MonoBehaviour
         energy = character.maxEnergy.CurrStat;
         mana = character.maxMana.CurrStat;
 
-        _availableMoves = new List<CombatMove>();
+        AvailableMoves = new List<CombatMove>();
         for (int i = 0; i < character.Profile.availableMoves.Count; i++) { 
-            _availableMoves.Add(character.Profile.availableMoves[i]);
+            AvailableMoves.Add(character.Profile.availableMoves[i]);
         }
 
-        List<int> scores = new List<int>(_availableMoves.Count); // Sort by the best moves to use, then select them based on whether they'll succeed
-        for (int i = 0; i < _availableMoves.Count; i++)
+        List<int> scores = new List<int>(AvailableMoves.Count); // Sort by the best moves to use, then select them based on whether they'll succeed
+        for (int i = 0; i < AvailableMoves.Count; i++)
         {
             scores.Add(0);
         }
-        for (int i = 0; i < _availableMoves.Count; i++)
+        for (int i = 0; i < AvailableMoves.Count; i++)
         {
-            scores[i] -= _availableMoves[i].energyRequirement;
-            if (_availableMoves[i] is AttackMove)
+            scores[i] -= AvailableMoves[i].energyRequirement;
+            if (AvailableMoves[i] is AttackMove)
             {
-                var move = _availableMoves[i] as AttackMove;
+                var move = AvailableMoves[i] as AttackMove;
                 int dmg = move.baseDamage;
                 if (move.moveType == MOVE_TYPE.PHYSICAL)
                 {
@@ -72,22 +71,22 @@ public class CharacterBehaviour : MonoBehaviour
                 scores[i] += dmg;
             }
         }
-        for (int i = 0; i < _availableMoves.Count; i++)
+        for (int i = 0; i < AvailableMoves.Count; i++)
         {
-            for (int j = i; j < _availableMoves.Count; j++)
+            for (int j = i; j < AvailableMoves.Count; j++)
             {
                 if (scores[i] < scores[j])
                 {
                     var temp1 = scores[j];
-                    var temp2 = _availableMoves[j];
+                    var temp2 = AvailableMoves[j];
                     scores[j] = scores[i];
-                    _availableMoves[j] = _availableMoves[i];
+                    AvailableMoves[j] = AvailableMoves[i];
                     scores[i] = temp1;
-                    _availableMoves[i] = temp2;
+                    AvailableMoves[i] = temp2;
                 }
             }
         }
-        _availableMoves.Add(defaultAttackInstance);
+        AvailableMoves.Add(defaultAttackInstance);
     }
 
     public void Damage(int baseDamage, ATTACK_TYPE atkType, CharacterBehaviour attacker = null)
@@ -345,13 +344,13 @@ public class CharacterBehaviour : MonoBehaviour
 
     public CombatMove SelectMove()
     {
-        for (int i = 0; i < _availableMoves.Count; i++)
+        for (int i = 0; i < AvailableMoves.Count; i++)
         {
-            bool canPerform = _availableMoves[i].CanBePerformed(this);
-            bool willSucceed = _availableMoves[i].WillMoveSucceed(this);
+            bool canPerform = AvailableMoves[i].CanBePerformed(this);
+            bool willSucceed = AvailableMoves[i].WillMoveSucceed(this);
             if (canPerform && willSucceed)
             {
-                return _availableMoves[i];
+                return AvailableMoves[i];
             }
         }
         return null;

@@ -126,3 +126,13 @@ MonoBehaviour:
         Float: 0
         String: CherryStairs
         Obj: {fileID: 0}
+  - name: (Y) FADE_INOUT (0.5)
+    function: 13
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Time
+        Int: 0
+        Float: 0.5
+        String: 
+        Obj: {fileID: 0}

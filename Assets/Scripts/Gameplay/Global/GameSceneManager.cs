@@ -12,21 +12,36 @@ public class GameSceneManager : SingletonScriptableObject<GameSceneManager>
     }
     // FREE ROAM
     public string previousArea;
+    public string locationName;
+
+    public void SetLocationName(string name)
+    {
+        locationName = name;
+    }
     public void Navigate(string nextArea)
     {
         previousArea = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(nextArea);
+        GlobalCanvasManager.Instance.FadeTransition(0.5f, delegate
+        {
+            SceneManager.LoadScene(nextArea);
+        });
     }
     public void ToDungeon()
     {
-        GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = false;
-        SceneManager.LoadScene("DungeonScene");
+        GlobalCanvasManager.Instance.FadeTransition(1.0f, delegate
+        {
+            GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = false;
+            SceneManager.LoadScene("DungeonScene");
+        });
     }
 
     public void ToDorm()
     {
-        GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = true;
-        SceneManager.LoadScene("FRDorm");
+        GlobalCanvasManager.Instance.FadeTransition(1.0f, delegate
+        {
+            GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = true;
+            SceneManager.LoadScene("FRDorm");
+        });
     }
 
     public void WarpGuildHall()

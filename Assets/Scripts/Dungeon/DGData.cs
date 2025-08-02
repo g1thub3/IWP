@@ -221,7 +221,6 @@ public class FloorRoom
 [System.Serializable]
 public class DungeonFloor
 {
-    public string floorName;
     public static readonly int floorSize = 50;
     public List<FloorRoom> rooms;
     public List<TileInfo> nonWallTiles;

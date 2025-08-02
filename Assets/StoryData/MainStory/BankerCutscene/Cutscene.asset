@@ -138,6 +138,11 @@ MonoBehaviour:
         Float: 3
         String: Exit
         Obj: {fileID: 0}
+  - name: (_) FADE_IN (1)
+    function: 11
+    Yield: 0
+    Data:
+      dataList: []
   - name: (Y) ACTOR_MOVE (Cherry, Exit, 3)
     function: 3
     Yield: 1
@@ -168,6 +173,11 @@ MonoBehaviour:
         Float: 0
         String: FRTown
         Obj: {fileID: 0}
+  - name: (_) FADE_OUT (1)
+    function: 12
+    Yield: 0
+    Data:
+      dataList: []
   - name: (_) BGM (Town)
     function: 10
     Yield: 0

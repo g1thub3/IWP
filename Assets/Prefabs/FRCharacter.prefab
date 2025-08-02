@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 5
+  _interactionIndicator: {fileID: 6886277583763747452, guid: f993d5043788c95418c55c25d6245493, type: 3}
 --- !u!114 &1314305866549695862
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -228,6 +228,31 @@ public class Quest
 [System.Serializable]
 public abstract class QuestData
 {
+
+    private static Dictionary<string, DGData> _dungeons;
+    private static void SearchDungeons()
+    {
+        if (_dungeons == null)
+        {
+            DGData[] resources = Resources.LoadAll<DGData>("Dungeons");
+            if (resources != null)
+            {
+                _dungeons = new Dictionary<string, DGData>();
+                foreach (var data in resources)
+                {
+                    _dungeons.Add(data.dungeonName, data);
+                }
+            }
+        }
+    }
+    private static DGData GetDungeon(string name)
+    {
+        SearchDungeons();
+        if (_dungeons != null)
+            return _dungeons[name];
+        return null;
+    }
+
     public DGData dungeon;
     public int floor;
     public bool questPossible;

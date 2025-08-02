@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,11 +11,57 @@ public class DGPlayer : DGEntity
     private CharacterBehaviour _cb;
     private Transform _orientationRotator;
     private SpriteRenderer _orientationIndicator;
+    private bool _selectingMove;
+    private int _moveSelection;
+
 
     private static readonly float _transparency = 35.0f / 255.0f;
     private Color _indicatorColor;
 
     [SerializeField] DefaultAttack _defaultAttackInstance;
+
+    Canvas _moveCanvas, _attackCanvas;
+    Transform _moveList;
+
+    private void LoadMoveOptions()
+    {
+        CombatMove[] selectedMoves = new CombatMove[5];
+        for (int i = -2; i <= 2; i++)
+        {
+            if (_cb.AvailableMoves.Count == 0)
+            {
+                selectedMoves[i + 2] = _defaultAttackInstance;
+                continue;
+            }
+            int index = i + _moveSelection;
+            while (index < 0)
+            {
+                index += _cb.AvailableMoves.Count;
+            }
+            while (index >= _cb.AvailableMoves.Count)
+            {
+                index -= _cb.AvailableMoves.Count;
+            }
+            selectedMoves[i + 2] = _cb.AvailableMoves[index];
+        }
+        for (int i = 0; i < selectedMoves.Length; i++) {
+            var moveObj = _moveList.GetChild(i);
+            var moveName = moveObj.Find("MoveName");
+            var costText = moveObj.Find("CostText");
+            moveName.GetComponent<TMP_Text>().text = selectedMoves[i].moveName;
+            if (selectedMoves[i].consumptionType == CHARACTER_STAT.ENERGY)
+            {
+                costText.GetComponent<TMP_Text>().text = selectedMoves[i].energyRequirement + " EN";
+                if (ColorUtility.TryParseHtmlString("#FFAD69", out Color enclr))
+                    costText.GetComponent<TMP_Text>().color = enclr;
+            } else if (selectedMoves[i].consumptionType == CHARACTER_STAT.MANA)
+            {
+                costText.GetComponent<TMP_Text>().text = selectedMoves[i].energyRequirement + " MN";
+                if (ColorUtility.TryParseHtmlString("#B99BE0", out Color mnclr))
+                    costText.GetComponent<TMP_Text>().color = mnclr;
+            }
+        }
+    }
 
     private new void Start()
     {
@@ -26,6 +73,11 @@ public class DGPlayer : DGEntity
         _orientationIndicator.enabled = true;
         _indicatorColor = _orientationIndicator.color;
 
+        _moveCanvas = transform.Find("PlayerCanvases/MoveSelectionCanvas").GetComponent<Canvas>();
+        _attackCanvas = transform.Find("PlayerCanvases/AttackLandCanvas").GetComponent<Canvas>();
+        _moveList = _moveCanvas.transform.Find("MoveList");
+        _selectingMove = false;
+        _moveSelection = 0;
     }
 
     public bool CanControl
@@ -41,13 +93,49 @@ public class DGPlayer : DGEntity
         _orientationIndicator.color = new Color(_indicatorColor.r, _indicatorColor.g, _indicatorColor.b, _inputManager.actions["Anchor"].IsPressed() ? 1.0f : _transparency);
         _orientationRotator.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(faceDir.z, faceDir.x) * Mathf.Rad2Deg - 90.0f);
 
+        if (_selectingMove)
+        {
+            if (_inputManager.actions["Up"].WasPressedThisFrame())
+            {
+                _moveSelection--;
+                if (_moveSelection < 0)
+                    _moveSelection = _cb.AvailableMoves.Count - 1;
+                LoadMoveOptions();
+            }
+            if (_inputManager.actions["Down"].WasPressedThisFrame())
+            {
+                _moveSelection++;
+                if (_moveSelection >= _cb.AvailableMoves.Count)
+                    _moveSelection = 0;
+                LoadMoveOptions();
+            }
+            if (_inputManager.actions["Accept"].WasPressedThisFrame())
+            {
+                _cb.PerformMove(_cb.AvailableMoves[_moveSelection]);
+                _selectingMove = false;
+                _attackCanvas.gameObject.SetActive(false);
+                _moveCanvas.gameObject.SetActive(false);
+            }
+            if (_inputManager.actions["Decline"].WasPressedThisFrame())
+            {
+                _selectingMove = false;
+                _attackCanvas.gameObject.SetActive(false);
+                _moveCanvas.gameObject.SetActive(false);
+            }
+            return;
+        }
         if (_inputManager.actions["Accept"].WasPressedThisFrame())
         {
             if (!InteractAction())
             {
-                _cb.PerformMove(_cb.defaultAttackInstance);
+                _selectingMove = true;
+                _attackCanvas.transform.localPosition = new Vector2(faceDir.x, faceDir.z);
+                _moveCanvas.transform.localPosition = new Vector2(-faceDir.x, -faceDir.z);
+                _attackCanvas.gameObject.SetActive(true);
+                _moveCanvas.gameObject.SetActive(true);
+                LoadMoveOptions();
+                return;
             }
-            return;
         }
 
         int x, y;

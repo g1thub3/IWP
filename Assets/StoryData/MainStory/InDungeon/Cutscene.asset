@@ -42,6 +42,11 @@ MonoBehaviour:
         Float: 0
         String: DungeonScene
         Obj: {fileID: 0}
+  - name: (_) FADE_OUT (1)
+    function: 12
+    Yield: 0
+    Data:
+      dataList: []
   - name: (_) BGM (Guild)
     function: 10
     Yield: 0
@@ -307,6 +312,11 @@ MonoBehaviour:
         Float: 3
         String: Fern
         Obj: {fileID: 0}
+  - name: (_) FADE_IN (1)
+    function: 11
+    Yield: 0
+    Data:
+      dataList: []
   - name: (Y) ACTOR_MOVE (Cherry, CherryMove2, 3)
     function: 3
     Yield: 1
@@ -357,6 +367,11 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 0}
+  - name: (_) FADE_OUT (1)
+    function: 12
+    Yield: 0
+    Data:
+      dataList: []
   - name: (Y) DIALOGUE (4)
     function: 1
     Yield: 1
@@ -547,6 +562,11 @@ MonoBehaviour:
         Float: 3
         String: DamsonMove1
         Obj: {fileID: 0}
+  - name: (_) FADE_IN (1)
+    function: 11
+    Yield: 0
+    Data:
+      dataList: []
   - name: (Y) ACTOR_MOVE (Cherry, CherryMove1, 2)
     function: 3
     Yield: 1
@@ -577,6 +597,11 @@ MonoBehaviour:
         Float: 0
         String: FRDorm
         Obj: {fileID: 0}
+  - name: (_) FADE_OUT (1)
+    function: 12
+    Yield: 0
+    Data:
+      dataList: []
   - name: (_) BGM (Dorm)
     function: 10
     Yield: 0
@@ -672,3 +697,8 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 11400000, guid: 395e19faffbef0e45a3ec92c1788fb63, type: 2}
+  - name: (Y) FADE_INOUT (1)
+    function: 13
+    Yield: 1
+    Data:
+      dataList: []

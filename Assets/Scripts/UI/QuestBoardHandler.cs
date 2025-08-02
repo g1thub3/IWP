@@ -18,6 +18,7 @@ public class QuestBoardHandler : MonoBehaviour
     private RectTransform _selector;
     private int _currSelected;
     private bool _openToggle;
+    private bool _questTaken;
 
     private void Start()
     {
@@ -117,6 +118,7 @@ public class QuestBoardHandler : MonoBehaviour
                 GlobalGameManager.Instance.ownedQuests.Add(quest);
                 LoadEntriesOfPage();
                 Select(0);
+                _questTaken = true;
             }
         }
     }
@@ -154,6 +156,8 @@ public class QuestBoardHandler : MonoBehaviour
             _questBoardGrp.alpha = 0;
             AudioManager.Instance.PlaySFXInScreen("Close");
             GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = true;
+            if (_questTaken)
+                GlobalCanvasManager.Instance.RemindQuest();
         }
         if (_inputManager.actions["Accept"].WasPressedThisFrame())
         {
@@ -182,6 +186,7 @@ public class QuestBoardHandler : MonoBehaviour
         {
             _questBoardTitle.text = "Normal Quests";
         }
+        _questTaken = false;
         var newSelector = LoadEntriesOfPage();
         Select(0, newSelector);
         _questBoardGrp.alpha = 1;

@@ -35,6 +35,11 @@ MonoBehaviour:
         Float: 0
         String: DungeonScene
         Obj: {fileID: 0}
+  - name: (_) FADE_OUT (1)
+    function: 12
+    Yield: 0
+    Data:
+      dataList: []
   - name: (_) BGM (Prelude)
     function: 10
     Yield: 0
@@ -370,3 +375,8 @@ MonoBehaviour:
         Float: 0
         String: BossBattle
         Obj: {fileID: 0}
+  - name: (Y) FADE_INOUT (1)
+    function: 13
+    Yield: 1
+    Data:
+      dataList: []

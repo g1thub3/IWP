@@ -20,6 +20,11 @@ MonoBehaviour:
       toOmit: []
       Controller: {fileID: 0}
   instructions:
+  - name: (Y) FADE_IN (1)
+    function: 11
+    Yield: 1
+    Data:
+      dataList: []
   - name: (Y) SCENESETUP (DungeonScene, Don't Refresh)
     function: 0
     Yield: 1
@@ -64,6 +69,16 @@ MonoBehaviour:
         Int: -1
         Float: 0
         String: Object
+        Obj: {fileID: 0}
+  - name: (_) FADE_OUT (0.5)
+    function: 12
+    Yield: 0
+    Data:
+      dataList:
+      - Key: Time
+        Int: 0
+        Float: 0.5
+        String: 
         Obj: {fileID: 0}
   - name: (Y) DIALOGUE (1)
     function: 1
@@ -340,3 +355,8 @@ MonoBehaviour:
         Float: 3
         String: Thief
         Obj: {fileID: 0}
+  - name: (Y) FADE_INOUT (1)
+    function: 13
+    Yield: 1
+    Data:
+      dataList: []

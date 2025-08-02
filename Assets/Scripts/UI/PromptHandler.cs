@@ -133,7 +133,7 @@ public class PromptHandler : MonoBehaviour, IDebuggable, IYieldable
             if (!skip)
             {
                 AudioManager.Instance.PlaySFXInScreen("TextSFX");
-                skip = _inputManager.actions["Accept"].IsPressed();
+                skip = _inputManager.actions["Accept"].IsPressed() || _inputManager.actions["Skip"].IsPressed();
                 yield return new WaitForSeconds(_textWait);
             }
         }

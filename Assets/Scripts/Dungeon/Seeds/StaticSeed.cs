@@ -22,6 +22,7 @@ public class StaticItemGenData
 [CreateAssetMenu(fileName = "StaticSeed", menuName = "Dungeon Seeds/Static Seed")]
 public class StaticSeed : DGSeed
 {
+    public string floorName;
     public int playerSpawnX, playerSpawnY;
     public List<StaticNPCGenData> enemyPlacements;
     public List<StaticItemGenData> itemPlacements;

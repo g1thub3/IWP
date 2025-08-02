@@ -1,9 +1,7 @@
 using System.Collections.Generic;
-using System.Runtime.Serialization.Json;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class DungeonUIHandler : MonoBehaviour

@@ -1,9 +1,11 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public class CutsceneActor : MonoBehaviour, IYieldable
 {
+    public static List<CutsceneActor> MovingActors;
     public static string[] Directions = {"north", "east", "south", "west"};
     [Range(0, 3)]
     [SerializeField] private int _direction;
@@ -16,6 +18,18 @@ public class CutsceneActor : MonoBehaviour, IYieldable
 
     private bool _moveInProgress;
     private bool _animInProgress;
+    private bool _skipAction;
+
+    public void SkipAction()
+    {
+        _skipAction = true;
+    }
+
+    public static void SkipMovingActors()
+    {
+        foreach (var actor in MovingActors)
+            actor.SkipAction();
+    }
 
     public bool IsInProgress()
     {
@@ -26,6 +40,8 @@ public class CutsceneActor : MonoBehaviour, IYieldable
     {
         float dist = (transform.position - point.position).magnitude;
         float t = dist / speed;
+        MovingActors.Add(this);
+        _skipAction = false;
         StartCoroutine(MoveCoroutine(transform.position, point.position, t));
     }
     public void PlayAnimation(string name)
@@ -39,6 +55,8 @@ public class CutsceneActor : MonoBehaviour, IYieldable
         yield return new WaitForEndOfFrame();
         if (!_animator.GetCurrentAnimatorStateInfo(0).loop)
         {
+            _skipAction = false;
+            MovingActors.Add(this);
             StartCoroutine(AnimationCoroutine());
         } else
         {
@@ -47,10 +65,11 @@ public class CutsceneActor : MonoBehaviour, IYieldable
     }
     private IEnumerator AnimationCoroutine()
     {
-        while (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1)
+        while (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1 && !_skipAction)
         {
             yield return new WaitForEndOfFrame();
         }
+        MovingActors.Remove(this);
         _animator.Play("idle_" + Directions[_direction]);
         _animInProgress = false;
     }
@@ -65,10 +84,12 @@ public class CutsceneActor : MonoBehaviour, IYieldable
         {
             transition.Progress();
             transform.position = Vector3.Lerp(currPos, newPos, transition.Progression);
-            yield return new WaitForEndOfFrame();
+            if (!_skipAction)
+                yield return new WaitForEndOfFrame();
         }
         PlayAnimation("idle");
         _moveInProgress = false;
+        MovingActors.Remove(this);
     }
 
     public void FaceActor(int direction)
@@ -79,6 +100,9 @@ public class CutsceneActor : MonoBehaviour, IYieldable
     
     private void Start()
     {
+        if (MovingActors == null)
+            MovingActors = new List<CutsceneActor>();
+        _skipAction = false;
         _moveInProgress = false;
         _animInProgress = false;
         _animator = GetComponent<Animator>();

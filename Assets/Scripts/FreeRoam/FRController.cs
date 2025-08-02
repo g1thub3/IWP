@@ -9,6 +9,9 @@ public class FRController : FRMovement
     private CircleCollider2D _interactHitbox;
     private PlayerInput _inputManager;
 
+    [SerializeField] GameObject _interactionIndicator;
+    GameObject _currIndicator;
+
     public bool CanControl
     {
         get {
@@ -43,11 +46,15 @@ public class FRController : FRMovement
         _questBoardHandler = FindAnyObjectByType<QuestBoardHandler>();
         _shopStorageHandler = FindAnyObjectByType<ShopStorageHandler>();
         _bankHandler = FindAnyObjectByType<BankHandler>();
+
+        _currIndicator = Instantiate(_interactionIndicator);
+        _currIndicator.SetActive(false);
     }
 
     private new void Update()
     {
         _moveDir = Vector2.zero;
+        _animator.speed = 1.0f;
         Move();
 
         base.Update();
@@ -67,27 +74,42 @@ public class FRController : FRMovement
         if (_inputManager.actions["Right"].IsPressed())
             _moveDir.x = 1;
         if (_inputManager.actions["Anchor"].IsPressed())
+        {
             _moveDir *= 2;
+            if (_moveDir.magnitude > 0)
+            {
+                _animator.speed = 2.0f;
+            }
+        }
     }
 
     private void Interact()
     {
-        if (!CanControl) return;
-        if (_inputManager.actions["Accept"].WasPressedThisFrame())
+        if (!CanControl) {
+            _currIndicator.SetActive(false);
+            return;
+        }
+
+        FRInteractable foundInteractable = null;
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, _interactHitbox.radius, LayerMask.GetMask("Interactable"));
+        if (hit != null)
         {
-            Collider2D hit = Physics2D.OverlapCircle(transform.position, _interactHitbox.radius, LayerMask.GetMask("Interactable"));
-            if (hit != null)
+            if (hit.TryGetComponent<FRInteractable>(out FRInteractable interactable))
             {
-                if (hit.TryGetComponent<FRInteractable>(out FRInteractable interactable))
+                if (!interactable.interactOnTrigger)
                 {
-                    if (!interactable.interactOnTrigger)
-                    {
-                        interactable.OnInteract();
-                    }
-                    return;
+                    foundInteractable = interactable;
+                    _currIndicator.SetActive(true);
+                    _currIndicator.transform.position = interactable.transform.position + new Vector3(0,0.6f,0);
                 }
             }
         }
+
+        if (_inputManager.actions["Accept"].WasPressedThisFrame() && foundInteractable != null)
+        {
+            foundInteractable.OnInteract();
+        } else if (foundInteractable == null)
+            _currIndicator.SetActive(false);
     }
     private void TriggerInteract()
     {

@@ -616,6 +616,16 @@ MonoBehaviour:
         Float: 0
         String: Cherry
         Obj: {fileID: 11400000, guid: 5f3a0e1d71447384698f04f17802c58d, type: 2}
+  - name: (Y) FADE_INOUT (0.5)
+    function: 13
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Time
+        Int: 0
+        Float: 0.5
+        String: 
+        Obj: {fileID: 0}
   - name: (Y) SET_CONTROLLER_POSITION (CherryMove3)
     function: 5
     Yield: 1

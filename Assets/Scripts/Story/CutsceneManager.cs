@@ -26,8 +26,9 @@ public class CutsceneManager : SingletonScriptableObject<CutsceneManager>, IYiel
         GlobalCanvasManager.Instance.StartCoroutine(CutsceneCoroutine(cutscene));
     }
 
-    public delegate bool YieldCheck();
-    public YieldCheck FunctionYieldCheck;
+    public delegate bool CutsceneDelegate();
+    public CutsceneDelegate FunctionYieldCheck;
+    public CutsceneDelegate OnSkip;
     public CutsceneSetup CurrentSetup;
     private bool _isCutsceneRunning = false;
     [HideInInspector] public CinemachineCamera currentCinemachine;
@@ -59,6 +60,12 @@ public class CutsceneManager : SingletonScriptableObject<CutsceneManager>, IYiel
         _isCutsceneRunning = false;
         CutsceneFunctions.CleanScene();
     }
+
+    public void CutsceneSkipInput()
+    {
+        if (OnSkip != null)
+            OnSkip.Invoke();
+    }
     public CutsceneActor GetActor(string name)
     {
         if (CurrentSetup == null) return null;
@@ -89,7 +96,10 @@ public enum CUTSCENE_FUNCTION
     DESTROY_PROP,
     WAIT,
     SFX,
-    BGM
+    BGM,
+    FADE_IN,
+    FADE_OUT,
+    FADE_INOUT,
 }
 
 public static class CutsceneFunctions
@@ -97,6 +107,7 @@ public static class CutsceneFunctions
     private static bool Yield;
     private static bool SceneSetupInProgress;
     private static float WaitTime;
+    private static bool skipWait;
 
     public static void Instantiate()
     {
@@ -113,12 +124,16 @@ public static class CutsceneFunctions
         functions.Add(CUTSCENE_FUNCTION.WAIT, Wait);
         functions.Add(CUTSCENE_FUNCTION.SFX, SFX);
         functions.Add(CUTSCENE_FUNCTION.BGM, BGM);
+        functions.Add(CUTSCENE_FUNCTION.FADE_IN, FadeIn);
+        functions.Add(CUTSCENE_FUNCTION.FADE_OUT, FadeOut);
+        functions.Add(CUTSCENE_FUNCTION.FADE_INOUT, FadeInOut);
     }
     public static Dictionary<CUTSCENE_FUNCTION, System.Action<Cutscene, KeyDataList>> functions;
     public static void Run(CutsceneInstruction instruction, Cutscene cutscene)
     {
         Yield = instruction.Yield;
         CutsceneManager.Instance.FunctionYieldCheck = null;
+        CutsceneManager.Instance.OnSkip = null;
         functions[instruction.function].Invoke(cutscene, instruction.Data);
     }
     private static IEnumerator SetupCoroutine(Cutscene cutscene, KeyDataList dataList)
@@ -190,6 +205,11 @@ public static class CutsceneFunctions
         if (Yield)
         {
             CutsceneManager.Instance.FunctionYieldCheck = actor.IsInProgress;
+            CutsceneManager.Instance.OnSkip = delegate
+            {
+                CutsceneActor.SkipMovingActors();
+                return true;
+            };
         }
 
         float speed = 1;
@@ -208,6 +228,11 @@ public static class CutsceneFunctions
         if (Yield)
         {
             CutsceneManager.Instance.FunctionYieldCheck = actor.IsInProgress;
+            CutsceneManager.Instance.OnSkip = delegate
+            {
+                CutsceneActor.SkipMovingActors();
+                return true;
+            };
         }
         actor.PlayAnimation(dataList.GetData("Anim").String);
     }
@@ -282,7 +307,8 @@ public static class CutsceneFunctions
         while (WaitTime > 0)
         {
             WaitTime -= Time.deltaTime;
-            yield return new WaitForEndOfFrame();
+            if (!skipWait)
+                yield return new WaitForEndOfFrame();
         }
     }
 
@@ -295,12 +321,18 @@ public static class CutsceneFunctions
             time = timeData.Float;
         }
 
+        skipWait = false;
         WaitTime = time;
         if (Yield)
         {
             CutsceneManager.Instance.FunctionYieldCheck = delegate
             {
                 return WaitTime > 0;
+            };
+            CutsceneManager.Instance.OnSkip = delegate
+            {
+                skipWait = true;
+                return true;
             };
         }
         GlobalCanvasManager.Instance.StartCoroutine(WaitCoroutine());
@@ -321,6 +353,58 @@ public static class CutsceneFunctions
         if (data != null)
         {
             AudioManager.Instance.PlayBGM(data.String);
+        }
+    }
+
+    public static void FadeIn(Cutscene cutscene, KeyDataList dataList)
+    {
+        float time = 1.0f;
+        var data = dataList.GetData("Time");
+        if (data != null)
+            time = data.Float;
+        GlobalCanvasManager.Instance.FadeTransition(time, null, true, false);
+        if (Yield)
+        {
+            CutsceneManager.Instance.FunctionYieldCheck = GlobalCanvasManager.Instance.IsInProgress;
+            CutsceneManager.Instance.OnSkip = delegate
+            {
+                GlobalCanvasManager.Instance.SkipTransition();
+                return true;
+            };
+        }
+    }
+    public static void FadeOut(Cutscene cutscene, KeyDataList dataList)
+    {
+        float time = 1.0f;
+        var data = dataList.GetData("Time");
+        if (data != null)
+            time = data.Float;
+        GlobalCanvasManager.Instance.FadeTransition(time, null, false, false);
+        if (Yield)
+        {
+            CutsceneManager.Instance.FunctionYieldCheck = GlobalCanvasManager.Instance.IsInProgress;
+            CutsceneManager.Instance.OnSkip = delegate
+            {
+                GlobalCanvasManager.Instance.SkipTransition();
+                return true;
+            };
+        }
+    }
+    public static void FadeInOut(Cutscene cutscene, KeyDataList dataList)
+    {
+        float time = 1.0f;
+        var data = dataList.GetData("Time");
+        if (data != null)
+            time = data.Float;
+        GlobalCanvasManager.Instance.FadeTransition(time, null, true, true);
+        if (Yield)
+        {
+            CutsceneManager.Instance.FunctionYieldCheck = GlobalCanvasManager.Instance.IsInProgress;
+            CutsceneManager.Instance.OnSkip = delegate
+            {
+                GlobalCanvasManager.Instance.SkipTransition();
+                return true;
+            };
         }
     }
 }
