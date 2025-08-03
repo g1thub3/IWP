@@ -11,19 +11,6 @@ public class DINextFloor : SingletonScriptableObject<DINextFloor>, IDGInteractio
         return GlobalCanvasManager.Instance.PromptHandler.IsInProgress();
     }
 
-    private IEnumerator WaitForAnswer(PromptHandler p, DGGameManager receiver)
-    {
-        while (p.IsInProgress())
-        {
-            yield return new WaitForEndOfFrame();
-        }
-        if (p.TakeAnswer() == 0)
-        {
-            //progress floor
-            AudioManager.Instance.PlaySFXInScreen("Stairs");
-            receiver.ToNextFloor();
-        }
-    }
     public bool Interact(DGEntity interacted, DGInteractable interactable, KeyDataList dataList)
     {
         DungeonUIHandler ui = FindAnyObjectByType<DungeonUIHandler>();
@@ -55,11 +42,15 @@ public class DINextFloor : SingletonScriptableObject<DINextFloor>, IDGInteractio
         var p = GlobalCanvasManager.Instance.PromptHandler;
         if (receiver != null)
         {
-            PromptInfo prompt = new PromptInfo();
-            prompt.message = "Would you like to go to the next floor?";
-            prompt.options = new string[2];
-            prompt.options[0] = "Yes";
-            prompt.options[1] = "No";
+            PromptInfo newPrompt = PromptInfo.New("Would you like to go to the next floor?", new string[] { "Yes", "No" }, new PromptInfo.OptionFunction[]
+            {
+                delegate
+                {
+                    AudioManager.Instance.PlaySFXInScreen("Stairs");
+                    receiver.ToNextFloor();
+                },
+                PromptInfo.NullFunction
+            });
 
             CanvasGroup[] hidden = null;
             if (ui != null)
@@ -67,8 +58,7 @@ public class DINextFloor : SingletonScriptableObject<DINextFloor>, IDGInteractio
                 hidden = new CanvasGroup[1];
                 hidden[0] = ui.combatGrp;
             }
-            p.Prompt(prompt, hidden);
-            interacted.StartCoroutine(WaitForAnswer(p, receiver));
+            p.Prompt(newPrompt, hidden);
         }
         return true;
     }

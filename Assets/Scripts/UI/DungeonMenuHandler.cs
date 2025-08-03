@@ -780,27 +780,18 @@ public class DungeonMenuHandler : LayeredUI
         CreateReadLayer("None", "Feature not implemented yet.");
     }
 
-    private IEnumerator WaitForAnswer()
-    {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
-        {
-            yield return new WaitForEndOfFrame();
-        }
-        if (GlobalCanvasManager.Instance.PromptHandler.TakeAnswer() == 0)
-        {
-            _gameManager.OnEscape.Invoke();
-        }
-    }
-
     private void Escape()
     {
-        PromptInfo prompt = new PromptInfo();
-        prompt.message = "Are you sure you want to escape the dungeon? (This will count as a loss and you will lose your items and gold)";
-        prompt.options = new string[2];
-        prompt.options[0] = "Yes";
-        prompt.options[1] = "No";
-        GlobalCanvasManager.Instance.PromptHandler.Prompt(prompt);
-        StartCoroutine(WaitForAnswer());
+        PromptInfo newPrompt = PromptInfo.New("Are you sure you want to escape the dungeon? (This will count as a loss and you will lose your items and gold)", new string[] { "Yes", "No" },
+            new PromptInfo.OptionFunction[]
+            {
+                delegate
+                {
+                    _gameManager.OnEscape.Invoke();
+                },
+                PromptInfo.NullFunction
+            });
+        GlobalCanvasManager.Instance.PromptHandler.Prompt(newPrompt);
 
     }
     public void LoadParty()
@@ -869,7 +860,7 @@ public class DungeonMenuHandler : LayeredUI
 
     private void Update()
     {
-        if (GlobalCanvasManager.Instance.IsInteractionActive || !_gameManager.IsGameActive) return;
+        if (GlobalCanvasManager.Instance.IsInteractionActiveFreeRoam || !_gameManager.IsGameActive) return;
         if (!Process())
         {
             if (_inputManager.actions["Decline"].WasPressedThisFrame())

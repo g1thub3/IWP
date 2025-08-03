@@ -7,6 +7,7 @@ public class MainMenuLayer : MenuLayer
 {
     Transform _buttons;
     Transform _currSelected;
+
     public MainMenuLayer(Transform buttons)
     {
         _buttons = buttons;
@@ -58,10 +59,20 @@ public class MainMenuHandler : LayeredUI
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     [SerializeField] Transform _menuButtons;
+    [SerializeField] CanvasGroup _continueGrp;
+    private bool _fileFound;
     SettingsHandler _settings;
     private new void Start()
     {
         base.Start();
+        _fileFound = SaveDataManager.Instance.QuickSaveFile != null || SaveDataManager.Instance.BaseFile != null;
+        if (_fileFound)
+        {
+            _continueGrp.alpha = 1.0f;
+        } else
+        {
+            _continueGrp.alpha = 0.5f;
+        }
         AudioManager.Instance.PlayBGM("MainMenu", 0.0f);
         GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = false;
         _settings = GlobalCanvasManager.Instance.SettingsHandler;
@@ -93,7 +104,10 @@ public class MainMenuHandler : LayeredUI
             });
             layer.functions.Add(delegate
             {
-
+                if (_fileFound)
+                {
+                    GlobalCanvasManager.Instance.SaveDataUIHandler.LoadMenu();
+                }
             });
             layer.functions.Add(delegate
             {

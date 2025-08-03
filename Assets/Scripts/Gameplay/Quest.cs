@@ -135,6 +135,17 @@ public class Quest
         NUM_QUEST_TYPES
     }
 
+    public QUEST_TYPE QuestType
+    {
+        get {
+            if (quest is RetrievalQuest)
+                return QUEST_TYPE.RETRIEVAL;
+            if (quest is RescueQuest)
+                return QUEST_TYPE.RESCUE;
+            return QUEST_TYPE.NUM_QUEST_TYPES;
+        }
+    }
+
     public static Quest CreateQuestData(QUEST_TYPE qType, bool isComp = false)
     {
         QuestData newQuest;
@@ -228,31 +239,6 @@ public class Quest
 [System.Serializable]
 public abstract class QuestData
 {
-
-    private static Dictionary<string, DGData> _dungeons;
-    private static void SearchDungeons()
-    {
-        if (_dungeons == null)
-        {
-            DGData[] resources = Resources.LoadAll<DGData>("Dungeons");
-            if (resources != null)
-            {
-                _dungeons = new Dictionary<string, DGData>();
-                foreach (var data in resources)
-                {
-                    _dungeons.Add(data.dungeonName, data);
-                }
-            }
-        }
-    }
-    private static DGData GetDungeon(string name)
-    {
-        SearchDungeons();
-        if (_dungeons != null)
-            return _dungeons[name];
-        return null;
-    }
-
     public DGData dungeon;
     public int floor;
     public bool questPossible;

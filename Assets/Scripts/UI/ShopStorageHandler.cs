@@ -294,49 +294,14 @@ public class ShopStorageHandler : LayeredUI
         _layers.Add(inventoryLayer);
         CurrentLayer.Open();
     }
-
-    private IEnumerator ProcessPromptMerchant()
-    {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
-        {
-            yield return new WaitForEndOfFrame();
-        }
-        int ans = GlobalCanvasManager.Instance.PromptHandler.TakeAnswer();
-        if (ans == 1)
-        {
-            OpenShop(false);
-        }
-        else if (ans == 2)
-        {
-            OpenSell();
-        }
-    }
-    private IEnumerator ProcessPromptWarehouse()
-    {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
-        {
-            yield return new WaitForEndOfFrame();
-        }
-        int ans = GlobalCanvasManager.Instance.PromptHandler.TakeAnswer();
-        if (ans == 1)
-        {
-            OpenInventory();
-        }
-        else if (ans == 2)
-        {
-            OpenStorage();
-        }
-    }
     public void OpenMerchantPrompt()
     {
         GlobalCanvasManager.Instance.PromptHandler.Prompt(_merchantPrompt);
-        StartCoroutine(ProcessPromptMerchant());
     }
 
     public void OpenWarehousePrompt()
     {
         GlobalCanvasManager.Instance.PromptHandler.Prompt(_warehousePrompt);
-        StartCoroutine(ProcessPromptWarehouse());
     }
 
     private new void Start()
@@ -345,19 +310,31 @@ public class ShopStorageHandler : LayeredUI
         _inputManager = FindAnyObjectByType<PlayerInput>();
         _menu = GlobalCanvasManager.Instance.FreeRoamMenuHandler;
 
-        _merchantPrompt = new PromptInfo();
-        _merchantPrompt.message = "What would you like to do?";
-        _merchantPrompt.options = new string[3];
-        _merchantPrompt.options[0] = "Leave";
-        _merchantPrompt.options[1] = "Buy Items";
-        _merchantPrompt.options[2] = "Sell Items";
+        _merchantPrompt = PromptInfo.New("What would you like to do?", new string[] { "Leave", "Buy Items", "Sell Items" }, new PromptInfo.OptionFunction[]
+        {
+            PromptInfo.NullFunction,
+            delegate
+            {
+                OpenShop(false);
+            },
+            delegate
+            {
+                OpenSell();
+            }
+        });
 
-        _warehousePrompt = new PromptInfo();
-        _warehousePrompt.message = "What would you like to do?";
-        _warehousePrompt.options = new string[3];
-        _warehousePrompt.options[0] = "Leave";
-        _warehousePrompt.options[1] = "Store Items";
-        _warehousePrompt.options[2] = "Retrieve Items";
+        _merchantPrompt = PromptInfo.New("What would you like to do?", new string[] { "Leave", "Store Items", "Retrieve Items" }, new PromptInfo.OptionFunction[]
+        {
+            PromptInfo.NullFunction,
+            delegate
+            {
+                OpenInventory();
+            },
+            delegate
+            {
+                OpenStorage();
+            }
+        });
     }
 
     private void Update()

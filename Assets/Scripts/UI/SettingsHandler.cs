@@ -72,6 +72,16 @@ public class SettingsHandler : MonoBehaviour
         _holdTolerating = 0.0f;
         SetUp();
     }
+    
+    private void Save()
+    {
+        if (_isBGMSelected) {
+            PlayerPrefs.SetFloat("BGMVolume", AudioManager.Instance.BGMVolume);
+        } else
+        {
+            PlayerPrefs.SetFloat("SFXVolume", AudioManager.Instance.BGMVolume);
+        }
+    }
 
     private void Update()
     {
@@ -94,6 +104,7 @@ public class SettingsHandler : MonoBehaviour
         {
             AudioManager.Instance.PlaySFXInScreen("TextSFX");
             ChangeSliderValue(-1);
+            Save();
         }
         if (!_inputManager.actions["Right"].IsPressed())
         {
@@ -108,7 +119,10 @@ public class SettingsHandler : MonoBehaviour
             else
             {
                 if (_holdTolerating > 0.0f)
+                {
+                    Save();
                     AudioManager.Instance.PlaySFXInScreen("TextSFX");
+                }
                 _holdTolerating = 0.0f;
             }
         }
@@ -130,7 +144,10 @@ public class SettingsHandler : MonoBehaviour
             else
             {
                 if (_holdTolerating > 0.0f)
+                {
+                    Save();
                     AudioManager.Instance.PlaySFXInScreen("TextSFX");
+                }
                 _holdTolerating = 0.0f;
             }
         }

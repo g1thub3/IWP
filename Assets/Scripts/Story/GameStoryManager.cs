@@ -12,9 +12,15 @@ public class GameStoryManager : SingletonScriptableObject<GameStoryManager> // H
     private List<string> _completedStories = new List<string>();
     private List<StoryData> _activeStories = new List<StoryData>();
 
+    public List<string> CompletedStories
+    {
+        get { return _completedStories; }
+        set { _completedStories = value; }
+    }
     public List<StoryData> ActiveStories
     {
         get { return _activeStories; }
+        set { _activeStories =  value; }
     }
     private void OnEnable()
     {

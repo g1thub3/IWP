@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public enum DUNGEON_END_CONTEXT
@@ -17,6 +15,7 @@ public enum DUNGEON_END_CONTEXT
 
 public class DGGameManager : MonoBehaviour, IDebuggable
 {
+    [SerializeField] DungeonIntro _intro;
     public System.Action OnEscape;
     private DGGenerator _dungeonGen;
     private DungeonUIHandler _dungeonUI;
@@ -85,53 +84,45 @@ public class DGGameManager : MonoBehaviour, IDebuggable
         ExitDungeon();
     }
 
-    private IEnumerator WaitForInputQuestComplete(bool hasCompleted = true, Quest questFailed = null)
-    {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
-        {
-            yield return new WaitForEndOfFrame();
-        }
-        if (GlobalCanvasManager.Instance.PromptHandler.TakeAnswer() == 0)
-        {
-            //progress floor
-            QuestComplete(hasCompleted);
-        } else
-        {
-            if (questFailed != null)
-            {
-                EndCompetition(questFailed);
-            }
-        }
-    }
-
     public void QuestCompletePrompt()
     {
-        PromptInfo prompt = new PromptInfo();
-        prompt.message = "You completed a quest! Would you like to leave the dungeon now?";
-        prompt.options = new string[2];
-        prompt.options[0] = "Yes";
-        prompt.options[1] = "No";
+        PromptInfo newPrompt = PromptInfo.New("You completed a quest! Would you like to leave the dungeon now?",
+            new string[] { "Yes, No" },
+            new PromptInfo.OptionFunction[] {
+                delegate
+                {
+                    QuestComplete(true);
+                },
+                PromptInfo.NullFunction
+            }
+        );
 
         CanvasGroup[] hidden = new CanvasGroup[1];
         hidden[0] = _dungeonUI.combatGrp;
 
-        GlobalCanvasManager.Instance.PromptHandler.Prompt(prompt, hidden);
-        StartCoroutine(WaitForInputQuestComplete());
+        GlobalCanvasManager.Instance.PromptHandler.Prompt(newPrompt, hidden);
     }
 
     public void QuestFailPrompt(Quest questFailed)
     {
-        PromptInfo prompt = new PromptInfo();
-        prompt.message = "Another adventurer completed one of your quests before you could. Would you like to leave the dungeon now?";
-        prompt.options = new string[2];
-        prompt.options[0] = "Yes";
-        prompt.options[1] = "No";
+        PromptInfo newPrompt = PromptInfo.New("Another adventurer completed one of your quests before you could. Would you like to leave the dungeon now?",
+            new string[] { "Yes", "No" },
+            new PromptInfo.OptionFunction[]
+            {
+                delegate
+                {
+                    QuestComplete(false);
+                },
+                delegate
+                {
+                    EndCompetition(questFailed);
+                }
+            });
 
         CanvasGroup[] hidden = new CanvasGroup[1];
         hidden[0] = _dungeonUI.combatGrp;
 
-        GlobalCanvasManager.Instance.PromptHandler.Prompt(prompt, hidden);
-        StartCoroutine(WaitForInputQuestComplete(false, questFailed));
+        GlobalCanvasManager.Instance.PromptHandler.Prompt(newPrompt, hidden);
     }
 
     public void QuestComplete(bool hasCompleted = true)
@@ -379,6 +370,8 @@ public class DGGameManager : MonoBehaviour, IDebuggable
         _isGameActive = false;
         StartCoroutine(_dungeonUI.transitioner.FadeTransition(true, 1, 0.0f, _dungeonUI.transitioner.grp, delegate
         {
+            if (_intro != null)
+                _intro.IntroComplete();
             _currentFloor++;
             if (GlobalGameManager.Instance.selectedDungeon.isAscending)
             {
@@ -706,10 +699,16 @@ public class DGGameManager : MonoBehaviour, IDebuggable
 
         GameStoryManager.Instance.currentGameManager = this;
         GameStoryManager.Instance.OnDungeonPreload();
-
-        AudioManager.Instance.PlayBGM(GlobalGameManager.Instance.selectedDungeon.bgm);
         GameSceneManager.Instance.SetLocationName(GlobalGameManager.Instance.selectedDungeon.dungeonName);
         GetActiveQuests();
+
+        StartCoroutine(WaitForIntro());
+    }
+
+    private IEnumerator WaitForIntro()
+    {
+        yield return new WaitForSeconds(3.5f);
+        AudioManager.Instance.PlayBGM(GlobalGameManager.Instance.selectedDungeon.bgm);
         ToNextFloor();
     }
 

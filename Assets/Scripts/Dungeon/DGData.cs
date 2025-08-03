@@ -293,4 +293,28 @@ public class DGData : ScriptableObject
     public string bgm;
     public Tilesets.TILESET defaultTileset;
     public DGSeed floorSeed;
+
+    private static Dictionary<string, DGData> _dungeons;
+    private static void SearchDungeons()
+    {
+        if (_dungeons == null)
+        {
+            DGData[] resources = Resources.LoadAll<DGData>("Dungeons");
+            if (resources != null)
+            {
+                _dungeons = new Dictionary<string, DGData>();
+                foreach (var data in resources)
+                {
+                    _dungeons.Add(data.dungeonName, data);
+                }
+            }
+        }
+    }
+    public static DGData GetDungeon(string name)
+    {
+        SearchDungeons();
+        if (_dungeons != null && _dungeons.ContainsKey(name))
+            return _dungeons[name];
+        return null;
+    }
 }

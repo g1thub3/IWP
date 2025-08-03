@@ -3563,6 +3563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _menuButtons: {fileID: 1836225491}
+  _continueGrp: {fileID: 2051305594}
 --- !u!1 &1085875180
 GameObject:
   m_ObjectHideFlags: 0
@@ -5091,7 +5092,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051305590}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0.5
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

@@ -19,32 +19,23 @@ public class DungeonEnter : MonoBehaviour
                 _col.enabled = true;
     }
 
-    private IEnumerator ProcessPrompt()
-    {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
-        {
-            yield return new WaitForEndOfFrame();
-        }
-        int ans = GlobalCanvasManager.Instance.PromptHandler.TakeAnswer();
-        if (ans < GlobalGameManager.Instance.availableDungeons.Count)
-        {
-            GlobalGameManager.Instance.selectedDungeon = GlobalGameManager.Instance.availableDungeons[ans];
-            GameSceneManager.Instance.ToDungeon();
-        }
-    }
-
     public void DungeonPrompt()
     {
         _col.enabled = false;
-        PromptInfo newInfo = new PromptInfo();
-        newInfo.message = "Which dungeon do you want to explore?";
-        newInfo.options = new string[GlobalGameManager.Instance.availableDungeons.Count + 1];
+        PromptInfo newPrompt = PromptInfo.New("Which dungeon do you want to explore?", 
+            new string[GlobalGameManager.Instance.availableDungeons.Count + 1], 
+            new PromptInfo.OptionFunction[GlobalGameManager.Instance.availableDungeons.Count + 1]);
         for (int i = 0; i < GlobalGameManager.Instance.availableDungeons.Count; i++)
         {
-            newInfo.options[i] = GlobalGameManager.Instance.availableDungeons[i].dungeonName;
+            newPrompt.options[i] = GlobalGameManager.Instance.availableDungeons[i].dungeonName;
+            int index = i;
+            newPrompt.optionFunctions[i] = delegate {
+                GlobalGameManager.Instance.selectedDungeon = GlobalGameManager.Instance.availableDungeons[index];
+                GameSceneManager.Instance.ToDungeon();
+            };
         }
-        newInfo.options[GlobalGameManager.Instance.availableDungeons.Count] = "Cancel";
-        GlobalCanvasManager.Instance.PromptHandler.Prompt(newInfo);
-        StartCoroutine(ProcessPrompt());
+        newPrompt.options[GlobalGameManager.Instance.availableDungeons.Count] = "Cancel";
+        newPrompt.optionFunctions[GlobalGameManager.Instance.availableDungeons.Count] = PromptInfo.NullFunction;
+        GlobalCanvasManager.Instance.PromptHandler.Prompt(newPrompt);
     }
 }

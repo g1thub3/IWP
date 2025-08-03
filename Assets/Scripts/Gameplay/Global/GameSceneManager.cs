@@ -44,44 +44,49 @@ public class GameSceneManager : SingletonScriptableObject<GameSceneManager>
         });
     }
 
+    public void ToSavedScene(string scene)
+    {
+        GlobalCanvasManager.Instance.FadeTransition(1.0f, delegate
+        {
+            if (scene == "DungeonScene")
+                GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = false;
+            else
+                GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = true;
+            SceneManager.LoadScene(scene);
+        });
+    }
+
+    public void ToMainMenu()
+    {
+        GlobalCanvasManager.Instance.FadeTransition(1.0f, delegate
+        {
+            GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = false;
+            SceneManager.LoadScene("MainMenuScene");
+        });
+    }
+
     public void WarpGuildHall()
     {
-        var prompt = new PromptInfo();
-        prompt.message = "Would you like to head back to the guild hall?";
-        prompt.options = new string[2];
-        prompt.options[0] = "Yes";
-        prompt.options[1] = "No";
-        GlobalCanvasManager.Instance.PromptHandler.Prompt(prompt);
-        GlobalCanvasManager.Instance.PromptHandler.StartCoroutine(GuildHallCoroutine());
-    }
-    private IEnumerator GuildHallCoroutine()
-    {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
-            yield return new WaitForEndOfFrame();
-        int ans = GlobalCanvasManager.Instance.PromptHandler.TakeAnswer();
-        if (ans == 0)
+        var newPrompt = PromptInfo.New("Would you like to head back to the guild hall?", new string[] { "Yes", "No" }, new PromptInfo.OptionFunction[]
         {
-            Navigate("FRGuildHall");
-        }
+            delegate
+            {
+                Navigate("FRGuildHall");
+            },
+            PromptInfo.NullFunction
+        });
+        GlobalCanvasManager.Instance.PromptHandler.Prompt(newPrompt);
     }
     public void WarpDungeonEntrance()
     {
-        var prompt = new PromptInfo();
-        prompt.message = "Would you like to go straight to the dungeon entrance?";
-        prompt.options = new string[2];
-        prompt.options[0] = "Yes";
-        prompt.options[1] = "No";
-        GlobalCanvasManager.Instance.PromptHandler.Prompt(prompt);
-        GlobalCanvasManager.Instance.PromptHandler.StartCoroutine(DungeonCoroutine());
-    }
-    private IEnumerator DungeonCoroutine()
-    {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
-            yield return new WaitForEndOfFrame();
-        int ans = GlobalCanvasManager.Instance.PromptHandler.TakeAnswer();
-        if (ans == 0)
-        {
-            Navigate("FRDungeon");
-        }
+        var newPrompt = PromptInfo.New("Would you like to go straight to the dungeon entrance?", new string[] { "Yes", "No" }, new PromptInfo.OptionFunction[]
+{
+            delegate
+            {
+                Navigate("FRDungeon");
+            },
+            PromptInfo.NullFunction
+});
+        GlobalCanvasManager.Instance.PromptHandler.Prompt(newPrompt);
     }
 }

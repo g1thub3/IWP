@@ -5,8 +5,19 @@ using UnityEngine.InputSystem;
 
 public class LayeredUI : MonoBehaviour
 {
+    protected static List<LayeredUI> _instances = new List<LayeredUI>();
+    public static LayeredUI CurrentInstance { 
+        get {
+            if (_instances.Count < 1) 
+                return null;
+            else
+                return _instances.Last();
+        }
+    }
     protected PlayerInput _inputManager;
     protected List<MenuLayer> _layers;
+
+    private bool _active;
 
     protected MenuLayer CurrentLayer
     {
@@ -30,6 +41,7 @@ public class LayeredUI : MonoBehaviour
     protected void Start()
     {
         _layers = new List<MenuLayer>();
+        _active = false;
     }
 
     protected bool Process()
@@ -41,7 +53,7 @@ public class LayeredUI : MonoBehaviour
                 CurrentLayer.OnCreateFrameComplete();
                 CurrentLayer.nextFrameTrigger = false;
             }
-            if (!GlobalCanvasManager.Instance.IsInteractionActive)
+            if (!GlobalCanvasManager.Instance.IsInteractionActive && CurrentInstance == this)
             {
                 CurrentLayer.Control(_inputManager);
                 if (_inputManager.actions["Accept"].WasPressedThisFrame())
@@ -54,6 +66,11 @@ public class LayeredUI : MonoBehaviour
                     AudioManager.Instance.PlaySFXInScreen("Close");
                     CurrentLayer.Close();
                 }
+            }
+            if (!_active)
+            {
+                _active = true;
+                _instances.Add(this);
             }
             if (!CurrentLayer.IsOpen)
             {
@@ -69,6 +86,13 @@ public class LayeredUI : MonoBehaviour
                 }
             }
             return true;
+        }
+        else {
+            if (_active)
+            {
+                _active = false;
+                _instances.Remove(this);
+            }
         }
         return false;
     }

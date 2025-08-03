@@ -1,14 +1,24 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public struct PromptInfo
 {
+    public delegate void OptionFunction();
     public string message;
     public string[] options;
+    public OptionFunction[] optionFunctions;
+    public static OptionFunction NullFunction = delegate { return; }; // Do nothing
+    public static PromptInfo New(string msg, string[] opts, OptionFunction[] functions)
+    {
+        var newInfo = new PromptInfo();
+        newInfo.message = msg;
+        newInfo.options = opts;
+        newInfo.optionFunctions = functions;
+        return newInfo;
+    }
 }
 public class OptionAsset
 {
@@ -108,6 +118,7 @@ public class PromptHandler : MonoBehaviour, IDebuggable, IYieldable
         //Handle prompt
 
         StartCoroutine(HandlePrompt(prompt, hidden));
+        StartCoroutine(WaitForAnswerCoroutine(prompt));
     }
 
     private IEnumerator HandlePrompt(PromptInfo prompt, CanvasGroup[] hidden)
@@ -218,6 +229,17 @@ public class PromptHandler : MonoBehaviour, IDebuggable, IYieldable
         }
     }
 
+    private IEnumerator WaitForAnswerCoroutine(PromptInfo prompt)
+    {
+        while (IsInProgress())
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        int ans = TakeAnswer();
+        prompt.optionFunctions[ans].Invoke();
+    }
+
+
     private void Start()
     {
         _msgTr = new Transition();
@@ -245,24 +267,14 @@ public class PromptHandler : MonoBehaviour, IDebuggable, IYieldable
     public void DebugControls()
     {
         if (!DebugTools.Instance.PromptDebugOn) return;
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            PromptInfo newPr = new PromptInfo();
-            newPr.message = "Do you wanna prompt?";
-            newPr.options = new string[2];
-            newPr.options[0] = "Yuuuup";
-            newPr.options[1] = "Naaaah man";
-            Prompt(newPr);
-            StartCoroutine(test());
-        }
-    }
-
-    private IEnumerator test()
-    {
-        while (IsInProgress())
-        {
-            yield return new WaitForEndOfFrame();
-        }
-        Debug.Log("ANSWER: " + TakeAnswer());
+        //if (Input.GetKeyDown(KeyCode.M))
+        //{
+        //    PromptInfo newPr = new PromptInfo();
+        //    newPr.message = "Do you wanna prompt?";
+        //    newPr.options = new string[2];
+        //    newPr.options[0] = "Yuuuup";
+        //    newPr.options[1] = "Naaaah man";
+        //    Prompt(newPr);
+        //}
     }
 }

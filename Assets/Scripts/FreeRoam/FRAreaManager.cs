@@ -26,4 +26,9 @@ public class FRAreaManager : MonoBehaviour
         }
         OnSceneEnter.Invoke();
     }
+
+    public void PromptSave()
+    {
+        GlobalCanvasManager.Instance.SaveDataUIHandler.SavePrompt();
+    }
 }

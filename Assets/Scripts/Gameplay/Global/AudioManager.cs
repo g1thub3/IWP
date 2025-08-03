@@ -62,6 +62,9 @@ public class AudioManager : SingletonScriptableObject<AudioManager>
                 _bgmDictionary.Add(bgm.name, bgm);
             }
         }
+
+        _sfxVol = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
+        _bgmVol = PlayerPrefs.GetFloat("BGMVolume", 0.5f);
     }
 
     private AudioData GetSFX(string name)

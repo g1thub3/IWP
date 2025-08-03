@@ -9,6 +9,8 @@ using static Quest;
 [CreateAssetMenu(fileName = "GlobalGameManager", menuName = "Scriptable Objects/GlobalGameManager")]
 public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
 {
+    public float playTime;
+
     [Header("Game Data")]
     public static int adventurerRankMax = 30;
     public int adventurerEXP;
@@ -265,6 +267,7 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
 
     private void OnEnable()
     {
+        playTime = 0;
         if (ownedQuests == null)
             ownedQuests = new List<Quest>();
         else

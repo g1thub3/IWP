@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>, IYieldable
 {
@@ -39,6 +40,11 @@ public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>, 
         get { return GetComponent<PauseHandler>(); }
     }
 
+    public SaveDataUIHandler SaveDataUIHandler
+    {
+        get { return GetComponent<SaveDataUIHandler>(); }
+    }
+
     public bool IsInteractionActive
     {   
         get { return IsInProgress() || PromptHandler.IsInProgress() || DialogueHandler.IsInProgress() || LevelUpHandler.IsInProgress() || CutsceneManager.Instance.IsInProgress() || SettingsHandler.IsOpen || PauseHandler.IsOpen; }
@@ -46,13 +52,13 @@ public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>, 
 
     public bool IsInteractionActiveFreeRoam
     {
-        get { return IsInteractionActive || FreeRoamMenuHandler.IsOpen; }
+        get { return IsInteractionActive || FreeRoamMenuHandler.IsOpen || SaveDataUIHandler.IsOpen; }
     }
 
     public void PrintInteractions()
     {
-        Debug.Log(string.Format("Transition: {6} | Prompt: {0} | Dialogue: {1} | Level Up: {2} | FreeRoam: {3} | Cutscene: {4} | Settings: {5}", 
-            PromptHandler.IsInProgress(), DialogueHandler.IsInProgress(), LevelUpHandler.IsInProgress(), FreeRoamMenuHandler.IsOpen, CutsceneManager.Instance.IsInProgress(), SettingsHandler.IsOpen, IsInProgress()));
+        Debug.Log(string.Format("Prompt: {0} | Dialogue: {1} | Level Up: {2} | FreeRoam: {3} | Cutscene: {4} | Settings: {5} | Transition: {6} | Save: {7}", 
+            PromptHandler.IsInProgress(), DialogueHandler.IsInProgress(), LevelUpHandler.IsInProgress(), FreeRoamMenuHandler.IsOpen, CutsceneManager.Instance.IsInProgress(), SettingsHandler.IsOpen, IsInProgress(), SaveDataUIHandler.IsOpen));
     }
 
     private void Start()
@@ -70,6 +76,10 @@ public class GlobalCanvasManager : SingletonMonobehaviour<GlobalCanvasManager>, 
         {
             if (GlobalInput.actions["Accept"].WasPressedThisFrame() || GlobalInput.actions["Skip"].IsPressed())
                 CutsceneManager.Instance.CutsceneSkipInput();
+        }
+        if (SceneManager.GetActiveScene().name != "MainMenuScene" && SceneManager.GetActiveScene().name != "SplashScreenScene")
+        {
+            GlobalGameManager.Instance.playTime += Time.deltaTime;
         }
     }
 

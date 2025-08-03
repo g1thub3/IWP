@@ -84,23 +84,6 @@ public class BankHandler : MonoBehaviour
     public void OpenPrompt()
     {
         GlobalCanvasManager.Instance.PromptHandler.Prompt(_bankPrompt);
-        StartCoroutine(ProcessPrompt());
-    }
-
-    private IEnumerator ProcessPrompt()
-    {
-        while (GlobalCanvasManager.Instance.PromptHandler.IsInProgress())
-        {
-            yield return new WaitForEndOfFrame();
-        }
-        int ans = GlobalCanvasManager.Instance.PromptHandler.TakeAnswer();
-        if (ans == 1)
-        {
-            Open(true);
-        } else if (ans == 2)
-        {
-            Open(false);
-        }
     }
 
     private void Close()
@@ -117,12 +100,18 @@ public class BankHandler : MonoBehaviour
         _dialogueHandler = GlobalCanvasManager.Instance.DialogueHandler;
         _canClose = false;
 
-        _bankPrompt = new PromptInfo();
-        _bankPrompt.message = "What would you like to do?";
-        _bankPrompt.options = new string[3];
-        _bankPrompt.options[0] = "Leave";
-        _bankPrompt.options[1] = "Deposit Gold";
-        _bankPrompt.options[2] = "Withdraw Gold";
+        _bankPrompt = PromptInfo.New("What would you like to do?", new string[] { "Leave", "Deposit Gold", "Withdraw Gold" }, new PromptInfo.OptionFunction[]
+        {
+            PromptInfo.NullFunction,
+            delegate
+            {
+                Open(true);
+            },
+            delegate
+            {
+                Open(false);
+            }
+        });
     }
 
     private void Update()
