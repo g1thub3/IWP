@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DayCompleter : MonoBehaviour
@@ -10,98 +11,120 @@ public class DayCompleter : MonoBehaviour
     {
         GlobalCanvasManager.LoadInstance();
 
-        if (GlobalGameManager.Instance.DayOver)
+        _dialogueHandler = GlobalCanvasManager.Instance.DialogueHandler;
+        _levelupHandler = GlobalCanvasManager.Instance.LevelUpHandler;
+        for (int i = GlobalGameManager.Instance.inventory.Count - 1; i >= 0; i--)
         {
-            _dialogueHandler = GlobalCanvasManager.Instance.DialogueHandler;
-            _levelupHandler = GlobalCanvasManager.Instance.LevelUpHandler;
-
-            GlobalGameManager.Instance.DayOver = false;
-
-            for (int i = GlobalGameManager.Instance.inventory.Count - 1; i >= 0; i--)
+            if (GlobalGameManager.Instance.inventory[i].IsQuestTarget)
             {
-                if (GlobalGameManager.Instance.inventory[i].IsQuestTarget)
-                {
-                    GlobalGameManager.Instance.inventory.RemoveAt(i);
-                }
+                GlobalGameManager.Instance.inventory.RemoveAt(i);
             }
-
-            StartCoroutine(QuestCompleteSequence());
         }
+        StartCoroutine(QuestCompleteSequence());
+
         GlobalGameManager.Instance.CycleDay();
     }
 
     private IEnumerator QuestCompleteSequence()
     {
-        bool hasQuestComplete = false;
-        for (int i = GlobalGameManager.Instance.ownedQuests.Count - 1; i >= 0; i--)
+        if (GlobalGameManager.Instance.DayOver)
         {
-            var q = GlobalGameManager.Instance.ownedQuests[i];
-            if (q.quest.questCompleted)
+            GlobalGameManager.Instance.DayOver = false;
+            DialogueData[] dayOver = new DialogueData[] { new DialogueData(new string[] { "With the day having ended, and the sun setting over the horizon, Cherry goes to sleep, hoping to wake up well-rested for another day of adventuring." }) };
+            _dialogueHandler.PromptSequence(dayOver);
+            while (_dialogueHandler.IsInProgress())
             {
-                hasQuestComplete = true;
-                string[] speech = {
+                yield return new WaitForEndOfFrame();
+            }
+
+            bool hasQuestComplete = false;
+            for (int i = GlobalGameManager.Instance.ownedQuests.Count - 1; i >= 0; i--)
+            {
+                var q = GlobalGameManager.Instance.ownedQuests[i];
+                if (q.quest.questCompleted)
+                {
+                    hasQuestComplete = true;
+                    string[] speech = {
                     "Cherry completed a quest from " + q.clientName + "!"
                 };
-                DialogueData begin = new DialogueData(speech);
-                DialogueData[] sequence = { begin };
+                    DialogueData begin = new DialogueData(speech);
+                    DialogueData[] sequence = { begin };
 
-                _dialogueHandler.PromptSequence(sequence);
-                while (_dialogueHandler.IsInProgress())
-                {
-                    yield return new WaitForEndOfFrame();
-                }
-
-                q.goldReward.Award();
-
-                sequence[0].content[0] = q.clientName + " awarded " + q.goldReward.Amount + " Gold!";
-                _dialogueHandler.PromptSequence(sequence);
-                while (_dialogueHandler.IsInProgress())
-                {
-                    yield return new WaitForEndOfFrame();
-                }
-
-                q.itemReward.Award();
-
-
-                sequence[0].content[0] = q.clientName + " awarded ";
-                for (int j = 0; j < q.itemReward.Reward.Count; j++)
-                {
-                    sequence[0].content[0] += q.itemReward.Reward[j].ToString() + (j == q.itemReward.Reward.Count - 1 ? "!" : ", ");
-                }
-                _dialogueHandler.PromptSequence(sequence);
-                while (_dialogueHandler.IsInProgress())
-                {
-                    yield return new WaitForEndOfFrame();
-                }
-
-                q.adventurerReward.Award();
-                if (_levelupHandler.IsInProgress())
-                {
-                    while (_levelupHandler.IsInProgress())
-                    {
-                        yield return new WaitForEndOfFrame();
-                    }
-                } else
-                {
-                    sequence[0].content[0] = q.clientName + " awarded " + q.adventurerReward.Amount + " Adventurer Exp!";
                     _dialogueHandler.PromptSequence(sequence);
                     while (_dialogueHandler.IsInProgress())
                     {
                         yield return new WaitForEndOfFrame();
                     }
-                }
 
-                GlobalGameManager.Instance.ownedQuests.RemoveAt(i);
+                    q.goldReward.Award();
+
+                    sequence[0].content[0] = q.clientName + " awarded " + q.goldReward.Amount + " Gold!";
+                    _dialogueHandler.PromptSequence(sequence);
+                    while (_dialogueHandler.IsInProgress())
+                    {
+                        yield return new WaitForEndOfFrame();
+                    }
+
+                    q.itemReward.Award();
+
+
+                    sequence[0].content[0] = q.clientName + " awarded ";
+                    for (int j = 0; j < q.itemReward.Reward.Count; j++)
+                    {
+                        sequence[0].content[0] += q.itemReward.Reward[j].ToString() + (j == q.itemReward.Reward.Count - 1 ? "!" : ", ");
+                    }
+                    _dialogueHandler.PromptSequence(sequence);
+                    while (_dialogueHandler.IsInProgress())
+                    {
+                        yield return new WaitForEndOfFrame();
+                    }
+
+                    q.adventurerReward.Award();
+                    if (_levelupHandler.IsInProgress())
+                    {
+                        while (_levelupHandler.IsInProgress())
+                        {
+                            yield return new WaitForEndOfFrame();
+                        }
+                    }
+                    else
+                    {
+                        sequence[0].content[0] = q.clientName + " awarded " + q.adventurerReward.Amount + " Adventurer Exp!";
+                        _dialogueHandler.PromptSequence(sequence);
+                        while (_dialogueHandler.IsInProgress())
+                        {
+                            yield return new WaitForEndOfFrame();
+                        }
+                    }
+
+                    GlobalGameManager.Instance.ownedQuests.RemoveAt(i);
+                }
+                else if (!GlobalGameManager.Instance.ownedQuests[i].quest.questPossible)
+                {
+                    GlobalGameManager.Instance.ownedQuests.RemoveAt(i);
+                }
+                yield return new WaitForEndOfFrame();
             }
-            else if (!GlobalGameManager.Instance.ownedQuests[i].quest.questPossible)
+
+            PromptInfo savePrompt = PromptInfo.New("Would you like to save the game?", new string[] { "Yes", "No" }, new PromptInfo.OptionFunction[]
             {
-                GlobalGameManager.Instance.ownedQuests.RemoveAt(i);
+                delegate
+                {
+                    GlobalCanvasManager.Instance.SaveDataUIHandler.SaveMenu();
+                },
+                PromptInfo.NullFunction
+            });
+            GlobalCanvasManager.Instance.PromptHandler.Prompt(savePrompt);
+            while (GlobalCanvasManager.Instance.IsInteractionActiveFreeRoam)
+            {
+                yield return new WaitForEndOfFrame();
             }
-            yield return new WaitForEndOfFrame();
+
+            if (hasQuestComplete)
+            {
+                GameStoryManager.Instance.OnQuestComplete();
+            }
         }
-        if (hasQuestComplete)
-        {
-            GameStoryManager.Instance.OnQuestComplete();
-        }
+        GlobalCanvasManager.Instance.FadeTransition(1.0f, null, false, false);
     }
 }

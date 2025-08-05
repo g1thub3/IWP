@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Global\VFXManager.cs" />
     <Compile Include="Assets\Scripts\FreeRoam\FRMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Misc\SpriteAnimation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\UI\LevelUpHandler.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuHandler.cs" />
@@ -89,7 +90,6 @@
     <Compile Include="Assets\Scripts\Gameplay\Moves\BodySlamAttack.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGSeed.cs" />
     <Compile Include="Assets\Scripts\Dungeon\Seeds\StaticSeed.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Visuals\RuneCircle.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Item.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\CherryBeamAttack.cs" />
     <Compile Include="Assets\Scripts\Story\GameStoryManager.cs" />
@@ -99,7 +99,6 @@
     <Compile Include="Assets\Scripts\Dungeon\DGItemContainer.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Global\CharacterProfiles.cs" />
     <Compile Include="Assets\Scripts\Utilities\CustomEditor\DGEntityEditor.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Visuals\DamageIndicator.cs" />
     <Compile Include="Assets\Scripts\Story\CutsceneActor.cs" />
     <Compile Include="Assets\Scripts\UI\DungeonUIHandler.cs" />
     <Compile Include="Assets\Scripts\Utilities\CustomEditor\GameStoryManagerEditor.cs" />
@@ -116,7 +115,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\UI\QuestBoardHandler.cs" />
     <Compile Include="Assets\Scripts\Utilities\IDebuggable.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Visuals\DungeonIntro.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Global\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Story\Storyline.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
@@ -126,13 +124,14 @@
     <Compile Include="Assets\Scripts\Dungeon\Seeds\BasicSeed.cs" />
     <Compile Include="Assets\Scripts\UI\DungeonTransitionHandler.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGNPC.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Misc\RuneCircle.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGGenerator.cs" />
     <Compile Include="Assets\Scripts\Utilities\CustomEditor\CutsceneActorEditor.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Visuals\SpriteAnimation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\Utilities\CustomEditor\CharacterProfileEditor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Misc\InteractIndicator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\CharacterBehaviour.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Global\GameSceneManager.cs" />
@@ -143,17 +142,19 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\DefaultAttack.cs" />
     <Compile Include="Assets\Scripts\Gameplay\QuestCompetitor.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Visuals\InteractIndicator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Quest.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\StatChanger.cs" />
     <Compile Include="Assets\Scripts\UI\SettingsHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Items\ReplenishingItem.cs" />
     <Compile Include="Assets\Scripts\Utilities\CustomEditor\DialogueSequenceEditor.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Misc\DamageIndicator.cs" />
     <Compile Include="Assets\Scripts\Dungeon\AI\AIWander.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGData.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGEntity.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Misc\DungeonIntro.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Misc\Rotator.cs" />
     <Compile Include="Assets\Scripts\Story\GameStoryFunctions.cs" />
     <Compile Include="Assets\Scripts\Gameplay\CombatMove.cs" />
     <Compile Include="Assets\Scripts\UI\SaveDataUIHandler.cs" />
@@ -173,6 +174,7 @@
     <Compile Include="Assets\Scripts\UI\PauseHandler.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DGAIModule.cs" />
     <Compile Include="Assets\Scripts\Utilities\CustomEditor\CutsceneEditor.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Misc\SplashScreen.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Moves\SingeAttack.cs" />
     <Compile Include="Assets\Scripts\Gameplay\DayCompleter.cs" />
     <Compile Include="Assets\Scripts\UI\ShopStorageHandler.cs" />

@@ -87,7 +87,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
     public void QuestCompletePrompt()
     {
         PromptInfo newPrompt = PromptInfo.New("You completed a quest! Would you like to leave the dungeon now?",
-            new string[] { "Yes, No" },
+            new string[] { "Yes", "No" },
             new PromptInfo.OptionFunction[] {
                 delegate
                 {
@@ -707,7 +707,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
 
     private IEnumerator WaitForIntro()
     {
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(2.5f);
         AudioManager.Instance.PlayBGM(GlobalGameManager.Instance.selectedDungeon.bgm);
         ToNextFloor();
     }

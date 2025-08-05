@@ -20,12 +20,17 @@ MonoBehaviour:
       toOmit: []
       Controller: {fileID: 0}
   instructions:
-  - name: (Y) SCENESETUP (FRDorm, Refresh)
+  - name: (Y) SCENESETUP (FRDorm, Don't Refresh)
     function: 0
     Yield: 1
     Data:
       dataList:
       - Key: SetupKey
+        Int: 0
+        Float: 0
+        String: FRDorm
+        Obj: {fileID: 0}
+      - Key: NoRefresh
         Int: 0
         Float: 0
         String: FRDorm

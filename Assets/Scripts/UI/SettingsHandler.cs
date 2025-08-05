@@ -79,7 +79,7 @@ public class SettingsHandler : MonoBehaviour
             PlayerPrefs.SetFloat("BGMVolume", AudioManager.Instance.BGMVolume);
         } else
         {
-            PlayerPrefs.SetFloat("SFXVolume", AudioManager.Instance.BGMVolume);
+            PlayerPrefs.SetFloat("SFXVolume", AudioManager.Instance.SFXVolume);
         }
     }
 

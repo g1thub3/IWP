@@ -41,7 +41,7 @@ public class GameSceneManager : SingletonScriptableObject<GameSceneManager>
         {
             GlobalCanvasManager.Instance.FreeRoamMenuHandler.enabled = true;
             SceneManager.LoadScene("FRDorm");
-        });
+        }, true, false);
     }
 
     public void ToSavedScene(string scene)

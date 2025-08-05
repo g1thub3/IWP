@@ -29,7 +29,8 @@ MonoBehaviour:
     setup:
       CameraFocusPoint: {fileID: 0}
       props: {fileID: 7764330384495812264, guid: dd54da6c5b954fa438035149e9a47191, type: 3}
-      toOmit: []
+      toOmit:
+      - DayCompleter
       Controller: {fileID: 0}
   instructions:
   - name: (Y) SCENESETUP (DungeonScene, Refresh)
@@ -41,21 +42,6 @@ MonoBehaviour:
         Int: 0
         Float: 0
         String: DungeonScene
-        Obj: {fileID: 0}
-  - name: (_) FADE_OUT (1)
-    function: 12
-    Yield: 0
-    Data:
-      dataList: []
-  - name: (_) BGM (Guild)
-    function: 10
-    Yield: 0
-    Data:
-      dataList:
-      - Key: BGM
-        Int: 0
-        Float: 0
-        String: Guild
         Obj: {fileID: 0}
   - name: (_) SET_CAMERA_FOCUS (Object, Force, Don't Confine)
     function: 6
@@ -76,6 +62,21 @@ MonoBehaviour:
         Int: 0
         Float: 0
         String: 
+        Obj: {fileID: 0}
+  - name: (_) FADE_OUT (1)
+    function: 12
+    Yield: 0
+    Data:
+      dataList: []
+  - name: (_) BGM (Guild)
+    function: 10
+    Yield: 0
+    Data:
+      dataList:
+      - Key: BGM
+        Int: 0
+        Float: 0
+        String: Guild
         Obj: {fileID: 0}
   - name: (Y) DIALOGUE (1)
     function: 1
@@ -697,8 +698,18 @@ MonoBehaviour:
         Float: 0
         String: 
         Obj: {fileID: 11400000, guid: 395e19faffbef0e45a3ec92c1788fb63, type: 2}
-  - name: (Y) FADE_INOUT (1)
-    function: 13
+  - name: (Y) FADE_IN (1)
+    function: 11
     Yield: 1
     Data:
       dataList: []
+  - name: (Y) SET_CONTROLLER_POSITION (CherryMove2)
+    function: 5
+    Yield: 1
+    Data:
+      dataList:
+      - Key: Point
+        Int: 0
+        Float: 0
+        String: CherryMove2
+        Obj: {fileID: 0}

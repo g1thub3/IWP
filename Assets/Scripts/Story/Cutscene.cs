@@ -66,11 +66,11 @@ public class CutsceneSetup
     public void Omit()
     {
         omitted = new List<GameObject>();
-        var dayComplete = GameObject.FindFirstObjectByType<DayCompleter>();
-        if (dayComplete != null) {
-            omitted.Add(dayComplete.gameObject);
-            dayComplete.gameObject.SetActive(false);
-        }
+        //var dayComplete = GameObject.FindFirstObjectByType<DayCompleter>();
+        //if (dayComplete != null) {
+        //    omitted.Add(dayComplete.gameObject);
+        //    dayComplete.gameObject.SetActive(false);
+        //}
         var areaManager = GameObject.FindFirstObjectByType<FRAreaManager>();
         if (areaManager != null) { 
             omitted.Add(areaManager.gameObject);
