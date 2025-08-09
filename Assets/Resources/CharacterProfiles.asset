@@ -725,7 +725,7 @@ MonoBehaviour:
     expAward: 25
     availableMoves: []
   - name: (23) FERN
-    characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    characterSprite: {fileID: -4069889025327842648, guid: fc7aeee78e05b6b45bd93b01afdfd5e1, type: 3}
     characterName: Fern
     animatorController: {fileID: 9100000, guid: a1455584170615d418243c6ee93fbbb7, type: 2}
     maxHealth:
@@ -756,7 +756,7 @@ MonoBehaviour:
     availableMoves:
     - {fileID: 11400000, guid: b87b721d7a84e694e90fc8e747856969, type: 2}
   - name: (24) DAHLIA
-    characterSprite: {fileID: 792778199420499268, guid: b96f669342d0f4c4e9ef15c78ce4df9d, type: 3}
+    characterSprite: {fileID: -5342734294758391624, guid: ba931767c950f7b44ae1ffb7544365cc, type: 3}
     characterName: Dahlia
     animatorController: {fileID: 9100000, guid: 25137caca0a4f9142b4bed8cfbf2b5ee, type: 2}
     maxHealth:
@@ -796,4 +796,5 @@ MonoBehaviour:
   - Heidi
   - Luna
   - Perry
+  randomEnumOmissions: 0000000001000000020000000300000004000000050000000600000007000000080000001700000018000000
   possibleCompetitors: 02000000030000000400000005000000060000000700000008000000

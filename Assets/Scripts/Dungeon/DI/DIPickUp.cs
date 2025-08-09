@@ -53,7 +53,7 @@ public class DIPickUp : SingletonScriptableObject<DIPickUp>, IDGInteraction
             }
         }
 
-        if (cb.character.HeldItem != null)
+        if (cb.character.HeldItem != null || container.Item.IsQuestTarget) // Bandaid: Enemies should be able to pick up quest targets but I don't have time to account for that
         {
             ui.AddEntry(interacted.gameObject.name + " passed over a " + container.Item.module.itemName + (container.Item.IsQuestTarget ? " (Quest)" : string.Empty) + ".");
             return false;

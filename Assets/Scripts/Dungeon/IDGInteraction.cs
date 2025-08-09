@@ -10,6 +10,30 @@ public class KeyDataEntry
     public float Float;
     public string String;
     public Object Obj;
+
+    public static KeyDataEntry ConstructInt(string key, int val)
+    {
+        var newEntry = new KeyDataEntry();
+        newEntry.Key = key;
+        newEntry.Int = val;
+        return newEntry;
+    }
+
+    public static KeyDataEntry ConstructFloat(string key, float val)
+    {
+        var newEntry = new KeyDataEntry();
+        newEntry.Key = key;
+        newEntry.Float = val;
+        return newEntry;
+    }
+
+    public static KeyDataEntry ConstructString(string key, string val)
+    {
+        var newEntry = new KeyDataEntry();
+        newEntry.Key = key;
+        newEntry.String = val;
+        return newEntry;
+    }
 }
 
 [System.Serializable]

@@ -22,6 +22,7 @@ public class DIRescue : SingletonScriptableObject<DIRescue>, IDGInteraction
             dgGameManager.QuestCompletePrompt();
         } else
         {
+            q.quest.questCompleted = false;
             q.quest.questPossible = false;
             ui.UpdateQuestUI();
             dgGameManager.QuestFailPrompt(q);

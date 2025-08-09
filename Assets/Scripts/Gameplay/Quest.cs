@@ -66,6 +66,7 @@ public class AdventurerReward : IQuestReward {
 [System.Serializable]
 public class Quest
 {
+    public int questID;
     // WHO THE QUEST IS FROM
     public string clientName;
     public CHARACTER_ENUM clientCharacter;
@@ -148,6 +149,8 @@ public class Quest
 
     public static Quest CreateQuestData(QUEST_TYPE qType, bool isComp = false)
     {
+        string cliName = CharacterProfiles.Instance.GetRandomNPCName();
+        CHARACTER_ENUM cliChar = CharacterProfiles.Instance.GetRandomEnum();
         QuestData newQuest;
         switch (qType)
         {
@@ -156,10 +159,10 @@ public class Quest
                 newQuest = new RetrievalQuest();
                 break;
             case QUEST_TYPE.RESCUE:
-                newQuest = new RescueQuest();
+                newQuest = new RescueQuest(cliName, cliChar);
                 break;
         }
-        var newData = new Quest(newQuest, CharacterProfiles.Instance.GetRandomNPCName(),(CHARACTER_ENUM)Random.Range(2, (int)CHARACTER_ENUM.NUM_CHARACTERS));
+        var newData = new Quest(newQuest, cliName, cliChar);
         if (isComp)
         {
             int compLevel = 1 + (Random.Range(0, GlobalGameManager.Instance.adventurerRanking));
@@ -171,6 +174,39 @@ public class Quest
             newData.competitiveLevel = 0;
         }
         newData.CalculateDifficulty();
+        int newID = Random.Range(100000, 1000000);
+        bool found = false;
+        while (!found)
+        {
+            found = true;
+            foreach (var q in GlobalGameManager.Instance.ownedQuests)
+            {
+                if (q.questID == newID)
+                {
+                    found = false;
+                    break;
+                }
+            }
+            foreach (var q in GlobalGameManager.Instance.availableQuests)
+            {
+                if (q.questID == newID || found == false)
+                {
+                    found = false;
+                    break;
+                }
+            }
+            foreach (var q in GlobalGameManager.Instance.availableCompetitiveQuests)
+            {
+                if (q.questID == newID || found == false)
+                {
+                    found = false;
+                    break;
+                }
+            }
+            if (found) break;
+            newID = Random.Range(100000, 1000000);
+        }
+        newData.questID = newID;
         return newData;
     }
 
@@ -239,6 +275,8 @@ public class Quest
 [System.Serializable]
 public abstract class QuestData
 {
+    protected DGObject target;
+    public KeyDataList dataList;
     public DGData dungeon;
     public int floor;
     public bool questPossible;
@@ -255,6 +293,11 @@ public abstract class QuestData
     public abstract string GetObjective(Quest info);
 
     public abstract DGObject Execute(Quest info, DGGenerator dungeonGen);
+    public void SetTarget(DGObject newTarget) => target = newTarget;
+    public virtual KeyDataList GetData() {
+        dataList = new KeyDataList();
+        return dataList;
+    }
 }
 
 [System.Serializable]
@@ -269,16 +312,29 @@ public class RetrievalQuest : QuestData
         ToRetrieve.module = Item.foundAssets[Random.Range(0, Item.foundAssets.Length)];
         ToRetrieve.Set();
     }
+
+    public RetrievalQuest(string key)
+    {
+        ToRetrieve = Item.New(key);
+    }
     public override DGObject Execute(Quest info, DGGenerator dungeonGen) {
         // Place the item in the dungeon once floor entered
-        var room = dungeonGen.GetRandomRoom();
-        var spawnTile = dungeonGen.SearchRandomTileInRoom(room, SearchConditions.New(false));
+        TileInfo spawnTile = null;
+        if (dataList.GetData("X") != null && dataList.GetData("Z") != null)
+        {
+            spawnTile = dungeonGen.CurrentFloor.CoordToTileInfo(new TileCoord(dataList.GetData("X").Int, dataList.GetData("Z").Int));
+        } else
+        {
+            var room = dungeonGen.GetRandomRoom();
+            spawnTile = dungeonGen.SearchRandomTileInRoom(room, SearchConditions.New(false));
+        }
         if (spawnTile != null)
         {
             var questItem = Tilesets.Instance.ConstructItemInteractable(ToRetrieve);
             questItem.GetComponent<DGItemContainer>().Item.IsQuestTarget = true;
             dungeonGen.InsertItem(questItem, spawnTile);
-            return spawnTile.item;
+            target = spawnTile.item;
+            return target;
         }
         return null;
     }
@@ -308,22 +364,53 @@ public class RetrievalQuest : QuestData
         }
         return null;
     }
+
+    public override KeyDataList GetData()
+    {
+        base.GetData();
+        dataList.dataList.Add(KeyDataEntry.ConstructString("Key",ToRetrieve.itemKey));
+        if (target != null)
+        {
+            dataList.dataList.Add(KeyDataEntry.ConstructInt("X", target.Position.x));
+            dataList.dataList.Add(KeyDataEntry.ConstructInt("Z", target.Position.z));
+        }
+        return dataList;
+    }
 }
 
 [System.Serializable]
 public class RescueQuest : QuestData
 {
     public CharacterEntry ToRescue;
-    public RescueQuest()
+    public RescueQuest(string clientName, CHARACTER_ENUM clientCharacter)
     {
-        ToRescue = CharacterEntry.Create(CharacterProfiles.Instance.GetRandomEnum(), 5);
+        ToRescue = CharacterEntry.Create(clientCharacter, 5);
+        ToRescue.characterName = clientName;
     }
     public override DGObject Execute(Quest info, DGGenerator dungeonGen)
     {
         // Place the item in the dungeon once floor entered
-        var newNPC = dungeonGen.SpawnNPC(DG_CHARACTER_TYPE.QUEST, ToRescue);
+        TileCoord point = null;
+        if (dataList.GetData("X") != null && dataList.GetData("Z") != null)
+        {
+            point = new TileCoord(dataList.GetData("X").Int, dataList.GetData("Z").Int);
+        }
+        var newNPC = dungeonGen.SpawnNPC(DG_CHARACTER_TYPE.QUEST, ToRescue, point);
         newNPC.gameObject.name = info.clientName;
-        return newNPC.GetComponent<DGObject>();
+        if (dataList.GetData("HP") != null && dataList.GetData("HG") != null && dataList.GetData("EN") != null && dataList.GetData("MN") != null)
+        {
+            var cb = newNPC.GetComponent<CharacterBehaviour>();
+            cb.health = dataList.GetData("HP").Int;
+            cb.hunger = dataList.GetData("HG").Int;
+            cb.energy = dataList.GetData("EN").Int;
+            cb.mana = dataList.GetData("MN").Int;
+        }
+        if (dataList.GetData("FX") != null && dataList.GetData("FZ") != null)
+        {
+            newNPC.GetComponent<DGEntity>().FaceDir = new TileCoord(dataList.GetData("FX").Int, dataList.GetData("FZ").Int);
+        }
+        target = newNPC.GetComponent<DGObject>();
+        return target;
     }
 
     public override string GetTitle(Quest info)
@@ -351,5 +438,25 @@ public class RescueQuest : QuestData
             }
         }
         return null;
+    }
+
+    public override KeyDataList GetData()
+    {
+        base.GetData();
+        if (target != null)
+        {
+            dataList.dataList.Add(KeyDataEntry.ConstructInt("X", target.Position.x));
+            dataList.dataList.Add(KeyDataEntry.ConstructInt("Z", target.Position.z));
+            var cb = target.GetComponent<CharacterBehaviour>();
+            dataList.dataList.Add(KeyDataEntry.ConstructInt("HP", cb.health));
+            dataList.dataList.Add(KeyDataEntry.ConstructInt("HG", cb.hunger));
+            dataList.dataList.Add(KeyDataEntry.ConstructInt("EN", cb.energy));
+            dataList.dataList.Add(KeyDataEntry.ConstructInt("MN", cb.mana));
+
+            var entity = target.GetComponent<DGEntity>();
+            dataList.dataList.Add(KeyDataEntry.ConstructInt("FX", entity.FaceDir.x));
+            dataList.dataList.Add(KeyDataEntry.ConstructInt("FZ", entity.FaceDir.z));
+        }
+        return dataList;
     }
 }

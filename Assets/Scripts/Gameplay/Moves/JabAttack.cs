@@ -11,7 +11,7 @@ public class JabAttack : AttackMove
     private IEnumerator MoveAnimation(CharacterBehaviour user, DGGameManager _dgGameManager, DungeonUIHandler _dungeonUI)
     {
         var selfEntity = user.GetComponent<DGEntity>();
-        var hitArea = selfEntity.Position + selfEntity.faceDir;
+        var hitArea = selfEntity.Position + selfEntity.FaceDir;
         var selfTile = selfEntity.Floor.tiles[selfEntity.Floor.CoordToIndex(selfEntity.Position)];
         var hitTile = selfEntity.Floor.tiles[selfEntity.Floor.CoordToIndex(hitArea)];
         Vector3 endPos = hitTile.CoordToPosition();
@@ -56,7 +56,7 @@ public class JabAttack : AttackMove
     {
         var selfEntity = user.GetComponent<DGEntity>();
 
-        var hitArea = selfEntity.Position + selfEntity.faceDir;
+        var hitArea = selfEntity.Position + selfEntity.FaceDir;
         if (user.HitDetect(hitArea) == null)
             return false;
         TileInfo tile = selfEntity.Floor.CoordToTileInfo(hitArea);

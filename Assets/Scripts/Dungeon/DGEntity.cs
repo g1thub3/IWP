@@ -43,8 +43,29 @@ public class DGEntity : DGObject
     private string _direction;
     public ANIMATION_ENUM _action;
 
-    public TileCoord faceDir;
+    protected TileCoord faceDir;
     private Transition _moveTransition;
+
+    public TileCoord FaceDir
+    {
+        get {
+            if (faceDir == null)
+                faceDir = new TileCoord(0, -1);
+            return faceDir; 
+        }
+        set
+        {
+            faceDir = value;
+            if (faceDir.z == 1)
+                NumToDir(2);
+            if (faceDir.x == 1)
+                NumToDir(3);
+            if (faceDir.z == -1)
+                NumToDir(0);
+            if (faceDir.x == -1)
+                NumToDir(1);
+        }
+    }
 
     public bool IsPerformingAction
     {
@@ -154,17 +175,7 @@ public class DGEntity : DGObject
             return false;
         }
 
-        faceDir.x = right;
-        faceDir.z = up;
-
-        if (up == 1)
-            NumToDir(2);
-        if (right == 1)
-            NumToDir(3);
-        if (up == -1)
-            NumToDir(0);
-        if (right == -1)
-            NumToDir(1);
+        FaceDir = new TileCoord(right, up);
 
         TileCoord newPosition = position + new TileCoord(right, up);
         TileCoord xChange = position + new TileCoord(right, 0);
@@ -466,7 +477,7 @@ public class DGEntity : DGObject
 
     private void PlayAnimation()
     {
-        string state = string.Format("{0}_{1}", _actionKeys[(int)_action], _direction);
+        string state = string.Format("{0}_{1}", _actionKeys[(int)_action], _direction != null ? _direction : "south");
         _animator.Play(state);
     }
 
@@ -474,15 +485,13 @@ public class DGEntity : DGObject
     {
         if (x == z && z == 0)
             return;
-        faceDir.x = x;
-        faceDir.z = z;
+        FaceDir = new TileCoord(x, z);
     }
     protected new void Start()
     {
         base.Start();
         _moveTransition = new Transition();
         _moveTransition.max = _moveTime;
-        faceDir = new TileCoord(0, -1);
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _performingAction = false;
         _dgGameManager = FindAnyObjectByType<DGGameManager>();
@@ -499,7 +508,6 @@ public class DGEntity : DGObject
             _animator.runtimeAnimatorController = CharacterProfiles.Instance.characterProfiles[0].animatorController;
         }
         _action = ANIMATION_ENUM.IDLE;
-        _direction = "south";
         _actionKeys = new string[5];
         _actionKeys[(int)ANIMATION_ENUM.IDLE] = "idle";
         _actionKeys[(int)ANIMATION_ENUM.WALK] = "walk";

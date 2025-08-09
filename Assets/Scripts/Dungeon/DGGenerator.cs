@@ -1,8 +1,8 @@
-using UnityEngine;
-using Unity.Cinemachine;
-using UnityEngine.InputSystem;
 using System.Collections.Generic;
-using Unity.Jobs;
+using Unity.Cinemachine;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public struct SearchConditions {
     public static SearchConditions New(bool hasItem = false, bool isWall = false, bool hasEntity = false)
@@ -60,6 +60,11 @@ public class DGGenerator : MonoBehaviour, IDebuggable
     public List<CharacterBehaviour> ActiveParty
     {
         get { return _activeParty; }
+    }
+
+    public List<CharacterEntry> TempParty
+    {
+        get { return _tempParty; }
     }
 
     public FloorRoom GetRandomRoom()
@@ -123,6 +128,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
 
     public void FocusCameraOnPlayer()
     {
+        if (_currentPlayer == null) return;
         _virtualCam.ForceCameraPosition(_currentFloor.tiles[_currentFloor.CoordToIndex(_currentPlayer.Position)].CoordToPosition(), Quaternion.identity);
         _virtualCam.Follow = _currentPlayer.transform;
     }
@@ -243,12 +249,24 @@ public class DGGenerator : MonoBehaviour, IDebuggable
             _virtualCam.ForceCameraPosition(_currentFloor.tiles[_currentFloor.CoordToIndex(_currentPlayer.Position)].CoordToPosition(), Quaternion.identity);
             _virtualCam.Follow = newPlayer.transform;
         }
+        if (SaveDataManager.Instance.QuickSaveFile != null)
+        {
+            var file = SaveDataManager.Instance.QuickSaveFile;
+            var playerData = file.floorData.activeParty[0];
+            var entity = _currentPlayer.GetComponent<DGEntity>();
+            entity.Warp(playerData.position);
+            entity.FaceDir = playerData.direction;
+            var cb = _currentPlayer.GetComponent<CharacterBehaviour>();
+            playerData.LoadStats(cb);
+        }
+        _currentPlayer.gameObject.name = newPlayer.GetComponent<CharacterBehaviour>().character.characterName;
     }
 
     private void SpawnParty()
     {
         if ((GlobalGameManager.Instance.party.Count + _tempParty.Count) < 2)
             return;
+        var file = SaveDataManager.Instance.QuickSaveFile;
         for (int i = 1; i < GlobalGameManager.Instance.party.Count; i++)
         {
             var spawnTile = SearchNextAvailableTile(_currentFloor.CoordToTileInfo(_currentPlayer.Position), SearchConditions.New(), 0, 0, 10);
@@ -256,6 +274,18 @@ public class DGGenerator : MonoBehaviour, IDebuggable
             newPartyMember.GetComponent<CharacterBehaviour>().SetUp(GlobalGameManager.Instance.party[i]);
             _activeEntities.Add(newPartyMember.GetComponent<DGEntity>());
             _activeParty.Add(newPartyMember.GetComponent<CharacterBehaviour>());
+
+            if (file != null)
+            {
+                var memberData = file.floorData.activeParty[i];
+                var entity = newPartyMember.GetComponent<DGEntity>();
+                entity.Warp(memberData.position);
+                entity.FaceDir = memberData.direction;
+
+                var cb = newPartyMember.GetComponent<CharacterBehaviour>();
+                memberData.LoadStats(cb);
+            }
+            newPartyMember.gameObject.name = newPartyMember.GetComponent<CharacterBehaviour>().character.characterName;
         }
         for (int i = 0; i < _tempParty.Count; i++)
         {
@@ -264,6 +294,18 @@ public class DGGenerator : MonoBehaviour, IDebuggable
             newPartyMember.GetComponent<CharacterBehaviour>().SetUp(_tempParty[i]);
             _activeEntities.Add(newPartyMember.GetComponent<DGEntity>());
             _activeParty.Add(newPartyMember.GetComponent<CharacterBehaviour>());
+
+            if (file != null)
+            {
+                var memberData = file.floorData.activeParty[i + GlobalGameManager.Instance.party.Count];
+                var entity = newPartyMember.GetComponent<DGEntity>();
+                entity.Warp(memberData.position);
+                entity.FaceDir = memberData.direction;
+
+                var cb = newPartyMember.GetComponent<CharacterBehaviour>();
+                memberData.LoadStats(cb);
+            }
+            newPartyMember.gameObject.name = newPartyMember.GetComponent<CharacterBehaviour>().character.characterName;
         }
         _dungeonUI.RegisterParty(ActiveParty);
     }
@@ -293,8 +335,9 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         return newCharacter;
     }
 
-    public List<DGEntity> SpawnCompetitors(QuestCompetitor competitor, int questIndex)
+    public List<DGEntity> SpawnCompetitors(QuestCompetitor competitor, int questIndex, int compIndex)
     {
+        var file = SaveDataManager.Instance.QuickSaveFile;
         var party = competitor.party;
         FloorRoom room = GetRandomRoom();
         TileInfo point = SearchRandomTileInRoom(room, SearchConditions.New());
@@ -310,12 +353,25 @@ public class DGGenerator : MonoBehaviour, IDebuggable
             
             newCharacter.GetComponent<CharacterBehaviour>().SetUp(character);
             newList.Add(newCharacter.GetComponent<DGEntity>());
+
+            if (file != null)
+            {
+                foreach (var q in file.questCompetitors)
+                {
+                    if (q.associatedID == competitor.associatedQuest.questID)
+                    {
+                        var data = q.competitors[compIndex];
+                        newCharacter.GetComponent<DGEntity>().Warp(data.partySpawned[i].position);
+                        newCharacter.GetComponent<DGEntity>().FaceDir = data.partySpawned[i].direction;
+                        data.partySpawned[i].LoadStats(newCharacter.GetComponent<CharacterBehaviour>());
+                        break;
+                    }
+                }
+            }
         }
         competitor.partySpawned = newList;
         return newList;
     }
-
-
 
     private void Start()
     {
@@ -361,10 +417,12 @@ public class DGGenerator : MonoBehaviour, IDebuggable
             {
                 firstInstances.Add(charProfile.characterName, cb);
                 cb.gameObject.name = charProfile.characterName;
+                cb.character.characterName = cb.gameObject.name;
             } else
             {
                 firstInstances[charProfile.characterName].name = charProfile.characterName + " 1";
                 cb.gameObject.name = charProfile.characterName + " " + charCount[charProfile.characterName];
+                cb.character.characterName = cb.gameObject.name;
             }
         }
     }
@@ -372,34 +430,59 @@ public class DGGenerator : MonoBehaviour, IDebuggable
     public void NewFloor(DGSeed givenSeed = null)
     {
         ClearFloor();
-        DGSeed selectedSeed = null;
-        if (givenSeed)
+        if (SaveDataManager.Instance.QuickSaveFile == null)
         {
-            selectedSeed = givenSeed;
+            DGSeed selectedSeed = null;
+            if (givenSeed)
+            {
+                selectedSeed = givenSeed;
+            }
+            else
+            {
+                selectedSeed = selectedDungeonData.floorSeed;
+            }
+            _currentFloor = selectedSeed.Generate(selectedDungeonData);
+            RenderCurrentFloor();
+            TileCoord point = null;
+            if (selectedSeed != null && selectedSeed is StaticSeed)
+            {
+                var seed = selectedSeed as StaticSeed;
+                point = new TileCoord(seed.playerSpawnX, seed.playerSpawnY);
+            }
+            if (_currentPlayer == null)
+            {
+                SpawnPlayer(point);
+                SpawnParty();
+            }
+            else
+            {
+                PlacePlayer(point);
+                PlaceParty();
+            }
+            if (selectedSeed != null)
+            {
+                selectedSeed.AddItems(this);
+                selectedSeed.AddEnemies(this);
+            }
+            RenameEntities();
         } else
         {
-            selectedSeed = selectedDungeonData.floorSeed;
-        }
-        _currentFloor = selectedSeed.Generate(selectedDungeonData);
-        RenderCurrentFloor();
-        TileCoord point = null;
-        if (selectedSeed is StaticSeed)
-        {
-            var seed = selectedSeed as StaticSeed;
-            point = new TileCoord(seed.playerSpawnX, seed.playerSpawnY);
-        }
-        if (_currentPlayer == null)
-        {
-            SpawnPlayer(point);
+            var file = SaveDataManager.Instance.QuickSaveFile;
+            _currentFloor = file.floorData.ExtractFloor();
+            RenderCurrentFloor();
+
+            for (int i = 0; i < file.floorData.tempParty.Count; i++)
+            {
+                var loadChar = file.floorData.tempParty[i].Extract();
+                _tempParty.Add(loadChar);
+            }
+
+            SpawnPlayer();
             SpawnParty();
-        } else
-        {
-            PlacePlayer(point);
-            PlaceParty();
+
+            file.floorData.AddItems(this);
+            file.floorData.AddEnemies(this);
         }
-        selectedSeed.AddItems(this);
-        selectedSeed.AddEnemies(this);
-        RenameEntities();
     }
 
     public void Update()

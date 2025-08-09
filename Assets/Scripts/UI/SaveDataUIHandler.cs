@@ -85,7 +85,12 @@ public class SaveDataUIHandler : LayeredUI
     [SerializeField] TMP_Text _leaderLvlCurr, _walletGoldCurr, _inventoryCurr, _playTimeCurr, _locationCurr, _bankGoldCurr, _storageCurr, _dgFloorCurr, _dgStatsCurr;
 
     private GameSaveData _selectedFile;
+    private DungeonSaveData _qsFile;
     private GameSaveData _currData;
+    private DungeonSaveData _currQSFile;
+
+    DGGameManager gameManager;
+    DGGenerator generator;
 
     public bool IsOpen
     {
@@ -97,12 +102,20 @@ public class SaveDataUIHandler : LayeredUI
     DialogueData[] _saveSequence;
 
     private bool _goToMainMenu;
+    public bool GoToMainMenu
+    {
+        set { _goToMainMenu = value; }
+    }
     [SerializeField] private float _overwriteCooldown = 1.5f;
     private float _overwriteTime;
 
     private new void Start()
     {
         base.Start();
+
+        gameManager = null;
+        generator = null;
+
         _inputManager = GetComponent<PlayerInput>();
         _overwriteTime = 0;
 
@@ -140,6 +153,19 @@ public class SaveDataUIHandler : LayeredUI
                 SaveMenu();
             }
         });
+
+        _quicksavePrompt = PromptInfo.New("Are you sure you want to quicksave?", new string[]
+        {
+            "Yes", "No"
+        }, new PromptInfo.OptionFunction[]
+        {
+            delegate
+            {
+                _goToMainMenu = true;
+                SaveMenu(true);
+            },
+            PromptInfo.NullFunction
+        });
     }
 
     private IEnumerator WaitForSaveEnd()
@@ -152,6 +178,11 @@ public class SaveDataUIHandler : LayeredUI
     public void SavePrompt()
     {
         GlobalCanvasManager.Instance.PromptHandler.Prompt(_savePrompt);
+    }
+
+    public void QuicksavePrompt()
+    {
+        GlobalCanvasManager.Instance.PromptHandler.Prompt(_quicksavePrompt);
     }
 
     private string TimeToString(int amt)
@@ -172,7 +203,8 @@ public class SaveDataUIHandler : LayeredUI
         var layer = new LoadDataLayer(_frame, _loadFrame, _selectionCancel, _selectionContinue);
         layer.refresh = delegate
         {
-            _selectedFile = SaveDataManager.Instance.QuickSaveFile != null ? SaveDataManager.Instance.QuickSaveFile : SaveDataManager.Instance.BaseFile;
+            _qsFile = SaveDataManager.Instance.QuickSaveFile;
+            _selectedFile = _qsFile != null ? _qsFile.baseFile : SaveDataManager.Instance.BaseFile;
             if (_selectedFile != null)
             {
                 _loadData.SetActive(true);
@@ -184,9 +216,15 @@ public class SaveDataUIHandler : LayeredUI
                 _locationLoad.text = "Location: " + _selectedFile.locationName;
                 _bankGoldLoad.text = "Gold in Bank: " + _selectedFile.bankGold;
                 _storageLoad.text = "Items in Storage: " + _selectedFile.storageItemKeys.Count;
-                if (_selectedFile.dungeonSave != null)
+                if (_qsFile != null)
                 {
                     _dungeonInfo.SetActive(true);
+                    _dgFloorLoad.text = "Floor: " + _qsFile.floorName;
+                    var leader = _selectedFile.party[0].Extract();
+                    var leaderQS = _qsFile.floorData.activeParty[0];
+                    _dgStatsLoad.text = string.Format("HP: {0}/{1} | HG: {2}/{3} | EN: {4}/{5} | MN: {6}/{7}",
+                        leaderQS.health, leader.maxHealth.CurrStat, leaderQS.hunger, leader.hungerSize.CurrStat, leaderQS.energy, leader.maxEnergy.CurrStat, leaderQS.mana, leader.maxMana.CurrStat);
+                    // Add all info in here
                 } else
                 {
                     _dungeonInfo.SetActive(false);
@@ -197,7 +235,7 @@ public class SaveDataUIHandler : LayeredUI
                 _noData.SetActive(true);
             }
 
-                layer.functions = new List<MenuLayer.MenuFunction>();
+            layer.functions = new List<MenuLayer.MenuFunction>();
             layer.functions.Add(delegate
             {
                 layer.Close();
@@ -215,8 +253,9 @@ public class SaveDataUIHandler : LayeredUI
         layer.Open();
     }
 
-    public void SaveMenu()
+    public void SaveMenu(bool isQuickSave = false)
     {
+
         var layer = new LoadDataLayer(_frame, _saveFrame, _selectionCancel2, _selectionOverwrite);
         layer.refresh = delegate
         {
@@ -224,7 +263,8 @@ public class SaveDataUIHandler : LayeredUI
             _overwriteText.text = "...";
             _cooldownImg.fillAmount = 1.0f;
 
-            _selectedFile = SaveDataManager.Instance.QuickSaveFile != null ? SaveDataManager.Instance.QuickSaveFile : SaveDataManager.Instance.BaseFile;
+            _qsFile = SaveDataManager.Instance.QuickSaveFile;
+            _selectedFile = _qsFile != null ? _qsFile.baseFile : SaveDataManager.Instance.BaseFile;
             if (_selectedFile != null)
             {
                 _prevData.SetActive(true);
@@ -236,13 +276,19 @@ public class SaveDataUIHandler : LayeredUI
                 _locationPrev.text = "Location: " + _selectedFile.locationName;
                 _bankGoldPrev.text = "Gold in Bank: " + _selectedFile.bankGold;
                 _storagePrev.text = "Items in Storage: " + _selectedFile.storageItemKeys.Count;
-                if (_selectedFile.dungeonSave != null)
+                if (_qsFile != null)
                 {
-                    _dungeonInfo.SetActive(true);
+                    _dungeonInfoPrev.SetActive(true);
+                    // Add all info here
+                    _dgFloorPrev.text = "Floor: " + _qsFile.floorName;
+                    var leader = _selectedFile.party[0].Extract();
+                    var leaderQS = _qsFile.floorData.activeParty[0];
+                    _dgStatsPrev.text = string.Format("HP: {0}/{1} | HG: {2}/{3} | EN: {4}/{5} | MN: {6}/{7}",
+                        leaderQS.health, leader.maxHealth.CurrStat, leaderQS.hunger, leader.hungerSize.CurrStat, leaderQS.energy, leader.maxEnergy.CurrStat, leaderQS.mana, leader.maxMana.CurrStat);
                 }
                 else
                 {
-                    _dungeonInfo.SetActive(false);
+                    _dungeonInfoPrev.SetActive(false);
                 }
             }
             else
@@ -251,7 +297,17 @@ public class SaveDataUIHandler : LayeredUI
                 _noPrevData.SetActive(true);
             }
 
-            _currData = GameSaveData.Construct();
+            _currQSFile = null;
+            if (isQuickSave)
+            {
+                gameManager = FindAnyObjectByType<DGGameManager>();
+                generator = FindAnyObjectByType<DGGenerator>();
+                _currQSFile = DungeonSaveData.Construct(gameManager, generator);
+                _currData = _currQSFile.baseFile;
+            } else
+            {
+                _currData = GameSaveData.Construct();
+            }
             _leaderLvlCurr.text = "Lv. " + _currData.party[0].level;
             _walletGoldCurr.text = "Gold in Wallet: " + _currData.walletGold;
             _inventoryCurr.text = "Items in Inventory: " + _currData.inventoryItemKeys.Count;
@@ -259,13 +315,19 @@ public class SaveDataUIHandler : LayeredUI
             _locationCurr.text = "Location: " + _currData.locationName;
             _bankGoldCurr.text = "Gold in Bank: " + _currData.bankGold;
             _storageCurr.text = "Items in Storage: " + _currData.storageItemKeys.Count;
-            if (_currData.dungeonSave != null)
+            if (_currQSFile != null)
             {
-                _dungeonInfo.SetActive(true);
+                _dungeonInfoCurr.SetActive(true);
+                _dgFloorCurr.text = "Floor: " + _currQSFile.floorName;
+                var leader = _selectedFile.party[0].Extract();
+                var leaderQS = _currQSFile.floorData.activeParty[0];
+                _dgStatsCurr.text = string.Format("HP: {0}/{1} | HG: {2}/{3} | EN: {4}/{5} | MN: {6}/{7}",
+                    leaderQS.health, leader.maxHealth.CurrStat, leaderQS.hunger, leader.hungerSize.CurrStat, leaderQS.energy, leader.maxEnergy.CurrStat, leaderQS.mana, leader.maxMana.CurrStat);
+                // Add info here
             }
             else
             {
-                _dungeonInfo.SetActive(false);
+                _dungeonInfoCurr.SetActive(false);
             }
 
             layer.functions = new List<MenuLayer.MenuFunction>();
@@ -278,7 +340,13 @@ public class SaveDataUIHandler : LayeredUI
                 if (_overwriteTime > 0.0f)
                     return;
                 layer.Close();
-                SaveDataManager.Instance.WriteSaveData();
+                if (isQuickSave && gameManager != null && generator != null)
+                {
+                    SaveDataManager.Instance.WriteQuicksaveData(gameManager, generator);
+                } else
+                {
+                    SaveDataManager.Instance.WriteSaveData();
+                }
                 GlobalCanvasManager.Instance.DialogueHandler.PromptSequence(_saveSequence);
                 if (_goToMainMenu)
                 {

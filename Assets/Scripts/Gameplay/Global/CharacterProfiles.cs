@@ -64,10 +64,19 @@ public class CharacterProfiles : SingletonScriptableObject<CharacterProfiles>
 {
     public CharacterProfile[] characterProfiles = new CharacterProfile[(int)CHARACTER_ENUM.NUM_CHARACTERS];
     public List<string> questNPCNames = new List<string>();
+    public List<CHARACTER_ENUM> randomEnumOmissions;
     public List<CHARACTER_ENUM> possibleCompetitors;
     public CHARACTER_ENUM GetRandomEnum()
     {
-        return (CHARACTER_ENUM)Random.Range(0, (int)CHARACTER_ENUM.NUM_CHARACTERS);
+        CHARACTER_ENUM selected = CHARACTER_ENUM.NUM_CHARACTERS;
+        bool found = false;
+        while (!found)
+        {
+            selected = (CHARACTER_ENUM)Random.Range(0, (int)CHARACTER_ENUM.NUM_CHARACTERS);
+            if (!randomEnumOmissions.Contains(selected))
+                found = true;
+        }
+        return selected;
     }
     public string GetRandomNPCName()
     {

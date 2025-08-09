@@ -441,7 +441,7 @@ public class DungeonMenuHandler : LayeredUI
         GlobalCanvasManager.LoadInstance();
         _dungeonGen = FindAnyObjectByType<DGGenerator>();
         _gameManager = FindAnyObjectByType<DGGameManager>();
-        _inputManager = FindAnyObjectByType<PlayerInput>();
+        _inputManager = GlobalCanvasManager.Instance.GlobalInput;
 
         _availableMoves = new List<CombatMove>();
         _availableMoves.Add(_defaultAttackInstance);
@@ -548,8 +548,6 @@ public class DungeonMenuHandler : LayeredUI
 
     private void OpenMoves()
     {
-
-
         var moveLayer = new DGListLayer(_sWindow, _itemList, _itemEntry, _closeMsg, _selectionBacking);
         moveLayer.refresh = delegate {
             _sWindowTitle.text = "Moves";
@@ -777,7 +775,7 @@ public class DungeonMenuHandler : LayeredUI
     }
     private void Quicksave()
     {
-        CreateReadLayer("None", "Feature not implemented yet.");
+        GlobalCanvasManager.Instance.SaveDataUIHandler.QuicksavePrompt();
     }
 
     private void Escape()

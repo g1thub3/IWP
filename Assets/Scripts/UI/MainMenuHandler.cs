@@ -100,6 +100,7 @@ public class MainMenuHandler : LayeredUI
                 {
                     GameStoryManager.Instance.BeginStory("Main Story");
                 }
+                GlobalGameManager.Instance.CycleDay();
                 GameSceneManager.Instance.ToDorm();
             });
             layer.functions.Add(delegate

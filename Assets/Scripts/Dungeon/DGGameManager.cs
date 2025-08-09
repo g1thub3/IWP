@@ -32,6 +32,10 @@ public class DGGameManager : MonoBehaviour, IDebuggable
         get { return _activeQuests; }
     }
     private Dictionary<Quest, List<QuestCompetitor>> _questCompetition;
+    public Dictionary<Quest, List<QuestCompetitor>> QuestCompetitors
+    {
+        get { return _questCompetition; }
+    }
 
     private PlayerInput _inputManager;
     private bool isPressingInit;
@@ -196,6 +200,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
     private void GetActiveQuests()
     {
         _activeQuests.Clear();
+        var file = SaveDataManager.Instance.QuickSaveFile;
         for (int i = 0; i < GlobalGameManager.Instance.ownedQuests.Count; i++)
         {
             var questData = GlobalGameManager.Instance.ownedQuests[i];
@@ -203,7 +208,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
             {
 
                 _activeQuests.Add(questData);
-                if (questData.competitiveLevel > 0)
+                if (questData.competitiveLevel > 0 && file == null)
                 {
                     _questCompetition.Add(questData, GenerateQuestCompetitors(questData));
                 }
@@ -221,6 +226,26 @@ public class DGGameManager : MonoBehaviour, IDebuggable
                 }
             }
         }
+        if (file != null)
+        {
+            foreach (var compEntry in file.questCompetitors)
+            {
+                foreach (var q in _activeQuests)
+                {
+                    if (q.questID == compEntry.associatedID)
+                    {
+                        List<QuestCompetitor> competitors = new List<QuestCompetitor>();
+                        for (int i = 0; i < compEntry.competitors.Count; i++)
+                        {
+                            var comp = compEntry.competitors[i];
+                            competitors.Add(comp.Extract(q));
+                        }
+                        _questCompetition.Add(q, competitors);
+                        break;
+                    }
+                }
+            }
+        }
     }
     private IEnumerator ImplementQuest()
     {
@@ -234,16 +259,18 @@ public class DGGameManager : MonoBehaviour, IDebuggable
             var questData = GlobalGameManager.Instance.ownedQuests[i];
             if (_questCompetition.ContainsKey(questData))
             {
-                foreach (var competitor in _questCompetition[questData])
+                for (int compIndex = 0; compIndex < _questCompetition[questData].Count; compIndex++)
                 {
+                    var competitor = _questCompetition[questData][compIndex];
                     allianceIndex++;
                     competitor.target = _dungeonGen.CurrentFloor.stairs;
                     if (competitor.currentFloor != CurrentFloor)
                     {
                         competitor.floorProgress = competitor.defaultProgress;
-                    } else
+                    }
+                    else
                     {
-                        _dungeonGen.SpawnCompetitors(competitor, allianceIndex);
+                        _dungeonGen.SpawnCompetitors(competitor, allianceIndex, compIndex);
                     }
                 }
             }
@@ -280,15 +307,28 @@ public class DGGameManager : MonoBehaviour, IDebuggable
         _dungeonUI.UpdateQuestUI();
         RefreshTurnList();
 
-        StartCoroutine(_dungeonUI.transitioner.FadeTransition(false, 0.75f, 3.0f, _dungeonUI.transitioner.floorDispGrp, delegate
+        if (SaveDataManager.Instance.QuickSaveFile == null)
         {
+            StartCoroutine(_dungeonUI.transitioner.FadeTransition(false, 0.75f, 3.0f, _dungeonUI.transitioner.floorDispGrp, delegate
+            {
+                StartCoroutine(_dungeonUI.transitioner.FadeTransition(false, 0.75f, 0.0f, _dungeonUI.transitioner.grp, delegate
+                {
+                    _isGameActive = true;
+
+                    GameStoryManager.Instance.OnDungeonNewFloor();
+                }));
+            }));
+        } else
+        {
+            _dungeonUI.Reload(_dungeonGen.ActiveParty);
             StartCoroutine(_dungeonUI.transitioner.FadeTransition(false, 0.75f, 0.0f, _dungeonUI.transitioner.grp, delegate
             {
                 _isGameActive = true;
-
                 GameStoryManager.Instance.OnDungeonNewFloor();
             }));
-        }));
+        }
+
+        SaveDataManager.Instance.DestroyQuicksave();
     }
 
     public void RefreshTurnList()
@@ -350,7 +390,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
     {
         _dungeonGen.FocusCameraOnPlayer();
         _dungeonUI.transitioner.ToggleQuestComp(false);
-        if (newSeed is StaticSeed)
+        if (newSeed != null && newSeed is StaticSeed)
         {
             floorName = (newSeed as StaticSeed).floorName;
             _dungeonUI.floorText.text = floorName;
@@ -358,11 +398,18 @@ public class DGGameManager : MonoBehaviour, IDebuggable
         }
         else
             _dungeonUI.floorText.text = "Floor\n" + floorName;
-        StartCoroutine(_dungeonUI.transitioner.FadeTransition(true, 1, 0.25f, _dungeonUI.transitioner.floorDispGrp, delegate
+        if (SaveDataManager.Instance.QuickSaveFile == null)
+        {
+            StartCoroutine(_dungeonUI.transitioner.FadeTransition(true, 1, 0.25f, _dungeonUI.transitioner.floorDispGrp, delegate
+            {
+                _dungeonGen.NewFloor(newSeed);
+                StartCoroutine(ImplementQuest());
+            }));
+        } else
         {
             _dungeonGen.NewFloor(newSeed);
             StartCoroutine(ImplementQuest());
-        }));
+        }
     }
 
     public void ToNextFloor()
@@ -420,8 +467,9 @@ public class DGGameManager : MonoBehaviour, IDebuggable
                     allianceIndex++;
                     if (_questCompetition.ContainsKey(q))
                     {
-                        foreach (var comp in _questCompetition[q])
+                        for (int compIndex = 0; compIndex < _questCompetition[q].Count; compIndex++)
                         {
+                            var comp = _questCompetition[q][compIndex];
                             if (comp.currentFloor == CurrentFloor) continue;
                             allianceIndex++;
                             int floor = comp.currentFloor;
@@ -466,7 +514,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
                             }
                             if (comp.currentFloor == CurrentFloor) // When competition arrives on this floor
                             {
-                                _dungeonGen.SpawnCompetitors(comp, allianceIndex);
+                                _dungeonGen.SpawnCompetitors(comp, allianceIndex, compIndex);
                                 RefreshTurnList();
                             }
                             else if (comp.currentFloor > q.quest.floor && q.quest.questPossible)
@@ -500,6 +548,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
                 if (container.Item == rq.ToRetrieve)
                 {
                     var obj = droppedItemObj.GetComponent<DGObject>();
+                    q.quest.SetTarget(obj);
                     foreach (var comp in _questCompetition[q])
                     {
                         comp.target = obj;
@@ -696,13 +745,27 @@ public class DGGameManager : MonoBehaviour, IDebuggable
         _dungeonUI.dungeonNameText.text = GlobalGameManager.Instance.selectedDungeon.dungeonName;
         turnList = new List<DGEntity>();
         _dungeonUI.transitioner.SetDungeonText(GlobalGameManager.Instance.selectedDungeon.dungeonName);
-
         GameStoryManager.Instance.currentGameManager = this;
-        GameStoryManager.Instance.OnDungeonPreload();
         GameSceneManager.Instance.SetLocationName(GlobalGameManager.Instance.selectedDungeon.dungeonName);
         GetActiveQuests();
 
-        StartCoroutine(WaitForIntro());
+        if (SaveDataManager.Instance.QuickSaveFile != null)
+        {
+            _intro.IntroComplete();
+            AudioManager.Instance.PlayBGM(GlobalGameManager.Instance.selectedDungeon.bgm);
+
+            var file = SaveDataManager.Instance.QuickSaveFile;
+            _currentFloor = file.floorNumber;
+            currentTurn = file.currentTurn;
+            floorName = file.floorName;
+
+            // Force Refresh
+            ForceRefreshGame();
+        } else
+        {
+            GameStoryManager.Instance.OnDungeonPreload();
+            StartCoroutine(WaitForIntro());
+        }
     }
 
     private IEnumerator WaitForIntro()

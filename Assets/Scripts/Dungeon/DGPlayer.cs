@@ -91,7 +91,7 @@ public class DGPlayer : DGEntity
 
         if (!CanControl) return;
         _orientationIndicator.color = new Color(_indicatorColor.r, _indicatorColor.g, _indicatorColor.b, _inputManager.actions["Anchor"].IsPressed() ? 1.0f : _transparency);
-        _orientationRotator.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(faceDir.z, faceDir.x) * Mathf.Rad2Deg - 90.0f);
+        _orientationRotator.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(FaceDir.z, FaceDir.x) * Mathf.Rad2Deg - 90.0f);
 
         if (_selectingMove)
         {
@@ -169,16 +169,7 @@ public class DGPlayer : DGEntity
                 Discover();
         } else if (_inputManager.actions["Anchor"].IsPressed() && hasInput)
         {
-            faceDir.x = x;
-            faceDir.z = y;
-            if (faceDir.z == 1)
-                NumToDir(2);
-            if (faceDir.x == 1)
-                NumToDir(3);
-            if (faceDir.z == -1)
-                NumToDir(0);
-            if (faceDir.x == -1)
-                NumToDir(1);
+            FaceDirection(x, y);
         }
     }
 

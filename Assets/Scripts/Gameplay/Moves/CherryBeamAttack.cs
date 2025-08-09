@@ -16,12 +16,12 @@ public class CherryBeamAttack : AttackMove
         Transition transition = new Transition();
         _dungeonUI.AddEntry(user.gameObject.name + " attacked with Cherry Beam!");
         var selfEntity = user.GetComponent<DGEntity>();
-        var extentArea = selfEntity.Position + selfEntity.faceDir;
+        var extentArea = selfEntity.Position + selfEntity.FaceDir;
         Vector3 selfPosition = TileInfo.CoordToPosition(selfEntity.Position);
         Vector3 extPosition = TileInfo.CoordToPosition(extentArea);
         var circle = Instantiate(runeCircle, 
             Vector3.Lerp(selfPosition, extPosition, 0.35f), 
-            Quaternion.Euler(0, 0, Mathf.Atan2(selfEntity.faceDir.z, selfEntity.faceDir.x) * Mathf.Rad2Deg - 90.0f));
+            Quaternion.Euler(0, 0, Mathf.Atan2(selfEntity.FaceDir.z, selfEntity.FaceDir.x) * Mathf.Rad2Deg - 90.0f));
         circle.transform.localScale = Vector3.zero;
 
         AudioManager.Instance.PlayFromObject(user.personalSource, "Charge2");
@@ -39,7 +39,7 @@ public class CherryBeamAttack : AttackMove
 
         AudioManager.Instance.PlayFromObject(user.personalSource, "Laser");
         transition.max = beamTime;
-        var beam = Instantiate(cherryBeam, extPosition, Quaternion.Euler(0,0, Mathf.Atan2(selfEntity.faceDir.z, selfEntity.faceDir.x) * Mathf.Rad2Deg));
+        var beam = Instantiate(cherryBeam, extPosition, Quaternion.Euler(0,0, Mathf.Atan2(selfEntity.FaceDir.z, selfEntity.FaceDir.x) * Mathf.Rad2Deg));
         var beamrenderer = beam.GetComponent<SpriteRenderer>();
         TileCoord curr = extentArea;
         while (true)
@@ -65,7 +65,7 @@ public class CherryBeamAttack : AttackMove
                 vfx.GetComponent<SpriteRenderer>().material.color = Color.red;
                 detected.Damage(baseDamage, ATTACK_TYPE.MAGIC, user);
             }
-            curr += selfEntity.faceDir;
+            curr += selfEntity.FaceDir;
             var nextPos = TileInfo.CoordToPosition(curr);
             var currMagnitude = beamrenderer.size.x;
             var magnitude = (extPosition - nextPos).magnitude;
@@ -114,7 +114,7 @@ public class CherryBeamAttack : AttackMove
         TileCoord curr = selfEntity.Position;
         while (true)
         {
-            curr += selfEntity.faceDir;
+            curr += selfEntity.FaceDir;
             if (!(DungeonFloor.IsInZ(curr.z) && DungeonFloor.IsInX(curr.x)))
                 break;
             var tile = selfEntity.Floor.CoordToTileInfo(curr);

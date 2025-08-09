@@ -64,6 +64,7 @@ public class GameStoryManagerEditor : Editor
                 selectedState = value;
             });
         }
+        EditorGUILayout.LabelField(foundStates[myTarget.ActiveStories[selectedStory].currentState]);
         if (EditorGUILayout.DropdownButton(new GUIContent(foundStates[selectedState]), FocusType.Passive))
         {
             states.DropDown(vert2);

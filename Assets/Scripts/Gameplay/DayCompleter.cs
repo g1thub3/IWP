@@ -21,8 +21,6 @@ public class DayCompleter : MonoBehaviour
             }
         }
         StartCoroutine(QuestCompleteSequence());
-
-        GlobalGameManager.Instance.CycleDay();
     }
 
     private IEnumerator QuestCompleteSequence()
@@ -30,6 +28,7 @@ public class DayCompleter : MonoBehaviour
         if (GlobalGameManager.Instance.DayOver)
         {
             GlobalGameManager.Instance.DayOver = false;
+            GlobalGameManager.Instance.CycleDay();
             DialogueData[] dayOver = new DialogueData[] { new DialogueData(new string[] { "With the day having ended, and the sun setting over the horizon, Cherry goes to sleep, hoping to wake up well-rested for another day of adventuring." }) };
             _dialogueHandler.PromptSequence(dayOver);
             while (_dialogueHandler.IsInProgress())
@@ -106,10 +105,16 @@ public class DayCompleter : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
 
+            if (hasQuestComplete)
+            {
+                GameStoryManager.Instance.OnQuestComplete();
+            }
+
             PromptInfo savePrompt = PromptInfo.New("Would you like to save the game?", new string[] { "Yes", "No" }, new PromptInfo.OptionFunction[]
             {
                 delegate
                 {
+                    GlobalCanvasManager.Instance.SaveDataUIHandler.GoToMainMenu = false;
                     GlobalCanvasManager.Instance.SaveDataUIHandler.SaveMenu();
                 },
                 PromptInfo.NullFunction
@@ -118,11 +123,6 @@ public class DayCompleter : MonoBehaviour
             while (GlobalCanvasManager.Instance.IsInteractionActiveFreeRoam)
             {
                 yield return new WaitForEndOfFrame();
-            }
-
-            if (hasQuestComplete)
-            {
-                GameStoryManager.Instance.OnQuestComplete();
             }
         }
         GlobalCanvasManager.Instance.FadeTransition(1.0f, null, false, false);

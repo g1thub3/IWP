@@ -12,7 +12,7 @@ public class BodySlamAttack : AttackMove
     private IEnumerator MoveAnimation(CharacterBehaviour user, DGGameManager _dgGameManager, DungeonUIHandler _dungeonUI)
     {
         var selfEntity = user.GetComponent<DGEntity>();
-        var hitArea = selfEntity.Position + selfEntity.faceDir;
+        var hitArea = selfEntity.Position + selfEntity.FaceDir;
         var selfTile = selfEntity.Floor.tiles[selfEntity.Floor.CoordToIndex(selfEntity.Position)];
         var hitTile = selfEntity.Floor.tiles[selfEntity.Floor.CoordToIndex(hitArea)];
         Vector3 startPos = selfTile.CoordToPosition();
@@ -63,11 +63,11 @@ public class BodySlamAttack : AttackMove
     {
         var selfEntity = user.GetComponent<DGEntity>();
 
-        var hitArea = selfEntity.Position + selfEntity.faceDir;
+        var hitArea = selfEntity.Position + selfEntity.FaceDir;
         if (user.HitDetect(hitArea) == null)
             return false;
-        TileCoord xDiff = new TileCoord(selfEntity.Position.x + selfEntity.faceDir.x, selfEntity.Position.z);
-        TileCoord zDiff = new TileCoord(selfEntity.Position.x, selfEntity.Position.z + selfEntity.faceDir.z);
+        TileCoord xDiff = new TileCoord(selfEntity.Position.x + selfEntity.FaceDir.x, selfEntity.Position.z);
+        TileCoord zDiff = new TileCoord(selfEntity.Position.x, selfEntity.Position.z + selfEntity.FaceDir.z);
 
         TileInfo tile = selfEntity.Floor.CoordToTileInfo(hitArea);
         TileInfo xTile = selfEntity.Floor.CoordToTileInfo(xDiff);

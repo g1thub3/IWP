@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Quest;
@@ -7,6 +8,7 @@ using static Quest;
 [System.Serializable]
 public class CharacterSaveData
 {
+    public string characterName;
     public int charEnum;
     public int exp;
     public int level;
@@ -15,6 +17,7 @@ public class CharacterSaveData
     public static CharacterSaveData Construct(CharacterEntry entry)
     {
         var newData = new CharacterSaveData();
+        newData.characterName = entry.characterName;
         newData.charEnum = (int)entry.associatedCharacter;
         newData.exp = entry.experiencePoints;
         newData.level = entry.characterLevel;
@@ -27,6 +30,7 @@ public class CharacterSaveData
         var newChar = CharacterEntry.Create((CHARACTER_ENUM)charEnum, level);
         newChar.experiencePoints = exp;
         newChar.HeldItem = Item.New(heldItemKey);
+        newChar.characterName = characterName;
         return newChar;
     }
 }
@@ -34,6 +38,7 @@ public class CharacterSaveData
 [System.Serializable]
 public class QuestSaveData
 {
+    public int questID;
     public string clientName;
     public int clientCharEnum;
     public int compLevel;
@@ -45,9 +50,12 @@ public class QuestSaveData
     public bool questPossible;
     public bool questCompleted;
 
+    public KeyDataList dataList;
+
     public static QuestSaveData Construct(Quest quest)
     {
         var newData = new QuestSaveData();
+        newData.questID = quest.questID;
         newData.clientName = quest.clientName;
         newData.clientCharEnum = (int)quest.clientCharacter;
         newData.compLevel = quest.competitiveLevel;
@@ -58,6 +66,9 @@ public class QuestSaveData
         newData.floor = quest.quest.floor;
         newData.questPossible = quest.quest.questPossible;
         newData.questCompleted = quest.quest.questCompleted;
+
+        newData.dataList = quest.quest.GetData();
+
         return newData;
     }
 
@@ -68,20 +79,23 @@ public class QuestSaveData
         {
             default:
             case QUEST_TYPE.RETRIEVAL:
-                qData = new RetrievalQuest();
+                qData = new RetrievalQuest(dataList.GetData("Key").String);
                 break;
             case QUEST_TYPE.RESCUE:
-                qData = new RescueQuest();
+                qData = new RescueQuest(clientName, (CHARACTER_ENUM)clientCharEnum);
                 break;
         }
         qData.dungeon = DGData.GetDungeon(dungeon);
         qData.floor = floor;
         qData.questPossible = questPossible;
         qData.questCompleted = questCompleted;
+        qData.dataList = dataList;
 
         var newQuest = new Quest(qData, clientName, (CHARACTER_ENUM)clientCharEnum);
         newQuest.competitiveLevel = compLevel;
         newQuest.CalculateDifficulty();
+        newQuest.isActive = isActive;
+        newQuest.questID = questID;
         return newQuest;
     }
 }
@@ -92,43 +106,304 @@ public class DungeonTileSaveData
     public bool isWall;
     public string itemKey;
     public bool hasStairs;
+
+    public static DungeonTileSaveData Construct(TileInfo tile)
+    {
+        var newData = new DungeonTileSaveData();
+        newData.isWall = tile.isWall;
+        newData.hasStairs = tile.structure != null;
+        newData.itemKey = string.Empty;
+        if (tile.item != null)
+        {
+            if (!tile.item.GetComponent<DGItemContainer>().Item.IsQuestTarget)
+                newData.itemKey = tile.item.GetComponent<DGItemContainer>().Item.itemKey;
+        }
+        return newData;
+    }
 }
 
 [System.Serializable]
 public class DungeonRoomSaveData
 {
-    public int positionX, positionY;
+    public TileCoord origin;
     public int length, height, padding;
+    public static DungeonRoomSaveData Construct(FloorRoom room)
+    {
+        var newData = new DungeonRoomSaveData();
+        newData.origin = room.origin;
+        newData.length = room.length;
+        newData.height = room.height;
+        newData.padding = room.padding;
+        return newData;
+    }
+}
+
+[System.Serializable]
+public class DungeonQCSaveData
+{
+    public string competitorName;
+    public int currentFloor;
+    public int defaultProgress;
+    public int floorProgress;
+    public List<CharacterSaveData> party;
+    public List<DungeonEntitySaveData> partySpawned; // Note: Add it aligned with index
+
+    public QuestCompetitor Extract(Quest associated)
+    {
+        var newComp = new QuestCompetitor();
+        newComp.associatedQuest = associated;
+        newComp.competitorName = competitorName;
+        newComp.currentFloor = currentFloor;
+        newComp.defaultProgress = defaultProgress;
+        newComp.floorProgress = floorProgress;
+        newComp.party = new List<CharacterEntry>();
+        foreach (var member in party)
+        {
+            newComp.party.Add(member.Extract());
+        }
+        return newComp;
+    }
+
+    public static DungeonQCSaveData Construct(QuestCompetitor comp)
+    {
+        var newData = new DungeonQCSaveData();
+        newData.competitorName = comp.competitorName;
+        newData.currentFloor = comp.currentFloor;
+        newData.defaultProgress = comp.defaultProgress;
+        newData.floorProgress = comp.floorProgress;
+        newData.party = new List<CharacterSaveData>();
+        for (int i = 0; i < comp.party.Count; i++)
+        {
+            newData.party.Add(CharacterSaveData.Construct(comp.party[i]));
+        }
+
+        newData.partySpawned = new List<DungeonEntitySaveData>();
+        for (int i = 0; i < comp.partySpawned.Count; i++)
+        {
+            newData.partySpawned.Add(DungeonEntitySaveData.Construct(comp.partySpawned[i]));
+        }
+        return newData;
+    }
+}
+
+[System.Serializable]
+public class DungeonQCSaveDataEntry
+{
+    public int associatedID;
+    public List<DungeonQCSaveData> competitors;
+
+    public static DungeonQCSaveDataEntry Construct(Quest q, List<QuestCompetitor> comp)
+    {
+        var newData = new DungeonQCSaveDataEntry();
+        newData.associatedID = q.questID;
+
+        newData.competitors = new List<DungeonQCSaveData>();
+        for (int i = 0; i < comp.Count; i++)
+        {
+            newData.competitors.Add(DungeonQCSaveData.Construct(comp[i]));
+        }
+
+        return newData;
+    }
 }
 
 [System.Serializable]
 public class DungeonEntitySaveData
 {
-    public int positionX, positionY;
-    public string direction;
+    public TileCoord position;
+    public TileCoord direction;
 
-    public bool isPlayer;
-    public int charEnum;
-    public int alliance;
     public int health;
     public int hunger;
     public int energy;
     public int mana;
-    public string heldItemKey;
+
+    public CharacterSaveData character;
+
+    public void LoadStats(CharacterBehaviour cb)
+    {
+        cb.health = health;
+        cb.hunger = hunger;
+        cb.energy = energy;
+        cb.mana = mana;
+    }
+
+    public static DungeonEntitySaveData Construct(DGEntity entity)
+    {
+        var newData = new DungeonEntitySaveData();
+        newData.position = entity.Position;
+        newData.direction = entity.FaceDir;
+
+        var cb = entity.GetComponent<CharacterBehaviour>();
+        newData.health = cb.health;
+        newData.hunger = cb.hunger;
+        newData.energy = cb.energy;
+        newData.mana = cb.mana;
+
+        newData.character = CharacterSaveData.Construct(cb.character);
+        return newData;
+    }
+}
+
+public class DungeonItemSaveData // EXCLUDE QUEST TARGETS
+{
+    public TileCoord position;
+    public string itemKey;
+}
+
+[System.Serializable]
+public class DungeonFloorSaveData
+{
+    public DungeonTileSaveData[] tiles;
+    public List<DungeonRoomSaveData> rooms;
+    private List<DungeonItemSaveData> items;
+    public List<DungeonEntitySaveData> activeParty;
+    public List<CharacterSaveData> tempParty;
+    public List<DungeonEntitySaveData> activeEnemies; // EXCLUDE QUEST TARGETS
+
+    public DungeonFloor ExtractFloor()
+    {
+        items = new List<DungeonItemSaveData>();
+
+        DungeonFloor floorData = new DungeonFloor();
+        floorData.Fill();
+        floorData.nonWallTiles = new List<TileInfo>();
+
+        for (int i = 0; i < tiles.Length; i++)
+        {
+            floorData.tiles[i].isWall = tiles[i].isWall;
+            if (!floorData.tiles[i].isWall)
+            {
+                floorData.nonWallTiles.Add(floorData.tiles[i]);
+            }
+            if (tiles[i].hasStairs)
+            {
+                floorData.tiles[i].AddStructure(Tilesets.Instance.structureList.GetData("BasementStairs").Obj.GetComponent<DGInteractable>(), DINextFloor.Instance);
+                floorData.stairs = floorData.tiles[i].structure;
+            }
+            if (!tiles[i].itemKey.Equals(string.Empty))
+            {
+                var newItem = new DungeonItemSaveData();
+                newItem.position = floorData.IndexToCoord(i);
+                newItem.itemKey = tiles[i].itemKey;
+                items.Add(newItem);
+            }
+        }
+
+        List<FloorRoom> floorRooms = new List<FloorRoom>();
+        for (int i = 0; i < rooms.Count; i++)
+        {
+            var newRoom = new FloorRoom();
+            newRoom.origin = rooms[i].origin;
+            newRoom.length = rooms[i].length;
+            newRoom.height = rooms[i].height;
+            newRoom.padding = rooms[i].padding;
+            floorRooms.Add(newRoom);
+        }
+        floorData.rooms = floorRooms;
+        return floorData;
+    }
+
+    public void AddItems(DGGenerator dungeonGen)
+    {
+        if (items == null) return;
+        foreach (var item in items)
+        {
+            dungeonGen.InsertItem(Tilesets.Instance.ConstructItemInteractable(Item.New(item.itemKey)), dungeonGen.CurrentFloor.CoordToTileInfo(item.position));
+        }
+    }
+
+    public void AddEnemies(DGGenerator dungeonGen)
+    {
+        foreach (var enemy in activeEnemies)
+        {
+            TileCoord point = enemy.position;
+            CharacterEntry newCharacter = enemy.character.Extract();
+            var newEnemy = dungeonGen.SpawnNPC(DG_CHARACTER_TYPE.ENEMY, newCharacter, point);
+            enemy.LoadStats(newEnemy.GetComponent<CharacterBehaviour>());
+            newEnemy.GetComponent<DGEntity>().FaceDir = enemy.direction;
+            newEnemy.name = newCharacter.characterName;
+        }
+    }
+
+    public static DungeonFloorSaveData Construct(DGGenerator generator)
+    {
+        var newData = new DungeonFloorSaveData();
+        newData.tiles = new DungeonTileSaveData[generator.CurrentFloor.tiles.Length];
+        for (int i = 0; i < generator.CurrentFloor.tiles.Length; i++)
+        {
+            newData.tiles[i] = DungeonTileSaveData.Construct(generator.CurrentFloor.tiles[i]);
+        }
+
+        newData.rooms = new List<DungeonRoomSaveData>();
+        for (int i = 0; i < generator.CurrentFloor.rooms.Count; i++)
+        {
+            newData.rooms.Add(DungeonRoomSaveData.Construct(generator.CurrentFloor.rooms[i]));
+        }
+
+        newData.activeParty = new List<DungeonEntitySaveData>();
+        for (int i = 0; i < generator.ActiveParty.Count; i++)
+        {
+            newData.activeParty.Add(DungeonEntitySaveData.Construct(generator.ActiveParty[i].GetComponent<DGEntity>()));
+        }
+
+        newData.tempParty = new List<CharacterSaveData>();
+        for (int i = 0; i < generator.TempParty.Count; i++)
+        {
+            newData.tempParty.Add(CharacterSaveData.Construct(generator.TempParty[i]));
+        }
+
+        newData.activeEnemies = new List<DungeonEntitySaveData>();
+        for (int i = 0; i < generator.ActiveEntities.Count; i++)
+        {
+            var cb = generator.ActiveEntities[i].GetComponent<CharacterBehaviour>();
+            if (cb.alliance == 1)
+            {
+                newData.activeEnemies.Add(DungeonEntitySaveData.Construct(generator.ActiveEntities[i]));
+            }
+        }
+
+        return newData;
+    }
 }
 
 [System.Serializable]
 public class DungeonSaveData
 {
+    public GameSaveData baseFile;
+
     public int floorNumber;
     public int currentTurn;
     public string floorName;
 
-    public DungeonTileSaveData[] tiles;
-    public List<DungeonRoomSaveData> rooms;
+    public DungeonFloorSaveData floorData;
+    public List<DungeonQCSaveDataEntry> questCompetitors;
 
-    public List<DungeonEntitySaveData> activeParty;
-    public List<DungeonEntitySaveData> activeEntities;
+    public static DungeonSaveData Construct(DGGameManager gameManager, DGGenerator generator)
+    {
+        var newData = new DungeonSaveData();
+        newData.baseFile = GameSaveData.Construct();
+        newData.floorNumber = gameManager.CurrentFloor;
+        newData.currentTurn = gameManager.currentTurn;
+        newData.floorName = gameManager.floorName;
+
+        newData.floorData = DungeonFloorSaveData.Construct(generator);
+
+        newData.questCompetitors = new List<DungeonQCSaveDataEntry>();
+        foreach (var q in gameManager.ActiveQuests)
+        {
+            if (gameManager.QuestCompetitors.ContainsKey(q))
+            {
+                newData.questCompetitors.Add(DungeonQCSaveDataEntry.Construct(q, gameManager.QuestCompetitors[q]));
+            }
+        }
+
+        return newData;
+        //var newData = new DungeonSaveData();
+        //return newData;
+    }
+
+    // When generating, take ownedQuests and set up from there
 }
 
 [System.Serializable]
@@ -188,9 +463,7 @@ public class GameSaveData
     public List<string> completedStories;
     public List<StorySaveData> activeStories;
 
-    public DungeonSaveData dungeonSave;
-
-    public static GameSaveData Construct(DungeonSaveData dungeonData = null)
+    public static GameSaveData Construct()
     {
         var newData = new GameSaveData();
         newData.playTime = (int)Mathf.Floor(GlobalGameManager.Instance.playTime);
@@ -268,8 +541,6 @@ public class GameSaveData
         {
             newData.availableCompetitiveQuests.Add(QuestSaveData.Construct(GlobalGameManager.Instance.availableCompetitiveQuests[i]));
         }
-
-        newData.dungeonSave = dungeonData;
         return newData;
     }
 
@@ -281,6 +552,7 @@ public class GameSaveData
         GlobalGameManager.Instance.adventurerEXP = adventurerEXP;
         GlobalGameManager.Instance.ownedGold = walletGold;
         GlobalGameManager.Instance.bankGold = bankGold;
+        GlobalGameManager.Instance.SetStorageLimit();
 
         GlobalGameManager.Instance.party = new List<CharacterEntry>(party.Count);
         for (int i = 0; i < party.Count; i++)
@@ -328,27 +600,20 @@ public class GameSaveData
         }
 
         GlobalGameManager.Instance.ownedQuests = new List<Quest>(ownedQuests.Count);
-        for (int i = 0; i < GlobalGameManager.Instance.ownedQuests.Count; i++)
+        for (int i = 0; i < ownedQuests.Count; i++)
         {
             GlobalGameManager.Instance.ownedQuests.Add(ownedQuests[i].Extract());
         }
         GlobalGameManager.Instance.availableQuests = new List<Quest>(availableQuests.Count);
-        for (int i = 0; i < GlobalGameManager.Instance.availableQuests.Count; i++)
+        for (int i = 0; i < availableQuests.Count; i++)
         {
             GlobalGameManager.Instance.availableQuests.Add(availableQuests[i].Extract());
         }
         GlobalGameManager.Instance.availableCompetitiveQuests = new List<Quest>(availableCompetitiveQuests.Count);
-        for (int i = 0; i < GlobalGameManager.Instance.availableCompetitiveQuests.Count; i++)
+        for (int i = 0; i < availableCompetitiveQuests.Count; i++)
         {
             GlobalGameManager.Instance.availableCompetitiveQuests.Add(availableCompetitiveQuests[i].Extract());
         }
-    }
-
-    public void LoadDungeonSave()
-    {
-        if (dungeonSave == null) return;
-        // LOAD DUNGEON
-        //newData.dungeonSave = dungeonData;
     }
 }
 
@@ -360,13 +625,13 @@ public class SaveDataManager : SingletonScriptableObject<SaveDataManager>
     [SerializeField] string savefileName = "BaseSaveFile";
     [SerializeField] string quicksavefileName = "QuickSaveFile";
     private GameSaveData _saveFile;
-    private GameSaveData _quicksaveFile;
+    private DungeonSaveData _quicksaveFile;
 
     public GameSaveData BaseFile
     {
         get { return _saveFile; }
     }
-    public GameSaveData QuickSaveFile
+    public DungeonSaveData QuickSaveFile
     {
         get { return _quicksaveFile; }
     }
@@ -388,9 +653,9 @@ public class SaveDataManager : SingletonScriptableObject<SaveDataManager>
         }
     }
 
-    public void WriteQuicksaveData()
+    public void WriteQuicksaveData(DGGameManager gameManager, DGGenerator generator)
     {
-        _quicksaveFile = GameSaveData.Construct();
+        _quicksaveFile = DungeonSaveData.Construct(gameManager, generator);
         string jsonSave = JsonUtility.ToJson(_quicksaveFile);
         File.WriteAllText(quicksaveFilePath, jsonSave);
     }
@@ -399,7 +664,7 @@ public class SaveDataManager : SingletonScriptableObject<SaveDataManager>
         if (File.Exists(quicksaveFilePath))
         {
             string filetext = File.ReadAllText(quicksaveFilePath);
-            _quicksaveFile = JsonUtility.FromJson<GameSaveData>(filetext);
+            _quicksaveFile = JsonUtility.FromJson<DungeonSaveData>(filetext);
         } else
         {
             _quicksaveFile = null;

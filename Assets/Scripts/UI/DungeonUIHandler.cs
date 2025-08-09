@@ -244,6 +244,8 @@ public class DungeonUIHandler : MonoBehaviour
             newEntryData.sprite.sprite = character.Profile.characterSprite;
             newEntryData.charName.text = character.Profile.characterName;
             newEntryData.charLevel.text = "Lv. " + character.characterLevel;
+
+            UpdatePartyStatus(activeParty[i]);
         }
     }
 
@@ -258,6 +260,15 @@ public class DungeonUIHandler : MonoBehaviour
         ui.hungerAmt.offsetMax = new Vector2(ui.hungerAmt.offsetMax.x, 100 * (perc - 1));
         if (changedMember.health <= 0)
             ui.deathCover.enabled = true;
+    }
+
+    public void Reload(List<CharacterBehaviour> activeParty)
+    {
+        UpdateLeaderWhole();
+        for (int i = 1; i < activeParty.Count; i++)
+        {
+            UpdatePartyStatus(activeParty[i]);
+        }
     }
 
     private void UpdateLeaderWhole()

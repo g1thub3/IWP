@@ -189,6 +189,7 @@ public class CharacterEntry
     {
         CharacterEntry newChar = new CharacterEntry();
         newChar.associatedCharacter = chosenCharacter;
+        newChar.characterName = newChar.Profile.characterName;
         newChar.characterLevel = startingLevel;
         newChar.viewDistance = 5;
         newChar.ApplyCharacter();

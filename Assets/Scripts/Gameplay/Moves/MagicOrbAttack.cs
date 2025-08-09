@@ -11,7 +11,7 @@ public class MagicOrbAttack : AttackMove
     private IEnumerator MoveAnimation(CharacterBehaviour user, DGGameManager _dgGameManager, DungeonUIHandler _dungeonUI)
     {
         var selfEntity = user.GetComponent<DGEntity>();
-        var hitArea = selfEntity.Position + selfEntity.faceDir;
+        var hitArea = selfEntity.Position + selfEntity.FaceDir;
         var selfTile = selfEntity.Floor.tiles[selfEntity.Floor.CoordToIndex(selfEntity.Position)];
 
         _dungeonUI.AddEntry(user.gameObject.name + " attacked using Magic Orb!");
@@ -28,7 +28,7 @@ public class MagicOrbAttack : AttackMove
         CharacterBehaviour contact = null;
         for (int i = 0; i < shootRange; i++)
         {
-            var pt = selfEntity.Position + (selfEntity.faceDir * (i + 1));
+            var pt = selfEntity.Position + (selfEntity.FaceDir * (i + 1));
             hitTile = selfEntity.Floor.CoordToTileInfo(pt);
             contact = user.HitDetect(pt);
             if (hitTile.isWall || contact != null)
@@ -81,7 +81,7 @@ public class MagicOrbAttack : AttackMove
 
         for (int i = 0; i < shootRange; i++)
         {
-            var hitArea = selfEntity.Position + (selfEntity.faceDir * (i + 1));
+            var hitArea = selfEntity.Position + (selfEntity.FaceDir * (i + 1));
             TileInfo tile = selfEntity.Floor.CoordToTileInfo(hitArea);
             if (tile.isWall)
                 return false;

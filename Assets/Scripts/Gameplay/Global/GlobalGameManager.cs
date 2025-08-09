@@ -58,7 +58,7 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
             }
         }
         data.Add("NewRank", adventurerRanking);
-
+        SetStorageLimit();
         return data;
     }
     public int GetExpToNextRank(int rank = -1)
@@ -77,6 +77,11 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
 
     public int storageLimit = 100;
     public List<Item> storage;
+
+    public void SetStorageLimit()
+    {
+        storageLimit = 100 * adventurerRanking;
+    }
 
     public static int shopLimit = 14;
     public List<Item> merchantShop;
@@ -263,6 +268,7 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
         bankGold = 500;
         adventurerRanking = 1;
         adventurerEXP = 0;
+        SetStorageLimit();
     }
 
     private void OnEnable()
@@ -295,7 +301,5 @@ public class GlobalGameManager : SingletonScriptableObject<GlobalGameManager>
             party.Clear();
 
         Default();
-
-        CycleDay();
     }
 }
