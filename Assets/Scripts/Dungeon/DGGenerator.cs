@@ -215,7 +215,26 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         }
 
         FloorRoom room = GetRandomRoom();
-        newCharacter.GetComponent<DGEntity>().Set(_currentFloor, coord == null ? room.GetRandomCoordInRoom() : coord);
+        if (coord == null)
+        {
+            TileCoord randCoord = null;
+            int searches = 0;
+            int searchMax = 10000;
+            while (searches < searchMax)
+            {
+                searches++;
+                room = GetRandomRoom();
+                randCoord = room.GetRandomCoordInRoom();
+                var tile = CurrentFloor.CoordToTileInfo(randCoord);
+                if (tile.occupyingEntity == null)
+                    break;
+            }
+            newCharacter.GetComponent<DGEntity>().Set(_currentFloor, randCoord);
+
+        } else
+        {
+            newCharacter.GetComponent<DGEntity>().Set(_currentFloor, coord);
+        }
         newCharacter.GetComponent<DGEntity>().Warp(newCharacter.GetComponent<DGEntity>().Position);
         return newCharacter;
     }
@@ -243,6 +262,7 @@ public class DGGenerator : MonoBehaviour, IDebuggable
         _activeEntities.Add(_currentPlayer);
         _activeParty.Add(newPlayer.GetComponent<CharacterBehaviour>());
         _dungeonUI.RegisterPlayer(_currentPlayer);
+
         _virtualCam = GameObject.FindFirstObjectByType<CinemachineCamera>();
         if (_virtualCam)
         {
@@ -277,18 +297,27 @@ public class DGGenerator : MonoBehaviour, IDebuggable
 
             if (file != null)
             {
-                var memberData = file.floorData.activeParty[i];
-                var entity = newPartyMember.GetComponent<DGEntity>();
-                entity.Warp(memberData.position);
-                entity.FaceDir = memberData.direction;
+                for (int preIndex = 1; preIndex < file.floorData.activeParty.Count; preIndex++) // Loop through activeParty to find my data
+                {
+                    if (file.floorData.activeParty[preIndex].character.Equals(newPartyMember.GetComponent<CharacterBehaviour>().character)) // if the character in question is the same as the one we had at the start
+                    {
+                        var memberData = file.floorData.activeParty[preIndex];
+                        var entity = newPartyMember.GetComponent<DGEntity>();
+                        entity.Warp(memberData.position);
+                        entity.FaceDir = memberData.direction;
 
-                var cb = newPartyMember.GetComponent<CharacterBehaviour>();
-                memberData.LoadStats(cb);
+                        var cb = newPartyMember.GetComponent<CharacterBehaviour>();
+                        memberData.LoadStats(cb);
+                        break;
+                    }
+                }
             }
+
             newPartyMember.gameObject.name = newPartyMember.GetComponent<CharacterBehaviour>().character.characterName;
         }
         for (int i = 0; i < _tempParty.Count; i++)
         {
+            int trueIndex = i + GlobalGameManager.Instance.party.Count;
             var spawnTile = SearchNextAvailableTile(_currentFloor.CoordToTileInfo(_currentPlayer.Position), SearchConditions.New(), 0, 0, 10);
             var newPartyMember = AddCharacter(DG_CHARACTER_TYPE.ALLY, spawnTile.coord);
             newPartyMember.GetComponent<CharacterBehaviour>().SetUp(_tempParty[i]);
@@ -297,17 +326,54 @@ public class DGGenerator : MonoBehaviour, IDebuggable
 
             if (file != null)
             {
-                var memberData = file.floorData.activeParty[i + GlobalGameManager.Instance.party.Count];
-                var entity = newPartyMember.GetComponent<DGEntity>();
-                entity.Warp(memberData.position);
-                entity.FaceDir = memberData.direction;
+                if (file.floorData.activeParty.Count > trueIndex)
+                {
+                    for (int preIndex = 1; preIndex < file.floorData.activeParty.Count; preIndex++) // Loop through activeParty to find my data
+                    {
+                        if (file.floorData.activeParty[preIndex].character.Equals(newPartyMember.GetComponent<CharacterBehaviour>().character)) // if the character in question is the same as the one we had at the start
+                    {
+                            var memberData = file.floorData.activeParty[preIndex];
+                            var entity = newPartyMember.GetComponent<DGEntity>();
+                            entity.Warp(memberData.position);
+                            entity.FaceDir = memberData.direction;
 
-                var cb = newPartyMember.GetComponent<CharacterBehaviour>();
-                memberData.LoadStats(cb);
+                            var cb = newPartyMember.GetComponent<CharacterBehaviour>();
+                            memberData.LoadStats(cb);
+                            break;
+                        }
+                    }
+                }
             }
             newPartyMember.gameObject.name = newPartyMember.GetComponent<CharacterBehaviour>().character.characterName;
         }
+
+        List<CharacterBehaviour> toRemove = new List<CharacterBehaviour>();
+        if (file != null && _activeParty.Count > 1)
+        {
+            for (int i = 1; i < _activeParty.Count; i++) // Loop through party members, check if they are alive (their preData exists and their activeParty data exists)
+            {
+                bool activeFound = false;
+                for (int j = 1; j < file.floorData.activeParty.Count; j++)
+                {
+                    if (file.floorData.activeParty[j].character.Equals(_activeParty[i].character))
+                    {
+                        activeFound = true;
+                        break;
+                    }
+                }
+                if (!activeFound)
+                {
+                    _activeParty[i].health = 0;
+                    toRemove.Add(_activeParty[i]);
+                }
+            }
+        }
         _dungeonUI.RegisterParty(ActiveParty);
+        for (int i = toRemove.Count - 1; i >= 0; i--) {
+            _activeEntities.Remove(toRemove[i].GetComponent<DGEntity>());
+            _activeParty.Remove(toRemove[i]);
+            Destroy(toRemove[i].gameObject);
+        }
     }
 
     private void PlaceParty()

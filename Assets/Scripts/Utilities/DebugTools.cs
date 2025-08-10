@@ -32,6 +32,16 @@ public class DebugTools : SingletonScriptableObject<DebugTools>
         marker.GetComponent<SpriteRenderer>().color = markerCol;
         _markers.Add(marker);
     }
+
+    public void AddMarker(Vector2 position, Color markerCol, string text = "")
+    {
+        if (_markers == null) _markers = new List<GameObject>();
+        var marker = Instantiate(debugMarker, position, Quaternion.identity);
+        marker.name = _markers.Count.ToString();
+        marker.GetComponent<SpriteRenderer>().color = markerCol;
+        marker.GetComponentInChildren<TMP_Text>().text = text;
+        _markers.Add(marker);
+    }
     public void ClearMarkers()
     {
         if (_markers == null) return;

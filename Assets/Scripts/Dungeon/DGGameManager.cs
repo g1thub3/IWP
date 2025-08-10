@@ -667,6 +667,7 @@ public class DGGameManager : MonoBehaviour, IDebuggable
                         if (comp.party[i] == dead.character)
                         {
                             comp.party.RemoveAt(i);
+                            comp.partySpawned.RemoveAt(i);
                             deadPartyFound = true;
                             break;
                         }

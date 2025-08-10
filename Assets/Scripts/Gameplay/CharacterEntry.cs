@@ -33,6 +33,8 @@ public class CharacterStat {
 [System.Serializable]
 public class CharacterEntry
 {
+    private static int ID_inc = 0;
+    public int ID;
     public CHARACTER_ENUM associatedCharacter; // These are their actual stats
     public CharacterProfile Profile
     {
@@ -185,7 +187,7 @@ public class CharacterEntry
                 heldItem.module.ApplyEffect(this);
     }
 
-    public static CharacterEntry Create(CHARACTER_ENUM chosenCharacter, int startingLevel)
+    public static CharacterEntry Create(CHARACTER_ENUM chosenCharacter, int startingLevel, int givenID = -1)
     {
         CharacterEntry newChar = new CharacterEntry();
         newChar.associatedCharacter = chosenCharacter;
@@ -194,6 +196,18 @@ public class CharacterEntry
         newChar.viewDistance = 5;
         newChar.ApplyCharacter();
         newChar.Recalculate();
+        if (givenID == -1)
+        {
+            ID_inc++;
+            newChar.ID = ID_inc;
+        } else
+        {
+            newChar.ID = givenID;
+            if (ID_inc < givenID)
+            {
+                ID_inc = givenID + 1;
+            }
+        }
         return newChar;
     }
 }

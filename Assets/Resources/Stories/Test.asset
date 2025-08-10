@@ -48,13 +48,13 @@ MonoBehaviour:
     - name: Test
       stateTrigger: 0
       functions:
-      - name: '(_) DG_ADD_TEMPMEMBER (FERN, 5) '
+      - name: '(_) DG_ADD_TEMPMEMBER (DAMSON, 5) '
         Yield: 0
         function: 3
         data:
-          dataList:
-          - Key: Character
-            Int: 23
-            Float: 0
-            String: 
-            Obj: {fileID: 0}
+          dataList: []
+      - name: '(_) DG_ADD_TEMPMEMBER (DAMSON, 5) '
+        Yield: 0
+        function: 3
+        data:
+          dataList: []

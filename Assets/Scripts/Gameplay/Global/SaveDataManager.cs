@@ -8,6 +8,7 @@ using static Quest;
 [System.Serializable]
 public class CharacterSaveData
 {
+    public int ID;
     public string characterName;
     public int charEnum;
     public int exp;
@@ -17,6 +18,7 @@ public class CharacterSaveData
     public static CharacterSaveData Construct(CharacterEntry entry)
     {
         var newData = new CharacterSaveData();
+        newData.ID = entry.ID;
         newData.characterName = entry.characterName;
         newData.charEnum = (int)entry.associatedCharacter;
         newData.exp = entry.experiencePoints;
@@ -27,11 +29,22 @@ public class CharacterSaveData
 
     public CharacterEntry Extract()
     {
-        var newChar = CharacterEntry.Create((CHARACTER_ENUM)charEnum, level);
+        var newChar = CharacterEntry.Create((CHARACTER_ENUM)charEnum, level, ID);
         newChar.experiencePoints = exp;
         newChar.HeldItem = Item.New(heldItemKey);
         newChar.characterName = characterName;
         return newChar;
+    }
+
+    public bool Equals(CharacterSaveData other)
+    {
+        if (other.ID == ID) return true;
+        return false;
+    }
+    public bool Equals(CharacterEntry other)
+    {
+        if (other.ID == ID) return true;
+        return false;
     }
 }
 
@@ -180,6 +193,10 @@ public class DungeonQCSaveData
         newData.partySpawned = new List<DungeonEntitySaveData>();
         for (int i = 0; i < comp.partySpawned.Count; i++)
         {
+            if (comp.partySpawned[i] == null)
+            {
+                break;
+            }
             newData.partySpawned.Add(DungeonEntitySaveData.Construct(comp.partySpawned[i]));
         }
         return newData;

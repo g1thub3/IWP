@@ -22,7 +22,7 @@ public class AIAlly : SingletonScriptableObject<AIAlly>, DGAIModule
 
         // Follow Leader
         CharacterBehaviour partyLeader = generator.ActiveParty[0];
-        List<TileCoord> partyPath = null;
+        List <TileCoord> partyPath = null;
         if (partyLeader != null)
         {
             partyPath = entity.AStarPathfind(entity.Position, entity.GetClosestDirection(partyLeader.GetComponent<DGEntity>().Position));

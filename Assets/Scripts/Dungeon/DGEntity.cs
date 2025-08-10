@@ -1,6 +1,8 @@
+using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class TilePathPoint {
@@ -55,7 +57,10 @@ public class DGEntity : DGObject
         }
         set
         {
-            faceDir = value;
+            if (faceDir == null)
+                faceDir = new TileCoord(0, -1);
+            faceDir.x = value.x;
+            faceDir.z = value.z;
             if (faceDir.z == 1)
                 NumToDir(2);
             if (faceDir.x == 1)
@@ -175,7 +180,7 @@ public class DGEntity : DGObject
             return false;
         }
 
-        FaceDir = new TileCoord(right, up);
+        FaceDirection(right, up);
 
         TileCoord newPosition = position + new TileCoord(right, up);
         TileCoord xChange = position + new TileCoord(right, 0);
@@ -326,7 +331,49 @@ public class DGEntity : DGObject
     }
 
 
-    private float Heuristic(TileCoord curr, TileCoord end)
+    //public bool AllianceScan(DGEntity toSearch)
+    //{
+    //    bool isConnected = false;
+    //    List<TileCoord> searched = new List<TileCoord>();
+    //    TileCoord curr = Position;
+    //    while (!isConnected)
+    //    {
+    //        bool allianceFound = false;
+    //        var directions = curr.GetDirections();
+    //        foreach (var direction in directions) {
+    //            if (!(DungeonFloor.IsInZ(direction.z) && DungeonFloor.IsInX(direction.x))) continue;
+    //            bool alrSearched = false;
+    //            foreach (var coord in searched)
+    //            {
+    //                if (coord.Equals(direction))
+    //                {
+    //                    alrSearched = true;
+    //                    break;
+    //                }
+    //            }
+    //            if (alrSearched) continue;
+    //            var tile = Floor.CoordToTileInfo(direction);
+    //            var entity = tile.occupyingEntity;
+    //            if (entity != null)
+    //            {
+    //                if (entity == toSearch)
+    //                {
+    //                    return true;
+    //                } else if (entity.GetComponent<CharacterBehaviour>().alliance == _characterBehaviour.alliance)
+    //                {
+    //                    searched.Add(curr);
+    //                    curr = direction;
+    //                    allianceFound = true;
+    //                }
+    //            }
+    //        }
+    //        if (!allianceFound)
+    //            break;
+    //    }
+    //    return false;
+    //}
+
+    public static float Heuristic(TileCoord curr, TileCoord end)
     {
         float D = 1;
         float D2 = Mathf.Sqrt(2);
@@ -348,6 +395,7 @@ public class DGEntity : DGObject
         if (start.Equals(end))
             return path;
         bool pathFound = false;
+        //int ID = 0;
         while (!pathFound)
         {
             if (path.Count == 0)
@@ -370,10 +418,14 @@ public class DGEntity : DGObject
             }
             foreach (var tile in searchableTiles)
             {
+                //ID++;
                 var tilePP = Floor.tilePathPoints[Floor.CoordToIndex(tile.coord)];
                 TileCoord currDiff = tile.coord - curr;
-                TileCoord xDiff = new TileCoord(curr.x + currDiff.x, curr.z);
-                TileCoord zDiff = new TileCoord(curr.x, curr.z + currDiff.z);
+                int ogX, ogZ;
+                ogX = curr.x;
+                ogZ = curr.z;
+                TileCoord xDiff = new TileCoord(ogX + currDiff.x, ogZ);
+                TileCoord zDiff = new TileCoord(ogX, ogZ + currDiff.z);
 
                 TileInfo xTile = Floor.CoordToTileInfo(xDiff);
                 TileInfo zTile = Floor.CoordToTileInfo(zDiff);
@@ -381,9 +433,15 @@ public class DGEntity : DGObject
                 bool entityCheck = tile.occupyingEntity != null;
                 if (tile.isWall || xTile.isWall || zTile.isWall || entityCheck || tilePP.hasSearched)
                 {
-                    if (DebugTools.Instance.EntityDebugOn)
-                        DebugTools.Instance.AddMarker(tile.CoordToPosition(), 
+                    //if (DebugTools.Instance.EntityDebugOn && zTile.isWall) {
+                    //    DebugTools.Instance.AddMarker(TileInfo.CoordToPosition(curr), Color.magenta, ID.ToString());
+                    //    DebugTools.Instance.AddMarker(zTile.CoordToPosition(), Color.yellow, ID.ToString());
+                    //}
+                    if (DebugTools.Instance.EntityDebugOn && zTile.isWall) {
+                        DebugTools.Instance.AddMarker(tile.CoordToPosition(),
                             string.Format("Wall={0}\nXWall={1}\nZWall={2}\nOccupied={3}\nSearched={4}", tile.isWall, xTile.isWall, zTile.isWall, entityCheck, tilePP.hasSearched));
+                        DebugTools.Instance.AddMarker(zTile.CoordToPosition(), Color.magenta);
+                    }
                     tilePP.searchScore = -1;
                 }
                 else
@@ -485,7 +543,20 @@ public class DGEntity : DGObject
     {
         if (x == z && z == 0)
             return;
-        FaceDir = new TileCoord(x, z);
+        if (faceDir == null)
+            faceDir = new TileCoord(0, -1);
+
+        faceDir.x = x;
+        faceDir.z = z;
+
+        if (faceDir.z == 1)
+            NumToDir(2);
+        if (faceDir.x == 1)
+            NumToDir(3);
+        if (faceDir.z == -1)
+            NumToDir(0);
+        if (faceDir.x == -1)
+            NumToDir(1);
     }
     protected new void Start()
     {

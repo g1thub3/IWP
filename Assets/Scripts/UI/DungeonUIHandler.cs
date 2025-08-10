@@ -258,8 +258,10 @@ public class DungeonUIHandler : MonoBehaviour
         ui.hpAmt.offsetMax = new Vector2(ui.hpAmt.offsetMax.x, 300 * (perc - 1));
         perc = (float)changedMember.hunger / changedMember.character.hungerSize.CurrStat;
         ui.hungerAmt.offsetMax = new Vector2(ui.hungerAmt.offsetMax.x, 100 * (perc - 1));
-        if (changedMember.health <= 0)
+        if (changedMember.health <= 0){
+            ui.hungerAmt.offsetMax = new Vector2(ui.hungerAmt.offsetMax.x, -100);
             ui.deathCover.enabled = true;
+        }
     }
 
     public void Reload(List<CharacterBehaviour> activeParty)
