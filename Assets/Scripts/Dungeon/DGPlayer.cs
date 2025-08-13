@@ -54,11 +54,19 @@ public class DGPlayer : DGEntity
                 costText.GetComponent<TMP_Text>().text = selectedMoves[i].energyRequirement + " EN";
                 if (ColorUtility.TryParseHtmlString("#FFAD69", out Color enclr))
                     costText.GetComponent<TMP_Text>().color = enclr;
+                if (_cb.energy < selectedMoves[i].energyRequirement)
+                    moveName.GetComponent<TMP_Text>().color = Color.red;
+                else
+                    moveName.GetComponent<TMP_Text>().color = Color.white;
             } else if (selectedMoves[i].consumptionType == CHARACTER_STAT.MANA)
             {
                 costText.GetComponent<TMP_Text>().text = selectedMoves[i].energyRequirement + " MN";
                 if (ColorUtility.TryParseHtmlString("#B99BE0", out Color mnclr))
                     costText.GetComponent<TMP_Text>().color = mnclr;
+                if (_cb.mana < selectedMoves[i].energyRequirement)
+                    moveName.GetComponent<TMP_Text>().color = Color.red;
+                else
+                    moveName.GetComponent<TMP_Text>().color = Color.white;
             }
         }
     }

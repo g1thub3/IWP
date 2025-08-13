@@ -323,7 +323,7 @@ public class ShopStorageHandler : LayeredUI
             }
         });
 
-        _merchantPrompt = PromptInfo.New("What would you like to do?", new string[] { "Leave", "Store Items", "Retrieve Items" }, new PromptInfo.OptionFunction[]
+        _warehousePrompt = PromptInfo.New("What would you like to do?", new string[] { "Leave", "Store Items", "Retrieve Items" }, new PromptInfo.OptionFunction[]
         {
             PromptInfo.NullFunction,
             delegate
