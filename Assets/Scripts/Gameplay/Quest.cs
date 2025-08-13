@@ -287,6 +287,7 @@ public abstract class QuestData
         floor = Random.Range(1, dungeon.floorCount);
         questCompleted = false;
         questPossible = true;
+        dataList = new KeyDataList();
     }
 
     public abstract string GetTitle(Quest info);
